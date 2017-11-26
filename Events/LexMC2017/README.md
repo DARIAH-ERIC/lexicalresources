@@ -7,3 +7,7 @@ Co-organized by DARIAH, the Berlin Brandenburg Academy of Sciences (BBAW), Inria
 This Master Class is part of a joint French-German program supported by the BMBF and MESRI (French Ministry for Higher Education, Research and Innovation).
 
 https://lexmc.sciencesconf.org
+
+## Before LexMC2017
+
+In order to make sure we run a smooth masterclass, please make sure you do the necessary [preparatory work](How-to-prepare-for-LexMC2017.md) before you come to Berlin.
