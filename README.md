@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## About
 
-You can use the [editor on GitHub](https://github.com/DARIAH-ERIC/lexicalresources/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The DARIAH-ERIC Working Group "Lexical Resources" explores, assesses and recommends standard tools and methods for the creation, application and dissemination of born-digital and retro-digitized lexical resources (dictionaries, lexicons, thesauri, word lists etc.) as well as other, similar kinds of structured data (gazetteers, almanacs, encyclopaedias etc., while fostering, developing and publicizing digitally-enabled lexicographic research from a cross-disciplinary and transnational perspective.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The WG focuses on the application and explication of existing standards, both onomasiological (TMF, TBX and SKOS) and semasiological (LMF, TEI, and Ontolex); draws upon the expertise of various DARIAH partners who are active in this field; and collaborates with relevant external projects and associations, such as the European Network of e-Lexicography (ENeL) and CLARIN.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DARIAH-ERIC/lexicalresources/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The WG pursues a strong research-driven agenda on the diversity of European lexicographic heritage. In addition to investigating pan-European vocabularies and multiple dimensions of lexical borrowing, the working group evaluates current practices and formulate guidelines on data enrichment and mutual linking of existing electronic dictionaries in view of their common European heritage.
