@@ -6,4 +6,4 @@ The Lexical Data Masterclass is bringing together 20 trainees together with expe
 
 This masterclass is part of a joint French-German program supported by the BMBF and MESRI (French Ministry for Higher Education, Research and Innovation).
 
-As part of the masterclass, two keynote lectures will be open to the general public, one by [Frieda Steurs](/Pages/LexMC-Berlin/LexMC-Steurs.md) and one by [James Pustejovsky](/Pages/LexMC-Berlin/LexMC-Pustejovsky.md).
+As part of the masterclass, two keynote lectures will be open to the general public, one by [Frieda Steurs](/Pages/LexMC-Berlin/LexMC-Steurs.html) and one by [James Pustejovsky](/Pages/LexMC-Berlin/LexMC-Pustejovsky.html)
