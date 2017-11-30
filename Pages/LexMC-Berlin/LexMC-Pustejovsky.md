@@ -1,7 +1,7 @@
 ## Public Lecture
 
-**When**: Wednesday, December 6th, 18:00–19:30
-**Where**: Workshop Rooms 5 and 6, Berlin-Brandenburg Academy of Sciences (BBAW), Jägerstr. 22/23, 10117 Berlin.
+**When**: Wednesday, December 6th, 18:00–19:30<br/>
+**Where**: Workshop Rooms 5 and 6, Berlin-Brandenburg Academy of Sciences (BBAW), Jägerstr. 22/23, 10117 Berlin.<br/>
 **Who:** James Pustejovsky, TJX/Feldberg Chair of Computer Science
 
 

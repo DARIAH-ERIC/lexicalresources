@@ -1,7 +1,7 @@
 ## Public Lecture
 
-**When**: Monday, December 4th, 16:00–17:30
-**Where**: Einstein-Saal, Berlin-Brandenburg Academy of Sciences (BBAW), Jägerstr. 22/23, 10117 Berlin.
+**When**: Monday, December 4th, 16:00–17:30 <br/>
+**Where**: Einstein-Saal, Berlin-Brandenburg Academy of Sciences (BBAW), Jägerstr. 22/23, 10117 Berlin.</br>
 **Who:** Frieda Steurs, full professor at the KU Leuven
 
 
