@@ -1,6 +1,8 @@
 ## News
 
-- [Lexical Data Masterclass (Berlin, 4-8 December 2017)](/Pages/LexMC-Berlin.md)
+- [Lexical Data Masterclass ](/Pages/LexMC-Berlin/LexMC-Berlin.md) (Berlin, 4-8 December 2017)
+- **Frieda Steurs**, [_Clarin, Clariah and Dariah: Towards a Full Infrastructure for Digital Humanities in Europe_ ](/Pages/LexMC-Berlin/LexMC-Steurs.md)  (public lecture)
+- **James Pustejovsky**, [_The Role of Semantics in Lexical Data Modeling_](/Pages/LexMC-Berlin/LexMC-Steurs.md) (public lectures)
 
 ## About
 
