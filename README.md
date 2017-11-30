@@ -1,6 +1,6 @@
 ## News
 
-- [Lexical Data Masterclass (Berlin, 4-8 December 2017)](/LexMC-Berlin.md)
+- [Lexical Data Masterclass (Berlin, 4-8 December 2017)](/Pages/LexMC-Berlin.md)
 
 ## About
 
