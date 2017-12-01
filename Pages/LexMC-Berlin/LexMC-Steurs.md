@@ -15,7 +15,7 @@ The situation of every language concerning language technology needs to be super
 
 We are now moving one step ahead: from the CLARIN centers for language infrastructure and the Clariah projects, Dariah is now expanding strongly as an infrastructure for the wider arts and humanities researchers working with computational methods. As such, young researchers and PhD students will be able to train in research in digital humanities, and a wealth  of new applications will become possible.
 
-<figure style="float: left; padding-right:10px;"><img src="https://i.imgur.com/iNcJBel.jpg" width="100%"><figcaption  style="color:gray;font-size:80%;text-align:right"></figcaption></figure>
+<figure style="float: right; padding-right:0px; padding-left:0px"><img src="https://i.imgur.com/iNcJBel.jpg" width="100%"><figcaption  style="color:gray;font-size:80%;text-align:right"></figcaption></figure>
 
 **Frieda Steurs** (Belgium) is full professor at the KU Leuven, Faculty of Arts. She works in the field of terminology, language technology, specialized translation and multilingual document management. She is a member of the research group Quantitative Lexicology and Variation Linguistics (QLVL). Her research includes projects with industrial partners and public institutions. She is the founder and former president of NL-TERM, the Dutch terminology association for both the Netherlands and Flanders.  She is also the head of the ISO TC/37 standardization committee for Flanders and the Netherlands.. She is the president of TermNet, the International Network for Terminology (Vienna).
 
