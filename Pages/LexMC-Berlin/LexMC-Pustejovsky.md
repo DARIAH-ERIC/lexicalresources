@@ -9,7 +9,7 @@
 
 In this class, I discuss the methodology at play when designing or identifying the conceptual inventory that lexicographers use when analyzing the meaning of a specific language domain along with its associated corpora. I address the importance of lexical semantic modeling in creating a coherent abstraction of a linguistic phenomenon. I will use two use cases that demonstrate the interplay between semantic analysis and corpus data when working towards defining a data model, namely the domains of temporal and spatial semantic modeling.
 
-<figure style="float: left; padding-right:10px;"><img src="https://i.imgur.com/eQRfki4.jpg" width="150px%"><figcaption  style="color:gray;font-size:80%;text-align:right"></figcaption></figure>
+<figure style="float: left; padding-right:0px; padding-left:0px"><img src="https://i.imgur.com/eQRfki4.jpg" width="150px%"><figcaption  style="color:gray;font-size:80%;text-align:right"></figcaption></figure>
 
 **James Pustejovsky** is the TJX Feldberg Chair in Computer Science at Brandeis University, where he is also Chair of the Linguistics Program, Chair of the Computational Linguistics MA Program, and Director of the Lab for Linguistics and Computation. He received his B.S. from MIT and his Ph.D. from UMASS at Amherst. He has worked on computational and lexical semantics for twenty five years and is chief developer of Generative Lexicon Theory. Since 2002, he has been working on the development of a platform for temporal reasoning in language, called TARSQI (www.tarsqi.org). Pustejovsky is chief architect of TimeML and ISO-TimeML, a recently adopted ISO standard for temporal information in language, as well as ISO-Space, a specification for spatial information in language.
 
