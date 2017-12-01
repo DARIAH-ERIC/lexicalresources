@@ -1,0 +1,734 @@
+<?xml-stylesheet type="text/xsl" href="retro-dict-view.xsl"?>
+<?xml-model href="basisformat.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"
+?>
+<?xml-model href="basisformat.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"
+?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">English Etymology</title>
+        <title type="sub">A Select Glossary Serving as an Introduction
+          to the History of the English Language</title>
+        <author>
+          <persName ref="http://d-nb.info/gnd/118777475">
+            <surname>Kluge</surname>
+            <forename>Friedrich</forename>
+          </persName>
+        </author>
+        <author>
+          <persName>
+            <surname>Lutz</surname>
+            <forename>Frederick</forename>
+          </persName>
+        </author>
+        <editor corresp="#DTACorpusPublisher">
+          <persName ref="http://d-nb.info/gnd/1127209485">
+            <surname>Herold</surname>
+            <forename>Axel</forename>
+          </persName>
+        </editor>
+      </titleStmt>
+      <editionStmt>
+        <edition>partly digitized and proof-read edition</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher xml:id="DTACorpusPublisher">
+          <orgName ref="https://github.com/xlhrld/retro-dict"
+            >retro-dict</orgName>
+        </publisher>
+        <date type="publication">2017-10-02</date>
+        <availability>
+          <licence
+            target="https://creativecommons.org/licenses/by/4.0/">
+            <p>This work is licensed under a Creative Commons
+              Attribution 4.0 International License.</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Kluge, Friedrich/Lutz, Frederick: English Etymology. A
+          Select Glossary Serving as an Introduction to the History of
+          the English Language. Boston, 1898.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main">English Etymology</title>
+            <title type="sub">A Select Glossary Serving as an
+              Introduction to the History of the English
+              Language</title>
+            <author>
+              <persName ref="http://d-nb.info/gnd/118777475">
+                <surname>Kluge</surname>
+                <forename>Friedrich</forename>
+              </persName>
+            </author>
+            <author>
+              <persName>
+                <surname>Lutz</surname>
+                <forename>Frederick</forename>
+              </persName>
+            </author>
+          </titleStmt>
+          <editionStmt>
+            <edition n="1"/>
+          </editionStmt>
+          <publicationStmt>
+            <publisher>
+              <name>D. C. Heath &amp; Co.</name>
+            </publisher>
+            <pubPlace>Boston</pubPlace>
+            <date type="publication">1898</date>
+          </publicationStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Archive.org (via Google Books)</repository>
+            <idno>
+              <idno type="URLImages"
+                >http://books.google.com/books?id=Z6sVAAAAYAAJ&amp;oe=UTF-8</idno>
+              <idno type="URLImages"
+                >http://books.google.com/books?id=UDcXAAAAIAAJ&amp;oe=UTF-8</idno>
+              <idno type="URLImages"
+                >https://archive.org/details/englishetymolog00lutzgoog</idno>
+              <idno type="URLImages"
+                >https://archive.org/details/englishetymolog00kluggoog</idno>
+            </idno>
+          </msIdentifier>
+          <physDesc>
+            <typeDesc>
+              <p>Antiqua</p>
+            </typeDesc>
+          </physDesc>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>font properties preserved, no character normalization, line
+          breaks not preserved, signature marks not preserved,
+          hyphenation not preserved (words reconstructed)</p>
+        <p>TEI markup according to the DTA base format (<ref
+            target="http://www.deutschestextarchiv.de/doku/basisformat/"
+            >DTABf</ref>), a TEI customization for historical
+          texts</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="eng">English</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <pb facs="#f0001" n="[III]"/>
+      <titlePage type="main">
+        <docTitle>
+          <titlePart type="main">ENGLISH ETYMOLOGY</titlePart>
+          <lb/>
+          <titlePart type="sub"><hi rendition="#i">A SELECT
+              GLOSSARY</hi>
+            <lb/><hi rendition="#i #smaller">SERVING AS AN INTODUCTION
+              TO THE HISTORY <lb/>OF THE ENGLISH LANGUAGE</hi>
+          </titlePart>
+        </docTitle>
+        <lb/>
+        <milestone rendition="#hr" unit="section"/>
+        <lb/>
+        <byline>BY <lb/><docAuthor
+            corresp="http://d-nb.info/gnd/118777475"><hi
+              rendition="#larger">FRIEDRICH KLUGE</hi></docAuthor>
+          <lb/>PROFESSOR OF THE GERMAN LANGUAGE AND LITERATURE AT THE
+          <lb/>UNIVERSITY OF FREIBURG IN BADEN, GERMANY <lb/>AND
+              <lb/><docAuthor><hi rendition="#larger">FREDERICK
+              LUTZ</hi></docAuthor>
+          <lb/>PROFESSOR OF MODERN LANGUAGES AT ALBION COLLEGE,
+          MICHIGAN</byline>
+        <lb/>
+        <milestone rendition="#hr" unit="section"/>
+        <lb/>
+        <docImprint>
+          <pubPlace>BOSTON, U.S.A.</pubPlace>
+          <lb/><publisher>D. C. HEATH &amp; CO.,
+            PUBLISHERS</publisher>
+        </docImprint>
+        <lb/>
+        <docDate>1898</docDate>
+      </titlePage>
+      <pb facs="#f0002" n="[IV]"/>
+      <pb facs="#f0003" n="[V]"/>
+      <div xml:id="preface">
+        <pb facs="#f0004" n="VI"/>
+      </div>
+      <div xml:id="list-of-abbreviation">
+        <pb facs="#f0005" n="[VII]"/>
+      </div>
+      <pb n="VIII" facs="#f0006"/>
+      <div xml:id="list-of-symbols">
+      </div>
+    </front>
+    <body xml:id="dictionary">
+      <pb facs="#f0007" n="1"/>
+        <pb facs="#f0008" n="2"/>
+        <pb facs="#f0009" n="3"/>
+        <pb facs="#f0010" n="4"/>
+        <pb facs="#f0011" n="5"/>
+        <pb facs="#f0012" n="6"/>
+        <pb facs="#f0013" n="7"/>
+        <pb facs="#f0014" n="8"/>
+        <pb facs="#f0015" n="9"/>
+        <pb facs="#f0016" n="10"/>
+        <pb facs="#f0017" n="11"/>
+        <pb facs="#f0018" n="12"/>
+        <pb facs="#f0019" n="13"/>
+        <pb facs="#f0020" n="14"/>
+        <pb facs="#f0021" n="15"/>
+        <pb facs="#f0022" n="16"/>
+        <pb facs="#f0023" n="17"/>
+        <pb facs="#f0024" n="18"/>
+        <pb facs="#f0025" n="19"/>
+        <pb facs="#f0026" n="20"/>
+        <pb facs="#f0027" n="21"/>
+        <pb facs="#f0028" n="22"/>
+        <pb facs="#f0029" n="23"/>
+        <pb facs="#f0030" n="24"/>
+        <pb facs="#f0031" n="25"/>
+        <pb facs="#f0032" n="26"/>
+        <pb facs="#f0033" n="27"/>
+        <pb facs="#f0034" n="28"/>
+        <pb facs="#f0035" n="29"/>
+        <pb facs="#f0036" n="30"/>
+        <pb facs="#f0037" n="31"/>
+        <pb facs="#f0038" n="32"/>
+        <pb facs="#f0039" n="33"/>
+        <pb facs="#f0040" n="34"/>
+        <pb facs="#f0041" n="35"/>
+        <pb facs="#f0042" n="36"/>
+        <pb facs="#f0043" n="37"/>
+        <pb facs="#f0044" n="38"/>
+        <pb facs="#f0045" n="39"/>
+        <pb facs="#f0046" n="40"/>
+        <pb facs="#f0047" n="41"/>
+        <pb facs="#f0048" n="42"/>
+        <pb facs="#f0049" n="43"/>
+        <pb facs="#f0050" n="44"/>
+        <pb facs="#f0051" n="45"/>
+        <pb facs="#f0052" n="46"/>
+        <pb facs="#f0053" n="47"/>
+        <pb facs="#f0054" n="48"/>
+        <pb facs="#f0055" n="49"/>
+        <pb facs="#f0056" n="50"/>
+        <pb facs="#f0057" n="51"/>
+        <pb facs="#f0058" n="52"/>
+        <pb facs="#f0059" n="53"/>
+        <pb facs="#f0060" n="54"/>
+        <pb facs="#f0061" n="55"/>
+        <pb facs="#f0062" n="56"/>
+        <pb facs="#f0063" n="57"/>
+        <pb facs="#f0064" n="58"/>
+        <pb facs="#f0065" n="59"/>
+        <pb facs="#f0066" n="60"/>
+        <pb facs="#f0067" n="61"/>
+        <pb facs="#f0068" n="62"/>
+        <pb facs="#f0069" n="63"/>
+        <pb facs="#f0070" n="64"/>
+        <pb facs="#f0071" n="65"/>
+        <pb facs="#f0072" n="66"/>
+        <pb facs="#f0073" n="67"/>
+        <pb facs="#f0074" n="68"/>
+        <pb facs="#f0075" n="69"/>
+        <pb facs="#f0076" n="70"/>
+        <pb facs="#f0077" n="71"/>
+        <pb facs="#f0078" n="72"/>
+        <pb facs="#f0079" n="73"/>
+        <pb facs="#f0080" n="74"/>
+        <pb facs="#f0081" n="75"/>
+        <pb facs="#f0082" n="76"/>
+        <pb facs="#f0083" n="77"/>
+        <pb facs="#f0084" n="78"/>
+        <pb facs="#f0085" n="79"/>
+        <pb facs="#f0086" n="80"/>
+        <pb facs="#f0087" n="81"/>
+        <pb facs="#f0088" n="82"/>
+        <pb facs="#f0089" n="83"/>
+        <pb facs="#f0090" n="84"/>
+        <pb facs="#f0091" n="85"/>
+        <pb facs="#f0092" n="86"/>
+        <pb facs="#f0093" n="87"/>
+        <pb facs="#f0094" n="88"/>
+        <pb facs="#f0095" n="89"/>
+        <pb facs="#f0096" n="90"/>
+        <pb facs="#f0097" n="91"/>
+        <pb facs="#f0098" n="92"/>
+        <pb facs="#f0099" n="93"/>
+        <pb facs="#f0100" n="94"/>
+        <pb facs="#f0101" n="95"/>
+        <pb facs="#f0102" n="96"/>
+        <pb facs="#f0103" n="97"/>
+        <pb facs="#f0104" n="98"/>
+        <pb facs="#f0105" n="99"/>
+        <pb facs="#f0106" n="100"/>
+        <pb facs="#f0107" n="101"/>
+        <pb facs="#f0108" n="102"/>
+        <pb facs="#f0109" n="103"/>
+        <pb facs="#f0110" n="104"/>
+        <pb facs="#f0111" n="105"/>
+        <pb facs="#f0112" n="106"/>
+        <pb facs="#f0113" n="107"/>
+        <pb facs="#f0114" n="108"/>
+        <pb facs="#f0115" n="109"/>
+        <pb facs="#f0116" n="110"/>
+        <pb facs="#f0117" n="111"/>
+        <pb facs="#f0118" n="112"/>
+        <pb facs="#f0119" n="113"/>
+        <pb facs="#f0120" n="114"/>
+        <pb facs="#f0121" n="115"/>
+        <pb facs="#f0122" n="116"/>
+        <pb facs="#f0123" n="117"/>
+        <pb facs="#f0124" n="118"/>
+        <pb facs="#f0125" n="119"/>
+        <pb facs="#f0126" n="120"/>
+        <pb facs="#f0127" n="121"/>
+        <pb facs="#f0128" n="122"/>
+        <pb facs="#f0129" n="123"/>
+        <pb facs="#f0130" n="124"/>
+        <pb facs="#f0131" n="125"/>
+        <pb facs="#f0132" n="126"/>
+        <pb facs="#f0133" n="127"/>
+        <pb facs="#f0134" n="128"/>
+        <pb facs="#f0135" n="129"/>                
+      <div xml:id="section-m">
+        <head rendition="#c">M</head>
+        <cb type="start"/>
+        <pb n="130" facs="#f0136"/>
+        <pb n="131" facs="#f0137"/>
+        <pb n="132" facs="#f0138"/>
+        <pb n="133" facs="#f0139"/>
+        <pb n="134" facs="#f0140"/>
+        <pb n="135" facs="#f0141"/>
+        <pb n="136" facs="#f0142"/>
+        <pb n="137" facs="#f0143"/>
+        <cb n="1"/>
+        <p><hi rendition="#b">merge</hi> vb. adopted fr. <hi
+            rendition="#k">lat.</hi>
+          <hi rendition="#i">mergere</hi> ‘plunge under water’.</p>
+        <p><hi rendition="#b">merit</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">merít</hi> fr. <hi rendition="#k"
+            >fr.</hi>
+          <hi rendition="#i">mérite</hi>.</p>
+        <p><hi rendition="#b">mermaid</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">mer-maide</hi>; <hi rendition="#k"
+            >oe.</hi>
+          <hi rendition="#i">mere</hi> ‘ocean’ <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#i">męre</hi> agree with <hi rendition="#k"
+            >ohg.</hi>
+          <hi rendition="#k">osax.</hi>
+          <hi rendition="#i">mẹri</hi>, <hi rendition="#k">goth.</hi>
+          <hi rendition="#i">marei</hi> ‘ocean’; cp. <hi
+            rendition="#g #i">marsh</hi>.</p>
+        <p><hi rendition="#b">merry</hi> adj. <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#i">mirie</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">myrᵹe</hi> from a Teut. base <hi
+            rendition="#i">murgi-</hi> ‘short’ in <hi rendition="#k"
+            >ohg.</hi>
+          <hi rendition="#i">murgfâri</hi> ‘of short life’, Swiss <hi
+            rendition="#i">murg</hi> ‘mannikin’; cp. <hi
+            rendition="#k">goth.</hi>
+          <hi rendition="#i">maúrgjan</hi> ‘shorten’. The adj. <hi
+            rendition="#k">teut.</hi>
+          <hi rendition="#i">murgu-</hi> ‘short’ = <hi rendition="#k"
+            >ie.</hi>
+          <hi rendition="#i">mṛghu-</hi> corresponds to <hi
+            rendition="#k">gr.</hi>
+          <hi rendition="#i">βραχύς</hi> ‘short’ (for <hi
+            rendition="#i">*μραχύς</hi>).</p>
+        <p><hi rendition="#b">mesh</hi> sb. <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#i">mesche</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">mǽsče</hi> = <hi rendition="#k">on.</hi>
+          <hi rendition="#i">mǫskve</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mâsca</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">masche</hi>; the Teut. base <hi
+            rendition="#i">*mêsgen</hi> belongs to the <hi
+            rendition="#k">ie.</hi>
+          <hi rendition="#i">mē̆zg</hi> in <hi rendition="#k"
+            >lith.</hi>
+          <hi rendition="#i">mázgas</hi> ‘knot’ from the vb. <hi
+            rendition="#i">mezgù</hi> (<hi rendition="#i">mègsti</hi>)
+          ‘knot, weave nets’; hence <hi rendition="#g #i">mesh</hi>
+          may be traced to a <hi rendition="#k">teut.</hi> √ <hi
+            rendition="#i">mêsq</hi> (<hi rendition="#k">aryan</hi>
+          <hi rendition="#i">mē̆zg</hi> ‘braid’).</p>
+        <p><hi rendition="#b">mete</hi> vb. <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#i">mę́te</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">mëtan</hi> = <hi rendition="#k"
+            >osax.</hi>
+          <hi rendition="#i">mëtan</hi>, <hi rendition="#k">du.</hi>
+          <hi rendition="#i">meten</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mëʒʒan</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">messen</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">meta</hi>, <hi rendition="#k">goth.</hi>
+          <hi rendition="#i">mitan</hi> with which is allied <hi
+            rendition="#k">goth.</hi>
+          <hi rendition="#i">mitôn</hi> ‘think over’, <hi
+            rendition="#k">ohg.</hi>
+          <hi rendition="#i">mëʒʒôn</hi> ‘moderate’. The <hi
+            rendition="#k">teut.</hi> √ <hi rendition="#i">mē̆t</hi>
+          is based on the <hi rendition="#k">aryan</hi> √ <hi
+            rendition="#i">mē̆d</hi> in <hi rendition="#k">gr.</hi>
+          <hi rendition="#i">μέδομαι</hi>, ‘I devise’ — <hi
+            rendition="#i">μέδων</hi> ‘counselor’ — <hi rendition="#i"
+            >μέδιμνος</hi> ‘a corn-measure’, <hi rendition="#k"
+            >lat.</hi>
+          <hi rendition="#i">modus</hi> ‘manner’ — <hi rendition="#i"
+            >modius</hi> ‘a corn-measure’, <hi rendition="#k"
+            >goth.</hi>
+          <hi rendition="#i">mitaþs</hi> ‘measure’.</p>
+        <p><hi rendition="#b">mess</hi> sb. <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#i">messe</hi> borrowed fr. <hi
+            rendition="#k">ofr.</hi>
+          <hi rendition="#i">mes</hi>
+          <hi rendition="#k">fr.</hi>
+          <hi rendition="#i">mets</hi> (source <hi rendition="#k"
+            >lat.</hi>
+          <hi rendition="#i">missus</hi> fr. <hi rendition="#i"
+            >mittere</hi>) ‘send’ and in <hi rendition="#k"
+            >med.-lat.</hi> ‘put, place’).</p>
+        <p><hi rendition="#b">message</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">messáǧe</hi> borrowed fr. <hi
+            rendition="#k">fr.</hi>
+          <hi rendition="#i">message</hi>: <hi rendition="#k"
+            >lat.</hi> type <hi rendition="#i">missatica</hi>
+          <cb n="2"/>an extension of <hi rendition="#k">lat.</hi>
+          <hi rendition="#i">missus</hi>. — Hence <hi rendition="#b"
+            >messenger</hi> (with the insertion of <hi rendition="#i"
+            >n</hi> as in <hi rendition="#g #i">passenger</hi>) <hi
+            rendition="#k">me.</hi>
+          <hi rendition="#i">messaǧér</hi> formed fr. <hi
+            rendition="#i #g">message</hi> with the suffix <hi
+            rendition="#i">-er</hi> denoting ‘the agent’.</p>
+        <p><hi rendition="#b">metal</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">metal</hi> borrowed fr. <hi
+            rendition="#k">fr.</hi>
+          <hi rendition="#i">métal</hi>.</p>
+        <p><hi rendition="#b">mete</hi> vb. ‘measure’ <hi
+            rendition="#k">me.</hi>
+          <hi rendition="#i">mę́te</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">metan</hi> sw. vb. ‘measure’ = <hi
+            rendition="#k">goth.</hi>
+          <hi rendition="#i">mitan</hi>, <hi rendition="#k">g.</hi>
+          <hi rendition="#i">messen</hi>
+          <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mëʒʒan</hi>, <hi rendition="#k">du.</hi>
+          <hi rendition="#i">meten</hi>.</p>
+        <p><hi rendition="#b">mettle</hi> ident. w. <hi rendition="#i"
+            >metal</hi> but meaning now ‘spirit, ardor’.</p>
+        <p><hi rendition="#b">mew</hi> vb. onomatopoetic like <hi
+            rendition="#k">du.</hi>
+          <hi rendition="#i">maauwen</hi>, <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mauen</hi>; imitative of a cat’s cry.</p>
+        <p><hi rendition="#b">mew</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">méw</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">mǽw</hi>; cp. <hi rendition="#k">du.</hi>
+          <hi rendition="#i">meeuw</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">má-r</hi>, <hi rendition="#k">g.</hi>
+          <hi rendition="#i">möwe</hi>: <hi rendition="#k">teut.</hi>
+          base <hi rendition="#i">maiw-</hi>.</p>
+        <p><hi rendition="#b">mickle</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">mikel</hi>
+          <hi rendition="#i">michel</hi>
+          <hi rendition="#i">mukel</hi>
+          <hi rendition="#i">muchel</hi>, <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">mičel</hi>
+          <hi rendition="#i">myčel</hi> = <hi rendition="#k"
+            >goth.</hi>
+          <hi rendition="#i">mikils</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">mikill</hi>
+          <hi rendition="#i">mykill</hi>, <hi rendition="#k"
+            >osax.</hi>
+          <hi rendition="#i">mikil</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mihhil</hi>; cp. <hi rendition="#i #g"
+            >much</hi>.</p>
+        <p><hi rendition="#b">mid-</hi> adj. <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#i">mid</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">mid</hi>
+          <hi rendition="#i">midd</hi> = <hi rendition="#k">osax.</hi>
+          <hi rendition="#i">middi</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mitti</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mit-</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">miđr</hi>, <hi rendition="#k">goth.</hi>
+          <hi rendition="#i">midjis</hi>. In mod. <hi rendition="#k"
+            >e.</hi> and in mod. <hi rendition="#k">g.</hi>, the
+          adjectives <hi rendition="#k">e.</hi>
+          <hi rendition="#i">mid-</hi> = <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mit-</hi> are only used in compounds as
+            <hi rendition="#k">e.</hi>
+          <hi rendition="#i">midday</hi>, <hi rendition="#i"
+            >midlent</hi>, <hi rendition="#i">midsummer</hi>, <hi
+            rendition="#i">midwinter</hi>; <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mittag</hi>, <hi rendition="#i"
+            >mitiernacht</hi>, <hi rendition="#i">mittwoch</hi> (orig.
+          dat. sing.). The <hi rendition="#k">teut.</hi> stem <hi
+            rendition="#i">midja-</hi> answers to <hi rendition="#k"
+            >aryan</hi>
+          <hi rendition="#i">médhyo</hi>; cp. <hi rendition="#k"
+            >gr.</hi>
+          <hi rendition="#i">μέδος</hi>, (for <hi rendition="#i"
+            >*μεϑϳος</hi>), <hi rendition="#k">skr.</hi>
+          <hi rendition="#i">mádhyas</hi>, <hi rendition="#k"
+            >lat.</hi>
+          <hi rendition="#i">medius</hi>. — <hi rendition="#b"
+            >middle</hi> adj. and sb. <hi rendition="#k">me.</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">middel</hi> = <hi rendition="#k">du.</hi>
+          <hi rendition="#i">middel</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mittil</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mittel</hi>; with formative <hi
+            rendition="#i">-l</hi> from the adj. <hi rendition="#i"
+            >mid</hi>.</p>
+        <pb n="138" facs="#f0144"/>
+        <cb n="1"/>
+        <p><hi rendition="#b">midge</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">miǧǧe</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">myčǧ</hi> fr. a Teut. base <hi
+            rendition="#i">mugjô-</hi> = <hi rendition="#k">osax.</hi>
+          <hi rendition="#i">muggia</hi>, <hi rendition="#k">du.</hi>
+          <hi rendition="#i">mug</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mucka</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mücke</hi>. From <hi rendition="#k"
+            >on.</hi>
+          <hi rendition="#i">mý</hi> it may be inferred that the
+          West-Teut. guttural is secondary.</p>
+        <p><hi rendition="#b">midst</hi> formed with excrescent <hi
+            rendition="#i">t</hi> from <hi rendition="#k">me.</hi>
+          <hi rendition="#i">in</hi>
+          <hi rendition="#i">middes</hi> equivalent to <hi
+            rendition="#i #g">amid</hi>.</p>
+        <p><hi rendition="#b">mien</hi> borrowed fr. <hi
+            rendition="#k">fr.</hi>
+          <hi rendition="#i">mine</hi> fr. <hi rendition="#k">it.</hi>
+          <hi rendition="#i">mina</hi> = <hi rendition="#k">oit.</hi>
+          <hi rendition="#i">mena</hi> ‘fashion, carriage of man’:
+          source <hi rendition="#k">med.-lat.</hi>
+          <hi rendition="#i">minare</hi> ‘conduct, lead’.</p>
+        <p><hi rendition="#b">might</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">might</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">miht</hi>
+          <hi rendition="#i">meaht</hi> = <hi rendition="#k"
+            >osax.</hi>
+          <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">maht</hi>, <hi rendition="#k">du.</hi>
+          <hi rendition="#i">magt</hi>, <hi rendition="#k">g.</hi>
+          <hi rendition="#i">macht</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">máttr</hi>, <hi rendition="#k">goth.</hi>
+          <hi rendition="#i">mahts</hi>. The common <hi rendition="#k"
+            >teut.</hi>
+          <hi rendition="#i">*mahti</hi> is an old verbal abstract
+          from <hi rendition="#k">goth.</hi>
+          <hi rendition="#i">magan</hi> (like <hi rendition="#k"
+            >oslov.</hi>
+          <hi rendition="#i">moštĭ</hi> from <hi rendition="#i"
+            >*mokti</hi> from <hi rendition="#i">mogą</hi> ‘clean’).
+          See <hi rendition="#i #g">may</hi>.</p>
+        <p><hi rendition="#b">milch</hi> adj. <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#i">milche</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">*mylče</hi>: deriv. of <hi
+            rendition="#i #g">milk</hi>; cp. the equiv. <choice>
+            <sic>adj’s.</sic>
+            <corr>adjs.</corr>
+          </choice>
+          <hi rendition="#k">on.</hi>
+          <hi rendition="#i">milkr</hi>
+          <hi rendition="#i">mjólkr</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mëlch</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">melk</hi>, <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">mëlc</hi>.</p>
+        <p><hi rendition="#b">mild</hi> adj. <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">mílde</hi> = <hi rendition="#k"
+            >osax.</hi>
+          <hi rendition="#i">mildi</hi>, <hi rendition="#k">du.</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mild</hi>
+          <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">milti</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">mildr</hi>, <hi rendition="#k">goth.</hi>
+          <hi rendition="#i">mildeis</hi>. Cogn. w. <hi rendition="#k"
+            >oir.</hi>
+          <hi rendition="#i">meldach</hi> ‘agreeable’ or <hi
+            rendition="#i">blaith</hi> ‘soft, smooth’ (base <hi
+            rendition="#i">mlâti-</hi>)? or <hi rendition="#k"
+            >oslov.</hi>
+          <hi rendition="#i">mladŭ</hi> ‘young, tender’, <hi
+            rendition="#k">lith.</hi>
+          <hi rendition="#i">mildùs</hi> ‘pious’?</p>
+        <p><hi rendition="#b">mildew</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">mildę́w</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">miledę́aw</hi> = <hi rendition="#k"
+            >du.</hi>
+          <hi rendition="#i">meeldauw</hi>, <hi rendition="#k"
+            >ohg.</hi>
+          <hi rendition="#i">mili-tou</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mehltau</hi>; the first part is prob. fr.
+            <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">mele</hi> = <hi rendition="#k">goth.</hi>
+          <hi rendition="#i">miliþ</hi> ‘honey’; cp. <hi
+            rendition="#k">on.</hi>
+          <hi rendition="#i">milska</hi> ‘a honeyed drink’; the second
+          part see under <hi rendition="#i #g">dew</hi>.</p>
+        <p><hi rendition="#b">mile</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">míle</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">míl</hi> = <hi rendition="#k">du.</hi>
+          <hi rendition="#i">mijl</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mîla</hi>
+          <hi rendition="#i">mîlla</hi> (for <hi rendition="#i"
+            >*mîlja</hi>) <hi rendition="#k">g.</hi>
+          <hi rendition="#i">meile</hi>: borrowed fr. <hi
+            rendition="#k">lat.</hi>
+          <hi rendition="#i">mîlia</hi>
+          <cb n="2"/>(passuum) lit. ‘thousand paces’, (whence also <hi
+            rendition="#k">fr.</hi>
+          <hi rendition="#i">mille</hi>, <hi rendition="#k">it.</hi>
+          <hi rendition="#i">miglia</hi>). The more frequent plur. <hi
+            rendition="#i">mîlia</hi> was adopted in Rom. and G. as a
+          fem. sing. (omitting <hi rendition="#i">passuum</hi>).</p>
+        <p><hi rendition="#b">milfoil</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">milfoil</hi> fr. <hi rendition="#k"
+            >fr.</hi>
+          <hi rendition="#i">millefeuille</hi> = <hi rendition="#k"
+            >lat.</hi>
+          <hi rendition="#i">millefolium</hi>.</p>
+        <p><hi rendition="#b">milk</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">milk</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">meoloc</hi>
+          <hi rendition="#i">milc</hi> = <hi rendition="#k">osax.</hi>
+          <hi rendition="#i">miluk</hi>, <hi rendition="#k">du.</hi>
+          <hi rendition="#i">melk</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">miluh</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">milch</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">mjólkr</hi>, <hi rendition="#k"
+            >goth.</hi>
+          <hi rendition="#i">miluks</hi>. It is remarkable that a
+          common Aryan or at least a West-Aryan term for ‘milk’ is
+          wanting, although the √ <hi rendition="#i">melg</hi> = <hi
+            rendition="#k">teut.</hi>
+          <hi rendition="#i">mëlk</hi> ‘to milk’ occurs in all the
+          West-Aryan languages. From a common Indo-Eur. vb.: <hi
+            rendition="#k">oe.</hi>
+          <hi rendition="#i">mëlcan</hi>, <hi rendition="#k">du.</hi>
+          <hi rendition="#i">melken</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mëlchan</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">melken</hi>, <hi rendition="#k"
+            >goth.</hi>
+          <hi rendition="#i">*milkan</hi>. Cp. <hi rendition="#k"
+            >lat.</hi>
+          <hi rendition="#i">mulgere</hi>, <hi rendition="#k">gr.</hi>
+          <hi rendition="#i">ἀμέλγειν</hi>, <hi rendition="#k"
+            >oslov.</hi>
+          <hi rendition="#i">mlěsti</hi> (pres. <hi rendition="#i"
+            >mlŭzą</hi>), <hi rendition="#k">lith.</hi>
+          <hi rendition="#i">mìlsti</hi> (pres. <hi rendition="#i"
+            >mélžu</hi>) <hi rendition="#k">oir.</hi>
+          <hi rendition="#i">mbligim</hi> (<hi rendition="#i"
+            >mlicht</hi> and <hi rendition="#i">melg</hi> ‘milk’). —
+            <hi rendition="#b">milk</hi> vb. <hi rendition="#k"
+            >me.</hi>
+          <hi rendition="#i">milke</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">meolcian</hi> (= <hi rendition="#k"
+            >ofris.</hi>
+          <hi rendition="#i">melka</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">mjólka</hi>) fr. <hi rendition="#k"
+            >oe.</hi>
+          <hi rendition="#i">meolc</hi>.</p>
+        <p><hi rendition="#b">mill</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#i">mille</hi> earlier <hi rendition="#i"
+            >milne</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">myln</hi> (whence <hi rendition="#k"
+            >on.</hi>
+          <hi rendition="#i">mylna</hi>) = <hi rendition="#k">du.</hi>
+          <hi rendition="#i">molen</hi>
+          <hi rendition="#i">meulen</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">mulî(n)</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">mühle</hi>; borrowed fr. late <hi
+            rendition="#k">lat.</hi> common <hi rendition="#k"
+            >rom.</hi>
+          <hi rendition="#i">molîna</hi> ‘mill’ (for class. <hi
+            rendition="#k">lat.</hi>
+          <hi rendition="#i">mola</hi>), whence also <hi
+            rendition="#k">it.</hi>
+          <hi rendition="#i">mulino</hi>, <hi rendition="#k">fr.</hi>
+          <hi rendition="#i">moulin</hi>.</p>
+        <p><hi rendition="#b">millet</hi> fr. <hi rendition="#k"
+            >fr.</hi>
+          <hi rendition="#i">millet</hi>; source <hi rendition="#k"
+            >lat.</hi>
+          <hi rendition="#i">milium</hi> ‘millet’.</p>
+        <p><hi rendition="#b">milt</hi>
+          <hi rendition="#k">me.</hi>
+          <hi rendition="#k">oe.</hi>
+          <hi rendition="#i">milte</hi> = <hi rendition="#k">du.</hi>
+          <hi rendition="#i">milt</hi>, <hi rendition="#k">ohg.</hi>
+          <hi rendition="#i">milzi</hi>
+          <hi rendition="#k">g.</hi>
+          <hi rendition="#i">milz</hi>, <hi rendition="#k">on.</hi>
+          <hi rendition="#i">milti</hi>: from the <hi rendition="#k"
+            >teut.</hi> √ <hi rendition="#i">melt</hi> seen in <hi
+            rendition="#i #g">malt</hi>. <hi rendition="#k">e.</hi>
+          and <hi rendition="#k">du.</hi>
+          <hi rendition="#i">milt</hi> ‘soft roe of fishes’ is a
+          corruption of <hi rendition="#i">milk</hi> (<hi
+            rendition="#k">sw.</hi>
+          <hi rendition="#i">mjölke</hi> ‘milt’ fr. <hi rendition="#i"
+            >mjölk</hi> ‘milk’, <hi rendition="#k">dan.</hi>
+          <pb n="139" facs="#f0145"/><cb n="1"/><hi rendition="#i"
+            >fiskemelk</hi> ‘soft roe of fishes’, lit.
+          ‘fish-milk’).</p>
+        <cb type="end"/>
+      </div>
+    </body>
+  </text>
+</TEI>
