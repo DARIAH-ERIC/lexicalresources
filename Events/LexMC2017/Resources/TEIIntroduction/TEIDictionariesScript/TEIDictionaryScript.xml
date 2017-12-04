@@ -118,7 +118,8 @@
             </div>
             <div>
                <head>Additonal grammatical information</head>
-               <p>The <gi>gramGrp</gi> element can be used to provide the morphosyntactic properties of the lemma.</p>
+               <p>The <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gramGrp.html"><gi>gramGrp</gi></ref> element can be used to provide the morphosyntactic properties of the
+                  lemma.</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <entry>
                      <form type="lemma">...</form>
@@ -128,13 +129,19 @@
                      </gramGrp>
                   </entry>
                </egXML>
-               <p>The main elements that can be used here are <gi>pos</gi>, <gi>gen</gi>, <gi>case</gi>, <gi>mood</gi>, <gi>number</gi>, <gi>per</gi>, <gi>tns</gi> and the generic <gi>gram</gi>
-                  element together with a <att>type</att> attribute.</p>
+               <p>The main elements that can be used here are <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pos.html"><gi>pos</gi></ref>, <ref
+                     target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gen.html"><gi>gen</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-case.html"
+                        ><gi>case</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-mood.html"><gi>mood</gi></ref>, <ref
+                     target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-number.html"><gi>number</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-per.html"
+                        ><gi>per</gi></ref>, <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-tns.html"><gi>tns</gi></ref> and the generic <ref
+                     target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-garm.html"><gi>gram</gi></ref> element (together with a <att>type</att> attribute).</p>
             </div>
             <div>
                <head>Sense related information</head>
-               <p>Within the <gi>sense</gi> element, it is possible to gather various types of information such as usage (<gi>usg</gi>), definition (<gi>def</gi>), examples (<gi>cit</gi>) or etymology
-                     (<gi>etym</gi>).</p>
+               <p>Within the <gi>sense</gi> element, it is possible to gather various types of information such as usage (<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-usg.html"
+                        ><gi>usg</gi></ref>), definition (<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-def.html"><gi>def</gi></ref>), examples (<ref
+                     target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cit.html"><gi>cit</gi></ref>) or etymology (<ref
+                     target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-etym.html"><gi>etym</gi></ref>).</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <entry>
                      <form>...</form>
@@ -154,7 +161,7 @@
             </div>
             <div>
                <head>Related entries</head>
-               <p>The <gi>re</gi> element embeds <gi>entry</gi>-like content for describing related entries:</p>
+               <p>The <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-re.html"><gi>re</gi></ref> element embeds <gi>entry</gi>-like content for describing related entries:</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <entry>
                      <form>...</form>
