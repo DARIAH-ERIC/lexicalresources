@@ -23,6 +23,10 @@
 	* [XPath Expressions](#xpath-expressions)
 		* [Examples](#examples)
 			* [Selecting nodes](#selecting-nodes)
+			* [Selecting predicates](#selecting-predicates)
+			* [Selecting unknown nodes](#selecting-unknown-nodes)
+			* [Selecting more than one path](#selecting-more-than-one-path)
+			* [XPath Axes](#xpath-axes)
 
 <!-- /code_chunk_output -->
 
@@ -89,6 +93,8 @@ Say you have a large, XML-encoded dictionary and you are interested in:
 - exploring all the polysemous entries in a dictionary;
 
 in all of the above cases, succinct XPath expressions will help you get to the specific data that fits your search criteria in a way that plain-text search could never do.  
+
+In addition to being useful for studying dictionaries and extracting data from them, XPath is essential to know if you're planning to use XSLT - a language for _transforming_ XML documents. XSLT is applied to XML documents when we want to change them from one format to another (for instance, XML to HTML) or when we want to change something across dictionary (for instance, changing all `entry` elements to `entryFree` etc.)
 
 ### What do I need to work with XPath?
 
@@ -223,13 +229,13 @@ Double-slash is your friend. `//entry` will select all entry nodes no matter whe
 
 ![Скриншот 2017-12-04 07.16.03](https://i.imgur.com/IcebWeT.png)
 
-| Expressions   | Selects                                     |     |
-| ------------- | ------------------------------------------- | --- |
-| `//form/orth` | all orth nodes that are children of form    |     |
+| Expression    | Selects                                  |     |
+| ------------- | ---------------------------------------- | --- |
+| `//form/orth` | all orth nodes that are children of form |     |
 
 ![Скриншот 2017-12-04 07.23.36](https://i.imgur.com/hM6tbUC.png)
 
-| Expressions | Selects                                               |
+| Expression  | Selects                                               |
 | ----------- | ----------------------------------------------------- |
 | `//pron`    | all pron nodes no matter where they area              |
 | `//pron/..` | parents of all pron elements no matter where they are |
@@ -239,4 +245,160 @@ Double-slash is your friend. `//entry` will select all entry nodes no matter whe
 | Expression | Selects                              |
 | ---------- | ------------------------------------ |
 | `@type`    | all type attributes, no matter where |
-|            |                                      |
+
+
+#### Selecting predicates
+
+Predicates are your friends. They are used for selecting specific nodes or nodes that contain specific values.
+
+Predicates are always written in _square brackets_.
+
+| Expression                     | Selects                              |
+| ------------------------------ | ------------------------------------ |
+| `//body/entry[1]`              | first entry                          |
+| `//body/entry[last()]`         | last entry                           |
+| `//body/entry[last()-1]`       | penultimate entry                    |
+| `//body/entry[position() < 4]` | first three entries                  |
+| `//cit[@type]`                 | all cit nodes with type attribute    |
+| `//cit[not(@type)]`            | all cit nodes without type attribute |
+| `//cit[@type='translation']`   | all cit nodes of type translation    |
+| `//form[orth="competitor"]`    | all forms whose orth = competitor    |
+
+
+Now, as you can see, it's easy to select a node such as `form` whose child (`orth`) is of a particular value. But what if you want to select the entire `entry` whose orthographic form is of a particular value? Let's take this in three steps:
+
+| Expression                      | Selects                             |
+| ------------------------------- | ----------------------------------- |
+| `//entry`                       | all entries                         |
+| `//entry[.//orth]`              | all entries that contain orth       |
+| `//entry[.//orth="competitor"]` | all entries whose orth="competitor" |
+
+As you noticed in `//form[orth="competitor"]`, the first node that you put in the square brackets is always the child of the node before the square brackets. `//entry[orth="competitor"]` would return no results from our document because there is no `entry` that has `orth` as its child: `orth` is the child of `form` and `form` is the child of `entry`, which makes `orth` the descendant of `entry`.
+
+That's why we had to do something else: in `//entry[.//orth="competitor"]`, the dot inside the square brackets represent the "current node", i.e. the child of entry, without specifically naming it. It is followed by double slashes to indicate that we are looking for orth _anywhere_ down the tree starting from the current node.
+
+Of course, since orth is the child of form, we could have also written `//entry[form/orth="competitor"]` and the result would have been the same.
+
+**Exercise**
+
+Write XPath expressions to select:
+
+1. all inflected forms in the dictionary file
+2. all entries containing translation into French
+3. all entries that contain etymological (`etym`) information
+4. all senses that come with usage (`usg`) information
+5. all entries with pronunciation (`pron`) information
+
+
+
+#### Selecting unknown nodes
+
+| Wildcard  | Matches                          |
+| --------- | -------------------------------- |
+| `*`       | any element node                 |
+| `@*`      | any attribute node               |
+| `node() ` | any node (including text nodes ) |
+
+#### Selecting more than one path
+
+To select more than one path, we use the or operator (`|`). For instance:
+
+| Expression                   | Selects                         |
+| ---------------------------- | ------------------------------- |
+| `//form/orth`                | selects all orths               |
+| `//form/pron`                | selects all prons               |
+| `//form/orths | //form/pron` | selects all orths and all prons |
+
+![Скриншот 2017-12-05 07.00.50](https://i.imgur.com/9SuDvtO.png)
+
+#### XPath Axes
+
+Remember, how we said that `//entry[.//orth="competitor"]` would select all the `orth` nodes with value competitor that are descendants of entry, no matter where entry appears in the document?
+
+XPath offers numerous ways of selecting axes, i.e. node sets that are in relation to the current node. A different, more explicit, way of writing the above expression would be: `//entry[descendant::orth="competitor"]`. Note the `::` which separates the axis name (`descendant`) from the node name (`orth`).
+
+<table class="w3-table-all notranslate">
+  <tbody><tr>
+    <th style="width:38%">AxisName</th>
+    <th style="width:62%">Result</th>
+  </tr>
+  <tr>
+    <td>ancestor</td>
+    <td>Selects all ancestors (parent, grandparent, etc.) of the current node</td>
+  </tr>
+  <tr>
+    <td>ancestor-or-self</td>
+    <td>Selects all ancestors (parent, grandparent, etc.) of the current node and the current node itself</td>
+  </tr>
+  <tr>
+    <td>attribute</td>
+    <td>Selects all attributes of the current node</td>
+  </tr>
+  <tr>
+    <td>child</td>
+    <td>Selects all children of the current node</td>
+  </tr>
+  <tr>
+    <td>descendant</td>
+    <td>Selects all descendants (children, grandchildren, etc.) of the current node</td>
+  </tr>
+  <tr>
+    <td>descendant-or-self</td>
+    <td>Selects all descendants (children, grandchildren, etc.) of the current node and the current node itself</td>
+  </tr>
+  <tr>
+    <td>following</td>
+    <td>Selects everything in the document after the closing tag of the current node</td>
+  </tr>
+  <tr>
+    <td>following-sibling</td>
+    <td>Selects all siblings after the current node</td>
+  </tr>
+  <tr>
+    <td>namespace</td>
+    <td>Selects all namespace nodes of the current node</td>
+  </tr>
+  <tr>
+    <td>parent</td>
+    <td>Selects the parent of the current node</td>
+  </tr>
+  <tr>
+    <td>preceding</td>
+    <td>Selects all nodes that appear before the current node in the document, except ancestors, attribute nodes and namespace nodes</td>
+  </tr>
+  <tr>
+    <td>preceding-sibling</td>
+    <td>Selects all siblings before the current node</td>
+  </tr>
+  <tr>
+    <td>self</td>
+    <td>Selects the current node</td>
+  </tr>
+  </tbody></table>
+
+So, what does mean in practice? Let's see one example in three individual steps:
+
+| Expression                          | Selects                               |
+| ----------------------------------- | ------------------------------------- |
+| `//orth`                            | all orths                             |
+| `//orth/following-sibling::pron`    | all prons that follow orths           |
+| `//orth/following-sibling::pron[1]` | all the first prons that follow orths |
+| `//orth/following-sibling::*`       | all elements that follow orth         |
+
+Now, the interesting thing about the last expression is that it will also select this particular case:
+
+![Скриншот 2017-12-05 07.29.25](https://i.imgur.com/RnffwFe.jpg)
+
+As we learned above, `*` selects any element node, and if you look for `//orth/following-sibling::*` you will also match orths that follow orth. If this is not what you want, you could rewrite the expression in such a way to select any element node which follows orth but which is itself _not_ orth. That would look like this:
+
+| Expressions                                    | Selects                            |
+| ---------------------------------------------- | ---------------------------------- |
+| `//orth/following-sibling::*[not(self::orth)]` | non-orth elements that follow orth |
+
+![Скриншот 2017-12-05 07.44.01](https://i.imgur.com/8SP6Df8.png)
+
+**Exercise**
+
+1. We haven't specifically covered this, but let's see if we can figure out the following expression: `//entry[count(sense)>1]`
+2. What is the difference between `//entry[count(sense)>1]` and `//entry[count(.//sense)>1]`?
+3. What is the difference between `//entry[count(child::sense)>1]` and `//entry[count(descendant::sense)>1]`?
