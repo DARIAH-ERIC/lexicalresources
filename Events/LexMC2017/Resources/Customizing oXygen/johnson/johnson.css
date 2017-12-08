@@ -6,12 +6,13 @@ teiHeader {
 	display: none;
 }
 
-form {
+entry {
 	margin-bottom: 1em;
 }
 
 form[type="lemma"] {
 	font-weight: bold;
+	color: blue;
 }
 
 gramGrp pos {
@@ -26,20 +27,20 @@ cit bibl{
 	color: #9437ff;
 }
 
-sense cit quote, значење пример цитат {
+sense cit quote {
 	color: #935100;
 }
 
 
-entry etym {
+ etym {
 	color: #00f900;
 }
 
-entry etym:before {
+etym:before {
 	content: " [";
 }
 
-entry etym:after {
+etym:after {
 	content: " ] ";
 }
 
