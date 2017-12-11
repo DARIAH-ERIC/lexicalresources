@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: dáruskapur</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>dáruskapur</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hann" type="nken-s">Hann</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="tilfyndinn" type="lkensf">tilfyndinn</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="fara" type="sfg3eþ">fór</w>
+                     <w lemma="með" type="ao">með</w>
+                     <w lemma="dáruskapur" type="nkeo">dáruskap</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="ýmsur" type="lkfesf">ýmsra</w>
+                     <w lemma="maður" type="nkfe">manna</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hann" type="nken-s">Hann</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="einhleypur" type="lkensf">einhleypur</w>
+                     <w lemma="maður" type="nken">maður</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="nenna" type="sfg3eþ">nennti</w>
+                     <w lemma="ekki" type="aa">ekki</w>
+                     <w lemma="að" type="cn">að</w>
+                     <w lemma="vinna" type="sng">vinna</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="skruma" type="sfg3eþ">skrumaði</w>
+                     <w lemma="mikið" type="aa">mikið</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="henda" type="sþghen">hent</w>
+                     <w lemma="að" type="aþ">að</w>
+                     <w lemma="hann" type="fpkeþ">honum</w>
+                     <w lemma="gaman" type="nhen">gaman</w>
+                     <w lemma="mikill" type="lhensf">mikið</w>
+                     <w lemma="eða" type="c">eða</w>
+                     <w lemma="dáruskapur" type="nken">dáruskapur</w>
+                     <w lemma="af" type="aþ">af</w>
+                     <w lemma="sumur" type="fokfþ">sumum</w>
+                     <w lemma="maður" type="nkfþ">mönnum</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

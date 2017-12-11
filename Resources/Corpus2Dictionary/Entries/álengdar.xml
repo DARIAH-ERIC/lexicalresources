@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: álengdar</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>álengdar</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þórhallur" type="nken-s">Þórhallur</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="vitur" type="lkensf">vitur</w>
+                     <w lemma="maður" type="nken">maður</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="gera" type="sfg3eþ">gerði</w>
+                     <w lemma="vel" type="aa">vel</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="grettir" type="nkee-s">Grettis</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="ekki" type="aa">ekki</w>
+                     <w lemma="vilja" type="sfg3eþ">vildi</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="vist" type="nveo">vist</w>
+                     <w lemma="hann" type="fpkee">hans</w>
+                     <w lemma="þar" type="aa">þar</w>
+                     <w lemma="álengdar" type="aa">álengdar</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="en" type="c">En</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="hann" type="fpkfn">þeir</w>
+                     <w lemma="björn" type="nken-s">Björn</w>
+                     <w lemma="finna" type="sfm3fþ">fundust</w>
+                     <w lemma="segja" type="sfg3eþ">sagði</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="grettir" type="nkeþ-s">Gretti</w>
+                     <w lemma="að" type="aþ">að</w>
+                     <w lemma="hann" type="fpkeþ">honum</w>
+                     <w lemma="þykja" type="sfg3eþ">þótti</w>
+                     <w lemma="nú" type="aa">nú</w>
+                     <w lemma="mikill" type="lhensf">mikið</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="verða" type="ssg">orðið</w>
+                     <w lemma="«" type="«">«</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="munu" type="sfg3en">mun</w>
+                     <w lemma="þú" type="fp2eþ">þér</w>
+                     <w lemma="ekki" type="aa">ekki</w>
+                     <w lemma="hér" type="aa">hér</w>
+                     <w lemma="fær" type="lhensf">fært</w>
+                     <w lemma="vera" type="sng">vera</w>
+                     <w lemma="álengdar" type="aa">álengdar</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

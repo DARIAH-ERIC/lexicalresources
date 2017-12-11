@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: trúr</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>trúr</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þá" type="aa">Þá</w>
+                     <w lemma="mæla" type="sfg3eþ">mælti</w>
+                     <w lemma="illugi" type="nken-s">Illugi</w>
+                     <pc>:</pc>
+                     <w lemma="«" type="«">«</w>
+                     <w lemma="ég" type="fp1en">Eg</w>
+                     <w lemma="munu" type="sfg1en">mun</w>
+                     <w lemma="fara" type="sng">fara</w>
+                     <w lemma="með" type="aþ">með</w>
+                     <w lemma="þú" type="fp2eþ">þér</w>
+                     <w lemma="bróðir" type="nkeþ">bróðir</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="eigi" type="aa">eigi</w>
+                     <w lemma="vita" type="sfg1en">veit</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="að" type="aþ">að</w>
+                     <w lemma="þú" type="fp2eþ">þér</w>
+                     <w lemma="vera" type="svg3en">sé</w>
+                     <w lemma="fylgd" type="nven">fylgd</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="ég" type="fp1eþ">mér</w>
+                     <w lemma="utan" type="aa">utan</w>
+                     <w lemma="það" type="fphen">það</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="trúr" type="lkensf">trúr</w>
+                     <w lemma="munu" type="sfg1en">mun</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="þú" type="fp2eþ">þér</w>
+                     <w lemma="vera" type="sng">vera</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="eiga" type="svg3en">eigi</w>
+                     <w lemma="renna" type="sng">renna</w>
+                     <w lemma="frá" type="aþ">frá</w>
+                     <w lemma="þú" type="fp2eþ">þér</w>
+                     <w lemma="meðan" type="c">meðan</w>
+                     <w lemma="þú" type="fp2en">þú</w>
+                     <w lemma="standa" type="sfg3en">stendur</w>
+                     <w lemma="uppi" type="aa">uppi</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="gerr" type="lkensf">gerr</w>
+                     <w lemma="vita" type="sfg3en">veit</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="hver" type="foheo">hvað</w>
+                     <w lemma="um" type="ao">um</w>
+                     <w lemma="þú" type="fp2eo">þig</w>
+                     <w lemma="líða" type="sfg3en">líður</w>
+                     <w lemma="ef" type="c">ef</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="fylgja" type="svg1en">fylgi</w>
+                     <w lemma="þú" type="fp2eþ">þér</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

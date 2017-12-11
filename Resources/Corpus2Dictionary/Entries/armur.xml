@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: armur</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>armur</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="»" type="»">»</w>
+                     <w lemma="«" type="«">«</w>
+                     <w lemma="en" type="nken-s">En</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="geta" type="sfg1en">get</w>
+                     <pc>,</pc>
+                     <w lemma="»" type="»">»</w>
+                     <w lemma="segja" type="sfg3eþ">sagði</w>
+                     <w lemma="grettir" type="nken-s">Grettir</w>
+                     <pc>,</pc>
+                     <w lemma="«" type="«">«</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hinn" type="gven">hin</w>
+                     <w lemma="armur" type="nkfo">arma</w>
+                     <w lemma="kerling" type="nveng">kerlingin</w>
+                     <w lemma="fóstra" type="nven">fóstra</w>
+                     <w lemma="þinn" type="feven">þín</w>
+                     <w lemma="hafa" type="svg3en">hafi</w>
+                     <w lemma="vísa" type="ssg">vísað</w>
+                     <w lemma="þú" type="fp2eþ">þér</w>
+                     <w lemma="það" type="fpheþ">því</w>
+                     <w lemma="að" type="aþ">að</w>
+                     <w lemma="hún" type="fpvee">hennar</w>
+                     <w lemma="ráð" type="nhfþ">ráðum</w>
+                     <w lemma="munta" type="sfg3fþ">muntu</w>
+                     <w lemma="treysta" type="ssg">treyst</w>
+                     <w lemma="hafa" type="sfg3fn">hafa</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

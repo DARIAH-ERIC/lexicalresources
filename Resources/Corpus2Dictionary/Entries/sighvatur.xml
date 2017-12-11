@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: sighvatur</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>sighvatur</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þessi" type="faheo">Þetta</w>
+                     <w lemma="haust" type="nheo">haust</w>
+                     <w lemma="drepa" type="sfg3eþ">drap</w>
+                     <w lemma="grímur" type="nken-s">Grímur</w>
+                     <w lemma="hersir" type="nken">hersir</w>
+                     <w lemma="öndótt" type="nken-s">Öndótt</w>
+                     <w lemma="kráka" type="nveo">kráku</w>
+                     <w lemma="fyrir" type="ao">fyrir</w>
+                     <w lemma="það" type="fpheo">það</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="ná" type="sfg3eþ">náði</w>
+                     <w lemma="eiga" type="svg3en">eigi</w>
+                     <w lemma="fé" type="nheþg">fénu</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="hönd" type="nvfe">handa</w>
+                     <w lemma="konungur" type="nkeþ">konungi</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="signý" type="nven-s">Signý</w>
+                     <w lemma="kona" type="nven">kona</w>
+                     <w lemma="öndóttur" type="nkee-s">Öndótts</w>
+                     <w lemma="bera" type="sfg3eþ">bar</w>
+                     <w lemma="á" type="ao">á</w>
+                     <w lemma="skip" type="nhfo">skip</w>
+                     <w lemma="allur" type="fohen">allt</w>
+                     <w lemma="lausafé" type="nheo">lausafé</w>
+                     <w lemma="það" type="fphfe">þeirra</w>
+                     <w lemma="þegar" type="c">þegar</w>
+                     <w lemma="hinn" type="gveo">hina</w>
+                     <w lemma="samur" type="fbveo">sömu</w>
+                     <w lemma="nótt" type="nveo">nótt</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="fara" type="sfg3eþ">fór</w>
+                     <w lemma="með" type="ao">með</w>
+                     <w lemma="sonur" type="nkfo">sonu</w>
+                     <w lemma="sinn" type="fekfo">sína</w>
+                     <pc>,</pc>
+                     <w lemma="ásmundur" type="nkeo-s">Ásmund</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="ásgrímur" type="nkeo-s">Ásgrím</w>
+                     <pc>,</pc>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="sighvatur" type="nkee-s">Sighvats</w>
+                     <w lemma="faðir" type="nkee">föður</w>
+                     <w lemma="sinn" type="fekee">síns</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

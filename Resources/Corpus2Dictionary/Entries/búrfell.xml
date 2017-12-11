@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: búrfell</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>búrfell</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hann" type="fpkfn">Þeir</w>
+                     <w lemma="ríða" type="sfg3fþ">riðu</w>
+                     <w lemma="yfir" type="aa">yfir</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="búrfell" type="nhee-s">Búrfells</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="þaðan" type="aa">þaðan</w>
+                     <w lemma="yfir" type="ao">yfir</w>
+                     <w lemma="háls" type="nkeog">hálsinn</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="hrútafjarðar" type="nkee-s">Hrútafjarðar</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="koma" type="sfg3fþ">komu</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="meli" type="nkee-s">Mela</w>
+                     <w lemma="um" type="ao">um</w>
+                     <w lemma="kveldi" type="nheog">kveldið</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þorbjörn" type="nken-s">Þorbjörn</w>
+                     <w lemma="öxnamegin" type="lkenof">öxnamegin</w>
+                     <w lemma="hafa" type="sfg3eþ">hafði</w>
+                     <w lemma="ríða" type="ssg">riðið</w>
+                     <w lemma="þenna" type="sng">þenna</w>
+                     <w lemma="dagur" type="nkeo">dag</w>
+                     <w lemma="yfir" type="ao">yfir</w>
+                     <w lemma="háls" type="nkeo">háls</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="búrfell" type="nhee-s">Búrfells</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="hann" type="fpkfn">þeir</w>
+                     <w lemma="ríða" type="sfg3fþ">riðu</w>
+                     <w lemma="aftur" type="aa">aftur</w>
+                     <w lemma="sjá" type="sfg3en">sér</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="fundur" type="nkeog">fundinn</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

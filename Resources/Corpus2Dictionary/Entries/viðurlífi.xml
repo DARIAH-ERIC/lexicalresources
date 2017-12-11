@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: viðurlífi</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>viðurlífi</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="»" type="»">»</w>
+                     <w lemma="nú" type="aa">Nú</w>
+                     <w lemma="láta" type="sfg3eþ">lét</w>
+                     <w lemma="þorsteinn" type="nken-s">Þorsteinn</w>
+                     <w lemma="lagða" type="sng">lagða</w>
+                     <w lemma="verða" type="sfg3fn">verða</w>
+                     <w lemma="peningur" type="nkfo">peninga</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="steinsmíð(i)" type="nvfn">steinsmíðar</w>
+                     <w lemma="báðir" type="fovfþ">báðum</w>
+                     <w lemma="það" type="fphfþ">þeim</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="þvílíkur" type="fbkee">þvílíks</w>
+                     <w lemma="annars" type="aa">annars</w>
+                     <w lemma="sem" type="c">sem</w>
+                     <w lemma="það" type="fphfn">þau</w>
+                     <w lemma="þurfa" type="sfg3fþ">þurftu</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="það" type="fphfn">þau</w>
+                     <w lemma="mega" type="sfg3fþ">máttu</w>
+                     <w lemma="eigi" type="aa">eigi</w>
+                     <w lemma="missa" type="sng">missa</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="viðurlífi" type="nhee">viðurlífis</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

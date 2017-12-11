@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: ótrúlega</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>ótrúlega</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="en" type="c">En</w>
+                     <w lemma="þá" type="aa">þá</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="prestur" type="nken">prestur</w>
+                     <w lemma="finna" type="sfg3eþ">fann</w>
+                     <w lemma="grettir" type="nkeþ-s">Gretti</w>
+                     <w lemma="spyrja" type="sfg3eþ">spurði</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="innilega" type="aa">innilega</w>
+                     <w lemma="eftir" type="aþ">eftir</w>
+                     <w lemma="atburður" type="nkfþ">atburðum</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="segja" type="sfg3eþ">sagði</w>
+                     <w lemma="allur" type="foveo">alla</w>
+                     <w lemma="saga" type="nveo">sögu</w>
+                     <w lemma="um" type="ao">um</w>
+                     <w lemma="ferð" type="nveo">ferð</w>
+                     <w lemma="sinn" type="feveo">sína</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="kveða" type="sfg3eþ">kvað</w>
+                     <w lemma="prestur" type="nkeo">prest</w>
+                     <w lemma="ótrúlega" type="aa">ótrúlega</w>
+                     <w lemma="hafa" type="sng">hafa</w>
+                     <w lemma="halda" type="ssg">haldið</w>
+                     <w lemma="fest" type="nveþg">festinni</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: reykjaskarður</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>reykjaskarður</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þá" type="aa">Þá</w>
+                     <w lemma="snúa" type="sfg3fþ">sneru</w>
+                     <w lemma="hann" type="fpkfn">þeir</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="skagafjörður" type="nkee-s">Skagafjarðar</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="fara" type="sfg3fþ">fóru</w>
+                     <w lemma="norður" type="aa">norður</w>
+                     <w lemma="vatnsskarð" type="nheo-s">Vatnsskarð</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="reykjaskarður" type="nkee-s">Reykjaskarðs</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="ofan" type="ao">ofan</w>
+                     <w lemma="sæmundarhlíð" type="nveo-s">Sæmundarhlíð</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="á" type="ao">á</w>
+                     <w lemma="langholt" type="nheo">Langholt</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: blásinn</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>blásinn</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="og" type="c">Og</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="til" type="aa">til</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="leysa" type="sþghen">leyst</w>
+                     <w lemma="sýna" type="sfm3eþ">sýndist</w>
+                     <w lemma="fótur" type="nkeng">fóturinn</w>
+                     <w lemma="blásinn" type="lkensf">blásinn</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="kolblár" type="lkensf">kolblár</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="sár" type="nheng">sárið</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="hlaupa" type="sþghen">hlaupið</w>
+                     <w lemma="í" type="aa">í</w>
+                     <w lemma="sundur" type="aa">sundur</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="mikill" type="lheþsf">miklu</w>
+                     <w lemma="illilegri" type="lhenvm">illilegra</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="fyrstur" type="lveþve">fyrstu</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>
