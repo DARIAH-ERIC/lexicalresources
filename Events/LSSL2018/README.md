@@ -6,7 +6,8 @@ It will introduce the theory and practice of converting print dictionaries into 
 
 Instructor: Toma Tasovac
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ynhe5tsTMNs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/ynhe5tsTMNs/0.jpg)](http://www.youtube.com/watch?v=ynhe5tsTMNs "Digitizing Dictionaries")
 
 The course is offered within the Lexicography and Terminology strand, which is co-sponsored by DARIAH's partner ELEXIS:  European Lexicographic Infrastructure.
 
