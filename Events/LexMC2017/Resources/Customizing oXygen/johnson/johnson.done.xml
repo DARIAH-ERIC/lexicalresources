@@ -19,12 +19,12 @@
    </teiHeader>
    <text>
       <body>
-         <entry>
-            <form type="lemma"><orth norm="lexicographer">Lexicógrapher</orth></form>
+         <entryFree>
+            <form type="lemma"><orth>Lexicógrapher</orth></form>
             <gramGrp><pos>n.s.</pos></gramGrp>
-            <etym>[<foreign xml:lang="el">λεξικὸν</foreign> and <foreign xml:lang="el"
-                  >γράφω</foreign>;</etym>
-            <etym><foreign xml:lang="fr">lexicographe</foreign>, <lang value="fr">Fr.</lang>]</etym>
+            <etym><mentioned xml:lang="el">λεξικὸν</mentioned> and <mentioned xml:lang="el"
+                  >γράφω</mentioned>; <mentioned xml:lang="fr">lexicographe</mentioned>, <lang
+                  value="fr">French</lang>.</etym>
             <sense><def>A writer of dictionaries; a harmless drudge, that busies himself in tracing
                   the original, and detailing the signification of words.</def>
                <cit type="example">
@@ -32,8 +32,7 @@
                      given these hints in their writings on scripture.</quote>
                   <bibl>Watts.</bibl>
                </cit>
-            </sense>
-         </entry>
+            </sense></entryFree>
       </body>
    </text>
 </TEI>
