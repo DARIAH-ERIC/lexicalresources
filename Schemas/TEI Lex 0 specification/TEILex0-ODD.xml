@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="en" xmlns:rng="http://relaxng.org/ns/structure/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>TEI Lex 0 - ODD specification</title>
+                <author>Laurent Romary</author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>DARIAH - WG lexical resources</authority>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <divGen type="toc"/>
+        </front>
+        <body>
+            <div>
+                <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
+                    <moduleRef key="gaiji" except="localName"/>
+                    <moduleRef key="linking" except="ab alt altGrp join timeline"/>
+                    <moduleRef key="dictionaries" except="dictScrap entryFree superEntry"/>
+                    <moduleRef key="core"
+                        except="add binaryObject cb choice citedRange corr del distinct divGen emph expan foreign gap gb graphic headItem headLabel hi index l label lg measure measureGrp media meeting milestone orig pb postBox postCode q reg said sic soCalled sp speaker stage street term time unclear"/>
+                    <moduleRef key="textstructure"
+                        except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle epigraph floatingText group imprimatur opener postscript salute signed titlePage titlePart trailer"/>
+                    <moduleRef key="figures" except="figDesc figure formula notatedMusic"/>
+                    <moduleRef key="analysis" except="cl interp interpGrp m phr s span spanGrp w"/>
+                    <moduleRef key="iso-fs" except="bicond binary cond default fDecl fDescr fLib fsConstraints fsDecl fsDescr fsdDecl fsdLink fvLib if iff numeric then vAlt vColl vDefault"/>
+                    <moduleRef key="header"
+                        except="appInfo application biblFull cRefPattern calendar calendarDesc catDesc correction extent handNote stdVals styleDefDecl tagUsage tagsDecl textClass typeNote"/>
+                    <moduleRef key="tei"/>
+                    <elementSpec ident="entry" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.entryPart.top"/>
+                        </classes>
+                    </elementSpec>
+                </schemaSpec>
+            </div>
+        </body>
+    </text>
+</TEI>
