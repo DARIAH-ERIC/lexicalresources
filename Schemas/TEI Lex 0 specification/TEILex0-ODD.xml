@@ -464,57 +464,61 @@
                             <def>..</def> .. </sense>
                     </egXML>
                     <p>This is exemplified in the following example take from <ref>$$$</ref>, where <mentioned>arrest</mentioned> appears both as a verb and a noun:</p>
-                    <figure>
-                        <graphic n="1002" width="6.720416666666667cm" height="4.709583333333334cm" url="media/image6.png" rend="inline"/>
-                    </figure>
-                    <p>This example can be encoded asd follows:</p>
-                    <p><hi rend="color(021da7) background(white)"><gi>entry</gi></hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7) background(white)">&lt;form</hi><hi rend="color(f9975e) background(white)" xml:space="preserve"> type</hi><hi
-                            rend="color(ff9450) background(white)">=</hi><hi rend="color(ab4500) background(white)">"lemma"</hi><hi rend="color(021da7) background(white)">&gt;<gi>orth</gi></hi><hi
-                            rend="color(222222) background(white)">arrest</hi><hi rend="color(021da7) background(white)">&lt;/orth&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"><gi>pron</gi></hi><hi rend="color(222222) background(white)">/ə rest/</hi><hi
-                            rend="color(021da7) background(white)">&lt;/pron&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"><gi>pos</gi></hi><hi rend="color(222222) background(white)">verb</hi><hi
-                            rend="color(021da7) background(white)">&lt;/pos&gt;</hi><note place="comment" resp="Mohamed_Khemakhem"><date when="2018-07-16T04:23:26Z"/><hi
-                                rend="italic normalweight baseline strikethrough smallcaps">an anticipation on giving up the current encoding of grammatical information outside
-                            <gi>form</gi></hi></note><hi rend="color(021da7) background(white)">&lt;/form&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7) background(white)"><gi>sense</gi><gi>def</gi></hi><hi rend="color(222222) background(white)">(of the police)
-                            to catch and hold someone who has broken the law</hi><hi rend="color(021da7) background(white)">&lt;/def&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"
-                            >&lt;cit</hi><hi rend="color(f9975e) background(white)" xml:space="preserve"> type</hi><hi rend="color(ff9450) background(white)">=</hi><hi
-                            rend="color(ab4500) background(white)">"example"</hi><hi rend="color(021da7) background(white)">&gt;</hi></p>
-                    <p><seg xml:space="preserve">                  </seg><hi rend="color(021da7) background(white)"><gi>quote</gi></hi><hi rend="color(222222) background(white)">The police arrested
-                            two men and took them to the police station</hi><hi rend="color(021da7) background(white)">&lt;/quote&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"
-                            >&lt;/cit&gt;</hi><hi rend="color(222222) background(white)" xml:space="preserve">. </hi><hi rend="color(021da7) background(white)"
-                            >&lt;cit</hi><hi rend="color(f9975e) background(white)" xml:space="preserve"> type</hi><hi rend="color(ff9450) background(white)">=</hi><hi
-                            rend="color(ab4500) background(white)">"example"</hi><hi rend="color(021da7) background(white)">&gt;</hi></p>
-                    <p><seg xml:space="preserve">                  </seg><hi rend="color(021da7) background(white)"><gi>quote</gi></hi><hi rend="color(222222) background(white)">He ended up getting
-                            arrested as he tried to leave the country</hi><hi rend="color(021da7) background(white)">&lt;/quote&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"
-                            >&lt;/cit&gt;</hi><hi rend="color(222222) background(white)" xml:space="preserve">. </hi><hi rend="color(021da7) background(white)"
-                            >&lt;cit</hi><hi rend="color(f9975e) background(white)" xml:space="preserve"> type</hi><hi rend="color(ff9450) background(white)">=</hi><hi
-                            rend="color(ab4500) background(white)">"example"</hi><hi rend="color(021da7) background(white)">&gt;</hi></p>
-                    <p><seg xml:space="preserve">                  </seg><hi rend="color(021da7) background(white)"><gi>quote</gi></hi><hi rend="color(222222) background(white)">She was arrested for
-                            stealing</hi><hi rend="color(021da7) background(white)">&lt;/quote&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"
-                        >&lt;/cit&gt;&lt;/sense&gt;</hi><hi rend="color(222222) background(white)" xml:space="preserve">. </hi></p>
-                    <p><hi rend="color(021da7) background(white)"><gi>sense</gi></hi></p>
-                    <p><hi rend="color(021da7) background(white)"><gi>gramGrp</gi></hi><hi rend="color(222222) background(white)">noun</hi><hi rend="color(021da7) background(white)"
-                            >&lt;/gramGrp&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"><gi>def</gi></hi><hi rend="color(222222) background(white)">the act of holding someone
-                            for breaking the law</hi><hi rend="color(021da7) background(white)">&lt;/def&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"
-                            >&lt;cit</hi><hi rend="color(f9975e) background(white)" xml:space="preserve"> type</hi><hi rend="color(ff9450) background(white)">=</hi><hi
-                            rend="color(ab4500) background(white)">"example"</hi><hi rend="color(021da7) background(white)">&gt;</hi></p>
-                    <p><seg xml:space="preserve">                  </seg><hi rend="color(021da7) background(white)"><gi>quote</gi></hi><hi rend="color(222222) background(white)">The po- lice made
-                            several arrests at the demon- stration</hi><hi rend="color(021da7) background(white)">&lt;/quote&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7) background(white)"
-                            >&lt;/cit&gt;</hi><hi rend="color(222222) background(white)" xml:space="preserve">. </hi><hi rend="color(021da7) background(white)"><gi>re</gi></hi><hi
-                            rend="color(222222) background(white)">under arrest held by the po- lice After the fight, three people were</hi></p>
-                    <p><hi rend="color(222222) background(white)" xml:space="preserve">                  under arrest</hi><hi rend="color(021da7) background(white)">&lt;/re&gt;&lt;/sense&gt;</hi></p>
-                    <p><anchor xml:id="chov0olixu2c"/><seg xml:space="preserve">         </seg><hi rend="color(021da7) background(white)">&lt;/entry&gt;</hi><note place="comment"
-                            resp="Mohamed_Khemakhem"><date when="2018-07-16T08:48:59Z"/><hi rend="italic normalweight baseline strikethrough smallcaps">_Accepted suggestion_</hi></note></p>
+                    <table rend="rules">
+                        <row>
+                            <cell>
+                                <figure>
+                                    <graphic n="10011" width="6.720416666666667cm" height="4.709583333333334cm" url="media/image25.png" rend="inline"/>
+                                </figure>
+                            </cell>
+                            <cell>
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <entry>
+                                        <form type="lemma">
+                                            <orth>arrest</orth>
+                                            <pron>/ə rest/</pron>
+                                            <gramGrp>
+                                                <pos>verb</pos>
+                                            </gramGrp>
+                                        </form>
+                                        <sense>
+                                            <usg>(of the police)</usg>
+                                            <def>to catch and hold someone who has broken the law</def>
+                                            <cit type="example">
+                                                <quote>The police arrested two men and took them to the police station</quote>
+                                            </cit><pc>.</pc>
+                                            <cit type="example">
+                                                <quote>He ended up getting arrested as he tried to leave the country</quote>
+                                            </cit><pc>.</pc>
+                                            <cit type="example">
+                                                <quote>She was arrested for stealing</quote>
+                                            </cit>
+                                        </sense><pc>.</pc>
+                                        <sense>
+                                            <gramGrp>
+                                                <pos>noun</pos>
+                                            </gramGrp>
+                                            <def>the act of holding someone for breaking the law</def>
+                                            <cit type="example">
+                                                <quote>The police made several arrests at the demonstration</quote>
+                                            </cit>
+                                            <pc>.</pc>
+                                            <entry type="multiWordExpression">
+                                                <form>under arrest</form>
+                                                <sense>
+                                                    <def>held by the police After the fight</def>
+                                                    <pc>,</pc>
+                                                    <cit type="example">
+                                                        <quote>three people were under arrest</quote>
+                                                    </cit>
+                                                </sense>
+                                            </entry>
+                                        </sense>
+                                    </entry>
+                                </egXML>
+                            </cell>
+                        </row>
+                    </table>
                 </div>
                 <div>
                     <head>Case of bilingual dictionaries</head>
@@ -2682,64 +2686,6 @@
                             <orth>Katze</orth>
                         </form>
                     </egXML>
-                </div>
-                <div>
-                    <head>Recursive entry ("arrest")</head>
-                    <table rend="rules">
-                        <row>
-                            <cell>
-                                <figure>
-                                    <graphic n="10011" width="6.720416666666667cm" height="4.709583333333334cm" url="media/image25.png" rend="inline"/>
-                                </figure>
-                            </cell>
-                            <cell>
-                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                    <entry>
-                                        <form type="lemma">
-                                            <orth>arrest</orth>
-                                            <pron>/ə rest/</pron>
-                                            <gramGrp>
-                                                <pos>verb</pos>
-                                            </gramGrp>
-                                        </form>
-                                        <sense>
-                                            <usg>(of the police)</usg>
-                                            <def>to catch and hold someone who has broken the law</def>
-                                            <cit type="example">
-                                                <quote>The police arrested two men and took them to the police station</quote>
-                                            </cit><pc>.</pc>
-                                            <cit type="example">
-                                                <quote>He ended up getting arrested as he tried to leave the country</quote>
-                                            </cit><pc>.</pc>
-                                            <cit type="example">
-                                                <quote>She was arrested for stealing</quote>
-                                            </cit>
-                                        </sense><pc>.</pc>
-                                        <sense>
-                                            <gramGrp>
-                                                <pos>noun</pos>
-                                            </gramGrp>
-                                            <def>the act of holding someone for breaking the law</def>
-                                            <cit type="example">
-                                                <quote>The police made several arrests at the demonstration</quote>
-                                            </cit>
-                                            <pc>.</pc>
-                                            <entry type="multiWordExpression">
-                                                <form>under arrest</form>
-                                                <sense>
-                                                    <def>held by the police After the fight</def>
-                                                    <pc>,</pc>
-                                                    <cit type="example">
-                                                        <quote>three people were under arrest</quote>
-                                                    </cit>
-                                                </sense>
-                                            </entry>
-                                        </sense>
-                                    </entry>
-                                </egXML>
-                            </cell>
-                        </row>
-                    </table>
                 </div>
             </div>
             <div type="specification">
