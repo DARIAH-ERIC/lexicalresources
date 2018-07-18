@@ -261,7 +261,7 @@
                             <entry type="wordForm">
                                 <form type="lemma">
                                     <orth expand="Hausandacht">-andacht</orth>
-                                    <pc>,</pc> 
+                                    <pc>,</pc>
                                     <gramGrp>
                                         <gen value="feminine">die</gen>
                                     </gramGrp>
@@ -273,30 +273,24 @@
                     </egXML>
                     <p>The same encoding strategy can be exploited when entries are grouped under a common morphological root as is customary for Arabic dictionaries such as the 48th edition of “The
                         Dictionary of Language and Proper Nouns” (المنجد في اللغة والأعلام) presented below:</p>
-                    <p>&lt;entry type="word-family<note place="comment" resp="herold_(BBAW)"><date when="2018-07-13T09:01:38Z"/><hi rend="italic normalweight baseline strikethrough smallcaps"
-                                >Originally read: "root" – but the whole thing is not just about the root but rather about a whole family of words. Not sure about the exact term,
-                            though.</hi></note><note place="comment" resp="Mohamed_Khemakhem"><date when="2018-07-15T00:03:09Z"/><hi rend="italic normalweight baseline strikethrough smallcaps">In LMF,
-                                it is used as "root". Not sure if we could replace it with "word family" in TEI-Lex0</hi></note>"&gt;</p>
-                    <p>&lt;form type=”root”&gt;<gi>orth</gi>ﺍﺮﻛ&lt;/orth&gt;<gi>pc</gi>:&lt;/pc&gt;&lt;/form&gt;</p>
-                    <p>&lt;entry n=”١-<note place="comment" resp="herold_(BBAW)"><date when="2018-07-13T08:59:34Z"/><hi rend="italic normalweight baseline strikethrough smallcaps">@Mohamed: What are
-                                these?</hi></note><note place="comment" resp="Mohamed_Khemakhem"><date when="2018-07-14T23:54:48Z"/><hi rend="italic normalweight baseline strikethrough smallcaps">"1"
-                                in arabic</hi></note><note place="comment" resp="herold_(BBAW)"><date when="2018-07-16T05:18:10Z"/><hi rend="italic normalweight baseline strikethrough smallcaps">So
-                                the embedded entries are numbered? This would sound very much like entry/@n, then. I've changed the mark-up accordingly and put a note in the text. @Mohamed: can you
-                                check the typography of the value of @n? This looks a bit bogus to me because of the dashes and the dot and different whitespace.</hi></note><note place="comment"
-                            resp="Mohamed_Khemakhem"><date when="2018-07-16T06:23:07Z"/><hi rend="italic normalweight baseline strikethrough smallcaps">The embedded entries are gathered in numbered
-                                blocks reflecting a sense (I explained this below in the original example).</hi></note><note place="comment" resp="Mohamed_Khemakhem"><date when="2018-07-16T06:24:06Z"
-                                /><hi rend="italic normalweight baseline strikethrough smallcaps">Yes, the text got messy when you copy/paste it but I'll fix as soon as we agree on the
-                            structure</hi></note>”&gt;</p>
-                    <p>&lt;form type="lemma"&gt; <gi>orth</gi>ﺃَﺮَﻛَ&lt;/orth&gt; -ُ ﺃُﺮُﻛًﺍ&lt;/form&gt;</p>
-                    <p><gi>sense</gi> ﺎﻠﺠﻤﻟُ: ﺎﻜﻟ ﻭﺮﻗ ﺍﻷﺭَﺎﻛِ ٠ ﺃَﺮَﻛَ ٠- ﺃَﺮَﻛًﺍ ﺎﻠﺠﻤﻟُ ﺎﺸﺘﻛﻯ ﺐﻄﻨﻫُ ﻢﻧ ﺄَﻜﻟ ﺍﻷﺭَﺎﻛِ ٠ ﺍﻷﺭﺎﻛ (ﻥ): ﻭﺎﺣﺪﺘﻫُ ﺃَﺭﺎﻛﺓ ﺝ ﺃُﺮُﻛ ﻭ ﺃَﺭَﺎﺌِﻛ. ﺶﺟﺭ ﺫﻭ ﺵﻮﻛ. ﻁﻮﻴﻟ ﺎﻠﺳﺎﻗ، ﻚﺜﻳﺭ ﺎﻟﻭﺮﻗ
-                        ﻭ ﺍﻸﻐﺻﺎﻧ. ﺥﻭَّﺍﺭ ﺎﻠﻋﻭﺩ ﺖﺘَّﺧﺫ ﻢﻨﻫ ﺎﻠﻤﺳﺍﻮﻴﻛ&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;entry n=”٢٠ -”&gt;</p>
-                    <p>&lt;form type="lemma"&gt;<gi>orth</gi>ﺃَﺮَﻛَ&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi> ْ -َ ﺃَﺮَﻛًﺍ ﻭ ﺃَﺮِﻛَ ْ -ُ ﺃُﺮﻛًﺍ ﺎﻠﺟﺮﺣُ: ﺏﺭﺃَ&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;!-- … --&gt;</p>
-                    <p>&lt;/entry&gt;</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry type="wordFamily">
+                            <form type="root"><orth>ﺍﺮﻛ</orth><pc>:</pc></form>
+                            <entry n="١-" type="wordForm">
+                                <form type="lemma">
+                                    <orth>ﺃَﺮَﻛَ</orth> -ُ ﺃُﺮُﻛًﺍ</form>
+                                <sense> ﺎﻠﺠﻤﻟُ: ﺎﻜﻟ ﻭﺮﻗ ﺍﻷﺭَﺎﻛِ ٠ ﺃَﺮَﻛَ ٠- ﺃَﺮَﻛًﺍ ﺎﻠﺠﻤﻟُ ﺎﺸﺘﻛﻯ ﺐﻄﻨﻫُ ﻢﻧ ﺄَﻜﻟ ﺍﻷﺭَﺎﻛِ ٠ ﺍﻷﺭﺎﻛ (ﻥ): ﻭﺎﺣﺪﺘﻫُ ﺃَﺭﺎﻛﺓ ﺝ ﺃُﺮُﻛ ﻭ ﺃَﺭَﺎﺌِﻛ. ﺶﺟﺭ ﺫﻭ ﺵﻮﻛ. ﻁﻮﻴﻟ ﺎﻠﺳﺎﻗ، ﻚﺜﻳﺭ
+                                    ﺎﻟﻭﺮﻗ ﻭ ﺍﻸﻐﺻﺎﻧ. ﺥﻭَّﺍﺭ ﺎﻠﻋﻭﺩ ﺖﺘَّﺧﺫ ﻢﻨﻫ ﺎﻠﻤﺳﺍﻮﻴﻛ</sense>
+                            </entry>
+                            <entry n="٢٠ -" type="wordForm">
+                                <form type="lemma">
+                                    <orth>ﺃَﺮَﻛَ</orth>
+                                </form>
+                                <sense> ْ -َ ﺃَﺮَﻛًﺍ ﻭ ﺃَﺮِﻛَ ْ -ُ ﺃُﺮﻛًﺍ ﺎﻠﺟﺮﺣُ: ﺏﺭﺃَ</sense>
+                            </entry>
+                            <!-- … -->
+                        </entry>
+                    </egXML>
                     <p>Note that the embedded entries are enumerated by way of the attribute @n.</p>
                     <p>This type of grouping is also customarily used in dictionaries of word-families in other languages such as in Howard H. Keller’s (1978): “A German word family dictionary
                         together with English equivalents”:</p>
@@ -315,7 +309,8 @@
                     <p>&lt;/entry&gt;</p>
                     <p>&lt;/entry&gt;</p>
                     <p>In the Collins/COBUILD “Dictionary of Idioms” (2nd. ed., 2002), idioms are grouped under a common headword. No additional information for the headword is provided; it only
-                        serves as part of the access structure for the idioms. This can also be modelled using recursive entries. Again, see <ref target="#TypesOfEntries">Types of entries</ref> for a discussion of possible entry types:</p>
+                        serves as part of the access structure for the idioms. This can also be modelled using recursive entries. Again, see <ref target="#TypesOfEntries">Types of entries</ref> for a
+                        discussion of possible entry types:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <entry type="simple">
                             <form>
