@@ -696,62 +696,61 @@
                             >True</hi></note> Still, the main danger in keeping both possibilities in the representation of a lexical entry in a digital lexicon is to introduce a systematic structural
                         ambiguity as to where the appropriate information is to be found. We thus deprecate <gi>hom</gi> altogether in the present recommendation and have this element be replaced by
                         the appropriate &lt;sense &gt; construct. For instance, the following TEI example:</p>
-                    <p><hi rend="color(021da7)"><gi>entry</gi></hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)"><gi>form</gi></hi></p>
-                    <p>
-                        <hi rend="color(021da7)"><gi>orth</gi></hi>bray<hi rend="color(021da7)">&lt;/orth&gt;</hi></p>
-                    <p>
-                        <hi rend="color(021da7)"><gi>pron</gi></hi>breI<hi rend="color(021da7)">&lt;/pron&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)">&lt;/form&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)"><gi>hom</gi></hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)"><gi>gramGrp</gi></hi></p>
-                    <p>
-                        <hi rend="color(021da7)">&lt;gram type="pos"&gt;</hi>n<hi rend="color(021da7)">&lt;/gram&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)">&lt;/gramGrp&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)"><gi>sense</gi></hi></p>
-                    <p>
-                        <hi rend="color(021da7)"><gi>def</gi></hi>cry of an ass; sound of a trumpet.<hi rend="color(021da7)">&lt;/def&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)">&lt;/sense&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)">&lt;/hom&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)"><gi>hom</gi></hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)"><gi>gramGrp</gi></hi></p>
-                    <p>
-                        <hi rend="color(021da7)">&lt;gram type="pos"&gt;</hi>vt<hi rend="color(021da7)">&lt;/gram&gt;</hi></p>
-                    <p>
-                        <hi rend="color(021da7)"><gi>subc</gi></hi>VP2A<hi rend="color(021da7)">&lt;/subc&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)">&lt;/gramGrp&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)"><gi>sense</gi></hi></p>
-                    <p>
-                        <hi rend="color(021da7)"><gi>def</gi></hi>make a cry or sound of this kind.<hi rend="color(021da7)">&lt;/def&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)">&lt;/sense&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)">&lt;/hom&gt;</hi></p>
-                    <p><seg xml:space="preserve">         </seg><hi rend="color(021da7)">&lt;/entry&gt;</hi></p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry>
+                            <form>
+                                <orth>bray</orth>
+                                <pron>breI</pron>
+                            </form>
+                            <hom>
+                                <gramGrp>
+                                    <gram type="pos">n</gram>
+                                </gramGrp>
+                                <sense>
+                                    <def>cry of an ass; sound of a trumpet.</def>
+                                </sense>
+                            </hom>
+                            <hom>
+                                <gramGrp>
+                                    <gram type="pos">vt</gram>
+                                    <subc>VP2A</subc>
+                                </gramGrp>
+                                <sense>
+                                    <def>make a cry or sound of this kind.</def>
+                                </sense>
+                            </hom>
+                        </entry>
+                    </egXML>
                     <p>should actually be represented as follows:</p>
-                    <p><hi rend="color(021da7)"><gi>entry</gi></hi></p>
-                    <p> &lt;form type="lemma"&gt;</p>
-                    <p><gi>orth</gi>bray&lt;/orth&gt;</p>
-                    <p><gi>pron</gi>brel&lt;/pron&gt;</p>
-                    <p> &lt;/form&gt;</p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)"><gi>sense</gi></hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)"><gi>gramGrp</gi></hi></p>
-                    <p>
-                        <hi rend="color(021da7)">&lt;gram type="pos"&gt;</hi>n<hi rend="color(021da7)">&lt;/gram&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)">&lt;/gramGrp&gt;</hi></p>
-                    <p>
-                        <hi rend="color(021da7)"><gi>def</gi></hi>cry of an ass; sound of a trumpet.<hi rend="color(021da7)">&lt;/def&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)">&lt;/sense&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)"><gi>sense</gi></hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)"><gi>gramGrp</gi></hi></p>
-                    <p>
-                        <hi rend="color(021da7)">&lt;gram type="pos"&gt;</hi>vt<hi rend="color(021da7)">&lt;/gram&gt;</hi></p>
-                    <p>
-                        <hi rend="color(021da7)"><gi>subc</gi></hi>VP2A<hi rend="color(021da7)">&lt;/subc&gt;</hi></p>
-                    <p><seg xml:space="preserve">               </seg><hi rend="color(021da7)">&lt;/gramGrp&gt;</hi></p>
-                    <p>
-                        <hi rend="color(021da7)"><gi>def</gi></hi>make a cry or sound of this kind.<hi rend="color(021da7)">&lt;/def&gt;</hi></p>
-                    <p><seg xml:space="preserve">            </seg><hi rend="color(021da7)">&lt;/sense&gt;</hi></p>
-                    <p><seg xml:space="preserve">         </seg><hi rend="color(021da7)">&lt;/entry&gt;</hi>
-                    </p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry>
+                            <form type="lemma">
+                                <orth>bray</orth>
+                                <pron>brel</pron>
+                            </form>
+                            <sense>
+                                <gramGrp>
+                                    <pos>n</pos>
+                                </gramGrp>
+                                <sense>
+                                    <def>cry of an ass</def>
+                                </sense>
+                                <pc>;</pc>
+                                <sense>
+                                    <def>sound of a trumpet</def>
+                                </sense> 
+                            </sense>
+                            <pc>.</pc>
+                            <sense>
+                                <gramGrp>
+                                    <pos>vt</pos>
+                                    <subc>VP2A</subc>
+                                </gramGrp>
+                                <def>make a cry or sound of this kind</def>
+                            </sense>
+                            <pc>.</pc>
+                        </entry>
+                    </egXML>
                 </div>
                 <div>
                     <head><anchor xml:id="m9kn0msttjlj"/>Discussion notes</head>
