@@ -220,40 +220,57 @@
                         mere container for grouping lexical entries, either an <gi>entry</gi> grouping entries can be used or the mechanisms implemented by att.global.linking can be exploited.</p>
                     <p>Consider the following excerpt from the “Wörterbuch der deutschen Gegenwartssprache” (“Dictionary of present-day German”, WDG, 1964–1977). In the WDG, compounds with the same
                         morphological dependant (but different heads) are grouped into nests. According to the current TEI guidelines, such a nest would most probably be serialized as follows:</p>
-                    <p><gi>superEntry</gi></p>
-                    <p>
-                        <gi>form</gi><gi>orth</gi>Haus-&lt;/orth&gt;, <gi>orth</gi>haus-&lt;/orth&gt;:&lt;/form&gt;</p>
-                    <p>&lt;!-- possibly some shared usg information --&gt;</p>
-                    <p><gi>entry</gi></p>
-                    <p><gi>form</gi>&lt;orth expand="Hausaltar"&gt;-altar&lt;/orth&gt;,</p>
-                    <p><gi>gramGrp</gi>&lt;gen value="masculine"&gt;der&lt;/gen&gt;&lt;/gramGrp&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p><gi>entry</gi></p>
-                    <p><gi>form</gi>&lt;orth expand="Hausandacht"&gt;-andacht&lt;/orth&gt;,</p>
-                    <p><gi>gramGrp</gi>&lt;gen value="feminine"&gt;die&lt;/gen&gt;&lt;/gramGrp&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;!-- ... --&gt;</p>
-                    <p>&lt;/superEntry&gt;</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <superEntry>
+                            <form><orth>Haus-</orth>, <orth>haus-</orth>:</form>
+                            <!-- possibly some shared usg information -->
+                            <entry>
+                                <form><orth expand="Hausaltar">-altar</orth>, <gramGrp><gen value="masculine">der</gen></gramGrp></form>
+                                <sense>...</sense>
+                            </entry>
+                            <entry>
+                                <form><orth expand="Hausandacht">-andacht</orth>, <gramGrp><gen value="feminine">die</gen></gramGrp></form>
+                                <sense>...</sense>
+                            </entry>
+                            <!-- ... -->
+                        </superEntry>
+                    </egXML>
                     <p>In TEI-Lex-0, this nest of entries would be modelled as an <gi>entry</gi> in its own right. Note that the former <gi>superEntry</gi> was transformed into a typed entry (see <ref
-                            target="#d3ret55dwlzy"><hi rend="underline color(1155cc)">Types of entries</hi></ref> below for a detailed discussion of entry types):</p>
-                    <p>&lt;entry type=”nest”&gt;</p>
-                    <p>
-                        <gi>form</gi><gi>orth</gi>Haus-&lt;/orth&gt;, <gi>orth</gi>haus-&lt;/orth&gt;:&lt;/form&gt;</p>
-                    <p>&lt;!-- possibly some shared usg information --&gt;</p>
-                    <p><gi>entry</gi></p>
-                    <p><gi>form</gi>&lt;orth expand="Hausaltar"&gt;-altar&lt;/orth&gt;,</p>
-                    <p><gi>gramGrp</gi>&lt;gen value="masculine"&gt;der&lt;/gen&gt;&lt;/gramGrp&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p><gi>entry</gi></p>
-                    <p><gi>form</gi>&lt;orth expand="Hausandacht"&gt;-andacht&lt;/orth&gt;,</p>
-                    <p><gi>gramGrp</gi>&lt;gen value="feminine"&gt;die&lt;/gen&gt;&lt;/gramGrp&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;!-- ... --&gt;</p>
-                    <p>&lt;/entry&gt;</p>
+                            target="#TypesOfEntries">Types of entries</ref> below for a detailed discussion of entry types):</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry type="wordFamily">
+                            <form type="base">
+                                <orth>Haus-</orth>
+                            </form>
+                            <pc>,</pc>
+                            <form type="base">
+                                <orth>haus-</orth>
+                            </form>
+                            <pc>:</pc>
+                            <!-- possibly some shared usg information -->
+                            <entry type="wordForm">
+                                <form type="lemma">
+                                    <orth expand="Hausaltar">-altar</orth>
+                                    <pc>,</pc>
+                                    <gramGrp>
+                                        <gen value="masculine">der</gen>
+                                    </gramGrp>
+                                </form>
+                                <sense>...</sense>
+                            </entry>
+                            <entry type="wordForm">
+                                <form type="lemma">
+                                    <orth expand="Hausandacht">-andacht</orth>
+                                    <pc>,</pc> 
+                                    <gramGrp>
+                                        <gen value="feminine">die</gen>
+                                    </gramGrp>
+                                </form>
+                                <sense>...</sense>
+                            </entry>
+                            <!-- ... -->
+                        </entry>
+                    </egXML>
                     <p>The same encoding strategy can be exploited when entries are grouped under a common morphological root as is customary for Arabic dictionaries such as the 48th edition of “The
                         Dictionary of Language and Proper Nouns” (المنجد في اللغة والأعلام) presented below:</p>
                     <p>&lt;entry type="word-family<note place="comment" resp="herold_(BBAW)"><date when="2018-07-13T09:01:38Z"/><hi rend="italic normalweight baseline strikethrough smallcaps"
@@ -297,25 +314,27 @@
                     <p><gi>sense</gi>...&lt;/sense&gt;</p>
                     <p>&lt;/entry&gt;</p>
                     <p>&lt;/entry&gt;</p>
-                    <p>In the Collins/COBUILD “Dictionary of Idioms” (2nd. ed., 2002), idioms are grouped unter a common headword. No additional information for the headword is provided; it only
-                        serves as part of the access structure for the idioms. This can also be modelled using recursive entries. Again, see <ref target="#1uzfkfvk7z8a"><hi
-                                rend="underline color(1155cc)">Types of entries</hi></ref> for a discussion of possible entry types:</p>
-                    <p>&lt;entry type=”word”&gt;</p>
-                    <p>
-                        <gi>form</gi><gi>orth</gi>house&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p>&lt;entry type=”multi-word”&gt;</p>
-                    <p><gi>form</gi><gi>orth</gi>bring the house down&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;entry type=”multi-word”&gt;</p>
-                    <p><gi>form</gi><gi>orth</gi>eat someone out of house and home&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;entry type=”multi-word”&gt;</p>
-                    <p><gi>form</gi><gi>orth</gi>get on like a house on fire&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;/entry&gt;</p>
+                    <p>In the Collins/COBUILD “Dictionary of Idioms” (2nd. ed., 2002), idioms are grouped under a common headword. No additional information for the headword is provided; it only
+                        serves as part of the access structure for the idioms. This can also be modelled using recursive entries. Again, see <ref target="#TypesOfEntries">Types of entries</ref> for a discussion of possible entry types:</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry type="simple">
+                            <form>
+                                <orth>house</orth>
+                            </form>
+                            <entry type="multiWordExpression">
+                                <form><orth>bring the house down</orth></form>
+                                <sense>...</sense>
+                            </entry>
+                            <entry type="multiWordExpression">
+                                <form><orth>eat someone out of house and home</orth></form>
+                                <sense>...</sense>
+                            </entry>
+                            <entry type="multiWordExpression">
+                                <form><orth>get on like a house on fire</orth></form>
+                                <sense>...</sense>
+                            </entry>
+                        </entry>
+                    </egXML>
                     <p>For <gi>entryFree</gi>, the content model is defined more freely than for <gi>entry</gi>. To account for entries that do not follow the rather strict lexical model envisioned by
                         the TEI guidelines for <gi>entry</gi>, <gi>dictScrap</gi> within <gi>entry</gi> shall be used.</p>
                 </div>
@@ -342,7 +361,7 @@
                         <item>we’re still getting rid of super entry. </item>
                     </list>
                 </div>
-                <div>
+                <div xml:id="TypesOfEntries">
                     <head>Types of entries</head>
                     <p>Based on the proposed definition for <gi>entry</gi> in TEI-Lex-0, entries are conceived as “the most basic” elements of the microstructure. The examples provided in the section
                             <ref target="#3rsjyvcjjmqz"><hi rend="underline color(1155cc)">Unified representation of entries</hi></ref> illustrate two applications of entries embedded within entries
@@ -2288,25 +2307,8 @@
                 <p> &lt;/entry&gt;</p>
             </div>
             <div>
-                <head><anchor xml:id="id9etkjmugdo"/>X. Misc. examples</head>
-                <div>
-                    <head><anchor xml:id="twgoekpxd0m3"/>X.1.</head>
-                    <p>cf. TEI List <gi>orth</gi>Ἀαρών, ὁ&lt;/orth&gt; (Jonathan Robie)</p>
-                    <p>Piotr suggested: </p>
-                    <p> &lt;form type="lemma"&gt;<gi>orth</gi>Ἀαρών&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi>&lt;gram type="pos"&gt;ὁ&lt;/gram&gt;&lt;/gramGrp&gt;</p>
-                    <p>issues: <gi>pc</gi>,&lt;/pc&gt;, @norm/@value (@ana? overkill)</p>
-                    <p>Suggested in http://jtei.revues.org/540</p>
-                    <p>&lt;form type="lemma"&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi></p>
-                    <p> &lt;gen norm="feminine"&gt;die&lt;/gen&gt;</p>
-                    <p> &lt;/gramGrp&gt;</p>
-                    <p>
-                        <gi>orth</gi>Katze&lt;/orth&gt;</p>
-                    <p>&lt;/form&gt;</p>
-                </div>
+                <head>X. Misc. examples</head>
+
                 <div>
                     <head><anchor xml:id="y9mzqi58dztc"/>X.2. </head>
                     <p>from Milena Hebal-Jezierska’s Czech-Polish dictionary (discussed after the meeting in Budapest). </p>
@@ -2662,61 +2664,88 @@
             </div>
             <div>
                 <head>Annex B: additional examples (could be referenced in the main text)</head>
-                <table rend="rules">
-                    <row>
-                        <cell>
-                            <figure>
-                                <graphic n="10011" width="6.720416666666667cm" height="4.709583333333334cm" url="media/image25.png" rend="inline"/>
-                            </figure>
-                        </cell>
-                        <cell>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                <entry>
-                                    <form type="lemma">
-                                        <orth>arrest</orth>
-                                        <pron>/ə rest/</pron>
-                                        <gramGrp>
-                                            <pos>verb</pos>
-                                        </gramGrp>
-                                    </form>
-                                    <sense>
-                                        <usg>(of the police)</usg>
-                                        <def>to catch and hold someone who has broken the law</def>
-                                        <cit type="example">
-                                            <quote>The police arrested two men and took them to the police station</quote>
-                                        </cit><pc>.</pc>
-                                        <cit type="example">
-                                            <quote>He ended up getting arrested as he tried to leave the country</quote>
-                                        </cit><pc>.</pc>
-                                        <cit type="example">
-                                            <quote>She was arrested for stealing</quote>
-                                        </cit>
-                                    </sense><pc>.</pc>
-                                    <sense>
-                                        <gramGrp>
-                                            <pos>noun</pos>
-                                        </gramGrp>
-                                        <def>the act of holding someone for breaking the law</def>
-                                        <cit type="example">
-                                            <quote>The police made several arrests at the demonstration</quote>
-                                        </cit>
-                                        <pc>.</pc>
-                                        <entry type="multiWordExpression">
-                                            <form>under arrest</form>
-                                            <sense>
-                                                <def>held by the police After the fight</def>
-                                                <pc>,</pc>
-                                                <cit type="example">
-                                                    <quote>three people were under arrest</quote>
-                                                </cit>
-                                            </sense>
-                                        </entry>
-                                    </sense>
-                                </entry>
-                            </egXML>
-                        </cell>
-                    </row>
-                </table>
+                <div>
+                    <head>Implicit grammatical information (morpheme or particle)</head>
+                    <p>cf. TEI List <egXML xmlns="http://www.tei-c.org/ns/Examples"><orth>Ἀαρών, ὁ</orth></egXML> (Jonathan Robie)</p>
+                    <p>Piotr suggested: </p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <form type="lemma">
+                            <orth>Ἀαρών</orth>
+                        </form>
+                        <pc>,</pc>
+                        <gramGrp>
+                            <gram type="pos">ὁ</gram>
+                        </gramGrp>
+                    </egXML>
+                    <p>Issues: @norm/@value (@ana? overkill)</p>
+                    <p>Suggested in <ref>http://jtei.revues.org/540</ref>:</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <form type="lemma">
+                            <gramGrp>
+                                <gen norm="feminine">die</gen>
+                            </gramGrp>
+                            <orth>Katze</orth>
+                        </form>
+                    </egXML>
+                </div>
+                <div>
+                    <head>Recursive entry ("arrest")</head>
+                    <table rend="rules">
+                        <row>
+                            <cell>
+                                <figure>
+                                    <graphic n="10011" width="6.720416666666667cm" height="4.709583333333334cm" url="media/image25.png" rend="inline"/>
+                                </figure>
+                            </cell>
+                            <cell>
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                    <entry>
+                                        <form type="lemma">
+                                            <orth>arrest</orth>
+                                            <pron>/ə rest/</pron>
+                                            <gramGrp>
+                                                <pos>verb</pos>
+                                            </gramGrp>
+                                        </form>
+                                        <sense>
+                                            <usg>(of the police)</usg>
+                                            <def>to catch and hold someone who has broken the law</def>
+                                            <cit type="example">
+                                                <quote>The police arrested two men and took them to the police station</quote>
+                                            </cit><pc>.</pc>
+                                            <cit type="example">
+                                                <quote>He ended up getting arrested as he tried to leave the country</quote>
+                                            </cit><pc>.</pc>
+                                            <cit type="example">
+                                                <quote>She was arrested for stealing</quote>
+                                            </cit>
+                                        </sense><pc>.</pc>
+                                        <sense>
+                                            <gramGrp>
+                                                <pos>noun</pos>
+                                            </gramGrp>
+                                            <def>the act of holding someone for breaking the law</def>
+                                            <cit type="example">
+                                                <quote>The police made several arrests at the demonstration</quote>
+                                            </cit>
+                                            <pc>.</pc>
+                                            <entry type="multiWordExpression">
+                                                <form>under arrest</form>
+                                                <sense>
+                                                    <def>held by the police After the fight</def>
+                                                    <pc>,</pc>
+                                                    <cit type="example">
+                                                        <quote>three people were under arrest</quote>
+                                                    </cit>
+                                                </sense>
+                                            </entry>
+                                        </sense>
+                                    </entry>
+                                </egXML>
+                            </cell>
+                        </row>
+                    </table>
+                </div>
             </div>
             <div type="specification">
                 <head>Specification</head>
