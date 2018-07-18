@@ -738,7 +738,7 @@
                                 <pc>;</pc>
                                 <sense>
                                     <def>sound of a trumpet</def>
-                                </sense> 
+                                </sense>
                             </sense>
                             <pc>.</pc>
                             <sense>
@@ -930,17 +930,19 @@
                     <p>Dictionaries often include additional forms next to the lemma which are (in English) used to specify irregular forms, such as “corpus / corpora” or “take / took” and in
                         inflectionally rich languages to enable the user to determine the correct paradigm of the word (such as “krava / -e” in Slovene). </p>
                     <p>Such inflected forms should be encoded in entry/form/@type=”inflected”, e.g.:</p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type=”lemma”&gt;</p>
-                    <p>
-                        <gi>orth</gi>go&lt;/orth&gt;</p>
-                    <p> &lt;/form&gt;</p>
-                    <p> &lt;form type=”inflected”&gt;</p>
-                    <p>
-                        <gi>orth</gi>went&lt;/orth&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi>&lt;gram type=”tense”&gt;past&lt;/gram&gt;&lt;/gramGrp&gt;</p>
-                    <p> &lt;/form&gt;</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry>
+                            <form type="lemma">
+                                <orth>go</orth>
+                            </form>
+                            <form type="inflected">
+                                <orth>went</orth>
+                                <gramGrp>
+                                    <tns>past</tns>
+                                </gramGrp>
+                            </form>
+                        </entry>
+                    </egXML>
                     <p>... </p>
                 </div>
                 <div>
