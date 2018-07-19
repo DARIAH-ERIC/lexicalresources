@@ -3376,6 +3376,7 @@
 
                     <!-- 2018-07-17 (TT): the <usg> element is adapted to have specific @type values -->
                     <elementSpec ident="usg" mode="change">
+                        <desc xml:lang="fr">blabla</desc>
                         <attList>
                             <attDef ident="type" mode="replace" usage="req">
                                 <valList type="closed" mode="change">
@@ -3392,6 +3393,20 @@
                                 </valList>
                             </attDef>
                         </attList>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <form>
+                                    <orth>coucou</orth>
+                                    <form>
+                                        <usg type="geo">U.S.</usg>
+                                        <orth>color</orth>
+                                    </form>
+                                </form>
+                            </egXML>
+                        </exemplum>
+                        <remarks>
+                            <p>What a nice remark!</p>
+                        </remarks>
                     </elementSpec>
                 </schemaSpec>
             </div>
