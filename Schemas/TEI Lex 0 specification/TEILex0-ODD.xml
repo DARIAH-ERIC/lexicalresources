@@ -2531,7 +2531,7 @@
                     </list>
                     <p><hi>Justification:</hi></p>
                     <list type="ordered">
-                        <item><hi>Without @type attribute, <gi>usg</gi> would be an underspecified
+                        <item><hi>Without <att>type</att> attribute, <gi>usg</gi> would be an underspecified
                                 element. Usage labels describe a wide range of linguistic phenomena.
                                 Classifying them should be considered a good practice.</hi><note
                                 place="comment" resp="Katrien_Depuydt"><hi>Datawork,
@@ -2540,7 +2540,7 @@
                                 for describing phenomena that could be covered by alternative, more
                                 narrowly defined TEI elements. It should be considered a good
                                 practice to use the most specific TEI element available. See next
-                                section “Restricting the scope of <gi>usg</gi>”.</hi></item>
+                                section <ref target="#RestristingUsg">Restricting the scope of <gi>usg</gi></ref>.</hi></item>
                         <item>It is good practice to normalize the values of the <gi>usg</gi>
                             elements because dictionaries are not always consistent in the way they
                             use their usage labels. For instance, we could have abbreviated and
@@ -2549,11 +2549,11 @@
                             dictionary, not a global normalization effort.</item>
                     </list>
                 </div>
-                <div>
+                <div xml:id="RestristingUsg">
                     <head><anchor xml:id="bw70jei7p4qf"/>Restricting the scope of <gi>usg</gi>
                     </head>
                     <list type="ordered">
-                        <item>Do not use <hi>&lt;usg type=”lang”/&gt;</hi> to mark up the name of a
+                        <item>Do not use <tag>usg type=”lang”</tag> to mark up the name of a
                             language in an etymological or other discussion. The recommended way to
                             encode this information is using <gi>lang</gi> element within
                                 <gi>etym</gi>.</item>
@@ -2561,38 +2561,38 @@
                     <list type="ordered">
                         <item><hi>INCORRECT</hi></item>
                     </list>
-                    <table rend="rules">
-                        <row>
-                            <cell><p>&lt;entryFree xml:id="MZ.RGJS.сајдисльк"&gt;</p>
-                                <p>&lt;form
-                                    type="lemma"&gt;<gi>orth</gi>сајдисль́к&lt;/orth&gt;&lt;/form&gt;</p>
-                                <p><gi>gramGrp</gi>&lt;gram
-                                    type="pos"&gt;м&lt;/gram&gt;&lt;/gramGrp&gt;</p>
-                                <p><hi>&lt;usg type="lang"&gt;тур.&lt;/usg&gt;</hi></p>
-                                <p><gi>sense</gi></p>
-                                <p><gi>def</gi>уважавање.&lt;/def&gt;</p>
-                                <p>…</p></cell>
-                        </row>
-                    </table>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entryFree xml:id="MZ.RGJS.сајдисльк">
+                            <form type="lemma"><orth>сајдисль́к</orth></form>
+                            <gramGrp><gram type="pos">м</gram></gramGrp>
+                            <usg type="lang">тур.</usg>
+                            <sense>
+                                <def>уважавање.</def>
+                                …
+                            </sense>
+                        </entryFree>
+                    </egXML>
                     <list type="ordered">
                         <item><hi>CORRECT</hi><note place="comment" resp="Katrien_Depuydt"><hi>adapt
                                     to recent decisions</hi></note></item>
                     </list>
-                    <table rend="rules">
-                        <row>
-                            <cell><p>&lt;entryFree xml:id="MZ.RGJS.сајдисльк"&gt;</p>
-                                <p>&lt;form
-                                    type="lemma"&gt;<gi>orth</gi>сајдисль́к&lt;/orth&gt;&lt;/form&gt;</p>
-                                <p><gi>gramGrp</gi>&lt;gram
-                                    type="pos"&gt;м&lt;/gram&gt;&lt;/gramGrp&gt;</p>
-                                <p><hi><gi>etym</gi></hi></p>
-                                <p><hi>&lt;lang value="tr"&gt;тур.&lt;/lang&gt;</hi></p>
-                                <p><hi>&lt;/etym&gt;</hi></p>
-                                <p><gi>sense</gi></p>
-                                <p><gi>def</gi>уважавање.&lt;/def&gt;</p>
-                                <p>…</p></cell>
-                        </row>
-                    </table>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry xml:id="MZ.RGJS.сајдисльк">
+                            <form type="lemma">
+                                <orth>сајдисль́к</orth>
+                            </form>
+                            <gramGrp>
+                                <gram type="pos">м</gram>
+                            </gramGrp>
+                            <etym>
+                                <lang value="tr">тур.</lang>
+                            </etym>
+                            <sense>
+                                <def>уважавање.</def>
+                                …
+                            </sense>
+                        </entry>
+                    </egXML>
                     <list type="ordered">
                         <item>Do not use &lt;usg type=”hyper”&gt; or &lt;usg type=”syn”&gt; to mark
                             lexical relations such as hyperonymy or synonymy. The recommended way to
