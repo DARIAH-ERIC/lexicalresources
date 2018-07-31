@@ -1246,7 +1246,7 @@
                     <p>In the following we first present the recommended encoding, and then elicit how existing alternatives can be replaced accordingly.</p>
                 </div>
                 <div>
-                    <head>Proposal: Using <gi>ref</gi> and xr to point to lexical entities</head>
+                    <head>Proposal: Using <gi>ref</gi> and <gi>xr</gi> to point to lexical entities</head>
                     <p>To unify lexical references, we propose to use <gi>ref</gi> as the general element for a lexical reference and to use <gi>xr</gi> as the enclosing element that groups
                         information related to this reference. The reference may be internal to a dictionary or pointing to an external source, even when the actual target lexical object is not
                         explicitly known. In the latter case, <gi>ref</gi> can be used without an explicit pointing attribute. Furthermore the actual intended target of the reference can be of various
@@ -1267,6 +1267,7 @@
                         xml:lang="he"&gt;pneuma&lt;/ref&gt;&lt;/xr&gt; (in replacement to the existing example:<gi>mentioned</gi>pneuma&lt;/mentioned&gt; in the TEI guidelines).</p>
                     <div>
                         <head>Typology for <code>xr/@type</code> values </head>
+                        <note>we should change cognate examples as <gi>cit</gi> as covered in the section about <gi>etym</gi> (to be included when Jack is finished with it.</note>
                         <p>We suggest an extensible list of values, including “cf" for general references which do not have clear semantics.</p>
                         <table rend="rules">
                             <row>
