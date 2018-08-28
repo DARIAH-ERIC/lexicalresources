@@ -129,8 +129,9 @@
                 </div>
                 <div>
                     <head>Treatment of source information</head>
+                    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
                     <p>This section needs to be written! Or we get rid of it for 0.7 and add it
-                        later.</p>
+                        later.<?oxy_custom_end?></p>
                     <p>Another part of this introduction should address the use of textual elements
                         that are seen as spurious from the point of view of the goals of TEI-Lex0
                         and the role that <gi>dictScrap</gi> and <gi>pc</gi>  play in this; cases
@@ -171,47 +172,33 @@
                     <p>These four elements can be used to distinguish types of entries along two
                         conceptual axes:</p>
                     <list type="ordered">
-                        <item><hi>Containing vs. contained entries</hi>: entries may contain lexical
-                            information that can be conceived as a dictionary entry in its own
-                            right, possibly alongside additional form related or other lexical
-                            information. Specifically, <gi>superEntry</gi> may contain
-                                <gi>entry</gi> and <gi>entry</gi> in turn may contain <gi>re</gi> to
-                            represent the embedding of lexical entries on three distinct levels. Due
-                            to <gi>re</gi> being allowed to be used recursively, the number of
-                            levels for representing entry-like lexical information inside other such
-                            blocks is effectively unrestricted.</item>
-                        <item><hi>Structured vs. unstructured entries</hi>,<note place="comment"
-                                resp="herold_(BBAW)"><hi>This situation is somewhat comparable to
-                                    &lt;div1&gt;, &lt;div2&gt; etc. vs. recursive <gi>div</gi>.
-                                    Maybe this analogy should be mentioned explicitly in the
-                                    text?</hi></note><note place="comment" resp="Piotr_Banski"><hi>I
-                                    don't think the analogy holds in this case: divN vs. recursive
-                                    div is not a matter of structure vs. lack of it, but rather of
-                                    different views on expressing the serialization of an assumed
-                                    model (whether you assign some kind of additional
-                                    categorizational value to the numbered div vs. concentrating on
-                                    typing divs and possibly on counting or otherwise detecting
-                                    their nesting levels).Besides, we probably don't want to alert
-                                    those in the TEI community to whom the numbered-div vs.
-                                    recursive-div distinction is an issue comparable to a blood feud
-                                    ;-)</hi></note> i. e. entries that can readily be represented
-                            (in the lexical view) in the spirit of the TEI guideline’s dictionary
-                            chapter (<gi>entry</gi>, <gi>re</gi>) vs. entries that for some reason
-                            violate the generic content model of <gi>entry</gi> or <gi>re</gi> and
-                            thus have to be represented more freely (&lt;entryFree). A third
-                            category in this respect are entries that exhibit a highly reduced
-                            amount of lexical content while this content is still of essentially
-                            entry-like nature (<gi>superEntry</gi>).</item>
+                        <item><hi>Containing vs. contained entries</hi>: entries may contain
+                            additional lexical information that can be conceived as an additional
+                            dictionary entry in its own right. Specifically, <gi>superEntry</gi> may
+                            contain <gi>entry</gi> and <gi>entry</gi> in turn may contain
+                                <gi>re</gi> to represent the embedding of lexical entries on three
+                            distinct levels. Due to <gi>re</gi> being allowed to be used
+                            recursively, the number of levels for representing entry-like lexical
+                            information inside other such blocks is effectively unrestricted.</item>
+                        <item><hi>Structured vs. unstructured entries</hi>, i. e. entries that can
+                            readily be represented (in the lexical view) in the spirit of the TEI
+                            Guideline’s dictionary chapter (<gi>entry</gi>, <gi>re</gi>) vs. entries
+                            that for some reason violate the generic content model of <gi>entry</gi>
+                            or <gi>re</gi> and thus have to be represented more freely
+                                (<gi>entryFree</gi>). A third category in this respect are entries
+                            that exhibit a highly reduced amount of lexical content while this
+                            content is still of essentially entry-like nature
+                            (<gi>superEntry</gi>).</item>
                     </list>
-                    <p>In TEI-Lex-0, we refrain from this unnecessary and complex
-                        cross-classification of entries with regard to their place within an entry
-                        hierarchy (first axis above) and the rigidity of the lexical structuring
-                        they exhibit (second axis above). Instead of using four different elements
-                        for entry-like objects, only <gi>entry</gi> is used. In order to still be
-                        able to construct hierarchies of embedded entries, <gi>entry</gi> will need
-                        to be allowed to occur recursively (e. g. by making it part of
-                        model.entrypart.top). However, this leads to a non conservative deviation
-                        from the TEI guidelines.</p>
+                    <p>In TEI Lex-0, we refrain from this overly complex cross-classification of
+                        entries with regard to their place within an entry hierarchy (first axis
+                        above) and the rigidity of the lexical structuring they exhibit (second axis
+                        above). Instead of using four different elements for entry-like objects,
+                        only <gi>entry</gi> is used. In order to still be able to construct
+                        hierarchies of embedded entries, <gi>entry</gi> will need to be allowed to
+                        occur recursively (e. g. by making it part of <gi>model.entryPart.top</gi>).
+                        However, this leads to a non conservative deviation from the TEI
+                        guidelines.</p>
                     <p>In the context of TEI-Lex-0, the following new definition for <gi>entry</gi>
                         is used: <hi xml:space="preserve"><gi>entry</gi> is used as the </hi><note
                             place="comment" resp="Piotr_Banski"><hi>doesn't this restrict
