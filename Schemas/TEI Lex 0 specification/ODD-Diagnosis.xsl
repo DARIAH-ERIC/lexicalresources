@@ -86,7 +86,6 @@
                                             <tr>
                                                 <th>Attribute</th>
                                                 <th>Specification</th>
-                                                <th>Examples</th>
                                             </tr>
                                         </thead>
                                         <tbody>
