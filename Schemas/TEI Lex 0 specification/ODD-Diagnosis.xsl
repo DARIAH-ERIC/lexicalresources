@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" 
-    version="2.0" xmlns:eg="http://www.tei-c.org/ns/Examples"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0" xmlns:eg="http://www.tei-c.org/ns/Examples"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
 
     <xsl:output method="html"/>
@@ -55,10 +53,9 @@
                             <h2 id="{.}">
                                 <xsl:value-of select="$theElementName"/>
                             </h2>
-                            <h3>Customisation for <xsl:value-of select="$theElementName"/></h3>
                             <xsl:choose>
                                 <xsl:when test="$specification/descendant::elementSpec/@ident = $theElementName">
-                                    <xsl:message>Trouvé spec pour <xsl:value-of select="$theElementName"/></xsl:message>
+                                    <h3>Customisation for <xsl:value-of select="$theElementName"/></h3>
                                     <xsl:apply-templates select="$specification/descendant::elementSpec[@ident = $theElementName]"/>
                                 </xsl:when>
                                 <xsl:otherwise>No specific customisation for <xsl:value-of select="$theElementName"/></xsl:otherwise>
@@ -121,16 +118,16 @@
             </body>
         </html>
     </xsl:template>
-    
+
     <!-- Templates for parsing elementSpec -->
-    
+
     <xsl:template match="description">
         <p>New description: <xsl:value-of select="."/></p>
     </xsl:template>
-    
+
     <xsl:template match="attDef">
         <xsl:choose>
-            <xsl:when test="@mode='replace'">
+            <xsl:when test="@mode = 'replace'">
                 <p>New definition for attribute <b><xsl:value-of select="@ident"/></b></p>
             </xsl:when>
             <xsl:otherwise>
