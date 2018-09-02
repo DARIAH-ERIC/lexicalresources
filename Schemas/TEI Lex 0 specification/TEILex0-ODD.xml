@@ -2451,7 +2451,8 @@
                     <!-- 2018-09-02 (TT): changed moduleRef for linking based on PB -->
                     <moduleRef key="linking" include="seg" /> <!-- for segmentation inside orth/pron -->
                     <!-- 2018-09-02 (TT): removed re hom -->
-                    <moduleRef key="dictionaries" except="dictScrap entryFree superEntry re hom"/>
+                    <!-- 2018-09-02 (TT): put dictScrap back, I think we still want it -->
+                    <moduleRef key="dictionaries" except="entryFree superEntry re hom"/>
                     <!-- 2018-09-02 (TT): explicitly encoded what we allow from core -->
                     <moduleRef key="core" include="p list item label head author title"/>
                     <moduleRef key="textstructure"
