@@ -2448,7 +2448,8 @@
                 <head>Specification</head>
                 <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
                     <moduleRef key="gaiji" except="localName"/>
-                    <moduleRef key="linking" except="ab alt altGrp join timeline"/>
+                    <!-- 2018-09-02 (TT): changed moduleRef for linking based on PB -->
+                    <moduleRef key="linking" include="seg" /> <!-- for segmentation inside orth/pron -->
                     <!-- 2018-09-02 (TT): removed re hom -->
                     <moduleRef key="dictionaries" except="dictScrap entryFree superEntry re hom"/>
                     <!-- 2018-09-02 (TT): explicitly encoded what we allow from core -->
