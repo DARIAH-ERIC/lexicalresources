@@ -104,8 +104,8 @@
                         information on the level of entries (the following definitions are taken
                         from the TEI guidelines, emphasis added):</p>
                     <list type="ordered">
-                        <item><gi>entry</gi>: contains a single <hi>structured entry</hi> in any kind of lexical resource, such as a dictionary or lexicon.</item>
-                        <item><gi>entryFree</gi>: contains a single <hi>unstructured entry</hi> in any kind of lexical resource, such as a dictionary or lexicon.</item>
+                        <item><gi>entry</gi>: contains a single <hi rend="italic">structured entry</hi> in any kind of lexical resource, such as a dictionary or lexicon.</item>
+                        <item><gi>entryFree</gi>: contains a single <hi rend="italic">unstructured entry</hi> in any kind of lexical resource, such as a dictionary or lexicon.</item>
                         <item><gi>superEntry</gi>: groups a sequence of entries within any kind of lexical resource, such as a dictionary or lexicon which function as a single unit, for example a set
                             of homographs.</item>
                         <item><gi>re</gi>: (related entry) contains a dictionary entry for a lexical item related to the headword, such as a compound phrase or derived form, embedded inside a larger
@@ -113,31 +113,52 @@
                     </list>
                     <p>These four elements can be used to distinguish types of entries along two conceptual axes:</p>
                     <list type="ordered">
-                        <item><hi>Containing vs. contained entries</hi>: entries may contain additional lexical information that can be conceived as an additional dictionary entry in its own right.
+                        <item><hi rend="bold">Containing vs. contained entries</hi>: entries may contain additional lexical information that can be conceived as an additional dictionary entry in its own right.
                             Specifically, <gi>superEntry</gi> may contain <gi>entry</gi> and <gi>entry</gi> in turn may contain <gi>re</gi> to represent the embedding of lexical entries on three
                             distinct levels. Due to <gi>re</gi> being allowed to be used recursively, the number of levels for representing entry-like lexical information inside other such blocks is
                             effectively unrestricted.</item>
-                        <item><hi>Structured vs. unstructured entries</hi>, i. e. entries that can readily be represented (in the lexical view) in the spirit of the TEI Guideline’s dictionary chapter
-                                (<gi>entry</gi>, <gi>re</gi>) vs. entries that for some reason violate the generic content model of <gi>entry</gi> or <gi>re</gi> and thus have to be represented more
-                            freely (<gi>entryFree</gi>). A third category in this respect are entries that exhibit a highly reduced amount of lexical content while this content is still of essentially
-                            entry-like nature (<gi>superEntry</gi>).</item>
+                        <item><hi rend="bold">Structured vs. unstructured entries</hi>, i. e.
+                            entries that can readily be represented (in the lexical view) in the
+                            spirit of the TEI Guideline’s Dictionary Chapter (<gi>entry</gi>,
+                                <gi>re</gi>) vs. entries that for some reason violate the generic
+                            content model of <gi>entry</gi> or <gi>re</gi> and thus have to be
+                            represented more freely (<gi>entryFree</gi>). A third category in this
+                            respect are entries that exhibit a highly reduced amount of lexical
+                            content while this content is still of essentially entry-like nature
+                                (<gi>superEntry</gi>).</item>
                     </list>
-                    <p>In TEI Lex-0, we refrain from this overly complex cross-classification of entries with regard to their place within an entry hierarchy (first axis above) and the rigidity of the
-                        lexical structuring they exhibit (second axis above). Instead of using four different elements for entry-like objects, only <gi>entry</gi> is used. In order to still be able to
-                        construct hierarchies of embedded entries, <gi>entry</gi> will need to be allowed to occur recursively (e. g. by making it part of <gi>model.entryPart.top</gi>). However, this
-                        leads to a non conservative deviation from the TEI guidelines.</p>
-                    <p>In the context of TEI-Lex-0, the following new definition for <gi>entry</gi> is used: <hi xml:space="preserve"><gi>entry</gi> is used as the </hi><note place="comment"
-                            resp="Piotr_Banski"><hi>doesn't this restrict <gi>entry</gi> to the top level? Maybe instead an appeal to a "complete functional complex" would help? (The exact term is
-                                Chomskyan; I'm not sure how good it would be to re-use it verbatim)</hi></note><note place="comment" resp="herold_(BBAW)"><hi>I rephrased it from "the higest element"
-                                to "the basic element". Also, I changed the definition to refer to "linguistic entity" (i.e. often more or less a "complete functional complex", but this term is bound
-                                in syntax (wouldn't easily fit for Arabic dictionaries where top-level-entries may describes stems)). And the term is related to a specific linguistic theory so yes –
-                                not directly usable here.)</hi></note><hi>basic element in the microstructure; it comprises all information related to a linguistic entity and may contain further
-                            entries related to it (e. g. homographs or compound phrases).</hi></p>
-                    <p>The substitution of <gi>re</gi> and <gi>superEntry</gi> by <gi>entry</gi> is compatible with regard to the content model of the discarded elements. Both <gi>re</gi> and
-                            <gi>superEntry</gi> have content models that are proper subsets of the content model of <gi>entry</gi>. Instead of <gi>superEntry</gi> which most typically is used as a
-                        mere container for grouping lexical entries, either an <gi>entry</gi> grouping entries can be used or the mechanisms implemented by att.global.linking can be exploited.</p>
-                    <p>Consider the following excerpt from the “Wörterbuch der deutschen Gegenwartssprache” (“Dictionary of present-day German”, WDG, 1964–1977). In the WDG, compounds with the same
-                        morphological dependant (but different heads) are grouped into nests. According to the current TEI guidelines, such a nest would most probably be serialized as follows:</p>
+                    <p>In TEI Lex-0, we refrain from this overly complex cross-classification of
+                        entries with regard to their place within an entry hierarchy (first axis
+                        above) and the rigidity of the lexical structuring they exhibit (second axis
+                        above). Instead of using four different elements for entry-like objects,
+                        only <gi>entry</gi> is used. In order to still be able to construct
+                        hierarchies of embedded entries, <gi>entry</gi> is in the context of TEI
+                        Lex-0 allowed to occur recursively (e.g. by making it part of
+                        <?oxy_comment_start author="ttasovac" timestamp="20180902T141823+0200" comment="link
+"?>model.entryPart.top<?oxy_comment_end?>).
+                        This is where TEI Lex-0 departs from the TEI <hi rend="italic"
+                            >Guidelines</hi>, but this <ref
+                            target="https://github.com/TEIC/TEI/issues/1791">issue</ref> has already
+                        been raised with TEI. </p>
+                    <p>In the context of TEI-Lex-0, <gi>entry</gi> is used to encode the basic element of the
+                        dictionary microstructure; it groups all the information related to a
+                        particular linguistic entity and may contain further entries related to it
+                        (e.g. homographs or compound phrases).</p>
+                    <p>The substitution of <gi>re</gi> and <gi>superEntry</gi> by <gi>entry</gi> is
+                        compatible with regard to the content model of the discarded elements. Both
+                            <gi>re</gi> and <gi>superEntry</gi> have content models that are proper
+                        subsets of the content model of <gi>entry</gi>. Instead of
+                            <gi>superEntry</gi> which most typically is used as a mere container for
+                        grouping lexical entries, either an <gi>entry</gi> grouping entries can be
+                        used or the mechanisms implemented by
+                        <?oxy_comment_start author="ttasovac" timestamp="20180902T141737+0200" comment="link"?>att.global.linking<?oxy_comment_end?>
+                        can be exploited.</p>
+                    <p>Consider the following excerpt from the “Wörterbuch der deutschen
+                        Gegenwartssprache” (“Dictionary of Contemporary German”, WDG, 1964–1977). In
+                        the WDG, compounds with the same morphological dependant (but different
+                        heads) are grouped into nests. According to the current TEI <hi
+                            rend="italic">Guidelines</hi>, such a nest would most probably be
+                        serialized as follows:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <superEntry>
                             <form><orth>Haus-</orth>, <orth>haus-</orth>:</form>
@@ -212,20 +233,22 @@
                     <p>Note that the embedded entries are enumerated by way of the attribute @n.</p>
                     <p>This type of grouping is also customarily used in dictionaries of word-families in other languages such as in Howard H. Keller’s (1978): “A German word family dictionary
                         together with English equivalents”:</p>
-                    <p>&lt;entry type=”word-family”&gt;</p>
-                    <p>&lt;entry type=”main”&gt;</p>
-                    <p><gi>form</gi><gi>orth</gi>Haus&lt;/orth&gt;<gi>gramGrp</gi><gi>pos</gi>nn&lt;/pos&gt;&lt;/gramGrp&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;entry type=”sub”&gt;</p>
-                    <p><gi>form</gi><gi>orth</gi><gi>m</gi>Häus&lt;/m&gt; <gi>m</gi>chen&lt;/m&gt;&lt;/orth&gt;&lt;/gramGrp&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;entry type=”sub”&gt;</p>
-                    <p><gi>form</gi><gi>orth</gi><gi>m</gi>haus&lt;/m&gt; <gi>m</gi>en&lt;/m&gt;&lt;/orth&gt;&lt;/gramGrp&gt;&lt;/form&gt;</p>
-                    <p><gi>sense</gi>...&lt;/sense&gt;</p>
-                    <p>&lt;/entry&gt;</p>
-                    <p>&lt;/entry&gt;</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry type="wordFamily">
+                            <entry type="main">
+                                <form><orth>Haus</orth><gramGrp><pos>nn</pos></gramGrp></form>
+                                <sense>...</sense>
+                            </entry>
+                            <entry type="sub">
+                                <form><orth><m>Häus</m> <m>chen</m></orth></form>
+                                <sense>...</sense>
+                            </entry>
+                            <entry type="sub">
+                                <form><orth><m>haus</m> <m>en</m></orth></form>
+                                <sense>...</sense>
+                            </entry>
+                        </entry>
+                        </egXML>
                     <p>In the Collins/COBUILD “Dictionary of Idioms” (2nd. ed., 2002), idioms are grouped under a common headword. No additional information for the headword is provided; it only
                         serves as part of the access structure for the idioms. This can also be modelled using recursive entries. Again, see <ref target="#TypesOfEntries">Types of entries</ref> for a
                         discussion of possible entry types:</p>
@@ -248,26 +271,22 @@
                             </entry>
                         </entry>
                     </egXML>
-                    <p>For <gi>entryFree</gi>, the content model is defined more freely than for <gi>entry</gi>. To account for entries that do not follow the rather strict lexical model envisioned by
-                        the TEI guidelines for <gi>entry</gi>, <gi>dictScrap</gi> within <gi>entry</gi> shall be used.</p>
+                    <p>For <gi>entryFree</gi>, the content model is defined more freely than for
+                            <gi>entry</gi>. To account for entries that do not follow the rather
+                        strict lexical model envisioned by the TEI <hi rend="italic">Guidelines</hi>
+                        for <gi>entry</gi>, <gi>dictScrap</gi> within <gi>entry</gi> shall be
+                        used.</p>
                 </div>
                 <div>
                     <head>Changes to the content model of <gi>entry</gi></head>
-                    <p>Within TEI-Lex-0, <gi>entry</gi> may contain the following elements: <gi>form</gi>, <gi>sense</gi>, <gi>entry</gi>, <gi>etym</gi>, <gi>gramGrp</gi>, <gi>usg</gi>, <gi>xr</gi>,
-                            <gi>pc</gi><note place="comment" resp="herold_(BBAW)"><hi>Will be allowed in vanilla TEI in the short term.</hi></note>, and <gi>dictScrap</gi>. Contrary to the current TEI
-                        guidelines, it may not directly contain the following elements: <gi>def</gi>, <gi>hom</gi>, and <gi>cit</gi>. See the section <ref target="#hp8vymhe6byi"><hi>Towards a more
-                                systematic use of <gi>sense</gi></hi></ref> below.</p>
-                    <p>FROM VIENNA: </p>
-                    <list type="unordered">
-                        <item>consensus: we are NOT getting rid of re<note place="comment" resp="Katrien_Depuydt"><hi>why???</hi></note><note place="comment" resp="herold_(BBAW)"><hi>Yes, why? In the
-                                    last Berlin meeting (after Vienna), the consensus changed to: we do get rid of it.</hi></note></item>
-                        <item>for root based languages a<note place="comment" resp="Katrien_Depuydt"><hi>why not for compounds and derivates accompanying a main entry</hi></note>nd root-organized
-                                dictionaries<note place="comment" resp="Katrien_Depuydt"><hi>If you want to do something separate for root-organized dictionaries, then I would keep super entry to
-                                    indicate the root</hi></note><note place="comment" resp="herold_(BBAW)"><hi>See the proposed solution at the beginning of this section.</hi></note>, we recommend:
-                            entry for the root, and then a bunch of re’s </item>
-                        <item>re can be nested</item>
-                        <item>we’re still getting rid of super entry. </item>
-                    </list>
+                    <p>Within TEI-Lex-0, <gi>entry</gi> may contain the following elements:
+                            <gi>form</gi>, <gi>sense</gi>, <gi>entry</gi>, <gi>etym</gi>,
+                            <gi>gramGrp</gi>, <gi>usg</gi>, <gi>xr</gi>, <gi>pc</gi>, and
+                            <gi>dictScrap</gi>. Contrary to the current TEI <hi rend="italic"
+                            >Guidelines</hi>, it may not directly contain the following elements:
+                            <gi>def</gi>, <gi>hom</gi>, and <gi>cit</gi>. See the section <ref
+                            target="#hp8vymhe6byi"><hi>Towards a more systematic use of
+                                    <gi>sense</gi></hi></ref> below.</p>
                 </div>
                 <div xml:id="TypesOfEntries">
                     <head>Types of entries</head>
@@ -2430,7 +2449,7 @@
                 <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
                     <moduleRef key="gaiji" except="localName"/>
                     <moduleRef key="linking" except="ab alt altGrp join timeline"/>
-                    <moduleRef key="dictionaries" except="dictScrap entryFree superEntry"/>
+                    <moduleRef key="dictionaries" except="dictScrap entryFree superEntry re"/>
                     <moduleRef key="core"
                         except="add binaryObject cb choice citedRange corr del distinct divGen emph expan foreign gap gb graphic headItem headLabel hi index l label lg measure measureGrp media meeting milestone orig pb postBox postCode q reg said sic soCalled sp speaker stage street term time unclear"/>
                     <moduleRef key="textstructure"
