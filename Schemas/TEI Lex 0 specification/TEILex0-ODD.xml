@@ -3,9 +3,13 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>TEI Lex 0 - ODD specification</title>
-                <author>Laurent Romary</author>
-                <author>Toma Tasovac</author>
+                <title>TEI Lex-0</title>
+                <title type="sub">A baseline encoding for lexicographic data</title>
+                <author>
+                    <name type="organization">DARIAH WG "Lexical Resources"</name>
+                </author>
+                <editor><name type="person">Laurent Romary</name></editor>
+                <editor><name type="person">Toma Tasovac</name></editor>
             </titleStmt>
             <publicationStmt>
                 <authority>DARIAH WG "Lexical Resources"</authority>
