@@ -2449,7 +2449,8 @@
                 <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
                     <moduleRef key="gaiji" except="localName"/>
                     <moduleRef key="linking" except="ab alt altGrp join timeline"/>
-                    <moduleRef key="dictionaries" except="dictScrap entryFree superEntry re"/>
+                    <!-- 2018-09-02 (TT): removed re hom -->
+                    <moduleRef key="dictionaries" except="dictScrap entryFree superEntry re hom"/>
                     <moduleRef key="core"
                         except="add binaryObject cb choice citedRange corr del distinct divGen emph expan foreign gap gb graphic headItem headLabel hi index l label lg measure measureGrp media meeting milestone orig pb postBox postCode q reg said sic soCalled sp speaker stage street term time unclear"/>
                     <moduleRef key="textstructure"
