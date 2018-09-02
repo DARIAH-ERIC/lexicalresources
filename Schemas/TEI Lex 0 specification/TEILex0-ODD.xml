@@ -70,8 +70,7 @@
                         attribute <att>type</att> is used to further specify the kind of cit-object at hand. In our case, four distinct names of dictionary objects in the abstract dictionary model
                         (namely, “citation”, “example”, “translation” (of quotes) and “translation equivalent” (of words) map onto four distinct element+attribute combinations in the TEI XML
                         serialization (respectively, <gi>cit</gi> with <att>type</att>="citation", <gi>cit</gi> with <att>type</att>="example", and <gi>cit</gi> with <att>type</att>="translation" or
-                            <att>type</att>="translationEquivalent".<note place="comment" resp="Laurent_Romary"><hi>We need to discuss the possible reference to attestation and link this to LMF (part
-                                1 - or rather 2?)</hi></note></p>
+                            <att>type</att>="translationEquivalent".</p>
                     <p>The following example from a bilingual dictionary, shows how one typed element – <gi>cit</gi> – can be used to encode different parts of the dictionary structure:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <entry xml:lang="fr">
