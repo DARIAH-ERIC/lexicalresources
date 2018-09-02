@@ -816,8 +816,7 @@
                             orthography (e.g. in English dictionaries which treat conversion pairs
                             of nouns and verbs, such as <hi>run</hi>, as belonging in single
                             entries), <code>entry/gramGrp</code> should not be used, because its
-                            role is taken over by the individual <code>sense/gramGrp</code>. 
-                        </item>
+                            role is taken over by the individual <code>sense/gramGrp</code>. </item>
                     </list>
                     <figure>
                         <graphic n="1005" width="7.750422222222222cm" height="5.357813888888889cm"
@@ -851,15 +850,15 @@
                         </entry>
                     </egXML>
                 </div>
-                
+
                 <div>
                     <head>Representation of the lemma</head>
                     <p>The form element should always be qualified by its <att>type</att>. The lemma
                         (i.e. headword) form should be encoded as
-                        <code>form[@type=”lemma”]</code>.</p>
+                        <code>form[@type="lemma"]</code>.</p>
                     <p>If it is necessary to specify the grammatical properties of the lemma form
                         itself (as opposed to the grammatical properties of the entry), this is
-                        described by <code>entry/form[@type=”lemma”]/gramGrp</code>, e.g.:</p>
+                        described by <code>entry/form[@type="lemma"]/gramGrp</code>, e.g.:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <form type="lemma">
                             <orth>go</orth>
@@ -871,13 +870,13 @@
                 </div>
                 <div>
                     <head><anchor xml:id="sgbbk809lx3"/>Representation of inflected forms</head>
-                    <p>Dictionaries often include additional forms next to the lemma which are (in
-                        English) used to specify irregular forms, such as “corpus / corpora” or
-                        “take / took” and in inflectionally rich languages to enable the user to
-                        determine the correct paradigm of the word (such as “krava / -e” in
-                        Slovene). </p>
-                    <p>Such inflected forms should be encoded in entry/form/@type=”inflected”,
-                        e.g.:</p>
+                    <p>Dictionaries often include additional forms next to the lemma. In English,
+                        these are used to specify irregular forms, such as “corpus / corpora” or
+                        “take / took”, whereas in inflectionally rich languages they are often used
+                        to help the user determine the correct paradigm of the word (such as “krava
+                        / -e” in Slovene). </p>
+                    <p>Such inflected forms should be encoded in
+                            <code>entry/form/@type="inflected"</code>, e.g.:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <entry>
                             <form type="lemma">
@@ -896,16 +895,16 @@
                 <div>
                     <head><anchor xml:id="d34m89i7fkd"/>Paradigms</head>
                     <p>When several inflected forms can be present next to the lemma, these can be
-                        embedded into the entry/form[@type=”paradigm”] element. The decision on
+                        embedded into <code>entry/form[@type="paradigm"]</code>. The decision on
                         whether to use this extra element depends on the particular dictionary and
                         language.</p>
                     <p>The other use case for paradigms is when the full inflectional paradigm of
                         the word is embedded in the entry, i.e. when the dictionary also includes
-                        all the word-forms of the words covered, which can be useful for e.g.
+                        all the word-forms of the words covered, which can be useful for example in
                         machine processing. </p>
                     <p>An entry may contain several paradigms, e.g. a partial one for humans and a
                         full one for machines, or one for each stem of a verb. Each paradigm type
-                        should be distinguished by the form/@subtype attribute.</p>
+                        should be distinguished by the <att>subtype</att> attribute.</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <entry xml:id="perder" xml:lang="es">
                             <form type="lemma">
@@ -950,8 +949,8 @@
                     <p>The representation of variation within a form is highly dependant upon the
                         specifics of the features of the variation and the way in which they vary.
                         However, as a general principle, variation may be encoded as
-                        form[@type=”variant”] and embedded within the parent element for which a
-                        subordinate feature exhibits variation.</p>
+                            <code>form[@type="variant"]</code> and embedded within the parent
+                        element for which a subordinate feature exhibits variation.</p>
                     <div>
                         <head>Orthographic variation</head>
                         <p>Several kinds of orthographic variation may be distinguished. Below, we
@@ -981,7 +980,7 @@
                                 </form> .... </entry>
                         </egXML>
 
-                        <p>The following example is from american English in which due to the lack
+                        <p>The following example is from American English in which due to the lack
                             of official conventions for transliteration of Arabic orthography to the
                             English (Latin) script, the initial vowel in the surname ‘Osama Bin
                             Laden’ varies between ‘O’ and ‘U’:</p>
@@ -1013,65 +1012,28 @@
                             direct child of the lemma and phonetic transcriptions of the two roughly
                             equally used variant pronunciations of the word 'caramel' from American
                             English.</p>
-                        <p>&lt;entry xml:id="caramel-en" xml:lang="en-US"&gt; </p>
-                        <p> &lt;form type="lemma"&gt;</p>
-                        <p>
-                            <gi>orth</gi>caramel&lt;/orth&gt;</p>
-                        <p> &lt;form type="variant"&gt;</p>
-                        <p> &lt;pron notation="ipa"&gt;'keɹə"mɛl&lt;/pron<note place="comment"
-                                resp="Jesse_de_Does"><hi>Is &lt;form type="lemma"&gt;
-                                    <gi>orth</gi>caramel&lt;/orth&gt; &lt;pron
-                                    notation="ipa"&gt;'keɹə"mɛl&lt;/pron&gt; &lt;pron
-                                    notation="ipa"&gt;'kaɹmɫ̩&lt;/pron&gt; &lt;/form&gt;also a valid
-                                    option?Do we have general rules when to introduce new
-                                        <gi>form</gi> subelements when some property is
-                                    multivalued?What would, for instance, happen if we had a single
-                                    entry for a noun/adjective? Or, maybe more mainstream, different
-                                    genders? &lt;form type="lemma"&gt;
-                                    <gi>orth</gi>caramel&lt;/orth&gt; &lt;form type="variant"&gt;
-                                    &lt;pron notation="ipa"&gt;'keɹə"mɛl&lt;/pron&gt; &lt;/form&gt;
-                                    &lt;form type="variant"&gt; &lt;pron
-                                    notation="ipa"&gt;'kaɹmɫ̩&lt;/pron&gt; &lt;/form&gt;
-                                    &lt;/form&gt; <gi>gramGrp</gi>
-                                    <gi>gen</gi>m&lt;/gen&gt; <gi>pos</gi>f&lt;/gen&gt;
-                                    &lt;/gramGrp&gt;?For multivalued propertiesCf. also the lemon
-                                    fragment at:
-                                    https://www.w3.org/community/ontolex/wiki/Final_Model_Specification#Forms
-                                    :lex_privacy a ontolex:LexicalEntry; ontolex:form
-                                    :form_privacy.:form_privacy a ontolex:Form; ontolex:writtenRep
-                                    "privacy"@en; ontolex:phoneticRep "ˈpɹɪv.ə.si"@en-US-fonipa;
-                                    ontolex:phoneticRep "ˈpɹaɪ.və.si"@en-GB-fonipa.</hi></note><note
-                                place="comment" resp="Piotr_Banski"><hi>It seems to me that Jesse's
-                                    question about whether to use separate form/pron or whether to
-                                    squeeze <gi>pron</gi>s into a single <gi>form</gi> points out a
-                                    lack of taxonomical complement to our picture. We might want to
-                                    say that the former is for two taxonomically separable variants,
-                                    whereas the latter is for variants that we lump together
-                                    (perhaps there is a taxonomy that describes them, but we don't
-                                    care in the dictionary at hand).</hi></note><note
-                                place="comment" resp="Piotr_Banski"><hi>As for the noun/adjective,
-                                    noun/verb, gender or animacy, etc. differences, my assumption
-                                    was that the form is the same, and we discriminate at the level
-                                    of sense. That is: a single <gi>form</gi>, *no* <gi>gramGrp</gi>
-                                    directly under <gi>entry</gi> (for the conversion cases, A/N,
-                                    N/V), and separate senses, each with its <gi>gramGrp</gi>.An
-                                    interesting question raised by this sketch is what happens if
-                                    the form is identical orthographically but distinct phonetically
-                                    (e.g. "separate", verb vs. adjective). In such cases, we would
-                                    need a parallel split inside <gi>form</gi>, and inside
-                                        <gi>sense</gi>, and ideally a mechanism to relate
-                                them.</hi></note>&gt;</p>
-                        <p> &lt;/form&gt;</p>
-                        <p> &lt;form type="variant"&gt;</p>
-                        <p> &lt;pron notation="ipa"&gt;'kaɹmɫ̩&lt;/pron&gt; </p>
-                        <p> &lt;/form&gt;</p>
-                        <p> &lt;/form&gt;</p>
-                        <p>
-                            <gi>gramGrp</gi></p>
-                        <p> &lt;gram type="pos"&gt;noun&lt;/gram&gt;</p>
-                        <p> &lt;/gramGrp&gt;</p>
-                        <p> ...</p>
-                        <p>&lt;/entry&gt; </p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"><entry xml:id="caramel-en"
+                                xml:lang="en-US">
+                                <form type="lemma">
+                                    <orth>caramel</orth>
+                                    <form type="variant">
+                                        <pron notation="ipa">'keɹə"mɛl</pron>
+                                    </form>
+                                    <form type="variant">
+                                        <pron notation="ipa">'kaɹmɫ̩</pron>
+                                    </form>
+                                </form>
+                                <gramGrp>
+                                    <gram type="pos">noun</gram>
+                                </gramGrp>
+                                <!-- ... -->
+                            </entry>
+                        </egXML>
+
+                        <p>We have an open GitHub <ref
+                                target="https://github.com/DARIAH-ERIC/lexicalresources/issues/16"
+                                >issue</ref> related to this.</p>
+
                     </div>
                     <div>
                         <head>Regional or dialectal Variation</head>
@@ -1080,8 +1042,8 @@
                             village of Yucanany and the rest of the speakers. Since the Yucanany
                             variety makes up only a small portion of the speakers of the language,
                             this case of variation is represented as an embedded
-                                <code>form[@type=”variant”]</code> within the lemma. Note the use of
-                                <code>usg[@type=”geo”]/placeName</code> to explicitly specify this
+                                <code>form[@type="variant"]</code> within the lemma. Note the use of
+                                <code>usg[@type="geo"]/placeName</code> to explicitly specify this
                             feature in addition to the use of the private language subtag
                                 (<code>xml:lang="mix-x-YCNY"</code>) as per <ref>BCP 47</ref>.</p>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1109,251 +1071,30 @@
                         </egXML>
                     </div>
                 </div>
-                <div>
-                    <head><hi rend="strikethrough">Extensions to the TEI Dictionary schema</hi><note
-                            place="comment" resp="Piotr_Banski"><hi>In a discussion with Toma, this
-                                was rejected from Lex0 proper, because Lex0 attempts not to provide
-                                encoding options, so we would end up recommending the use of
-                                    <gi>lemma</gi> etc. throughout, and that would never get the
-                                proposal past the Council.</hi></note></head>
-                    <p>TEI already has in place the principle where specific elements can also be
-                        expressed as a general element refined by its @type, e.g. ab/@type=”p” ≡ p
-                        or seg/@type=”word” ≡ w. We propose to apply the same principle to form, as
-                        this would make the lexical entries more compact and readable for the
-                        lexicographers as well as enabling better validation. </p>
-                    <p>In particular, the following new elements would be added, following the
-                        suggested values of <ref
-                            target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-form.html#tei_att.type"
-                                ><hi>form/@type</hi></ref> with the some extensions:</p>
-                    <list type="unordered">
-                        <item>lemma ≡ form/@type=”lemma”</item>
-                        <item>inflected ≡ form/@type=”inflected”</item>
-                        <item>phrase ≡ form/@type=”phrase”</item>
-                        <item><hi xml:space="preserve">compound </hi></item>
-                        <item><hi xml:space="preserve">multi-word expression </hi></item>
-                        <item>paradigm ≡ form/@type=”paradigm”</item>
-                    </list>
-                    <p>N.B. the new elements need definitions (attributes, content models) which
-                        need to be defined. In general, they should be equivalents or refinements of
-                        form.</p>
-                    <p>Other changes:</p>
-                    <list type="unordered">
-                        <item>paradigm should be added to the list of suggested <ref
-                                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-form.html#tei_att.type"
-                                    ><hi>form/@type</hi></ref> values</item>
-                        <item>@subtype should be added to form and is equivalent to @type of the
-                            refined element e.g. form[@type=”paradigm”][@subtype=”full”]≡
-                            paradigm[@type=”full”]</item>
-                    </list>
-                    <p>Comment: the same principle could be applied to sense, so that
-                        sense[@type=”terminology”] would be equivalent to terminology; at least in
-                        Slovene dictionaries, it is common to have first all the senses of the
-                        entry, and then a “phrasal nest” and then a “terminological nest”. These two
-                        need to be modelled in TEI as senses, and this would make the structure
-                        clearer.</p>
-                </div>
-                <div>
-                    <head><anchor xml:id="b8nmjbkhd0pu"/>Original notes</head>
-                    <list type="unordered">
-                        <item>The overall grammatical properties of a dictionary entry are encoded
-                            in entry/gramGrp rather than inside the lemma form, i.e
-                            entry/form[@type=”lemma”]/gramGrp is not used to specify the
-                            part-of-speech etc. of the entry.</item>
-                        <item>The complete grammatical information of a given form/orth (or pron) is
-                            obtained by its sibling gramGrp or by the children of its
-                            ancestors.</item>
-                        <item>make @type (e.g. “lemma”; default BTW) mandatory on
-                            <gi>form</gi></item>
-                        <item>the inflectional information of the word is given in nested form(s)
-                            and we introduce a container element for paradigm (i.e. oblique forms)
-                            e.g. form/[@type=”paradigm”]/form[@type=”inflected”]</item>
-                        <item>an entry can have several paradigms, where it would be useful to have
-                            @subtype on form (currently not allowed). Examples where this would be
-                            needed are e.g.: <list type="unordered">
-                                <item>if a verb inflects according to two different conjugation
-                                    classes (two iTypes)</item>
-                                <item>one “paradigm” giving just one or two forms for humans to know
-                                    what the paradigm is, and one for machines, containing the
-                                    complete inflectional paradigm</item>
-                                <item><hi xml:space="preserve">@resp </hi>should be somewhere there
-                                    for stuff that we add to the dictionary that’s not in the source
-                                    (e.g. full paradigm)</item>
-                                <item>what do we use for referencing external paradigms?
-                                        <hi>@ana</hi> seems a bit abusive(?)</item>
-                                <item>hiding extra stuff with <hi>rendition</hi> mechanisms</item>
-                            </list></item>
-                        <item>potential Schematron restriction preventing form/@type=”lemma” at
-                            sense level</item>
-                    </list>
-                    <p>Further cases to be potentially considered:</p>
-                    <list type="ordered">
-                        <item>“run”, verbal form, in a dictionary that splits entries (a.o.)
-                            according to the orthography+pos:</item>
-                    </list>
-                    <p>entry:</p>
-                    <p> form/@type=”lemma” | orth: run</p>
-                    <p> gramGrp | pos: v</p>
-                    <p> sense: …</p>
-                    <p>2. “run”, in a dictionary that uses only the orthography as the
-                        discriminator:</p>
-                    <p>entry:</p>
-                    <p> form/@type=”lemma” | orth: run</p>
-                    <p> sense:</p>
-                    <p> sense/@n=1:</p>
-                    <p> gramGrp | pos: n</p>
-                    <p> …. </p>
-                    <p> sense/@n=2</p>
-                    <p> gramGrp | pos: v</p>
-                    <p> ….</p>
-                    <p>Comment 1: there is no gramGrp under <gi>entry</gi>, because the
-                        discrimination takes part within <gi>sense</gi></p>
-                    <p>Comment 2: I (Piotr) assumed that there is a single <gi>sense</gi>,
-                        recursive. I am not sure if this is a general assumption.</p>
-                    <list type="unordered">
-                        <item>what do you do with paradigm information in the 2nd case?
-                            &lt;form/@type=”paradigm”&gt; within each sense</item>
-                    </list>
-                    <p>3. potential edge cases we might want to consider:</p>
-                    <list type="unordered">
-                        <item>water - waters (specific sense with its own gramGrp), </item>
-                        <item>staff - staffs vs. staves (new meaning for the historical but
-                            irregular plural form; possibly a separate entry with a cross-reference
-                            from “staff”), cf <ref
-                                target="http://www.merriam-webster.com/dictionary/staff"
-                                    ><hi>http://www.merriam-webster.com/dictionary/staff</hi></ref>
-                            <list type="unordered">
-                                <item>linkage as an additional mechanism apart from inheritance; in
-                                    the prototypical case, the paradigm info down the tree is a
-                                    restriction of the entry-level paradigm</item>
-                            </list></item>
-                        <item>….</item>
-                    </list>
-                    <p>4. Further (non-edge) cases: orthographic variation, and the use of more than
-                        one orthographies within the same language. This should be treated the same
-                        as where a given form is being represented with more than one phonetic
-                        notation, e.g. as (i..n) orth or pron elements at the same level as direct
-                        children of form.</p>
-                    <p> &lt;entry xml:id="courage-heb" xml:lang="heb"&gt; </p>
-                    <p> &lt;form type="lemma"&gt;</p>
-                    <p> &lt;orth notation="menukad"&gt;אֹמֶץ&lt;/orth&gt;<hi>&lt;!--'kitiv menukad':
-                            'dotted'/'vowelized' spelling --&gt;</hi></p>
-                    <p> &lt;orth notation="male"&gt;אומץ&lt;/orth&gt;<hi>&lt;!--'kitiv male':"full
-                            spelling" or "spelling lacking niqqud" --&gt;</hi></p>
-                    <p> &lt;pron notation="ipa"&gt;ˈomet͜s&lt;/pron&gt;</p>
-                    <p> &lt;/form&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi></p>
-                    <p> &lt;gram type="pos"&gt;noun&lt;/gram&gt;</p>
-                    <p> &lt;/gramGrp&gt;</p>
-                    <p>
-                        <gi>sense</gi></p>
-                    <p> ....</p>
-                    <p> &lt;/sense&gt;</p>
-                    <p> &lt;/entry&gt; </p>
-                    <p>5. simple and systematic (e.g. alternative pairs of forms, sg1-pl1,
-                        sg2-pl2)</p>
-                    <p>Freedict swh-eng (<hi>pairs</hi> of forms):</p>
-                    <p> &lt;form xml:lang="sw" type="lemma"&gt;</p>
-                    <p> &lt;orth n="1"&gt;afisa&lt;/orth&gt;</p>
-                    <p> &lt;orth type="variant" n="2"&gt;ofisa&lt;/orth&gt;</p>
-                    <p> &lt;form type="inflected"&gt;</p>
-                    <p> &lt;orth corresp="#maafisa" n="1"&gt;maafisa&lt;/orth&gt;</p>
-                    <p> &lt;orth type="variant" corresp="#maofisa" n="2"&gt;maofisa&lt;/orth&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi></p>
-                    <p>
-                        <gi>number</gi>pl&lt;/number&gt;</p>
-                    <p> &lt;/gramGrp&gt;</p>
-                    <p> &lt;/form&gt;</p>
-                    <p> &lt;/form&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi></p>
-                    <p> &lt;gram type="pos"&gt;n&lt;/gram&gt;</p>
-                    <p> &lt;/gramGrp&gt;</p>
-                    <p>
-                        <gi>sense</gi></p>
-                    <p>
-                        <gi>def</gi>officer&lt;/def&gt;</p>
-                    <p> &lt;/sense&gt;</p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type=”lemma”&gt;</p>
-                    <p>
-                        <gi>orth</gi>run&lt;/orth&gt;</p>
-                    <p> &lt;/form&gt;</p>
-                    <p> &lt;sense n=”1”&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi>&lt;gram type="pos"&gt;verb&lt;/gram&gt;&lt;/gramGrp&gt;</p>
-                    <p> [information on the verbal senses]</p>
-                    <p> &lt;/sense&gt;</p>
-                    <p> &lt;sense n=”2”&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi>&lt;gram type="pos"&gt;noun&lt;/gram&gt;&lt;/gramGrp&gt;</p>
-                    <p> [information on the nominal senses]</p>
-                    <p> &lt;/sense&gt;</p>
-                    <p> &lt;/entry&gt;</p>
-                </div>
             </div>
             <div>
                 <head>Structured lexical references (<code>xr/ref</code>)</head>
-                <p>Editors: Jesse, Katrien</p>
-                <p><hi>Reviewer: Laurent</hi></p>
                 <div>
                     <head>Motivation</head>
-                    <p>The current TEI p5 guidelines provide several mechanisms by means of which
-                        one item of lexical information can refer to another, e.g.:</p>
+                    <p>The current TEI <hi rend="italic">Guidelines</hi> provide several mechanisms
+                        by means of which one item of lexical information can refer to another,
+                        e.g.:</p>
                     <list type="unordered">
                         <item><gi>gloss</gi> for the provision of simple (non refined) translation
                             equivalents of the head word</item>
-                        <item><tag>usg type="synonym"</tag> for synonym references</item>
-                        <item>&lt;cit<note place="comment" resp="Piotr_Banski"><hi>This section
-                                    draws the line between cit/quote used for examples and (here)
-                                    xr/ref used for translation equivalents. With this extended
-                                    treatment of translation equivalents not merely as forms that
-                                    "appropriately contextualised, might ideally replace the source
-                                    form in the translated text" but as actual references to a
-                                    _potentially_and_in_most_cases_abstract_ dictionary "on the
-                                    other side", I am wondering about what could be done with
-                                    proverbs and idioms that are used to illustrate the usage of
-                                    (forms of) headwords. Do we also encode them as xr/ref, because
-                                    there is nothing wrong with postulating that they are references
-                                    to an abstract dictionary of proverbs or idioms, or do we encode
-                                    them as cit/quote, because they are examples?I am not trying to
-                                    nitpick for the sake of nitpicking -- I am just trying to
-                                    explore the boundaries of our potential
-                                recommendations.</hi></note><note place="comment"
-                                resp="Toma_Tasovac"><hi>I'm also still very uncomfortable with the
-                                    idea of basing our translation equivalent mechanism on the
-                                    notion of potential entries in potential dictionaries. I think
-                                    we need to revisit this and see for isntance why this couldn't
-                                    be covered by cit type translation and @corresp attribute or
-                                    even <gi>form</gi>, something definitely to discuss in
-                                    berlin</hi></note><note place="comment" resp="Katrien_Depuydt"
-                                    ><hi>The same logic you oppose to, is applicable to the proposal
-                                    of cit type=equivalent. Where are you quoting from?</hi></note>
-                                type="translation"&gt;<gi>quote</gi>...&lt;/quote&gt;&lt;/cit&gt;
-                            for translation equivalents in bilingual or translation
-                            dictionaries</item>
+                        <item><tag>usg type="synonym"></tag> for synonym references</item>
+                        <item><code>cit[@type="translation"]/quote</code> for translation
+                            equivalents in bilingual or translation dictionaries</item>
                         <item><gi>oRef</gi>, <gi>pRef</gi> for the resolution of “~" headword
-                            placeholders in quotations and other dictionary text<note place="foot"
-                                xml:id="ftn0" n="0"><p>
-                                    <ref
-                                        target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DITPXR"
-                                            ><hi>http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DITPXR</hi></ref>
-                                </p></note></item>
+                            placeholders in quotations and other dictionary text</item>
                         <item><gi>xr</gi>, <gi>ref</gi> as a general cross-referencing
                             mechanism</item>
-                        <item><gi>ptr</gi>, <ref
-                                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html"
-                                >http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-ptr.html</ref>
-                        </item>
-                        <item><gi>link</gi>, <ref
-                                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-link.html"
-                                >http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-link.html</ref>
-                        </item>
+                        <item><gi>ptr</gi> as a pointer to another location </item>
+                        <item><gi>link</gi></item>
                         <item><gi>mentioned</gi> in the etymology section</item>
                         <item><gi>term</gi> for mentions of technical terms</item>
                     </list>
-                    <p>In keeping with the approach of the TEI-Lex0 initiative, and considering that
+                    <p>In keeping with the approach of the TEI Lex-0, and considering that
                         links/relations between lexical data elements are increasingly part of the
                         core lexical data model rather than mere convenience pointers for dictionary
                         users, we need a more unified and more constrained mechanism for lexical
@@ -1363,7 +1104,7 @@
                     <p>The proposed mechanism has the following properties </p>
                     <list type="ordered">
                         <item>It applies only to references with a clear
-                            <hi xml:space="preserve">linguistic</hi> meaning.</item>
+                            <hi xml:space="preserve" rend="italic">linguistic</hi> meaning.</item>
                         <item>The number of arbitrary (or context-dependent) choices for the encoder
                             is minimal; the semantics of the reference should not depend on
                             context</item>
@@ -1379,49 +1120,39 @@
                 <div>
                     <head>Proposal: Using <gi>ref</gi> and <gi>xr</gi> to point to lexical
                         entities</head>
-                    <p>To unify lexical references, we propose to use <gi>ref</gi> as the general
-                        element for a lexical reference and to use <gi>xr</gi> as the enclosing
-                        element that groups information related to this reference. The reference may
-                        be internal to a dictionary or pointing to an external source, even when the
-                        actual target lexical object is not explicitly known. In the latter case,
-                            <gi>ref</gi> can be used without an explicit pointing attribute.
-                        Furthermore the actual intended target of the reference can be of various
-                        possible types, namely a full entry, but also a specific sense, form or
-                        morpheme within a given entry.</p>
-                    <p>For all such usages, the following attributes may be used on <gi>xr</gi> and
+                    <p>In TEI Lex-0, we use <gi>ref</gi> as the general element for a lexical
+                        reference and <gi>xr</gi> as the enclosing element that groups information
+                        related to this reference. The reference may be internal to a dictionary or
+                        pointing to an external source, even when the actual target lexical object
+                        is not explicitly known. In the latter case, <gi>ref</gi> can be used
+                        without an explicit pointing attribute. Furthermore the actual intended
+                        target of the reference can be of various possible types, namely a full
+                        entry, but also a specific sense, form or morpheme within a given entry.</p>
+                    <p>For all such uses, the following attributes may be used on <gi>xr</gi> and
                             <gi>ref</gi>:</p>
                     <list type="unordered">
                         <item><att>type</att> is a mandatory attribute on <gi>xr</gi> for a lexical
-                            reference. Its default value is “lexical" and can be superseded (or
-                            complemented by means of @subtype). It should be an indication of the
-                            lexical relation between the headword of the entry and the object
+                            reference. Its default value is "lexical" and can be superseded (or
+                            complemented by means of <att>subtype</att>). It should be an indication
+                            of the lexical relation between the headword of the entry and the object
                             referred to (cf. next subsection)</item>
-                        <item>ref/@type may be an indication of the target object category (entry,
-                            sense, ….)</item>
-                        <item><att>xml:lang</att>, which is recommended when <gi>ref</gi> actually
-                            contains an explicit lexical form</item>
-                        <item>ref/@target: to point to the actual lexical object being pointed at
-                            when applicable</item>
-                        <item>ref/@notation<note place="foot" xml:id="ftn1" n="1"><p> A ticket
-                                    should be issued to make <gi>ref</gi> a member of att.notated.
-                                    Furthermore, The content model of <gi>xr</gi> should be modified
-                                    to include all of model.entryPart. The content model of
-                                        <gi>xr</gi> should <hi xml:space="preserve">not </hi>allow
-                                    text nodes (but lbl should still be allowed to wrap some
-                                    unstructured text).</p></note>: to indicate, like we currently
-                            do on <gi>orth</gi> or <gi>phon</gi>, the actual notation used for the
+                        <item><code>ref/@type</code> may be an indication of the target object
+                            category (entry, sense, ….) See this <ref
+                                target="https://github.com/DARIAH-ERIC/lexicalresources/issues/20"
+                                >issue</ref> on GitHub.</item>
+                        <item><att>xml:lang</att>, which is
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>recommended<?oxy_custom_end?>
+                            when <gi>ref</gi> actually contains an
+                            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>explicit
+                            lexical form<?oxy_custom_end?></item>
+                        <item><code>ref/@target</code>: to point to the actual lexical object being
+                            pointed at when applicable</item>
+                        <item><code>ref/@notation</code> to indicate, like we currently do on
+                                <gi>orth</gi> or <gi>pron</gi> the actual notation used for the
                             explicit lexical form when provided</item>
                     </list>
-                    <p>The most simple use of <gi>xr</gi> and <gi>ref</gi> according to the present
-                        guidelines would thus look like: &lt;xr type="lexical"&gt;&lt;ref
-                        xml:lang="he"&gt;pneuma&lt;/ref&gt;&lt;/xr&gt; (in replacement to the
-                        existing example:<gi>mentioned</gi>pneuma&lt;/mentioned&gt; in the TEI
-                        guidelines).</p>
                     <div>
                         <head>Typology for <code>xr/@type</code> values </head>
-                        <note>we should change cognate examples as <gi>cit</gi> as covered in the
-                            section about <gi>etym</gi> (to be included when Jack is finished with
-                            it.</note>
                         <p>We suggest an extensible list of values, including “cf" for general
                             references which do not have clear semantics.</p>
                         <table rend="rules">
@@ -1437,7 +1168,9 @@
                             </row>
                             <row>
                                 <cell>cognate</cell>
-                                <cell>link to cognate in other language</cell>
+                                <cell>link to cognate in other language. See this <ref
+                                        target="https://github.com/DARIAH-ERIC/lexicalresources/issues/19"
+                                        >issue</ref> on GitHub.</cell>
                                 <cell>
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                                         <entry>
@@ -1471,17 +1204,22 @@
                             <row>
                                 <cell>synonym, hyponym, hyperonym, antonym , meronym (etc.) </cell>
                                 <cell/>
-                                <cell><hi><gi>entry</gi></hi><lb/><seg xml:space="preserve">   </seg>&lt;form
-                                        type="lemma"&gt;<lb/><seg xml:space="preserve">      </seg><gi>orth</gi>dog&lt;/orth&gt;<lb/><seg xml:space="preserve">   </seg><hi>&lt;/form&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi><gi>sense</gi></hi><lb/><seg xml:space="preserve">      </seg>&lt;xr
-                                    type="hyperonym"&gt;<lb/><seg xml:space="preserve">         </seg>&lt;ref
-                                    xml:lang="en" type="entry<note place="comment"
-                                        resp="herold_(BBAW)"><hi>What does @type="entry" mean? A
-                                            local reference? If yes, why not use @target="#e-2323"
-                                            or
-                                        similar?</hi></note>"&gt;mammal&lt;/ref&gt;<lb/><seg xml:space="preserve">      </seg><hi>&lt;/xr&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;/sense&gt;</hi><lb/><hi>&lt;/entry&gt;</hi></cell>
+                                <cell>
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples"><entry>
+                                            <form type="lemma">
+                                                <orth>dog</orth>
+                                            </form>
+                                            <sense>
+                                                <xr type="hyperonym">
+                                                  <ref xml:lang="en" type="entry">mammal</ref>
+                                                </xr>
+                                            </sense>
+                                        </entry>
+                                    </egXML>
+                                </cell>
                             </row>
                             <row>
-                                <cell>translation</cell>
+                                <cell>translationEquivalent</cell>
                                 <cell>translation equivalent</cell>
                                 <cell>
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1501,11 +1239,15 @@
                             <row>
                                 <cell>cf</cell>
                                 <cell>Untyped cross-reference</cell>
-                                <cell><hi><gi>entry</gi></hi><lb/><seg xml:space="preserve">   </seg>&lt;form
-                                        type="lemma"&gt;<lb/><seg xml:space="preserve">      </seg><gi>orth</gi>borcht&lt;/orth&gt;<lb/><seg xml:space="preserve">   </seg><hi>&lt;/form&gt;</hi><lb/><seg xml:space="preserve">   </seg>&lt;xr
-                                        type="cf"&gt;<lb/><seg xml:space="preserve">      </seg><gi>lbl</gi>Cf.&lt;/lbl&gt;<lb/><seg xml:space="preserve">      </seg>&lt;ref
-                                    xml:lang="nl"
-                                        target="#M012340"&gt;burcht&lt;/ref&gt;<lb/><seg xml:space="preserve">   </seg><hi>&lt;/xr&gt;</hi><lb/><hi>&lt;/entry&gt;</hi></cell>
+                                <cell><egXML xmlns="http://www.tei-c.org/ns/Examples"><entry>
+                                            <form type="lemma">
+                                                <orth>borcht</orth>
+                                            </form>
+                                            <xr type="cf">
+                                                <lbl>Cf.</lbl>
+                                                <ref xml:lang="nl" target="#M012340">burcht</ref>
+                                            </xr>
+                                        </entry></egXML></cell>
                             </row>
                         </table>
                     </div>
@@ -1516,34 +1258,28 @@
                                     ><hi>http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP</hi></ref>
                         </p>
                         <list type="unordered">
-                            <item># + id: reference to element by id inside current document</item>
+                            <item># + xml:id: reference to element by xml:id inside current
+                                document</item>
                             <item>URI reference</item>
                             <item>xpath/xpointer expressions, using TEI xpointer schemes (<ref
                                     target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATS"
-                                        ><hi>http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATS</hi></ref>)</item>
+                                        ><hi>http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATS</hi></ref>)
+                                See <ref
+                                    target="https://github.com/DARIAH-ERIC/lexicalresources/issues/23"
+                                    >GitHub issue</ref>.</item>
                             <item>#null: there is no concrete reference</item>
                         </list>
                     </div>
                     <div>
-                        <head><anchor xml:id="tzhvjc2d1p07"/>Replacement of current encoding</head>
+                        <head><anchor xml:id="tzhvjc2d1p07"/>How TEI Lex-0 differs from TEI <hi
+                                rend="italic">Guidelines</hi></head>
+                        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+                        <p>This section is still not properly encoded.<?oxy_custom_end?></p>
                         <table rend="rules">
                             <row>
                                 <cell>description</cell>
                                 <cell>current encoding</cell>
                                 <cell>proposed encoding</cell>
-                            </row>
-                            <row>
-                                <cell>cognates in etymology section<note place="comment"
-                                        resp="Jack_Bowers"><hi>we agreed this one should be deleted
-                                            right? (as we cover it in the etymology
-                                        section)</hi></note><note place="comment"
-                                        resp="herold_(BBAW)"><hi>Yes, that's what I recall,
-                                            too.</hi></note></cell>
-                                <cell>&lt;mentioned lang="de"&gt;Hund&lt;/mentioned&gt;</cell>
-                                <cell><hi><gi>entry</gi></hi><lb/><seg xml:space="preserve">   </seg>&lt;form
-                                            type="lemma"&gt;hond&lt;/form&gt;<lb/><seg xml:space="preserve">   </seg><hi><gi>etym</gi></hi><lb/><seg xml:space="preserve">      </seg>&lt;xr
-                                    type="cognate"&gt;<lb/><seg xml:space="preserve">         </seg>&lt;ref
-                                        xml:lang="de"&gt;Hund&lt;/ref&gt;<lb/><seg xml:space="preserve">      </seg><hi>&lt;/xr&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;/etym&gt;</hi><lb/><hi>&lt;/entry&gt;</hi></cell>
                             </row>
                             <row>
                                 <cell>synonyms, hyponyms, hyperonyms (and other semantic
@@ -1556,9 +1292,11 @@
                             </row>
                             <row>
                                 <cell>abbreviated headword occurrence in quotations</cell>
-                                <cell><p>academy … The Royal A~ of Arts OALD</p>
+                                <cell>
+                                    <p>academy … The Royal A~ of Arts OALD</p>
                                     <p><gi>q</gi><lb/> The Royal<lb/> &lt;oRef type="cap" /&gt;<lb/>
-                                        of Arts<lb/>&lt;/q&gt;</p></cell>
+                                        of Arts<lb/>&lt;/q&gt;</p>
+                                </cell>
                                 <cell><gi>q</gi><lb/> The Royal<lb/> &lt;xr
                                     type="headwordAttestation"&gt;<lb/><seg xml:space="preserve">      </seg>&lt;ref
                                     target="#current_entry_id"&gt;A~&lt;/ref&gt;<lb/><seg xml:space="preserve">   </seg>&lt;/xr&gt;<lb/>
@@ -1566,11 +1304,13 @@
                             </row>
                             <row>
                                 <cell>translation of headword (possibly in a particular
-                                        senses/context)<note place="foot" xml:id="ftn2" n="2"><p>
+                                        senses/context)<note place="foot" xml:id="ftn2" n="2">
+                                        <p>
                                             <ref
                                                 target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-cit.html"
                                                   ><hi>http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-cit.html</hi></ref>
-                                        </p></note></cell>
+                                        </p>
+                                    </note></cell>
                                 <cell><hi><gi>entry</gi></hi><lb/><seg xml:space="preserve">   </seg><hi><gi>form</gi></hi><lb/><seg xml:space="preserve">      </seg><gi>orth</gi>to
                                         horrify&lt;/orth&gt;<lb/><seg xml:space="preserve">   </seg><hi>&lt;/form&gt;</hi><lb/><seg xml:space="preserve">   </seg>&lt;cit
                                     type="translation"
@@ -1589,17 +1329,19 @@
                                         type="example"&gt;<lb/><seg xml:space="preserve">         </seg><gi>quote</gi>she
                                     was horrified at the
                                     expense.&lt;/quote&gt;<lb/><seg xml:space="preserve">         </seg>&lt;cit
-                                        type="translation"<note place="foot" xml:id="ftn3" n="3"><p>
-                                            Note that we do not change the encoding of the
-                                            example</p></note>
+                                        type="translation"<note place="foot" xml:id="ftn3" n="3">
+                                        <p> Note that we do not change the encoding of the
+                                            example</p>
+                                    </note>
                                         xml:lang="en"&gt;<lb/><seg xml:space="preserve">            </seg><gi>quote</gi>elle
                                     était horrifiée par la
                                         dépense.&lt;/quote&gt;<lb/><seg xml:space="preserve">         </seg><hi>&lt;/cit&gt;</hi><lb/><seg xml:space="preserve">      </seg><hi>&lt;/cit&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;/sense&gt;</hi><lb/><hi>&lt;/entry&gt;</hi></cell>
                             </row>
                             <row>
-                                <cell>collocates in gramGrp<note place="foot" xml:id="ftn4" n="4"
-                                            ><p> This is not replaced, but may be complemented by
-                                            the reference mechanism</p></note></cell>
+                                <cell>collocates in gramGrp<note place="foot" xml:id="ftn4" n="4">
+                                        <p> This is not replaced, but may be complemented by the
+                                            reference mechanism</p>
+                                    </note></cell>
                                 <cell><hi><gi>gramGrp</gi></hi><lb/><seg xml:space="preserve">   </seg><gi>colloc</gi>stray&lt;/colloc&gt;<lb/><hi>&lt;/gramGrp&gt;</hi></cell>
                                 <cell><hi><gi>gramGrp</gi></hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;colloc</hi><note
                                         place="comment" resp="Piotr_Banski"><hi>we might also right
@@ -1611,29 +1353,6 @@
                                         target="http://www.oed.com/view/Entry/191378?rskey=WgfOMW&amp;amp;result=2&amp;amp;isAdvanced=false#eid"&gt;stray&lt;/ref&gt;<lb/><seg xml:space="preserve">      </seg><hi>&lt;/xr&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;/colloc&gt;</hi><lb/><hi>&lt;/gramGrp&gt;</hi></cell>
                             </row>
                         </table>
-                    </div>
-                    <div>
-                        <head><anchor xml:id="b5ik8vgaiw8l"/>Problems/open ends</head>
-                        <list type="unordered">
-                            <item>If the reference is the encoding of a lexical/semantic relation
-                                between two linguistic units, it may be desirable to indicate the
-                                    <hi>source</hi><note place="comment" resp="Piotr_Banski"><hi>I
-                                        am a bit lost here -- an example would be great to have. The
-                                        null assumption for me would be that whatever the
-                                            <gi>xr</gi> is contained in is the source of the
-                                        reference, but maybe I am following the Editor's thinking
-                                        here when I imagine that sometimes, the <gi>xr</gi> may need
-                                        to be buried lower in the structure, but still the arc in
-                                        the abstract reference graph would need to start somewhere
-                                        higher up in the entry data structure?</hi></note><note
-                                    place="comment" resp="Katrien_Depuydt"><hi>The problem was
-                                        purely hypothetical. We should maybe omit this</hi></note>
-                                of the reference more explicitly. Is it the current entry, the
-                                current sense, the current quotation?</item>
-                            <item>Whether the <gi>xr</gi> pointing mechanism also applies to the
-                                &lt;cit type="etymon"&gt; from Jack/Laurent’s etymology paper, needs
-                                to be looked into.</item>
-                        </list>
                     </div>
                 </div>
                 <div>
@@ -1651,32 +1370,6 @@
                                 </xr>
                             </entry>
                         </egXML>
-                    </div>
-                    <div>
-                        <head><anchor xml:id="v8uwtr8xt8bp"/>Translation equivalent</head>
-                        <p>1) There is a pointer, specified in the attribute “target", to some
-                            dictionary containing the word referred to</p>
-                        <p><hi><gi>entry</gi></hi><lb/><seg xml:space="preserve">   </seg>&lt;form
-                                type="lemma"&gt;<lb/><seg xml:space="preserve">      </seg><gi>orth</gi>dog&lt;/orth&gt;<lb/><seg xml:space="preserve">   </seg><hi>&lt;/form&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi><gi>sense</gi></hi><lb/><seg xml:space="preserve">      </seg>&lt;xr
-                                type="translationEquivalent<note place="comment"
-                                resp="Laurent_Romary"><hi>I would suggest a simple "equivalent" here
-                                    ==&gt; cf. LMF Part 4 (TEI
-                            serialization)</hi></note>"&gt;<lb/><seg xml:space="preserve">         </seg>&lt;ref
-                            xml:lang="fr" type="entry"
-                                target="http://www.cnrtl.fr/definition/chien"&gt;chien&lt;/ref&gt;<lb/><seg xml:space="preserve">      </seg><hi>&lt;/xr&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;/sense&gt;</hi><lb/><hi>&lt;/entry&gt;</hi><lb/></p>
-                        <p>2) same, but there is no concrete reference (in this case target is
-                                omitted<note place="comment" resp="Piotr_Banski"><hi>just making a
-                                    note with reference to my previous comments on null or absent
-                                    `@targets`, so that this example is potentially easy to locate,
-                                    once we reach some decision</hi></note>)</p>
-                        <p>&lt;?xml version="1.0"
-                            encoding="UTF-8"?&gt;<lb/><hi><gi>entry</gi></hi><lb/> &lt;form type="lemma"&gt;<lb/>
-                            <gi>orth</gi>dog&lt;/orth&gt;<lb/>
-                            <hi>&lt;/form&gt;</hi><lb/>
-                            <hi><gi>sense</gi></hi><lb/> &lt;xr
-                            type="translationEquivalent"&gt;<lb/> &lt;ref xml:lang="fr" type="entry"&gt;chien&lt;/ref&gt;<lb/>
-                            <hi>&lt;/xr&gt;</hi><lb/>
-                            <hi>&lt;/sense&gt;</hi><lb/><hi>&lt;/entry&gt;</hi></p>
                     </div>
                     <div>
                         <head>More complex example including quotations</head>
@@ -1729,217 +1422,10 @@
                     <div>
                         <head>Synonym, hyperonym, etc as (part of) a definition (“synonym
                             definition", “genus proximum”)</head>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <entry>
-                                <form type="lemma">
-                                    <orth>dog</orth>
-                                </form>
-                                <sense>
-                                    <def> Four-footed barking over-enthusiastic <xr type="hyperonym">
-                                            <ref type="entry">animal</ref></xr> , best friend of
-                                        man; is a <xr type="hyperonym">
-                                            <ref type="entry">canine</ref></xr>
-                                    </def>
-                                </sense>
-                            </entry>
-                        </egXML>
-                        <p>------------------------------------------------------------------------------------</p>
+                        
+                        <p>Under consideration. See this <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/24">issue</ref> on GitHub.</p>
+                        
                     </div>
-                </div>
-                <div>
-                    <head><anchor xml:id="sped5mk7rbth"/>Original text of this section:</head>
-                </div>
-                <div>
-                    <head><anchor xml:id="dda9hh6kkcke"/>(original bullets)</head>
-                    <list type="unordered">
-                        <item>we’re looking for a mechanism to represent external references with
-                            some additional information</item>
-                        <item>currently different patterns: xr+ref,xr+ptr; &lt;xr
-                            type=”syn”&gt;&lt;/xr&gt;</item>
-                        <item>we could recommend using <gi>lbl</gi> inside <gi>xr</gi> so that we
-                            don’t leave text dangling </item>
-                        <item>proposal: remove text node from the content model of xr, but add
-                            model.entryPart (in order to complement / put some additional context
-                            for xr) </item>
-                    </list>
-                </div>
-                <div>
-                    <head><anchor xml:id="xgx6dywskh92"/>General principles</head>
-                    <p>There is a feeling that we need a more unified approach to lexical
-                        references, whether they point to a concrete dictionary entry/sense in some
-                        lexicon, or point in a more general way to lexical objects belonging to a
-                        category/namespace. </p>
-                    <p>In the current guidelines, one can find, for instance</p>
-                    <list type="unordered">
-                        <item>&lt;usg type=”synonym”&gt;W&lt;/usg&gt; for synonyms</item>
-                        <item>&lt;cit
-                            type=”translation”&gt;<gi>quote</gi>W&lt;/quote&gt;&lt;/cit&gt; for
-                            translation equivalents in bilingual or translation dictionaries</item>
-                        <item><gi>oRef</gi>, <gi>pRef</gi> for the resolution of “~” headword
-                            placeholders in quotations and other dictionary tekst</item>
-                        <item><gi>xr</gi>, <gi>ref</gi> as general crossreferencing
-                            mechanism,</item>
-                        <item>&lt;<ref
-                                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-mentioned.html"
-                                    ><hi>mentioned</hi></ref>&gt; in the etymology section,</item>
-                        <item>&lt;<ref
-                                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-term.html"
-                                    ><hi>term</hi></ref>&gt; for mentions of technical terms</item>
-                    </list>
-                    <p>The proposal we seem to have reached a consensus on is:</p>
-                    <list type="unordered">
-                        <item>Use <gi>ref</gi> as the general element for a lexical reference</item>
-                        <item>Use <gi>xr</gi> as the enclosing element that groups information
-                            related to this reference</item>
-                        <item>The attribute “type” on <gi>ref</gi> will be a indication of the
-                            target object category (entry, sense, … whatever</item>
-                        <item>The attribute “type” on <gi>xr</gi> will be an indication of the
-                            lexical relation between the headword of the entry and the object
-                            referred to</item>
-                        <item>We should work towards a rigid set of types of reference for lex0, but
-                            including “other” or “cf” for general references which do not have clear
-                            semantics</item>
-                        <item>The content model of <gi>xr</gi> should be modified to include all of
-                            model.entryPart</item>
-                        <item>The content model of <gi>xr</gi> should not allow text nodes</item>
-                    </list>
-                    <p>Current guideline definition is:</p>
-                    <p><hi xml:space="preserve"><gi>xr</gi> </hi>(cross-reference phrase) contains a
-                        phrase, sentence, or icon referring the reader to some other location in
-                        this or another text.</p>
-                    <p>For lex0, this definition would have to be generalized to include “dangling”
-                        references to lexical objects without a target reference</p>
-                    <div>
-                        <head><anchor xml:id="h99pfgatxlsv"/>Using <gi>ref</gi> to point to lexical
-                            entries</head>
-                        <p>The present guidelines recommends to use <gi>ref</gi> as a single
-                            pointing mechanism to other lexical entries, in replacement to the
-                            following possible alternatives that in general make the current TEI
-                            guidelines fuzzy/equivocal as to how to implement such references, in
-                            particular <gi>mentioned</gi>, TBCompleted ... In the following we first
-                            present the recommended use of <gi>ref</gi> then elicit how existing
-                            alternatives can be replaced accordingly.</p>
-                        <p>The usage of <gi>ref</gi> that is recommended here cover various types of
-                            cross-entry references, whether internal to a dictionary or pointing to
-                            an external sources, comprising the case when the actual target lexical
-                            object is not explicitly known. In the latter case, <gi>ref</gi> can be
-                            used without an explicit pointing attribute. Furthermore the actual
-                            intended target of the reference can be, within the lexical remit, of
-                            various possible types, namely a full entry, but also a specific sense
-                            of form within a given entry.</p>
-                        <p>For all such usages, the following attributes may be used on
-                            <gi>ref</gi>:</p>
-                        <list type="unordered">
-                            <item>@type is a mandatory attribute on <gi>ref</gi> for a lexical
-                                reference. Its default value is “lexical” and can be supersede (or
-                                complemented by means of @subtype)</item>
-                            <item>@xml:lang, which is recommended when <gi>ref</gi> actually contain
-                                an explicit lexical form</item>
-                            <item>@target: to point to the actual lexical object being pointed at
-                                when applicable</item>
-                            <item>@notation<note place="foot" xml:id="ftn5" n="5"><p> A ticket
-                                        should be issued to make <gi>ref</gi> a member of
-                                        att.notated</p></note>: to indicate, like we currently do on
-                                    <gi>orth</gi> or <gi>phon</gi>, the actual notation used for the
-                                explicit lexical form when provided</item>
-                        </list>
-                        <p>The most simple use of <gi>ref</gi> according to the present guidelines
-                            would thus look like:</p>
-                        <p>&lt;ref type=”lexical” xml:lang=”he”&gt;pneuma&lt;/ref&gt; (in
-                            replacement to the existing
-                            example:<gi>mentioned</gi>pneuma&lt;/mentioned&gt; in the TEI
-                            guidelines).</p>
-                        <p>=&gt; explanation concerning replaced elements</p>
-                        <p>=&gt; necessity to have a fine grained typology for @type</p>
-                    </div>
-                </div>
-                <div>
-                    <head><anchor xml:id="l1geloe5zy47"/>XR Examples</head>
-                    <p>1: translation equivalent, there is a pointer, specified in the attribute
-                        “target”, to some dictionary containing the word referred to</p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type=”lemma”&gt;<gi>orth</gi>dog&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p>….</p>
-                    <p><gi>sense</gi></p>
-                    <p>&lt;xr type=”translation_equivalent”&gt;&lt;ref xml:lang=”fr” type=”entry”
-                        target=” ….”&gt;chien&lt;/ref&gt;&lt;/xr&gt; <lb/></p>
-                    <p>2: same, but there is no concrete reference (in this case target is
-                        omitted)</p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type=”lemma”&gt;<gi>orth</gi>dog&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p>….</p>
-                    <p><gi>sense</gi></p>
-                    <p>&lt;xr type=”translation_equivalent”&gt;&lt;ref xml:lang=”fr”
-                        type=”entry”&gt;chien&lt;/ref&gt;&lt;/xr&gt; </p>
-                    <p>3: more complex example including quotations</p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type=”lemma”&gt;<gi>orth</gi>dog&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p>….</p>
-                    <p><gi>sense</gi></p>
-                    <p>&lt;xr type=”translation_equivalent”&gt;<gi>lbl</gi>Male or unknown
-                        gender&lt;/lbl&gt;&lt;ref xml:lang=”fr”
-                        type=”entry”&gt;chien&lt;/ref&gt;</p>
-                    <p><gi>cit</gi></p>
-                    <p>&lt;quote xml:lang=”fr”&gt;Le matin j'ouvre au &lt;xr
-                        type=”the_type_formerly_known_as_oref”&gt;&lt;ref
-                            type=”entry”&gt;<hi>chien</hi>&lt;/ref&gt;&lt;/xr&gt; et je lui fais
-                        manger sa soupe. Le soir je lui siffle de venir se coucher&lt;/quote&gt;</p>
-                    <p><gi>bibl</gi>RENARD, <hi xml:space="preserve">Poil de Carotte, </hi>1894, p.
-                        102.&lt;/bibl&gt;</p>
-                    <p>&lt;cit type=”translation”&gt; &lt;!-- included in the french cit, otherwise
-                        relation is lost --&gt;</p>
-                    <p>&lt;quote xml:lang=”en”&gt;In the morning, I open the door for my|the dog,
-                        and i ...&lt;/quote&gt;</p>
-                    <p>&lt;/cit&gt;</p>
-                    <p><gi>bibl</gi> &lt;!-- If the translation is from a published source, there
-                        could be a bibl here as well --&gt; &lt;/bibl&gt;</p>
-                    <p>&lt;/cit&gt;</p>
-                    <p>&lt;/xr&gt; </p>
-                    <p>&lt;xr type=”translation_equivalent”&gt;<gi>lbl</gi>Female&lt;/lbl&gt;&lt;ref
-                        xml:lang=”fr” type=”entry”&gt;chienne&lt;/ref&gt;</p>
-                    <p>&lt;cit xml:lang=”fr”&gt;</p>
-                    <p><gi>quote</gi></p>
-                    <p>6. Les fleuristes, murmura Lorilleux, toutes des Marie-couche-toi-là. Eh
-                        bien! Et moi? reprit la grande veuve, les lèvres pincées. Vous êtes galant.
-                        Vous savez, je ne suis pas une &lt;xr
-                        type=”the_type_formerly_known_as_oref”&gt;&lt;ref
-                            type=”entry”&gt;<hi>chienne</hi>&lt;/ref&gt;&lt;/xr&gt;, je ne me mets
-                        pas les pattes en l'air, quand on siffle!</p>
-                    <p>&lt;/quote&gt;</p>
-                    <p><gi>bibl</gi></p>
-                    <p>ZOLA, <hi xml:space="preserve">L'Assommoir, </hi>1877, p. 681.</p>
-                    <p>&lt;/bibl&gt;</p>
-                    <p>&lt;!-- possible translation --&gt;</p>
-                    <p>&lt;cit type=”translation”&gt; ….. <gi>cit</gi></p>
-                    <p>&lt;/cit&gt;</p>
-                    <p>&lt;/xr&gt;</p>
-                    <p>&lt;/sense&gt;</p>
-                    <p>4: synonym, antonym, holonym, meronym, hyponym, hyperonym and other lexical
-                        relations</p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type=”lemma”&gt;<gi>orth</gi>dog&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p>&lt;xr type=”hyperonym”&gt;&lt;ref
-                        type=”entry”&gt;mammal&lt;/ref&gt;&lt;/xr&gt;</p>
-                    <p>5: synonym, hyperonym, etc as (part of) a definition (“synonym definition”) </p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type=”lemma”&gt;<gi>orth</gi>dog&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p><gi>def</gi>Four-footed barking over-enthusiastic &lt;xr
-                        type=”hyperonym”&gt;&lt;ref type=”entry”&gt;animal&lt;/ref&gt;&lt;/xr&gt;,
-                        best friend of man; is a &lt;xr type=”hyperonym”&gt;&lt;ref
-                        type=”entry”&gt;canine&lt;/ref&gt;&lt;/xr&gt;</p>
-                    <p>6: We keep <gi>colloc</gi> for collocations, but the referencing mechanism
-                        could be used inside <gi>colloc</gi> to point to the relevant
-                        entry/sense</p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type=”lemma”&gt;<gi>orth</gi>dog&lt;/orth&gt;&lt;/form&gt;</p>
-                    <p>….</p>
-                    <p><gi>colloc</gi></p>
-                    <p>&lt;xr type=”colloc”&gt;&lt;ref type=”sense”
-                        target=”some_id”&gt;stray&lt;/ref&gt;&lt;/xr&gt;</p>
-                    <p>&lt;/colloc&gt;</p>
-                    <p>7: Whether the <gi>xr</gi> pointing mechanism also applies to the &lt;cit
-                        type=”etymon”&gt; from Jack/Laurent’s etymology paper, needs to be looked
-                        into</p>
                 </div>
             </div>
             <div>
