@@ -5,9 +5,10 @@
             <titleStmt>
                 <title>TEI Lex 0 - ODD specification</title>
                 <author>Laurent Romary</author>
+                <author>Toma Tasovac</author>
             </titleStmt>
             <publicationStmt>
-                <authority>DARIAH - WG lexical resources</authority>
+                <authority>DARIAH WG "Lexical Resources"</authority>
             </publicationStmt>
             <sourceDesc>
                 <p>Born digital</p>
@@ -36,12 +37,19 @@
                     (cf. [Romary, 2015])</p>
                 <div>
                     <head>Context</head>
-                    <p>Preliminary work for the establishment of TEI Lex-0 started in the Working Group "Retrodigitised Dictionaries" lead by Toma Tasovac and Vera Hildenbrandt as part of the COST
-                        Action <ref target="http://www.elexicography.eu">European Network of e-Lexicography</ref> (ENeL). Upon the completion of the COST Action, the work on TEI Lex-0 was taken up by
-                        the DARIAH Working Group "Lexical Resources" which is co-chaired by Laurent Romary and Toma Tasovac. Currently, the work on TEI Lex-0 is conducted by the DARIAH WG "Lexical
-                        Resources" and the H2020-funded <ref target="https://elex.is">European Lexicographic Infrastructure</ref> (ELEXIS). </p>
+                    <p>Preliminary work for the establishment of TEI Lex-0 started in the Working
+                        Group "Retrodigitised Dictionaries" lead by Toma Tasovac and Vera
+                        Hildenbrandt as part of the COST Action <ref
+                            target="http://www.elexicography.eu">European Network of
+                            e-Lexicography</ref> (ENeL). Upon the completion of the COST Action, the
+                        work on TEI Lex-0 was taken up by the DARIAH Working Group "Lexical
+                        Resources" which is co-chaired by Laurent Romary and Toma Tasovac.
+                        Currently, the work on TEI Lex-0 is conducted by the DARIAH WG "Lexical
+                        Resources" and the H2020-funded <ref target="https://elex.is">European
+                            Lexicographic Infrastructure</ref> (ELEXIS). </p>
                     <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
-                    <p>The above paragraph should be expanded to include a list of meetings we organized, who sponsored them etc. <?oxy_custom_end?></p>
+                    <p>The above paragraph should be expanded to include a list of meetings we
+                        organized, who sponsored them, who attended etc. <?oxy_custom_end?></p>
                 </div>
                 <div>
                     <head>Dictionary model vs. XML serialization</head>
@@ -83,26 +91,15 @@
                         </entry>
                     </egXML>
                 </div>
-                <div>
-                    <head>Treatment of source information</head>
-                    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
-                    <p>This section needs to be written! Or we get rid of it for 0.7 and add it later.<?oxy_custom_end?></p>
-                    <p>Another part of this introduction should address the use of textual elements that are seen as spurious from the point of view of the goals of TEI-Lex0 and the role that
-                            <gi>dictScrap</gi> and <gi>pc</gi> play in this; cases under discussion should involve, e.g., commas that have or do not have structural correlates, square brackets for
-                        pronunciation information.</p>
-                    <p>[What we need as well is unified treatment of abbreviations, corrections/normalization, ‘highlighting’, responsibility<note place="comment" resp="Piotr_Banski"><hi>done: `@resp`
-                                is now a global attribute</hi></note><hi>, and a strategy for milestones, such as page numbers; the DCR attributes should also get mentioned</hi>]</p>
-                    <p>[<hi>bibliographic references have to be discussed as well, note the cit/bibl issue (where bibl is the only child of cit)</hi>]</p>
-                    <p>When we say that we “remove something”, we’re not saying that we want to get rid of it from the TEI -- we’re only addressing TEI-Lex0. This should be said in the
-                        introduction.</p>
-                </div>
             </div>
             <div>
                 <head>Entries and entry-like objects</head>
                 <div>
                     <head>Unified representation of entries</head>
-                    <p>In the current guidelines, the TEI defines four different container elements that may serve as grouping devices for lexical information on the level of entries (the following
-                        definitions are taken from the TEI guidelines, emphasis added):</p>
+                    <p>In the current <hi rend="italic">Guidelines</hi>, the TEI defines four
+                        different container elements that may serve as grouping devices for lexical
+                        information on the level of entries (the following definitions are taken
+                        from the TEI guidelines, emphasis added):</p>
                     <list type="ordered">
                         <item><gi>entry</gi>: contains a single <hi>structured entry</hi> in any kind of lexical resource, such as a dictionary or lexicon.</item>
                         <item><gi>entryFree</gi>: contains a single <hi>unstructured entry</hi> in any kind of lexical resource, such as a dictionary or lexicon.</item>
