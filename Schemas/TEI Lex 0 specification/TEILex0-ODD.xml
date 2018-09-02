@@ -2451,8 +2451,8 @@
                     <moduleRef key="linking" except="ab alt altGrp join timeline"/>
                     <!-- 2018-09-02 (TT): removed re hom -->
                     <moduleRef key="dictionaries" except="dictScrap entryFree superEntry re hom"/>
-                    <moduleRef key="core"
-                        except="add binaryObject cb choice citedRange corr del distinct divGen emph expan foreign gap gb graphic headItem headLabel hi index l label lg measure measureGrp media meeting milestone orig pb postBox postCode q reg said sic soCalled sp speaker stage street term time unclear"/>
+                    <!-- 2018-09-02 (TT): explicitly encoded what we allow from core -->
+                    <moduleRef key="core" include="p list item label head author title"/>
                     <moduleRef key="textstructure"
                         except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle epigraph floatingText group imprimatur opener postscript salute signed titlePage titlePart trailer"/>
                     <moduleRef key="figures" except="figDesc figure formula notatedMusic"/>
