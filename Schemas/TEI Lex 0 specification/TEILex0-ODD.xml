@@ -446,7 +446,8 @@
                                 <gi>dictScrap</gi>;</item>
                         <item>The case of <gi>hom</gi> is peculiar since it provides a subordinate
                             organization to an entry which is redundant in relation to what
-                            <gi>sense</gi> allows one to represent. <gi>hom</gi> is not allowed in TEI Lex-0.</item>
+                                <gi>sense</gi> allows one to represent. <gi>hom</gi> is not allowed
+                            in TEI Lex-0.</item>
                     </list>
                     <p>Note: In the case one has to deal with information that does not fit a
                             <gi>sense</gi>-based organization, for instance in the process of
@@ -468,26 +469,14 @@
                     <p>TEI Lex-0 allows the use of <gi>def</gi> in <gi>sense</gi>, <gi>cit</gi> and
                             <gi>etym</gi> only. All other existing contexts would be implemented by
                         embedding <gi>def</gi> within a <gi>sense</gi>.</p>
-                    <p>Note: <gi>nym</gi> currently has a very sloppy content model taking up many
-                        elements from the dictionary chapter without eliciting clear encoding
-                        recommendations on their usage. In particular, examples associated to
-                            <gi>nym</gi> offer a very loose usage of such elements (e.g. using
-                            <gi>form</gi> without an <gi>orth</gi> element), which are even more in
-                        contradiction with the recommendation made in the present document. A
-                        possible recommendation<note place="comment" resp="Piotr_Banski"><hi>+1 for
-                                this. <gi>nym</gi> is a bit scary and it seems to me that it abuses
-                                the fact that <gi>form</gi>, being perhaps a somewhat overloaded
-                                element, has optional element content.</hi></note> could be to align
-                            <gi>nym</gi> to make it a simpler and specialized case of <gi>entry</gi>
-                        (sort of &lt;entry type=”nym”&gt;).</p>
                 </div>
                 <div>
                     <head><anchor xml:id="gg6wukfjt7e9"/>Encoding sense in entries with multiple
                         parts of speech</head>
-                    <p>For multi-POS lexical entries, the present recommendations consider each POS
-                        as a trigger for a new sense. Consequently, we recommend encoding
-                        grammatical information in each sense coming after the first one to be
-                        serialised inside the semantic bloc as follows:</p>
+                    <p>For multi-POS lexical entries, TEI Lex-0 considers each POS as a trigger for
+                        a new sense. Consequently, we recommend encoding grammatical information in
+                        each sense coming after the first one to be serialised inside the semantic
+                        bloc as follows:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <sense>
                             <gramGrp>
@@ -495,78 +484,73 @@
                             </gramGrp>
                             <def>..</def> .. </sense>
                     </egXML>
-                    <p>This is exemplified in the following example take from <ref>$$$</ref>, where
-                            <mentioned>arrest</mentioned> appears both as a verb and a noun:</p>
-                    <table rend="rules">
-                        <row>
-                            <cell>
-                                <figure>
-                                    <graphic n="10011" width="6.720416666666667cm"
-                                        height="4.709583333333334cm" url="media/image25.png"
-                                        rend="inline"/>
-                                </figure>
-                            </cell>
-                            <cell>
-                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                    <entry>
-                                        <form type="lemma">
-                                            <orth>arrest</orth>
-                                            <pron>/ə rest/</pron>
-                                            <gramGrp>
-                                                <pos>verb</pos>
-                                            </gramGrp>
-                                        </form>
-                                        <sense>
-                                            <usg>(of the police)</usg>
-                                            <def>to catch and hold someone who has broken the
-                                                law</def>
-                                            <cit type="example">
-                                                <quote>The police arrested two men and took them to
-                                                  the police station</quote>
-                                            </cit><pc>.</pc>
-                                            <cit type="example">
-                                                <quote>He ended up getting arrested as he tried to
-                                                  leave the country</quote>
-                                            </cit><pc>.</pc>
-                                            <cit type="example">
-                                                <quote>She was arrested for stealing</quote>
-                                            </cit>
-                                        </sense><pc>.</pc>
-                                        <sense>
-                                            <gramGrp>
-                                                <pos>noun</pos>
-                                            </gramGrp>
-                                            <def>the act of holding someone for breaking the
-                                                law</def>
-                                            <cit type="example">
-                                                <quote>The police made several arrests at the
-                                                  demonstration</quote>
-                                            </cit>
-                                            <pc>.</pc>
-                                            <entry type="multiWordExpression">
-                                                <form>under arrest</form>
-                                                <sense>
-                                                  <def>held by the police After the fight</def>
-                                                  <pc>,</pc>
-                                                  <cit type="example">
-                                                  <quote>three people were under arrest</quote>
-                                                  </cit>
-                                                </sense>
-                                            </entry>
-                                        </sense>
-                                    </entry>
-                                </egXML>
-                            </cell>
-                        </row>
-                    </table>
+                    <p>Consider this example, where <mentioned>arrest</mentioned> appears both as a
+                        verb and a noun:</p>
+
+
+                    <figure>
+                        <graphic n="10011" width="6.720416666666667cm" height="4.709583333333334cm"
+                            url="media/image25.png" rend="inline"/>
+                    </figure>
+
+
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry>
+                            <form type="lemma">
+                                <orth>arrest</orth>
+                                <pron>/ə rest/</pron>
+                                <gramGrp>
+                                    <pos>verb</pos>
+                                </gramGrp>
+                            </form>
+                            <sense>
+                                <usg>(of the police)</usg>
+                                <def>to catch and hold someone who has broken the law</def>
+                                <cit type="example">
+                                    <quote>The police arrested two men and took them to the police
+                                        station</quote>
+                                </cit><pc>.</pc>
+                                <cit type="example">
+                                    <quote>He ended up getting arrested as he tried to leave the
+                                        country</quote>
+                                </cit><pc>.</pc>
+                                <cit type="example">
+                                    <quote>She was arrested for stealing</quote>
+                                </cit>
+                            </sense><pc>.</pc>
+                            <sense>
+                                <gramGrp>
+                                    <pos>noun</pos>
+                                </gramGrp>
+                                <def>the act of holding someone for breaking the law</def>
+                                <cit type="example">
+                                    <quote>The police made several arrests at the
+                                        demonstration</quote>
+                                </cit>
+                                <pc>.</pc>
+                                <entry type="multiWordExpression">
+                                    <form>under arrest</form>
+                                    <sense>
+                                        <def>held by the police After the fight</def>
+                                        <pc>,</pc>
+                                        <cit type="example">
+                                            <quote>three people were under arrest</quote>
+                                        </cit>
+                                    </sense>
+                                </entry>
+                            </sense>
+                        </entry>
+                    </egXML>
+
+
                 </div>
                 <div>
                     <head>Case of bilingual dictionaries</head>
                     <figure>
                         <graphic n="1003" width="15.927916666666667cm" height="5.538611111111111cm"
                             url="media/image13.png" rend="inline"/>
-                        <caption>Original excerpt for the entry <mentioned>aid</mentioned> from
-                                <ref>$$$</ref></caption>
+                        <caption>Excerpt from the entry <mentioned>aid</mentioned> from
+                            XXX</caption>
                     </figure>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <entry>
@@ -578,19 +562,19 @@
                                 <gramGrp>
                                     <pos>v.a.</pos>
                                 </gramGrp>
-                                <cit type="equivalent">
+                                <cit type="translationEquivalent">
                                     <form xml:lang="fr">
                                         <orth>aider</orth>
                                     </form>
                                 </cit>
                                 <pc>,</pc>
-                                <cit type="equivalent">
+                                <cit type="translationEquivalent">
                                     <form>
                                         <orth>assister</orth>
                                     </form>
                                 </cit>
                                 <pc>,</pc>
-                                <cit type="equivalent">
+                                <cit type="translationEquivalent">
                                     <form>
                                         <orth>secourir</orth>
                                     </form>
@@ -724,39 +708,14 @@
                     <head><anchor xml:id="tw5hp3zaa2wg"/>Deprecating <gi>hom</gi></head>
                     <p>Making a clear difference between a situation where an entry has to be split
                         into two or more homonyms and one where these differences correspond to a
-                        semantic alternation is lexicographically difficult.<note place="comment"
-                            resp="Piotr_Banski"><hi>Yes. This has been reiterated in the
-                                lexicographic and lexicological literature as the eternally debated
-                                split between polysemy and homonymy. Given the history of this issue
-                                and the heaps of paper devoted to it, I do _not_ think that glossing
-                                over this problem will do us any good. Specifically, the current
-                                recommendation is to ignore this issue altogether -- I don't see any
-                                mechanism that allows those who need this distinction to maintain
-                                it. This is not good, we're cutting away part of the target
-                                community in this way.I can't think of a coherent positive part to
-                                the present remark at this moment, unfortunately: I am afraid that
-                                `@type` is of no help in such cases. I could imagine a <gi>join</gi>
-                                element indicating groupings, e.g. groupings of senses into
-                                polysemous wholes (hmm, that could actually be worth a moment of
-                                discussion in Budapest, because of how versatile such a solution can
-                                be).</hi></note><note place="comment" resp="Piotr_Banski"
-                                ><hi>Thinking on this further: we could suggest a rule, whereby,
-                                _if_ someone needs to maintain a distinction between homonymy and
-                                polysemy in their dictionary, they use separate <gi>entry</gi>
-                                elements for the former, and the <gi>sense</gi> mechanism within a
-                                single entry for the latter. The drawback of this solution is that
-                                it imposes a structure in a content-driven setting (because our
-                                starting point is digitization of legacy dictionaries, unless I'm
-                                confused). So it may happen that the legacy dictionary keeps
-                                homonyms within a single <gi>entry</gi>, and then the above solution
-                                would fail.</hi></note><note place="comment" resp="Katrien_Depuydt"
-                                ><hi>True</hi></note> Still, the main danger in keeping both
-                        possibilities in the representation of a lexical entry in a digital lexicon
-                        is to introduce a systematic structural ambiguity as to where the
-                        appropriate information is to be found. We thus deprecate <gi>hom</gi>
-                        altogether in the present recommendation and have this element be replaced
-                        by the appropriate &lt;sense &gt; construct. For instance, the following TEI
-                        example:</p>
+                        semantic alternation is lexicographically difficult. Still, the main danger
+                        in keeping both possibilities in the representation of a lexical entry in a
+                        digital lexicon is to introduce a systematic structural ambiguity as to
+                        where the appropriate information is to be found. We thus deprecate
+                            <gi>hom</gi> altogether in the present recommendation and have this
+                        element be replaced by the appropriate <gi>sense</gi> construct. For
+                        instance, the following example from the TEI <hi rend="italic"
+                            >Guidelines</hi>:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <entry>
                             <form>
@@ -782,7 +741,7 @@
                             </hom>
                         </entry>
                     </egXML>
-                    <p>should actually be represented as follows:</p>
+                    <p>would in TEI Lex-0 be represented as:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <entry>
                             <form type="lemma">
@@ -813,99 +772,20 @@
                         </entry>
                     </egXML>
                 </div>
-                <div>
-                    <head><anchor xml:id="m9kn0msttjlj"/>Discussion notes</head>
-                    <list type="unordered">
-                        <item><gi>sense</gi> made mandatory for “typical entries” (take out def,
-                            usg, cit, etc.from entry TBD), @n for numbering</item>
-                        <item><gi>usg</gi>: mapping practices using @norm (recommendation)<list
-                                type="unordered">
-                                <item>&lt;usg type=”time” norm=”old”&gt;Vx.&lt;/usg&gt;</item>
-                                <item>collecting value lists</item>
-                                <item>automatic classification experiment?</item>
-                            </list></item>
-                        <item>replacing <gi>cit</gi> by <gi>oRef</gi> for translation equivalent in
-                            the target language: make @type mandatory on <gi>oRef</gi> (TBD) — cf.
-                            rémoulade example in the guidelines; cf. gloss, mentioned, ref/xr,
-                            cit/@type=”translation”</item>
-                        <item>…</item>
-                        <item>[OK] leftover: deleting elements from <gi>entry</gi></item>
-                        <item>[OK] leftover: non “typical” entries: e.g. referencing other
-                            entries</item>
-                        <item>leftover: representing frequency information in dictionary
-                            entries</item>
-                        <item>leftover: <gi>def</gi></item>
-                        <item>where should we/could we have @xml:lang (have at least one? expanding
-                            inherited content? infoset)</item>
-                        <item>&lt;cit type=”attestation”&gt;<note place="comment"
-                                resp="Katrien_Depuydt"><hi>applicable to all cit's - ;-)</hi></note>
-                            ? (by analogy to &lt;form type=”lemma”&gt;) Jack and Laurent have
-                            actually proposed that in their manuscript</item>
-                        <item>“translation” in &lt;cit type=”translation”&gt; is actually an
-                            accident of history and controlled language. It comes from trans/tr
-                            (both were playing with the terms “translation” and “translation
-                            equivalent”). It should have been @type=“equivalent” rather than
-                            @type=”translation”. Accident and perhaps lack of the “feel” for
-                            right-headedness in compounds.</item>
-                    </list>
-                    <p>&lt;cit type=”equivalent”&gt;</p>
-                    <p> &lt;ref xml:lang=”fr” target=”french.xml#voiture”&gt;voiture&lt;/ref&gt;</p>
-                    <p>…. (additional info)</p>
-                    <p>&lt;/cit&gt;</p>
-                    <list type="unordered">
-                        <item>get rid of <gi>gloss</gi> in dictionaries, in favour of
-                            <gi>def</gi></item>
-                        <item>recommend that the use of <gi>def</gi> in bilingual dictionaries be
-                            restricted to “explaining” the sense (for instance the way Latin words
-                            are used to explain the senses of a Greek dictionary) rather than for
-                            providing translation equivalents?</item>
-                        <item>we shouldn’t allow lang within sense</item>
-                    </list>
-                </div>
-                <div>
-                    <head><anchor xml:id="qi4254tnzlu8"/><graphic n="1004" width="15.92cm"
-                            height="8.960555555555555cm" url="media/image21.png" rend="inline"
-                        /></head>
-                    <list type="unordered">
-                        <item>no <gi>oRef</gi> any longer, it gets replaced by a typified
-                                <gi>ref</gi>. But note that <gi>ref</gi> doesn’t allow the @<ref
-                                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.notated.html"
-                                    ><hi>notation</hi></ref> attribute (potential action point: add
-                                <gi>ref</gi> to att.notated)</item>
-                        <item>we’re also getting rid of mentioned</item>
-                        <item>Container Inside enTry = the element formerly known as “citation”<note
-                                place="comment" resp="Katrien_Depuydt"><hi>please
-                            no!</hi></note></item>
-                    </list>
-                </div>
             </div>
             <div>
-                <head><anchor xml:id="c325ri54eh64"/>Recommendations concerning <ref
-                        target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DITPFO"
-                        ><hi xml:space="preserve">Written and Spoken </hi></ref><ref
-                        target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DITPFO"
-                            ><hi>Forms</hi></ref><note place="comment" resp="Jack_Bowers"
-                            ><hi>+banski@ids-mannheim.de I'm making some decisions in my own project
-                            now and I just realized we never mentioned anything about how to label
-                            form types such as compounds and multi-word expressions, acronym, etc,
-                            which are also the lemma. One obvious solution would be to do &lt;form
-                            type="lemma" subtype="compound"&gt;. Maybe we can discuss in
-                            Lubljana</hi></note><note place="comment" resp="Piotr_Banski"><hi>It
-                            looks like the `@subtype` is going to receive a lot of heat. Let's base
-                            this on examples and see if we can handle them with just two "type"
-                            attributes</hi></note></head>
-                <p>Editors: Piotr Bański, Jack Bowers, Tomaž Erjavec</p>
-                <p>Reviewer: Jesse, Katrien</p>
-                <p>The current TEI formulation allows for an extremely wide range of encoding
-                    possibilities. Below, we suggest ways in which the elements, in particular form,
-                    can be constrained. We give examples of use types not covered by the Guidelines,
-                    and propose some extensions.</p>
+                <head><anchor xml:id="c325ri54eh64"/>Written and Spoken Forms</head>
+                <p>The current TEI <hi rend="italic">Guidelines</hi> allows for an extremely wide
+                    range of encoding possibilities for written and spoken forms. In the discussion
+                    which follows, we suggest ways in which the elements, in particular
+                        <gi>form</gi>, can be constrained. We give examples of use types not covered
+                    by the <hi rend="italic">Guidelines</hi>, and propose some extensions.</p>
                 <div>
                     <head><anchor xml:id="h2au7t2l5yeq"/>A note on inheritance</head>
                     <p>We assume that in order to determine the complete properties of an element
                         inside the entry tree, the principle of default inheritance applies, e.g.
                         grammatical properties of a form are determined by collecting the sibling
-                        gramGrp of the ancestor-or-self of the focus element, where the
+                            <gi>gramGrp</gi> of the ancestor-or-self of the focus element, where the
                         superordinate grammatical properties can be overwritten by the lower-level
                         properties. This principle is relatively straightforward in the case of
                         grammatical properties, but more complex for the word paradigm, esp. in
@@ -930,44 +810,14 @@
                     <p>Notes:</p>
                     <list type="ordered">
                         <item>Grammatical properties of the entry should <hi>not</hi> be specified
-                            in entry/form[@type=”lemma”]/gramGrp </item>
+                            in <code>entry/form[@type="lemma"]/gramGrp</code>
+                        </item>
                         <item>In cases where headwords are discriminated only on the basis of their
                             orthography (e.g. in English dictionaries which treat conversion pairs
                             of nouns and verbs, such as <hi>run</hi>, as belonging in single
-                            entries), entry/gramGrp should not be used, because its role is taken
-                            over by the individual sense/gramGrp. <note place="comment"
-                                resp="Katrien_Depuydt"><hi>In some of our dictionaries, the entry
-                                    has a "summary" of the potential PoS and further specification
-                                    is done at sense level. So this recommendation would not
-                                    properly fit.</hi></note><note place="comment"
-                                resp="Piotr_Banski"><hi>I am not sure if I understand this
-                                    correctly, but if I do, it might be a dictScrap
-                                issue.</hi></note><note place="comment" resp="Toma_Tasovac"
-                                    ><hi>+katrien.depuydt@ivdnt.org i think we may need an example
-                                    for this — to us it seems that we could have gramgrp both at the
-                                    entry level and inside senses if that's how you have it in your
-                                    print dictionary. wouldn't that work for you?</hi></note><note
-                                place="comment" resp="Mohamed_Khemakhem"><hi>I think I understood
-                                    what Katrien meant here. I also think that this restriction will
-                                    cause an issue when it comes to encode any information which
-                                    come just after the first pos and is related to the whole
-                                    lexical entry. Etymology, for example (see the "aid" encoding
-                                    example)</hi></note><note place="comment" resp="Katrien_Depuydt"
-                                    ><hi>Hi guys, sorry it took so long, but here is an
-                                    example:There is the preposition and adverb "achter". In the
-                                    first red box, there is the summary. Below, the semantic
-                                    descritpion per PoS is done in separate sections in which the
-                                    grammatical information is repeated.</hi></note><note
-                                place="comment" resp="Mohamed_Khemakhem"><hi>I think we should give
-                                    up the restriction of gathering grammatical information in one
-                                    spot and encode them just wherever they appear</hi></note><note
-                                place="comment" resp="herold_(BBAW)"><hi>[concerning the "achter"
-                                    example] On the other hand we could also say that such
-                                    categorial changes as part-of-speech should actually be encoded
-                                    as separate embedded entries that happen to have some common
-                                    information encoded in the parent. And here, the commonality is
-                                    mostly the shared etymology and rather no strictly grammatical
-                                    features.</hi></note></item>
+                            entries), <code>entry/gramGrp</code> should not be used, because its
+                            role is taken over by the individual <code>sense/gramGrp</code>. 
+                        </item>
                     </list>
                     <figure>
                         <graphic n="1005" width="7.750422222222222cm" height="5.357813888888889cm"
@@ -982,8 +832,6 @@
                             <gramGrp>
                                 <pos>noun</pos>
                             </gramGrp>
-                            <etym><usg type="date"><date>(early 15c.,)</date></usg>
-                            </etym>
                             <sense>
                                 <sense>1. help, especially money, <lb/>food or other gifts given to
                                     people living <lb/> in difficult conditions aid to the
@@ -1002,28 +850,13 @@
                             </sense>
                         </entry>
                     </egXML>
-                    <note place="comment" resp="Mohamed_Khemakhem"><hi>the etymological information
-                            here are prohibiting the move of the <gi>gramGrp</gi> under
-                                <gi>sense</gi>. Moving <gi>gramGrp</gi> would change the order of
-                            the original text information</hi></note>
-                    <note place="comment" resp="herold_(BBAW)"><hi>I don't see this dating in the
-                            facsimile. Where does it come from?</hi></note>
-                    <note place="comment" resp="Mohamed_Khemakhem"><hi>I just added it to illustrate
-                            the issue. I could look for a concrete example</hi></note>
-                    <note place="comment" resp="Jack_Bowers"><hi>I added &lt;usg type="date"&gt; as
-                            per <gi>usg</gi> and etym sections</hi></note>
                 </div>
-                <div>
-                    <head>
-                        <graphic n="1006" width="15.92cm" height="6.138333333333334cm"
-                            url="media/image22.png" rend="inline"/>
-                    </head>
-                </div>
+                
                 <div>
                     <head>Representation of the lemma</head>
-                    <p>The form element should always be qualified by its <att>type</att>, where its
-                        values should be from the list of recommended (allowed?) values. The lemma
-                        (i.e. headword) form should be under <code>form[@type=”lemma”]</code>.</p>
+                    <p>The form element should always be qualified by its <att>type</att>. The lemma
+                        (i.e. headword) form should be encoded as
+                        <code>form[@type=”lemma”]</code>.</p>
                     <p>If it is necessary to specify the grammatical properties of the lemma form
                         itself (as opposed to the grammatical properties of the entry), this is
                         described by <code>entry/form[@type=”lemma”]/gramGrp</code>, e.g.:</p>
@@ -1035,8 +868,6 @@
                             </gramGrp>
                         </form>
                     </egXML>
-                    <p>-<note place="comment" resp="Jack_Bowers"><hi>multi word expressions
-                                (&lt;form type="lemma" subtype="MWE"&gt;)....</hi></note></p>
                 </div>
                 <div>
                     <head><anchor xml:id="sgbbk809lx3"/>Representation of inflected forms</head>
