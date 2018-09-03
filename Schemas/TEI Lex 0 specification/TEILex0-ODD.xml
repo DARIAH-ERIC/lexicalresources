@@ -2024,27 +2024,13 @@
                     </elementSpec>
 
                     <!-- 2018-07-17 (LR): the <xr> element is adapted to have specific @type values -->
-                    <!-- implemented default value to lexical -->
-                    <!-- introducing @subtype (note to myself: make feature request to TEI so that xr belongs to att.typed -->
-                    <!-- made member of att.notated (for having @notation) -->
-                    
                     <elementSpec ident="xr" mode="change">
-                        <!--<classes mode="change">
-                            <memberOf key="att.notated" mode="add"/>
-                        </classes>-->
                         <attList>
                             <attDef ident="type" mode="replace" usage="req">
-                                <defaultVal>lexical</defaultVal>
                                 <valList type="closed" mode="change">
-                                    <valItem ident="lexical"/>
                                     <valItem ident="crossReference"/>
                                     <!-- further values to be added there -->
                                 </valList>
-                            </attDef>
-                            <attDef ident="subtype" mode="replace" usage="opt">
-                                <datatype>
-                                    <dataRef key="teidata.enumerated"/>
-                                </datatype>
                             </attDef>
                         </attList>
                     </elementSpec>
