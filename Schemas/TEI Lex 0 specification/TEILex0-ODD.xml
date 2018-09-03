@@ -1184,323 +1184,316 @@
                             <def xml:lang="en">offensive, slightly mischievous remark</def>
                         </sense>
                     </egXML>
-                    <p><hi xml:space="preserve">In contrast to the example above, the following sample features an occurrence of a more verbose usage description that does not rely on a fixed vocabulary. </hi>The
-                        sample is taken from a Serbian dialect dictionary. The quote in the dialect is further qualified by a usage hint: “(said by a peasant woman in the field in hot weather)” which
-                        provides a particular context in which the quote was recorded.</p>
+                    <p>In contrast to the example above, the following sample features an occurrence of a more verbose usage description that does not rely on a fixed vocabulary. The
+                        sample is taken from a Serbian dialect dictionary. The quote in the dialect
+                        is further qualified by a usage hint: “(said by a peasant woman in the field
+                        in hot weather)” which provides a particular context in which the quote was
+                        recorded.</p>
                     <table rend="rules">
                         <row>
-                            <cell><p>&lt;cit type="example"&gt;</p>
-                                <p><gi>quote</gi>„Ду́ни, ве́тре, се́јче леб да пе́че”&lt;/quote&gt;</p>
-                                <p><hi>&lt;usg type="hint"&gt;(рекла сељанка на њиви за време врућине)&lt;/usg&gt;</hi></p>
-                                <p><gi>bibl</gi>(<gi>placeName</gi>Дубница&lt;/placeName&gt;).&lt;/bibl&gt;</p>
-                                <p>&lt;/cit&gt;</p></cell>
+                            <cell><egXML xmlns="http://www.tei-c.org/ns/Examples"><cit
+                                        type="example">
+                                        <quote>„Ду́ни, ве́тре, се́јче леб да пе́че”</quote>
+                                        <usg type="hint">(рекла сељанка на њиви за време
+                                            врућине)</usg>
+                                        <bibl>(<placeName>Дубница</placeName>).</bibl>
+                                    </cit></egXML></cell>
                         </row>
                     </table>
                 </div>
                 <div>
                     <head>Types of usage information<note place="comment" resp="Katrien_Depuydt"><hi>frequency information in a dictionary: usage? (corpus based dictionary with frequency
                                 information)oldest attestation: date + location of oldest attestation of an entry in a corpus based dictionary: usage?</hi></note></head>
-                    <p><hi xml:space="preserve">USAGE FURTHER INVESTIGATED: </hi><ref
+                    <p>USAGE FURTHER INVESTIGATED: <ref
                             target="https://docs.google.com/document/d/10xxYwTSrAk1otrkOCZCIwE79VhTjObqmTRhpKosipyU/edit#heading=h.selhcccybq1y"
-                                ><hi>https://docs.google.com/document/d/10xxYwTSrAk1otrkOCZCIwE79VhTjObqmTRhpKosipyU/edit#heading=h.selhcccybq1y</hi></ref></p>
-                    <p><hi><gi>usg</gi> is a typed element. The type of a <gi>usg</gi> element can be conceived as a conceptual axis (independent from other types) along which the given value of the
-                            element is located. The TEI guidelines offer a range of sample values for types to illustrate potential uses of <gi>usg</gi>:</hi></p>
-                    <table rend="rules">
+                                >https://docs.google.com/document/d/10xxYwTSrAk1otrkOCZCIwE79VhTjObqmTRhpKosipyU/edit#heading=h.selhcccybq1y</ref></p>
+                    <p>In lexicographic literature, usage information is not always uniformly
+                        classified. Compare, for instance, Svendsen (2009): <figure>
+                            <graphic url="https://i.imgur.com/uXnKDcE.png"/>
+                            <figDesc>(image taken from Marcin Overgaard, Theoretical Considerations
+                                for the Improvement of Usage Labelling in Dictionaries: a Combined
+                                Formal-Functional Approach. In: International Journal of
+                                Lexicography, Vol. 23 No. 4, pp. 411–442.)</figDesc>
+                        </figure>and Atkins and Rundell (2008) <figure>
+                            <graphic url="https://i.imgur.com/RDyjhtm.png"/>
+                            <figDesc>B.T. Atkins and M. Rundell, The Oxford Guide to Practical Lexicography. Oxford University Press, 2008, p. 183</figDesc>
+                        </figure></p>
+                    <p>Svendsen and Atkins and Rundell can, however, be mapped against each other –
+                        with the exception of one category which is present only in the latter: <table>
+                            <row>
+                                <cell>Svendsen</cell>
+                                <cell>Atkins and Rundell</cell>
+                                <cell>Examples</cell>
+                                <cell>Summary</cell>
+                            </row>
+                            <row>
+                                <cell>Diachronic marking (Time)</cell>
+                                <cell>Time</cell>
+                                <cell>arch., dated, ...</cell>
+                                <cell>TIME</cell>
+                            </row>
+                            <row>
+                                <cell>Diatopic marking (Place)</cell>
+                                <cell>Region</cell>
+                                <cell>AmE., dial. ...</cell>
+                                <cell>GEO</cell>
+                            </row>
+                            <row>
+                                <cell>Diaintegrative marking (Nationality)</cell>
+                                <cell>-</cell>
+                                <cell>Lat., ...</cell>
+                                <cell>LANGUAGE</cell>
+                            </row>
+                            <row>
+                                <cell>Diastratic marking (Socio-Cultural)</cell>
+                                <cell>Register / Style</cell>
+                                <cell>formal, informal, journalese ...</cell>
+                                <cell>SOCIO-CULTURAL</cell>
+                            </row>
+                            <row>
+                                <cell>Diatechnical marking (Technicality)</cell>
+                                <cell>Domain</cell>
+                                <cell>Mil., Biol., ...</cell>
+                                <cell>DOMAIN</cell>
+                            </row>
+                            <row>
+                                <cell>Diafrequential marking (Frequency)</cell>
+                                <cell/>
+                                <cell/>
+                                <cell>FREQUENCY</cell>
+                            </row>
+                            <row>
+                                <cell>Diaevaluative marking (Attitude)</cell>
+                                <cell>Attitude</cell>
+                                <cell>pejor., iron., ...</cell>
+                                <cell>ATTITUDE</cell>
+                            </row>
+                            <row>
+                                <cell>Dianormative marking (Normativity)</cell>
+                                <cell/>
+                                <cell/>
+                                <cell>NORMATIVITY</cell>
+                            </row>
+                            <row>
+                                <cell/>
+                                <cell>Meaning type</cell>
+                                <cell>Lit., Fig. ...</cell>
+                                <cell>MEANING TYPE</cell>
+                            </row>
+                        </table></p>
+                    <p>In TEI, <gi>usg</gi> is a typed element. The type of a <gi>usg</gi> element
+                        can be conceived as a conceptual axis (independent from other types) along
+                        which the given value of the element is located. The TEI <hi rend="italic"
+                            >Guidelines</hi> offer a range of sample values for types to illustrate
+                        potential uses of <gi>usg</gi>, but not al of them have been carried over to
+                        TEI Lex-0. The following table shows the differences between suggested
+                        values of <att>type</att> in TEI and the required values of <att>type</att>
+                        in TEI Lex-0:</p>
+                    <table rend="rules" cols="4">
                         <row>
-                            <cell><hi>usg@type</hi></cell>
-                            <cell><hi xml:space="preserve">Svensen 2009 </hi></cell>
-                            <cell><hi>expanded</hi></cell>
-                            <cell><hi>conceptual axis</hi></cell>
-                            <cell><hi>example value</hi></cell>
+                            <cell>suggested values in TEI P5</cell>
+                            <cell>corresponding Svendsen – Atkins and Rundell mapping </cell>
+                            <cell><hi rend="bold">TEI Lex-0</hi></cell>
+                            <cell>example value</cell>
                         </row>
                         <row>
-                            <cell><hi>geo</hi></cell>
-                            <cell><hi>place</hi></cell>
-                            <cell><hi>geographic</hi></cell>
-                            <cell><hi>geographic area</hi></cell>
+                            <cell>geo</cell>
+                            <cell>GEO</cell>
+                            <cell><hi rend="bold">geographic</hi></cell>
+                            <cell>AmE., dial.</cell>
+                        </row>
+                        <row>
+                            <cell>time</cell>
+                            <cell>TIME</cell>
+                            <cell><hi rend="bold">temporal</hi></cell>
+                            <cell>archaic, old</cell>
+                        </row>
+                        <row>
+                            <cell>dom</cell>
+                            <cell>DOMAIN</cell>
+                            <cell><hi rend="bold">domain</hi></cell>
+                            <cell>scientific, literary</cell>
+                        </row>
+                        <row>
+                            <cell>reg</cell>
+                            <cell>SOCIO-CULTURAL</cell>
+                            <cell><hi rend="bold">socioCultural</hi></cell>
+                            <cell>slang, vulgar</cell>
+                        </row>
+                        <row>
+                            <cell>style</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">meaningType</hi></cell>
+                            <cell>figurative, literal</cell>
+                        </row>
+                        <row>
+                            <cell>plev</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">frequency</hi></cell>
+                            <cell>rare, occas.</cell>
+                        </row>
+                        <row>
+                            <cell>-</cell>
+                            <cell/>
+                            <cell><hi rend="bold">attitude</hi></cell>
+                            <cell>formal, informal</cell>
+                        </row>
+                        <row>
+                            <cell>-</cell>
+                            <cell/>
+                            <cell><hi rend="bold">normativity</hi></cell>
+                            <cell>non-standard</cell>
+                        </row>
+                        <row>
+                            <cell>lang</cell>
+                            <cell>LANGUAGE</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>time</hi></cell>
-                            <cell><hi>time</hi></cell>
-                            <cell><hi>–</hi></cell>
-                            <cell><hi>temporal, historical era</hi></cell>
-                            <cell><hi>archaic, old</hi></cell>
-                        </row>
-                        <row>
-                            <cell><hi>dom x</hi></cell>
-                            <cell><hi>technicality</hi></cell>
-                            <cell><hi>domain</hi></cell>
-                            <cell><hi>domain or subject matter</hi></cell>
-                            <cell><hi>scientific, literary</hi></cell>
-                        </row>
-                        <row>
-                            <cell><hi>reg</hi></cell>
-                            <cell><p><hi xml:space="preserve">social cultural; formality; </hi></p>
-                                <p><hi>attitude?</hi></p></cell>
-                            <cell><hi>register</hi></cell>
-                            <cell><hi>register</hi></cell>
+                            <cell>gram</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>style</hi></cell>
-                            <cell><hi>???</hi></cell>
-                            <cell><hi>–</hi></cell>
-                            <cell><hi>style</hi></cell>
-                            <cell><hi>figurative, literal</hi></cell>
-                        </row>
-                        <row>
-                            <cell><hi>plev</hi></cell>
-                            <cell><hi>frequency?</hi></cell>
-                            <cell><hi>preference level</hi></cell>
-                            <cell><hi>preference level</hi></cell>
-                            <cell><hi>chiefly, usually</hi></cell>
-                        </row>
-                        <row>
-                            <cell><hi>lang</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>language</hi></cell>
-                            <cell><hi>name of a language mentioned in etymological or other linguistic discussion;</hi></cell>
+                            <cell>syn</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>gram</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>grammatical</hi></cell>
-                            <cell><hi>grammatical usage</hi></cell>
+                            <cell>hyper</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>syn</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>synonym</hi></cell>
-                            <cell><hi>synonym given to show use</hi></cell>
+                            <cell>colloc</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>hyper</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>hypernym</hi></cell>
-                            <cell><hi>hypernym given to show usage</hi></cell>
+                            <cell>comp</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>colloc</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>collocation</hi></cell>
-                            <cell><hi>typical collocate of the headword</hi></cell>
+                            <cell>obj</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>comp</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>complement</hi></cell>
-                            <cell><hi>typical complement</hi></cell>
+                            <cell>subj</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>obj</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>object</hi></cell>
-                            <cell><hi>typical object</hi></cell>
+                            <cell>verb</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">-</hi></cell>
                             <cell/>
                         </row>
                         <row>
-                            <cell><hi>subj</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>subject</hi></cell>
-                            <cell><hi>typical subject</hi></cell>
+                            <cell>hint</cell>
+                            <cell>-</cell>
+                            <cell><hi rend="bold">hint</hi></cell>
                             <cell/>
-                        </row>
-                        <row>
-                            <cell><hi>verb</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>–</hi></cell>
-                            <cell><hi>typical verb</hi></cell>
-                            <cell/>
-                        </row>
-                        <row>
-                            <cell><hi>hint</hi></cell>
-                            <cell><hi>OUT</hi></cell>
-                            <cell><hi>–</hi></cell>
-                            <cell><hi>unclassifiable piece of information to guide sense choice</hi></cell>
-                            <cell/>
-                        </row>
-                        <row>
-                            <cell><hi>?</hi></cell>
-                            <cell><hi>text type</hi></cell>
-                            <cell/>
-                            <cell/>
-                            <cell><hi>poet., lit.</hi></cell>
-                        </row>
-                        <row>
-                            <cell/>
-                            <cell><hi>normativity</hi></cell>
-                            <cell/>
-                            <cell/>
-                            <cell><hi>non-standard</hi></cell>
-                        </row>
-                        <row>
-                            <cell/>
-                            <cell><hi>medium</hi></cell>
-                            <cell/>
-                            <cell/>
-                            <cell><hi>colloq., spoken ...</hi></cell>
-                        </row>
-                        <row>
-                            <cell/>
-                            <cell><hi>nationality?? what is the difference with diatopic?</hi></cell>
-                            <cell/>
-                            <cell/>
-                            <cell><hi xml:space="preserve">Lat., Fr., </hi></cell>
                         </row>
                     </table>
-                    <p>It is recommended that for TEI-Lex-0:</p>
+                    <p>In TEI-Lex-0:</p>
                     <list type="ordered">
-                        <item>The @type attribute is made mandatory.</item>
-                        <item>The element <gi>usg</gi> should be used in a narrower sense than is currently the case.</item>
-                        <item>The @norm attribute should be encouraged.</item>
+                        <item>The <att>type</att> attribute is made mandatory.</item>
+                        <item>The element <gi>usg</gi> is used in a narrower sense than is currently
+                            the case in the TEI <hi rend="italic">Guidelines</hi>.</item>
+                        <item>The <att>norm</att> attribute is encouraged.</item>
                     </list>
-                    <p><hi>Justification:</hi></p>
+                    <p>Justification:</p>
                     <list type="ordered">
-                        <item><hi>Without <att>type</att> attribute, <gi>usg</gi> would be an underspecified element. Usage labels describe a wide range of linguistic phenomena. Classifying them
-                                should be considered a good practice.</hi><note place="comment" resp="Katrien_Depuydt"><hi>Datawork, challenging!</hi></note></item>
-                        <item><hi>Currently, the TEI guidelines contain an overuse of <gi>usg</gi> for describing phenomena that could be covered by alternative, more narrowly defined TEI elements. It
-                                should be considered a good practice to use the most specific TEI element available. See next section <ref target="#RestristingUsg">Restricting the scope of
-                                        <gi>usg</gi></ref>.</hi></item>
-                        <item>It is good practice to normalize the values of the <gi>usg</gi> elements because dictionaries are not always consistent in the way they use their usage labels. For
-                            instance, we could have abbreviated and unabbreviated labels in the same dictionary. <hi>TOMA TODO: add examples from Vuk.</hi> Normalization should be only restricted to a
-                            single dictionary, not a global normalization effort.</item>
+                        <item>Without <att>type</att> attribute, <gi>usg</gi> would be an
+                                underspecified element. Usage labels describe a wide range of
+                                linguistic phenomena. Classifying them should be considered a good
+                                practice.</item>
+                        <item>Currently, the TEI <hi rend="italic">Guidelines</hi> contain an
+                            overuse of <gi>usg</gi> for describing phenomena that could be covered
+                            by alternative, more narrowly defined TEI elements. It should be
+                            considered a good practice to use the most specific TEI element
+                            available. See table above and the next section <ref
+                                target="#RestristingUsg">Restricting the scope of
+                            <gi>usg</gi></ref></item>
+                        <item>It is good practice to normalize the values of the <gi>usg</gi>
+                            elements because dictionaries are not always consistent in the way they
+                            use their usage labels. For instance, abbreviated and unabbreviated
+                            labels can appear in the same dictionary: they should be normalized to a
+                            single value. Normalization should be only restricted to a single
+                            dictionary. A global normalization effort is currently beyond the scope
+                            of TEI Lex-0.</item>
                     </list>
                 </div>
                 <div xml:id="RestristingUsg">
                     <head><anchor xml:id="bw70jei7p4qf"/>Restricting the scope of <gi>usg</gi>
                     </head>
                     <list type="ordered">
-                        <item>Do not use <tag>usg type=”lang”</tag> to mark up the name of a language in an etymological or other discussion. The recommended way to encode this information is using
-                                <gi>lang</gi> element within <gi>etym</gi>.</item>
+                        <item><p>Do not use <tag>usg type="lang"</tag> to mark up the name of a
+                            language in an etymological or other discussion. The recommended way to
+                            encode this information is using <gi>lang</gi> element within
+                                <gi>etym</gi>.</p>
+                            <p>INCORRECT</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <entryFree xml:id="MZ.RGJS.сајдисльк">
+                                    <form type="lemma"><orth>сајдисль́к</orth></form>
+                                    <gramGrp><gram type="pos">м</gram></gramGrp>
+                                    <usg type="lang">тур.</usg>
+                                    <sense>
+                                        <def>уважавање.</def> … </sense>
+                                </entryFree>
+                            </egXML>
+                            <p>CORRECT</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <entry xml:id="MZ.RGJS.сајдисльк">
+                                    <form type="lemma">
+                                        <orth>сајдисль́к</orth>
+                                    </form>
+                                    <gramGrp>
+                                        <gram type="pos">м</gram>
+                                    </gramGrp>
+                                    <etym>
+                                        <lang value="tr">тур.</lang>
+                                    </etym>
+                                    <sense>
+                                        <def>уважавање.</def> … </sense>
+                                </entry>
+                            </egXML>
+                        </item>
+                    
+                        <item>Do not use <tag>usg type="hyper"</tag> or <tag>usg type="syn"</tag> to
+                            mark lexical relations such as hyperonymy or synonymy. The recommended
+                            way to encode lexical relations is using the reference mechanism
+                            provided by <tag>xr type="syn"</tag>. TOMA TODO: add examples</item>
+                        <item>Do not use <tag>usg type="colloc"</tag> or for that matter "comp.",
+                            "obj.", "subj.", "verb" etc., but rather <tag>colloc type="object"</tag>
+                            or <tag>colloc type="preposition"</tag>.</item>
+                    <item><tag>usg type="hint"</tag> should be used as fallback for cases where
+                            the usage information does not fall into one of the recognized cases
+                            discussed above. </item>
+                        <item>Frequency information on lexicographic entities may differ from other
+                            types of usage information in that it often cannot be interpreted
+                            without further context. In phrases such as “mostly biology” or “rarely
+                            used in American English” it serves the purpose of a modifier
+                            (quantifier) to another usage information (or other lexical
+                            information). Such use calls for modeling the frequency information as
+                            an attribute to the usg element modified. For frequency information
+                            provided explicitly (e.g. corpus frequencies), a separate element should
+                            be introduced. TODO</item>
                     </list>
-                    <list type="ordered">
-                        <item><hi>INCORRECT</hi></item>
-                    </list>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <entryFree xml:id="MZ.RGJS.сајдисльк">
-                            <form type="lemma"><orth>сајдисль́к</orth></form>
-                            <gramGrp><gram type="pos">м</gram></gramGrp>
-                            <usg type="lang">тур.</usg>
-                            <sense>
-                                <def>уважавање.</def> … </sense>
-                        </entryFree>
-                    </egXML>
-                    <list type="ordered">
-                        <item><hi>CORRECT</hi><note place="comment" resp="Katrien_Depuydt"><hi>adapt to recent decisions</hi></note></item>
-                    </list>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <entry xml:id="MZ.RGJS.сајдисльк">
-                            <form type="lemma">
-                                <orth>сајдисль́к</orth>
-                            </form>
-                            <gramGrp>
-                                <gram type="pos">м</gram>
-                            </gramGrp>
-                            <etym>
-                                <lang value="tr">тур.</lang>
-                            </etym>
-                            <sense>
-                                <def>уважавање.</def> … </sense>
-                        </entry>
-                    </egXML>
-                    <list type="ordered">
-                        <item>Do not use &lt;usg type=”hyper”&gt; or &lt;usg type=”syn”&gt; to mark lexical relations such as hyperonymy or synonymy. The recommended way to encode lexical relations is
-                            using the reference mechanism provided by &lt;xr type=’syn’&gt;. TOMA TODO: add examples</item>
-                        <item><hi>[colloc</hi><note place="comment" resp="Piotr_Banski"><hi>I am now looking at some data from Milena Hebal-Jezierska (will ask her to contribute the examples), and she
-                                    rather ingeniously uses [cit/quote type="collocation"], essentially assimilating examples with collocates to general examples (with a different @type, and some
-                                    extras, like <gi>oRef</gi>). This way, we can use full grammatical description inside the collocate <gi>cit</gi>, so there's no need to squeeze stuff into @type.
-                                    @type="preposition" is totally horrible...</hi></note>, comp, obj, subj, verb]: WE STILL NEED TO WORK ON THIS, they overlap. Our current thinking is: do not use
-                            &lt;usg type=”colloc”/&gt; or any of these, but rather &lt;colloc type=”object”/&gt; or &lt;colloc type=”preposition”&gt;.</item>
-                    </list>
-                    <p><hi xml:space="preserve">In the following example from a Serbian-German-Latin dictionary, the sense of the adjective дангубан (futile, wasteful) is labeled with a collocate: н. п. посао (e.g. job). </hi></p>
-                    <list type="ordered">
-                        <item><hi>INCORRECT</hi></item>
-                    </list>
-                    <table rend="rules">
-                        <row>
-                            <cell><p>&lt;entryFree xml:id="VSK.SR.дангубан" sortKey="дангубан"&gt;</p>
-                                <p> &lt;form type="lemma"&gt;<gi>orth</gi>да̀нгубан&lt;/orth&gt;&lt;/form&gt;</p>
-                                <p> &lt;!-- etc.--&gt;</p>
-                                <p> &lt;gramGrp source="#digitalEd"&gt;&lt;gram type="pos"&gt;adj.&lt;/gram&gt;&lt;/gramGrp&gt;</p>
-                                <p> &lt;sense xml:id="d1e162786"&gt;</p>
-                                <p>
-                                    <hi>&lt;usg type="colloc"&gt;н. п. посао&lt;/usg&gt;</hi></p>
-                                <p> &lt;cit type="translation"&gt; </p>
-                                <p> &lt;quote xml:lang="de"&gt;was viel Zeit verlieren macht&lt;/quote&gt;</p>
-                                <p> &lt;/cit&gt;</p>
-                                <p> &lt;!-- etc.--&gt;</p>
-                                <p>&lt;/entryFree&gt;</p></cell>
-                        </row>
-                    </table>
-                    <list type="ordered">
-                        <item><hi>CORRECT</hi></item>
-                    </list>
-                    <table rend="rules">
-                        <row>
-                            <cell><p>&lt;entryFree xml:id="VSK.SR.дангубан" sortKey="дангубан"&gt;</p>
-                                <p> &lt;form type="lemma"&gt;<gi>orth</gi>да̀нгубан&lt;/orth&gt;&lt;/form&gt;</p>
-                                <p> &lt;!-- etc.--&gt;</p>
-                                <p> &lt;gramGrp source="#digitalEd"&gt;&lt;gram type="pos"&gt;adj.&lt;/gram&gt;&lt;/gramGrp&gt;</p>
-                                <p> &lt;sense xml:id="d1e162786"&gt;</p>
-                                <p>
-                                    <hi>&lt;colloc type=”noun”&gt;<gi>lbl</gi>н. п.&lt;/lbl&gt; посао&lt;/colloc&gt;</hi></p>
-                                <p> &lt;cit type="translation"&gt;</p>
-                                <p> &lt;quote xml:lang="de"&gt;was viel Zeit verlieren macht&lt;/quote&gt;</p>
-                                <p> &lt;/cit&gt;</p>
-                                <p> &lt;!-- etc.--&gt;</p>
-                                <p>&lt;/entryFree&gt;</p></cell>
-                        </row>
-                    </table>
-                    <list type="ordered">
-                        <item>&lt;usg type=”hint”&gt; should be used as fallback for cases where the usage information do not fall into one of the recognized cases discussed above. </item>
-                        <item>&lt;usg type=”dom”&gt; (domain) is used to specify the (e.g. scientific, professional etc.) domain in which the annotated lexical information (e.g. a sense, a cit etc.)
-                            is used.</item>
-                        <item><hi>register</hi></item>
-                        <item><hi>style</hi></item>
-                        <item>&lt;usg type=”plev”&gt; Frequency information information on lexicographic entities may differ from other types of usage information in that it often cannot be
-                            interpreted without further context. In phrases such as “mostly biology” or “rarely used in American English” it serves the purpose of a modifier (quantifier) to another
-                            usage information (or other lexical information). Such use calls for modeling the frequency information as an attribute to the usg element modified. For frequency
-                            information provided explicitly (e.g. corpus frequencies), a separate element should be introduced.</item>
-                    </list>
-                    <p><hi> This is a bad idea:</hi></p>
-                    <p> &lt;usg type="plev"&gt;chiefly&lt;/usg&gt; &lt;usg type="domain"&gt;biology&lt;/usg&gt; </p>
-                    <p>
-                        <hi xml:space="preserve">because there the plev doesn’t actually qualify the domain usg. </hi></p>
-                    <p><hi xml:space="preserve">	Are we then proposing something like &lt;usg type=”domain” freq=”high” norm=”biology”&gt;chiefly biology&lt;/usg&gt; </hi></p>
-                    <p><hi>potential issues:</hi></p>
-                    <list type="unordered">
-                        <item><hi xml:space="preserve">is freq=”high” equal to “chiefly”, “mostly”, “often”  </hi></item>
-                        <item><hi xml:space="preserve">is freq= “low” the same as “rarely, seldom” </hi></item>
-                        <item><hi>is freq the right name? or scope?</hi></item>
-                        <item><hi xml:space="preserve">how likely is this to be adopted by the Council? I don’t think we have a frequency attribute, do we?  </hi></item>
-                    </list>
-                    <p><hi>Theoretically, one could do something along the lines of:</hi></p>
-                    <p><gi>lbl</gi>chiefly&lt;/lbl&gt; &lt;usg type="domain" norm="biology"&gt;&lt;certainty locus="value" cert="high"/&gt;biology&lt;/usg&gt;</p>
-                    <p><hi xml:space="preserve">I think this is a stretch, because this is really not about certainty but frequency. </hi></p>
-                    <p><hi>ticket to nest <gi>usg</gi>?</hi></p>
-                    <p><hi xml:space="preserve">making usg recursive is difficult </hi></p>
-                    <p><hi>this is a very specific case, might be taking things too far for TEI-Lex</hi></p>
-                    <p><hi xml:space="preserve">sync attribute in the first usg? </hi></p>
-                    <p> &lt;usg type="plev" synch=”#usg1.1”&gt;chiefly&lt;/usg&gt; &lt;usg xml:id=”usg1.1” type="domain"&gt;biology&lt;/usg&gt; </p>
-                    <p><hi>more stuff to think about:</hi></p>
+                    <p><hi>stuff to think about:</hi></p>
                     <list type="unordered">
                         <item><hi xml:space="preserve">Frequency and source corpus? ie. source attribute &lt;usg type=”frequency” unit=???? source= “this_and_that_corpus”&gt;12&lt;/usg&gt;  </hi></item>
-                        <item><hi>gram? keep it? → future work; check with TEI community ACTION POINT. “gram” is used for things we wouldn’t keep in //gramGrp; it rather specifies a (typical?)
-                                grammatical context (CHECK with real world applications)</hi></item>
-                        <item><hi>comp should go, is really colloc? → again look for examples obj, subj, verb: again.</hi></item>
-                        <item><hi xml:space="preserve">Compare set of types with Toma’s table (TODO) </hi></item>
-                    </list>
-                    <p>Samples</p>
-                    <p><ref target="https://github.com/LingSIG/Dictionaries"><hi>https://github.com/LingSIG/Dictionaries</hi></ref>
-                    </p>
-                    <p>N.B.: copyleft status of eZISS?</p>
+                        </list>
                     <p>Sample from Althochdeutsches Wörterbuch, feel free to annotate:</p>
                     <figure>
                         <graphic n="1007" width="10.874375cm" height="3.889375cm" url="media/image27.png" rend="inline">
@@ -1535,19 +1528,31 @@
             <div>
                 <head><anchor xml:id="cccs1cqhbmu5"/>References</head>
                 <list type="unordered">
-                    <item>Parthenos WP4 standards library at GitHub:<ref target="https://github.com/ParthenosWP4/standardsLibrary" xml:space="preserve"> </ref><ref
-                            target="https://github.com/ParthenosWP4/standardsLibrary"><hi>https://github.com/ParthenosWP4/standardsLibrary</hi></ref> with a collection of dictionary samples (many in
-                        TEI formats) under Lexicography/ENeL-WG2/Dictionary Samples/</item>
+                    <item>Parthenos WP4 standards library at
+                            GitHub:<ref target="https://github.com/ParthenosWP4/standardsLibrary" xml:space="preserve"> </ref><ref
+                            target="https://github.com/ParthenosWP4/standardsLibrary"
+                                ><hi>https://github.com/ParthenosWP4/standardsLibrary</hi></ref>
+                        with a collection of dictionary samples (many in TEI formats) under
+                        Lexicography/ENeL-WG2/Dictionary Samples/</item>
                     <item>V. papers on “logical structure” of MRD/LDBs: <list type="unordered">
-                            <item>Ide, N., Kilgarriff, A., Romary, L. (2000).<ref target="https://www.kilgarriff.co.uk/Publications/2000-IdeKilgRomary-Euralex.pdf" xml:space="preserve"> </ref><ref
-                                    target="https://www.kilgarriff.co.uk/Publications/2000-IdeKilgRomary-Euralex.pdf"><hi>A Formal Model of Dictionary Structure and Content.</hi></ref>
+                            <item>Ide, N., Kilgarriff, A., Romary, L.
+                                    (2000).<ref target="https://www.kilgarriff.co.uk/Publications/2000-IdeKilgRomary-Euralex.pdf" xml:space="preserve"> </ref><ref
+                                    target="https://www.kilgarriff.co.uk/Publications/2000-IdeKilgRomary-Euralex.pdf"
+                                        ><hi>A Formal Model of Dictionary Structure and
+                                        Content.</hi></ref>
                                 <hi>Proceedings of Euralex 2000,</hi> Stuttgart, 113-126. </item>
                             <item>Erjavec, T., Evans, R., Ide, N., Kilgarriff, A.
                                     (2000).<ref target="http://www.lrec-conf.org/proceedings/lrec2000/html/summary/335.htm" xml:space="preserve"> </ref><ref
-                                    target="http://www.lrec-conf.org/proceedings/lrec2000/html/summary/335.htm"><hi>The CONCEDE Model for Lexical Databases.</hi></ref>. <hi>Proceedings of the Second
-                                    Language Resources and Evaluation Conference</hi> (LREC), Athens, Greece, 355-62. </item>
+                                    target="http://www.lrec-conf.org/proceedings/lrec2000/html/summary/335.htm"
+                                        ><hi>The CONCEDE Model for Lexical Databases.</hi></ref>.
+                                    <hi>Proceedings of the Second Language Resources and Evaluation
+                                    Conference</hi> (LREC), Athens, Greece, 355-62. </item>
                         </list></item>
                 </list>
+                
+            </div>
+            <div>
+                <head>Misc. examples (these are various leftovers, TODO cleanup)</head>
                 <p><hi>Example discussed at ENel WG2 Budapest</hi></p>
                 <list type="unordered">
                     <item>Example from A DICTIONARY OF MANGAREVA (OR GAMBIER ISLANDS)</item>
@@ -1611,41 +1616,54 @@
                 <p> &lt;/form&gt;</p>
                 <p> &lt;/entry&gt;</p>
                 <p> &lt;/entry&gt;</p>
-            </div>
             <div>
-                <head>X. Misc. examples</head>
-
-                <div>
                     <head><anchor xml:id="y9mzqi58dztc"/>X.2. </head>
-                    <p>from Milena Hebal-Jezierska’s Czech-Polish dictionary (discussed after the meeting in Budapest). </p>
+                    <p>from Milena Hebal-Jezierska’s Czech-Polish dictionary (discussed after the
+                        meeting in Budapest). </p>
                     <figure>
-                        <graphic n="1008" width="17.832916666666666cm" height="5.675313888888889cm" url="media/image16.png" rend="inline"/>
+                        <graphic n="1008" width="17.832916666666666cm" height="5.675313888888889cm"
+                            url="media/image16.png" rend="inline"/>
                     </figure>
-                    <p>Piotr’s suggestion follows (and it’s meant as food for thought / basis for discussion):</p>
+                    <p>Piotr’s suggestion follows (and it’s meant as food for thought / basis for
+                        discussion):</p>
                     <figure>
-                        <graphic n="1009" width="14.44625cm" height="17.30375cm" url="media/image9.png" rend="inline">
+                        <graphic n="1009" width="14.44625cm" height="17.30375cm"
+                            url="media/image9.png" rend="inline">
                             <desc>milena.png</desc>
                         </graphic>
                     </figure>
-                    <p>Please note: (1) I am not taking a stance on how to encode equivalents. I simply used what I felt relatively comfortable with. (2) I had nothing to say about <gi>usg</gi> -- I
-                        copied Milena’s suggestion. </p>
+                    <p>Please note: (1) I am not taking a stance on how to encode equivalents. I
+                        simply used what I felt relatively comfortable with. (2) I had nothing to
+                        say about <gi>usg</gi> -- I copied Milena’s suggestion. </p>
                     <p>I see several issues that are particularly worth discussion here:</p>
                     <list type="ordered">
-                        <item><gi>colloc</gi> However we decide to encode it, let us use a solution that offers structural space for grammatical (and other) description of the collocate</item>
-                        <item>note the highlighted @resp at the level of <gi>cit</gi>. This is Milena’s “intrusion” into the scanned data. She is responsible for the <gi>cit</gi>, so it should be
-                            “@resp-able”. Probably nearly every element inside the entry should. OR: we (ab)use @decls mechanism for descriptions of such changes. OR (best?) we create a @tlex:change
-                            attribute that references a single <gi>change</gi> in the <gi>revisionDesc</gi>.</item>
-                        <item>I used <gi>oRef</gi> on purpose here, because I got startled when I saw the <gi>xr</gi> alternative. I am not saying it’s wrong, but I think we also need a shorthand
-                            expression (I will add some prose on that)</item>
-                        <item>“kuty na cztery nogi” is an idiomatic expression headed by the passive adjectival participle kuty. It would be lemmatized under kuć , probably as a <gi>re</gi> (or an
-                            equivalent). I mention this to make sure that, if we end up using <gi>xr</gi> for encoding translation equivalents, we also find a way to handle such cases.</item>
+                        <item><gi>colloc</gi> However we decide to encode it, let us use a solution
+                            that offers structural space for grammatical (and other) description of
+                            the collocate</item>
+                        <item>note the highlighted @resp at the level of <gi>cit</gi>. This is
+                            Milena’s “intrusion” into the scanned data. She is responsible for the
+                                <gi>cit</gi>, so it should be “@resp-able”. Probably nearly every
+                            element inside the entry should. OR: we (ab)use @decls mechanism for
+                            descriptions of such changes. OR (best?) we create a @tlex:change
+                            attribute that references a single <gi>change</gi> in the
+                                <gi>revisionDesc</gi>.</item>
+                        <item>I used <gi>oRef</gi> on purpose here, because I got startled when I
+                            saw the <gi>xr</gi> alternative. I am not saying it’s wrong, but I think
+                            we also need a shorthand expression (I will add some prose on
+                            that)</item>
+                        <item>“kuty na cztery nogi” is an idiomatic expression headed by the passive
+                            adjectival participle kuty. It would be lemmatized under kuć , probably
+                            as a <gi>re</gi> (or an equivalent). I mention this to make sure that,
+                            if we end up using <gi>xr</gi> for encoding translation equivalents, we
+                            also find a way to handle such cases.</item>
                     </list>
                 </div>
                 <div>
                     <head><anchor xml:id="avzo8orot7rp"/>X.3.</head>
                     <p>From Joanna Bilińska’s Budapest presentation</p>
                     <figure>
-                        <graphic n="10010" width="15.92cm" height="3.7394444444444446cm" url="media/image14.jpg" rend="inline">
+                        <graphic n="10010" width="15.92cm" height="3.7394444444444446cm"
+                            url="media/image14.jpg" rend="inline">
                             <desc>bodlo.jpg</desc>
                         </graphic>
                     </figure>
@@ -1655,7 +1673,8 @@
                     <p>
                         <gi>orth</gi>BODŁO&lt;/orth&gt;</p>
                     <p>
-                        <gi>pc</gi>,&lt;/pc&gt; &lt;!--we don't like this, need better solution for commas--&gt;</p>
+                        <gi>pc</gi>,&lt;/pc&gt; &lt;!--we don't like this, need better solution for
+                        commas--&gt;</p>
                     <p> &lt;/form&gt;</p>
                     <p> &lt;form type="ending"&gt;<gi>orth</gi>a&lt;/orth&gt;</p>
                     <p>
@@ -1669,94 +1688,71 @@
                         <gi>sense</gi>
                     </p>
                     <p>
-                        <gi>def</gi>bobo, straszydło, potwora, dziwotwor, &lt;/def<note place="comment" resp="Piotr_Banski"><hi>these are translation equivalents</hi></note>&gt; </p>
-                    <p> &lt;cit type="translation"&gt;&lt;quote xml:lang="de"&gt;ein<note place="comment" resp="Piotr_Banski"><hi>And this "ein" is weird. It goes for all these three (masculine)
-                                nouns, and it actually signals "masculine or neuter" (unless the dictionary uses something extra to mark German neuters)</hi></note><note place="comment"
-                            resp="herold_(BBAW)"><hi>You could assume ellipsis here and the other two two equivalents would actually be "ein Popanz", "ein Unhold" – unfortunately we do not have
-                                @expand at hand …</hi></note> Schreckbild&lt;/quote&gt;&lt;/cit&gt; </p>
-                    <p> &lt;cit type="translation"&gt;&lt;quote xml:lang="de"&gt;Popanz&lt;/quote&gt;&lt;/cit&gt;</p>
-                    <p> &lt;cit type="translation"&gt;&lt;quote xml:lang="de"&gt;Unhold&lt;/quote&gt;&lt;/cit&gt;</p>
+                        <gi>def</gi>bobo, straszydło, potwora, dziwotwor, &lt;/def<note
+                            place="comment" resp="Piotr_Banski"><hi>these are translation
+                                equivalents</hi></note>&gt; </p>
+                    <p> &lt;cit type="translation"&gt;&lt;quote xml:lang="de"&gt;ein<note
+                            place="comment" resp="Piotr_Banski"><hi>And this "ein" is weird. It goes
+                                for all these three (masculine) nouns, and it actually signals
+                                "masculine or neuter" (unless the dictionary uses something extra to
+                                mark German neuters)</hi></note><note place="comment"
+                            resp="herold_(BBAW)"><hi>You could assume ellipsis here and the other
+                                two two equivalents would actually be "ein Popanz", "ein Unhold" –
+                                unfortunately we do not have @expand at hand …</hi></note>
+                        Schreckbild&lt;/quote&gt;&lt;/cit&gt; </p>
+                    <p> &lt;cit type="translation"&gt;&lt;quote
+                        xml:lang="de"&gt;Popanz&lt;/quote&gt;&lt;/cit&gt;</p>
+                    <p> &lt;cit type="translation"&gt;&lt;quote
+                        xml:lang="de"&gt;Unhold&lt;/quote&gt;&lt;/cit&gt;</p>
                     <p> &lt;cit type="example"&gt;</p>
                     <p>
-                        <gi>quote</gi>Trudno dać wiarę, by to przecie bodło Podnieść cały wóz jedną ręką</p>
-                    <p> mogło.&lt;/quote<note place="comment" resp="Piotr_Banski"><hi>and this quote here consists of two verses. This is signalled by the rhyming "bodło"-"mogło" and by the
-                                capitalization of the "Podnieść". I wonder if we can encode this information (it may of course remain implicit).</hi></note><note place="comment" resp="herold_(BBAW)"
+                        <gi>quote</gi>Trudno dać wiarę, by to przecie bodło Podnieść cały wóz jedną
+                        ręką</p>
+                    <p> mogło.&lt;/quote<note place="comment" resp="Piotr_Banski"><hi>and this quote
+                                here consists of two verses. This is signalled by the rhyming
+                                "bodło"-"mogło" and by the capitalization of the "Podnieść". I
+                                wonder if we can encode this information (it may of course remain
+                                implicit).</hi></note><note place="comment" resp="herold_(BBAW)"
                                 ><hi>quote/l or even quote/lg/l</hi></note>&gt;<gi>bibl</gi></p>
                     <p>
-                        <gi>author</gi>Opal.&lt;/author&gt; <gi>title</gi>poet.&lt;/title&gt; <gi>biblScope</gi>8.&lt;/biblScope&gt;&lt;/bibl&gt;&lt;/cit&gt;</p>
+                        <gi>author</gi>Opal.&lt;/author&gt; <gi>title</gi>poet.&lt;/title&gt;
+                            <gi>biblScope</gi>8.&lt;/biblScope&gt;&lt;/bibl&gt;&lt;/cit&gt;</p>
                     <p> &lt;cit type="example"&gt;</p>
                     <p>
-                        <gi>quote</gi>Okrutnym przerażona bodłem. &lt;/quote&gt;<gi>bibl</gi><gi>author</gi>Pot.<note place="comment" resp="Piotr_Banski"><hi>"Pot." and "Stryjk." are actually
-                                abbreviated author names, so we should probably reference the authors listed in the header. Same goes for the titles.</hi></note>&lt;/author&gt;
-                        <gi>title</gi>Arg.&lt;/title&gt; <gi>biblScope</gi>324.&lt;/biblScope&gt; </p>
+                        <gi>quote</gi>Okrutnym przerażona bodłem.
+                            &lt;/quote&gt;<gi>bibl</gi><gi>author</gi>Pot.<note place="comment"
+                            resp="Piotr_Banski"><hi>"Pot." and "Stryjk." are actually abbreviated
+                                author names, so we should probably reference the authors listed in
+                                the header. Same goes for the titles.</hi></note>&lt;/author&gt;
+                            <gi>title</gi>Arg.&lt;/title&gt;
+                        <gi>biblScope</gi>324.&lt;/biblScope&gt; </p>
                     <p>
-                        <gi>author</gi>Stryjk.&lt;/author&gt; <gi>title</gi>Gon. U.&lt;/title&gt; <gi>biblScope</gi>3.&lt;/biblScope&gt;&lt;/bibl&gt;&lt;/cit&gt;</p>
+                        <gi>author</gi>Stryjk.&lt;/author&gt; <gi>title</gi>Gon. U.&lt;/title&gt;
+                            <gi>biblScope</gi>3.&lt;/biblScope&gt;&lt;/bibl&gt;&lt;/cit&gt;</p>
                     <p> &lt;/sense&gt;</p>
                     <p> &lt;/entry&gt;</p>
-                    <p><pb/></p>
-                    <p><hi>Decisions 2 May</hi></p>
-                    <p><hi>Some general points:</hi></p>
-                    <p>to do: pruning the possible contents of elements we use in TEI lex0; eg. entry</p>
-                    <p><hi>Discussion on entry:</hi></p>
-                    <p>In TEI lex0</p>
-                    <list type="unordered">
-                        <item>entry recursive</item>
-                        <item>No superentry and related entry<note place="comment" resp="Mohamed_Khemakhem"><hi>We should take into consideration cases where <gi>re</gi> figures within sense, which
-                                    means we need to open a ticket to make that possible (Not sure if this would be wlecome by the TEI guys). See Arabic examples and English example
-                            below</hi></note></item>
-                    </list>
-
-                    <list type="unordered">
-                        <item>typing entries: to be discussed - check literature (Axel); mandatory?? (keep in mind dictionaries of proverbs; collocation dictionaries; dictionaries of idioms)</item>
-                    </list>
-                    <p>Ticket:</p>
-                    <list type="unordered">
-                        <item>recursive entry because of superentry (too limited)</item>
-                        <item>send examples (Arabic -Mohammed ; hause (Axel); Buddhist dictionary (Laurent); Chinese (Jesse)</item>
-                    </list>
-
-                    <p><hi>Discussion on etymology / xr / bilingual dictionaries</hi></p>
-                    <p><ref target="https://docs.google.com/document/d/1F57EB_zSMPAtDTuAaWC_iRxNQoy4QbjR63t0oWRe4sI/edit?usp=sharing"
+                    <p><ref
+                            target="https://docs.google.com/document/d/1F57EB_zSMPAtDTuAaWC_iRxNQoy4QbjR63t0oWRe4sI/edit?usp=sharing"
                                 ><hi>https://docs.google.com/document/d/1F57EB_zSMPAtDTuAaWC_iRxNQoy4QbjR63t0oWRe4sI/edit?usp=sharing</hi></ref></p>
                     <list type="unordered">
                         <item>everywhere where there is a form: use “form”</item>
-                        <item>cit type=cognate/etymon/descendent for etymology and within: form and @corresp when you want to link to somewhere else</item>
-                        <item>cit type = equivalent for bilingual dictionaries and within: form and @corresp when you want to link to somewhere else</item>
+                        <item>cit type=cognate/etymon/descendent for etymology and within: form and
+                            @corresp when you want to link to somewhere else</item>
+                        <item>cit type = equivalent for bilingual dictionaries and within: form and
+                            @corresp when you want to link to somewhere else</item>
                         <item>unresolved: “a certain plant” in cit type=equivalent</item>
-                        <item>classical references, eg. see also 1.1, use <gi>xr</gi><gi>ref</gi></item>
+                        <item>classical references, eg. see also 1.1, use
+                            <gi>xr</gi><gi>ref</gi></item>
                         <item>ref is allowed inside of def; examples???</item>
-                        <item>references in etymology that are a bibl refering to extended description: bibl with @corresp when wanting to link to external source list</item>
-                        <item>def and gloss: to do: look at examples, from both etymological dictionaries and dictionaries with an etymological section (everyone look for examples)</item>
+                        <item>references in etymology that are a bibl refering to extended
+                            description: bibl with @corresp when wanting to link to external source
+                            list</item>
+                        <item>def and gloss: to do: look at examples, from both etymological
+                            dictionaries and dictionaries with an etymological section (everyone
+                            look for examples)</item>
                     </list>
-                    <p><hi>Usage</hi></p>
-                    <list type="unordered">
-                        <item>lexical relations: xr typed (hyperonym, hyponym, synonym, meronym…)</item>
-                        <item>ticket: clean up usg in tei guidelines, get rid of obj, subj etc… use colloc instead…</item>
-                        <item>adopt table of Svensen in tei lex0 and provide a kind of mapping with the labels used before, <lb/>&lt;usg type=time datcat=”diachronic”&gt; declaration on dariah github;
-                            it needs further clarification (good examples). Toma resends the article and will also look into Hausmann [Toma + Katrien] - frequency info {check paper Laurent, not happy
-                            with the implementation - but happy with conceptual description}</item>
-                    </list>
-                    <p><hi>XML-ID</hi></p>
-                    <list type="unordered">
-                        <item>PID (handle) for the resource / CLARIN</item>
-                        <item>mandatory XML-id per entry (means also related entry)</item>
-                        <item>recommendation to have id’s for elements you think it is important to be able to reference to (eg. in Elexis: sense id’s necessary)</item>
-                    </list>
-                    <p>Recommendations on how to do encode idioms, collocates, proverbs etc. (Katrien, Toma)</p>
-                    <p>PLANNING FOR LJUBLIANA</p>
-                    <list type="unordered">
-                        <item>Make a new version <ref target="https://docs.google.com/document/d/1C-FVixhk6eE4hUPyFSyEOS0Dfz0AQIPWWsolUxI_owY/edit"><hi>TEI-Lex0.current</hi></ref> + put link of the
-                            new version in the legacy version</item>
-                        <item>Add a section examples to each subject</item>
-                        <item>Add real life examples (everbody)</item>
-                        <item>Usage: Toma + Katrien (Mohammed ~ put online)</item>
-                        <item>Ref: Jesse + Katrien</item>
-                        <item>Form: Pjotr</item>
-                        <item>Etymology, add a new section: Jack</item>
-                        <item>Entry: Laurent, Axel</item>
-                        <item>Introduction: </item>
-                    </list>
-
+                    <p>Recommendations on how to do encode idioms, collocates, proverbs etc.
+                        (Katrien, Toma)</p>
                 </div>
             </div>
             <div>
