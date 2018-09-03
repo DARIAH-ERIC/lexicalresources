@@ -1899,7 +1899,8 @@
                         except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle epigraph floatingText group imprimatur opener postscript salute signed titlePage titlePart trailer"/>
                     <moduleRef key="figures" except="figDesc figure formula notatedMusic table row cell"/>
                     <moduleRef key="analysis" except="cl interp interpGrp m phr s span spanGrp w"/>
-                    <moduleRef key="iso-fs" except="bicond binary cond default fDecl fDescr fLib fsConstraints fsDecl fsDescr fsdDecl fsdLink fvLib if iff numeric then vAlt vColl vDefault"/>
+                    <!--<moduleRef key="iso-fs" except="bicond binary cond default fDecl fDescr fLib fsConstraints fsDecl fsDescr fsdDecl fsdLink fvLib if iff numeric then vAlt vColl vDefault"/>
+                    -->
                     <moduleRef key="header"
                         except="appInfo application biblFull cRefPattern calendar calendarDesc catDesc correction extent handNote stdVals styleDefDecl tagUsage tagsDecl textClass typeNote"/>
                     <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
