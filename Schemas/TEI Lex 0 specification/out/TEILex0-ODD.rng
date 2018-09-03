@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-09-03T09:49:37Z. .
+Schema generated from ODD source 2018-09-03T09:58:08Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -1141,9 +1141,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       <notAllowed/>
    </define>
    <define name="model.global.meta">
-      <choice>
-         <ref name="fs"/>
-      </choice>
+      <notAllowed/>
    </define>
    <define name="model.milestoneLike">
       <notAllowed/>
@@ -1345,20 +1343,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
    </define>
    <define name="model.stageLike_sequenceRepeatable">
       <notAllowed/>
-   </define>
-   <define name="model.featureVal.complex">
-      <choice>
-         <ref name="fs"/>
-         <ref name="vNot"/>
-         <ref name="vMerge"/>
-      </choice>
-   </define>
-   <define name="model.featureVal.single">
-      <choice>
-         <ref name="symbol"/>
-         <ref name="string"/>
-         <ref name="vLabel"/>
-      </choice>
    </define>
    <define name="model.entryPart">
       <choice>
@@ -1667,12 +1651,6 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
          <ref name="model.milestoneLike"/>
          <ref name="model.noteLike"/>
          <ref name="model.global.edit"/>
-      </choice>
-   </define>
-   <define name="model.featureVal">
-      <choice>
-         <ref name="model.featureVal.complex"/>
-         <ref name="model.featureVal.single"/>
       </choice>
    </define>
    <define name="model.frontPart">
@@ -3178,7 +3156,6 @@ Sample values include: 1] abbrev; 2] verbTable</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(cross-reference phrase) contains a phrase, sentence, or icon referring the reader to some other location in this or another text. [9.3.5.3. Cross-References to Other Entries]</a:documentation>
          <zeroOrMore>
             <choice>
-               <text/>
                <ref name="model.gLike"/>
                <ref name="model.phrase"/>
                <ref name="model.inter"/>
@@ -3856,130 +3833,6 @@ Sample values include: 1] cap (capital) ; 2] noHyph (no hyphen) </a:documentatio
             <attribute name="pre">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates whether this punctuation mark precedes or follows the unit it delimits.</a:documentation>
                <data type="boolean"/>
-            </attribute>
-         </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="fs">
-      <element name="fs">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature structure) represents a feature structure, that is, a collection of feature-value pairs organized as a structural unit. [18.2. Elementary Feature Structures and the Binary
-Feature Value]</a:documentation>
-         <zeroOrMore>
-            <ref name="f"/>
-         </zeroOrMore>
-         <ref name="att.global.attributes"/>
-         <ref name="att.datcat.attributes"/>
-         <optional>
-            <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the type of the feature structure.</a:documentation>
-               <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-               </data>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="feats">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(features) references the feature-value specifications making up this feature structure.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI"/>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="f">
-      <element name="f">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature) represents a feature value specification, that is, the association of a name with a value of any of several different types. [18.2. Elementary Feature Structures and the Binary
-Feature Value]</a:documentation>
-         <choice>
-            <text/>
-            <ref name="model.featureVal"/>
-         </choice>
-         <ref name="att.global.attributes"/>
-         <ref name="att.datcat.attributes"/>
-         <attribute name="name">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a single word which follows the rules defining a legal XML name (see ), providing a name for the feature.</a:documentation>
-            <data type="Name"/>
-         </attribute>
-         <optional>
-            <attribute name="fVal">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature value) references any element which can be used to represent the value of a feature.</a:documentation>
-               <data type="anyURI"/>
-            </attribute>
-         </optional>
-         <empty/>
-      </element>
-   </define>
-   <define name="symbol">
-      <element name="symbol">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(symbolic value) represents the value part of a feature-value specification which contains one of a finite list of symbols. [18.3. Other Atomic Feature Values]</a:documentation>
-         <empty/>
-         <ref name="att.global.attributes"/>
-         <ref name="att.datcat.attributes"/>
-         <attribute name="value">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a symbolic value for the feature, one of a finite list that may be specified in a feature declaration.</a:documentation>
-            <data type="token">
-               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-            </data>
-         </attribute>
-         <empty/>
-      </element>
-   </define>
-   <define name="string">
-      <element name="string">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(string value) represents the value part of a feature-value specification which contains a string. [18.3. Other Atomic Feature Values]</a:documentation>
-         <ref name="macro.xtext"/>
-         <ref name="att.global.attributes"/>
-         <ref name="att.datcat.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="vLabel">
-      <element name="vLabel">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value label) represents the value part of a feature-value specification which appears at more than one point in a feature structure. [18.6. Re-entrant Feature Structures]</a:documentation>
-         <optional>
-            <ref name="model.featureVal"/>
-         </optional>
-         <ref name="att.global.attributes"/>
-         <attribute name="name">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies a name identifying the sharing point.</a:documentation>
-            <data type="token">
-               <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-            </data>
-         </attribute>
-         <empty/>
-      </element>
-   </define>
-   <define name="vNot">
-      <element name="vNot">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(value negation) represents a feature value which is the negation of its content. [18.8.2. Negation]</a:documentation>
-         <ref name="model.featureVal"/>
-         <ref name="att.global.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="vMerge">
-      <element name="vMerge">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(merged collection of values) represents a feature value which is the result of merging together the feature values contained by its children, using the organization specified by the org attribute. [18.8.3. Collection of Values]</a:documentation>
-         <oneOrMore>
-            <ref name="model.featureVal"/>
-         </oneOrMore>
-         <ref name="att.global.attributes"/>
-         <optional>
-            <attribute name="org">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the organization of the resulting merged values as set, bag or list.</a:documentation>
-               <choice>
-                  <value>set</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the resulting values are organized as a set.</a:documentation>
-                  <value>bag</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the resulting values are organized as a bag (multiset).</a:documentation>
-                  <value>list</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates that the resulting values are organized as a list.</a:documentation>
-               </choice>
             </attribute>
          </optional>
          <empty/>

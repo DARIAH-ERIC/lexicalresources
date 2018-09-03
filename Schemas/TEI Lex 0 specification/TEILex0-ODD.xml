@@ -1933,6 +1933,17 @@
                         <!--<classes mode="change">
                             <memberOf key="att.notated" mode="add"/>
                         </classes>-->
+                        <content>
+                            <alternate minOccurs="0"
+                                maxOccurs="unbounded">
+                                <classRef key="model.gLike"/>
+                                <classRef key="model.phrase"/>
+                                <classRef key="model.inter"/>
+                                <elementRef key="usg"/>
+                                <elementRef key="lbl"/>
+                                <classRef key="model.global"/>
+                            </alternate>
+                        </content>
                         <attList>
                             <attDef ident="type" mode="replace" usage="req">
                                 <defaultVal>lexical</defaultVal>
