@@ -1904,10 +1904,15 @@
                         except="appInfo application biblFull cRefPattern calendar calendarDesc catDesc correction extent handNote stdVals styleDefDecl tagUsage tagsDecl textClass typeNote"/>
                     <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
 
+                    <!-- Initial change to make entry recursive (LR) -->
+                    <!-- 2018-09-03 (LR): making @xml:id required -->
                     <elementSpec ident="entry" mode="change">
                         <classes mode="change">
                             <memberOf key="model.entryPart.top"/>
                         </classes>
+                        <attList>
+                            <attDef ident="xml:id" mode="change" usage="req"/>
+                        </attList>
                     </elementSpec>
 
                     <!-- 2018-09-03 (LR): making @xml:id mandatory on sense -->
