@@ -1909,7 +1909,7 @@
                     <!-- 2018-09-03 (LR): making @xml:id required -->
                     <elementSpec ident="entry" mode="change">
                         <classes mode="change">
-                            <memberOf key="model.entryPart.top"/>
+                            <memberOf key="model.entryPart.top" mode="add"/>
                         </classes>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
@@ -1919,6 +1919,21 @@
                     <!-- 2018-09-03 (LR): making @xml:id mandatory on sense -->
 
                     <elementSpec ident="sense" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                        </classes>
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <classRef key="model.gLike"/>
+                                <!-- following line useless since sense is member of model.sensePart -->
+                                <!--<elementRef key="sense"/>
+                                -->
+                                <classRef key="model.sensePart"/>
+                                <classRef key="model.phrase"/>
+                                <classRef key="model.global"/>
+                            </alternate>
+                        </content>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
                         </attList>
@@ -1927,15 +1942,17 @@
                     <!-- 2018-07-17 (LR): the <xr> element is adapted to have specific @type values -->
                     <!-- implemented default value to lexical -->
                     <!-- introducing @subtype (note to myself: make feature request to TEI so that xr belongs to att.typed -->
-                    <!-- made member of att.notated (for having @notation) -->
+                    <!-- made member of att.notated (for having @notation) ==> to be discussed -->
 
                     <elementSpec ident="xr" mode="change">
-                        <!--<classes mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                            <!--<classes mode="change">
                             <memberOf key="att.notated" mode="add"/>
                         </classes>-->
+                        </classes>
                         <content>
-                            <alternate minOccurs="0"
-                                maxOccurs="unbounded">
+                            <alternate minOccurs="0" maxOccurs="unbounded">
                                 <classRef key="model.gLike"/>
                                 <classRef key="model.phrase"/>
                                 <classRef key="model.inter"/>
@@ -1964,6 +1981,9 @@
                     <!-- 2018-07-17 (TT): the <usg> element is adapted to have specific @type values -->
                     <elementSpec ident="usg" mode="change">
                         <desc xml:lang="fr">blabla</desc>
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                        </classes>
                         <attList>
                             <attDef ident="type" mode="replace" usage="req">
                                 <valList type="closed" mode="change">
@@ -1995,6 +2015,58 @@
                             <p>What a nice remark!</p>
                         </remarks>
                     </elementSpec>
+
+                    <!-- adding def to model.sensePart -->
+                    <elementSpec ident="def" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                            <memberOf key="model.entryPart.top" mode="delete"/>
+                        </classes>
+                    </elementSpec>
+
+                    <!-- adding cit to model.sensePart -->
+                    <elementSpec ident="cit" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                        </classes>
+                    </elementSpec>
+
+                    <!-- adding form to model.sensePart -->
+                    <elementSpec ident="form" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                        </classes>
+                    </elementSpec>
+
+                    <!-- adding gramGrp to model.sensePart -->
+                    <elementSpec ident="gramGrp" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                        </classes>
+                    </elementSpec>
+
+                    <!-- adding etym to model.sensePart -->
+                    <elementSpec ident="etym" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                        </classes>
+                    </elementSpec>
+
+                    <!-- adding lbl to model.sensePart -->
+                    <elementSpec ident="lbl" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.sensePart" mode="add"/>
+                            <memberOf key="model.entryPart.top" mode="delete"/>
+                        </classes>
+                    </elementSpec>
+
+                    <!-- Introducing new class for the content model of <sense> -->
+                    <!-- Elements remaining to be put in: dictScrap     re -->
+                    <!-- and we add: sense to simplify the content model <= but do we want that?!?-->
+
+                    <classSpec type="model" ident="model.sensePart">
+                        <desc>groups together all the elements from the dictionary modules that can appear as child of <gi>sense</gi></desc>
+                    </classSpec>
                 </schemaSpec>
             </div>
         </body>
