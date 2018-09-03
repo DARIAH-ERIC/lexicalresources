@@ -340,7 +340,7 @@
                 </div>
                 <div>
                     <head>Changes to the content model of <gi>entry</gi></head>
-                    <p>Within TEI-Lex-0, <gi>entry</gi> may contain the following elements:
+                    <p>In TEI Lex-0, <gi>entry</gi> may contain the following elements:
                             <gi>form</gi>, <gi>sense</gi>, <gi>entry</gi>, <gi>etym</gi>,
                             <gi>gramGrp</gi>, <gi>usg</gi>, <gi>xr</gi>, <gi>pc</gi>, and
                             <gi>dictScrap</gi>. Contrary to the current TEI <hi rend="italic"
@@ -348,6 +348,7 @@
                             <gi>def</gi>, <gi>hom</gi>, and <gi>cit</gi>. See the section <ref
                             target="#hp8vymhe6byi"><hi>Towards a more systematic use of
                                     <gi>sense</gi></hi></ref> below.</p>
+                    <p>In TEI Lex-0, <gi>entry</gi> has a mandatory <att>xml:id</att>.</p>
                 </div>
                 <div xml:id="TypesOfEntries">
                     <head>Types of entries</head>
@@ -413,7 +414,9 @@
                         <item>niche</item>
                         <item>xr</item>
                     </list>
-                    <p><hi>TODO: Priviledge one strategy (discussion)?</hi></p>
+                    <p><hi>TODO: Priviledge one strategy (discussion)?</hi> See this <ref
+                            target="https://github.com/DARIAH-ERIC/lexicalresources/issues/12"
+                            >issue</ref> on GitHub.</p>
                 </div>
             </div>
             <div>
@@ -454,6 +457,7 @@
                         retro-digitizing an existing dictionary source, the use of
                             <gi>dictScrap</gi> is recommended. Further step in the encoding of the
                         lexical content may lead to a more precise encoding in a second phase.</p>
+                    <p>In TEI Lex-0, <gi>sense</gi> has a mandatory <att>xml:id</att>.</p>
                 </div>
                 <div>
                     <head>A limited number of possible contexts for <gi>def</gi></head>
