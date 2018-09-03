@@ -2497,7 +2497,15 @@
                             <memberOf key="model.entryPart.top"/>
                         </classes>
                     </elementSpec>
-
+                    
+                    <!-- 2018-09-03 (LR): making @xml:id mandatory on sense -->
+                    
+                    <elementSpec ident="sense" mode="change">
+                        <attList>
+                            <attDef ident="xml:id" mode="change" usage="req"/>
+                        </attList>
+                    </elementSpec>
+                    
                     <!-- 2018-07-17 (LR): the <xr> element is adapted to have specific @type values -->
                     <elementSpec ident="xr" mode="change">
                         <attList>
