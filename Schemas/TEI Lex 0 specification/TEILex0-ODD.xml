@@ -1902,7 +1902,7 @@
                     <moduleRef key="iso-fs" except="bicond binary cond default fDecl fDescr fLib fsConstraints fsDecl fsDescr fsdDecl fsdLink fvLib if iff numeric then vAlt vColl vDefault"/>
                     <moduleRef key="header"
                         except="appInfo application biblFull cRefPattern calendar calendarDesc catDesc correction extent handNote stdVals styleDefDecl tagUsage tagsDecl textClass typeNote"/>
-                    <moduleRef key="tei"/>
+                    <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
 
                     <elementSpec ident="entry" mode="change">
                         <classes mode="change">
