@@ -2021,6 +2021,33 @@
                         <classes mode="change">
                             <memberOf key="model.entryPart" mode="add"/>
                         </classes>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <cit type="cognate">
+                                    <lang>dän.</lang>
+                                    <form>
+                                        <orth xml:lang="da">indgang</orth>
+                                    </form>
+                                </cit>
+                            </egXML>
+                        </exemplum>
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <cit type="etymon">
+                                    <lang>mhd.</lang>
+                                    <form type="variant">
+                                        <orth xml:lang="gmh">vreten</orth>
+                                    </form>
+                                    <form type="variant">
+                                        <orth xml:lang="gmh">vretten</orth>
+                                    </form>
+                                    <form type="variant">
+                                        <orth xml:lang="gmh">vraten</orth>
+                                    </form>
+                                    <def>entzünden; wundreiben; herumziehen; quälen; plagen</def>    
+                                </cit>
+                            </egXML>
+                        </exemplum>
                     </elementSpec>
 
                     <!-- adding def to model.sensePart -->
