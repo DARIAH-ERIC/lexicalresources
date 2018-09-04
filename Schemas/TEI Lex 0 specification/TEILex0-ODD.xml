@@ -2015,6 +2015,13 @@
                             <p>What a nice remark!</p>
                         </remarks>
                     </elementSpec>
+                    
+                    <!-- adding lang to model.entryPart (to make it member of <cit>, if you ask -->
+                    <elementSpec ident="lang" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.entryPart" mode="add"/>
+                        </classes>
+                    </elementSpec>
 
                     <!-- adding def to model.sensePart -->
                     <elementSpec ident="def" mode="change">
