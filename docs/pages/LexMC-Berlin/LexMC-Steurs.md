@@ -5,7 +5,7 @@
 **Who:** Frieda Steurs, full professor at the KU Leuven
 
 
-### Clarin, Clariah and Dariah: Towards a Full Infrastructure for Digital Humanities in Europe
+### Clarin, Clariah and Dariah: Towards a Full Infrastructure for Digital Humanities in Europe 
 
 In this presentation we will discuss the needs for a language community to have extensive language resources and a digital language infrastructure for the development of all types of smart computer applications.  We expand on how an open resources digital language infrastructure is made available for the Low Countries through the Dutch Language Institute. Such an infrastructure facilitates the development of a large number of technological applications.
 
