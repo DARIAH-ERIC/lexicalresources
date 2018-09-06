@@ -175,8 +175,8 @@
     <!--do not show schema until fixed, it chokes up the markdown processor -->
     
     <xsl:template match="div[@class='specification']">
-       <!-- <xsl:copy-of select="."></xsl:copy-of>-->
-        <xsl:text> SPECIFICATION missing -- Markdown issues to be fixed </xsl:text>
+       <xsl:copy-of select="."></xsl:copy-of>
+        <!--<xsl:text> SPECIFICATION missing -\- Markdown issues to be fixed </xsl:text>-->
     </xsl:template>
     
     
