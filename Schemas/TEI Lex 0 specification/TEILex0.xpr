@@ -10,7 +10,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>ODD2md.xsl</String>
+                                    <String>TEILex0-ODD.html</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -25,7 +25,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0-ODD.html</String>
+                                    <String>ODD2md.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
