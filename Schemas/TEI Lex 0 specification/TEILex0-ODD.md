@@ -279,7 +279,6 @@
     * [13.5.25. teidata.xpath](#13525-teidataxpath)
 
 <!--TEI body-->## 1. Introduction
-
 Achieving consistent encoding within a given community of practice has been a recurrent
 issue for the TEI Guidelines. The topic is of particular importance for lexical data
 if we think of the potential wealth of content we could gain from pooling together
@@ -308,7 +307,6 @@ as possible with the TEI subset developed in conjunction with the revision of th
 ISO LMF (Lexical Markup Framework) standard (cf. [Romary, 2015])
 
 ### 1.1. Context
-
 Preliminary work for the establishment of TEI Lex-0 started in the Working Group "Retrodigitised
 Dictionaries" lead by Toma Tasovac and Vera Hildenbrandt as part of the COST Action
 <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="http://www.elexicography.eu">European Network of e-Lexicography</a> (ENeL). Upon the completion of the COST Action, the work on TEI Lex-0 was taken up
@@ -320,7 +318,6 @@ The above paragraph should be expanded to include a list of meetings we organize
 who sponsored them, who attended etc. 
 
 ### 1.2. Dictionary model vs. XML serialization
-
 A fundamental principle that the present enterprise relies on is the nature of the
 mapping of the physical or “near-physical” (OCR-ed) dictionary contents onto the abstract
 model of a dictionary structure, and the mapping from said model onto its (in our
@@ -370,10 +367,9 @@ The following example from a bilingual dictionary, shows how one typed element �
    </sense>
 </entry>
 ```
+
 ## 2. Entries and entry-like objects
-
 ### 2.1. Unified representation of entries
-
 In the current <span xmlns="http://www.w3.org/1999/xhtml" style="font-style:italic">Guidelines</span>, the TEI defines four different container elements that may serve as grouping devices
 for lexical information on the level of entries (the following definitions are taken
 from the TEI guidelines, emphasis added):
@@ -452,6 +448,7 @@ to the current TEI <span xmlns="http://www.w3.org/1999/xhtml" style="font-style:
    <!-- ... -->
 </superEntry>
 ```
+
 In TEI-Lex-0, this nest of entries would be modelled as an <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a> in its own right. Note that the former <span xmlns="http://www.w3.org/1999/xhtml" class="gi">&lt;superEntry&gt;</span> was transformed into a typed entry (see <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TypesOfEntries" title="Types of entries">Types of entries</a> below for a detailed discussion of entry types):
 
 
@@ -489,6 +486,7 @@ In TEI-Lex-0, this nest of entries would be modelled as an <a xmlns="http://www.
    <!-- ... -->
 </entry>
 ```
+
 The same encoding strategy can be exploited when entries are grouped under a common
 morphological root as is customary for Arabic dictionaries such as the 48th edition
 of “The Dictionary of Language and Proper Nouns” (المنجد في اللغة والأعلام) presented
@@ -519,6 +517,7 @@ below:
    <!-- … -->
 </entry>
 ```
+
 Note that the embedded entries are enumerated by way of the attribute @n.
 
 This type of grouping is also customarily used in dictionaries of word-families in
@@ -557,6 +556,7 @@ together with English equivalents”:
    </entry>
 </entry>
 ```
+
 In the Collins/COBUILD “Dictionary of Idioms” (2nd. ed., 2002), idioms are grouped
 under a common headword. No additional information for the headword is provided; it
 only serves as part of the access structure for the idioms. This can also be modelled
@@ -588,17 +588,16 @@ using recursive entries. Again, see <a xmlns="http://www.w3.org/1999/xhtml" clas
    </entry>
 </entry>
 ```
+
 For <span xmlns="http://www.w3.org/1999/xhtml" class="gi">&lt;entryFree&gt;</span>, the content model is defined more freely than for <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a>. To account for entries that do not follow the rather strict lexical model envisioned
 by the TEI <span xmlns="http://www.w3.org/1999/xhtml" style="font-style:italic">Guidelines</span> for <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.dictScrap" title="<dictScrap&gt;">&lt;dictScrap&gt;</a> within <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a> shall be used.
 
 ### 2.2. Changes to the content model of &lt;entry&gt;
-
 In TEI Lex-0, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a> may contain the following elements: <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.form" title="<form&gt;">&lt;form&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.sense" title="<sense&gt;">&lt;sense&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.etym" title="<etym&gt;">&lt;etym&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.gramGrp" title="<gramGrp&gt;">&lt;gramGrp&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.usg" title="<usg&gt;">&lt;usg&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.xr" title="<xr&gt;">&lt;xr&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.pc" title="<pc&gt;">&lt;pc&gt;</a>, and <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.dictScrap" title="<dictScrap&gt;">&lt;dictScrap&gt;</a>. Contrary to the current TEI <span xmlns="http://www.w3.org/1999/xhtml" style="font-style:italic">Guidelines</span>, it may not directly contain the following elements: <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.def" title="<def&gt;">&lt;def&gt;</a>, <span xmlns="http://www.w3.org/1999/xhtml" class="gi">&lt;hom&gt;</span>, and <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.cit" title="<cit&gt;">&lt;cit&gt;</a>. See the section <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#hp8vymhe6byi" title=""><span class="hi">Towards a more systematic use of <a class="link_ref" href="#TEI.sense" title="<sense&gt;">&lt;sense&gt;</a></span></a> below.
 
 In TEI Lex-0, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a> has a mandatory <span xmlns="http://www.w3.org/1999/xhtml" class="att">xml:id</span>.
 
 ### 2.3. Types of entries
-
 Based on the proposed definition for <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a> in TEI-Lex-0, entries are conceived as “the most basic” elements of the microstructure.
 The examples provided in the section <span xmlns="http://www.w3.org/1999/xhtml" class="hi">Unified representation of entries</span> illustrate two applications of entries embedded within entries and make it obvious
 that different types of linguistic entities can be represented by <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a> in one single dictionary. Therefore, the provision of a <span xmlns="http://www.w3.org/1999/xhtml" class="att">type</span> attribute for <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a> is encouraged in such cases. The value for the type attribute shall denote a property
@@ -656,9 +655,7 @@ this domain include:
 </ul><span xmlns="http://www.w3.org/1999/xhtml" class="hi">TODO: Priviledge one strategy (discussion)?</span> See this <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="https://github.com/DARIAH-ERIC/lexicalresources/issues/12">issue</a> on GitHub.
 
 ## 3. Towards a more systematic use of &lt;sense&gt;
-
 ### 3.1. Guidelines
-
 In the current TEI Dictionary Chapter, the content model of <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a> allows one to have sense-related information directly within <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.entry" title="<entry&gt;">&lt;entry&gt;</a>. TEI Lex-0 proscribes a stricter use of these elements so that sense-related information
 is grouped within the <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.sense" title="<sense&gt;">&lt;sense&gt;</a> element, in accordance with the underlying semasiological model implemented in the
 TEI <span xmlns="http://www.w3.org/1999/xhtml" style="font-style:italic">Guidelines</span>.
@@ -686,7 +683,6 @@ more precise encoding in a second phase.
 In TEI Lex-0, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.sense" title="<sense&gt;">&lt;sense&gt;</a> has a mandatory <span xmlns="http://www.w3.org/1999/xhtml" class="att">xml:id</span>.
 
 ### 3.2. A limited number of possible contexts for &lt;def&gt;
-
 In the current TEI guidelines, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.def" title="<def&gt;">&lt;def&gt;</a> is allowed to be used within the following elements:
 
 
@@ -697,7 +693,6 @@ In the current TEI guidelines, <a xmlns="http://www.w3.org/1999/xhtml" class="li
 </ul>TEI Lex-0 allows the use of <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.def" title="<def&gt;">&lt;def&gt;</a> in <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.sense" title="<sense&gt;">&lt;sense&gt;</a>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.cit" title="<cit&gt;">&lt;cit&gt;</a> and <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.etym" title="<etym&gt;">&lt;etym&gt;</a> only. All other existing contexts would be implemented by embedding <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.def" title="<def&gt;">&lt;def&gt;</a> within a <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.sense" title="<sense&gt;">&lt;sense&gt;</a>.
 
 ### 3.3. Encoding sense in entries with multiple parts of speech
-
 For multi-POS lexical entries, TEI Lex-0 considers each POS as a trigger for a new
 sense. Consequently, we recommend encoding grammatical information in each sense coming
 after the first one to be serialised inside the semantic bloc as follows:
@@ -711,6 +706,7 @@ after the first one to be serialised inside the semantic bloc as follows:
    <def>..</def> .. 
 </sense>
 ```
+
 Consider this example, where <span xmlns="http://www.w3.org/1999/xhtml" class="mentioned">arrest</span> appears both as a verb and a noun:
 
 
@@ -762,8 +758,8 @@ Consider this example, where <span xmlns="http://www.w3.org/1999/xhtml" class="m
    </sense>
 </entry>
 ```
-### 3.4. Case of bilingual dictionaries
 
+### 3.4. Case of bilingual dictionaries
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="figure"><img src="media/image13.png" alt="" class="inline" style=" width:15.927916666666667cm; height:5.538611111111111cm;"></img><span class="caption">Excerpt from the entry <span class="mentioned">aid</span> from XXX</span></div>
 ```xml
@@ -921,8 +917,8 @@ Consider this example, where <span xmlns="http://www.w3.org/1999/xhtml" class="m
    </entry>
 </entry>
 ```
-### 3.5. Deprecating &lt;hom&gt;
 
+### 3.5. Deprecating &lt;hom&gt;
 Making a clear difference between a situation where an entry has to be split into
 two or more homonyms and one where these differences correspond to a semantic alternation
 is lexicographically difficult. Still, the main danger in keeping both possibilities
@@ -957,6 +953,7 @@ appropriate <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.
    </hom>
 </entry>
 ```
+
 would in TEI Lex-0 be represented as:
 
 
@@ -989,14 +986,13 @@ would in TEI Lex-0 be represented as:
    <pc>.</pc>
 </entry>
 ```
-## 4. Written and Spoken Forms
 
+## 4. Written and Spoken Forms
 The current TEI <span xmlns="http://www.w3.org/1999/xhtml" style="font-style:italic">Guidelines</span> allows for an extremely wide range of encoding possibilities for written and spoken
 forms. In the discussion which follows, we suggest ways in which the elements, in
 particular <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.form" title="<form&gt;">&lt;form&gt;</a>, can be constrained. We give examples of use types not covered by the <span xmlns="http://www.w3.org/1999/xhtml" style="font-style:italic">Guidelines</span>, and propose some extensions.
 
 ### 4.1. A note on inheritance
-
 We assume that in order to determine the complete properties of an element inside
 the entry tree, the principle of default inheritance applies, e.g. grammatical properties
 of a form are determined by collecting the sibling <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.gramGrp" title="<gramGrp&gt;">&lt;gramGrp&gt;</a> of the ancestor-or-self of the focus element, where the superordinate grammatical
@@ -1005,7 +1001,6 @@ straightforward in the case of grammatical properties, but more complex for the 
 paradigm, esp. in cases of variant forms. For more information c.f. Ide et al. (<a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="https://www.kilgarriff.co.uk/Publications/2000-IdeKilgRomary-Euralex.pdf"><span class="hi">2000</span></a>) and Erjavec et al. (<a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="http://www.lrec-conf.org/proceedings/lrec2000/html/summary/335.htm"><span class="hi">2000</span></a>).
 
 ### 4.2. Grammatical properties of lexical entries
-
 Grammatical properties of lexical entries should be specified in <code xmlns="http://www.w3.org/1999/xhtml">entry/gramGrp</code>. This element will typically specify the part-of-speech of the entry.
 
 
@@ -1019,6 +1014,7 @@ Grammatical properties of lexical entries should be specified in <code xmlns="ht
    </gramGrp> ... 
 </entry>
 ```
+
 Notes:
 
 
@@ -1068,8 +1064,8 @@ Notes:
    </sense>
 </entry>
 ```
-### 4.3. Representation of the lemma
 
+### 4.3. Representation of the lemma
 The form element should always be qualified by its <span xmlns="http://www.w3.org/1999/xhtml" class="att">type</span>. The lemma (i.e. headword) form should be encoded as <code xmlns="http://www.w3.org/1999/xhtml">form[@type="lemma"]</code>.
 
 If it is necessary to specify the grammatical properties of the lemma form itself
@@ -1084,8 +1080,8 @@ If it is necessary to specify the grammatical properties of the lemma form itsel
    </gramGrp>
 </form>
 ```
-### 4.4. Representation of inflected forms
 
+### 4.4. Representation of inflected forms
 Dictionaries often include additional forms next to the lemma. In English, these are
 used to specify irregular forms, such as “corpus / corpora” or “take / took”, whereas
 in inflectionally rich languages they are often used to help the user determine the
@@ -1107,10 +1103,10 @@ Such inflected forms should be encoded in <code xmlns="http://www.w3.org/1999/xh
    </form>
 </entry>
 ```
+
 ... 
 
 ### 4.5. Paradigms
-
 When several inflected forms can be present next to the lemma, these can be embedded
 into <code xmlns="http://www.w3.org/1999/xhtml">entry/form[@type="paradigm"]</code>. The decision on whether to use this extra element depends on the particular dictionary
 and language.
@@ -1163,14 +1159,13 @@ by the <span xmlns="http://www.w3.org/1999/xhtml" class="att">subtype</span> att
    </form> ... 
 </entry>
 ```
-### 4.6. Representation of variants
 
+### 4.6. Representation of variants
 The representation of variation within a form is highly dependant upon the specifics
 of the features of the variation and the way in which they vary. However, as a general
 principle, variation may be encoded as <code xmlns="http://www.w3.org/1999/xhtml">form[@type="variant"]</code> and embedded within the parent element for which a subordinate feature exhibits variation.
 
 ### 4.6.1. Orthographic variation
-
 Several kinds of orthographic variation may be distinguished. Below, we present some
 of the options with the corresponding examples.
 
@@ -1204,6 +1199,7 @@ Spelling variation due to change in language’s orthography convention:
    </form> .... 
 </entry>
 ```
+
 The following example is from American English in which due to the lack of official
 conventions for transliteration of Arabic orthography to the English (Latin) script,
 the initial vowel in the surname ‘Osama Bin Laden’ varies between ‘O’ and ‘U’:
@@ -1232,8 +1228,8 @@ the initial vowel in the surname ‘Osama Bin Laden’ varies between ‘O’ an
    </form>
 </form>
 ```
-### 4.6.2. Phonetic Variation
 
+### 4.6.2. Phonetic Variation
 In this example, the entry contains the single orthographic form as a direct child
 of the lemma and phonetic transcriptions of the two roughly equally used variant pronunciations
 of the word 'caramel' from American English.
@@ -1256,10 +1252,10 @@ of the word 'caramel' from American English.
    <!-- ... -->
 </entry>
 ```
+
 We have an open GitHub <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="https://github.com/DARIAH-ERIC/lexicalresources/issues/16">issue</a> related to this.
 
 ### 4.6.3. Regional or dialectal Variation
-
 In the following example from Mixtepec-Mixtec, there is variation in the form of the
 word for the city of Oaxaca between speakers from the village of Yucanany and the
 rest of the speakers. Since the Yucanany variety makes up only a small portion of
@@ -1292,10 +1288,9 @@ subtag (<code xmlns="http://www.w3.org/1999/xhtml">xml:lang="mix-x-YCNY"</code>)
    </gramGrp> ... 
 </entry>
 ```
+
 ## 5. Structured lexical references (xr/ref)
-
 ### 5.1. Motivation
-
 The current TEI <span xmlns="http://www.w3.org/1999/xhtml" style="font-style:italic">Guidelines</span> provide several mechanisms by means of which one item of lexical information can
 refer to another, e.g.:
 
@@ -1345,7 +1340,6 @@ The proposed mechanism has the following properties
 alternatives can be replaced accordingly.
 
 ### 5.2. Proposal: Using &lt;ref&gt; and &lt;xr&gt; to point to lexical entities
-
 In TEI Lex-0, we use <span xmlns="http://www.w3.org/1999/xhtml" class="gi">&lt;ref&gt;</span> as the general element for a lexical reference and <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.xr" title="<xr&gt;">&lt;xr&gt;</a> as the enclosing element that groups information related to this reference. The reference
 may be internal to a dictionary or pointing to an external source, even when the actual
 target lexical object is not explicitly known. In the latter case, <span xmlns="http://www.w3.org/1999/xhtml" class="gi">&lt;ref&gt;</span> can be used without an explicit pointing attribute. Furthermore the actual intended
@@ -1369,7 +1363,6 @@ For all such uses, the following attributes may be used on <a xmlns="http://www.
    <li class="item"><code>ref/@notation</code> to indicate, like we currently do on <a class="link_ref" href="#TEI.orth" title="<orth&gt;">&lt;orth&gt;</a> or <a class="link_ref" href="#TEI.pron" title="<pron&gt;">&lt;pron&gt;</a> the actual notation used for the explicit lexical form when provided
    </li>
 </ul>### 5.2.1. Typology for xr/@type values
-
 We suggest an extensible list of values, including “cf" for general references which
 do not have clear semantics.
 
@@ -1402,6 +1395,7 @@ do not have clear semantics.
             </entry>
             ```
             
+            
          </td>
       </tr>
       <tr>
@@ -1418,6 +1412,7 @@ do not have clear semantics.
                </etym>
             </entry>
             ```
+            
             
          </td>
       </tr>
@@ -1438,6 +1433,7 @@ do not have clear semantics.
             </entry>
             ```
             
+            
          </td>
       </tr>
       <tr>
@@ -1457,6 +1453,7 @@ do not have clear semantics.
             </entry>
             ```
             
+            
          </td>
       </tr>
       <tr>
@@ -1475,11 +1472,11 @@ do not have clear semantics.
             </entry>
             ```
             
+            
          </td>
       </tr>
    </table>
 </div>### 5.2.2. Suggested values of ref/@target
-
 Cf: <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP"><span class="hi">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP</span></a>
 
 
@@ -1490,7 +1487,6 @@ Cf: <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="http://www.te
    </li>
    <li class="item">#null: there is no concrete reference</li>
 </ul>### 5.2.3. How TEI Lex-0 differs from TEI Guidelines
-
 This section is still not properly encoded.
 
 
@@ -1531,9 +1527,7 @@ This section is still not properly encoded.
       </tr>
    </table>
 </div>### 5.3. &lt;xr&gt; and &lt;ref&gt;: further examples
-
 ### 5.3.1. Simple cross-reference to an entry
-
 
 ```xml
 <entry xmlns="http://www.tei-c.org/ns/Examples">
@@ -1546,8 +1540,8 @@ This section is still not properly encoded.
    </xr>
 </entry>
 ```
-### 5.3.2. More complex example including quotations
 
+### 5.3.2. More complex example including quotations
 
 ```xml
 <entry xmlns="http://www.tei-c.org/ns/Examples">
@@ -1593,13 +1587,12 @@ This section is still not properly encoded.
    </sense>
 </entry>
 ```
+
 ### 5.3.3. Synonym, hyperonym, etc as (part of) a definition (“synonym definition", “genus
 proximum”)
-
 Under consideration. See this <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="https://github.com/DARIAH-ERIC/lexicalresources/issues/24">issue</a> on GitHub.
 
 ## 6. Usage information
-
 In the current TEI guidelines, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="#TEI.usg" title="<usg&gt;">&lt;usg&gt;</a> is defined as an element which marks up “usage information in a dictionary entry”.
 Prototypically, usage information is a label which can be attached at various points
 in the entry hierarchy in order to signal e. g. restrictions in terms of geographic
@@ -1607,7 +1600,6 @@ regions, domains of specialized language or stylistic properties for the particu
 lexical item that it is attached to.
 
 ### 6.1. Label-like vs. narrative usage descriptions
-
 Usage information ca be provided in dictionaries both in the form of label-like descriptors
 (often abbreviated) and as fuller narrative expressions.
 
@@ -1639,6 +1631,7 @@ for stylistic and diatopic properties:
    <def xml:lang="en">offensive, slightly mischievous remark</def>
 </sense>
 ```
+
 In contrast to the example above, the following sample features an occurrence of a
 more verbose usage description that does not rely on a fixed vocabulary. The sample
 is taken from a Serbian dialect dictionary. The quote in the dialect is further qualified
@@ -1660,13 +1653,13 @@ a particular context in which the quote was recorded.
             </cit>
             ```
             
+            
          </td>
       </tr>
    </table>
 </div>### 6.2. Types of usage informationNote: frequency information in a dictionary: usage?
 (corpus based dictionary with frequency information)oldest attestation: date + location
 of oldest attestation of an entry in a corpus based dictionary: usage?
-
 USAGE FURTHER INVESTIGATED: <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="https://docs.google.com/document/d/10xxYwTSrAk1otrkOCZCIwE79VhTjObqmTRhpKosipyU/edit#heading=h.selhcccybq1y">https://docs.google.com/document/d/10xxYwTSrAk1otrkOCZCIwE79VhTjObqmTRhpKosipyU/edit#heading=h.selhcccybq1y</a>
 
 In lexicographic literature, usage information is not always uniformly classified.
@@ -1893,7 +1886,6 @@ the differences between suggested values of <span xmlns="http://www.w3.org/1999/
    </li>
 </ol>### 6.3. Restricting the scope of &lt;usg&gt;
 
-
 <ol xmlns="http://www.w3.org/1999/xhtml">
    <li class="item">Do not use <span class="tag">&lt;usg type="lang"&gt;</span> to mark up the name of a language in an etymological or other discussion. The recommended
       way to encode this information is using <a class="link_ref" href="#TEI.lang" title="<lang&gt;">&lt;lang&gt;</a> element within <a class="link_ref" href="#TEI.etym" title="<etym&gt;">&lt;etym&gt;</a>.
@@ -1915,6 +1907,7 @@ the differences between suggested values of <span xmlns="http://www.w3.org/1999/
          </sense>
       </entryFree>
       ```
+      
       CORRECT
       
       
@@ -1934,6 +1927,7 @@ the differences between suggested values of <span xmlns="http://www.w3.org/1999/
          </sense>
       </entry>
       ```
+      
       
    </li>
    <li class="item">Do not use <span class="tag">&lt;usg type="hyper"&gt;</span> or <span class="tag">&lt;usg type="syn"&gt;</span> to mark lexical relations such as hyperonymy or synonymy. The recommended way to
@@ -2008,7 +2002,6 @@ Zie verder Ts. 67, Afl. 2.
 
 ## 7. References
 
-
 <ul xmlns="http://www.w3.org/1999/xhtml">
    <li class="item">Parthenos WP4 standards library at GitHub:<a class="link_ref" href="https://github.com/ParthenosWP4/standardsLibrary"></a><a class="link_ref" href="https://github.com/ParthenosWP4/standardsLibrary"><span class="hi">https://github.com/ParthenosWP4/standardsLibrary</span></a> with a collection of dictionary samples (many in TEI formats) under Lexicography/ENeL-WG2/Dictionary
       Samples/
@@ -2022,7 +2015,6 @@ Zie verder Ts. 67, Afl. 2.
       </ul>
    </li>
 </ul>## 8. Misc. examples (these are various leftovers, TODO cleanup)
-
 <span xmlns="http://www.w3.org/1999/xhtml" class="hi">Example discussed at ENel WG2 Budapest</span>
 
 
@@ -2117,7 +2109,6 @@ those of the male.&lt;/def&gt;
 &lt;/entry&gt;
 
 ### 8.1. X.2.
-
 from Milena Hebal-Jezierska’s Czech-Polish dictionary (discussed after the meeting
 in Budapest). 
 
@@ -2146,7 +2137,6 @@ I see several issues that are particularly worth discussion here:
       participle kuty. It would be lemmatized under kuć , probably as a <span class="gi">&lt;re&gt;</span> (or an equivalent). I mention this to make sure that, if we end up using <a class="link_ref" href="#TEI.xr" title="<xr&gt;">&lt;xr&gt;</a> for encoding translation equivalents, we also find a way to handle such cases.
    </li>
 </ol>### 8.2. X.3.
-
 From Joanna Bilińska’s Budapest presentation
 
 
@@ -2231,11 +2221,8 @@ mogło.&lt;/quote<span xmlns="http://www.w3.org/1999/xhtml" class="note" id="Not
 </ul>Recommendations on how to do encode idioms, collocates, proverbs etc. (Katrien, Toma)
 
 ## 9. Cited sources
-
 <span xmlns="http://www.w3.org/1999/xhtml" class="author">Charles Du Cange. </span><span xmlns="http://www.w3.org/1999/xhtml" class="titlem">Glossarium ad Scriptores Mediae et Infimae Graecitatis</span>, <a xmlns="http://www.w3.org/1999/xhtml" class="link_ptr" href="http://anemi.lib.uoc.gr/metadata/f/4/b/metadata-01-0000493.tkl"><span>http://anemi.lib.uoc.gr/metadata/f/4/b/metadata-01-0000493.tkl</span></a><span xmlns="http://www.w3.org/1999/xhtml" class="publisher">Apud Amissonios</span>. ## 10. Bibliography
-
 <span xmlns="http://www.w3.org/1999/xhtml" class="titlem">A Formal Model of Dictionary Structure and Content</span>, <span xmlns="http://www.w3.org/1999/xhtml" class="author"><span class="persName"> Nancy Ide</span> 131850 <br xmlns:html="http://www.w3.org/1999/xhtml"></br>, </span><span xmlns="http://www.w3.org/1999/xhtml" class="author"><span class="persName"> Adam Kilgarriff</span> 198330 <br xmlns:html="http://www.w3.org/1999/xhtml"></br>, </span><span xmlns="http://www.w3.org/1999/xhtml" class="author"><span class="persName"> Laurent Romary</span>. </span> 0707.3270<span xmlns="http://www.w3.org/1999/xhtml" class="titlem">Proceedings of Euralex 2000</span>, (<span xmlns="http://www.w3.org/1999/xhtml" class="titlem">Euralex 2000</span>, <span xmlns="http://www.w3.org/1999/xhtml" class="date">2000-08-08. </span><span xmlns="http://www.w3.org/1999/xhtml" class="date">2000-08-12. </span> Stuttgart Germany) <span xmlns="http://www.w3.org/1999/xhtml" class="date">2000. </span>pp. 113-126. ## 11. Annex A: Arabic examples to illustrate recursive entries
-
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="table">
    <table class="rules" style="border-collapse:collapse;border-spacing:0;">
@@ -2288,6 +2275,7 @@ mogło.&lt;/quote<span xmlns="http://www.w3.org/1999/xhtml" class="note" id="Not
                </entry>
             </entry>
             ```
+            
             
          </td>
       </tr>
@@ -2375,6 +2363,7 @@ mogło.&lt;/quote<span xmlns="http://www.w3.org/1999/xhtml" class="note" id="Not
             </entry>
             ```
             
+            
          </td>
       </tr>
       <tr>
@@ -2456,18 +2445,18 @@ mogło.&lt;/quote<span xmlns="http://www.w3.org/1999/xhtml" class="note" id="Not
             </entry>
             ```
             
+            
          </td>
       </tr>
    </table>
 </div>## 12. Annex B: additional examples (could be referenced in the main text)
-
 ### 12.1. Implicit grammatical information (morpheme or particle)
-
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="p">cf. TEI List 
    ```xml
    <orth xmlns="http://www.tei-c.org/ns/Examples">Ἀαρών, ὁ</orth>
    ```
+   
     (Jonathan Robie)
 </div>Piotr suggested: 
 
@@ -2481,6 +2470,7 @@ mogło.&lt;/quote<span xmlns="http://www.w3.org/1999/xhtml" class="note" id="Not
    <gram type="pos">ὁ</gram>
 </gramGrp>
 ```
+
 Issues: @norm/@value (@ana? overkill)
 
 Suggested in <span xmlns="http://www.w3.org/1999/xhtml" class="ref">http://jtei.revues.org/540</span>:
@@ -2494,6 +2484,7 @@ Suggested in <span xmlns="http://www.w3.org/1999/xhtml" class="ref">http://jtei.
    <orth>Katze</orth>
 </form>
 ```
+
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="specification" id="index.xml-body.1_div.13">
    <h2><span class="headingNumber">13. </span><span class="head">Specification</span></h2>

@@ -119,20 +119,20 @@
     <xsl:template match="div[@class='teidiv0']/h2">
         <xsl:text>## </xsl:text>
         <xsl:value-of select="my:striporama(.)"/>
-        <xsl:text>&#xA;&#xA;</xsl:text>
+        <xsl:text>&#xA;</xsl:text>
         
     </xsl:template>
     
     <xsl:template match="div[@class='teidiv1']/h3">
         <xsl:text>### </xsl:text>
         <xsl:value-of select="my:striporama(.)"/>
-        <xsl:text>&#xA;&#xA;</xsl:text>
+        <xsl:text>&#xA;</xsl:text>
 
     </xsl:template>
     <xsl:template match="div[@class='teidiv2']/h4">
         <xsl:text>### </xsl:text>
         <xsl:value-of select="my:striporama(.)"/>
-        <xsl:text>&#xA;&#xA;</xsl:text>
+        <xsl:text>&#xA;</xsl:text>
         
     </xsl:template>
     
@@ -153,7 +153,7 @@
             <xsl:otherwise>
                 <xsl:text>&#xA;```xml</xsl:text>
                 <xsl:copy-of select="$examples[@xml:id=$htmlid]/child::*" copy-namespaces="no"></xsl:copy-of>
-                <xsl:text>&#xA;```&#xA;</xsl:text>
+                <xsl:text>&#xA;```&#xA;&#xA;</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
