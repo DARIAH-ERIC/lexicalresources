@@ -51,7 +51,7 @@
     <xsl:template match="div[starts-with(@class,'stdheader')]"></xsl:template>
     
     <xsl:template match="/html/head">
-        <xsl:text>#</xsl:text>
+        <xsl:text># </xsl:text>
         <xsl:value-of select="./title"/>
         <xsl:text>&#xA;&#xA;</xsl:text>
     </xsl:template>
@@ -130,7 +130,7 @@
 
     </xsl:template>
     <xsl:template match="div[@class='teidiv2']/h4">
-        <xsl:text>### </xsl:text>
+        <xsl:text>#### </xsl:text>
         <xsl:value-of select="my:striporama(.)"/>
         <xsl:text>&#xA;</xsl:text>
         

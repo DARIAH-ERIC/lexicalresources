@@ -1,4 +1,4 @@
-#TEI Lex-0 — A baseline encoding for lexicographic data
+# TEI Lex-0 — A baseline encoding for lexicographic data
 
 
 <!--TEI front-->Table of contents
@@ -1165,7 +1165,7 @@ The representation of variation within a form is highly dependant upon the speci
 of the features of the variation and the way in which they vary. However, as a general
 principle, variation may be encoded as <code xmlns="http://www.w3.org/1999/xhtml">form[@type="variant"]</code> and embedded within the parent element for which a subordinate feature exhibits variation.
 
-### 4.6.1. Orthographic variation
+#### 4.6.1. Orthographic variation
 Several kinds of orthographic variation may be distinguished. Below, we present some
 of the options with the corresponding examples.
 
@@ -1229,7 +1229,7 @@ the initial vowel in the surname ‘Osama Bin Laden’ varies between ‘O’ an
 </form>
 ```
 
-### 4.6.2. Phonetic Variation
+#### 4.6.2. Phonetic Variation
 In this example, the entry contains the single orthographic form as a direct child
 of the lemma and phonetic transcriptions of the two roughly equally used variant pronunciations
 of the word 'caramel' from American English.
@@ -1255,7 +1255,7 @@ of the word 'caramel' from American English.
 
 We have an open GitHub <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="https://github.com/DARIAH-ERIC/lexicalresources/issues/16">issue</a> related to this.
 
-### 4.6.3. Regional or dialectal Variation
+#### 4.6.3. Regional or dialectal Variation
 In the following example from Mixtepec-Mixtec, there is variation in the form of the
 word for the city of Oaxaca between speakers from the village of Yucanany and the
 rest of the speakers. Since the Yucanany variety makes up only a small portion of
@@ -1362,7 +1362,7 @@ For all such uses, the following attributes may be used on <a xmlns="http://www.
    </li>
    <li class="item"><code>ref/@notation</code> to indicate, like we currently do on <a class="link_ref" href="#TEI.orth" title="<orth&gt;">&lt;orth&gt;</a> or <a class="link_ref" href="#TEI.pron" title="<pron&gt;">&lt;pron&gt;</a> the actual notation used for the explicit lexical form when provided
    </li>
-</ul>### 5.2.1. Typology for xr/@type values
+</ul>#### 5.2.1. Typology for xr/@type values
 We suggest an extensible list of values, including “cf" for general references which
 do not have clear semantics.
 
@@ -1476,7 +1476,7 @@ do not have clear semantics.
          </td>
       </tr>
    </table>
-</div>### 5.2.2. Suggested values of ref/@target
+</div>#### 5.2.2. Suggested values of ref/@target
 Cf: <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP"><span class="hi">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP</span></a>
 
 
@@ -1486,7 +1486,7 @@ Cf: <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="http://www.te
    <li class="item">xpath/xpointer expressions, using TEI xpointer schemes (<a class="link_ref" href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATS"><span class="hi">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATS</span></a>) See <a class="link_ref" href="https://github.com/DARIAH-ERIC/lexicalresources/issues/23">GitHub issue</a>.
    </li>
    <li class="item">#null: there is no concrete reference</li>
-</ul>### 5.2.3. How TEI Lex-0 differs from TEI Guidelines
+</ul>#### 5.2.3. How TEI Lex-0 differs from TEI Guidelines
 This section is still not properly encoded.
 
 
@@ -1527,7 +1527,7 @@ This section is still not properly encoded.
       </tr>
    </table>
 </div>### 5.3. &lt;xr&gt; and &lt;ref&gt;: further examples
-### 5.3.1. Simple cross-reference to an entry
+#### 5.3.1. Simple cross-reference to an entry
 
 ```xml
 <entry xmlns="http://www.tei-c.org/ns/Examples">
@@ -1541,7 +1541,7 @@ This section is still not properly encoded.
 </entry>
 ```
 
-### 5.3.2. More complex example including quotations
+#### 5.3.2. More complex example including quotations
 
 ```xml
 <entry xmlns="http://www.tei-c.org/ns/Examples">
@@ -1588,7 +1588,7 @@ This section is still not properly encoded.
 </entry>
 ```
 
-### 5.3.3. Synonym, hyperonym, etc as (part of) a definition (“synonym definition", “genus
+#### 5.3.3. Synonym, hyperonym, etc as (part of) a definition (“synonym definition", “genus
 proximum”)
 Under consideration. See this <a xmlns="http://www.w3.org/1999/xhtml" class="link_ref" href="https://github.com/DARIAH-ERIC/lexicalresources/issues/24">issue</a> on GitHub.
 
