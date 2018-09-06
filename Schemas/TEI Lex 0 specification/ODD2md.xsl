@@ -38,7 +38,7 @@
         
     </xsl:function>
     
-    <xsl:template match="comment()"/>
+    <xsl:template match="//comment()"/>
 
     <xsl:template match="/html">
         <xsl:apply-templates/>
