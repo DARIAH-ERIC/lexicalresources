@@ -302,10 +302,10 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputFile">
-                                    <File>${cfn}.md</File>
+                                    <File>README.md</File>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${cfn}.md</String>
+                                    <String>README.md</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>

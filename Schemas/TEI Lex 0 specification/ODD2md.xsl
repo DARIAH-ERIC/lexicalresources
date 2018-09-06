@@ -119,20 +119,20 @@
     <xsl:template match="div[@class='teidiv0']/h2">
         <xsl:text>## </xsl:text>
         <xsl:value-of select="my:striporama(.)"/>
-        <xsl:text>&#xA;</xsl:text>
+        <xsl:text>&#xA;&#xA;</xsl:text>
         
     </xsl:template>
     
     <xsl:template match="div[@class='teidiv1']/h3">
         <xsl:text>### </xsl:text>
         <xsl:value-of select="my:striporama(.)"/>
-        <xsl:text>&#xA;</xsl:text>
+        <xsl:text>&#xA;&#xA;</xsl:text>
 
     </xsl:template>
     <xsl:template match="div[@class='teidiv2']/h4">
         <xsl:text>### </xsl:text>
         <xsl:value-of select="my:striporama(.)"/>
-        <xsl:text>&#xA;</xsl:text>
+        <xsl:text>&#xA;&#xA;</xsl:text>
         
     </xsl:template>
     
