@@ -347,13 +347,13 @@
                                     <gi>sense</gi></hi></ref> below.</p>
                     <p>In TEI Lex-0, <gi>entry</gi> has a mandatory <att>xml:id</att> attribute.</p>
                     <p>Furthermore, in TEI Lex-0, <gi>entry</gi> has a mandatory <att>xml:lang</att>
-                        attribute. This may appear superflous considering XML inheritance rules: in TEI proper, one
-                        would use an <att>xml:lang</att> attribute on the <gi>text</gi> element or even the
-                        root <gi>TEI</gi> element to indicate the source language of the dictioanry
-                        and assume that the value of the attribute will be inherited by all the entries.
-                        In TEI Lex-0, we err on the side of overexplicitness in order to
-                        guarantee the global autonomy of the entry as a core element of the
-                        dictionary macrostructure. </p>
+                        attribute. This may appear superflous considering XML inheritance rules: in
+                        TEI proper, one would use an <att>xml:lang</att> attribute on the
+                            <gi>text</gi> element or even the root <gi>TEI</gi> element to indicate
+                        the source language of the dictioanry and assume that the value of the
+                        attribute will be inherited by all the entries. In TEI Lex-0, we err on the
+                        side of overexplicitness in order to guarantee the global autonomy of the
+                        entry as a core element of the dictionary macrostructure. </p>
                 </div>
                 <div xml:id="TypesOfEntries">
                     <head>Types of entries</head>
@@ -1172,7 +1172,7 @@
                                 <cell>default (root of hierarchy)</cell>
                                 <cell/>
                             </row>
-                            
+
                             <row>
                                 <cell>synonym, hyponym, hyperonym, antonym , meronym (etc.) </cell>
                                 <cell/>
@@ -1247,7 +1247,7 @@
                                     used in TEI Lex-0.</item>
                             </list>
                         </p>
-                        
+
                     </div>
                     <div>
                         <head><anchor xml:id="tzhvjc2d1p07"/>How TEI Lex-0 differs from TEI <hi
@@ -1263,11 +1263,14 @@
                             <row>
                                 <cell>synonyms, hyponyms, hyperonyms (and other semantic
                                     relations)</cell>
-                                <cell>&lt;usg type="synonym"&gt;Hund&lt;/usg&gt;</cell>
-                                <cell>&lt;xr
-                                    type="synonym"&gt;<lb/><seg xml:space="preserve">   </seg>&lt;ref
-                                    target="http://woerterbuchnetz.de/DWB/?sigle=DWB&amp;amp;mode=Vernetzung&amp;amp;lemid=GH13199#XGH13199"
-                                        xml:lang="de"&gt;Hund&lt;/ref&gt;<lb/><hi>&lt;/xr&gt;</hi></cell>
+                                <cell><egXML xmlns="http://www.tei-c.org/ns/Examples"><usg
+                                            type="synonym">Hund</usg></egXML></cell>
+                                <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                        <xr type="synonym">
+                                            <ref
+                                                target="http://woerterbuchnetz.de/DWB/?sigle=DWB&amp;mode=Vernetzung&amp;lemid=GH13199#XGH13199"
+                                                xml:lang="de">Hund</ref>
+                                        </xr></egXML></cell>
                             </row>
                             <row>
                                 <cell>abbreviated headword occurrence in quotations</cell>
@@ -2335,7 +2338,7 @@
                         </classes>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
-                            <attDef ident="xml:lang" mode="change" usage="req"/> 
+                            <attDef ident="xml:lang" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
 
