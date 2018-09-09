@@ -1262,23 +1262,29 @@
                         </table>
                     </div>
                     <div>
-                        <head>Suggested values of ref/@target</head>
-                        <p>Cf: <ref
-                                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP"
-                                    ><hi>http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP</hi></ref>
+                        <head>Values of <code>ref/@target</code></head>
+                        <p>
+                            <list type="bulleted">
+                                <item>If the reference has no explicit target, no <att>target</att>
+                                    is used. </item>
+                                <item>As per <ref
+                                        target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP"
+                                        >TEI pointing mechanisms</ref>, the value of
+                                        <att>target</att> must be an URI reference. </item>
+                                <item>For internal references (references to the same dictionary),
+                                    TEI Lex-0 enforces the use of explicit pointers to the
+                                        <att>xml:id</att> of an element being pointed to, preceded
+                                    by <code>#</code>. See Section "<ref
+                                        target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SABN"
+                                        >Pointing Locally</ref>" in the TEI <hi rend="italic"
+                                        >Guidelines</hi>.</item>
+                                <item><ref
+                                        target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATSin"
+                                        >TEI pointers</ref> should <hi rend="italic">not</hi> be
+                                    used in TEI Lex-0.</item>
+                            </list>
                         </p>
-                        <list type="unordered">
-                            <item># + xml:id: reference to element by xml:id inside current
-                                document</item>
-                            <item>URI reference</item>
-                            <item>xpath/xpointer expressions, using TEI xpointer schemes (<ref
-                                    target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATS"
-                                        ><hi>http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATS</hi></ref>)
-                                See <ref
-                                    target="https://github.com/DARIAH-ERIC/lexicalresources/issues/23"
-                                    >GitHub issue</ref>.</item>
-                            <item>#null: there is no concrete reference</item>
-                        </list>
+                        
                     </div>
                     <div>
                         <head><anchor xml:id="tzhvjc2d1p07"/>How TEI Lex-0 differs from TEI <hi
