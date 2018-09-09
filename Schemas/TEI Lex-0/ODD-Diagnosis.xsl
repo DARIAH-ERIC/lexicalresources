@@ -4,7 +4,7 @@
 
     <xsl:output method="html"/>
 
-    <xsl:param name="specificationFileName" select="'./TEILex0-ODD.xml'"/>
+    <xsl:param name="specificationFileName" select="'../TEILex0-ODD.xml'"/>
 
     <!-- Not used yet - to be tested to accelerate the stylesheet -->
     <xsl:key name="examples" match="eg:egXML" use="descendant::*/name()"/>

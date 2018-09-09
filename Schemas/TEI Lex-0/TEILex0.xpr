@@ -10,6 +10,21 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>../TEI%20Lex-0/TEILex0-ODD.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEI Lex-0: ODD to XHTML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>TEILex0-ODD.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -254,7 +269,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v20.1/frameworks/http___www.tei_c.org_release_oxygen_updateSite.oxygen/tei/xml/tei/stylesheet/odds/odd2odd.xsl</String>
+                                    <String>${frameworks}/tei/xml/tei/stylesheet/odds/odd2odd.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
@@ -492,6 +507,6 @@
         </options>
     </meta>
     <projectTree name="TEILex0.xpr">
-        <folder path="."/>
+        <folder path="../../"/>
     </projectTree>
 </project>
