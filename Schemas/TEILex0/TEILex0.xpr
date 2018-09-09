@@ -10,21 +10,6 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>../TEI%20Lex0/TEILex0-ODD.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEI Lex-0: ODD to XHTML</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>TEILex0-ODD.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -305,10 +290,10 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputFile">
-                                    <File>../../docs/pages/TEILex0/TEILex0.html</File>
+                                    <File>../../docs/pages/TEILex0/TEILex-0.html</File>
                                 </field>
                                 <field name="outputResource">
-                                    <String>../../docs/pages/TEILex0/TEILex0.html</String>
+                                    <String>../../docs/pages/TEILex0/TEILex-0.html</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
