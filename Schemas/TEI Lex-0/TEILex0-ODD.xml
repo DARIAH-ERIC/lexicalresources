@@ -1145,9 +1145,7 @@
                             the lexical relation between the headword of the entry and the object
                             referred to (cf. next subsection) </item>
                         <item><code>ref/@type</code> may be an indication of the target object
-                            category (entry, sense, ….) See this <ref
-                                target="https://github.com/DARIAH-ERIC/lexicalresources/issues/20"
-                                >issue</ref> on GitHub.</item>
+                            category (entry, sense).</item>
                         <item><att>xml:lang</att>, which is
                             <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>recommended<?oxy_custom_end?>
                             when <gi>ref</gi> actually contains an
