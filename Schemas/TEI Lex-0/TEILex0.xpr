@@ -10,22 +10,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>../TEI%20Lex-0/TEILex0-ODD.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEI Lex-0: ODD to XHTML</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0-ODD.xml</String>
+                                    <String>../TEI%20Lex%200%20specification/TEILex0-ODD.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -55,7 +40,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0-ODD.html</String>
+                                    <String>../TEI%20Lex%200%20specification/TEILex0-ODD.html</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -70,7 +55,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>ODD2md.xsl</String>
+                                    <String>../TEI%20Lex%200%20specification/ODD2md.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -85,7 +70,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>addIDsToExamples4Markdown.xsl</String>
+                                    <String>../TEI%20Lex%200%20specification/addIDsToExamples4Markdown.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
