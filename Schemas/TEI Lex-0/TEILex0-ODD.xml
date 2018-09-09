@@ -1174,41 +1174,7 @@
                                 <cell>default (root of hierarchy)</cell>
                                 <cell/>
                             </row>
-                            <row>
-                                <cell>cognate</cell>
-                                <cell>link to cognate in other language. See this <ref
-                                        target="https://github.com/DARIAH-ERIC/lexicalresources/issues/19"
-                                        >issue</ref> on GitHub.</cell>
-                                <cell>
-                                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e2437">
-                                        <entry>
-                                            <form type="lemma">voice</form>
-                                            <etym>
-                                                <xr type="cognate">
-                                                  <ref xml:lang="sa">वाच्</ref></xr>
-                                            </etym>
-                                        </entry>
-                                    </egXML>
-                                </cell>
-                            </row>
-                            <row>
-                                <cell>etymon</cell>
-                                <cell>link to (possibly reconstructed) root form</cell>
-                                <cell>
-                                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e2466">
-                                        <entry>
-                                            <form type="lemma">voice</form>
-                                            <etym>
-                                                <xr type="etymon">
-                                                  <ref
-                                                  target="http://indo-european.info/pokorny-etymological-dictionary/u%CC%AFek%CA%B7.htm"
-                                                  xml:lang="PIE">u̯ekʷ-</ref>
-                                                </xr>
-                                            </etym>
-                                        </entry>
-                                    </egXML>
-                                </cell>
-                            </row>
+                            
                             <row>
                                 <cell>synonym, hyponym, hyperonym, antonym , meronym (etc.) </cell>
                                 <cell/>
