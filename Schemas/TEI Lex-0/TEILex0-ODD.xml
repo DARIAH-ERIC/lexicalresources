@@ -180,11 +180,11 @@
                         above). Instead of using four different elements for entry-like objects,
                         only <gi>entry</gi> is used. In order to still be able to construct
                         hierarchies of embedded entries, <gi>entry</gi> is in the context of TEI
-                        Lex-0 allowed to occur recursively (e.g. by making it part of
-                        <ref target="#TEI.model.entryPart.top">model.entryPart.top</ref>). This is where TEI Lex-0 departs from the TEI <hi
-                            rend="italic">Guidelines</hi>, but this <ref
-                            target="https://github.com/TEIC/TEI/issues/1791">issue</ref> has already
-                        been raised with TEI. </p>
+                        Lex-0 allowed to occur recursively (e.g. by making it part of <ref
+                            target="#TEI.model.entryPart.top">model.entryPart.top</ref>). This is
+                        where TEI Lex-0 departs from the TEI <hi rend="italic">Guidelines</hi>, but
+                        this <ref target="https://github.com/TEIC/TEI/issues/1791">issue</ref> has
+                        already been raised with TEI. </p>
                     <p>In the context of TEI-Lex-0, <gi>entry</gi> is used to encode the basic
                         element of the dictionary microstructure; it groups all the information
                         related to a particular linguistic entity and may contain further entries
@@ -195,8 +195,8 @@
                         subsets of the content model of <gi>entry</gi>. Instead of
                             <gi>superEntry</gi> which most typically is used as a mere container for
                         grouping lexical entries, either an <gi>entry</gi> grouping entries can be
-                        used or the mechanisms implemented by <ref target="#TEI.att.global.linking">att.global.linking
-</ref>                        can be exploited.</p>
+                        used or the mechanisms implemented by <ref target="#TEI.att.global.linking"
+                            >att.global.linking </ref> can be exploited.</p>
                     <p>Consider the following excerpt from the “Wörterbuch der deutschen
                         Gegenwartssprache” (“Dictionary of Contemporary German”, WDG, 1964–1977). In
                         the WDG, compounds with the same morphological dependant (but different
@@ -345,7 +345,15 @@
                             <gi>def</gi>, <gi>hom</gi>, and <gi>cit</gi>. See the section <ref
                             target="#hp8vymhe6byi"><hi>Towards a more systematic use of
                                     <gi>sense</gi></hi></ref> below.</p>
-                    <p>In TEI Lex-0, <gi>entry</gi> has a mandatory <att>xml:id</att>.</p>
+                    <p>In TEI Lex-0, <gi>entry</gi> has a mandatory <att>xml:id</att> attribute.</p>
+                    <p>Furthermore, in TEI Lex-0, <gi>entry</gi> has a mandatory <att>xml:lang</att>
+                        attribute. This may appear superflous considering XML inheritance rules: in TEI proper, one
+                        would use an <att>xml:lang</att> attribute on the <gi>text</gi> element or even the
+                        root <gi>TEI</gi> element to indicate the source language of the dictioanry
+                        and assume that the value of the attribute will be inherited by all the entries.
+                        In TEI Lex-0, we err on the side of overexplicitness in order to
+                        guarantee the global autonomy of the entry as a core element of the
+                        dictionary macrostructure. </p>
                 </div>
                 <div xml:id="TypesOfEntries">
                     <head>Types of entries</head>
@@ -411,7 +419,7 @@
                         <item>niche</item>
                         <item>xr</item>
                     </list>
-                    <p><hi>TODO: Priviledge one strategy (discussion)?</hi> See this <ref
+                    <p><hi>This section is not complete. </hi> See this <ref
                             target="https://github.com/DARIAH-ERIC/lexicalresources/issues/12"
                             >issue</ref> on GitHub.</p>
                 </div>
@@ -2358,6 +2366,7 @@
                         </classes>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
+                            <attDef ident="xml:lang" mode="change" usage="req"/> 
                         </attList>
                     </elementSpec>
 
