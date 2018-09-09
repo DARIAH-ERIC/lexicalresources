@@ -50,6 +50,6 @@ If you are working on TEI-encoded dictionaries, we'd love to get your feedback. 
 
 More advanced users can propose solutions by submitting pull requests. Instructions for submitting pull requests will be made at a later date.
 
-<p style='float:left'><img id ="ttl" src="../../docs/assets/img/dariahlogo.png" width="200px"></p>
+<img src="../../docs/assets/img/dariahlogo.png" width="200px">
 
-<p style='float:right'><img style="float:right; padding-top:20px"id ="se" src="../../docs/assets/elexis_logo_color-1-2.png" width="250px"></p>
+<img style='padding-top:25px; padding-left:10px' src="../../docs/assets/elexis_logo_color-1-2.png" width="225px"></p>
