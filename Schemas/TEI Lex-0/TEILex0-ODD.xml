@@ -1141,10 +1141,9 @@
                             <gi>ref</gi>:</p>
                     <list type="unordered">
                         <item><att>type</att> is a mandatory attribute on <gi>xr</gi> for a lexical
-                            reference. Its default value is "lexical" and can be superseded (or
-                            complemented by means of <att>subtype</att>). It should be an indication
-                            of the lexical relation between the headword of the entry and the object
-                            referred to (cf. next subsection)</item>
+                            reference. Its default value is "lexical". It should be an indication of
+                            the lexical relation between the headword of the entry and the object
+                            referred to (cf. next subsection) </item>
                         <item><code>ref/@type</code> may be an indication of the target object
                             category (entry, sense, ….) See this <ref
                                 target="https://github.com/DARIAH-ERIC/lexicalresources/issues/20"
