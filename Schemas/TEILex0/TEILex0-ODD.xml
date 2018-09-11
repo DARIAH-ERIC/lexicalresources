@@ -2027,8 +2027,16 @@
                 <head>Specification</head>
                 <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
                     <!--2018-09-02 (TT): Added PB's useful class modifications-->
-                    <specGrp xml:id="classmods">
-                        <classSpec ident="att.global" mode="change" module="tei" type="atts">
+                   <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
+                        rend, and xml:base are removed from the att.global class, so that this now makes available
+                        to all elements only the following attributes: <att>xml:id</att>, <att>n</att>, and
+                        <att>xml:lang</att>.--> 
+                  <!--  Three un-needed attributes are removed from the att.divLike class so that the
+                        <gi>div</gi> element inherits from it only the following attributes: <att>xml:id</att>,
+                        <att>n</att>, <att>xml:lang</att>. The attribute class <ident>att.declaring</ident> is
+                        deleted completely, so that none of its members inherit the <att>decls</att> attribute
+                        defined in the unmodified TEI.-->
+                    <classSpec ident="att.global" mode="change" module="tei" type="atts">
                             <attList>
                                 <attDef ident="xml:space" mode="delete"/>
                                 <attDef ident="rend" mode="delete"/>
@@ -2043,7 +2051,7 @@
                             </attList>
                         </classSpec>
                         <classSpec ident="att.declaring" mode="delete" module="tei" type="atts"/>
-                    </specGrp>
+                    
 
                     <moduleRef key="gaiji" except="localName"/>
                     <!-- 2018-09-02 (TT): changed moduleRef for linking based on PB -->
