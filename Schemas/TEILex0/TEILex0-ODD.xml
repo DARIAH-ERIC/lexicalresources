@@ -588,13 +588,13 @@
                                 <gramGrp>
                                     <pos>s.</pos>
                                 </gramGrp>
-                                <cit type="equivalent">
+                                <cit type="translationEquivalent">
                                     <form>
                                         <orth>aide</orth>
                                     </form>
                                 </cit>
                                 <pc>,</pc>
-                                <cit type="equivalent">
+                                <cit type="translationEquivalent">
                                     <form>
                                         <orth>assistance</orth>
                                         <pc>,</pc>
@@ -604,7 +604,7 @@
                                     </form>
                                 </cit>
                                 <pc>,</pc>
-                                <cit type="equivalent">
+                                <cit type="translationEquivalent">
                                     <form>
                                         <orth>secours</orth>
                                         <pc>,</pc>
@@ -616,7 +616,7 @@
                             </sense>
                             <pc>;</pc>
                             <sense>
-                                <cit type="equivalent">
+                                <cit type="translationEquivalent">
                                     <form>
                                         <orth>sub-side</orth>
                                     </form>
@@ -629,7 +629,7 @@
                             <pc>;</pc>
                             <sense>
                                 <usg type="hint">(pers)</usg>
-                                <cit type="equivalent">
+                                <cit type="translationEquivalent">
                                     <form>
                                         <orth>aide</orth>
                                     </form>
@@ -646,7 +646,7 @@
                                 </form>
                                 <pc>,</pc>
                                 <sense>
-                                    <cit type="equivalent">
+                                    <cit type="translationEquivalent">
                                         <form>
                                             <orth>à l'aide de</orth>
                                         </form>
@@ -661,9 +661,9 @@
                                 <pc>,</pc>
                                 <sense>
                                     <usg>(of performances)</usg>
-                                    <cit type="equivalent">au profit de</cit>
+                                    <cit type="translationEquivalent">au profit de</cit>
                                     <pc>,</pc>
-                                    <cit type="equivalent">au bénéfice de</cit>
+                                    <cit type="translationEquivalent">au bénéfice de</cit>
                                 </sense>
                             </entry>
                             <pc>.</pc>
@@ -676,13 +676,13 @@
                                     </gramGrp>
                                 </form>
                                 <sense>
-                                    <cit type="equivalent">
+                                    <cit type="translationEquivalent">
                                         <form xml:lang="fr">
                                             <orth>sans aide</orth>
                                         </form>
                                     </cit>
                                     <pc>,</pc>
-                                    <cit type="equivalent">
+                                    <cit type="translationEquivalent">
                                         <form xml:lang="fr">
                                             <orth>sans secours</orth>
                                         </form>
@@ -690,13 +690,13 @@
                                 </sense>
                                 <pc>;</pc>
                                 <sense>
-                                    <cit type="equivalent">
+                                    <cit type="translationEquivalent">
                                         <form>
                                             <orth>abandonné</orth>
                                         </form>
                                     </cit>
                                     <pc>,</pc>
-                                    <cit type="equivalent">
+                                    <cit type="translationEquivalent">
                                         <form>
                                             <orth>délaissé</orth>
                                         </form>
@@ -2026,6 +2026,7 @@
             <div type="specification">
                 <head>Specification</head>
                 <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
+                    
                     <moduleRef key="gaiji" except="localName"/>
                     <!-- 2018-09-02 (TT): changed moduleRef for linking based on PB -->
                     <moduleRef key="linking" include="seg"/>
@@ -2034,16 +2035,24 @@
                     <!-- 2018-09-02 (TT): put dictScrap back, I think we still want it -->
                     <moduleRef key="dictionaries" except="entryFree superEntry re hom"/>
                     <!-- 2018-09-02 (TT): explicitly encoded what we allow from core -->
-                    <moduleRef key="core" include="p list item label head author title cit"/>
-                    <moduleRef key="textstructure"
-                        except="argument byline closer dateline div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle epigraph floatingText group imprimatur opener postscript salute signed titlePage titlePart trailer"/>
-                    <moduleRef key="figures"
-                        except="figDesc figure formula notatedMusic table row cell"/>
-                    <moduleRef key="analysis" except="cl interp interpGrp m phr s span spanGrp w"/>
+                    <!-- 2018-09-11 (TT): removed list, item and label because i don't
+                    see them as lexicographically relevant. I don't thin we need p either
+                    but I'm leaving it for now, in case we need it in the header-->
+                    <moduleRef key="core" include="author head title cit"/>
+                    <!--PB's simplified textstructure declaratiopn-->
+                    <moduleRef key="textstructure" include="TEI text body div front back"/>
+                    <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence 
+                    leaving this here. Also head (from the core module is needed if we have images 
+                    with explicit titles as opposed to captions. This we will come back to of course.-->
+                    <moduleRef key="figures" include="figDesc figure"/>
+                    <!--2018-09-11 (TT): this is superflous because we're removing all elements 
+                    from analysis -->                  
+                    <!--<moduleRef key="analysis" except="cl interp interpGrp m phr s span spanGrp w"/>-->
                     <!--<moduleRef key="iso-fs" except="bicond binary cond default fDecl fDescr fLib fsConstraints fsDecl fsDescr fsdDecl fsdLink fvLib if iff numeric then vAlt vColl vDefault"/>
                     -->
-                    <moduleRef key="header"
-                        except="appInfo application biblFull cRefPattern calendar calendarDesc catDesc correction extent handNote stdVals styleDefDecl tagUsage tagsDecl textClass typeNote"/>
+                    <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
+                    <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt sourceDesc encodingDesc projectDesc"/>
+                    <moduleRef key="namesdates" include="placeName"/> <!-- for dialectal properties -->
                     <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
 
                     <!-- Initial change to make entry recursive (LR) -->

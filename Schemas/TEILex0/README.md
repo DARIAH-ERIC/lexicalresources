@@ -32,7 +32,8 @@ In this repository, you will find:
 
 ### Status
 
-TEI Lex-0 is a work in progress. Our first public release, 0.7 will officially see the light of the day on September 11, 2018.
+TEI Lex-0 is a work in progress. It is not production-ready and it is still undergoing revisions. You can explore the current state of our guidelines 
+[here](https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html)
 
 While the core elements of TEI Lex-0 stand in place, it is expected that the schema will continue to evolve significantly in the coming months.
 
