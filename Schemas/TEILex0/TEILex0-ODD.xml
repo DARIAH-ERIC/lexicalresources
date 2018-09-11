@@ -1267,64 +1267,63 @@
                             <row>
                                 <cell>abbreviated headword occurrence in quotations</cell>
                                 <cell>
-                                    <p>academy … The Royal A~ of Arts OALD</p>
-                                    <p><gi>q</gi><lb/> The Royal<lb/> &lt;oRef type="cap" /&gt;<lb/>
-                                        of Arts<lb/>&lt;/q&gt;</p>
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                        <q>The Royal <oRef type="cap"/> of Arts</q>
+                                    </egXML>
                                 </cell>
-                                <cell><gi>q</gi><lb/> The Royal<lb/> &lt;xr
-                                    type="headwordAttestation"&gt;<lb/><seg xml:space="preserve">      </seg>&lt;ref
-                                    target="#current_entry_id"&gt;A~&lt;/ref&gt;<lb/><seg xml:space="preserve">   </seg>&lt;/xr&gt;<lb/>
-                                    of Arts<lb/>&lt;/q&gt;</cell>
+                                <cell><egXML xmlns="http://www.tei-c.org/ns/Examples"> The Royal <xr
+                                            type="headwordAttestation">
+                                            <ref target="#current_entry_id">A~</ref> of Arts</xr>
+                                    </egXML></cell>
                             </row>
                             <row>
                                 <cell>translation of headword (possibly in a particular
-                                        senses/context)<note place="foot" xml:id="ftn2" n="2">
-                                        <p>
-                                            <ref
-                                                target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-cit.html"
-                                                  ><hi>http://www.tei-c.org/release/doc/tei-p5-doc/en/html/examples-cit.html</hi></ref>
-                                        </p>
-                                    </note></cell>
-                                <cell><hi><gi>entry</gi></hi><lb/><seg xml:space="preserve">   </seg><hi><gi>form</gi></hi><lb/><seg xml:space="preserve">      </seg><gi>orth</gi>to
-                                        horrify&lt;/orth&gt;<lb/><seg xml:space="preserve">   </seg><hi>&lt;/form&gt;</hi><lb/><seg xml:space="preserve">   </seg>&lt;cit
-                                    type="translation"
-                                        xml:lang="en"&gt;<lb/><seg xml:space="preserve">      </seg><gi>quote</gi>horrifier&lt;/quote&gt;<lb/><seg xml:space="preserve">   </seg><hi>&lt;/cit&gt;</hi><lb/><seg xml:space="preserve">   </seg>&lt;cit
-                                        type="example"&gt;<lb/><seg xml:space="preserve">      </seg><gi>quote</gi>she
-                                    was horrified at the
-                                    expense.&lt;/quote&gt;<lb/><seg xml:space="preserve">      </seg>&lt;cit
-                                    type="translation"
-                                        xml:lang="en"&gt;<lb/><seg xml:space="preserve">         </seg><gi>quote</gi>elle
-                                    était horrifiée par la
-                                        dépense.&lt;/quote&gt;<lb/><seg xml:space="preserve">      </seg><hi>&lt;/cit&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;/cit&gt;</hi><lb/><hi>&lt;/entry&gt;</hi></cell>
-                                <cell><hi><gi>entry</gi></hi><lb/><seg xml:space="preserve">   </seg>&lt;form
-                                        type="lemma"&gt;<lb/><seg xml:space="preserve">      </seg><gi>orth</gi>horrify&lt;/orth&gt;<lb/><seg xml:space="preserve">   </seg><hi>&lt;/form&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi><gi>sense</gi></hi><lb/><seg xml:space="preserve">      </seg><hi><gi>xr</gi></hi><lb/><seg xml:space="preserve">         </seg>&lt;ref
-                                    type="translationEquivalent"
-                                        xml:lang="fr"&gt;horrifier&lt;/ref&gt;<lb/><seg xml:space="preserve">      </seg><hi>&lt;/xr&gt;</hi><lb/><seg xml:space="preserve">      </seg>&lt;cit
-                                        type="example"&gt;<lb/><seg xml:space="preserve">         </seg><gi>quote</gi>she
-                                    was horrified at the
-                                    expense.&lt;/quote&gt;<lb/><seg xml:space="preserve">         </seg>&lt;cit
-                                        type="translation"<note place="foot" xml:id="ftn3" n="3">
-                                        <p> Note that we do not change the encoding of the
-                                            example</p>
-                                    </note>
-                                        xml:lang="en"&gt;<lb/><seg xml:space="preserve">            </seg><gi>quote</gi>elle
-                                    était horrifiée par la
-                                        dépense.&lt;/quote&gt;<lb/><seg xml:space="preserve">         </seg><hi>&lt;/cit&gt;</hi><lb/><seg xml:space="preserve">      </seg><hi>&lt;/cit&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;/sense&gt;</hi><lb/><hi>&lt;/entry&gt;</hi></cell>
+                                    senses/context)</cell>
+                                <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                        <entry>
+                                            <!-- ... -->
+                                            <cit type="translation" xml:lang="en">
+                                                <quote>to horrify</quote>
+                                            </cit>
+                                            <cit type="example">
+                                                <quote>elle était horrifiée par la dépense</quote>
+                                                <cit type="translation" xml:lang="en">
+                                                  <quote>she was horrified at the expense.</quote>
+                                                </cit>
+                                            </cit>
+                                        </entry>
+                                    </egXML></cell>
+                                <cell>
+                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                        <entry xml:id="uniqe_id_in_the_context_of_this_dictionary"
+                                            xml:lang="fr">
+                                            <!-- ... -->
+                                            <cit type="translationEquivalent" xml:lang="en">
+                                                <quote>to horrify</quote>
+                                            </cit>
+                                            <cit type="example">
+                                                <quote>elle était horrifiée par la dépense</quote>
+                                                <cit type="translation" xml:lang="en">
+                                                  <quote>she was horrified at the expense.</quote>
+                                                </cit>
+                                            </cit>
+                                        </entry>
+                                    </egXML>
+                                </cell>
                             </row>
                             <row>
                                 <cell>collocates in gramGrp<note place="foot" xml:id="ftn4" n="4">
                                         <p> This is not replaced, but may be complemented by the
                                             reference mechanism</p>
                                     </note></cell>
-                                <cell><hi><gi>gramGrp</gi></hi><lb/><seg xml:space="preserve">   </seg><gi>colloc</gi>stray&lt;/colloc&gt;<lb/><hi>&lt;/gramGrp&gt;</hi></cell>
-                                <cell><hi><gi>gramGrp</gi></hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;colloc</hi><note
-                                        place="comment" resp="Piotr_Banski"><hi>we might also right
-                                            away think of a place to hold grammatical information,
-                                            on the function of the collocate (is it a subject or an
-                                            object, etc.) and its
-                                        category/features</hi></note><hi>&gt;</hi><lb/><seg xml:space="preserve">      </seg>&lt;xr
-                                    type="collocation"&gt;<lb/><seg xml:space="preserve">         </seg>&lt;ref
-                                        target="http://www.oed.com/view/Entry/191378?rskey=WgfOMW&amp;amp;result=2&amp;amp;isAdvanced=false#eid"&gt;stray&lt;/ref&gt;<lb/><seg xml:space="preserve">      </seg><hi>&lt;/xr&gt;</hi><lb/><seg xml:space="preserve">   </seg><hi>&lt;/colloc&gt;</hi><lb/><hi>&lt;/gramGrp&gt;</hi></cell>
+                                <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                        <gramGrp><colloc>stray</colloc></gramGrp>
+                                    </egXML></cell>
+                                <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                        <gramGrp><colloc><xr type="collocation"><ref
+                                                  target="http://www.oed.com/view/Entry/191378?rskey=WgfOMW&amp;result=2&amp;isAdvanced=false#eid"
+                                                  >stray</ref></xr></colloc></gramGrp>
+                                    </egXML></cell>
                             </row>
                         </table>
                     </div>
@@ -1338,7 +1337,7 @@
                                 <form type="lemma">
                                     <orth>borcht</orth>
                                 </form>
-                                <xr type="crossReference">
+                                <xr type="cf">
                                     <lbl>Cf.</lbl>
                                     <ref target="#M012340">burcht</ref>
                                 </xr>
@@ -1466,13 +1465,14 @@
 
                     <p>In lexicographic literature, usage information is not always uniformly
                         classified. Compare, for instance, Svendsen (2009): <figure>
-                            <graphic url="https://i.imgur.com/uXnKDcE.png"/>
+                            <graphic url="https://i.imgur.com/uXnKDcE.png" height="373px"/>
                             <figDesc>(image taken from Marcin Overgaard, Theoretical Considerations
                                 for the Improvement of Usage Labelling in Dictionaries: a Combined
                                 Formal-Functional Approach. In: International Journal of
                                 Lexicography, Vol. 23 No. 4, pp. 411–442.)</figDesc>
                         </figure>and Atkins and Rundell (2008) <figure>
-                            <graphic url="https://i.imgur.com/RDyjhtm.png"/>
+                            <graphic url="https://i.imgur.com/RDyjhtm.png" width="993px"
+                                height="575px"/>
                             <figDesc>B.T. Atkins and M. Rundell, The Oxford Guide to Practical
                                 Lexicography. Oxford University Press, 2008, p. 183</figDesc>
                         </figure></p>
@@ -1756,7 +1756,11 @@
                 </div>
             </div>
             <div>
-                <head><anchor xml:id="cccs1cqhbmu5"/>References</head>
+                <head>Etymology</head>
+                <p>This section needs to be transferred from Jack's and Laurent's paper.</p>
+            </div>
+            <div>
+                <head>References</head>
                 <list type="unordered">
                     <item>Parthenos WP4 standards library at
                             GitHub:<ref target="https://github.com/ParthenosWP4/standardsLibrary" xml:space="preserve"> </ref><ref
@@ -1781,7 +1785,7 @@
                 </list>
 
             </div>
-            
+
             <div>
                 <head>Cited sources</head>
                 <biblStruct>
@@ -1857,10 +1861,6 @@
                                         the root entry contains entries which don't have necessarily
                                         related meanings</hi></note>
                             </figure>
-                            <p><hi>سيج: سيّج الكرم: جعل له سياجا٠ السياج ج سيَاجات</hi>
-                            </p>
-                            <p><hi>وأسْوِجة وأَسْوِجة وسُوج: الحائط || ما أُحيط بهِ على شيءٍ كالكرم
-                                    و النخل٠ السيْجان (ح): نوع من السمك</hi></p>
                         </cell>
                         <cell>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e4673">
@@ -1907,14 +1907,7 @@
                                 <graphic n="10013" width="6.797366666666667cm"
                                     height="8.294688888888889cm" url="media/image24.png"
                                     rend="inline"/>
-                            </figure><p><hi>شهم:١ــ شَهَمَ ــ شَهْمًا وشُهُمًا الفرسَ: زجرهُ || و ــ
-                                    الرجُلَ: افزعهُ ٠ اَلمشْهوم ٠: المذعور</hi></p>
-                            <p><hi>٢٠ ــ شَهُمَ ـُـ شَهَامةً و شُهُومَةُُ: كان شهْمًا ٠ الشَهْم ج
-                                    شِهام: الذكيّ الفؤاد || السيِّد النافذ الحكم || وــ ج شُهُم:
-                                    الفرس النشيط السريع القويّ ٠ اَلمَشْهُوم *: الذكيّ الفؤاد</hi>
-                            </p>
-                            <p><hi>٠٣ ــ الشَيْهَم ج شَيَهِم (ح) ذَكَر القنافذ ٠ الشَيْهَمَة:
-                                    العجوز</hi></p></cell>
+                            </figure></cell>
                         <cell>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e4774">
                                 <entry type="family">
@@ -1959,18 +1952,8 @@
                         <cell><figure>
                                 <graphic n="10014" width="6.574897222222222cm"
                                     height="13.028780555555555cm" url="media/image20.png"
-                                    rend="inline">
-                                    <desc>Screen Shot 2017-06-26 at 15.02.50.png</desc>
-                                </graphic>
-                            </figure><p>ارك: ١- أَرَكَ -ُ أُرُكًا الجملُ: اكل ورق الأَرَاكِ ٠ أَرَكَ
-                                ٠- أَرَكًا الجملُ اشتكى بطنهُ من أَكل الأَرَاكِ ٠ الأَراك (ن):
-                                واحدتهُ أَراكة ج أُرُك و أَرَائِك. شجر ذو شوك. طويل الساق، كثير
-                                الورق و الأغصان. خوَّار العود تتَّخذ منه المساويك</p>
-                            <p>٢٠ - أَرَكَ ْ -َ أَرَكًا و أَرِكَ ْ -ُ أُركًا الجرحُ: برأَ</p>
-                            <p>٣٠ - <hi>أرْوكاريا</hi> (ن): شجرة باسقة من فصيلة الصنوبريَّات.منبتها
-                                الاصلي٠ اميركا الجنوبية، تزرع في الحدائق للزينة، اوراقها شائكة تنبت
-                                حتى على الجذع §</p>
-                            <p>٤٠ <hi>-لأَرِكَة</hi> ج أَرِيْك و أَرائك: سرير مزيَّن فاخر</p></cell>
+                                    rend="inline"> </graphic>
+                            </figure></cell>
                         <cell>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e4917">
                                 <entry type="root">
