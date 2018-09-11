@@ -67,9 +67,7 @@
                         Currently, the work on TEI Lex-0 is conducted by the DARIAH WG "Lexical
                         Resources" and the H2020-funded <ref target="https://elex.is">European
                             Lexicographic Infrastructure</ref> (ELEXIS). </p>
-                    <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
-                    <p>The above paragraph should be expanded to include a list of meetings we
-                        organized, who sponsored them, who attended etc. <?oxy_custom_end?></p>
+
                 </div>
                 <div>
                     <head>Dictionary model vs. XML serialization</head>
@@ -108,7 +106,7 @@
                         element – <gi>cit</gi> – can be used to encode different parts of the
                         dictionary structure:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e137">
-                        <entry xml:lang="fr">
+                        <entry xml:lang="fr" xml:id="horrifier">
                             <form type="lemma">
                                 <orth>horrifier</orth>
                             </form>
@@ -225,7 +223,7 @@
                         a typed entry (see <ref target="#TypesOfEntries">Types of entries</ref>
                         below for a detailed discussion of entry types):</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e397">
-                        <entry type="wordFamily">
+                        <entry type="wordFamily" xml:id="Haus-">
                             <form type="base">
                                 <orth>Haus-</orth>
                             </form>
@@ -400,11 +398,7 @@
                     <list type="unordered">
                         <item>affix</item>
                         <item>word</item>
-                        <item>synset<note place="comment" resp="herold_(BBAW)"><hi>e.g. for
-                                    onomasiological dictionaries</hi></note><note place="comment"
-                                resp="herold_(BBAW)"><hi>… though this is not the primary concern of
-                                    the TEI it reads elsewhere in this text.
-                            (Laurent?)</hi></note></item>
+                        <item>synset</item>
                         <item>multi-word-entity</item>
                         <item>word-family</item>
                     </list>
@@ -425,10 +419,9 @@
                 </div>
             </div>
             <div>
-                <head><anchor xml:id="hp8vymhe6byi"/>Towards a more systematic use of
-                    <gi>sense</gi></head>
+                <head><anchor xml:id="hp8vymhe6byi"/>Senses</head>
                 <div>
-                    <head>Guidelines</head>
+                    <head>General remarks</head>
                     <p>In the current TEI Dictionary Chapter, the content model of <gi>entry</gi>
                         allows one to have sense-related information directly within <gi>entry</gi>.
                         TEI Lex-0 proscribes a stricter use of these elements so that sense-related
@@ -1082,9 +1075,9 @@
                 </div>
             </div>
             <div>
-                <head>Structured lexical references (<code>xr/ref</code>)</head>
+                <head>Cross-references</head>
                 <div>
-                    <head>Motivation</head>
+                    <head>General remarks</head>
                     <p>The current TEI <hi rend="italic">Guidelines</hi> provide several mechanisms
                         by means of which one item of lexical information can refer to another,
                         e.g.:</p>
@@ -1127,8 +1120,7 @@
                         how existing alternatives can be replaced accordingly.</p>
                 </div>
                 <div>
-                    <head>Proposal: Using <gi>ref</gi> and <gi>xr</gi> to point to lexical
-                        entities</head>
+                    <head>Using <gi>ref</gi> and <gi>xr</gi> to point to lexical entities</head>
                     <p>In TEI Lex-0, we use <gi>ref</gi> as the general element for a lexical
                         reference and <gi>xr</gi> as the enclosing element that groups information
                         related to this reference. The reference may be internal to a dictionary or
@@ -1402,8 +1394,7 @@
                         </egXML>
                     </div>
                     <div>
-                        <head>Synonym, hyperonym, etc as (part of) a definition (“synonym
-                            definition", “genus proximum”)</head>
+                        <head>Cross-references inside definitions</head>
 
                         <p>Under consideration. See this <ref
                                 target="https://github.com/DARIAH-ERIC/lexicalresources/issues/24"
@@ -1459,17 +1450,12 @@
                         in the dialect is further qualified by a usage hint: “(said by a peasant
                         woman in the field in hot weather)” which provides a particular context in
                         which the quote was recorded.</p>
-                    <table rend="rules">
-                        <row>
-                            <cell><egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e3178"
-                                        ><cit type="example">
-                                        <quote>„Ду́ни, ве́тре, се́јче леб да пе́че”</quote>
-                                        <usg type="hint">(рекла сељанка на њиви за време
-                                            врућине)</usg>
-                                        <bibl>(<placeName>Дубница</placeName>).</bibl>
-                                    </cit></egXML></cell>
-                        </row>
-                    </table>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e3178"><cit
+                            type="example">
+                            <quote>„Ду́ни, ве́тре, се́јче леб да пе́че”</quote>
+                            <usg type="hint">(рекла сељанка на њиви за време врућине)</usg>
+                            <bibl>(<placeName>Дубница</placeName>).</bibl>
+                        </cit></egXML>
                 </div>
                 <div>
                     <head>Types of usage information<note place="comment" resp="Katrien_Depuydt"
@@ -1477,9 +1463,7 @@
                                 dictionary with frequency information)oldest attestation: date +
                                 location of oldest attestation of an entry in a corpus based
                                 dictionary: usage?</hi></note></head>
-                    <p>USAGE FURTHER INVESTIGATED: <ref
-                            target="https://docs.google.com/document/d/10xxYwTSrAk1otrkOCZCIwE79VhTjObqmTRhpKosipyU/edit#heading=h.selhcccybq1y"
-                            >https://docs.google.com/document/d/10xxYwTSrAk1otrkOCZCIwE79VhTjObqmTRhpKosipyU/edit#heading=h.selhcccybq1y</ref></p>
+
                     <p>In lexicographic literature, usage information is not always uniformly
                         classified. Compare, for instance, Svendsen (2009): <figure>
                             <graphic url="https://i.imgur.com/uXnKDcE.png"/>
@@ -1767,54 +1751,8 @@
                     <list type="unordered">
                         <item><hi xml:space="preserve">Frequency and source corpus? ie. source attribute &lt;usg type=”frequency” unit=???? source= “this_and_that_corpus”&gt;12&lt;/usg&gt;  </hi></item>
                     </list>
-                    <p>Sample from Althochdeutsches Wörterbuch, feel free to annotate:</p>
-                    <figure>
-                        <graphic n="1007" width="10.874375cm" height="3.889375cm"
-                            url="media/image27.png" rend="inline">
-                            <desc>AWB-aba-nemanto</desc>
-                        </graphic>
-                    </figure>
-                    <p>Text:</p>
-                    <p>aba-nemanto adv.; vgl. mhd. abenemende part.-adj.</p>
-                    <p>(vgl. Findebuch S. 2). - Graff 11,1063 s. v. abaneman.</p>
-                    <p>aba-nemend-: -o Np 45,10 (Ausg. K.-T getrennt</p>
-                    <p>geschr.); -a Npw 9 (getrennt geschr.).</p>
-                    <p>etw. beendend, mit abstr. Akk.: uuieo tuot er diu?</p>
-                    <p>abanemendo dia uuiga . unz ze ende dero erdo aufe-</p>
-                    <p>rens bella usque adfines terrae NpNpw 45,10 (= Npw 9).</p>
-                    <p>Here is a typical WNT dictScrap (“kopje”) (<ref
-                            target="http://gtb.inl.nl/iWDB/search?actie=article&amp;wdb=WNT&amp;id=M073402"
-                                ><hi>http://gtb.inl.nl/iWDB/search?actie=article&amp;wdb=WNT&amp;id=M073402</hi></ref>) </p>
-                    <p>— VERKEN —, znw. onz., mv. -s. Oorspr. is verken de alg. vorm in de mnl.
-                        schrijftaal, doch deze wordt naderhand, vooral in de 17de e., door holl.
-                        varken verdrongen. Verken, dat buiten Holland de gewone vorm in de dial. is,
-                        komt nog bij zndl. schrijvers voor. De uit het mnl. bekende meervoudsvorm
-                        varken, verken vindt men nog in de 16de en 17de e. (O. Rechtsbr. v. Steenb.
-                        81 [1504]; Gem. Duytsche Spreckw. H 5 r° [1550]; gruterus 2, 129 [1611]; zie
-                        nog cats 2, 320 b [1656], echter in het rijm); de eveneens mnl. formatie
-                        varkene(n), verkene(n) komt nog tot in de 17de e. voor (v. dillen,
-                        Bedrijfslev. Amst. 1, 199 [1550]; Utr. Placaatb. 3, 674 a [1617]). De thans
-                        eenig gebruikelijke meervoudsvorm op -s is pas in de 15de e. voor het eerst
-                        aangetroffen (posthumus, Leidsche Textielnijverh. 1, 157 [1436], R. v.
-                        Zieriks. 281 [1485].) Het verkl. verksken (zie Teuthon. [1477]; junius,
-                        Nomencl. 57 a [1567]; kil. [1574]; heerman, Annot. 207 a [1642]) is in
-                        Z.-Nederl. de gewone vorm (j. joos, Schetsen en Schertsen 124 [1906]);
-                        varkske(n) (timmermans, Anna-Marie 47 [1921]) sluit aan bij een
-                        gedepalataliseerd brab. varken. Thans in de cultuurtaal alleen
-                        varkentje.</p>
-                    <p>Mnl. verken, varken naast ouder verkin (reeds 1208 als bijnaam, zie H. Top.
-                        Dial. 20, 54), varkin; mnd. verken, varken, nnd. ferken, farken, varken;
-                        nhd. ferken (&lt; nd.). Verken is de uit germ. *farχîna- ontstane
-                        umlautsvorm (zie v. wijk [1912]) met depalatalisatie tot varken en overgang
-                        χ &gt; k in de inlaut (verg. hd. ferkel &lt; ohd.farhilî(n)). Eig., evenals
-                        veulen en kuiken, het ter aanduiding van het jonge dier gebruikte
-                        gesubstantiveerde neutrum van een met -în-suffix gevormd bnw. (verg.
-                        lat.taurînus, suînus) — met een diminutieve bet., die in het mnl. soms nog
-                        merkbaar is — bij germ. *farχaz: oeng. fearh, neng. (veroud.) farrow (verg.
-                        to farrow); ohd. farh, farah, mhd. varch, nhd. (dial.) farch, fark ”big,
-                        varken”; verg. zwe. fargalt ”ever”; buiten het germ. lat. porcus; iersch orc
-                        (&lt; *pork); lit. pa᪇szas ”gecastreerd varken”; ksl. prasę ”big”. Zie
-                        verder Ts. 67, Afl. 2.</p>
+
+
                 </div>
             </div>
             <div>
@@ -1843,212 +1781,7 @@
                 </list>
 
             </div>
-            <div>
-                <head>Misc. examples (these are various leftovers, TODO cleanup)</head>
-                <p><hi>Example discussed at ENel WG2 Budapest</hi></p>
-                <list type="unordered">
-                    <item>Example from A DICTIONARY OF MANGAREVA (OR GAMBIER ISLANDS)</item>
-                </list>
-                <p><hi>The original text:</hi></p>
-                <p><hi>AGAI</hi> ( àgài), adopted or adoptive. Ex. Motua agai, an adoptive</p>
-                <p>father, a foster­father. To nurse; to nurture. To give food to. 2.</p>
-                <p>To manure the ground. 3. To impregnate female flowers with</p>
-                <p>those of the male.</p>
-                <p>Aka­agai, to nourish; to feed. Plural akaagaigai.</p>
-                <p><hi>The TEI-Lex0 encoding:</hi></p>
-                <p>
-                    <gi>entry</gi></p>
-                <p> &lt;form type="lemma"&gt;</p>
-                <p>
-                    <gi>orth</gi>AGAI&lt;/orth&gt;</p>
-                <p>
-                    <gi>pc</gi>(&lt;/pc&gt; <gi>pron</gi>àgài&lt;/pron&gt;<gi>pc</gi>)&lt;/pc&gt;
-                        <hi>&lt;!-- dictscrap vs pc --&gt;</hi></p>
-                <p> &lt;/form&gt;</p>
-                <p> &lt;sense n="1"&gt;</p>
-                <p>
-                    <gi>sense</gi></p>
-                <p>
-                    <gi>def</gi>adopted or adoptive.&lt;/def&gt; <hi>&lt;!-- should/could
-                        translation equivalent rather than <gi>def</gi> --&gt;</hi></p>
-                <p> &lt;cit type="example"&gt;</p>
-                <p>
-                    <gi>lbl</gi>Ex.&lt;/lbl&gt;</p>
-                <p>
-                    <gi>quote</gi> Motua agai,&lt;/quote&gt; </p>
-                <p> &lt;cit type="translation"&gt;</p>
-                <p>
-                    <gi>quote</gi>an adoptive father, a foster­father.&lt;/quote&gt;</p>
-                <p> &lt;/cit&gt;</p>
-                <p> &lt;/cit&gt; </p>
-                <p> &lt;/sense&gt;</p>
-                <p>
-                    <gi>sense</gi></p>
-                <p>
-                    <gi>def</gi>To nurse; to nurture. To give food to.&lt;/def&gt; </p>
-                <p> &lt;/sense&gt;</p>
-                <p> &lt;/sense&gt;</p>
-                <p> &lt;sense n="2"&gt; 2.</p>
-                <p>
-                    <gi>def</gi>To manure the ground.&lt;/def&gt;</p>
-                <p> &lt;/sense&gt; </p>
-                <p> &lt;sense n="3"&gt;3. </p>
-                <p>
-                    <gi>def</gi>To impregnate female flowers with</p>
-                <p> those of the male.&lt;/def&gt;</p>
-                <p> &lt;/sense&gt;</p>
-                <p>
-                    <gi>entry</gi></p>
-                <p> &lt;form type="compound"&gt;</p>
-                <p>
-                    <gi>orth</gi>Aka­agai,&lt;/orth&gt;</p>
-                <p> &lt;/form&gt;</p>
-                <p>
-                    <gi>sense</gi> to nourish; to feed.&lt;/sense&gt; </p>
-                <p> &lt;form type="inflected"&gt;</p>
-                <p><gi>gramGrp</gi>Plural akaagaigai.&lt;/gramGrp&gt;</p>
-                <p> &lt;/form&gt;</p>
-                <p> &lt;/entry&gt;</p>
-                <p> &lt;/entry&gt;</p>
-                <div>
-                    <head><anchor xml:id="y9mzqi58dztc"/>X.2. </head>
-                    <p>from Milena Hebal-Jezierska’s Czech-Polish dictionary (discussed after the
-                        meeting in Budapest). </p>
-                    <figure>
-                        <graphic n="1008" width="17.832916666666666cm" height="5.675313888888889cm"
-                            url="media/image16.png" rend="inline"/>
-                    </figure>
-                    <p>Piotr’s suggestion follows (and it’s meant as food for thought / basis for
-                        discussion):</p>
-                    <figure>
-                        <graphic n="1009" width="14.44625cm" height="17.30375cm"
-                            url="media/image9.png" rend="inline">
-                            <desc>milena.png</desc>
-                        </graphic>
-                    </figure>
-                    <p>Please note: (1) I am not taking a stance on how to encode equivalents. I
-                        simply used what I felt relatively comfortable with. (2) I had nothing to
-                        say about <gi>usg</gi> -- I copied Milena’s suggestion. </p>
-                    <p>I see several issues that are particularly worth discussion here:</p>
-                    <list type="ordered">
-                        <item><gi>colloc</gi> However we decide to encode it, let us use a solution
-                            that offers structural space for grammatical (and other) description of
-                            the collocate</item>
-                        <item>note the highlighted @resp at the level of <gi>cit</gi>. This is
-                            Milena’s “intrusion” into the scanned data. She is responsible for the
-                                <gi>cit</gi>, so it should be “@resp-able”. Probably nearly every
-                            element inside the entry should. OR: we (ab)use @decls mechanism for
-                            descriptions of such changes. OR (best?) we create a @tlex:change
-                            attribute that references a single <gi>change</gi> in the
-                                <gi>revisionDesc</gi>.</item>
-                        <item>I used <gi>oRef</gi> on purpose here, because I got startled when I
-                            saw the <gi>xr</gi> alternative. I am not saying it’s wrong, but I think
-                            we also need a shorthand expression (I will add some prose on
-                            that)</item>
-                        <item>“kuty na cztery nogi” is an idiomatic expression headed by the passive
-                            adjectival participle kuty. It would be lemmatized under kuć , probably
-                            as a <gi>re</gi> (or an equivalent). I mention this to make sure that,
-                            if we end up using <gi>xr</gi> for encoding translation equivalents, we
-                            also find a way to handle such cases.</item>
-                    </list>
-                </div>
-                <div>
-                    <head><anchor xml:id="avzo8orot7rp"/>X.3.</head>
-                    <p>From Joanna Bilińska’s Budapest presentation</p>
-                    <figure>
-                        <graphic n="10010" width="15.92cm" height="3.7394444444444446cm"
-                            url="media/image14.jpg" rend="inline">
-                            <desc>bodlo.jpg</desc>
-                        </graphic>
-                    </figure>
-                    <p>Entry that we’ve arrived at in Budapest:</p>
-                    <p><gi>entry</gi></p>
-                    <p> &lt;form type="lemma"&gt; </p>
-                    <p>
-                        <gi>orth</gi>BODŁO&lt;/orth&gt;</p>
-                    <p>
-                        <gi>pc</gi>,&lt;/pc&gt; &lt;!--we don't like this, need better solution for
-                        commas--&gt;</p>
-                    <p> &lt;/form&gt;</p>
-                    <p> &lt;form type="ending"&gt;<gi>orth</gi>a&lt;/orth&gt;</p>
-                    <p>
-                        <gi>pc</gi>,&lt;/pc&gt;</p>
-                    <p> &lt;/form&gt;</p>
-                    <p>
-                        <gi>gramGrp</gi></p>
-                    <p> &lt;gen value="neutrum"&gt;n.&lt;/gen&gt;</p>
-                    <p> &lt;/gramGrp&gt;</p>
-                    <p>
-                        <gi>sense</gi>
-                    </p>
-                    <p>
-                        <gi>def</gi>bobo, straszydło, potwora, dziwotwor, &lt;/def<note
-                            place="comment" resp="Piotr_Banski"><hi>these are translation
-                                equivalents</hi></note>&gt; </p>
-                    <p> &lt;cit type="translation"&gt;&lt;quote xml:lang="de"&gt;ein<note
-                            place="comment" resp="Piotr_Banski"><hi>And this "ein" is weird. It goes
-                                for all these three (masculine) nouns, and it actually signals
-                                "masculine or neuter" (unless the dictionary uses something extra to
-                                mark German neuters)</hi></note><note place="comment"
-                            resp="herold_(BBAW)"><hi>You could assume ellipsis here and the other
-                                two two equivalents would actually be "ein Popanz", "ein Unhold" –
-                                unfortunately we do not have @expand at hand …</hi></note>
-                        Schreckbild&lt;/quote&gt;&lt;/cit&gt; </p>
-                    <p> &lt;cit type="translation"&gt;&lt;quote
-                        xml:lang="de"&gt;Popanz&lt;/quote&gt;&lt;/cit&gt;</p>
-                    <p> &lt;cit type="translation"&gt;&lt;quote
-                        xml:lang="de"&gt;Unhold&lt;/quote&gt;&lt;/cit&gt;</p>
-                    <p> &lt;cit type="example"&gt;</p>
-                    <p>
-                        <gi>quote</gi>Trudno dać wiarę, by to przecie bodło Podnieść cały wóz jedną
-                        ręką</p>
-                    <p> mogło.&lt;/quote<note place="comment" resp="Piotr_Banski"><hi>and this quote
-                                here consists of two verses. This is signalled by the rhyming
-                                "bodło"-"mogło" and by the capitalization of the "Podnieść". I
-                                wonder if we can encode this information (it may of course remain
-                                implicit).</hi></note><note place="comment" resp="herold_(BBAW)"
-                                ><hi>quote/l or even quote/lg/l</hi></note>&gt;<gi>bibl</gi></p>
-                    <p>
-                        <gi>author</gi>Opal.&lt;/author&gt; <gi>title</gi>poet.&lt;/title&gt;
-                            <gi>biblScope</gi>8.&lt;/biblScope&gt;&lt;/bibl&gt;&lt;/cit&gt;</p>
-                    <p> &lt;cit type="example"&gt;</p>
-                    <p>
-                        <gi>quote</gi>Okrutnym przerażona bodłem.
-                            &lt;/quote&gt;<gi>bibl</gi><gi>author</gi>Pot.<note place="comment"
-                            resp="Piotr_Banski"><hi>"Pot." and "Stryjk." are actually abbreviated
-                                author names, so we should probably reference the authors listed in
-                                the header. Same goes for the titles.</hi></note>&lt;/author&gt;
-                            <gi>title</gi>Arg.&lt;/title&gt;
-                        <gi>biblScope</gi>324.&lt;/biblScope&gt; </p>
-                    <p>
-                        <gi>author</gi>Stryjk.&lt;/author&gt; <gi>title</gi>Gon. U.&lt;/title&gt;
-                            <gi>biblScope</gi>3.&lt;/biblScope&gt;&lt;/bibl&gt;&lt;/cit&gt;</p>
-                    <p> &lt;/sense&gt;</p>
-                    <p> &lt;/entry&gt;</p>
-                    <p><ref
-                            target="https://docs.google.com/document/d/1F57EB_zSMPAtDTuAaWC_iRxNQoy4QbjR63t0oWRe4sI/edit?usp=sharing"
-                                ><hi>https://docs.google.com/document/d/1F57EB_zSMPAtDTuAaWC_iRxNQoy4QbjR63t0oWRe4sI/edit?usp=sharing</hi></ref></p>
-                    <list type="unordered">
-                        <item>everywhere where there is a form: use “form”</item>
-                        <item>cit type=cognate/etymon/descendent for etymology and within: form and
-                            @corresp when you want to link to somewhere else</item>
-                        <item>cit type = equivalent for bilingual dictionaries and within: form and
-                            @corresp when you want to link to somewhere else</item>
-                        <item>unresolved: “a certain plant” in cit type=equivalent</item>
-                        <item>classical references, eg. see also 1.1, use
-                            <gi>xr</gi><gi>ref</gi></item>
-                        <item>ref is allowed inside of def; examples???</item>
-                        <item>references in etymology that are a bibl refering to extended
-                            description: bibl with @corresp when wanting to link to external source
-                            list</item>
-                        <item>def and gloss: to do: look at examples, from both etymological
-                            dictionaries and dictionaries with an etymological section (everyone
-                            look for examples)</item>
-                    </list>
-                    <p>Recommendations on how to do encode idioms, collocates, proverbs etc.
-                        (Katrien, Toma)</p>
-                </div>
-            </div>
+            
             <div>
                 <head>Cited sources</head>
                 <biblStruct>
