@@ -2026,7 +2026,25 @@
             <div type="specification">
                 <head>Specification</head>
                 <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
-                    
+                    <!--2018-09-02 (TT): Added PB's useful class modifications-->
+                    <specGrp xml:id="classmods">
+                        <classSpec ident="att.global" mode="change" module="tei" type="atts">
+                            <attList>
+                                <attDef ident="xml:space" mode="delete"/>
+                                <attDef ident="rend" mode="delete"/>
+                                <attDef ident="xml:base" mode="delete"/>
+                            </attList>
+                        </classSpec>
+                        <classSpec ident="att.fragmentable" mode="delete" module="tei" type="atts"/>
+                        <classSpec ident="att.divLike" mode="change" module="tei" type="atts">
+                            <attList>
+                                <attDef ident="org" mode="delete"/>
+                                <attDef ident="sample" mode="delete"/>
+                            </attList>
+                        </classSpec>
+                        <classSpec ident="att.declaring" mode="delete" module="tei" type="atts"/>
+                    </specGrp>
+
                     <moduleRef key="gaiji" except="localName"/>
                     <!-- 2018-09-02 (TT): changed moduleRef for linking based on PB -->
                     <moduleRef key="linking" include="seg"/>
