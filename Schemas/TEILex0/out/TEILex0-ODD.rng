@@ -5,11 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-<<<<<<< HEAD
-Schema generated from ODD source 2018-09-14T01:08:48Z. .
-=======
-Schema generated from ODD source 2018-09-14T06:43:28Z. .
->>>>>>> 07145c1ae87439879a655ab0c33a6008b0f98af9
+Schema generated from ODD source 2018-09-14T17:15:05Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -293,9 +289,6 @@ belongs, but this <sch:name/> element has no textual content.</sch:assert>
          </attribute>
       </optional>
    </define>
-   <define name="att.divLike.attributes">
-      <empty/>
-   </define>
    <define name="att.global.responsibility.attributes">
       <ref name="att.global.responsibility.attribute.cert"/>
       <ref name="att.global.responsibility.attribute.resp"/>
@@ -378,23 +371,8 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       </optional>
    </define>
    <define name="att.global.rendition.attributes">
-      <ref name="att.global.rendition.attribute.rend"/>
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
-   </define>
-   <define name="att.global.rendition.attribute.rend">
-      <optional>
-         <attribute name="rend">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(rendition) indicates how the element in question was rendered or presented in the source text.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="token">
-                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                  </data>
-               </oneOrMore>
-            </list>
-         </attribute>
-      </optional>
    </define>
    <define name="att.global.rendition.attribute.style">
       <optional>
@@ -439,14 +417,6 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
       <ref name="att.global.attribute.xmlid"/>
       <ref name="att.global.attribute.n"/>
       <ref name="att.global.attribute.xmllang"/>
-   </define>
-   <define name="att.global.attribute.rend">
-      <optional>
-         <attribute name="rend">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <text/>
-         </attribute>
-      </optional>
    </define>
    <define name="att.global.attribute.xmlid">
       <optional>
@@ -2137,9 +2107,7 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
                <ref name="model.ptrLike"/>
             </choice>
          </oneOrMore>
-         <ref name="att.global.attribute.rend"/>
          <ref name="att.global.attribute.n"/>
-         <ref name="att.global.rendition.attribute.rend"/>
          <ref name="att.global.rendition.attribute.style"/>
          <ref name="att.global.rendition.attribute.rendition"/>
          <ref name="att.global.linking.attribute.corresp"/>
@@ -2184,10 +2152,8 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
                <ref name="model.global"/>
             </choice>
          </zeroOrMore>
-         <ref name="att.global.attribute.rend"/>
          <ref name="att.global.attribute.n"/>
          <ref name="att.global.attribute.xmllang"/>
-         <ref name="att.global.rendition.attribute.rend"/>
          <ref name="att.global.rendition.attribute.style"/>
          <ref name="att.global.rendition.attribute.rendition"/>
          <ref name="att.global.linking.attribute.corresp"/>
@@ -2910,7 +2876,6 @@ Sample values include: 1] cap (capital) ; 2] noHyph (no hyphen) </a:documentatio
             </rule>
          </pattern>
          <ref name="att.global.attributes"/>
-         <ref name="att.divLike.attributes"/>
          <ref name="att.typed.attributes"/>
          <ref name="att.written.attributes"/>
          <empty/>
