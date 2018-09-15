@@ -378,7 +378,7 @@
                                                 </paramDescriptor>
                                             </field>
                                             <field name="value">
-                                                <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v20.1/frameworks/http___www.tei_c.org_release_oxygen_updateSite.oxygen/tei/xml/tei/odd/p5subset.xml</String>
+                                                <String>${frameworks}/tei/xml/tei/odd/p5subset.xml</String>
                                             </field>
                                             <field name="hasXPathValue">
                                                 <Boolean>false</Boolean>
