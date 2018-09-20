@@ -1685,7 +1685,8 @@
                     <!-- 2018-09-11 (TT): removed list, item and label because i don't
                     see them as lexicographically relevant. I don't thin we need p either
                     but I'm leaving it for now, in case we need it in the header-->
-                    <moduleRef key="core" include="author head title cit"/>
+                    <!--2018-09-20 (TT): added quote! -->
+                    <moduleRef key="core" include="author head title cit quote"/>
                     <!--PB's simplified textstructure declaratiopn-->
                     <moduleRef key="textstructure" include="TEI text body div front back"/>
                     <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence 
