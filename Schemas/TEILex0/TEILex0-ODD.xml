@@ -1686,7 +1686,8 @@
                     see them as lexicographically relevant. I don't thin we need p either
                     but I'm leaving it for now, in case we need it in the header-->
                     <!--2018-09-20 (TT): added quote! -->
-                    <moduleRef key="core" include="author head title cit quote"/>
+                    <!--2018-10-25 (TT): added bibl! -->
+                    <moduleRef key="core" include="author head title cit quote bibl"/>
                     <!--PB's simplified textstructure declaratiopn-->
                     <moduleRef key="textstructure" include="TEI text body div front back"/>
                     <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence 
@@ -1700,10 +1701,12 @@
                     -->
                     <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
                     <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt sourceDesc encodingDesc projectDesc"/>
-                    <moduleRef key="namesdates" include="placeName"/>
                     <!-- for dialectal properties -->
-                    <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
-
+                    <moduleRef key="namesdates" include="placeName"/>
+                    <moduleRef key="tei"/>
+                    
+             
+                    
                     <!-- Initial change to make entry recursive (LR) -->
                     <!-- 2018-09-03 (LR): making @xml:id required -->
                     <elementSpec ident="entry" mode="change">
