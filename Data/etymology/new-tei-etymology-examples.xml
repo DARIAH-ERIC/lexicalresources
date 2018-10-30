@@ -131,7 +131,7 @@
        As for analogical leveling itself, it is especially problematic when it affects citation forms 
          (cf. Finnish Nom. Sg. lahti, Gen. Sg. lahden ‘bay’, vs. older Nom. Sg. laksi, which was replaced by lahti by analogy with a regular pattern Xhti / Xhden, cf. lehti / lehden ‘star’). 
          -->
-         <!-- Folk Etymology -->
+         <!-- Folk Etymology
          <entry xml:lang="en" xml:id="asparagus-en">
             <form>
                <orth>asparagus</orth>
@@ -141,6 +141,7 @@
             </gramGrp>
             <etym/>
          </entry>
+         -->
          <!-- Underspecified Contents -->
          <!-- borrowing -->
          <entry xml:id="h405_qdb-d1e12076" xml:lang="bar">
@@ -197,7 +198,7 @@
             <ref type="bibl">
                <bibl>SteirKäWeistGl. S. HW-3742/6/b</bibl>
             </ref>
-            <
+        
          </entry>
          <!--  Conflicting Etymologies-->
          
@@ -222,16 +223,15 @@
 desc: the cardinal direction through with which the sun rises, and according to which humans (and most animals) organize their daytime activity (metonymy); thus the verb “orior,-...”, used to describe the action of rising….;
 see also: (it) orientarsi, (en) to orient,...(these are both cognates and descendants)
 
-         -->
+      
          <entry>
             <form>
                <orth>oriente</orth>
-               <!-- confirm w/ Piotr the encoding for Latin (noun) lemma forms!!! -->
             </form>
             <sense/>
             <etym>
                <seg type="desc">derivation of</seg>
-               <cit type="etym"><!-- confirm w/ Piotr the encoding for Latin (verb) lemma forms!!! -->
+               <cit type="etym">
                   <form>
                      <orth/>
                   </form>
@@ -248,11 +248,18 @@ see also: (it) orientarsi, (en) to orient,...(these are both cognates and descen
                </cit>
                <seg type="desc"/>
             </etym>
-         </entry>
-         <entry>
+         </entry> 
+         -->
+         <entry xml:id="fickfacken" xml:lang="bar">
+            <form type="lemma">
+               <orth>fickfacken</orth>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+            </gramGrp>
             <etym>
                <seg type="desc" part="I">seit dem</seg>
-               <usg type="date">
+               <usg type="time">
                   <date>18.  Jh.</date>
                </usg>
                <seg type="desc" part="M">belegt, auf</seg>
@@ -260,11 +267,11 @@ see also: (it) orientarsi, (en) to orient,...(these are both cognates and descen
                   <form>
                      <orth xml:lang="de">fickfacken</orth>
                   </form>
-                  <sense>
-                     <def>'hin- und herlaufen'</def>
+                  <sense xml:id="fickfacken-s1">
+                     <def xml:lang="de">'hin- und herlaufen'</def>
                   </sense>
                </cit>
-               <seg type="desc" part="F">zurückgeführt</seg>;       
+               <seg type="desc" part="F">zurückgeführt</seg>;    
                <seg type="desc" part="I">evtl. auch auf </seg>
                <cit type="etymon">
                   <lang>fnhd.</lang>
@@ -272,8 +279,8 @@ see also: (it) orientarsi, (en) to orient,...(these are both cognates and descen
                      <orth xml:lang="de-x-FNHD">fatzen</orth>
                   </form>
                   <!-- frühneuhochdeutsch -->
-                  <sense>
-                     <def>'spotten, zum Narren halten'</def>
+                  <sense xml:id="fickfacken-s1">
+                     <def xml:lang="de">'spotten, zum Narren halten'</def>
                   </sense>
                </cit>
                <seg type="desc" part="F">zurückführbar</seg>
@@ -318,54 +325,6 @@ see also: (it) orientarsi, (en) to orient,...(these are both cognates and descen
                <bibl  source="#Padgett-2017">(Padget, 2017)</bibl>
             </cit>
          </entry>
-         <!--         
-         <entry>
-            <form type="lemma"><orth>Aid</orth></form>,
-            <sense>
-               <gramGrp><pos>v.</pos>a.</gramGrp>
-               
-               <cit type="equivalent"><form type="lemma"><orth>aider</orth></form></cit>, 
-               <cit type="equivalent"><form type="lemma"><orth>assister</orth></form></cit>, 
-               <cit type="equivalent"><form type="lemma"><orth>secourir</orth></form></cit>
-            </sense>;
-            
-            <sense>_ 
-               <gramGrp><pos>s.</pos></gramGrp> 
-               
-               <cit type="equivalent">aide</cit>,
-               <cit type="equivalent">assistance</cit>     f., 
-            </sense>,
-            
-            <cit type="equivalent">secours</cit>, 
-            m.; <cit type="equivalent">sub-side</cit>,
-            m.; (pers) <cit type="equivalent">aide</cit>,
-            m.f
-            . 
-            
-            <re>
-               <form>By the _ of</form>,
-               <cit type="equivalent">à l'aide de</cit>
-            </re>. 
-            
-            <re>
-               <form>In _ of</form>, <usg type="dom">(of performances) </usg>
-               <cit type="equivalent">au profit de</cit>, 
-               <cit type="equivalent">au bénéfice de</cit>
-            </re>. 
-            
-            <re>
-               <form type="lemma">
-                  <orth>-less</orth>,
-                  <pos>adj.</pos>
-               </form> 
-               <cit type="equivalent">sans aide</cit>,
-               
-               <cit type="equivalent">sans secours</cit>;
-               
-               <cit type="equivalent">abandonné, délaissé</cit>
-            </re>
-         </entry>
-         -->
          <!-- tei-lex0 -->
          <entry xml:id="cieling" type="compound" xml:lang="mix">
             <form type="lemma">
@@ -377,10 +336,10 @@ see also: (it) orientarsi, (en) to orient,...(these are both cognates and descen
             <sense xml:id="cieling-mix-sense1" corresp="http://dbpedia.org/resource/Ceiling">
                <usg type="domain"
                     corresp="http://dbpedia.org/resource/Category:Architectural_elements">Architectural_elements</usg>
-               <xr type="meronymOf">
+               <xr type="lexical" subtype="meronym">
                   <ref target="#house" xml:lang="mix">ve'e</ref>
                </xr>
-               <xr type="meronymOf">
+               <xr type="lexical" subtype="meronym">
                   <ref target="#house" xml:lang="en">house</ref>
                </xr>
                <cit type="translation">
@@ -399,7 +358,7 @@ see also: (it) orientarsi, (en) to orient,...(these are both cognates and descen
                         <gloss xml:lang="en">head</gloss>
                         <gloss xml:lang="es">cabeza</gloss>
                         <usg type="domain">AnatomicalStructure</usg>
-                        <xr type="meronymOf">
+                        <xr type="lexical" subtype="meronym">
                            <ref target="#body" xml:lang="mix">kuñu</ref>
                         </xr>
                         <xr type="meronymOf">
@@ -656,7 +615,7 @@ Bibl.: WH I: 70, EM 48£, IEW 55ff., Schrijver 1991: 68, Untermann 2000: 81, LIV
                <etym>
                   <!-- Lat. sollers < *soti-arti- to sollus 'entire'; al(l)ers < *all-arti- to O. alio- 'entire'. -->
                   <seg type="desc" part="I">According to</seg> <bibl>Untermann 2000</bibl>, 
-                  <lang>Latin</lang> <ref xml:lang="la">*all-</ref> <seg type="desc" part="M">was probably borrowed from</seg> <cit type="etymon" xml:lang="nds-x-sabe1249"><lang>Sabellic</lang></cit>, <seg type="desc" part="F">since <lang>Latin</lang> does not have this word in its lexicon. For a word only occurring in glosses, this is of course possible.</seg>
+                  <lang>Latin</lang> <xr type="lexical"><ref xml:lang="la">*all-</ref></xr> <seg type="desc" part="M">was probably borrowed from</seg> <cit type="etymon" xml:lang="nds-x-sabe1249"><lang>Sabellic</lang></cit>, <seg type="desc" part="F">since <lang>Latin</lang> does not have this word in its lexicon. For a word only occurring in glosses, this is of course possible.</seg>
                </etym>
                
                <etym><seg type="desc" part="I">Others have proposed an etymology</seg> <cit type="etymon"><form><orth xml:lang="ine">*ad-arti-</orth></form></cit> with intervocalic <c xml:id="c1" next="#c2">d</c> becoming <c xml:id="c2" prev="#c1">l</c><pc>;</pc> <seg type="desc" part="F">the spelling <ref xml:lang="la">allers</ref> would then be analogical to <ref xml:lang="la">sollers</ref><pc>.</pc></seg></etym>
@@ -684,6 +643,35 @@ The connection with Skt. and Gm. 'sour' is semantically more convincing; these m
 
 BibL: WH I: 35, EM 25, IEW 777f., Kortlandt 1980a, Schrijver 1991: 43, Heidermanns 1993: 99f.
          -->
+         
+         <!-- 
+            arcessō, -ere / accersō, -ere
+            'to summon, send for'
+            
+            [v. Ill; pf. arcessīvī  -/iī, ppp arcessītum]
+            (Pl.+; pr. accers-, arcess- PI. Ter. Cato, pf. arcess- Cic.+; several ī-con forms, cf. TLL)
+Pit. *kers-s-e/o~.
+PIE *kers- 'to run\ IE cognates: see s.v. currō.
+
+The stem occurs in two variants, accers- and arcess-, which suggests that on developed from the other by an unusual metathesis or an analogical replacement.
+
+Both variants seem to have been sprachwirklich in Plautus' times. The pr. is productive from PL onwards, whereas the pf. is hardly attested before Cicero. Since the pf. clearly favors the variant arcess-^ one might hypothesize that arcess- was in the process of ousting accers-^ and that the latter must therefore be the original forn Nussbaum 2007b gives two more arguments for regarding accerso as original: the noun dorsum > dossum shows a phonetic change of *rs > ssm3 a verb in -cesso meaning 'go get' would be favoured by its semantic neighbours capessō and (ex)petessō
+Nussbaum suggests that accerso may reflect *ad<-kers-s-e/o-, an «s-present to the root *krs- 'to run' (whence Lat. curro). -->
+         
+         <entry xml:id="arcessō-accersō" xml:lang="la">
+            <form type="lemma">
+               <orth>arcessō, -ere</orth>
+            </form>
+            <form type="lemma">
+               <orth>accersō, -ere</orth>
+            </form>
+            <sense xml:id="arcessō-accersō-s1">
+               <!-- ... -->
+            </sense>
+            <etym>
+               
+            </etym>
+         </entry>
       </body>
    </text>
 </TEI>

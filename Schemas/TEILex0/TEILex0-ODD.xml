@@ -1686,7 +1686,7 @@
                     see them as lexicographically relevant. I don't thin we need p either
                     but I'm leaving it for now, in case we need it in the header-->
                     <!--2018-09-20 (TT): added quote! -->
-                    <moduleRef key="core" include="author head title cit quote"/>
+                    <moduleRef key="core" include="author head title cit quote bibl biblStruct biblScope citedRange imprint analytic publisher pubPlace ref"/>
                     <!--PB's simplified textstructure declaratiopn-->
                     <moduleRef key="textstructure" include="TEI text body div front back"/>
                     <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence 
@@ -1699,7 +1699,7 @@
                     <!--<moduleRef key="iso-fs" except="bicond binary cond default fDecl fDescr fLib fsConstraints fsDecl fsDescr fsdDecl fsdLink fvLib if iff numeric then vAlt vColl vDefault"/>
                     -->
                     <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
-                    <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt sourceDesc encodingDesc projectDesc"/>
+                    <moduleRef key="header" include="teiHeader fileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc projectDesc seriesStmt notesStmt authority distributor"/>
                     <moduleRef key="namesdates" include="placeName"/>
                     <!-- for dialectal properties -->
                     <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
@@ -1944,7 +1944,41 @@
 
                     <classSpec ident="att.declaring" mode="delete" type="atts"/>
 
-                    <classSpec ident="att.fragmentable" mode="delete" type="atts"/>
+                    <classSpec ident="att.fragmentable" type="atts" mode="change">
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <etym>
+                                    <seg type="desc" part="I">seit dem</seg>
+                                    <usg type="date">
+                                        <date>18.  Jh.</date>
+                                    </usg>
+                                    <seg type="desc" part="M">belegt, auf</seg>
+                                    <cit type="etymon">
+                                        <form>
+                                            <orth xml:lang="de">fickfacken</orth>
+                                        </form>
+                                        <sense>
+                                            <def>'hin- und herlaufen'</def>
+                                        </sense>
+                                    </cit>
+                                    <seg type="desc" part="F">zurückgeführt</seg>;       
+                                    <seg type="desc" part="I">evtl. auch auf </seg>
+                                    <cit type="etymon">
+                                        <lang>fnhd.</lang>
+                                        <form>
+                                            <orth xml:lang="de-x-FNHD">fatzen</orth>
+                                        </form>
+                                        <!-- frühneuhochdeutsch -->
+                                        <sense>
+                                            <def>'spotten, zum Narren halten'</def>
+                                        </sense>
+                                    </cit>
+                                    <seg type="desc" part="F">zurückführbar</seg>
+                                    <bibl>(vgl. Pfeifer 2014: 329)</bibl>
+                                </etym>
+                            </egXML>
+                        </exemplum>
+                    </classSpec>
 
                     <classSpec ident="att.divLike" mode="delete" type="atts"/>
 

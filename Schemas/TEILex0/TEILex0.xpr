@@ -388,8 +388,8 @@
                                 </field>
                                 <field name="cascadingStylesheets">
                                     <String-array>
-                                        <String>${frameworks}/tei/xml/tei/stylesheet/odds/odd2lite.xsl</String>
-                                        <String>${frameworks}/tei/xml/tei/stylesheet/html/html.xsl</String>
+                                        <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v20.1/frameworks/http___www.tei_c.org_release_oxygen_updateSite.oxygen/tei/xml/tei/stylesheet/odds/odd2lite.xsl</String>
+                                        <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v20.1/frameworks/http___www.tei_c.org_release_oxygen_updateSite.oxygen/tei/xml/tei/stylesheet/html/html.xsl</String>
                                     </String-array>
                                 </field>
                                 <field name="xslTransformer">
