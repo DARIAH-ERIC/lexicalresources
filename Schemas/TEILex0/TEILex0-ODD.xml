@@ -1944,7 +1944,41 @@
 
                     <classSpec ident="att.declaring" mode="delete" type="atts"/>
 
-                    <classSpec ident="att.fragmentable" mode="delete" type="atts"/>
+                    <classSpec ident="att.fragmentable" type="atts" mode="change">
+                        <exemplum>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <etym>
+                                    <seg type="desc" part="I">seit dem</seg>
+                                    <usg type="date">
+                                        <date>18.  Jh.</date>
+                                    </usg>
+                                    <seg type="desc" part="M">belegt, auf</seg>
+                                    <cit type="etymon">
+                                        <form>
+                                            <orth xml:lang="de">fickfacken</orth>
+                                        </form>
+                                        <sense>
+                                            <def>'hin- und herlaufen'</def>
+                                        </sense>
+                                    </cit>
+                                    <seg type="desc" part="F">zurückgeführt</seg>;       
+                                    <seg type="desc" part="I">evtl. auch auf </seg>
+                                    <cit type="etymon">
+                                        <lang>fnhd.</lang>
+                                        <form>
+                                            <orth xml:lang="de-x-FNHD">fatzen</orth>
+                                        </form>
+                                        <!-- frühneuhochdeutsch -->
+                                        <sense>
+                                            <def>'spotten, zum Narren halten'</def>
+                                        </sense>
+                                    </cit>
+                                    <seg type="desc" part="F">zurückführbar</seg>
+                                    <bibl>(vgl. Pfeifer 2014: 329)</bibl>
+                                </etym>
+                            </egXML>
+                        </exemplum>
+                    </classSpec>
 
                     <classSpec ident="att.divLike" mode="delete" type="atts"/>
 
