@@ -566,7 +566,8 @@ Others have proposed an etymology *ad-arti- with intervocalic V becoming /; the 
 Bibl.: WH I: 70, EM 48£, IEW 55ff., Schrijver 1991: 68, Untermann 2000: 81, LIV l.*h2er-. -+arma
          -->
          <entry xml:id="ars-artis-la" xml:lang="la">
-            <form>ars, artis </form>
+            <form>ars, artis</form>
+            
            <sense xml:id="ars-artis-la-sense1"><def>'skill, art; trick'</def></sense>
            <gramGrp>[f. i] (Pl.+)</gramGrp>
             
@@ -615,10 +616,10 @@ Bibl.: WH I: 70, EM 48£, IEW 55ff., Schrijver 1991: 68, Untermann 2000: 81, LIV
                <etym>
                   <!-- Lat. sollers < *soti-arti- to sollus 'entire'; al(l)ers < *all-arti- to O. alio- 'entire'. -->
                   <seg type="desc" part="I">According to</seg> <bibl>Untermann 2000</bibl>, 
-                  <lang>Latin</lang> <xr type="lexical"><ref xml:lang="la">*all-</ref></xr> <seg type="desc" part="M">was probably borrowed from</seg> <cit type="etymon" xml:lang="nds-x-sabe1249"><lang>Sabellic</lang></cit>, <seg type="desc" part="F">since <lang>Latin</lang> does not have this word in its lexicon. For a word only occurring in glosses, this is of course possible.</seg>
+                  <lang>Latin</lang> <xr type="crossReference"><ref xml:lang="la">*all-</ref></xr> <seg type="desc" part="M">was probably borrowed from</seg> <cit type="etymon" xml:lang="nds-x-sabe1249"><lang>Sabellic</lang></cit>, <seg type="desc" part="F">since <lang>Latin</lang> does not have this word in its lexicon. For a word only occurring in glosses, this is of course possible.</seg>
                </etym>
                
-               <etym><seg type="desc" part="I">Others have proposed an etymology</seg> <cit type="etymon"><form><orth xml:lang="ine">*ad-arti-</orth></form></cit> with intervocalic <c xml:id="c1" next="#c2">d</c> becoming <c xml:id="c2" prev="#c1">l</c><pc>;</pc> <seg type="desc" part="F">the spelling <ref xml:lang="la">allers</ref> would then be analogical to <ref xml:lang="la">sollers</ref><pc>.</pc></seg></etym>
+               <etym><seg type="desc" part="I">Others have proposed an etymology</seg> <cit type="etymon"><form><orth xml:lang="ine">*ad-arti-</orth></form></cit> with intervocalic <c xml:id="c1" next="#c2">d</c> becoming <c xml:id="c2" prev="#c1">l</c><pc>;</pc> <seg type="desc" part="F">the spelling <xr type="crossReference"><ref xml:lang="la">allers</ref></xr> would then be analogical to <xr type="crossReference"><ref xml:lang="la">sollers</ref></xr><pc>.</pc></seg></etym>
             </etym>
          </entry>      
          
@@ -649,9 +650,16 @@ BibL: WH I: 35, EM 25, IEW 777f., Kortlandt 1980a, Schrijver 1991: 43, Heiderman
             'to summon, send for'
             
             [v. Ill; pf. arcessīvī  -/iī, ppp arcessītum]
-            (Pl.+; pr. accers-, arcess- PI. Ter. Cato, pf. arcess- Cic.+; several ī-con forms, cf. TLL)
+            
+            (
+            Pl.+; pr. accers-, arcess- 
+            PI. Ter. Cato, pf. arcess-
+            Cic.+; several ī-con forms, cf. TLL
+            )
 Pit. *kers-s-e/o~.
-PIE *kers- 'to run\ IE cognates: see s.v. currō.
+PIE *kers- 'to run
+\
+IE cognates: see s.v. currō.
 
 The stem occurs in two variants, accers- and arcess-, which suggests that on developed from the other by an unusual metathesis or an analogical replacement.
 
@@ -660,15 +668,30 @@ Nussbaum suggests that accerso may reflect *ad<-kers-s-e/o-, an «s-present to t
          
          <entry xml:id="arcessō-accersō" xml:lang="la">
             <form type="lemma">
-               <orth>arcessō, -ere</orth>
+               <form type="variant">
+               <orth>arcessō</orth>, <form><orth extent="part">-ere</orth></form>
             </form>
-            <form type="lemma">
-               <orth>accersō, -ere</orth>
-            </form>
+               <form type="variant">
+               <orth>accersō</orth>, -ere
+            </form></form>
             <sense xml:id="arcessō-accersō-s1">
-               <!-- ... -->
+               <!--  'to summon, send for' -->
             </sense>
+            <!-- [v. Ill; pf. arcessīvī  -/iī, ppp arcessītum] -->
             <etym>
+               <seg type="desc" part="I">The stem occurs in two variants,</seg> <xr type="crossReference"><ref xml:lang="la" type="entry">accers-</ref></xr> <seg type="desc" part="M">and</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">arcess-</ref></xr><seg type="desc" part="F">, which suggests that on developed from the other by an unusual metathesis or an analogical replacement.</seg>
+               
+               <seg type="desc" part="I">Both variants seem to have been sprachwirklich in Plautus' times. The pr. is productive from PL onwards, whereas the pf. is hardly attested before Cicero. Since the pf. clearly favors the variant</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">arcess-</ref></xr><seg type="desc" part="M">, one might hypothesize that</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">arcess-</ref></xr> <seg type="desc" part="M">was in the process of ousting</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">accers-</ref></xr><seg type="desc" part="M"><seg type="desc" part="F">, and that the latter must therefore be the original form.</seg>
+                  
+                  Nussbaum 2007b gives two more arguments for regarding</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">accersō</ref></xr> as original: 
+               
+               <!-- this portion could optionally be an embedded <etym> -->
+               
+               the noun dorsum → <xr type="crossReference"><ref type="entry">dossum</ref></xr> shows a phonetic change of <cit type="etymon" xml:id="etym-rs"><form><orth xml:lang="la">*rs</orth></form></cit> → <xr type="crossReference" prev="#etym-rs"><ref type="phone">ss</ref></xr>;
+               
+               a verb in <xr type="crossReference"><ref type="entry" xml:lang="la">-cessō</ref> <lbl>meaning</lbl> <ref type="sense">'go get'</ref></xr> would be favoured by its semantic neighbours <xr type="crossReference"><ref type="entry">capessō</ref></xr> and <xr type="crossReference"><ref type="entry">(ex)petessō</ref></xr>.
+               
+               Nussbaum suggests that  <xr type="crossReference"><ref type="entry" xml:lang="la">accersō</ref></xr> may reflect <cit type="etymon"><form><orth>*ad-kers-s-e/o-</orth></form></cit>, an s-present to the root <xr type="crossReference"><ref type="entry">*krs-</ref> <ref type="sense">'to run'</ref></xr> (<xr type="crossReference"><lbl>whence</lbl> <lang>Lat.</lang> <ref type="entry" xml:lang="la">curro</ref></xr>). 
                
             </etym>
          </entry>
