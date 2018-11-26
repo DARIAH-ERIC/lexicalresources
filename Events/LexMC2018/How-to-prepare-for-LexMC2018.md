@@ -12,7 +12,7 @@ Please download the Powerpoint template from https://github.com/DARIAH-ERIC/lexi
 
 If you want one slide to last longer than 15 seconds, copy the contents from one slide to the next.
 
-Send us your presentations by 8pm on Sunday, December 2.
+Send us your presentations via email by 8pm on Sunday, December 2.
 
 Please, practice your presentation ahead of time, especially if you are not used to self-timed presentations.
 
@@ -24,7 +24,7 @@ Identify the specific difficulties you have with it so that we can provide the a
 
 ## GitHub Account
 
-We will be collecting all our data samples and other resources on Github inside our https://github.com/DARIAH-ERIC/lexicalresources repository. If you don’t have a personal GitHub account yet, please make sure you create one prior to the masterclass.
+We will be collecting all our data samples and other resources on Github inside our https://github.com/DARIAH-ERIC/lexicalresources repository. If you don’t have a personal GitHub account yet, please make sure you create one _prior_ to the masterclass.
 
 To create a GitHub account, go to https://github.com/join and follow the steps. Choose to create a free account.
 
