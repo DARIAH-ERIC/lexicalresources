@@ -46,9 +46,18 @@ For those who may have the time, you could prepare a first post providing a gene
 
 Our hashtag for the week: #lexmc
 
-## PDF2TEI
+## GROBID-Dictionaries (PDF2TEI)
+GROBID-Dictionaries is the first machine learning infrastructure for structuring digitised dictionaries into TEI-compliant resources. The system’s architecture relies on a cascading approach for information extraction from textual information in PDF documents (digital born or OCRised). The implemented pluggable models in GROBID-Dictionaries have shown enough flexibility to be be applicable on a wide range of entry-based documents containing lexical or encyclopaedic information, from dictionaries to address directories. The usability has been also enhanced also to ease the setup and the training of the system.
 
-During the week, those of you who have source material in the form of a “traditional” dictionary will have the opportunity to experiment the automatic extraction of entry structure by means of the GROBID-dictionary software (see https://hal.archives-ouvertes.fr/hal-01508868). For those of you who are interested in principle, please send some pdf samples to Mohamed Khemakhem.
+The goal of GROBID-Dictionaries workshop is to get familiar with the training process of each model of the infrastructure and to learn how to use them to speed up drastically the encoding of own lexical samples in TEI. For more details, you could have a look on these papers:
+* https://hal.archives-ouvertes.fr/hal-01508868v2/document
+
+* https://hal.archives-ouvertes.fr/hal-01708137v2/document
+
+If you plan to attend this workshop during the Lexical Masterclass 2018, please make sure to fill in this [Google form](https://docs.google.com/forms/d/1Bfb7dKnUKtBndHigQpemeiyOgVP0jDQtm7Fm5q-MnxA/viewform?edit_requested=true) and bring your own samples to GROBID them together. 
+
+
+For those of you who are interested to use the tool for their own material, please send some pdf samples to [Mohamed Khemakhem](mohamed.khemakhem@inria.fr).
 
 ## oXygen XML
 
@@ -58,7 +67,4 @@ and use the license key that you will have received from us by email.
 
 The number of licenses is limited, so please install this license only on the laptop which you will bring to the masterclass.
 
-## GROBID-Dictionaries Workshop
-GROBID-Dictionaries is the first machine learning infrastructure for structuring digitised dictionaries into TEI-compliant resources. The system’s architecture relies on a cascading approach for information extraction from textual information in PDF documents. The implemented pluggable models in GROBID-Dictionaries have shown enough flexibility to be be applicable on a wide range of entry-based documents containing lexical or encyclopaedic information, from dictionaries to address directories. The usability has been also enhanced also to ease the setup and the training of the system.
-
-If you plan to attend this workshop, please make sure to fill in this [Google form](https://docs.google.com/forms/d/1Bfb7dKnUKtBndHigQpemeiyOgVP0jDQtm7Fm5q-MnxA/viewform?edit_requested=true). 
+  
