@@ -57,3 +57,8 @@ oXygen has kindly supported us with the provision of a 6 month license for all p
 and use the license key that you will have received from us by email.
 
 The number of licenses is limited, so please install this license only on the laptop which you will bring to the masterclass.
+
+## GROBID-Dictionaries Workshop
+GROBID-Dictionaries is the first machine learning infrastructure for structuring digitised dictionaries into TEI-compliant resources. The system’s architecture relies on a cascading approach for information extraction from textual information in PDF documents. The implemented pluggable models in GROBID-Dictionaries have shown enough flexibility to be be applicable on a wide range of entry-based documents containing lexical or encyclopaedic information, from dictionaries to address directories. The usability has been also enhanced also to ease the setup and the training of the system.
+
+If you plan to attend this workshop, please make sure to fill in this [Google form](https://docs.google.com/forms/d/1Bfb7dKnUKtBndHigQpemeiyOgVP0jDQtm7Fm5q-MnxA/viewform?edit_requested=true). 
