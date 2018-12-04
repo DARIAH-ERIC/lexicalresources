@@ -1747,9 +1747,12 @@
                     <elementSpec ident="xr" mode="change">
                         <classes mode="change">
                             <memberOf key="model.sensePart" mode="add"/>
+                            <!-- 2018-12-04 [LR] to have <xr> in <def> and few other cool places -->
+                            <memberOf key="model.emphLike" mode="add"/>
                             <!--<classes mode="change">
                             <memberOf key="att.notated" mode="add"/>
                         </classes>-->
+                            
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">

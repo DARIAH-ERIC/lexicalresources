@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-10-30T16:16:57Z. .
+Schema generated from ODD source 2018-12-04T14:17:30Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -837,29 +837,41 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
    <define name="model.emphLike">
       <choice>
          <ref name="title"/>
+         <ref name="xr"/>
       </choice>
    </define>
    <define name="model.emphLike_alternation">
       <choice>
          <ref name="title"/>
+         <ref name="xr"/>
       </choice>
    </define>
    <define name="model.emphLike_sequence">
       <ref name="title"/>
+      <ref name="xr"/>
    </define>
    <define name="model.emphLike_sequenceOptional">
       <optional>
          <ref name="title"/>
+      </optional>
+      <optional>
+         <ref name="xr"/>
       </optional>
    </define>
    <define name="model.emphLike_sequenceOptionalRepeatable">
       <zeroOrMore>
          <ref name="title"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="xr"/>
+      </zeroOrMore>
    </define>
    <define name="model.emphLike_sequenceRepeatable">
       <oneOrMore>
          <ref name="title"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="xr"/>
       </oneOrMore>
    </define>
    <define name="model.highlighted">
