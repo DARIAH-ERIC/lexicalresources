@@ -978,6 +978,8 @@
                                         </entry></egXML></cell>
                             </row>
                         </table>
+                        <p>The full specification of <gi>xr</gi> in TEI Lex 0 is:<specDesc key="xr" atts="type"/></p>
+                        
                     </div>
                     <div>
                         <head>Values of <code>ref/@target</code></head>
@@ -1752,7 +1754,7 @@
                             <!--<classes mode="change">
                             <memberOf key="att.notated" mode="add"/>
                         </classes>-->
-                            
+
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
@@ -1770,6 +1772,18 @@
                                 <valList type="closed" mode="change">
                                     <valItem ident="lexical"/>
                                     <valItem ident="crossReference"/>
+                                    <valItem ident="synonymy">
+                                        <desc>Relation between two lexical units X and Y which are syntactically identical and have the property that any declarative sentence S containing X has
+                                            equivalent truth conditions to another sentence S’ which is identical to S, except that X is replaced by Y. (Adapted from Cruse (1986).)</desc>
+                                        <remarks>
+                                            <p>Synonymy is the
+                                                linguistic parallel of the identity relation between classes. Synonyms differ in peripheral traits, 
+                                                related for example to stylistic, dialectal or diachronic
+                                                variations.</p>
+                                            <p>Examples: [de] {Hund, Köter}, [en] {flashlight, torch}, [en] {glad, joyful, happy}, [en] {violin, fiddle} [en] He
+                                                plays the violin very well/He plays the fiddle very well.</p>
+                                        </remarks>
+                                    </valItem>
                                     <!-- further values to be added there -->
                                 </valList>
                             </attDef>
@@ -1953,7 +1967,7 @@
                                 <etym>
                                     <seg type="desc" part="I">seit dem</seg>
                                     <usg type="date">
-                                        <date>18.  Jh.</date>
+                                        <date>18. Jh.</date>
                                     </usg>
                                     <seg type="desc" part="M">belegt, auf</seg>
                                     <cit type="etymon">
@@ -1964,8 +1978,7 @@
                                             <def>'hin- und herlaufen'</def>
                                         </sense>
                                     </cit>
-                                    <seg type="desc" part="F">zurückgeführt</seg>;       
-                                    <seg type="desc" part="I">evtl. auch auf </seg>
+                                    <seg type="desc" part="F">zurückgeführt</seg>; <seg type="desc" part="I">evtl. auch auf </seg>
                                     <cit type="etymon">
                                         <lang>fnhd.</lang>
                                         <form>
