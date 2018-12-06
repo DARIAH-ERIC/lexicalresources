@@ -2071,6 +2071,8 @@
                     <elementSpec ident="entry" mode="change">
                         <classes mode="change">
                             <memberOf key="model.entryPart.top" mode="add"/>
+                            <!-- 2018-12-06 [LR] in order to have (recursive) <entry> in <sense> -->
+                            <memberOf key="model.sensePart" mode="add"/>
                         </classes>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
