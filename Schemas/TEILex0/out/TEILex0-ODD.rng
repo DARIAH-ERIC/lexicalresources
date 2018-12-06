@@ -5,10 +5,10 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-12-06T13:31:51Z. .
-TEI Edition: Version 3.3.0. Last updated on
-	31st January 2018, revision f4d8439
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
+Schema generated from ODD source 2018-12-06T14:09:21Z. .
+TEI Edition: Version 3.4.0. Last updated on
+	23rd July 2018, revision 1fa0b54
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
   
 --><!---->
    <define name="macro.paraContent">
@@ -102,7 +102,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
    <define name="att.written.attribute.hand">
       <optional>
          <attribute name="hand">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to a handNote element describing the hand considered responsible for the textual content of the element concerned.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to a handNote element describing the hand considered responsible for the content of the element concerned.</a:documentation>
             <data type="anyURI"/>
          </attribute>
       </optional>
@@ -1311,6 +1311,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <choice>
          <ref name="model.ptrLike"/>
          <ref name="pubPlace"/>
+         <ref name="idno"/>
       </choice>
    </define>
    <define name="model.descLike">
@@ -1452,6 +1453,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="model.offsetLike"/>
          <ref name="model.placeStateLike"/>
          <ref name="lang"/>
+         <ref name="idno"/>
          <ref name="model.persNamePart"/>
       </choice>
    </define>
@@ -1461,6 +1463,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="model.offsetLike_alternation"/>
          <ref name="model.placeStateLike_alternation"/>
          <ref name="lang"/>
+         <ref name="idno"/>
          <ref name="model.persNamePart_alternation"/>
       </choice>
    </define>
@@ -1469,6 +1472,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="model.offsetLike_sequence"/>
       <ref name="model.placeStateLike_sequence"/>
       <ref name="lang"/>
+      <ref name="idno"/>
       <ref name="model.persNamePart_sequence"/>
    </define>
    <define name="model.nameLike_sequenceOptional">
@@ -1483,6 +1487,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="lang"/>
+      </optional>
+      <optional>
+         <ref name="idno"/>
       </optional>
       <optional>
          <ref name="model.persNamePart_sequenceOptional"/>
@@ -1502,6 +1509,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="lang"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="idno"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="model.persNamePart_sequenceOptionalRepeatable"/>
       </zeroOrMore>
    </define>
@@ -1517,6 +1527,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="lang"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="idno"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="model.persNamePart_sequenceRepeatable"/>
@@ -1777,7 +1790,7 @@ Suggested values include: 1] entry; 2] sense</a:documentation>
                <ref name="model.ptrLike"/>
         
         
-        
+               <ref name="idno"/>
         
             </choice>
          </zeroOrMore>
@@ -1836,6 +1849,7 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.11.2.4. Imprint, Size of a Document, and Reprint Information 2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
+         <ref name="att.canonical.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3399,6 +3413,7 @@ Sample values include: 1] cap (capital) ; 2] noHyph (no hyphen) </a:documentatio
          <ref name="att.global.attributes"/>
          <ref name="att.placement.attributes"/>
          <ref name="att.typed.attributes"/>
+         <ref name="att.written.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3548,6 +3563,7 @@ Sample values include: 1] cap (capital) ; 2] noHyph (no hyphen) </a:documentatio
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the name of a person or other agency responsible for the distribution of a text. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
+         <ref name="att.canonical.attributes"/>
          <empty/>
       </element>
    </define>
@@ -3556,6 +3572,49 @@ Sample values include: 1] cap (capital) ; 2] noHyph (no hyphen) </a:documentatio
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(release authority) supplies the name of a person or other agency responsible for making a work available, other than a publisher or distributor. [2.2.4. Publication, Distribution, Licensing, etc.]</a:documentation>
          <ref name="macro.phraseSeq.limited"/>
          <ref name="att.global.attributes"/>
+         <ref name="att.canonical.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="idno">
+      <element name="idno">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4. Publication, Distribution, Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.gLike"/>
+               <ref name="idno"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attributes"/>
+         <ref name="att.sortable.attributes"/>
+         <ref name="att.datable.attributes"/>
+         <ref name="att.typed.attribute.subtype"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">categorizes the identifier, for example as an ISBN, Social Security number, etc.
+Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7] OCLC</a:documentation>
+               <choice>
+                  <value>ISBN</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">International Standard Book Number: a 13- or (if assigned prior to 2007) 10-digit identifying number assigned by the publishing industry to a published book or similar item, registered with the International ISBN Agency.</a:documentation>
+                  <value>ISSN</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">International Standard Serial Number: an eight-digit number to uniquely identify a serial publication.</a:documentation>
+                  <value>DOI</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Digital Object Identifier: a unique string of letters and numbers assigned to an electronic document.</a:documentation>
+                  <value>URI</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Uniform Resource Identifier: a string of characters to uniquely identify a resource which usually contains indication of the means of accessing that resource, the name of its host, and its filepath.</a:documentation>
+                  <value>VIAF</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A data number in the Virtual Internet Authority File assigned to link different names in catalogs around the world for the same entity.</a:documentation>
+                  <value>ESTC</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English Short-Title Catalogue number: an identifying number assigned to a document in English printed in the British Isles or North America before 1801.</a:documentation>
+                  <value>OCLC</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">OCLC control number (record number) for the union catalog record in WorldCat, a union catalog for member libraries in the Online Computer Library Center global cooperative.</a:documentation>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+               </choice>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -3582,7 +3641,7 @@ Sample values include: 1] cap (capital) ; 2] noHyph (no hyphen) </a:documentatio
         
                <zeroOrMore>
                   <choice>
-            
+                     <ref name="idno"/>
                      <ref name="biblScope"/>
                   </choice>
                </zeroOrMore>
