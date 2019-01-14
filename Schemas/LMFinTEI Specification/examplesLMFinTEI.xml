@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="out/ISO24613-4_Specification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<teiCorpus type="lexicalResource" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Reference examples as illustration of LMF part 4</title>
+            <author>MK</author>
+            <author>LR</author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>DARIAH lexical working group</authority>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/3.0/">Distributed under a
+                  Creative Commons Attribution 3.0 Unported License</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital (mutliple sources: LMF-2)</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <TEI type="lexicon" xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title/>
+            </titleStmt>
+            <publicationStmt>
+               <p>...</p>
+            </publicationStmt>
+            <sourceDesc>
+               <p>LMF Part 2</p>
+            </sourceDesc>
+         </fileDesc>
+      </teiHeader>
+      <text>
+         <body>
+            <p>Some text here.</p>
+
+            <!--Example  B.3
+            One of the form representations needs to be favourised as lemma!-->
+
+            <entry>
+               <gramGrp>
+                  <pos>common noun</pos>
+               </gramGrp>
+               <form type="lemma">
+                  <orth>color</orth>
+                  <pron>ˈkʌlər</pron>
+                  <usg type="geo">US</usg>
+               </form>
+               <form type="variant">
+                  <orth>colour</orth>
+                  <pron>ˈkʌlə</pron>
+                  <usg type="geo">UK</usg>
+               </form>
+               <form type="inflected">
+                  <gramGrp>
+                     <number>plural</number>
+                  </gramGrp>
+                  <form type="variant">
+                     <orth>colors</orth>
+                     <pron>ˈkʌlərz</pron>
+                     <usg type="geo">US</usg>
+                  </form>
+                  <form type="variant">
+                     <orth>colour</orth>
+                     <pron>ˈkʌləz</pron>
+                     <usg type="geo">UK</usg>
+                  </form>
+               </form>
+            </entry>
+            <!--Example  B.4
+            We need to agree on how to serialise /script/notation/!-->
+            <entry xml:lang="en" notation="Latn">
+               <form type="lemma">
+                  <orth type="canonical">ship</orth>
+               </form>
+            </entry>
+
+
+            <!--Example  B.13
+           Two alternatives to encode related entries/forms
+           form is always synchronised with a sense!-->
+            <!-- alternarive 1 -->
+            <entry xml:lang="ru" xml:id="выпуск" corresp="выпуск_из_печати">
+               <form xml:id="output_form1" type="lemma" synch="#output_sense1">
+                  <orth>выпуск</orth>
+               </form>
+               <sense xml:id="output_sense1" synch="#output_form1">output</sense>
+            </entry>
+
+            <entry xml:lang="ru" xml:id="выпуск_из_печати" type="relatedEntry" corresp="выпуск">
+               <form type="lemma">
+                  <orth>выпуск из печати</orth>
+               </form>
+               <sense>publication</sense>
+            </entry>
+            <!-- alternarive 2 
+            When the entry doesn't exist yet in the dictionary-->
+            <entry xml:lang="ru" xml:id="выпуск" corresp="выпуск_из_печати">
+               <form xml:id="output_form1" type="lemma">
+                  <orth>выпуск</orth>
+               </form>
+               <sense xml:id="output_sense1" synch="#output_form1">output</sense>
+               <entry xml:lang="ru" xml:id="выпуск_из_печати" type="relatedEntry">
+                  <form type="lemma">
+                     <orth>выпуск из печати</orth>
+                  </form>
+                  <sense>publication</sense>
+               </entry>
+            </entry>
+            <!-- alternarive 3!-->
+            <entry xml:lang="ru" xml:id="выпуск_1">
+               <form type="lemma">
+                  <orth>выпуск</orth>
+               </form>
+               <sense>output</sense>
+               <re>выпуск из печати</re>
+            </entry>
+
+            <!--Example  B.15
+            MWE encoding 
+            form is always synchronised with a sense
+            the crossRef class in this case translated to a <form> element !-->
+            <entry xml:lang="en">
+               <form type="lemma">
+                  <orth>motion picture</orth>
+                  <gramGrp>
+                     <pos>noun</pos>
+                  </gramGrp>
+               </form>
+               <!-- @notation à la place de @subtype pour indiquer qu'on a une décomposition -->
+               <form xml:id="mp_mwe1" type="mwe" notation="intern">
+                  <!-- <orth> -->
+                  <!-- On pointe sur une entrée ou un sens particulier si nécessaire -->
+                  <seg corresp="#motion_form1" n="1">motion</seg>
+                  <seg corresp="#picture_form1" n="2">picture</seg>
+                  <!-- </orth> -->
+               </form>
+               
+               <!-- alternative -->
+               <!-- avec cette alternative il est plus complique d'indiquer qu'il s'agit d'un mwe -->
+               <form type="lemma">
+                  <orth>
+                     <seg corresp="#motion_form1" n="1">motion</seg>
+                     <seg corresp="#picture_form1" n="2">picture</seg>
+                  </orth>
+                  <gramGrp>
+                     <pos>noun</pos>
+                  </gramGrp>
+               </form>
+               <!-- role de @synch? -->
+               <sense xml:id="motion_sense1" synch="#motionPicture_form1">
+                  <def>A sequence of pictures that give the effect of motion when show in a rapid
+                     succession</def>
+               </sense>
+            </entry>
+
+            <!--Example  B.16
+            Synonyms, example and translation encoding 
+             the crossRef class in this case translated to attributes on the source and target 
+             <sense> elements!-->
+            <entry xml:lang="fr">
+               <form type="lemma">
+                  <orth>truc</orth>
+               </form>
+               <sense xml:id="truc_sense1" type="syn" corresp="#chose_sense1" subType="intern"/>
+            </entry>
+
+            <entry xml:lang="fr">
+               <form type="lemma">
+                  <orth>chose</orth>
+               </form>
+               <sense xml:id="chose_sense1" type="syn" corresp="#truc_sense1" subType="intern">
+                  <cit type="example">
+                     <quote xml:id="chose_quote1">Ce qui est une tres bonne chose, et fournissait
+                        des vetement a tres bas cout</quote>
+                     <!-- using ids for quotes will allow us to use then elsewhere wihtout retyping the text.
+                     such a practise is very encouraged in LMF 2008!-->
+                  </cit>
+                  <cit type="translation">
+                     <quote>Sache</quote>
+                     <gramGrp>
+                        <gen>f</gen>
+                     </gramGrp>
+                     <cit type="example">
+                        <quote xml:id="sache_quote1">Was ja auch eigentlich eine gute Sache war,
+                           billige Kleidung bereit zu stellen</quote>
+                     </cit>
+                  </cit>
+               </sense>
+            </entry>
+            <!--Example  B.5
+            Comment serialiser les attribut de  Lexicon Information n'est pas encore clair (see up)
+            We need to agree on how to serialise /script/notation/!-->
+            <entry xml:lang="ar">
+               <form type="lemma">
+                  <gramGrp>
+                     <pos>verb</pos>
+                  </gramGrp>
+                  <orth notation="transliterated">kataba</orth>
+                  <orth notation="arabicUnvowelised">كتب</orth>
+                  <orth notation="arabicVowelised">كَتَبَ</orth>
+               </form>
+               <!-- When no lexical type is specified for the form subclass (inflection, stemm type..etc), no type is assigned to the <form> element  -->
+               <!-- Default: inflected -->
+               <form type="inflected">
+                  <gramGrp>
+                     <tns>perfect</tns>
+                     <per>3rd</per>
+                     <number>singular</number>
+                     <gen>masculine</gen>
+                  </gramGrp>
+                  <orth notation="transliterated">kataba</orth>
+                  <orth notation="arabicUnvowelised">كتب</orth>
+                  <orth notation="arabicVowelised">كَتَبَ</orth>
+               </form>
+               <form type="inflected">
+                  <gramGrp>
+                     <tns>perfect</tns>
+                     <per>3rd</per>
+                     <number>singular</number>
+                     <gen>feminine</gen>
+                  </gramGrp>
+                  <orth notation="transliterated">katabat</orth>
+                  <orth notation="arabicUnvowelised">كتبت</orth>
+                  <orth notation="arabicVowelised">كَتَبَتْ</orth>
+               </form>
+
+            </entry>
+         </body>
+      </text>
+
+   </TEI>
+
+
+
+</teiCorpus>
