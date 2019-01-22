@@ -2179,6 +2179,9 @@
                                             <p>Example: finger:hand (finger is said to be a meronym of hand, and hand is said to be the holonym of finger).</p>
                                         </remarks>
                                     </valItem>
+                                    <valItem ident="related">
+                                        <desc>The default reference to another lexical entry when no addtional information is available.</desc>
+                                    </valItem>
                                     <!-- further values to be added there -->
                                 </valList>
                             </attDef>

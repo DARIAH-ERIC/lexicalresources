@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-01-22T12:05:44Z. .
+Schema generated from ODD source 2019-01-22T12:37:25Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -3219,6 +3219,8 @@ Sample values include: 1] abbrev; 2] verbTable</a:documentation>
                <a:documentation>Relation between lexical heads X and Y characterised by the property that the sentence This is a(n) Y entails, but is not entailed by the sentence This is a(n) X. (Adapted from Cruse (1986)) </a:documentation>
                <value>meronymy</value>
                <a:documentation>An inclusion relation between lexical heads X and Y which reflect a potential part-whole relation between their referents in discourse. (Adapted from Cruse (2011, p. 140))</a:documentation>
+               <value>related</value>
+               <a:documentation>The default reference to another lexical entry when no addtional information is available.</a:documentation>
             </choice>
          </attribute>
          <optional>
