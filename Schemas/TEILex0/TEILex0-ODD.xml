@@ -2100,6 +2100,7 @@
                         </content>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
+                            <attDef ident="level" mode="delete"/>
                         </attList>
                     </elementSpec>
 

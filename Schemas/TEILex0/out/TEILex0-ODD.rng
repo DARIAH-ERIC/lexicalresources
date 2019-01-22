@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-01-22T11:51:07Z. .
+Schema generated from ODD source 2019-01-22T12:05:44Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -1379,6 +1379,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="syll"/>
          <ref name="gramGrp"/>
          <ref name="pos"/>
+         <ref name="subc"/>
          <ref name="colloc"/>
          <ref name="def"/>
          <ref name="etym"/>
@@ -2536,17 +2537,35 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
       <choice>
          <ref name="gram"/>
          <ref name="gen"/>
+         <ref name="number"/>
+         <ref name="case"/>
+         <ref name="per"/>
+         <ref name="tns"/>
+         <ref name="mood"/>
+         <ref name="iType"/>
       </choice>
    </define>
    <define name="model.morphLike_alternation">
       <choice>
          <ref name="gram"/>
          <ref name="gen"/>
+         <ref name="number"/>
+         <ref name="case"/>
+         <ref name="per"/>
+         <ref name="tns"/>
+         <ref name="mood"/>
+         <ref name="iType"/>
       </choice>
    </define>
    <define name="model.morphLike_sequence">
       <ref name="gram"/>
       <ref name="gen"/>
+      <ref name="number"/>
+      <ref name="case"/>
+      <ref name="per"/>
+      <ref name="tns"/>
+      <ref name="mood"/>
+      <ref name="iType"/>
    </define>
    <define name="model.morphLike_sequenceOptional">
       <optional>
@@ -2554,6 +2573,24 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
       </optional>
       <optional>
          <ref name="gen"/>
+      </optional>
+      <optional>
+         <ref name="number"/>
+      </optional>
+      <optional>
+         <ref name="case"/>
+      </optional>
+      <optional>
+         <ref name="per"/>
+      </optional>
+      <optional>
+         <ref name="tns"/>
+      </optional>
+      <optional>
+         <ref name="mood"/>
+      </optional>
+      <optional>
+         <ref name="iType"/>
       </optional>
    </define>
    <define name="model.morphLike_sequenceOptionalRepeatable">
@@ -2563,6 +2600,24 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
       <zeroOrMore>
          <ref name="gen"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="number"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="case"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="per"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tns"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="mood"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="iType"/>
+      </zeroOrMore>
    </define>
    <define name="model.morphLike_sequenceRepeatable">
       <oneOrMore>
@@ -2571,11 +2626,30 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
       <oneOrMore>
          <ref name="gen"/>
       </oneOrMore>
+      <oneOrMore>
+         <ref name="number"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="case"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="per"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tns"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="mood"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="iType"/>
+      </oneOrMore>
    </define>
    <define name="model.lexicalRefinement">
       <choice>
          <ref name="gramGrp"/>
          <ref name="pos"/>
+         <ref name="subc"/>
          <ref name="colloc"/>
          <ref name="usg"/>
          <ref name="lbl"/>
@@ -2585,6 +2659,7 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
       <choice>
          <ref name="gramGrp"/>
          <ref name="pos"/>
+         <ref name="subc"/>
          <ref name="colloc"/>
          <ref name="usg"/>
          <ref name="lbl"/>
@@ -2593,6 +2668,7 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
    <define name="model.lexicalRefinement_sequence">
       <ref name="gramGrp"/>
       <ref name="pos"/>
+      <ref name="subc"/>
       <ref name="colloc"/>
       <ref name="usg"/>
       <ref name="lbl"/>
@@ -2603,6 +2679,9 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
       </optional>
       <optional>
          <ref name="pos"/>
+      </optional>
+      <optional>
+         <ref name="subc"/>
       </optional>
       <optional>
          <ref name="colloc"/>
@@ -2622,6 +2701,9 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
          <ref name="pos"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="subc"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="colloc"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -2637,6 +2719,9 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
       </oneOrMore>
       <oneOrMore>
          <ref name="pos"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="subc"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="colloc"/>
@@ -2750,12 +2835,6 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
             <data type="ID"/>
          </attribute>
-         <optional>
-            <attribute name="level">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the nesting depth of this sense.</a:documentation>
-               <data type="nonNegativeInteger"/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -2907,6 +2986,69 @@ Sample values include: 1] pos (part of speech) ; 2] gen (gender) ; 3] num (numbe
          <empty/>
       </element>
    </define>
+   <define name="number">
+      <element name="number">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates grammatical number associated with a form, as given in a dictionary. [9.3.1. Information on Written and Spoken Forms 9.3.2. Grammatical Information]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.lexicographic.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="case">
+      <element name="case">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains grammatical case information given by a dictionary for a given form. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.lexicographic.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="per">
+      <element name="per">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(person) contains an indication of the grammatical person (1st, 2nd, 3rd, etc.) associated with a given inflected form in a dictionary. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.lexicographic.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tns">
+      <element name="tns">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(tense) indicates the grammatical tense associated with a given inflected form in a dictionary. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.lexicographic.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="mood">
+      <element name="mood">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative). [9.3.1. Information on Written and Spoken Forms]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.lexicographic.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="iType">
+      <element name="iType">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(inflectional class) indicates the inflectional class associated with a lexical item. [9.3.1. Information on Written and Spoken Forms]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.lexicographic.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the type of indicator used to specify the inflection class, when it is necessary to distinguish between the usual abbreviated indications (e.g. inv) and other kinds of indicators, such as special codes referring to conjugation patterns, etc.
+Sample values include: 1] abbrev; 2] verbTable</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="gramGrp">
       <element name="gramGrp">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(grammatical information group) groups morpho-syntactic information about a lexical item, e.g. pos, gen, number, case, or iType (inflectional class). [9.3.2. Grammatical Information]</a:documentation>
@@ -2929,6 +3071,15 @@ Sample values include: 1] pos (part of speech) ; 2] gen (gender) ; 3] num (numbe
    <define name="pos">
       <element name="pos">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(part of speech) indicates the part of speech assigned to a dictionary headword such as noun, verb, or adjective. [9.3.2. Grammatical Information]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.lexicographic.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="subc">
+      <element name="subc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(subcategorization) contains subcategorization information (transitive/intransitive, countable/non-countable, etc.) [9.3.2. Grammatical Information]</a:documentation>
          <ref name="macro.paraContent"/>
          <ref name="att.global.attributes"/>
          <ref name="att.lexicographic.attributes"/>
