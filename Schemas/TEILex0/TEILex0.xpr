@@ -10,11 +10,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>ODD-Diagnosis.xsl</String>
+                                    <String>TEILex0-ODD.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>html2md</String>
+                                        <String>TEI Lex-0: ODD to XHTML</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -25,11 +25,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0-ODD.xml</String>
+                                    <String>ODD-Diagnosis.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEI Lex-0: ODD to XHTML</String>
+                                        <String>html2md</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">

@@ -2040,7 +2040,7 @@
                     <!-- 2018-09-02 (TT): removed re hom -->
                     <!-- 2018-09-02 (TT): put dictScrap back, I think we still want it -->
                     <moduleRef key="dictionaries"
-                        except="entryFree superEntry re hom case iType mood number per subc tns"/>
+                        except="entryFree superEntry re hom"/>
                     <!-- 2018-09-02 (TT): explicitly encoded what we allow from core -->
                     <!-- 2018-09-11 (TT): removed list, item and label because i don't
                     see them as lexicographically relevant. I don't thin we need p either
@@ -2288,6 +2288,15 @@
                         <classes mode="change">
                             <memberOf key="model.sensePart" mode="add"/>
                         </classes>
+                        <attList>
+                            <attDef ident="type" mode="replace" usage="req">
+                                <valList type="closed" mode="change">
+                                    <valItem ident="example"/>
+                                    <valItem ident="translation"/>
+                                    <valItem ident="translationEquivalent"/>
+                                </valList>
+                            </attDef>
+                        </attList>
                     </elementSpec>
 
                     <!-- adding form to model.sensePart -->
