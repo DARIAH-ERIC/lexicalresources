@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-01-22T12:37:25Z. .
+Schema generated from ODD source 2019-01-30T15:44:27Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -2424,38 +2424,6 @@ Sample values include: 1] main; 2] sub (subordinate) ; 3] alt (alternate) ; 4] s
          <ref name="entry"/>
       </choice>
    </define>
-   <define name="att.entryLike.attributes">
-      <ref name="att.entryLike.attribute.type"/>
-   </define>
-   <define name="att.entryLike.attribute.type">
-      <optional>
-         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    name="type"
-                    a:defaultValue="main">
-            <a:documentation>indicates type of entry, in dictionaries with multiple types.
-Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference) ; 4] affix; 5] abbr (abbreviation) ; 6] supplemental; 7] foreign</a:documentation>
-            <choice>
-               <value>main</value>
-               <a:documentation>a main entry (default).</a:documentation>
-               <value>hom</value>
-               <a:documentation>(homograph) groups information relating to one homograph within an entry.</a:documentation>
-               <value>xref</value>
-               <a:documentation>(cross reference) a reduced entry whose only function is to point to another main entry (e.g. for forms of an irregular verb or for variant spellings: was pointing to be, or esthete to aesthete).</a:documentation>
-               <value>affix</value>
-               <a:documentation>an entry for a prefix, infix, or suffix.</a:documentation>
-               <value>abbr</value>
-               <a:documentation>(abbreviation) an entry for an abbreviation.</a:documentation>
-               <value>supplemental</value>
-               <a:documentation>a supplemental entry (for use in dictionaries which issue supplements to their main work in which they include updated information about entries).</a:documentation>
-               <value>foreign</value>
-               <a:documentation>an entry for a foreign word in a monolingual dictionary.</a:documentation>
-               <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-               </data>
-            </choice>
-         </attribute>
-      </optional>
-   </define>
    <define name="att.lexicographic.attributes">
       <ref name="att.datcat.attributes"/>
       <ref name="att.lexicographic.attribute.expand"/>
@@ -2783,7 +2751,6 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
          <ref name="att.global.responsibility.attribute.cert"/>
          <ref name="att.global.responsibility.attribute.resp"/>
          <ref name="att.global.source.attribute.source"/>
-         <ref name="att.entryLike.attributes"/>
          <ref name="att.sortable.attributes"/>
          <attribute name="xml:id">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
@@ -2799,6 +2766,14 @@ Suggested values include: 1] main; 2] hom (homograph) ; 3] xref (cross reference
                </choice>
             </choice>
          </attribute>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="type"
+                       a:defaultValue="mainEntry">
+               <a:documentation/>
+               <text/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -3206,10 +3181,10 @@ Sample values include: 1] abbrev; 2] verbTable</a:documentation>
          <ref name="att.lexicographic.attributes"/>
          <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                     name="type"
-                    a:defaultValue="lexical">
+                    a:defaultValue="related">
             <a:documentation/>
             <choice>
-               <value>lexical</value>
+               <value>related</value>
                <a:documentation/>
                <value>synonymy</value>
                <a:documentation>Relation between two lexical units X and Y which are syntactically identical and have the property that any declarative sentence S containing X has equivalent truth conditions to another sentence S’ which is identical to S, except that X is replaced by Y. (Adapted from Cruse (1986).)</a:documentation>
@@ -3219,6 +3194,8 @@ Sample values include: 1] abbrev; 2] verbTable</a:documentation>
                <a:documentation>Relation between lexical heads X and Y characterised by the property that the sentence This is a(n) Y entails, but is not entailed by the sentence This is a(n) X. (Adapted from Cruse (1986)) </a:documentation>
                <value>meronymy</value>
                <a:documentation>An inclusion relation between lexical heads X and Y which reflect a potential part-whole relation between their referents in discourse. (Adapted from Cruse (2011, p. 140))</a:documentation>
+               <value>antonymy</value>
+               <a:documentation/>
                <value>related</value>
                <a:documentation>The default reference to another lexical entry when no addtional information is available.</a:documentation>
             </choice>
