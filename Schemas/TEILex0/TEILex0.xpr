@@ -351,7 +351,7 @@
                                                 </paramDescriptor>
                                             </field>
                                             <field name="value">
-                                                <String>https://www.tei-c.org/release/xml/tei/stylesheet/tei.css</String>
+                                                <String>${frameworks}/tei/xml/tei/stylesheet/tei.css</String>
                                             </field>
                                             <field name="hasXPathValue">
                                                 <Boolean>false</Boolean>
@@ -372,7 +372,7 @@
                                                 </paramDescriptor>
                                             </field>
                                             <field name="value">
-                                                <String>https://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css</String>
+                                                <String>${frameworks}/tei/xml/tei/stylesheet/tei-print.css</String>
                                             </field>
                                             <field name="hasXPathValue">
                                                 <Boolean>false</Boolean>
