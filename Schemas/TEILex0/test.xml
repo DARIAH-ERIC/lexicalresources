@@ -17,10 +17,12 @@
   <text>
       <body>
          <entry xml:id="blah" xml:lang="de">
+            <pc></pc>
+            <lbl></lbl>
             <form type="lemma">
                <orth>blah</orth>
             </form>
-               <sense xml:id="xoxo">
+               <sense xml:id="xoxo"> 
                   <def>this is a def with a <xr type="lexical"><ref type="entry">cross-reference</ref></xr></def>
                </sense>
          </entry>

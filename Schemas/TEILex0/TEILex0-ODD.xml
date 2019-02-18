@@ -1716,6 +1716,18 @@
                             <!-- 2018-12-06 [LR] in order to have (recursive) <entry> in <sense> -->
                             <memberOf key="model.sensePart" mode="add"/>
                         </classes>
+                        <!-- 2018-09-03 (TT): added explicit content model in order
+                        to include pc; see: https://github.com/TEIC/TEI/commit/1f6bd0115c67fa7f3db56dc9f9152ab855beee4d#diff-30a258b526be65d489a9dcfd0a239b69 
+                        this is temporary because of issue with oxygen and tei-c servers; is already part of TEI -->
+                        <content>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <elementRef key="sense"/>
+                                <elementRef key="pc"/>
+                                <classRef key="model.entryPart.top"/>
+                                <classRef key="model.global"/>
+                                <classRef key="model.ptrLike"/>
+                            </alternate>  
+                        </content>
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
                             <attDef ident="xml:lang" mode="change" usage="req"/>
@@ -1730,6 +1742,8 @@
                             </attDef>
                         </attList>
                     </elementSpec>
+                    
+                  
 
                     <!-- 2018-09-03 (LR): making @xml:id mandatory on sense -->
 
@@ -1973,7 +1987,9 @@
                     <elementSpec ident="lbl" mode="change">
                         <classes mode="change">
                             <memberOf key="model.sensePart" mode="add"/>
-                            <memberOf key="model.entryPart.top" mode="delete"/>
+                            <!--2019-02-19 (TT): changed from 'delete' (which was in error) to 'add' in model.entryPart.top";
+                                this is temporary because of issue with oxygen and tei-c servers; is already part of TEI-->
+                            <memberOf key="model.entryPart.top" mode="add"/>
                         </classes>
                     </elementSpec>
 
