@@ -7,6 +7,13 @@
     <p>This is an experimental set of schematron rules that should be used along the TEI Lex-0
     schema to provide additional constraints not provided by the schema itself. </p>
 
+    <!-- 2019-02-24 (TT):  Allow only one text per TEI-->
+    <pattern>
+        <rule context="tei:TEI/tei:text">
+            <report test="preceding-sibling::tei:text">There should be no more than one <name/> element as child of TEI.</report>
+        </rule>
+    </pattern>
+
     <!-- 2019-02-24 (TT):  Allow only one gramGrp per entry-->
   <pattern>
     <rule context="tei:entry/tei:gramGrp">
