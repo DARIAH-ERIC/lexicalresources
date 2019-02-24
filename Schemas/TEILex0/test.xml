@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="out/TEILex0-ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
@@ -17,13 +18,13 @@
   <text>
       <body>
          <entry xml:id="blah" xml:lang="de">
-            <pc></pc>
+            <gramGrp></gramGrp>
             <lbl></lbl>
             <form type="lemma">
                <orth>blah</orth>
             </form>
                <sense xml:id="xoxo"> 
-                  <def>this is a def with a <xr type="lexical"><ref type="entry">cross-reference</ref></xr></def>
+                  <def>this is a def with a <xr type="related"><ref type="entry">cross-reference</ref></xr></def>
                </sense>
          </entry>
         
