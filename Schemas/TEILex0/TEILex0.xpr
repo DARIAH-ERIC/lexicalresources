@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="20.1">
+<project version="21.0">
     <meta>
         <filters directoryPatterns="" filePatterns="TEILex0.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="20.1" xml:space="preserve">
+            <serialized version="21.0" xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>scenario.associations</String>
@@ -356,6 +356,9 @@
                                             <field name="hasXPathValue">
                                                 <Boolean>false</Boolean>
                                             </field>
+                                            <field name="isStatic">
+                                                <Boolean>false</Boolean>
+                                            </field>
                                         </transformationParameter>
                                         <transformationParameter>
                                             <field name="paramDescription">
@@ -377,6 +380,9 @@
                                             <field name="hasXPathValue">
                                                 <Boolean>false</Boolean>
                                             </field>
+                                            <field name="isStatic">
+                                                <Boolean>false</Boolean>
+                                            </field>
                                         </transformationParameter>
                                         <transformationParameter>
                                             <field name="paramDescription">
@@ -396,6 +402,9 @@
                                                 <String>${frameworks}/tei/xml/tei/odd/p5subset.xml</String>
                                             </field>
                                             <field name="hasXPathValue">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                            <field name="isStatic">
                                                 <Boolean>false</Boolean>
                                             </field>
                                         </transformationParameter>

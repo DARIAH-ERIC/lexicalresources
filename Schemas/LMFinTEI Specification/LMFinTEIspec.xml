@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div>
+            <head>Specification</head>
+            <schemaSpec ident="myTEI" docLang="en" prefix="tei_" xml:lang="en">
+               <moduleRef key="core" except=""/>
+               <moduleRef key="tei" except=""/>
+               <moduleRef key="header" except=""/>
+               <moduleRef key="textstructure" except=""/>
+               <moduleRef key="dictionaries" except=""/>
+               
+               <elementSpec ident="teiCorpus" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="replace" usage="req">
+                        <valList type="closed" mode="change">
+                           <valItem ident="lexicalResource"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+                  <remarks>
+                     <p>Implements the <mentioned>Lexical Resource</mentioned> class from ISO standard 24613-1.</p>
+                  </remarks>
+               </elementSpec>
+               
+               <elementSpec ident="TEI" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="replace" usage="req">
+                        <valList type="closed" mode="change">
+                           <valItem ident="lexicon"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+                  <remarks>
+                     <p>Implements the <mentioned>Lexicon class</mentioned> from ISO standard 24613-1.</p>
+                  </remarks>
+               </elementSpec>
+               
+               <elementSpec ident="teiHeader" mode="change">
+                  <remarks>
+                     <p>Implements both the <mentioned>Global Information</mentioned> and the <mentioned>Lexicon Information</mentioned>class from ISO 24613-1.</p>
+                  </remarks>
+               </elementSpec>
+               
+               <elementSpec ident="entry" mode="change">
+                  <remarks>
+                     <p>Implements the <mentioned>Lexical Entry</mentioned> class from ISO standard 24613-1.</p>
+                  </remarks>
+               </elementSpec>
+               
+               <elementSpec ident="form" mode="change">
+                  <!-- Values for @type: lemma, ... -->
+                  <remarks>
+                     <p>Implements the <mentioned>Form</mentioned> class from ISO standard 24613-1.</p>
+                     <p>Implements the <mentioned>Lemma</mentioned> class when used as <tag>form type=“lemma”</tag>.</p>
+                  </remarks>
+               </elementSpec>
+               
+               <elementSpec ident="gramGrp" mode="change">
+                  <remarks>
+                     <p>Implements the <mentioned>Grammatical Information</mentioned> class from ISO standard 24613-1.</p>
+                  </remarks>
+               </elementSpec>
+               
+               <elementSpec ident="sense" mode="change">
+                  <remarks>
+                     <p>Implements the <mentioned>Sense</mentioned> class from ISO standard 24613-1.</p>
+                  </remarks>
+               </elementSpec>
+               
+               <elementSpec ident="def" mode="change">
+                  <remarks>
+                     <p>Implements the <mentioned>Definition</mentioned> class from ISO standard 24613-1.</p>
+                  </remarks>
+               </elementSpec>
+               
+            </schemaSpec>
+         </div>
+      </body>
+  </text>
+</TEI>
