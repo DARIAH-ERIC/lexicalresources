@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Title</title>
@@ -12,8 +12,8 @@
             <p>Information about the source</p>
          </sourceDesc>
       </fileDesc>
-  </teiHeader>
-  <text>
+   </teiHeader>
+   <text>
       <body>
          <div>
             <head>Specification</head>
@@ -23,7 +23,7 @@
                <moduleRef key="header" except=""/>
                <moduleRef key="textstructure" except=""/>
                <moduleRef key="dictionaries" except=""/>
-               
+
                <elementSpec ident="teiCorpus" mode="change">
                   <attList>
                      <attDef ident="type" mode="replace" usage="req">
@@ -36,7 +36,7 @@
                      <p>Implements the <mentioned>Lexical Resource</mentioned> class from ISO standard 24613-1.</p>
                   </remarks>
                </elementSpec>
-               
+
                <elementSpec ident="TEI" mode="change">
                   <attList>
                      <attDef ident="type" mode="replace" usage="req">
@@ -49,47 +49,56 @@
                      <p>Implements the <mentioned>Lexicon class</mentioned> from ISO standard 24613-1.</p>
                   </remarks>
                </elementSpec>
-               
+
                <elementSpec ident="teiHeader" mode="change">
                   <remarks>
                      <p>Implements both the <mentioned>Global Information</mentioned> and the <mentioned>Lexicon Information</mentioned>class from ISO 24613-1.</p>
                   </remarks>
                </elementSpec>
-               
+
                <elementSpec ident="entry" mode="change">
                   <remarks>
                      <p>Implements the <mentioned>Lexical Entry</mentioned> class from ISO standard 24613-1.</p>
                   </remarks>
                </elementSpec>
-               
+
                <elementSpec ident="form" mode="change">
                   <!-- Values for @type: lemma, ... -->
                   <remarks>
                      <p>Implements the <mentioned>Form</mentioned> class from ISO standard 24613-1.</p>
                      <p>Implements the <mentioned>Lemma</mentioned> class when used as <tag>form type=“lemma”</tag>.</p>
+                     <p>Implements the <mentioned>Stem</mentioned> class when used as <tag>form type=“stem”</tag> or <tag>form type=“root”</tag> (depending on the linguistic context).</p>
+                     <p>Implements the <mentioned>Word Part</mentioned> class when used with the @type attribute set to <val>affix</val>, <val>prefix</val> or <val>suffix</val> (depending on the
+                        linguistic context).</p>
                   </remarks>
                </elementSpec>
-               
+
                <elementSpec ident="gramGrp" mode="change">
                   <remarks>
                      <p>Implements the <mentioned>Grammatical Information</mentioned> class from ISO standard 24613-1.</p>
                   </remarks>
                </elementSpec>
-               
+
                <elementSpec ident="sense" mode="change">
                   <remarks>
                      <p>Implements the <mentioned>Sense</mentioned> class from ISO standard 24613-1.</p>
                   </remarks>
                </elementSpec>
-               
+
                <elementSpec ident="def" mode="change">
                   <remarks>
                      <p>Implements the <mentioned>Definition</mentioned> class from ISO standard 24613-1.</p>
                   </remarks>
                </elementSpec>
-               
+
+               <elementSpec ident="usg" mode="change">
+                  <remarks>
+                     <p>With @type set to <val>domain</val>, implements the <mentioned>SubjectField</mentioned> class from ISO standard 24613-2.</p>
+                  </remarks>
+               </elementSpec>
+
             </schemaSpec>
          </div>
       </body>
-  </text>
+   </text>
 </TEI>
