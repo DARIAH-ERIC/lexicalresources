@@ -2004,7 +2004,15 @@
                     <classSpec type="model" ident="model.sensePart">
                         <desc>groups together all the elements from the dictionary modules that can appear as child of <gi>sense</gi></desc>
                     </classSpec>
-
+                    
+                    <!-- Making model.biblLike member of model.entryPart.top so that <bibl> is available in <entry> -->
+                    
+                    <classSpec type="model" ident="model.biblLike" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.entryPart.top" mode="add"/>
+                        </classes>
+                    </classSpec>
+                    
                     <!--2018-09-02 (TT): Added PB's useful class modifications-->
                     <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
                         rend, and xml:base are removed from the att.global class, so that this now makes available
