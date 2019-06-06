@@ -1689,7 +1689,7 @@
                     see them as lexicographically relevant. I don't thin we need p either
                     but I'm leaving it for now, in case we need it in the header-->
                     <!--2018-09-20 (TT): added quote! -->
-                    <moduleRef key="core" include="author head title cit quote bibl biblStruct biblScope citedRange imprint analytic publisher pubPlace ref date"/>
+                    <moduleRef key="core" include="author head title cit quote bibl biblStruct biblScope citedRange imprint analytic publisher pubPlace ref date hi"/>
                     <!--PB's simplified textstructure declaratiopn-->
                     <moduleRef key="textstructure" include="TEI text body div front back"/>
                     <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence 
@@ -2021,12 +2021,14 @@
                         </attList>
                     </classSpec>
 
-                    <classSpec ident="att.global.rendition" mode="change" type="atts">
+                    <!-- @rend is reintroduced, as per: https://github.com/DARIAH-ERIC/lexicalresources/issues/53#issuecomment-499463980 -->
+                    <!--<classSpec ident="att.global.rendition" mode="change" type="atts">
                         <attList>
                             <attDef ident="rend" mode="delete"/>
                         </attList>
                     </classSpec>
-
+                    -->
+                    
                     <classSpec ident="att.declaring" mode="delete" type="atts"/>
 
                     <classSpec ident="att.fragmentable" type="atts" mode="change">
