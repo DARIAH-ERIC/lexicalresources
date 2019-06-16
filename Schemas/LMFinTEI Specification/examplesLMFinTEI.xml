@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="out/ISO24613-4_Specification.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="LMFinTEIspec.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <teiCorpus type="lexicalResource" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -84,14 +84,14 @@
            Two alternatives to encode related entries/forms
            form is always synchronised with a sense!-->
             <!-- alternarive 1 -->
-            <entry xml:lang="ru" xml:id="выпуск" corresp="выпуск_из_печати">
+            <entry xml:lang="ru" xml:id="выпуск" corresp="#выпуск_из_печати">
                <form xml:id="output_form1" type="lemma" synch="#output_sense1">
                   <orth>выпуск</orth>
                </form>
                <sense xml:id="output_sense1" synch="#output_form1">output</sense>
             </entry>
 
-            <entry xml:lang="ru" xml:id="выпуск_из_печати" type="relatedEntry" corresp="выпуск">
+            <entry xml:lang="ru" xml:id="выпуск_из_печати" type="relatedEntry" corresp="#выпуск">
                <form type="lemma">
                   <orth>выпуск из печати</orth>
                </form>
@@ -99,7 +99,7 @@
             </entry>
             <!-- alternarive 2 
             When the entry doesn't exist yet in the dictionary-->
-            <entry xml:lang="ru" xml:id="выпуск" corresp="выпуск_из_печати">
+            <entry xml:lang="ru" xml:id="выпуск" corresp="#выпуск_из_печати">
                <form xml:id="output_form1" type="lemma">
                   <orth>выпуск</orth>
                </form>

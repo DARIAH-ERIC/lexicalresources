@@ -16,14 +16,94 @@
    <text>
       <body>
          <div>
+            <head>Introduction</head>
+            <p>The present ODD specification structly covers the elements described in ISO 24613-4 as the refence TEI
+               serialisation for the LMF multipart standard.</p>
+            <p>Any further TEI implementaitons that intend to be compliant with ISO 24613-4 can further customize this
+               specification, under the conditions that they remain compliant with the normative constraints expressed
+               in the standard. Still, as stated in ISO 24613-4, they can add further constraints on attribute values
+               for instance or constructions to enhance full text content.</p>
+            <p>The specification intends to be largely inclusive of existing TEI elements so that only the constraints
+               relevant for the compliance with the LMF standard is ensured.</p>
+         </div>
+         <div>
+            <head>Classes from the macro- and meso-structures</head>
+            <div>
+               <head>Implementation of the various LMF classes</head>
+               <p>The classes defined in LMF-1 are the following ones:</p>
+               <cit type="citation">
+                  <quote>The classes defined in ISO 24613-1, the LMF Core model, that are used in the MRD extension
+                     include LexicalResource, GlobalInformation, Lexicon, LexiconInformation, <hi rend="bold"
+                        >GrammaticalInformation, LexicalEntry, Lemma, Form, Sense, Definition,
+                        OrthographicRepresentation</hi>, and principles for applying the CrossREF class. These classes,
+                     together with the associations and constraints described in ISO 24613-1, are applicable to the
+                     design of MRD. New classes introduced in this part include the WordForm, Stem, WordPart,
+                     RelatedForm, Translation, Example, FormRepresentation, TextRepresentation, and
+                     Bibliography.</quote>
+                  <bibl>LMF-4</bibl>
+               </cit>
+
+            </div>
+            <div>
+               <head>Implementation of the <emph>LexicalResource</emph> class</head>
+               <p><emph>LexicalResource</emph> is implemented with the <gi>teiCorpus</gi> element, with the
+                     <att>type</att> attribute set to <code>lexicalResource</code></p>
+               <note>The present specification forces <code>lexicalResource</code> as the mandatory unique value for
+                     <att>type</att> on <gi>teiCorpus</gi>.</note>
+               <p>A <emph>LexicalResource</emph> is seen a the grouping of several different lexical lexica, which
+                  corresponds exactly with the intended usage of <gi>teiCorpus</gi>.</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <teiCorpus type="teiCorpus">
+                     <teiHeader>...</teiHeader>
+                     <TEI type="lexicon">...</TEI> ... <TEI type="lexicon">...</TEI>
+                  </teiCorpus>
+               </egXML>
+            </div>
+            <div>
+               <head>Implementation of the <emph>Lexicon</emph> class</head>
+               <p><emph>Lexicon</emph> is implemented with the <gi>TEI</gi> element, with the <att>type</att> attribute
+                  set to <code>lexicon</code></p>
+               <note>The present specification forces <code>lexicon</code> as the mandatory unique value for
+                     <att>type</att> on <gi>TEI</gi>.</note>
+            </div>
+            <div>
+               <head>Implementation of the <emph>GlobalInformation</emph> and <emph>LexiconInformation</emph>
+                  classes</head>
+               <p>Both <emph>GlobalInformation</emph> and <emph>LexiconInformation</emph> are implemented with the
+                     <gi>teiHeader</gi> element, since they correspondond to the same type of meta-data and their
+                  relation position as child of a <gi>teiCorpus</gi> or a <gi>TEI</gi> element univoquely determine
+                  their role in relation to the LMF-1 model, as depicted in the following XML outline:</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <teiCorpus type="teiCorpus">
+                     <teiHeader>...</teiHeader>
+                     <TEI type="lexicon">
+                        <teiHead/>
+                        <text>...</text>
+                     </TEI> ... <TEI type="lexicon">
+                        <teiHeader>...</teiHeader>
+                        <text>...</text>
+                     </TEI>
+                  </teiCorpus>
+               </egXML>
+            </div>
+         </div>
+         <div>
+            <head>Representation of the microstructure</head>
+         </div>
+         <div>
+            <head>additional classes</head>
+            <p>bibl...</p>
+         </div>
+         <div>
             <head>Specification</head>
             <schemaSpec ident="myTEI" docLang="en" prefix="tei_" xml:lang="en">
                <moduleRef key="core" except=""/>
                <moduleRef key="tei" except=""/>
                <moduleRef key="header" except=""/>
-               <moduleRef key="textstructure" except=""/>
+               <moduleRef key="textstructure" except="div1 div2 div3 div4 div5 div6 div7"/>
                <moduleRef key="dictionaries" except=""/>
-
+               <moduleRef key="linking" except=""/>
+               
                <elementSpec ident="teiCorpus" mode="change">
                   <attList>
                      <attDef ident="type" mode="replace" usage="req">
@@ -52,7 +132,8 @@
 
                <elementSpec ident="teiHeader" mode="change">
                   <remarks>
-                     <p>Implements both the <mentioned>Global Information</mentioned> and the <mentioned>Lexicon Information</mentioned>class from ISO 24613-1.</p>
+                     <p>Implements both the <mentioned>Global Information</mentioned> and the <mentioned>Lexicon
+                           Information</mentioned>class from ISO 24613-1.</p>
                   </remarks>
                </elementSpec>
 
@@ -67,15 +148,18 @@
                   <remarks>
                      <p>Implements the <mentioned>Form</mentioned> class from ISO standard 24613-1.</p>
                      <p>Implements the <mentioned>Lemma</mentioned> class when used as <tag>form type=“lemma”</tag>.</p>
-                     <p>Implements the <mentioned>Stem</mentioned> class when used as <tag>form type=“stem”</tag> or <tag>form type=“root”</tag> (depending on the linguistic context).</p>
-                     <p>Implements the <mentioned>Word Part</mentioned> class when used with the @type attribute set to <val>affix</val>, <val>prefix</val> or <val>suffix</val> (depending on the
-                        linguistic context).</p>
+                     <p>Implements the <mentioned>Stem</mentioned> class when used as <tag>form type=“stem”</tag> or
+                           <tag>form type=“root”</tag> (depending on the linguistic context).</p>
+                     <p>Implements the <mentioned>Word Part</mentioned> class when used with the @type attribute set to
+                           <val>affix</val>, <val>prefix</val> or <val>suffix</val> (depending on the linguistic
+                        context).</p>
                   </remarks>
                </elementSpec>
 
                <elementSpec ident="gramGrp" mode="change">
                   <remarks>
-                     <p>Implements the <mentioned>Grammatical Information</mentioned> class from ISO standard 24613-1.</p>
+                     <p>Implements the <mentioned>Grammatical Information</mentioned> class from ISO standard
+                        24613-1.</p>
                   </remarks>
                </elementSpec>
 
@@ -93,7 +177,8 @@
 
                <elementSpec ident="usg" mode="change">
                   <remarks>
-                     <p>With @type set to <val>domain</val>, implements the <mentioned>SubjectField</mentioned> class from ISO standard 24613-2.</p>
+                     <p>With @type set to <val>domain</val>, implements the <mentioned>SubjectField</mentioned> class
+                        from ISO standard 24613-2.</p>
                   </remarks>
                </elementSpec>
 
