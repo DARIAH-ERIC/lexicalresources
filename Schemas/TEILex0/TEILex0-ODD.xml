@@ -1755,7 +1755,7 @@
                         </classes>
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
+                               <!-- 2019-06-25 (TT): removed <textNode/> because we don't mixed content in sense-->
                                 <classRef key="model.gLike"/>
                                 <!-- following line useless since sense is member of model.sensePart -->
                                 <!--<elementRef key="sense"/>
@@ -1962,6 +1962,7 @@
                                 <classRef key="model.ptrLike"/>
                                 <classRef key="model.global"/>
                                 <classRef key="model.entryPart"/>
+                                <!-- 2019-06-25 (TT): adding  model.segLike to allow pc etc. in cit -->
                                 <classRef key="model.segLike"/>
                             </alternate>
                         </content>
