@@ -1953,6 +1953,18 @@
                         <classes mode="change">
                             <memberOf key="model.sensePart" mode="add"/>
                         </classes>
+                        <content>
+                            <alternate minOccurs="1"
+                                maxOccurs="unbounded">
+                                <classRef key="model.qLike"/>
+                                <classRef key="model.egLike"/>
+                                <classRef key="model.biblLike"/>
+                                <classRef key="model.ptrLike"/>
+                                <classRef key="model.global"/>
+                                <classRef key="model.entryPart"/>
+                                <classRef key="model.segLike"/>
+                            </alternate>
+                        </content>
                         <attList>
                             <attDef ident="type" mode="replace" usage="req">
                                 <valList type="closed" mode="change">
