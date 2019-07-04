@@ -2242,6 +2242,8 @@
                                 <valList type="semi" mode="change">
                                     <valItem ident="entry"/>
                                     <valItem ident="sense"/>
+                                    <!-- 2019-07-04 (LR): added bibliography -->
+                                    <valItem ident="bibliography"/>
                                     <!-- further values to be added there -->
                                 </valList>
                             </attDef>
