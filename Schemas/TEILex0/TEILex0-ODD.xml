@@ -394,28 +394,18 @@
                         linguistic entities of the same kind (“words”, word families, multi-word
                         expressions, morphemes, …) a classification along those lines will be of
                         minor importance for a stand-alone resource but may be useful in a
-                        multi-dictionary use-case. Possible values for this domain include:</p>
+                        multi-dictionary use-case.</p>
+                    <p>Because <gi>entry</gi> is the only entry-like container in TEI Lex-0, and
+                        because TEI Lex-0 does no allow for other entry-like elements that exist in
+                        TEI (<gi>entryFree</gi>, <gi>superEntry</gi>, <gi>hom</gi>, <gi>re</gi>),
+                        TEI Lex-0 uses the <att>type</att> attribute on <gi>entry</gi> to classify entries based on the their macrostructural properties (i.e. properties describing aspects of the internal organization
+                        of a lexical resource). The <att>type</att> is required, and its possible values are:</p>
                     <list type="unordered">
-                        <item>affix</item>
-                        <item>word</item>
-                        <item>synset</item>
-                        <item>multi-word-entity</item>
-                        <item>word-family</item>
+                        <item>mainEntry (default)</item>
+                        <item>relatedEntry</item>
+                        <item>homonymicEntry </item>
+                        <item>wordFamily</item>
                     </list>
-                    <p>A classification based on macrostructural properties (i. e. properties
-                        describing aspects of the internal organisation of a resource) can on the
-                        other hand be exploited both for a single dictionary and across different
-                        dictionaries. Possible values for this domain include:</p>
-                    <list type="unordered">
-                        <item>main</item>
-                        <item>supplemental</item>
-                        <item>nest</item>
-                        <item>niche</item>
-                        <item>xr</item>
-                    </list>
-                    <p><hi>This section is not complete. </hi> See this <ref
-                            target="https://github.com/DARIAH-ERIC/lexicalresources/issues/12"
-                            >issue</ref> on GitHub.</p>
                 </div>
             </div>
             <div>
@@ -497,15 +487,15 @@
 
 
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e1049">
-                        <entry>
+                        <entry type="mainEntry" xml:lang="en" xml:id="arrest">
                             <form type="lemma">
                                 <orth>arrest</orth>
                                 <pron>/ə rest/</pron>
-                                <gramGrp>
-                                    <pos>verb</pos>
-                                </gramGrp>
                             </form>
-                            <sense>
+                            <sense xml:id="sense_verb">
+                                <gramGrp>
+                                    <gram type="pos">verb</gram>
+                                </gramGrp>
                                 <usg>(of the police)</usg>
                                 <def>to catch and hold someone who has broken the law</def>
                                 <cit type="example">
@@ -520,9 +510,9 @@
                                     <quote>She was arrested for stealing</quote>
                                 </cit>
                             </sense><pc>.</pc>
-                            <sense>
+                            <sense xml:id="sense_noun">
                                 <gramGrp>
-                                    <pos>noun</pos>
+                                    <gram type="pos">noun</gram>
                                 </gramGrp>
                                 <def>the act of holding someone for breaking the law</def>
                                 <cit type="example">
@@ -2091,9 +2081,9 @@
                         <attList>
                             <attDef ident="xml:id" mode="change" usage="req"/>
                             <attDef ident="xml:lang" mode="change" usage="req"/>
-                            <attDef ident="type" mode="replace" usage="rec">
+                            <attDef ident="type" mode="replace" usage="req">
                                 <defaultVal>mainEntry</defaultVal>
-                                <valList mode="change">
+                                <valList mode="change" type="semi">
                                     <valItem ident="mainEntry"/>
                                     <valItem ident="wordFamily"/>
                                     <valItem ident="homonymicEntry"/>
