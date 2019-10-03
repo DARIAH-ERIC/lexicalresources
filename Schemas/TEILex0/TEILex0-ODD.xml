@@ -106,7 +106,7 @@
                         element – <gi>cit</gi> – can be used to encode different parts of the
                         dictionary structure:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e137">
-                        <entry xml:lang="fr" xml:id="horrifier">
+                        <entry xml:lang="fr" xml:id="horrifier" type="mainEntry">
                             <form type="lemma">
                                 <orth>horrifier</orth>
                             </form>
@@ -180,9 +180,10 @@
                         hierarchies of embedded entries, <gi>entry</gi> is in the context of TEI
                         Lex-0 allowed to occur recursively (e.g. by making it part of <ref
                             target="#TEI.model.entryPart.top">model.entryPart.top</ref>). This is
-                        where TEI Lex-0 departs from the TEI <hi rend="italic">Guidelines</hi>, but
-                        this <ref target="https://github.com/TEIC/TEI/issues/1791">issue</ref> has
-                        already been raised with TEI. </p>
+                        where TEI Lex-0 originally departed from the TEI <hi rend="italic"
+                            >Guidelines</hi>, but this <ref
+                            target="https://github.com/TEIC/TEI/issues/1791">proposal</ref> was
+                        presented to the TEI Council and subsequently adopted. </p>
                     <p>In the context of TEI-Lex-0, <gi>entry</gi> is used to encode the basic
                         element of the dictionary microstructure; it groups all the information
                         related to a particular linguistic entity and may contain further entries
@@ -223,7 +224,7 @@
                         a typed entry (see <ref target="#TypesOfEntries">Types of entries</ref>
                         below for a detailed discussion of entry types):</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e397">
-                        <entry type="wordFamily" xml:id="Haus-">
+                        <entry type="wordFamily" xml:id="Haus-" xml:lang="de">
                             <form type="base">
                                 <orth>Haus-</orth>
                             </form>
@@ -233,22 +234,22 @@
                             </form>
                             <pc>:</pc>
                             <!-- possibly some shared usg information -->
-                            <entry type="wordForm">
+                            <entry type="mainEntry" xml:lang="de" xml:id="Hausaltar">
                                 <form type="lemma">
                                     <orth expand="Hausaltar">-altar</orth>
                                     <pc>,</pc>
                                     <gramGrp>
-                                        <gen value="masculine">der</gen>
+                                        <gram type="gen" value="masculine">der</gram>
                                     </gramGrp>
                                 </form>
                                 <sense>...</sense>
                             </entry>
-                            <entry type="wordForm">
+                            <entry type="mainEntry" xml:lang="de" xml:id="Hausandacht">
                                 <form type="lemma">
                                     <orth expand="Hausandacht">-andacht</orth>
                                     <pc>,</pc>
                                     <gramGrp>
-                                        <gen value="feminine">die</gen>
+                                        <gram type="gen" value="feminine">die</gram>
                                     </gramGrp>
                                 </form>
                                 <sense>...</sense>
@@ -285,19 +286,25 @@
                         word-families in other languages such as in Howard H. Keller’s (1978): “A
                         German word family dictionary together with English equivalents”:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e515">
-                        <entry type="wordFamily">
-                            <entry type="main">
-                                <form><orth>Haus</orth><gramGrp><pos>nn</pos></gramGrp></form>
+                        <entry type="wordFamily" xml:lang="de" xml:id="Haus">
+                            <entry type="mainEntry">
+                                <form type="lemma"><orth>Haus</orth>
+                                    <gramGrp>
+                                        <gram type="pos">nn</gram>
+                                    </gramGrp>
+                                </form>
                                 <sense>...</sense>
                             </entry>
-                            <entry type="sub">
-                                <form><orth><m>Häus</m>
-                                        <m>chen</m></orth></form>
+                            <entry type="relatedEntry">
+                                <form type="lemma">
+                                    <orth><m>Häus</m><m>chen</m></orth>
+                                </form>
                                 <sense>...</sense>
                             </entry>
-                            <entry type="sub">
-                                <form><orth><m>haus</m>
-                                        <m>en</m></orth></form>
+                            <entry type="relatedEntry">
+                                <form type="lemma">
+                                    <orth><m>haus</m><m>en</m></orth>
+                                </form>
                                 <sense>...</sense>
                             </entry>
                         </entry>
@@ -309,20 +316,21 @@
                             target="#TypesOfEntries">Types of entries</ref> for a discussion of
                         possible entry types:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e569">
-                        <entry type="simple">
-                            <form>
+                        <entry type="mainEntry">
+                            <form type="lemma">
                                 <orth>house</orth>
                             </form>
-                            <entry type="multiWordExpression">
-                                <form><orth>bring the house down</orth></form>
+                            <entry type="relatedEntry">
+                                <form type="lemma"><orth>bring the house down</orth></form>
                                 <sense>...</sense>
                             </entry>
-                            <entry type="multiWordExpression">
-                                <form><orth>eat someone out of house and home</orth></form>
+                            <entry type="relatedEntry">
+                                <form type="lemma"><orth>eat someone out of house and
+                                    home</orth></form>
                                 <sense>...</sense>
                             </entry>
-                            <entry type="multiWordExpression">
-                                <form><orth>get on like a house on fire</orth></form>
+                            <entry type="relatedEntry">
+                                <form type="lemma"><orth>get on like a house on fire</orth></form>
                                 <sense>...</sense>
                             </entry>
                         </entry>
@@ -398,18 +406,23 @@
                     <p>Because <gi>entry</gi> is the only entry-like container in TEI Lex-0, and
                         because TEI Lex-0 does no allow for other entry-like elements that exist in
                         TEI (<gi>entryFree</gi>, <gi>superEntry</gi>, <gi>hom</gi>, <gi>re</gi>),
-                        TEI Lex-0 uses the <att>type</att> attribute on <gi>entry</gi> to classify entries based on the their macrostructural properties (i.e. properties describing aspects of the internal organization
-                        of a lexical resource). The <att>type</att> is required, and its possible values are:</p>
+                        TEI Lex-0 uses the <att>type</att> attribute on <gi>entry</gi> to classify
+                        entries based on the their macrostructural properties (i.e. properties
+                        describing aspects of the internal organization of a lexical resource). The
+                            <att>type</att> is required, and its possible values are:</p>
                     <list type="unordered">
                         <item>mainEntry (default)</item>
                         <item>relatedEntry</item>
                         <item>homonymicEntry </item>
                         <item>wordFamily</item>
                     </list>
+                    <p>This is still somewhat controversial. See <ref
+                            target="https://github.com/DARIAH-ERIC/lexicalresources/issues/12">this
+                            issue on GitHub.</ref></p>
                 </div>
             </div>
             <div>
-                <head><anchor xml:id="hp8vymhe6byi"/>Senses</head>
+                <head>Senses</head>
                 <div>
                     <head>General remarks</head>
                     <p>In the current TEI Dictionary Chapter, the content model of <gi>entry</gi>
@@ -463,8 +476,7 @@
                         embedding <gi>def</gi> within a <gi>sense</gi>.</p>
                 </div>
                 <div>
-                    <head><anchor xml:id="gg6wukfjt7e9"/>Encoding sense in entries with multiple
-                        parts of speech</head>
+                    <head>Encoding sense in entries with multiple parts of speech</head>
                     <p>For multi-POS lexical entries, TEI Lex-0 considers each POS as a trigger for
                         a new sense. Consequently, we recommend encoding grammatical information in
                         each sense coming after the first one to be serialised inside the semantic
@@ -472,7 +484,7 @@
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e1022">
                         <sense>
                             <gramGrp>
-                                <pos>..</pos>
+                                <gram type="pos">..</gram>
                             </gramGrp>
                             <def>..</def> .. </sense>
                     </egXML>
@@ -496,7 +508,7 @@
                                 <gramGrp>
                                     <gram type="pos">verb</gram>
                                 </gramGrp>
-                                <usg>(of the police)</usg>
+                                <usg type="hint">(of the police)</usg>
                                 <def>to catch and hold someone who has broken the law</def>
                                 <cit type="example">
                                     <quote>The police arrested two men and took them to the police
@@ -517,16 +529,16 @@
                                 <def>the act of holding someone for breaking the law</def>
                                 <cit type="example">
                                     <quote>The police made several arrests at the
-                                        demonstration</quote>
+                                        demonstration.</quote>
                                 </cit>
-                                <pc>.</pc>
-                                <entry type="multiWordExpression">
+                                <entry type="relatedEntry">
                                     <form>under arrest</form>
                                     <sense>
-                                        <def>held by the police After the fight</def>
+                                        <def>held by the police</def>
                                         <pc>,</pc>
                                         <cit type="example">
-                                            <quote>three people were under arrest</quote>
+                                            <quote>After the fight, three people were under
+                                                arrest.</quote>
                                         </cit>
                                     </sense>
                                 </entry>
@@ -545,68 +557,68 @@
                             XXX</caption>
                     </figure>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e1163">
-                        <entry>
+                        <entry type="mainEntry" xml:lang="en" xml:id="aid">
                             <form type="lemma">
                                 <orth>Aid</orth>
                             </form>
                             <pc>,</pc>
-                            <sense>
+                            <sense xml:id="aid_v_a">
                                 <gramGrp>
-                                    <pos>v.a.</pos>
+                                    <gram type="pos">v.a.</gram>
                                 </gramGrp>
-                                <cit type="translationEquivalent">
-                                    <form xml:lang="fr">
+                                <cit type="translationEquivalent" xml:lang="fr">
+                                    <form>
                                         <orth>aider</orth>
                                     </form>
                                 </cit>
                                 <pc>,</pc>
-                                <cit type="translationEquivalent">
+                                <cit type="translationEquivalent" xml:lang="fr">
                                     <form>
                                         <orth>assister</orth>
                                     </form>
                                 </cit>
                                 <pc>,</pc>
-                                <cit type="translationEquivalent">
+                                <cit type="translationEquivalent" xml:lang="fr">
                                     <form>
                                         <orth>secourir</orth>
                                     </form>
                                 </cit>
                             </sense>
                             <pc>;</pc>
-                            <sense>
+                            <sense xml:id="aid_s">
                                 <oRef>_</oRef>
                                 <gramGrp>
-                                    <pos>s.</pos>
+                                    <gram type="pos">s.</gram>
                                 </gramGrp>
-                                <cit type="translationEquivalent">
+                                <cit type="translationEquivalent" xml:lang="fr">
                                     <form>
                                         <orth>aide</orth>
                                     </form>
                                 </cit>
                                 <pc>,</pc>
-                                <cit type="translationEquivalent">
+                                <cit type="translationEquivalent" xml:lang="fr">
                                     <form>
                                         <orth>assistance</orth>
                                         <pc>,</pc>
                                         <gramGrp>
-                                            <gen>f.</gen>
+                                            <gram type="gen">f.</gram>
                                         </gramGrp>
                                     </form>
                                 </cit>
                                 <pc>,</pc>
-                                <cit type="translationEquivalent">
+                                <cit type="translationEquivalent" xml:lang="fr">
                                     <form>
                                         <orth>secours</orth>
                                         <pc>,</pc>
                                         <gramGrp>
-                                            <gen>m.</gen>
+                                            <gram type="gen">m.</gram>
                                         </gramGrp>
                                     </form>
                                 </cit>
                             </sense>
                             <pc>;</pc>
                             <sense>
-                                <cit type="translationEquivalent">
+                                <cit type="translationEquivalent" xml:lang="fr">
                                     <form>
                                         <orth>sub-side</orth>
                                     </form>
@@ -619,24 +631,24 @@
                             <pc>;</pc>
                             <sense>
                                 <usg type="hint">(pers)</usg>
-                                <cit type="translationEquivalent">
+                                <cit type="translationEquivalent" xml:lang="fr">
                                     <form>
                                         <orth>aide</orth>
                                     </form>
                                     <pc>,</pc>
                                     <gramGrp>
-                                        <gen>m.</gen>
-                                        <gen>f.</gen>
+                                        <gram type="gen">m.</gram>
+                                        <gram type="gen">f.</gram>
                                     </gramGrp>
                                 </cit>
                             </sense>
-                            <entry type="multiWordExpression">
+                            <entry type="relatedEntry" xml:lang="en" xml:id="by_the_aid_of">
                                 <form type="lemma">
                                     <orth>By the <oRef>_</oRef> of</orth>
                                 </form>
                                 <pc>,</pc>
                                 <sense>
-                                    <cit type="translationEquivalent">
+                                    <cit type="translationEquivalent" xml:lang="fr">
                                         <form>
                                             <orth>à l'aide de</orth>
                                         </form>
@@ -644,49 +656,51 @@
                                 </sense>
                             </entry>
                             <pc>.</pc>
-                            <entry type="multiWordExpression">
+                            <entry type="relatedEntry">
                                 <form>
                                     <orth>In <oRef>_</oRef> of</orth>
                                 </form>
                                 <pc>,</pc>
                                 <sense>
-                                    <usg>(of performances)</usg>
-                                    <cit type="translationEquivalent">au profit de</cit>
+                                    <usg type="hint">(of performances)</usg>
+                                    <cit type="translationEquivalent" xml:lang="fr"><form><orth>au
+                                                profit de</orth></form></cit>
                                     <pc>,</pc>
-                                    <cit type="translationEquivalent">au bénéfice de</cit>
+                                    <cit type="translationEquivalent"><form><orth>au bénéfice
+                                                de</orth></form></cit>
                                 </sense>
                             </entry>
                             <pc>.</pc>
-                            <entry type="derived">
+                            <entry type="derived" xml:lang="en">
                                 <form type="lemma">
                                     <orth>_less</orth>
                                     <pc>,</pc>
                                     <gramGrp>
-                                        <pos>adj.</pos>
+                                        <gram type="pos">adj.</gram>
                                     </gramGrp>
                                 </form>
                                 <sense>
-                                    <cit type="translationEquivalent">
-                                        <form xml:lang="fr">
+                                    <cit type="translationEquivalent" xml:lang="fr">
+                                        <form>
                                             <orth>sans aide</orth>
                                         </form>
                                     </cit>
                                     <pc>,</pc>
-                                    <cit type="translationEquivalent">
-                                        <form xml:lang="fr">
+                                    <cit type="translationEquivalent" xml:lang="fr">
+                                        <form>
                                             <orth>sans secours</orth>
                                         </form>
                                     </cit>
                                 </sense>
                                 <pc>;</pc>
                                 <sense>
-                                    <cit type="translationEquivalent">
+                                    <cit type="translationEquivalent" xml:lang="fr">
                                         <form>
                                             <orth>abandonné</orth>
                                         </form>
                                     </cit>
                                     <pc>,</pc>
-                                    <cit type="translationEquivalent">
+                                    <cit type="translationEquivalent" xml:lang="fr">
                                         <form>
                                             <orth>délaissé</orth>
                                         </form>
@@ -697,7 +711,7 @@
                     </egXML>
                 </div>
                 <div>
-                    <head><anchor xml:id="tw5hp3zaa2wg"/>Deprecating <gi>hom</gi></head>
+                    <head>Deprecating <gi>hom</gi></head>
                     <p>Making a clear difference between a situation where an entry has to be split
                         into two or more homonyms and one where these differences correspond to a
                         semantic alternation is lexicographically difficult. Still, the main danger
@@ -735,28 +749,28 @@
                     </egXML>
                     <p>would in TEI Lex-0 be represented as:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e1549">
-                        <entry>
+                        <entry type="mainEntry" xml:id="bray" xml:lang="en">
                             <form type="lemma">
                                 <orth>bray</orth>
                                 <pron>brel</pron>
                             </form>
-                            <sense>
+                            <sense xml:id="bray_n">
                                 <gramGrp>
-                                    <pos>n</pos>
+                                    <gram type="pos">n</gram>
                                 </gramGrp>
-                                <sense>
+                                <sense xml:id="bray_n.1">
                                     <def>cry of an ass</def>
                                 </sense>
                                 <pc>;</pc>
-                                <sense>
+                                <sense xml:id="bray_n.2">
                                     <def>sound of a trumpet</def>
                                 </sense>
                             </sense>
                             <pc>.</pc>
-                            <sense>
+                            <sense xml:id="bray_vt">
                                 <gramGrp>
-                                    <pos>vt</pos>
-                                    <subc>VP2A</subc>
+                                    <gram type="pos">vt</gram>
+                                    <gram type="subc">VP2A</gram>
                                 </gramGrp>
                                 <def>make a cry or sound of this kind</def>
                             </sense>
@@ -766,7 +780,7 @@
                 </div>
             </div>
             <div>
-                <head><anchor xml:id="c325ri54eh64"/>Written and Spoken Forms</head>
+                <head>Written and Spoken Forms</head>
                 <p>The current TEI <hi rend="italic">Guidelines</hi> allows for an extremely wide
                     range of encoding possibilities for written and spoken forms. In the discussion
                     which follows, we suggest ways in which the elements, in particular
@@ -793,7 +807,7 @@
                             <code>entry/gramGrp</code>. This element will typically specify the
                         part-of-speech of the entry.</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e1661">
-                        <entry xml:lang="en">
+                        <entry xml:lang="en" type="mainEntry" xml:id="on">
                             <form type="lemma"><orth>on</orth></form>
                             <gramGrp>
                                 <gram type="pos">prep</gram>
@@ -909,29 +923,29 @@
                                 <form type="inflected">
                                     <orth>pierdo</orth>
                                     <gramGrp>
-                                        <per>1</per>
-                                        <number>sg</number>
-                                        <mood>indic</mood>
+                                        <gram type="per">1</gram>
+                                        <gram type="number">sg</gram>
+                                        <gram type="mood">indic</gram>
                                         <gram type="voice">active</gram>
                                     </gramGrp>
                                 </form>
                                 <!-- other inflected forms (of present indicative) here -->
                                 <gramGrp>
-                                    <tns>present</tns>
+                                    <gram type="tns">present</gram>
                                 </gramGrp>
                             </form>
                             <form type="paradigm" subtype="preteritum">
                                 <form type="inflected">
                                     <orth>perdí</orth>
                                     <gramGrp>
-                                        <per>1</per>
-                                        <number>sg</number>
-                                        <mood>indic</mood>
+                                        <gram type="per">1</gram>
+                                        <gram type="number">sg</gram>
+                                        <gram type="mood">indic</gram>
                                         <gram type="voice">active</gram>
                                     </gramGrp>
                                 </form>
                                 <gramGrp>
-                                    <tns>preteritum</tns>
+                                    <gram type="tns">preteritum</gram>
                                 </gramGrp>
                             </form> ... </entry>
                     </egXML>
@@ -2149,7 +2163,6 @@
                                 <defaultVal>related</defaultVal>
                                 <valList type="closed" mode="change">
                                     <!-- 2018-12-06-->
-                                    <valItem ident="related"/>
                                     <!--<valItem ident="crossReference"/>-->
                                     <valItem ident="synonymy">
                                         <desc>Relation between two lexical units X and Y which are
