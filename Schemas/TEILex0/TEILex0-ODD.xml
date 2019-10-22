@@ -2142,7 +2142,8 @@
                         <classes mode="change">
                             <memberOf key="model.sensePart" mode="add"/>
                             <!-- 2018-12-04 [LR] to have <xr> in <def> and few other cool places -->
-                            <memberOf key="model.emphLike" mode="add"/>
+                            <!-- 2019-10-22 [LR] deleted to prevent ambiguous content model -->
+                            <!--<memberOf key="model.emphLike" mode="add"/>-->
                             <!--<classes mode="change">
                             <memberOf key="att.notated" mode="add"/>
                         </classes>-->
@@ -2291,11 +2292,12 @@
                         </remarks>
                     </elementSpec>
 
-                    <!-- adding lang to model.entryPart (to make it member of <cit>, if you ask -->
+                    <!-- adding lang to model.entryPart (to make it member of <cit>, if you ask) -->
+                    <!-- 2019-10-22 (LR) created ambiguous models... mended -->
                     <elementSpec ident="lang" mode="change">
-                        <classes mode="change">
+                        <!--<classes mode="change">
                             <memberOf key="model.entryPart" mode="add"/>
-                        </classes>
+                        </classes>-->
                         <exemplum>
                             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e5322">
                                 <cit type="cognate">
@@ -2348,6 +2350,8 @@
                                 <classRef key="model.entryPart"/>
                                 <!-- 2019-06-25 (TT): adding  model.segLike to allow pc etc. in cit -->
                                 <classRef key="model.segLike"/>
+                                <!-- 2019-10-22 (LR): adding <lang> to deal with etymological descriptions -->
+                                <elementRef key="lang"/>
                             </alternate>
                         </content>
                         <attList>
@@ -2505,6 +2509,23 @@
                     </classSpec>
 
                     <classSpec ident="att.divLike" mode="delete" type="atts"/>
+                    
+                    <!-- 2019-10-22 (LR) new hack to have <xr> in <def> and similar places -->
+                    <macroSpec ident="macro.paraContent" mode="change">
+                        <content>
+                            <alternate minOccurs="0"
+                                maxOccurs="unbounded">
+                                <textNode/>
+                                <classRef key="model.gLike"/>
+                                <classRef key="model.phrase"/>
+                                <classRef key="model.inter"/>
+                                <classRef key="model.global"/>
+                                <elementRef key="lg"/>
+                                <classRef key="model.lLike"/>
+                                <elementRef key="xr"/>
+                            </alternate>
+                        </content>
+                    </macroSpec>
 
                 </schemaSpec>
             </div>
