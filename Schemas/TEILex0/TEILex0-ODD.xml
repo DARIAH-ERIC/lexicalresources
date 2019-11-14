@@ -2051,7 +2051,7 @@
                     <!--2018-09-20 (TT): added quote! -->
                     <!--2019-07-04 (TT): added graphic, we need it for images! -->
                     <moduleRef key="core"
-                        include="author head title cit quote bibl biblStruct biblScope listBibl
+                        include="author head title cit quote bibl biblStruct biblScope listBibl gloss
                         citedRange imprint analytic publisher pubPlace ref date hi editor respStmt name resp term note graphic"/>
                     <!--PB's simplified textstructure declaratiopn-->
                     <moduleRef key="textstructure" include="TEI text body div front back"/>
@@ -2071,7 +2071,10 @@
                     <moduleRef key="namesdates" include="placeName"/>
                     <!-- for dialectal properties -->
                     <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
-
+                    
+                    <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->
+                    <moduleRef key="transcr" except="metamark"/>
+                    
                     <!-- Initial change to make entry recursive (LR) -->
                     <!-- 2018-09-03 (LR): making @xml:id required -->
                     <elementSpec ident="entry" mode="change">
@@ -2264,7 +2267,7 @@
                             <attDef ident="type" mode="replace" usage="req">
                                 <valList type="closed" mode="change">
                                     <valItem ident="time"/>
-                                    <valItem ident="geo"/>
+                                    <valItem ident="geographic"/>
                                     <valItem ident="language"/>
                                     <valItem ident="socioCultural"/>
                                     <valItem ident="domain"/>
@@ -2361,6 +2364,7 @@
                                     <valItem ident="translation"/>
                                     <valItem ident="translationEquivalent"/>
                                     <valItem ident="etymon"/>
+                                    <valItem ident="cognate"/>
                                 </valList>
                             </attDef>
                         </attList>
