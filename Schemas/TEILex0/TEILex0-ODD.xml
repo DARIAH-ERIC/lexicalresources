@@ -2426,6 +2426,8 @@
                             <!--2019-02-19 (TT): changed from 'delete' (which was in error) to 'add' in model.entryPart.top";
                                 this is temporary because of issue with oxygen and tei-c servers; is already part of TEI-->
                             <memberOf key="model.entryPart.top" mode="add"/>
+                            <memberOf key="model.emphLike" mode="add"/>
+                            
                         </classes>
                     </elementSpec>
 
