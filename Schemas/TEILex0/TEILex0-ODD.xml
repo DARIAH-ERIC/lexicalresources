@@ -2051,7 +2051,7 @@
                     <!--2018-09-20 (TT): added quote! -->
                     <!--2019-07-04 (TT): added graphic, we need it for images! -->
                     <moduleRef key="core"
-                        include="author head title cit quote bibl biblStruct biblScope 
+                        include="author head title cit quote bibl biblStruct biblScope listBibl
                         citedRange imprint analytic publisher pubPlace ref date hi editor respStmt name resp term note graphic"/>
                     <!--PB's simplified textstructure declaratiopn-->
                     <moduleRef key="textstructure" include="TEI text body div front back"/>
