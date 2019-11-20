@@ -29,8 +29,8 @@
             <form type="lemma">
                <orth>opalina</orth>
                <gramGrp>
-                  <gram type="pos" norm="NOUN">s.</gram>
-                  <gram type="gen">f.</gram>
+                  <pos norm="noun">s.</pos>
+                  <gen norm="feminine">f.</gen>
                </gramGrp>
             </form>
             <bibl type="attestation">
@@ -41,9 +41,8 @@
                <pc>)</pc>
             </bibl>
             <sense n="1" xml:id="opalina_sense1">
-               <def>vidro de aspeto acetinado, irisado quando visto à contraluz, leitoso, ger.
-                  translúcido, us. no fabrico de objectos decorativos, jarras, taças, lustres
-                  etc.</def>
+               <def>vidro de aspeto acetinado, irisado quando visto à contraluz, leitoso, ger. translúcido, us. no
+                  fabrico de objectos decorativos, jarras, taças, lustres etc.</def>
             </sense>
             <sense n="2" xml:id="opalina_sense2">
                <usg type="meaningType">p.met.</usg>
@@ -73,14 +72,14 @@
                   </bibl>
                   <pc>'</pc>
                   <gloss>tipo de vaso vitrificado</gloss>
-                     <pc>'</pc>
+                  <pc>'</pc>
                   <pc>;</pc>
                   <xr type="related">
                      <lbl>ver</lbl>
                      <ref type="entry">opal(i)-</ref>
                   </xr>
-                  <note>a datação é para a ace., não registada aqui, ’género de infusórios que se
-                     encontra no ventre das rãs’</note>
+                  <note>a datação é para a ace., não registada aqui, ’género de infusórios que se encontra no ventre das
+                     rãs’</note>
                   <pc>;</pc>
                </cit>
             </etym>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../../../Documents/GitHub/lexicalresources/Schemas/TEILex0/TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../../../Documents/GitHub/lexicalresources/Schemas/TEILex0/out/TEILex0-ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../../../Schemas/LMFinTEI%20Specification/LMFinTEIspec.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lexicon">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -29,8 +26,8 @@
             <form type="lemma">
                <orth>sapato</orth>
                <gramGrp>
-                  <gram type="pos" norm="NOUN">s.</gram>
-                  <gram type="gen">m.</gram>
+                  <pos norm="noun">s.</pos>
+                  <gen norm="masculine">m.</gen>
                </gramGrp>
             </form>
             <bibl type="attestation">
@@ -49,7 +46,7 @@
             <etym type="unknown">
                <lbl>etim</lbl>
                <note>etim orig. obsc., assim como o é em</note>
-               <cit type="cognateSet ">
+               <cit type="cognateSet">
                   <cit type="cognate">
                      <lang expand="espanhol" norm="es">esp.</lang>
                      <form xml:lang="es">
@@ -75,7 +72,7 @@
                      </bibl>
                      <pc>'</pc>
                      <gloss xml:lang="pt">calçado</gloss>
-                  <pc>'</pc>
+                     <pc>'</pc>
                   </cit>
                   <cit type="cognate">
                      <lang expand="provençal" norm="oc">provç</lang>
@@ -93,9 +90,9 @@
                            <pc>(</pc>
                            <date>c1200</date>
                         </bibl>
-                           <orth>chavate</orth>
-                           <pc>)</pc>
-                        </form>
+                        <orth>chavate</orth>
+                        <pc>)</pc>
+                     </form>
                      <gloss xml:lang="pt">'calçado velho'</gloss>
                   </cit>
                   <pc>,</pc>
@@ -116,22 +113,22 @@
                   </cit>
                   <cit type="cognate">
                      <lang expand="português" norm="pt">pt.</lang>
-                  <form type="historical">
-                  <lbl>f.hist.</lbl>
-                  <bibl type="attestation">
-                     <date>sXIII</date>
-                  </bibl>
-                  <orth>çapato</orth>
-                  </form>
-                  <pc>,</pc>
-                  <form type="historical">
-                  <lbl>f.hist.</lbl>
-                  <bibl type="attestation">
-                     <date>sXV</date>
-                  </bibl>
-                  <orth>sapato</orth>
-                  </form>
-               </cit>
+                     <form type="historical">
+                        <lbl>f.hist.</lbl>
+                        <bibl type="attestation">
+                           <date>sXIII</date>
+                        </bibl>
+                        <orth>çapato</orth>
+                     </form>
+                     <pc>,</pc>
+                     <form type="historical">
+                        <lbl>f.hist.</lbl>
+                        <bibl type="attestation">
+                           <date>sXV</date>
+                        </bibl>
+                        <orth>sapato</orth>
+                     </form>
+                  </cit>
                </cit>
             </etym>
          </entry>

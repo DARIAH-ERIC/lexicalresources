@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../../../Documents/GitHub/lexicalresources/Schemas/TEILex0/TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../../../Documents/GitHub/lexicalresources/Schemas/TEILex0/out/TEILex0-ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../../../Schemas/LMFinTEI%20Specification/LMFinTEIspec.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lexicon">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -29,8 +26,8 @@
             <form type="lemma">
                <orth>neve</orth>
                <gramGrp>
-                  <gram type="pos" norm="NOUN">s.</gram>
-                  <gram type="gen">f.</gram>
+                  <pos norm="noun">s.</pos>
+                  <gen norm="feminine">f.</gen>
                </gramGrp>
             </form>
             <bibl type="attestation">
@@ -42,8 +39,8 @@
             </bibl>
             <sense n="1" xml:id="neve_sense1">
                <usg type="domain">met</usg>
-               <def>precipitação de cristais de gelo, freq. agrupados em flocos e formados pelo
-                  congelamento do vapor de água que se encontra suspenso na atmosfera</def>
+               <def>precipitação de cristais de gelo, freq. agrupados em flocos e formados pelo congelamento do vapor de
+                  água que se encontra suspenso na atmosfera</def>
             </sense>
             <sense n="2" xml:id="neve_sense2">
                <usg type="meaningType">p.met.</usg>
@@ -73,8 +70,7 @@
             </sense>
             <sense n="7" xml:id="neve_sense7">
                <usg type="domain">eletrón</usg>
-               <def>conjunto de pontos brancos e diminutos que se formam no ecrã de um televisor ou
-                  radar</def>
+               <def>conjunto de pontos brancos e diminutos que se formam no ecrã de um televisor ou radar</def>
             </sense>
             <!--etc.-->
             <metamark function="etymology">¤</metamark>
@@ -91,18 +87,18 @@
                   </form>
                   <pc>;</pc>
                   <gloss xml:lang="pt">neve</gloss>
-               <xr type="related">
-                  <lbl>ver</lbl>
-                  <ref type="entry">niv(i/o)-</ref>
-               </xr>
-               <pc>;</pc>
-               <form type="historical">
-               <lbl>f.hist.</lbl>
-               <bibl type="attestation">
-                  <date>sXIV</date>
-               </bibl>
-                  <orth>neue</orth> 
-               </form>
+                  <xr type="related">
+                     <lbl>ver</lbl>
+                     <ref type="entry">niv(i/o)-</ref>
+                  </xr>
+                  <pc>;</pc>
+                  <form type="historical">
+                     <lbl>f.hist.</lbl>
+                     <bibl type="attestation">
+                        <date>sXIV</date>
+                     </bibl>
+                     <orth>neue</orth>
+                  </form>
                </cit>
             </etym>
             <metamark function="homonymy">¤</metamark>

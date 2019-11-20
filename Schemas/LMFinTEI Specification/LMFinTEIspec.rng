@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-11-20T07:00:52Z. .
+Schema generated from ODD source 2019-11-20T07:37:35Z. .
 TEI Edition: Version 3.6.0. Last updated on
 	16th July 2019, revision daa3cc0b9
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
@@ -3341,6 +3341,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <ref name="tei_model.entryPart"/>
                <ref name="tei_model.segLike"/>
                <ref name="tei_lang"/>
+               <ref name="tei_gloss"/>
             </choice>
          </oneOrMore>
          <ref name="tei_att.global.attributes"/>

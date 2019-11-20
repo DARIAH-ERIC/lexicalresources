@@ -319,6 +319,8 @@
                         <classRef key="model.segLike"/>
                         <!-- 2019-10-22 (LR): adding <lang> to deal with etymological descriptions -->
                         <elementRef key="lang"/>
+                        <!-- 2019-11-20 (LR): adding <gloss> to deal with etymological descriptions -->
+                        <elementRef key="gloss"/>
                      </alternate>
                   </content>
                   <attList>
