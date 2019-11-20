@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../../../Documents/GitHub/lexicalresources/Schemas/TEILex0/TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../../../../Documents/GitHub/lexicalresources/Schemas/TEILex0/out/TEILex0-ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml-model href="../../../Schemas/LMFinTEI%20Specification/LMFinTEIspec.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lexicon">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -67,17 +64,15 @@
                <def>pôr(-se) ou manter(-se) junto ao chão, abaixado ou encolhido, ou pouco visível,
                   encoberto por algo ou como que escondido</def>
                <cit type="example">
-                  <!--I can't use the symbol < >-->
-                  <pc>(</pc>
+                  <pc>&lt;</pc>
                   <quote>o comandante acocorou as tropas em trincheiras durante o
                      bombardeamento</quote>
-                  <pc>)</pc>
+                  <pc>&gt;</pc>
                </cit>
                <cit type="example">
-                  <!--I can't use the symbol < >-->
-                  <pc>(</pc>
+                  <pc>&lt;</pc>
                   <quote>a aldeia acocorava-se numa curva do vale</quote>
-                  <pc>)</pc>
+                  <pc>&gt;</pc>
                </cit>
             </sense>
             <sense n="3" xml:id="acocorar_sense3">
