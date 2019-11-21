@@ -396,7 +396,7 @@
                      </alternate>
                   </content>
                   <attList>
-                     <attDef ident="type" mode="replace" usage="req">
+                     <attDef ident="type" mode="replace" usage="rec">
                         <valList type="closed" mode="change">
                            <valItem ident="borrowing"/>
                            <valItem ident="inheritance"/>
