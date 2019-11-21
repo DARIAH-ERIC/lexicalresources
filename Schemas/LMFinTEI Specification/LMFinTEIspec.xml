@@ -396,6 +396,10 @@
                      </alternate>
                   </content>
                   <attList>
+                     <!-- Values from part 3 (in text): borrowing, inheritance; word-formation: compounding,
+derivation; sense shifts: narrowing, widening, amelioration, pejoration, metaphor, metonymy;
+phonetic/phonological processes: place assimilation, dissimilation, epenthesis, metathesis, hardening,
+weakening, To be CHacked -->
                      <attDef ident="type" mode="replace" usage="rec">
                         <valList type="closed" mode="change">
                            <valItem ident="borrowing"/>
@@ -404,6 +408,7 @@
                            <valItem ident="metonymy"/>
                            <valItem ident="compounding"/>
                            <valItem ident="grammaticalization"/>
+                           <valItem ident="derivation"/>
                         </valList>
                      </attDef>
                   </attList>
