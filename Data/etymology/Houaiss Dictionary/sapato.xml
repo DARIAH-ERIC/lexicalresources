@@ -132,6 +132,51 @@
                </cit>
             </etym>
          </entry>
+
+         <!-- Abridged version for the LREC paper -->
+
+         <entry xml:lang="pt" xml:id="sapato">
+
+            <etym>
+               <lbl>etim</lbl>
+               <note>etim orig. obsc., assim como o é em</note>
+               <cit type="cognateSet">
+                  <cit type="cognate">
+                     <lang expand="espanhol" norm="es">esp.</lang>
+                     <form xml:lang="es">
+                        <orth>zapato</orth>
+                        <bibl type="attestation">
+                           <pc>(</pc>
+                           <date>1140</date>
+                           <pc>)</pc>
+                        </bibl>
+                     </form>
+                     <pc>'</pc>
+                     <gloss xml:lang="pt">calçado</gloss>
+                     <pc>'</pc>
+                  </cit>
+                  <pc>,</pc>
+                  <cit type="cognate">
+                     <lang expand="catalão" norm="ca">o cat.</lang>
+                     <form><orth>sabata</orth></form>
+                     <bibl type="attestation">
+                        <pc>(</pc>
+                        <date>1268</date>
+                        <pc>)</pc>
+                     </bibl>
+                     <pc>'</pc>
+                     <gloss xml:lang="pt">calçado</gloss>
+                     <pc>'</pc>
+                  </cit>
+                  <cit type="cognate"> ... </cit>
+                  <cit type="cognate"> ... </cit>
+                  <pc>,</pc>
+                  <cit type="cognate"> ... </cit>
+                  <cit type="cognate"> ... </cit>
+               </cit>
+            </etym>
+         </entry>
+
       </body>
    </text>
 </TEI>
