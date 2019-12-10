@@ -315,7 +315,7 @@
                     <p>Furthermore, in TEI Lex-0, <gi>entry</gi> has a mandatory <att>xml:lang</att> attribute. This may
                         appear superflous considering XML inheritance rules: in TEI proper, one would use an
                             <att>xml:lang</att> attribute on the <gi>text</gi> element or even the root <gi>TEI</gi>
-                        element to indicate the source language of the dictioanry and assume that the value of the
+                        element to indicate the source language of the dictionary and assume that the value of the
                         attribute will be inherited by all the entries. In TEI Lex-0, we err on the side of
                         overexplicitness in order to guarantee the global autonomy of the entry as a core element of the
                         dictionary macrostructure. </p>
