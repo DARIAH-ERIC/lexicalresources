@@ -2067,7 +2067,7 @@
                     <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
                     <moduleRef key="header"
                         include="teiHeader fileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc projectDesc seriesStmt
-                        notesStmt authority distributor idno edition funder availability licence appInfo classDecl"/>
+                        notesStmt authority distributor idno edition funder availability licence appInfo classDecl namespace tagUsage tagsDecl rendition"/>
                     <moduleRef key="namesdates" include="placeName"/>
                     <!-- for dialectal properties -->
                     <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
