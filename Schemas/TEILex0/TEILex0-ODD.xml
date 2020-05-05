@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron"
-    xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
+    xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -105,26 +106,9 @@
                     <p>The following example from a bilingual dictionary, shows how one typed
                         element – <gi>cit</gi> – can be used to encode different parts of the
                         dictionary structure:</p>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e137">
-                        <entry xml:lang="fr" xml:id="horrifier" type="mainEntry">
-                            <form type="lemma">
-                                <orth>horrifier</orth>
-                            </form>
-                            <gramGrp>
-                                <gram type="pos">v</gram>
-                            </gramGrp>
-                            <sense>
-                                <cit type="translationEquivalent" xml:lang="en">
-                                    <quote>horrify</quote>
-                                </cit>
-                                <cit type="example">
-                                    <quote>elle était horrifiée par la dépense</quote>
-                                    <cit type="translation" xml:lang="en">
-                                        <quote>she was horrified at the expense</quote>
-                                    </cit>
-                                </cit>
-                            </sense>
-                        </entry>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <xi:include href="TEILex0-examples.stripped.xml"
+                            xpointer="element(horrifier)"/>
                     </egXML>
                 </div>
             </div>
@@ -223,40 +207,10 @@
                         its own right. Note that the former <gi>superEntry</gi> was transformed into
                         a typed entry (see <ref target="#TypesOfEntries">Types of entries</ref>
                         below for a detailed discussion of entry types):</p>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e397">
-                        <entry type="wordFamily" xml:id="Haus-" xml:lang="de">
-                            <form type="base">
-                                <orth>Haus-</orth>
-                            </form>
-                            <pc>,</pc>
-                            <form type="base">
-                                <orth>haus-</orth>
-                            </form>
-                            <pc>:</pc>
-                            <!-- possibly some shared usg information -->
-                            <entry type="mainEntry" xml:lang="de" xml:id="Hausaltar">
-                                <form type="lemma">
-                                    <orth expand="Hausaltar">-altar</orth>
-                                    <pc>,</pc>
-                                    <gramGrp>
-                                        <gram type="gen" value="masculine">der</gram>
-                                    </gramGrp>
-                                </form>
-                                <sense>...</sense>
-                            </entry>
-                            <entry type="mainEntry" xml:lang="de" xml:id="Hausandacht">
-                                <form type="lemma">
-                                    <orth expand="Hausandacht">-andacht</orth>
-                                    <pc>,</pc>
-                                    <gramGrp>
-                                        <gram type="gen" value="feminine">die</gram>
-                                    </gramGrp>
-                                </form>
-                                <sense>...</sense>
-                            </entry>
-                            <!-- ... -->
-                        </entry>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <xi:include href="TEILex0-examples.stripped.xml" xpointer="element(Haus-)"/>
                     </egXML>
+
                     <p>The same encoding strategy can be exploited when entries are grouped under a
                         common morphological root as is customary for Arabic dictionaries such as
                         the 48th edition of “The Dictionary of Language and Proper Nouns” (المنجد في

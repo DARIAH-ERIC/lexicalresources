@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="cross-references">
+    <head>Cross-references</head>
+    <div>
+        <head>General remarks</head>
+        <p>The current TEI <hi rend="italic">Guidelines</hi> provide several mechanisms
+            by means of which one item of lexical information can refer to another,
+            e.g.:</p>
+        <list type="unordered">
+            <item><gi>gloss</gi> for the provision of simple (non refined) translation
+                equivalents of the head word</item>
+            <item><tag>usg type="synonym"&gt;</tag> for synonym references</item>
+            <item><code>cit[@type="translation"]/quote</code> for translation
+                equivalents in bilingual or translation dictionaries</item>
+            <item><gi>oRef</gi>, <gi>pRef</gi> for the resolution of “~" headword
+                placeholders in quotations and other dictionary text</item>
+            <item><gi>xr</gi>, <gi>ref</gi> as a general cross-referencing
+                mechanism</item>
+            <item><gi>ptr</gi> as a pointer to another location </item>
+            <item><gi>link</gi></item>
+            <item><gi>mentioned</gi> in the etymology section</item>
+            <item><gi>term</gi> for mentions of technical terms</item>
+        </list>
+        <p>In keeping with the approach of the TEI Lex-0, and considering that
+            links/relations between lexical data elements are increasingly part of the
+            core lexical data model rather than mere convenience pointers for dictionary
+            users, we need a more unified and more constrained mechanism for lexical
+            references, whether they point to an existing lexical entity in some
+            dictionary or lexicon, or in a more general way to lexical objects without a
+            target reference. </p>
+        <p>The proposed mechanism has the following properties </p>
+        <list type="ordered">
+            <item>It applies only to references with a clear
+                <hi xml:space="preserve" rend="italic">linguistic</hi> meaning.</item>
+            <item>The number of arbitrary (or context-dependent) choices for the encoder
+                is minimal; the semantics of the reference should not depend on
+                context</item>
+            <item>The relation between the encoding dictionary content and the
+                underlying/implied lexical data model should be as transparent as
+                possible</item>
+            <item>No drastic changes to the TEI guidelines are needed, except for minor
+                changes within the dictionary module</item>
+        </list>
+        <p>In the following we first present the recommended encoding, and then elicit
+            how existing alternatives can be replaced accordingly.</p>
+    </div>
+    <div>
+        <head>Using <gi>ref</gi> and <gi>xr</gi> to point to lexical entities</head>
+        <p>In TEI Lex-0, we use <gi>ref</gi> as the general element for a lexical
+            reference and <gi>xr</gi> as the enclosing element that groups information
+            related to this reference. The reference may be internal to a dictionary or
+            pointing to an external source, even when the actual target lexical object
+            is not explicitly known. In the latter case, <gi>ref</gi> can be used
+            without an explicit pointing attribute. Furthermore the actual intended
+            target of the reference can be of various possible types, namely a full
+            entry, but also a specific sense, form or morpheme within a given entry.</p>
+        <p>For all such uses, the following attributes may be used on <gi>xr</gi> and
+            <gi>ref</gi>:</p>
+        <list type="unordered">
+            <item><att>type</att> is a mandatory attribute on <gi>xr</gi> for a lexical
+                reference. Its default value is "lexical". It should be an indication of
+                the lexical relation between the headword of the entry and the object
+                referred to (cf. next subsection) </item>
+            <item><code>ref/@type</code> may be an indication of the target object
+                category (entry, sense).</item>
+            <item><att>xml:lang</att>, which is
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>recommended<?oxy_custom_end?>
+                when <gi>ref</gi> actually contains an
+                <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>explicit
+                lexical form<?oxy_custom_end?></item>
+            <item><code>ref/@target</code>: to point to the actual lexical object being
+                pointed at when applicable</item>
+            <item><code>ref/@notation</code> to indicate, like we currently do on
+                <gi>orth</gi> or <gi>pron</gi> the actual notation used for the
+                explicit lexical form when provided</item>
+        </list>
+        <div>
+            <head>Typology for <code>xr/@type</code> values </head>
+            <p>We suggest an extensible list of values, including “cf" for general
+                references which do not have clear semantics.</p>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+            <p>NOTE: this table is no longer valid. We've implemented the list of
+                possible values for @type (which may be expanded if necessary) but we
+                still haven't updated the examples here.<?oxy_custom_end?> See the
+                specification for xr in <specDesc key="xr" atts="type"/>. </p>
+            <table rend="rules">
+                <row>
+                    <cell>value of @type</cell>
+                    <cell>description</cell>
+                    <cell>example</cell>
+                </row>
+                <row>
+                    <cell>lexical</cell>
+                    <cell>default (root of hierarchy)</cell>
+                    <cell/>
+                </row>
+                <row>
+                    <cell>synonym, hyponym, hyperonym, antonym , meronym (etc.) </cell>
+                    <cell/>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e2495"><entry>
+                            <form type="lemma">
+                                <orth>dog</orth>
+                            </form>
+                            <sense>
+                                <xr type="hyperonym">
+                                    <ref xml:lang="en" type="entry">mammal</ref>
+                                </xr>
+                            </sense>
+                        </entry>
+                        </egXML>
+                    </cell>
+                </row>
+                <row>
+                    <cell>translationEquivalent</cell>
+                    <cell>translation equivalent</cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e2528">
+                            <entry>
+                                <form type="lemma">
+                                    <orth>horrify</orth>
+                                </form>
+                                <sense>
+                                    <xr type="translationEquivalent">
+                                        <ref xml:lang="fr">horrifier</ref>
+                                    </xr>
+                                </sense>
+                            </entry>
+                        </egXML>
+                    </cell>
+                </row>
+                <row>
+                    <cell>cf</cell>
+                    <cell>Untyped cross-reference</cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples"
+                        xml:id="d1e2560"><entry>
+                            <form type="lemma">
+                                <orth>borcht</orth>
+                            </form>
+                            <xr type="cf">
+                                <lbl>Cf.</lbl>
+                                <ref xml:lang="nl" target="#M012340">burcht</ref>
+                            </xr>
+                        </entry></egXML></cell>
+                </row>
+            </table>
+            <p>The full specification of <gi>xr</gi> in TEI Lex 0 is:<specDesc key="xr"
+                atts="type"/></p>
+        </div>
+        <div>
+            <head>Values of <code>ref/@target</code></head>
+            <p>
+                <list type="bulleted">
+                    <item>If the reference has no explicit target, no <att>target</att>
+                        is used. </item>
+                    <item>As per <ref
+                        target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP"
+                        >TEI pointing mechanisms</ref>, the value of
+                        <att>target</att> must be an URI reference. </item>
+                    <item>For internal references (references to the same dictionary),
+                        TEI Lex-0 enforces the use of explicit pointers to the
+                        <att>xml:id</att> of an element being pointed to, preceded
+                        by <code>#</code>. See Section "<ref
+                            target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SABN"
+                            >Pointing Locally</ref>" in the TEI <hi rend="italic"
+                                >Guidelines</hi>.</item>
+                    <item><ref
+                        target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATSin"
+                        >TEI pointers</ref> should <hi rend="italic">not</hi> be
+                        used in TEI Lex-0.</item>
+                </list>
+            </p>
+            
+        </div>
+        <div>
+            <head>How TEI Lex-0 differs from TEI <hi rend="italic"
+                >Guidelines</hi></head>
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+            <p>This section is still not properly encoded.<?oxy_custom_end?></p>
+            <table rend="rules">
+                <row>
+                    <cell>description</cell>
+                    <cell>current encoding</cell>
+                    <cell>proposed encoding</cell>
+                </row>
+                <row>
+                    <cell>synonyms, hyponyms, hyperonyms (and other semantic
+                        relations)</cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples"><usg
+                        type="synonym">Hund</usg></egXML></cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <xr type="synonym">
+                            <ref
+                                target="http://woerterbuchnetz.de/DWB/?sigle=DWB&amp;mode=Vernetzung&amp;lemid=GH13199#XGH13199"
+                                xml:lang="de">Hund</ref>
+                        </xr></egXML></cell>
+                </row>
+                <row>
+                    <cell>abbreviated headword occurrence in quotations</cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <q>The Royal <oRef type="cap"/> of Arts</q>
+                        </egXML>
+                    </cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples"> The Royal <xr
+                        type="headwordAttestation">
+                        <ref target="#current_entry_id">A~</ref> of Arts</xr>
+                    </egXML></cell>
+                </row>
+                <row>
+                    <cell>translation of headword (possibly in a particular
+                        senses/context)</cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <entry>
+                            <!-- ... -->
+                            <cit type="translation" xml:lang="en">
+                                <quote>to horrify</quote>
+                            </cit>
+                            <cit type="example">
+                                <quote>elle était horrifiée par la dépense</quote>
+                                <cit type="translation" xml:lang="en">
+                                    <quote>she was horrified at the expense.</quote>
+                                </cit>
+                            </cit>
+                        </entry>
+                    </egXML></cell>
+                    <cell>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <entry xml:id="uniqe_id_in_the_context_of_this_dictionary"
+                                xml:lang="fr">
+                                <!-- ... -->
+                                <cit type="translationEquivalent" xml:lang="en">
+                                    <quote>to horrify</quote>
+                                </cit>
+                                <cit type="example">
+                                    <quote>elle était horrifiée par la dépense</quote>
+                                    <cit type="translation" xml:lang="en">
+                                        <quote>she was horrified at the expense.</quote>
+                                    </cit>
+                                </cit>
+                            </entry>
+                        </egXML>
+                    </cell>
+                </row>
+                <row>
+                    <cell>collocates in gramGrp<note place="foot" xml:id="ftn4" n="4">
+                        <p> This is not replaced, but may be complemented by the
+                            reference mechanism</p>
+                    </note></cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <gramGrp><colloc>stray</colloc></gramGrp>
+                    </egXML></cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <gramGrp><colloc><xr type="collocation"><ref
+                            target="http://www.oed.com/view/Entry/191378?rskey=WgfOMW&amp;result=2&amp;isAdvanced=false#eid"
+                            >stray</ref></xr></colloc></gramGrp>
+                    </egXML></cell>
+                </row>
+            </table>
+        </div>
+    </div>
+    <div>
+        <head><gi>xr</gi> and <gi>ref</gi>: further examples</head>
+        <div>
+            <head>Simple cross-reference to an entry</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml" corresp="../TEILex0.odd.examples/TEILex0-examples.xml" xpointer="borcht"/>
+            </egXML>
+        </div>
+        <div>
+            <head>More complex example including quotations</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml" corresp="../TEILex0.odd.examples/TEILex0-examples.xml" xpointer="dog"/>
+            </egXML>
+        </div>
+        <div>
+            <head>Cross-references inside definitions</head>
+            
+            <p>Under consideration. See this <ref
+                target="https://github.com/DARIAH-ERIC/lexicalresources/issues/24"
+                >issue</ref> on GitHub.</p>
+            
+        </div>
+    </div>
+</div>
