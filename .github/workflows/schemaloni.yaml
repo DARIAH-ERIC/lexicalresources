@@ -18,5 +18,6 @@ jobs:
       - run: curl https://jenkins.tei-c.org/view/TEI%20dev/job/Stylesheets-dev/lastStableBuild/artifact/tei-xsl-7.50.0a.zip -L -o styesheets.zip
       - run: ls
       - run: unzip styesheets.zip
-      - run: cd styesheets
+      - run: ls
+      - run: cd../
       - run: ls
