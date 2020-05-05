@@ -15,4 +15,4 @@ jobs:
       - run: ls
       - run: sudo apt-get install libxml2-utils
       - run: git clone https://github.com/TEIC/Stylesheets.git ./stylesheets
-      - run: cd stylesheets && sudo make check
+      - run: cd stylesheets && sudo make install
