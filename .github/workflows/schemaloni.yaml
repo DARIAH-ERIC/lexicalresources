@@ -13,5 +13,6 @@ jobs:
         uses: actions/checkout@v2
       - run: pwd
       - run: ls
+      - run: sudo apt-get install libxml2-utils
       - run: git clone https://github.com/TEIC/Stylesheets.git ./stylesheets
       - run: cd stylesheets && sudo make check
