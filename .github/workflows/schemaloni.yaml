@@ -11,13 +11,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        with:
-          path: 'lexicalresources'
       - run: pwd
       - run: ls
-      - run: curl https://jenkins.tei-c.org/view/TEI%20dev/job/Stylesheets-dev/lastStableBuild/artifact/tei-xsl-7.50.0a.zip -L -o styesheets.zip
-      - run: ls
-      - run: unzip styesheets.zip -d styesheets
+      - run: git clone https://github.com/TEIC/Stylesheets.git ./stylesheets
       - run: cd styesheets && ls
-      - run: cd../
+      - run: cd ..
       - run: ls
