@@ -24,8 +24,9 @@ jobs:
       - run: actions/checkout@v2
       - run: cd ../
       - run: ls
-      - run: wei/curl@v1
+      - run: which curl
+      - name: curl
+        uses: wei/curl@v1
         with:
           args: https://jenkins.tei-c.org/view/TEI%20dev/job/Stylesheets-dev/lastStableBuild/artifact/tei-xsl-7.50.0a.zip
       - run: ls
-    
