@@ -29,4 +29,9 @@ jobs:
       #    args: zip -qq -r ./stylesheets/tei-xsl-7.50.0a.zip ./vendor
       - name: Install zip
         shell: bash
-        run:  sudo apt-get install zip
+        run:  sudo apt-get install unzip
+      - name: Unzip stylesheets
+        run: unzip tei-xsl-7.50.0a.zip.zip -d /stylesheets
+      - name: see contents
+        run: cd stylesheets
+      - run: ls
