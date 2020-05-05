@@ -19,4 +19,7 @@ jobs:
       - name: Echo the greeting's time
         run: echo 'The time was ${{ steps.hello.outputs.time }}.'
       # Тhis steps checks out current repository
-      - uses: actions/checkout@v2  
+      - uses: actions/checkout@v2
+      - uses: wei/curl@v1
+        with:
+          args: https://jenkins.tei-c.org/view/TEI%20dev/job/Stylesheets-dev/lastStableBuild/artifact/tei-xsl-`head -1 XSLVERSION`.zip -o stylesheets.zip
