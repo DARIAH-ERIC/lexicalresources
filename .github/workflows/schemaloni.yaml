@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run:  sudo apt-get install unzip
       - name: Unzip stylesheets
-        run: unzip tei-xsl-7.50.0a.zip.zip -d /stylesheets
+        run: unzip tei-xsl-7.50.0a.zip -d /stylesheets
       - name: see contents
         run: cd stylesheets
       - run: ls
