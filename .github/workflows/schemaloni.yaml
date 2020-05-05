@@ -24,6 +24,12 @@ jobs:
         with:
           args: https://jenkins.tei-c.org/view/TEI%20dev/job/Stylesheets-dev/lastStableBuild/artifact/tei-xsl-7.50.0a.zip
       - run: mkdir stylesheets
-      - uses: montudor/action-zip@v0.1.0
-        with:
-          args: zip -qq -r ./stylesheets/tei-xsl-7.50.0a.zip ./vendor
+      #- uses: montudor/action-zip@v0.1.0
+      #  with:
+      #    args: zip -qq -r ./stylesheets/tei-xsl-7.50.0a.zip ./vendor
+      - run:  apt-get update -y && \
+     apt-get upgrade -y && \
+     apt-get dist-upgrade -y && \
+     apt-get -y autoremove && \
+     apt-get clean
+     - run: apt-get install unzip
