@@ -9,10 +9,11 @@ jobs:
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - run: pwd
-      - run: ls
+    #  - name: checkout
+    #    uses: actions/checkout@v2
+    #  - run: pwd
+    #  - run: ls
       - run: sudo apt-get install libxml2-utils
       - run: git clone https://github.com/TEIC/Stylesheets.git ./stylesheets
       - run: cd stylesheets && sudo make install
+      - run: teitorelaxng --help
