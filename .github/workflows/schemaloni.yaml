@@ -27,5 +27,6 @@ jobs:
       #- uses: montudor/action-zip@v0.1.0
       #  with:
       #    args: zip -qq -r ./stylesheets/tei-xsl-7.50.0a.zip ./vendor
-      - shell: bash
-        run:  apt-get install unzip
+      - name: Install zip
+        shell: bash
+        run:  sudo apt-get install zip
