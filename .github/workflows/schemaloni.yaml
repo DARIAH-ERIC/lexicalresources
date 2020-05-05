@@ -14,6 +14,4 @@ jobs:
       - run: pwd
       - run: ls
       - run: git clone https://github.com/TEIC/Stylesheets.git ./stylesheets
-      - run: cd styesheets && ls
-      - run: cd ..
-      - run: ls
+      - run: cd stylesheets && sudo make check
