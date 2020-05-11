@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="bibliography">
+    <head>Bibliography</head>
+    <listBibl>
+        <biblStruct type="journalArticle" xml:id="Ermolaev2012"
+            corresp="http://zotero.org/users/306701/items/982YISW8">
+            <analytic>
+                <author><forename>Natalia</forename><surname>Ermolaev</surname></author>
+                <author><forename>Toma</forename><surname>Tasovac</surname></author>
+                <title level="a">Building a Lexicographic Infrastructure for Serbian Digital
+                    Libraries</title>
+            </analytic>
+            <monogr>
+                <title level="j">Libraries in the Digital Age (LIDA) Proceedings</title>
+                <imprint>
+                    <biblScope unit="volume">12</biblScope>
+                    <date>2012</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+     <biblStruct type="conferencePaper" xml:id="Salgado2019a"
+        corresp="http://zotero.org/users/306701/items/XL4YU4MS">
+        <analytic>
+            <author><forename>Ana</forename><surname>Salgado</surname></author>
+            <author><forename>Rute</forename><surname>Costa</surname></author>
+            <author><forename>Toma</forename><surname>Tasovac</surname></author>
+            <author><forename>Alberto</forename><surname>Simões</surname></author>
+            <title level="a">TEI Lex-0 In Action: Improving the Encoding of the Dictionary of the
+                Academia das Ciências de Lisboa</title>
+        </analytic>
+        <monogr>
+            <title type="conferenceName">eLex 2019</title>
+            <imprint>
+                <biblScope unit="page">417-433</biblScope>
+                <date>2019</date>
+            </imprint>
+        </monogr>
+    </biblStruct>
+    <biblStruct type="conferencePaper" xml:id="Romary2018"
+        corresp="http://zotero.org/users/306701/items/ZACWD2K3">
+        <analytic>
+            <author><forename>Laurent</forename><surname>Romary</surname></author>
+            <author><forename>Toma</forename><surname>Tasovac</surname></author>
+            <title level="a">TEI Lex-0: A Target Format for TEI-Encoded Dictionaries and Lexical
+                Resources</title>
+        </analytic>
+        <monogr>
+            <title level="j">TEI Conference</title>
+            <imprint>
+                <date>2018</date>
+            </imprint>
+        </monogr>
+    </biblStruct>
+    <biblStruct type="journalArticle" xml:id="Salgado2019b"
+        corresp="http://zotero.org/users/306701/items/Z9ERHHGH">
+        <analytic>
+            <author><forename>Ana</forename><surname>Salgado</surname></author>
+            <author><forename>Rute</forename><surname>Costa</surname></author>
+            <author><forename>Toma</forename><surname>Tasovac</surname></author>
+            <title level="a">Improving the Consistency of Usage Labelling in Dictionaries with TEI
+                Lex-0</title>
+            <idno type="DOI">10.1007/s40607-019-00061-x</idno>
+        </analytic>
+        <monogr>
+            <title level="j">Lexicography</title>
+            <imprint>
+                <biblScope unit="volume">6</biblScope>
+                <biblScope unit="page">133–156</biblScope>
+                <date>2019</date>
+            </imprint>
+            
+        </monogr>
+    </biblStruct>
+        <biblStruct type="conferencePaper" xml:id="Ide2000">
+        <analytic>
+            <author role="aut">
+                <persName>
+                    <forename type="first">Nancy</forename>
+                    <surname>Ide</surname>
+                </persName>
+            </author>
+            <author role="aut">
+                <persName>
+                    <forename type="first">Adam</forename>
+                    <surname>Kilgarriff</surname>
+                </persName>
+            </author>
+            <author role="aut">
+                <persName>
+                    <forename type="first">Laurent</forename>
+                    <surname>Romary</surname>
+                </persName>
+            </author>
+            <title xml:lang="en" level="a">A Formal Model of Dictionary Structure and
+                Content</title>
+            <idno type="arxiv">0707.3270</idno>
+        </analytic>
+        <monogr>
+            <title level="j">Proceedings of Euralex 2000</title>
+            <imprint>
+                <biblScope unit="pp">113-126</biblScope>
+                <date type="datePub">2000</date>
+            </imprint>
+        </monogr>
+    </biblStruct></listBibl>
+</div>
