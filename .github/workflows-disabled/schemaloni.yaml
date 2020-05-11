@@ -1,0 +1,15 @@
+name: Greet Everyone
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
+jobs:
+  build:
+    # Job name is Greeting
+    name: Build TEI schema and documentation
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt-get install libxml2-utils
+      - run: git clone https://github.com/TEIC/Stylesheets.git ./stylesheets
+      - run: cd stylesheets && sudo make install
+      - run: teitorelaxng --help
