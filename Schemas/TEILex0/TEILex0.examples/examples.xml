@@ -19,7 +19,11 @@
          <!--organize entries alphabetically-->
 
          <entry type="mainEntry" xml:lang="cz" xml:id="en000008">
+<<<<<<< HEAD
             <form type="lemma" xml:id="en000008.hw1" style="font-weight: bold;">
+=======
+            <form type="lemma" xml:id="en000008.hw1">
+>>>>>>> varia
                <orth>abeceda</orth>
             </form>
             <pc>,</pc>
@@ -31,7 +35,11 @@
                </gramGrp>
                <orth extent="suffix" expand="abecedy">-y</orth>
             </form>
+<<<<<<< HEAD
             <!--...-->
+=======
+           <!--...-->
+>>>>>>> varia
          </entry>
          <!-- TODO what to do about capitalization and labels in oRef?-->
          <!--more examples from the Guidelines:
@@ -56,6 +64,7 @@
                <orth xml:id="academy.lemma">academy</orth>
             </form>
             <cit type="example">
+<<<<<<< HEAD
                <quote>The Royal <xr type="include">
                      <ref type="lemma" target="#academy.lemma" expand="Academy"/>
                   </xr> of Arts</quote>
@@ -68,6 +77,10 @@
             <cit type="example">
                <quote>The Royal <ref type="lemma" target="#academy-refonly.lemma" expand="Academy"
                      >A~</ref> of Arts</quote>
+=======
+               <quote>The Royal <ref type="oRef" target="#academy.lemma">A~</ref> of
+                  Arts</quote>
+>>>>>>> varia
             </cit>
          </entry>
          <!--https://imgur.com/b9dNR9m.png-->
@@ -198,7 +211,11 @@
             </sense>
             <pc>;</pc>
             <sense xml:id="aid.4">
+<<<<<<< HEAD
                <usg type="hint">(pers)</usg>
+=======
+               <gloss>(pers)</gloss>
+>>>>>>> varia
                <cit type="translationEquivalent" xml:lang="fr">
                   <form>
                      <orth>aide</orth>
@@ -230,7 +247,11 @@
                </form>
                <pc>,</pc>
                <sense xml:id="in_aid_of.1">
+<<<<<<< HEAD
                   <usg type="hint">(of performances)</usg>
+=======
+                  <gloss>(of performances)</gloss>
+>>>>>>> varia
                   <cit type="translationEquivalent" xml:lang="fr">
                      <form><orth>au profit de</orth></form>
                   </cit>
@@ -278,7 +299,113 @@
                </sense>
             </entry>
          </entry>
+<<<<<<< HEAD
 
+=======
+         <entry xml:lang="pt" xml:id="antepassado_a">
+            <form type="lemma">
+               <orth>antepassado</orth>
+               <pron>ɐ̃tɨpɐsˈadu</pron>
+            </form>
+            <form type="inflected">
+               <orth>antepassado</orth>
+               <gramGrp>
+                  <gram type="gen">m.</gram>
+               </gramGrp>
+            </form>
+            <form type="inflected">
+               <orth>antepassada</orth>
+               <gramGrp>
+                  <gram type="gen">f.</gram>
+               </gramGrp>
+               <pron>ɐ̃tɨpɐsˈadɐ</pron>
+               <lbl>:1</lbl>
+            </form>
+            <gramGrp>
+               <gram type="pos" norm="ADJ">adj.</gram></gramGrp>
+            <etym type="grammaticalization">
+               <seg type="desc">De</seg>
+               <cit type="etymon">
+                  <form>
+                     <orth extent="pref">ante-</orth>
+                  </form>
+               </cit>
+               <lbl>+</lbl>
+               <cit type="etymon">
+                  <form>
+                     <orth>passado</orth>
+                  </form>
+               </cit>
+            </etym>
+            <sense xml:id="antepassado_a_1">
+               <def>Que pertence ou viveu numa época anterior.</def>
+               <xr type="synonymy">
+                  <ref type="sense">antecessor</ref>
+               </xr>
+               <xr type="synonymy">
+                  <ref type="sense">sucessor</ref>
+               </xr>
+               <xr type="antonymy">
+                  <ref type="sense">descendente</ref>
+               </xr>
+               <xr type="antonymy">
+                  <ref type="sense">sucessor</ref>
+               </xr>
+            </sense>
+         </entry>
+         <entry xml:lang="pt" xml:id="antepassado_b">
+            <form type="lemma">
+               <orth>antepassado</orth>
+               <pron>ɐ̃tɨpɐsˈadu</pron>
+               <lbl>:2</lbl>
+            </form>
+            <gramGrp>
+               <gram type="pos" norm="NOUN">s.</gram>
+               <gram type="gen">m.</gram>
+            </gramGrp>
+            <etym type="grammaticalization">
+               <seg type="desc">De</seg>
+               <cit type="etymon">
+                  <form>
+                     <orth extent="pref">ante-</orth>
+                  </form>
+               </cit>
+               <lbl>+</lbl>
+               <cit type="etymon">
+                  <form>
+                     <orth>passado</orth>
+                  </form>
+               </cit>
+            </etym>
+            <sense xml:id="antepassado_b_1" n="1">
+               <def>Pessoa que é ascendente de outra ou outras.</def>
+               <xr type="synonymy">
+                  <ref type="sense">ascendente</ref>
+               </xr>
+               <xr type="antonymy">
+                  <ref type="sense">descendente</ref>
+               </xr>
+               <cit type="example">
+                  <quote>Certos povos crêem-se descendentes de um antepassado comum. o vaqueiro, pai do vaqueiro, o avô e outros antepassados mais antigos haviam-se acostumado a percorrer veredas, afastando o mato com as mãos. </quote>
+                  <bibl><author>G. RAMOS</author>, <title>Vidas Secas</title>, <citedRange>p. 96</citedRange></bibl>
+               </cit>
+            </sense>
+            <sense xml:id="antepassado_b_2" n="2">
+               <gramGrp><gram type="number">pl.</gram></gramGrp>
+               <def>Pessoas anteriormente ao momento actual.</def>
+               <xr type="synonymy">
+                  <ref type="sense">antecessores</ref>
+               </xr>
+               <xr type="antonymy">
+                  <ref type="sense">vindouros</ref>
+               </xr>
+               <cit type="example">
+                  <quote>Hérdamos estes costumes dos nossos antepassados.</quote>
+                  <quote>Culto dos antepassados.</quote>
+               </cit>
+            </sense>
+         </entry>
+>>>>>>> varia
          <entry xml:id="arbeitsunfähig" xml:lang="de" type="mainEntry">
             <form type="lemma">
                <orth>arbeitsunfähig</orth>
@@ -429,6 +556,7 @@
                <sense xml:id="cobuild.house_3.1" xml:lang="en"><!--...--></sense>
             </entry>
          </entry>
+<<<<<<< HEAD
          <!--  the following example should only be used to illustrate antonyms; 
           the fuller entry follows -->
          <entry xml:id="descalçar_258" xml:lang="pt" type="mainEntry">
@@ -550,6 +678,23 @@
          <!-- TODO: check ref type oRef -\- this is a weird one, where it's an english dictionary, but 
          the translation is oRefed. I don't know if this is a real dict, or a made up one. Will need
          to check.-->
+=======
+         <entry xml:id="OALD.competitor" type="mainEntry" xml:lang="en">
+            <form type="lemma">
+               <orth>competitor</orth>
+               <hyph>com|peti|tor</hyph>
+               <pron>k@m"petit@(r)</pron>
+            </form>
+            <gramGrp>
+               <gram type="pos">n</gram>
+            </gramGrp>
+            <sense xml:id="OALD.competitor.1">
+               <def>person who competes.</def>
+            </sense>
+         </entry>
+         <!--TODO: is this a made-up dictionary? need the source. chien is oref to translation equivalent, 
+         not entry-->
+>>>>>>> varia
          <entry xml:id="dog" xml:lang="en">
             <form type="lemma">
                <orth>dog</orth>
@@ -562,8 +707,13 @@
                   <form><orth>chien</orth></form>
                </cit>
                <cit type="example" xml:lang="fr">
+<<<<<<< HEAD
                   <quote>Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui fais manger sa
                      soupe. Le soir je lui siffle de venir se coucher</quote>
+=======
+                  <quote> Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui
+                     fais manger sa soupe. Le soir je lui siffle de venir se coucher</quote>
+>>>>>>> varia
                   <bibl>RENARD, Poil de Carotte, 1894, p. 102.</bibl>
                   <cit type="translation" xml:lang="en">
                      <!-- included in the french cit, otherwise relation is lost -->
@@ -578,7 +728,11 @@
                <cit type="translationEquivalent" xml:lang="fr">
                   <form type="lemma"><orth>chienne</orth></form>
                </cit>
+<<<<<<< HEAD
                <cit type="example">
+=======
+               <cit type="example" xml:lang="fr">
+>>>>>>> varia
                   <quote>6. Les fleuristes, murmura Lorilleux, toutes des Marie-couche-toi-là. Eh
                      bien! Et moi? reprit la grande veuve, les lèvres pincées. Vous êtes galant.
                      Vous savez, je ne suis pas une <ref type="oRef">chienne</ref>, je ne me mets
@@ -601,6 +755,12 @@
                <ref type="entry">mammal</ref>
             </xr>
          </entry>
+<<<<<<< HEAD
+=======
+         
+
+
+>>>>>>> varia
          <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
             <form type="lemma">
                <orth type="segmeted">
@@ -613,7 +773,11 @@
                </form>
                <form type="variant">
                   <orth notAfter="1996">
+<<<<<<< HEAD
                      <seg>Fluß</seg><seg>schiffahrt</seg>
+=======
+                     <seg>Fluß</seg><seg>schifffahrt</seg>
+>>>>>>> varia
                   </orth>
                   <usg type="time">Vor 1996 Rechtschreibung Reform</usg>
                </form>
@@ -655,9 +819,16 @@
                </form>
                <sense xml:id="Häuschen.1"><!--etc.--></sense>
             </entry>
+<<<<<<< HEAD
            <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
                <form type="lemma">
                   <orth><seg>haus</seg><seg>en</seg></orth>
+=======
+            <!--TODO: what to do with morphems etc., I'd prefer seg type="m"-->
+            <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
+               <form type="lemma">
+                  <orth><m>haus</m><m>en</m></orth>
+>>>>>>> varia
                </form>
                <sense xml:id="hausen.1"><!--...--></sense>
             </entry>

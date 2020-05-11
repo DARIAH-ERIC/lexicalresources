@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xml:id="cross-references">
+    <head>Cross-references</head>
+    <div>
+        <head>General remarks</head>
+        <p>The current TEI <hi rend="italic">Guidelines</hi> provide several mechanisms by means of
+            which one item of lexical information can refer to another, e.g.:</p>
+        <list type="unordered">
+            <item><gi>gloss</gi> for the provision of simple (non refined) translation equivalents
+                of the head word</item>
+            <item><tag>usg type="synonym"</tag> for synonym references</item>
+            <item><code>cit[@type="translation"]/quote</code> for translation equivalents in
+                bilingual or translation dictionaries</item>
+            <item><gi>oRef</gi>, <gi>pRef</gi> for the resolution of “~" headword placeholders in
+                quotations and other dictionary text</item>
+            <item><gi>xr</gi>, <gi>ref</gi> as a general cross-referencing mechanism</item>
+            <item><gi>ptr</gi> as a pointer to another location </item>
+            <item><gi>link</gi></item>
+            <item><gi>mentioned</gi> in the etymology section</item>
+            <item><gi>term</gi> for mentions of technical terms</item>
+        </list>
+        <p>In keeping with the approach of the TEI Lex-0, and considering that links/relations
+            between lexical data elements are increasingly part of the core lexical data model
+            rather than mere convenience pointers for dictionary users, we need a more unified and
+            more constrained mechanism for lexical references, whether they point to an existing
+            lexical entity in some dictionary or lexicon, or in a more general way to lexical
+            objects without a target reference. </p>
+        <p>The proposed mechanism ha s the following properties </p>
+        <list type="ordered">
+            <item>It applies only to references with a clear <hi rend="italic">linguistic</hi>
+                meaning.</item>
+            <item>The number of arbitrary (or context-dependent) choices for the encoder is minimal;
+                the semantics of the reference should not depend on context</item>
+            <item>The relation between representing dictionary content and the underlying/implied
+                lexical data model should be as transparent as possible</item>
+            <item>No drastic changes to the TEI guidelines are needed, except for minor changes
+                within the dictionary module</item>
+        </list>
+        <p>In the following section, we first present the recommended encoding, and then elicit how
+            existing alternatives can be replaced accordingly.</p>
+    </div>
+    <div>
+        <head>xr vs. ref</head>
+        <p>In TEI Lex-0, we use <gi>ref</gi> as the general element for a lexical reference and
+                <gi>xr</gi> as the enclosing element that groups all information related to this
+            reference, including explicit labels such as "Syn.", "Cf.", "See also" etc. The
+            reference may be internal to a dictionary or pointing to an external source, even when
+            the actual target lexical object is not explicitly known. In the latter case,
+                <gi>ref</gi> can be used without an explicit pointing attribute. Furthermore, the
+            intended target of the reference can be a full entry, but, sometimes, also a specific
+            sense.</p>
+        <p>For all such uses, the following attributes may be used on <gi>xr</gi> and
+            <gi>ref</gi>:</p>
+        <list type="unordered">
+            <item><att>type</att> is a mandatory attribute on <gi>xr</gi> for a lexical reference.
+                Its default value is "related". This attribute can be used to indicate the lexical
+                relation between the headword of the entry and the object referred to (see next
+                section) </item>
+            <item><code>ref/@type</code> may be an indication of the target object category (entry,
+                sense).</item>
+            <item><att>xml:lang</att>, which is recommended when <gi>ref</gi> contains an explicit
+                lexical form in a different language</item>
+            <item><code>ref/@target</code> to point to the lexical object (identified by a unique
+                id). Think of the value of this attribute as a machine-readable link to your
+                cross-reference.</item>
+            <item><code>ref/@notation</code> to indicate, like we currently do on <gi>orth</gi> or
+                    <gi>pron</gi>, the notation used for the explicit lexical form when
+                applicable</item>
+        </list>
+        <p>Explicit dictionary labels which indicate the type of relationship between the current
+            lexical item and the crossreference should be encoded as <gi>lbl</gi> inside of
+                <gi>xr</gi>. </p>
+
+        <div>
+            <head>Values of <code>ref/@target</code></head>
+            <p>
+                <list type="bulleted">
+                    <item>If the reference has no explicit target, no <att>target</att> is used. </item>
+                    <item>As per <ref
+                            target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SAXP"
+                            >TEI pointing mechanisms</ref>, the value of <att>target</att> must be
+                        an URI reference. </item>
+                    <item>For internal references (references to the same dictionary), TEI Lex-0
+                        enforces the use of explicit pointers to the <att>xml:id</att> of an element
+                        being pointed to, preceded by <code>#</code>. See Section "<ref
+                            target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SABN"
+                            >Pointing Locally</ref>" in the TEI <hi rend="italic"
+                        >Guidelines</hi>.</item>
+                    <item><ref
+                            target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SATSin"
+                            >TEI pointers</ref> should <hi rend="italic">not</hi> be used in TEI
+                        Lex-0. </item>
+                </list>
+            </p>
+
+        </div>
+    </div>
+    <div xml:id="crossref_typology">
+        <head>Cross-reference typology</head>
+        <div>
+            <head>Related</head>
+            <p> The default reference to another lexical unit when no more granular information
+                about the type of relationship is available.</p>
+            <p>In TEI Lex-0, cross-references are by default enoded as <code>&lt;xr
+                    type=&quot;related&quot;&gt;&lt;/xr&gt;</code>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="borcht"/>
+                    </egXML>
+        </div>
+        <div>
+            <head>Synonymy</head>
+            <p>Relation between two lexical units X and Y which are syntactically identical and have
+                the property that any declarative sentence S containing X has equivalent truth
+                conditions to another sentence S’ which is identical to S, except that X is replaced
+                by Y. (Adapted from <ref target="#Cruse1986">Cruse 1986</ref>.)</p>
+            <p>Synonymy is the linguistic parallel of the identity relation between classes.
+                Synonyms differ in peripheral traits, related for example to stylistic, dialectal or
+                diachronic variations.</p>
+            <p>Examples: [de] {Hund, Köter}, [en] {flashlight, torch}, [en] {glad, joyful, happy},
+                [en] {violin, fiddle} [en] He plays the violin very well/He plays the fiddle very
+                well.</p>
+            <p>In TEI Lex-0, synonyms are encoded inside <code>&lt;xr
+                    type=&quot;synonymy&quot;&gt;&lt;/xr&gt;</code></p>
+            <figure>
+                <graphic url="https://imgur.com/yXte5h1.png"/>
+            </figure>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Duden2007">
+                            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="arbeitsunfähig"/>
+                        </egXML>
+        </div>
+        <div>
+            <head>Hyperonymy</head>
+            <p>Relation between lexical heads X and Y characterised by the property that the
+                sentence This is a(n) Y entails, but is not entailed by the sentence This is a(n) X.
+                (Adapted from <ref target="#Cruse1986">Cruse 1986</ref>.) </p>
+            <p>Hyperonymy is the converse of hyponymy.</p>
+            <p> Example: dog/animal (animal is a hypernym of dog)</p>
+            <p>In TEI Lex-0, hyperonyms are encoded inside <code>&lt;xr
+                    type=&quot;hyperonymy&quot;&gt;&lt;/xr&gt;</code>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="XY.dog"/>
+             </egXML>
+        </div>
+        <div>
+            <head>Hyponymy</head>
+            <p>Relation between lexical units X and Y characterised by the property that the
+                sentence This is a(n) X entails, but is not entailed by the sentence This is a(n) Y.
+                (Adapted from <ref target="#Cruse1986">Cruse 1986</ref>.)</p>
+            <p>Hyponymy and its converse hypernymy are the linguistic parallels of the relation of
+                inclusion between two classes.</p>
+            <p>Examples: [en] animal/dog, red/scarlet, to kill/to murder</p>
+            <p>In TEI Lex-0, hyponyms are encoded inside <code>&lt;xr
+                    type=&quot;hyponymy&quot;&gt;&lt;/xr&gt;</code>.</p>
+        </div>
+        <div>
+            <head>Meronymy</head>
+            <p>An inclusion relation between lexical heads X and Y which reflect a potential
+                part-whole relation between their referents in discourse. (Adapted from <ref
+                    target="#Cruse2011">Cruse 2011, p. 140</ref>)</p>
+            <p>Example: finger:hand (finger is said to be a meronym of hand, and hand is said to be
+                the holonym of finger).</p>
+            <p>In TEI Lex-0, meornyms are encoded inside <code>&lt;xr
+                    type=&quot;meronymy&quot;&gt;&lt;/xr&gt;</code>.</p>
+        </div>
+        <div>
+            <head>Antonymy</head>
+            <p>Relation between lexical units of opposite meaning.</p>
+            <p>In TEI Lex-0, antonyms are encoded inside <code>&lt;xr
+                    type=&quot;antonymy&quot;&gt;&lt;/xr&gt;</code>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="antepassado_a_1"/>
+            </egXML>
+
+        </div>
+    </div>
+    <!--TODO: reuse examples elsewhere, if needed. Especially oRef must be highlighted! -->
+    <!--<div>
+        <head>How TEI Lex-0 differs from TEI <hi rend="italic">Guidelines</hi></head>
+
+        <list>
+
+            <item>
+                <p>Synonyms (and other types of semantic relations):</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false"><usg type="synonym">Hund</usg></egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xr type="synonymy">
+                        <ref target="http://woerterbuchnetz.de/DWB/?sigle=DWB&amp;mode=Vernetzung&amp;lemid=GH13199#XGH13199">Hund</ref>
+                    </xr>
+                </egXML>
+            </item>
+            <item>
+                <p>Abbreviated headword occurrence in quotations</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
+                            <q>The Royal <oRef type="cap"/> of Arts</q>
+                        </egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="academy"/>
+                        </egXML>
+            </item>
+            <item>
+                <p>Translation vs. translation equivalent</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
+                    <entry>
+                        <form type="lemma">
+                            <orth>horrifier</orth>
+                        </form>
+                        <gramGrp>
+                           <gram type="pos">v</gram>
+                        </gramGrp>
+                        <cit type="translation" xml:lang="en">
+                            <quote>to horrify</quote>
+                        </cit>
+                        <cit type="example">
+                            <quote>elle était horrifiée par la dépense</quote>
+                            <cit type="translation" xml:lang="en">
+                                <quote>she was horrified at the expense.</quote>
+                            </cit>
+                         </cit>
+                     </entry>
+                        </egXML>
+             
+                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="horrifier"/>
+                 </egXML>       
+            </item>
+        </list>
+    </div>-->
+    <div>
+        <head>Further examples</head>
+        <div>
+            <head>More complex example including quotations</head>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="dog"/>
+            </egXML>
+        </div>
+        <div>
+            <head>Antepassado</head>
+            <!--TODO: replace with high-res image of antepassado1 only-->
+            <figure>
+                <graphic url="https://imgur.com/LnPDjAf.png"/>
+            </figure>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="antepassado_a"/>
+           
+        </egXML>
+        </div>
+        <div>
+            <head>Cross-references inside definitions</head>
+
+            <p>Allowed in TEI Lex-0. See this <ref
+                    target="https://github.com/DARIAH-ERIC/lexicalresources/issues/24">issue</ref>
+                on GitHub.</p>
+
+
+
+        </div>
+    </div>
+</div>

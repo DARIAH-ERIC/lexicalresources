@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="senses">
+    <head>Senses</head>
+    <div>
+        <head>General remarks</head>
+        <p>In the current TEI Dictionary Chapter, the content model of <gi>entry</gi>
+            allows one to have sense-related information directly within <gi>entry</gi>.
+            TEI Lex-0 proscribes a stricter use of these elements so that sense-related
+            information is grouped within the <gi>sense</gi> element, in accordance with
+            the underlying semasiological model implemented in the TEI <hi rend="italic"
+                >Guidelines</hi>.</p>
+        <p><gi>sense</gi> should be therefore considered mandatory for any dictionary
+            entry that actually provides sense information for the headword. Further in
+            this document, we consider some additional specific cases e.g. “referencing”
+            entries (entires that simply point to other entries) and inflexional lexica
+            (dictionaries that describe word forms only), where <gi>sense</gi> is not a
+            mandatory child of <gi>entry</gi>.</p>
+        <p>As a consequence of making the use of <gi>sense</gi> more systematic within
+            <gi>entry</gi>, we have seen (see section on <gi>entry</gi>) that some
+            elements are no longer allowed as children of <gi>entry</gi>. We provide
+            here a specific background for each of them:</p>
+        <list type="unordered">
+            <item><gi>def</gi> is clearly intended to provide a prose description of a
+                meaning within a <gi>sense</gi> element and should not appear in any
+                other context;</item>
+            <item>In the same way, it is recommended that <gi>cit</gi> be used
+                exclusively as a child of <gi>sense</gi>, or when necessary within
+                <gi>dictScrap</gi>;</item>
+            <item>The case of <gi>hom</gi> is peculiar since it provides a subordinate
+                organization to an entry which is redundant in relation to what
+                <gi>sense</gi> allows one to represent. <gi>hom</gi> is not allowed
+                in TEI Lex-0.</item>
+        </list>
+        <p>Note: In the case one has to deal with information that does not fit a
+            <gi>sense</gi>-based organization, for instance in the process of
+            retro-digitizing an existing dictionary source, the use of
+            <gi>dictScrap</gi> is recommended. Further step in the encoding of the
+            lexical content may lead to a more precise encoding in a second phase.</p>
+        <p>In TEI Lex-0, <gi>sense</gi> has a mandatory <att>xml:id</att>.</p>
+    </div>
+    <div>
+        <head>A limited number of possible contexts for <gi>def</gi></head>
+        <p>In the current TEI guidelines, <gi>def</gi> is allowed to be used within the
+            following elements:</p>
+        <list type="unordered">
+            <item>Module core: <gi>cit</gi></item>
+            <item>Module dictionaries: <gi>dictScrap</gi>, <gi>entry</gi>,
+                <gi>entryFree</gi>, <gi>etym</gi>, <gi>hom</gi>, <gi>re</gi>,
+                <gi>sense</gi></item>
+            <item>Module namesdates: <gi>nym</gi></item>
+        </list>
+        <p>TEI Lex-0 allows the use of <gi>def</gi> in <gi>sense</gi>, <gi>cit</gi> and
+            <gi>etym</gi> only. All other existing contexts would be implemented by
+            embedding <gi>def</gi> within a <gi>sense</gi>.</p>
+    </div>
+    <div>
+        <head>Encoding sense in entries with multiple parts of speech</head>
+        <p>For multi-POS lexical entries, TEI Lex-0 considers each POS as a trigger for
+            a new sense. Consequently, we recommend encoding grammatical information in
+            each sense coming after the first one to be serialised inside the semantic
+            bloc as follows:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e1022">
+            <sense xml:id="xyz">
+                <gramGrp>
+                    <gram type="pos"><!--...--></gram>
+                </gramGrp>
+                <def><!--...--></def>
+                <!--...-->
+            </sense>
+        </egXML>
+        <p>Consider this example, where <mentioned>arrest</mentioned> appears both as a
+            verb and a noun:</p>
+        <figure>
+            <graphic n="10011" width="6.720416666666667cm" height="4.709583333333334cm"
+                url="https://imgur.com/zvd4oEh.png"/>
+        </figure>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="arrest"/>
+        </egXML>
+    </div>
+    
+    <div>
+        <head>Deprecating <gi>hom</gi></head>
+        <p>Making a clear difference between a situation where an entry has to be split
+            into two or more homonyms and one where these differences correspond to a
+            semantic alternation is lexicographically difficult. Still, the main danger
+            in keeping both possibilities in the representation of a lexical entry in a
+            digital lexicon is to introduce a systematic structural ambiguity as to
+            where the appropriate information is to be found. We thus deprecate
+            <gi>hom</gi> altogether in the present recommendation and have this
+            element be replaced by the appropriate <gi>sense</gi> construct. For
+            instance, the following example from the TEI <hi rend="italic"
+                >Guidelines</hi>:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
+            <entry>
+                <form>
+                    <orth>bray</orth>
+                    <pron>breI</pron>
+                </form>
+                <hom>
+                    <gramGrp>
+                        <gram type="pos">n</gram>
+                    </gramGrp>
+                    <sense>
+                        <def>cry of an ass; sound of a trumpet.</def>
+                    </sense>
+                </hom>
+                <hom>
+                    <gramGrp>
+                        <gram type="pos">vt</gram>
+                        <subc>VP2A</subc>
+                    </gramGrp>
+                    <sense>
+                        <def>make a cry or sound of this kind.</def>
+                    </sense>
+                </hom>
+            </entry>
+        </egXML>
+        <p>would in TEI Lex-0 be represented as:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="bray"/>
+        </egXML>
+    </div>
+</div>
+

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xml:id="bibliography">
+
+    <!--Bibliography rules to follow
+- dictionaries that are known by their publisher don't need authors names, see #Duden2007
+- use biblScope unit = volume for journals; those with issue and volume should get 
+    <biblScope unit="volume">33(4)</biblScope>
+- at the moment we can do journal-like and book-like things. 
+- my xslt doesn't do edited collections yet, if we get them, I will update xslt
+    -->
+
+    <head>Bibliography</head>
+    <listBibl>
+        <biblStruct type="book" xml:id="Cruse1986"
+            corresp="http://zotero.org/users/306701/items/BVWPF82Z">
+            <monogr>
+                <title level="m">Lexical semantics</title>
+                <idno type="ISBN">9780521276436</idno>
+                <author><persName><forename>D.
+                    A.</forename><surname>Cruse</surname></persName></author>
+                <imprint>
+                    <pubPlace>Cambridge and New York</pubPlace>
+                    <publisher>Cambridge University Press</publisher>
+                    <date>1986</date>
+                </imprint>
+            </monogr>
+            <series><title level="s">Cambridge textbooks in linguistics</title></series>
+        </biblStruct>
+        <biblStruct type="book" xml:id="Cruse2011"
+            corresp="http://zotero.org/users/306701/items/A4KKXVGE">
+            <monogr>
+                <title level="m">Meaning in language: an introduction to semantics and
+                    pragmatics</title>
+               
+                <idno type="ISBN">9780199559466</idno>
+               
+                <author><persName><forename>D. A.</forename><surname>Cruse</surname></persName></author>
+                <edition>3rd ed</edition>
+                <imprint>
+                    <pubPlace>Oxford</pubPlace>
+                    <publisher>Oxford University Press</publisher>
+                    <date>2011</date>
+                </imprint>
+            </monogr>
+            <series><title level="s">Oxford textbooks in linguistics</title></series>
+        </biblStruct>
+        <biblStruct type="dictionary" xml:id="Duden2007">
+            <monogr>
+                <author>
+                    <orgName>Duden</orgName>
+                </author>
+                <title level="m">Das Synonymwörterbuch</title>
+                <imprint>
+                    <publisher>Dudenverlag</publisher>
+                    <date>2007</date>
+                    <pubPlace>Mannheim</pubPlace>
+                </imprint>
+
+            </monogr>
+        </biblStruct>
+        <biblStruct xml:id="DuCange1688" type="dictionary">
+            <monogr>
+                <author><persName><forename>Charles</forename>
+                        <surname>Du Cange</surname></persName></author>
+                <title level="m"
+                    ref="http://anemi.lib.uoc.gr/metadata/f/4/b/metadata-01-0000493.tkl">Glossarium
+                    ad Scriptores Mediae et Infimae Graecitatis</title>
+
+                <imprint>
+                    <date>1688</date>
+                    <pubPlace>Lugduni</pubPlace>
+                    <publisher>Apud Amissonios</publisher>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="dictionary" xml:id="OALD1974">
+            <monogr>
+                <author>
+                    <orgName>OALD</orgName>
+                </author>
+                <!-- our biblio doesn't dipslay editors at the moment
+                   but it does put them into the xref. orgName is better
+                   for xref because it's more recognizable;
+                   eventually, i will want orgName in xref, but allow
+                   ediotrs to be displayed in the bibliography (Edited by...)
+                   or (eds). -->
+                <!--
+                   <editor>
+                    <persName>
+                        <forename>A. S.</forename>
+                        <surname>Hornby</surname>
+                    </persName>
+                </editor>-->
+                <title level="m">Oxford Advanced Learner's Dictionary of Current English</title>
+                <imprint>
+                    <publisher>Oxford University Press</publisher>
+                    <date>1974</date>
+                    <pubPlace>Oxford</pubPlace>
+                </imprint>
+
+            </monogr>
+        </biblStruct>
+
+        <biblStruct type="journalArticle" xml:id="Erjavec2000">
+            <analytic>
+                <author><persName><surname>Erjavec</surname>
+                        <forename>Tomaž</forename></persName></author>
+                <author><persName><surname>Evans</surname>
+                        <forename>Roger</forename></persName></author>
+                <author><persName><surname>Ide</surname>
+                        <forename>Nancy</forename></persName></author>
+                <author><persName><surname>Kilgarriff</surname>
+                        <forename>Adam</forename></persName></author>
+                <title level="a"
+                    ref="http://www.lrec-conf.org/proceedings/lrec2000/html/summary/335.htm">The
+                    CONCEDE Model for Lexical Databases</title>
+            </analytic>
+            <monogr>
+                <title level="m">Proceedings of the Second Language Resources and Evaluation
+                    Conference (LREC)</title>
+                <imprint>
+                    <date>2000</date>
+                    <pubPlace>Athens, Greece</pubPlace>
+                    <biblScope unit="page">355-62</biblScope>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="journalArticle" xml:id="Ermolaev2012"
+            corresp="http://zotero.org/users/306701/items/982YISW8">
+            <analytic>
+                <author><persName><forename>Natalia</forename><surname>Ermolaev</surname></persName></author>
+                <author><persName><forename>Toma</forename><surname>Tasovac</surname></persName></author>
+                <title level="a">Building a Lexicographic Infrastructure for Serbian Digital
+                    Libraries</title>
+            </analytic>
+            <monogr>
+                <title level="j">Libraries in the Digital Age (LIDA) Proceedings</title>
+                <imprint>
+                    <biblScope unit="volume">12</biblScope>
+                    <date>2012</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="conferencePaper" xml:id="Ide2000">
+            <analytic>
+                <author role="aut">
+                    <persName>
+                        <forename type="first">Nancy</forename>
+                        <surname>Ide</surname>
+                    </persName>
+                </author>
+                <author role="aut">
+                    <persName>
+                        <forename type="first">Adam</forename>
+                        <surname>Kilgarriff</surname>
+                    </persName>
+                </author>
+                <author role="aut">
+                    <persName>
+                        <forename type="first">Laurent</forename>
+                        <surname>Romary</surname>
+                    </persName>
+                </author>
+                <title xml:lang="en" level="a">A Formal Model of Dictionary Structure and
+                    Content</title>
+                <idno type="arxiv">0707.3270</idno>
+            </analytic>
+            <monogr>
+                <title level="j">Proceedings of Euralex 2000</title>
+                <imprint>
+                    <biblScope unit="page">113-126</biblScope>
+                    <date type="datePub">2000</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="journalArticle" xml:id="Romary2015">
+            <analytic>
+                <title xml:lang="en">TEI and LMF crosswalks</title>
+                <author>
+                    <persName>
+                        <forename type="first">Laurent</forename>
+                        <surname>Romary</surname>
+                    </persName>
+                </author>
+                <idno type="HAL">hal-00762664</idno>
+            </analytic>
+            <monogr>
+
+                <title level="j"> Journal for language technology and computational linguistics </title>
+                <imprint>
+                    <biblScope unit="volume">30(1)</biblScope>
+                    <date>2015</date>
+                    <publisher> GSCL (Gesellschaft für Sprachtechnologie und Computerlinguistik)
+                    </publisher>
+                </imprint>
+            </monogr>
+
+        </biblStruct>
+        <biblStruct type="conferencePaper" xml:id="Romary2018"
+            corresp="http://zotero.org/users/306701/items/ZACWD2K3">
+            <analytic>
+                <author><persName><forename>Laurent</forename><surname>Romary</surname></persName></author>
+                <author><persName><forename>Toma</forename><surname>Tasovac</surname></persName></author>
+                <title level="a">TEI Lex-0: A Target Format for TEI-Encoded Dictionaries and Lexical
+                    Resources</title>
+            </analytic>
+            <monogr>
+                <title level="j">TEI Conference</title>
+                <imprint>
+                    <date>2018</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="conferencePaper" xml:id="Salgado2019a"
+            corresp="http://zotero.org/users/306701/items/XL4YU4MS">
+            <analytic>
+                <author><persName><forename>Ana</forename><surname>Salgado</surname></persName></author>
+                <author><persName><forename>Rute</forename><surname>Costa</surname></persName></author>
+                <author><persName><forename>Toma</forename><surname>Tasovac</surname></persName></author>
+                <author><persName><forename>Alberto</forename><surname>Simões</surname></persName></author>
+                <title level="a">TEI Lex-0 In Action: Improving the Encoding of the Dictionary of
+                    the Academia das Ciências de Lisboa</title>
+            </analytic>
+            <monogr>
+                <title type="conferenceName">eLex 2019</title>
+                <imprint>
+                    <biblScope unit="page">417-433</biblScope>
+                    <date>2019</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="journalArticle" xml:id="Salgado2019b"
+            corresp="http://zotero.org/users/306701/items/Z9ERHHGH">
+            <analytic>
+                <author><persName><forename>Ana</forename><surname>Salgado</surname></persName></author>
+                <author><persName><forename>Rute</forename><surname>Costa</surname></persName></author>
+                <author><persName><forename>Toma</forename><surname>Tasovac</surname></persName></author>
+                <title level="a">Improving the Consistency of Usage Labelling in Dictionaries with
+                    TEI Lex-0</title>
+                <idno type="DOI">10.1007/s40607-019-00061-x</idno>
+            </analytic>
+            <monogr>
+                <title level="j">Lexicography</title>
+                <imprint>
+                    <biblScope unit="volume">6</biblScope>
+                    <biblScope unit="page">133–156</biblScope>
+                    <date>2019</date>
+                </imprint>
+
+            </monogr>
+        </biblStruct>
+        <biblStruct type="book" xml:id="Svensén2009"
+            corresp="http://zotero.org/users/306701/items/HIIAR8IE">
+            <monogr>
+                <title level="m">A handbook of lexicography: the theory and practice of
+                    dictionary-making</title>
+                <idno type="ISBN">9780521881807</idno>
+                <author><persName><forename>Bo</forename><surname>Svensén</surname></persName></author>
+                <imprint>
+                    <pubPlace>New York</pubPlace>
+                    <publisher>Cambridge University Press</publisher>
+                    <date>2009</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="journalArticle" xml:id="Tasovac2020"
+            corresp="http://zotero.org/users/306701/items/54S6QCD3">
+            <analytic>
+                <title level="a">Encoding Polylexical Units with TEI Lex-0: A Case Study</title>
+                <author><persName><forename>Toma</forename><surname>Tasovac</surname></persName></author>
+                <author><persName><forename>Ana</forename><surname>Salgado</surname></persName></author>
+                <author><persName><forename>Rute</forename><surname>Costa</surname></persName></author>
+            </analytic>
+            <monogr>
+                <title level="j">Slovenšcina 2.0</title>
+                <imprint>
+                    <date>2020 (in print)</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="journalArticle" xml:id="Zillig2009">
+            <analytic>
+                <author>
+                    <persName>
+                        <forename>Brian L Pytlik</forename>
+                        <surname>Zillig</surname>
+                    </persName>
+                </author>
+                <title level="a">TEI Analytics: converting documents into a TEI format for
+                    cross-collection text analysis</title>
+                <idno type="DOI">10.1093/llc/fqp005</idno>
+            </analytic>
+            <monogr>
+                <title level="j">Literary and Linguistic Computing</title>
+                <imprint>
+                    <biblScope unit="volume">24</biblScope>
+                    <biblScope unit="page">187–192</biblScope>
+                    <date>2009</date>
+                </imprint>
+
+            </monogr>
+        </biblStruct>
+        <biblStruct xml:id="Златановић2017" type="dictionary">
+            <monogr>
+                <author><persName><forename>Момчило</forename>
+                    <surname>Златановић</surname></persName></author>
+                <title level="m"
+                    ref="http://raskovnik.org/recnici/MZ.RGJS">Речник говора јужне Србије: електронско издање</title>
+                
+                <imprint>
+                    <date>2017</date>
+                    <pubPlace>Београд</pubPlace>
+                    <publisher>Институт за српски језик САНУ и Центар за дигиталне хуманистичке науке</publisher>
+                </imprint>
+            </monogr>
+        </biblStruct>
+    </listBibl>
+</div>

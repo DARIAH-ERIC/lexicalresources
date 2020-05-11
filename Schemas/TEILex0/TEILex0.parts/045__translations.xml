@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xml:id="translations">
+    <head>Translations</head>
+
+
+    <div>
+        <head>Translation equivalents</head>
+
+        <p>TEI Guidelines:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
+            <entry>
+                <form>
+                    <orth>horrifier</orth>
+                </form>
+                <gramGrp>
+                    <gram type="pos">v</gram>
+                </gramGrp>
+                <cit type="translation" xml:lang="en">
+                    <quote>to horrify</quote>
+                </cit>
+                <cit type="example">
+                    <quote>elle était horrifiée par la dépense</quote>
+                    <cit type="translation" xml:lang="en">
+                        <quote>she was horrified at the expense.</quote>
+                    </cit>
+                </cit>
+                </entry>
+        </egXML>
+        <p>TEI Lex-0:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="horrifier"/>
+        </egXML>
+        
+    
+            <figure>
+                <graphic url="https://imgur.com/IVutWGQ.png"/>
+            </figure>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="aid"/>
+        </egXML>
+        
+    </div>
+
+</div>

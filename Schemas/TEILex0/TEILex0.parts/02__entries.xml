@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="entries">
+   <head>Entries</head>
+   <div>
+      <head>General remarks</head>
+      <p>An <gi>entry</gi> is a basic reference unit in a dictionary: it groups together all the
+         information related to a particular lemma. For instance:</p>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#OALD1974">
+         <xi:include href="../TEILex0.examples/examples.stripped.xml"
+            corresp="../TEILex0.examples/examples.xml" xpointer="OALD.competitor"/>
+      </egXML>
+   </div>
+   <div>
+      <head>Obligatory attributes</head>
+      <p>The TEI Lex-0 schema prescribes two obligatory attributes on <gi>entry</gi>:</p>
+      <list>
+         <item><att>xml:id</att>, which <hi rend="italic">uniquely</hi> identifies the element it is
+            associated with across the TEI document</item>
+         <item><att>xml:lang</att>, which indicates the source language of the entry.</item>
+      </list>
+
+      <floatingText type="info-panel">
+         <body><head>Iinfo panel</head>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p>
+         <p>Consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.</p></body>
+      </floatingText>
+
+   </div>
+
+
+
+
+   <div>
+      <head>Deprecated entry-like elements</head>
+      <p>The current TEI Guidelines define five different container elements that may serve as
+         grouping devices for entry-level lexical information:</p>
+      <list>
+         <item><gi>entry</gi>: contains a single <hi rend="italic">structured entry</hi> in any kind
+            of lexical resource, such as a dictionary or lexicon.</item>
+         <item><gi>entryFree</gi>: contains a single <hi rend="italic">unstructured entry</hi> in
+            any kind of lexical resource, such as a dictionary or lexicon.</item>
+         <item><gi>superEntry</gi>: groups a sequence of entries within any kind of lexical
+            resource, such as a dictionary or lexicon which function as a single unit, for example a
+            set of homographs.</item>
+         <item><gi>re</gi>: (related entry) contains a dictionary entry for a lexical item related
+            to the headword, such as a compound phrase or derived form, embedded inside a larger
+            entry.</item>
+         <item><gi>hom</gi>: (homograph) groups information relating to one homograph within an
+            entry</item>
+      </list>
+
+
+      <p>These five elements can be used to distinguish differet types of entries along two
+         conceptual axes:</p>
+      <list>
+         <item>Structured vs. unstructured entries, i. e. entries that can readily be represented
+            (in the lexical view) in the spirit of the TEI Guideline’s Dictionary Chapter
+               (<gi>entry</gi>, <gi>re</gi>) vs. entries that for some reason violate the generic
+            content model of <gi>entry</gi> or <gi>re</gi> and thus have to be represented more
+            freely (<gi>entryFree</gi>). A third category in this respect are entries that exhibit a
+            highly reduced amount of lexical content while this content is still of essentially
+            entry-like nature (<gi>superEntry</gi>). </item>
+         <item>Containing vs. contained entries: entries may contain additional lexical information
+            that can be conceived as an additional dictionary entry in its own right. Specifically,
+               <gi>superEntry</gi> may contain <gi>entry</gi>, and <gi>entry</gi> in turn may
+            contain <gi>re</gi> to represent the embedding of lexical entries on three distinct
+            levels. Due to <gi>re</gi> being allowed to be used recursively, the number of levels
+            for representing entry-like lexical information inside other such blocks is effectively
+            unrestricted. At the same time, two different mechanism can be used to create
+            homographic entries: <gi>superEntry</gi> containing multiple <gi>entry</gi> elements; or
+               <gi>entry</gi> containing multiple <gi>hom</gi> elements. </item>
+      </list>
+   </div>
+</div>
