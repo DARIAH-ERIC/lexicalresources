@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!--This file should not be edited manually. 
-To edit examples, please use TEILex0-examples.xml, 
-then transform using tei-stripper.xsl-->
-
-<?xml-model href="../out/TEILex0-ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/Examples">
+<?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -21,29 +17,101 @@ then transform using tei-stripper.xsl-->
    <text>
       <body>
          <!--organize entries alphabetically-->
-         <!--https://imgur.com/b9dNR9m.png-->
-         <entry xml:id="ED.aid" xml:lang="en">
+
+         <entry type="mainEntry" xml:lang="cz" xml:id="en000008">
+            <form type="lemma" xml:id="en000008.hw1" style="font-weight: bold;">
+               <orth>abeceda</orth>
+            </form>
+            <pc>,</pc>
+            <form type="inflected">
+               <gramGrp>
+                  <gram type="case" value="genitiv"/>
+                  <gram type="number" value="singular"/>
+                  <gram type="gender" value="feminine"></gram>
+               </gramGrp>
+               <orth extent="suffix" expand="abecedy">-y</orth>
+            </form>
+            <!--...-->
+         </entry>
+         <!-- TODO what to do about capitalization and labels in oRef?-->
+         <!--more examples from the Guidelines:
+         <cit type="example">
+            <quote>Mr Burton <oRef type="pt">took</oRef> us for French</quote>
+         </cit>    
+         or
+         <entry>
             <form>
+               <orth>fait-tout</orth>
+            </form>
+            <cit type="example">
+               <quote>
+                  <q>Des casseroles et des "<oRef type="noHyph"/>faitouts" pour les ménagères.</q>
+               </quote>
+            </cit>
+         </entry>       
+         -->
+         <!-- TODO oRef: target or copyOf; github issue on xr type include; -->
+         <entry xml:id="academy" xml:lang="en" type="mainEntry">
+            <form type="lemma">
+               <orth xml:id="academy.lemma">academy</orth>
+            </form>
+            <cit type="example">
+               <quote>The Royal <ref type="oRef" target="#academy.lemma"><lbl>A~</lbl></ref> of
+                  Arts</quote>
+            </cit>
+         </entry>
+         <!--https://imgur.com/b9dNR9m.png-->
+         <!--TODO: lbl vs. num -\- I'd prefer to introduce lbl for ALL labels, and type accordingly -->
+         <entry xml:id="ED.aid" xml:lang="en">
+            <form type="lemma">
                <orth>aid</orth>
                <pron>/ed/</pron>
             </form>
             <gramGrp>
-               <pos>noun</pos>
+               <gram type="pos">noun</gram>
             </gramGrp>
-            <!--TODO finish encoding-->
-            <sense>
-               <sense>1. help, especially money, <lb/>food or other gifts given to people living
-                  <lb/> in difficult conditions aid to the earth-<lb/>quake zone an aid worker
-                  (NOTE: This <lb/>meaning of aid has no plural.) in aid <lb/>of in order to help We
-                  give money in <lb/> aid of the Red Cross. They are collect-<lb/>ing money in aid
-                  of refugees</sense><pc>. </pc>
-               <sense>2. some-<lb/>thing which helps you to do something <lb/>kitchen aids</sense> í </sense>
-            <sense>
+            <sense xml:id="ED.aid.n.1" n="1">
+               <lbl type="num">1.</lbl>
+               <def>help, especially money, food or other gifts given to people living in difficult
+                  conditions</def>
+               <cit type="example">
+                  <quote>aid to the earth-quake zone an aid worker</quote>
+               </cit>
+               <note>(NOTE: This meaning of aid has no plural.)</note>
+               <entry type="relatedEntry" xml:id="ED.in_aid_of" xml:lang="en">
+                  <form type="lemma">
+                     <orth>in aid of</orth>
+                  </form>
+                  <sense xml:id="ED.in_aid_of.1">
+                     <def>in order to help</def>
+                     <cit type="example">
+                        <quote>We give money in aid of the Red Cross.</quote>
+                     </cit>
+                     <cit type="example">
+                        <quote>They are collecting money in aid of refugees.</quote>
+                     </cit>
+                  </sense>
+               </entry>
+            </sense>
+            <sense xml:id="ED.aid.n.2" n="2">
+               <lbl type="num">2.</lbl>
+               <def>thing which helps you to do something</def>
+               <cit type="example">
+                  <quote>kitchen aids</quote>
+               </cit>
+            </sense>
+            <sense xml:id="ED.aid.v.1" n="3">
                <gramGrp>
-                  <pos>verb</pos>
+                  <gram type="pos">verb</gram>
                </gramGrp>
-               <sense>1. to help some-<lb/>thing to happen</sense>
-               <sense>2. to help someone</sense>
+               <sense xml:id="ED.aid.v.1.1" n="3.1">
+                  <lbl type="n">1.</lbl>
+                  <def>to help something to happen</def>
+               </sense>
+               <sense xml:id="ED.aid.v.1.2" n="3.2">
+                  <lbl>2.</lbl>
+                  <def>to help someone</def>
+               </sense>
             </sense>
          </entry>
 
@@ -53,7 +121,7 @@ then transform using tei-stripper.xsl-->
                <orth>Aid</orth>
             </form>
             <pc>,</pc>
-            <sense xml:id="aid_v_a">
+            <sense xml:id="aid.1">
                <gramGrp>
                   <gram type="pos">v.a.</gram>
                </gramGrp>
@@ -76,7 +144,7 @@ then transform using tei-stripper.xsl-->
                </cit>
             </sense>
             <pc>;</pc>
-            <sense xml:id="aid_s">
+            <sense xml:id="aid.2">
                <gramGrp>
                   <gram type="pos">s.</gram>
                </gramGrp>
@@ -107,7 +175,7 @@ then transform using tei-stripper.xsl-->
                </cit>
             </sense>
             <pc>;</pc>
-            <sense>
+            <sense xml:id="aid.3">
                <cit type="translationEquivalent" xml:lang="fr">
                   <form>
                      <orth>sub-side</orth>
@@ -119,7 +187,7 @@ then transform using tei-stripper.xsl-->
                </cit>
             </sense>
             <pc>;</pc>
-            <sense>
+            <sense xml:id="aid.4">
                <usg type="hint">(pers)</usg>
                <cit type="translationEquivalent" xml:lang="fr">
                   <form>
@@ -137,7 +205,7 @@ then transform using tei-stripper.xsl-->
                   <orth>By the <oRef>_</oRef> of</orth>
                </form>
                <pc>,</pc>
-               <sense>
+               <sense xml:id="by_the_aid_of.1">
                   <cit type="translationEquivalent" xml:lang="fr">
                      <form>
                         <orth>à l'aide de</orth>
@@ -146,12 +214,12 @@ then transform using tei-stripper.xsl-->
                </sense>
             </entry>
             <pc>.</pc>
-            <entry type="relatedEntry">
+            <entry type="relatedEntry" xml:lang="en" xml:id="in_aid_of">
                <form>
                   <orth>In <oRef>_</oRef> of</orth>
                </form>
                <pc>,</pc>
-               <sense>
+               <sense xml:id="in_aid_of.1">
                   <usg type="hint">(of performances)</usg>
                   <cit type="translationEquivalent" xml:lang="fr">
                      <form><orth>au profit de</orth></form>
@@ -163,7 +231,7 @@ then transform using tei-stripper.xsl-->
                </sense>
             </entry>
             <pc>.</pc>
-            <entry type="derived" xml:lang="en">
+            <entry type="derived" xml:lang="en" xml:id="aidless">
                <form type="lemma">
                   <orth>_less</orth>
                   <pc>,</pc>
@@ -171,7 +239,7 @@ then transform using tei-stripper.xsl-->
                      <gram type="pos">adj.</gram>
                   </gramGrp>
                </form>
-               <sense>
+               <sense xml:id="aidless.1">
                   <cit type="translationEquivalent" xml:lang="fr">
                      <form>
                         <orth>sans aide</orth>
@@ -185,7 +253,7 @@ then transform using tei-stripper.xsl-->
                   </cit>
                </sense>
                <pc>;</pc>
-               <sense>
+               <sense xml:id="aidless.2">
                   <cit type="translationEquivalent" xml:lang="fr">
                      <form>
                         <orth>abandonné</orth>
@@ -199,6 +267,44 @@ then transform using tei-stripper.xsl-->
                   </cit>
                </sense>
             </entry>
+         </entry>
+
+         <entry xml:id="arbeitsunfähig" xml:lang="de" type="mainEntry">
+            <form type="lemma">
+               <orth>arbeitsunfähig</orth>
+            </form>
+            <sense xml:id="arbeitsunfähig.1">
+               <xr type="synonymy">
+                  <ref type="entry">bettlägerig</ref>
+               </xr>
+               <pc>,</pc>
+               <xr type="synonymy">
+                  <ref type="entry">krank</ref>
+               </xr>
+               <pc>,</pc>
+               <xr type="synonymy">
+                  <ref type="entry">unpässlich</ref>
+               </xr>
+               <pc>;</pc>
+            </sense>
+            <sense xml:id="arbeitsunfähig.2">
+               <pc>(</pc>
+               <usg type="domain">bildungsspr.</usg>
+               <pc>):</pc>
+               <xr type="synonymy">
+                  <ref type="entry">indisponiert</ref>
+               </xr>
+            </sense>
+            <sense xml:id="arbeitsunfähig.3">
+               <xr>
+                  <pc>(</pc>
+                  <lbl>oft</lbl>
+                  <usg type="attitude">emotional</usg>
+                  <pc>):</pc>
+                  <ref type="entry">malade</ref>
+               </xr>
+               <pc>.</pc>
+            </sense>
          </entry>
 
          <entry type="mainEntry" xml:lang="en" xml:id="arrest">
@@ -253,7 +359,7 @@ then transform using tei-stripper.xsl-->
                <lbl>Cf.</lbl>
                <ref target="#M012340" type="entry">burcht</ref>
             </xr>
-         </entry>         
+         </entry>
          <entry type="mainEntry" xml:id="bray" xml:lang="en">
             <form type="lemma">
                <orth>bray</orth>
@@ -314,47 +420,58 @@ then transform using tei-stripper.xsl-->
             </entry>
          </entry>
          <entry xml:id="dog" xml:lang="en">
-            <!--this is no longer valid. TODO: fix-->            
+            <!--this is no longer valid. TODO: fix-->
             <form type="lemma">
                <orth>dog</orth>
             </form>
-            <sense>
-               <xr type="translationEquivalent">
-                  <lbl>Male or unknown gender</lbl>
-                  <ref xml:lang="fr" type="entry">chien</ref>
-                  <cit>
-                     <quote xml:lang="fr"> Le matin j'ouvre au <xr type="headwordAttestation">
-                        <ref type="entry">chien</ref></xr> et je lui fais
-                        manger sa soupe. Le soir je lui siffle de venir se
-                        coucher</quote>
-                     <bibl>RENARD, Poil de Carotte, 1894, p. 102.</bibl>
-                     <cit type="translation">
-                        <!-- included in the french cit, otherwise relation is lost -->
-                        <quote xml:lang="en">In the morning, I open the door
-                           for the dog, and i ...</quote>
-                     </cit>
-                     <bibl>
-                        <!-- If the translation is from a published source, there could be a bibl here as well -->
-                     </bibl>
+            <sense xml:id="dog.1">
+               <gramGrp>
+                  <gram type="gen" value="m">Male or unknown gender</gram>
+               </gramGrp>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form><orth>chien</orth></form>
+               </cit>
+               <cit type="example" xml:lang="fr">
+                  <quote xml:lang="fr"> Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui
+                     fais manger sa soupe. Le soir je lui siffle de venir se coucher</quote>
+                  <bibl>RENARD, Poil de Carotte, 1894, p. 102.</bibl>
+                  <cit type="translation" xml:lang="en">
+                     <!-- included in the french cit, otherwise relation is lost -->
+                     <quote>In the morning, I open the door for the dog, and I <!--...--></quote>
                   </cit>
-               </xr>
-               <xr type="translationEquivalent">
-                  <lbl>Female</lbl>
-                  <ref xml:lang="fr" type="entry">chienne</ref>
-                  <cit xml:lang="fr">
-                     <quote>6. Les fleuristes, murmura Lorilleux, toutes des
-                        Marie-couche-toi-là. Eh bien! Et moi? reprit la
-                        grande veuve, les lèvres pincées. Vous êtes galant.
-                        Vous savez, je ne suis pas une <xr type="the_type_formerly_known_as_oref">
-                           <ref type="entry">chienne</ref></xr> , je ne me
-                        mets pas les pattes en l'air, quand on siffle! </quote>
-                     <bibl>ZOLA, L'Assommoir, 1877, p. 681.</bibl>
-                     <!-- possible translation -->
-                     <cit type="translation">…..</cit>
+               </cit>
+            </sense>
+            <sense xml:id="dog.2">
+               <gramGrp>
+                  <gram type="gen" value="f">Female</gram>
+               </gramGrp>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form type="lemma"><orth>chienne</orth></form>
+               </cit>
+               <cit type="example">
+                  <quote>6. Les fleuristes, murmura Lorilleux, toutes des Marie-couche-toi-là. Eh
+                     bien! Et moi? reprit la grande veuve, les lèvres pincées. Vous êtes galant.
+                     Vous savez, je ne suis pas une <ref type="oRef">chienne</ref>, je ne me mets
+                     pas les pattes en l'air, quand on siffle! </quote>
+                  <bibl>ZOLA, L'Assommoir, 1877, p. 681.</bibl>
+                  <cit type="translation" xml:lang="en">
+                     <quote><!--...--></quote>
                   </cit>
-               </xr>
+               </cit>
             </sense>
          </entry>
+         <entry xml:id="XY.dog" xml:lang="en" type="mainEntry">
+            <form type="lemma">
+               <orth>dog</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">n</gram>
+            </gramGrp>
+            <xr type="hypernymy">
+               <ref type="entry">mammal</ref>
+            </xr>
+         </entry>
+
          <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
             <form type="lemma">
                <orth type="segmeted">
@@ -375,8 +492,9 @@ then transform using tei-stripper.xsl-->
                   <gram type="pos">noun</gram>
                </gramGrp>
             </form>
-            .... 
+            <!--...-->
          </entry>
+         <!--used as fragment in egXML[@xml:id="ROTL.1"]-->
          <entry xml:lang="en" xml:id="go">
             <form type="lemma">
                <orth>go</orth>
@@ -408,11 +526,12 @@ then transform using tei-stripper.xsl-->
                </form>
                <sense xml:id="Häuschen.1"><!--etc.--></sense>
             </entry>
+            <!--TODO: what to do with morphems etc., I'd prefer seg type="m"-->
             <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
                <form type="lemma">
                   <orth><m>haus</m><m>en</m></orth>
                </form>
-               <sense>...</sense>
+               <sense xml:id="hausen.1"><!--...--></sense>
             </entry>
          </entry>
          <entry type="wordFamily" xml:id="Haus-" xml:lang="de">
@@ -462,7 +581,9 @@ then transform using tei-stripper.xsl-->
             </gramGrp>
             <sense xml:id="horrifier.1">
                <cit type="translationEquivalent" xml:lang="en">
-                  <quote>horrify</quote>
+                  <form>
+                     <orth>horrify</orth>
+                  </form>
                </cit>
                <cit type="example">
                   <quote>elle était horrifiée par la dépense</quote>
@@ -494,16 +615,18 @@ then transform using tei-stripper.xsl-->
                <form type="variant" xml:lang="mix-x-YCNY">
                   <orth>Ntua</orth>
                   <pron notation="ipa">nd̪ùá</pron>
-                  <usg type="geo">
+                  <usg type="geographic">
                      <placeName>Yucanany</placeName>
                   </usg>
                </form>
             </form>
             <gramGrp>
                <gram type="pos">locationNoun</gram>
-            </gramGrp> ... </entry>
-        <!-- TODO: check with Jack about xml:lang  -->
-        <!-- not sure if this is a made up example  -->  
+            </gramGrp>
+            <!--...-->
+         </entry>
+         <!-- TODO: check with Jack about xml:lang  -->
+         <!-- not sure if this is a made up example  -->
          <entry xml:id="Osama" xml:lang="en">
             <form type="lemma">
                <pron notation="ipa">
@@ -527,27 +650,29 @@ then transform using tei-stripper.xsl-->
             <!--...-->
          </entry>
          <!--TODO: check source and what's the actual
-         form here (I made it up), do we have gramGrp etc.-->
+         lenna here (I made it up), do we have gramGrp etc.-->
          <entry xml:id="pflaume" xml:lang="de" type="mainEntry">
-            <form type="lemma">Pflaume</form>
+            <form type="lemma">
+               <orth>Pflaume</orth>
+            </form>
             <sense n="1" xml:id="pflaume.1">
                <def xml:lang="de">Frucht des Pflaumenbaums</def>
                <def xml:lang="en">fruit of the plum tree</def>
             </sense>
             <sense n="2" xml:id="pflaume.2">
-               <usg type="register" norm="colloquial">ugs.</usg>
+               <usg type="socioCultural" norm="colloquial">ugs.</usg>
                <def xml:lang="de">Pflaumenbaum</def>
                <def xml:lang="en">plum tree</def>
             </sense>
             <sense n="3" xml:id="pflaume.3">
-               <usg type="style" norm="casual">salopp</usg>
-               <usg type="style" norm="expletive">Schimpfwort</usg>
+               <usg type="socioCultural" norm="casual">salopp</usg>
+               <usg type="socioCultural" norm="expletive">Schimpfwort</usg>
                <def xml:lang="de">ungeschickter, untauglicher Mensch</def>
                <def xml:lang="en">awkward, ineligible person</def>
             </sense>
             <sense n="4" xml:id="pflaume.4">
-               <usg type="geo" norm="regional">landsch.</usg>
-               <usg type="style" norm="casual">salopp</usg>
+               <usg type="geographic" norm="regional">landsch.</usg>
+               <usg type="socioCultural" norm="casual">salopp</usg>
                <def xml:lang="de">anzügliche, leicht boshafte Bemerkung</def>
                <def xml:lang="en">offensive, slightly mischievous remark</def>
             </sense>
@@ -625,11 +750,9 @@ then transform using tei-stripper.xsl-->
             <!-- A fence (noun) -->
             <entry>
                <form type="lemma">
-                  <orth>السياج</orth> ج سيَاجات وأسْوِجة وأَسْوِجة
-                  وسُوج</form>
+                  <orth>السياج</orth> ج سيَاجات وأسْوِجة وأَسْوِجة وسُوج</form>
                <pc>:</pc>
-               <sense>الحائط</sense> || <sense>ما أُحيط بهِ على شيءٍ كالكرم
-                  و النخل</sense>
+               <sense>الحائط</sense> || <sense>ما أُحيط بهِ على شيءٍ كالكرم و النخل</sense>
             </entry>
             <pc>٠</pc>
             <!-- A kind of fish -->
@@ -643,36 +766,33 @@ then transform using tei-stripper.xsl-->
          <entry type="wordFamily" xml:lang="ar" xml:id="uqy98">
             <form type="root">
                <orth>شهم</orth>
-            </form><pc>:</pc>
+            </form>
+            <pc>:</pc>
             <entry>١ــ <!-- To rebuff a horse or to scare a man -->
                <entry>
                   <form>
-                     <orth type="lemma">شَهَم</orth>َ ــ شَهْمًا وشُهُمًا
-                  </form> `<sense>الفرسَ: زجرهُ || و ــ الرجُلَ:
-                     افزعه</sense>
+                     <orth type="lemma">شَهَم</orth>َ ــ شَهْمًا وشُهُمًا </form> `<sense>الفرسَ:
+                     زجرهُ || و ــ الرجُلَ: افزعه</sense>
                </entry> ٠ <entry><form><orth type="lemma"> اَلمشْهوم</orth>
-               </form>٠: <sense>المذعور</sense></entry> Note: scared
-               (adjective) </entry>
+                  </form>٠: <sense>المذعور</sense></entry> Note: scared (adjective) </entry>
             <sense>٢٠ ــ <!-- chivalrous -->
                <entry>
                   <form>
-                     <form><orth type="lemma">شَهُمَ</orth> ـُـ
-                     </form>شَهَامةً و شُهُومَة</form>ُُ<pc>:</pc>
+                     <form><orth type="lemma">شَهُمَ</orth> ـُـ </form>شَهَامةً و
+                     شُهُومَة</form>ُُ<pc>:</pc>
                   <sense>كان شهْم</sense></entry> ٠ <entry>
-                     <form><orth type="lemma">الشَهْم </orth>ج شِهام</form>:
-                     <sense><sense>الذكيّ الفؤاد</sense> ||
-                        <sense>السيِّد النافذ الحكم</sense> || <sense>وــ
-                           ج شُهُم: الفرس النشيط السريع
-                           القوي</sense></sense>ّ </entry>Note:
-               powerful/clever/rapid and strong٠ <entry><form><orth type="lemma">اَلمَشْهُوم</orth></form> *:
-                  <sense>الذكيّ الفؤاد</sense></entry>Note: clever </sense>
+                  <form><orth type="lemma">الشَهْم </orth>ج شِهام</form>: <sense><sense>الذكيّ
+                        الفؤاد</sense> || <sense>السيِّد النافذ الحكم</sense> || <sense>وــ ج شُهُم:
+                        الفرس النشيط السريع القوي</sense></sense>ّ </entry>Note:
+               powerful/clever/rapid and strong٠ <entry><form><orth type="lemma"
+                     >اَلمَشْهُوم</orth></form> *: <sense>الذكيّ الفؤاد</sense></entry>Note: clever </sense>
             <sense>٠٣ ــ <!-- a male Hedgehog -->
                <entry>
-                  <form><orth type="lemma">الشَيْهَم</orth> ج شَيَهِم (ح)
-                  </form><sense>ذَكَر القنافذ</sense></entry>Note: ٠<entry>
-                     <form><orth type="lemma">الشَيْهَمَة</orth></form>:
-                     <sense>العجوز</sense></entry>Note: old woman
-            </sense>
+                  <form><orth type="lemma">الشَيْهَم</orth> ج شَيَهِم (ح) </form>
+                  <sense>ذَكَر القنافذ</sense>
+               </entry>Note: ٠<entry>
+                  <form><orth type="lemma">الشَيْهَمَة</orth></form>:
+               <sense>العجوز</sense></entry>Note: old woman </sense>
          </entry>
          <entry type="root" xml:lang="ar" xml:id="www98">
             <form type="lemma"><orth>ارك</orth>
@@ -683,31 +803,28 @@ then transform using tei-stripper.xsl-->
                </entry>Note: (verb) to eat the "Salvadora persica" plant&gt;٠<entry>
                   <form type="lemma"><orth>أَرَكَ ٠</orth>- أَرَكًا</form>
                   <sense>الجملُ اشتكى بطنهُ من أَكل الأَرَاك</sense>
-               </entry>Note: to have stomachaches from eating the
-               "Salvadora persica" plantِ ٠ <entry><form type="lemma"><orth>الأَراك</orth> (ن): واحدتهُ أَراكة ج أُرُك
-                  و أَرَائِك</form>. <sense>شجر ذو شوك. طويل الساق،
-                     كثير الورق و الأغصان. خوَّار العود تتَّخذ منه
-                     المساويك</sense></entry>Note: The "Salvadora
-               persica" plant </sense> ٢٠ - <sense>
-                  <entry>
-                     <form type="lemma"><orth>أَرَكَ</orth> ْ -َ</form>
-                     <sense>أَرَكًا</sense>
-                  </entry>Note: ? و <entry>
-                     <form type="lemma"><orth>أَرِكَ</orth> ْ -ُ
-                        أُركًا</form>
-                     <sense>الجرحُ: برأ</sense>
-                  </entry>Note: got healed </sense>َ ٣٠ - <sense>
-                     <entry>
-                        <form type="lemma"><orth>أرْوكاريا</orth>(ن)</form>:
-                        <sense>شجرة باسقة من فصيلة الصنوبريَّات.منبتها
-                           الاصلي٠ اميركا الجنوبية، تزرع في الحدائق للزينة،
-                           اوراقها شائكة تنبت حتى على الجذع</sense>
-                     </entry>Note: Monkey puzzles plant </sense> § ٤٠ -<sense>
-                        <entry><form type="lemma"><orth>لأَرِكَة</orth> ج أَرِيْك و
-                           أَرائك</form>: <sense>سرير مزيَّن فاخر</sense>
-                        </entry>Note: a luxurious decorated bed </sense>
+               </entry>Note: to have stomachaches from eating the "Salvadora persica" plantِ ٠
+                     <entry><form type="lemma"><orth>الأَراك</orth> (ن): واحدتهُ أَراكة ج أُرُك و
+                     أَرَائِك</form>. <sense>شجر ذو شوك. طويل الساق، كثير الورق و الأغصان. خوَّار
+                     العود تتَّخذ منه المساويك</sense></entry>Note: The "Salvadora persica" plant
+            </sense> ٢٠ - <sense>
+               <entry>
+                  <form type="lemma"><orth>أَرَكَ</orth> ْ -َ</form>
+                  <sense>أَرَكًا</sense>
+               </entry>Note: ? و <entry>
+                  <form type="lemma"><orth>أَرِكَ</orth> ْ -ُ أُركًا</form>
+                  <sense>الجرحُ: برأ</sense>
+               </entry>Note: got healed </sense>َ ٣٠ - <sense>
+               <entry>
+                  <form type="lemma"><orth>أرْوكاريا</orth>(ن)</form>: <sense>شجرة باسقة من فصيلة
+                     الصنوبريَّات.منبتها الاصلي٠ اميركا الجنوبية، تزرع في الحدائق للزينة، اوراقها
+                     شائكة تنبت حتى على الجذع</sense>
+               </entry>Note: Monkey puzzles plant </sense> § ٤٠ -<sense>
+               <entry><form type="lemma"><orth>لأَرِكَة</orth> ج أَرِيْك و أَرائك</form>:
+                     <sense>سرير مزيَّن فاخر</sense>
+               </entry>Note: a luxurious decorated bed </sense>
          </entry>
-        <!--greek-->
+         <!--greek-->
          <entry xml:id="Aaron" xml:lang="grc" type="mainEntry">
             <form type="lemma">
                <orth>Ἀαρών</orth>
@@ -719,7 +836,6 @@ then transform using tei-stripper.xsl-->
             <!--...-->
          </entry>
          <!--serbian-->
-        <!-- TODO: хипокористика -\- think about adding new types? -->
          <entry xml:id="MZ.RGJS.сајдисльк_2" xml:lang="sr">
             <form type="lemma">
                <orth>сајдисль́к</orth>
@@ -736,6 +852,8 @@ then transform using tei-stripper.xsl-->
                <!--...-->
             </sense>
          </entry>
+         <!-- used as fragment in egXML[@xml:id="USG.2"]-->
+         <!-- TODO: хипокористика -\- think about adding new types? -->
          <entry xml:id="MZ.RGJS.сејче" xml:lang="sr">
             <form type="lemma">
                <orth>сејче</orth>
@@ -743,10 +861,11 @@ then transform using tei-stripper.xsl-->
             <gramGrp>
                <gram type="pos">с</gram>
             </gramGrp>
-              <xr type="related">
-                 <lbl>хип. од</lbl> 
-                 <ref type="entry">сеја</ref><pc>.</pc>
-              </xr>
+            <xr type="related">
+               <lbl>хип. од</lbl>
+               <ref type="entry">сеја</ref>
+               <pc>.</pc>
+            </xr>
             <sense xml:id="MZ.RGJS.сејче.1">
                <cit type="example">
                   <quote>„Ду́ни, ве́тре, се́јче леб да пе́че”</quote>

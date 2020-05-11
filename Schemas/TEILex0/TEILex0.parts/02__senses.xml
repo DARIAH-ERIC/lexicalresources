@@ -77,8 +77,8 @@
                 url="https://imgur.com/zvd4oEh.png" rend="inline"/>
         </figure>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml"
-                corresp="../TEILex0.odd.examples/TEILex0-examples.xml" xpointer="arrest"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="arrest"/>
         </egXML>
     </div>
     <div>
@@ -88,8 +88,8 @@
                 rend="inline"/>
         </figure>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml"
-                corresp="../TEILex0.odd.examples/TEILex0-examples.xml" xpointer="aid"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="aid"/>
         </egXML>
     </div>
     <div>
@@ -131,8 +131,8 @@
         </egXML>
         <p>would in TEI Lex-0 be represented as:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml"
-                corresp="../TEILex0.odd.examples/TEILex0-examples.xml" xpointer="bray"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="bray"/>
         </egXML>
     </div>
 </div>

@@ -15,20 +15,20 @@
         <p>Consider, for instance, the following senses taken from a German entry for Pflaume “plum”
             where usage information is provided by labels taken from fixed sets of values for
             stylistic and diatopic properties:</p>
-        <!--TT: I just converted this to egXML not converted it to TEILex0 yet-->
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e3115">
-            <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml"
-                corresp="../TEILex0.odd.examples/TEILex0-examples.xml" xpointer="pflaume"/>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="pflaume"/>
         </egXML>
         <p>In contrast to the example above, the following sample features an occurrence of a more
             verbose usage description that does not rely on a fixed vocabulary. The sample is taken
             from a Serbian dialect dictionary. The quote in the dialect is further qualified by a
             usage hint: “(said by a peasant woman in the field in hot weather)” which provides a
             particular context in which the quote was recorded.</p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e3178">
-            <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml"
-                corresp="../TEILex0.odd.examples/TEILex0-examples.xml"
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="USG.2" source="#Salgado2019a">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml"
                 xpointer="element(MZ.RGJS.сејче/4/1)"/>
+           
         </egXML>
     </div>
     <div>
@@ -279,8 +279,8 @@
                 </egXML>
                 <p>CORRECT</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e3815">
-                    <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml"
-                        corresp="../TEILex0.odd.examples/TEILex0-examples.xml"
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                        corresp="../TEILex0.examples/examples.xml"
                         xpointer="MZ.RGJS.сајдисльк_2"/>
                 </egXML>
             </item>

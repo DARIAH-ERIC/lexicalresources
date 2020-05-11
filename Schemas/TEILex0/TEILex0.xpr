@@ -26,6 +26,28 @@
                         <codeTemplateItem-array>
                             <codeTemplateItem>
                                 <field name="contentType">
+                                    <String>text/any</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>&lt;form type="lemma">
+    &lt;orth>${selection}&lt;/orth>
+&lt;/form></String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>lemma</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
                                     <String>text/css</String>
                                 </field>
                                 <field name="unparsedInsertString">
@@ -3496,7 +3518,7 @@ Results.
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;egXML xmlns="http://www.tei-c.org/ns/Examples">
-    &lt;xi:include href="TEILex0-examples.stripped.xml" corresp="TEILex0-examples.xml" xpointer="${ask('What is the id of the element you want to include?', text, '')}"/>
+    &lt;xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="${ask('What is the id of the element you want to include?', text, '')}"/>
 &lt;/egXML></String>
                                 </field>
                                 <field name="descriptionString">
@@ -3518,7 +3540,7 @@ Results.
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;egXML xmlns="http://www.tei-c.org/ns/Examples">
-    &lt;xi:include href="TEILex0-examples.stripped.xml" corresp="TEILex0-examples.xml" xpointer="${ask('Gimme your element() value!', text, '')}"/>
+    &lt;xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="${ask('Gimme your element() value!', text, '')}"/>
 &lt;/egXML></String>
                                 </field>
                                 <field name="descriptionString">
@@ -3539,20 +3561,20 @@ Results.
                                     <String>text/xml</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;xi:include href="TEILex0-examples.stripped.xml" corresp="TEILex0-examples.xml" xpointer="element(${ask('Gimme your element() value!', text, '')})"/>
+                                    <String>&lt;xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="element(${ask('Gimme your element() value!', text, '')})"/>
 </String>
                                 </field>
                                 <field name="descriptionString">
                                     <String></String>
                                 </field>
                                 <field name="renderString">
-                                    <String> xi:include with elEment() scheme</String>
+                                    <String> xi:include with eleMent() scheme</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="accelerator">
-                                    <String>M1 M2 E</String>
+                                    <String>M1 M2 M</String>
                                 </field>
                             </codeTemplateItem>
                             <codeTemplateItem>
@@ -3560,7 +3582,7 @@ Results.
                                     <String>text/xml</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>&lt;xi:include href="TEILex0-examples.stripped.xml" corresp="TEILex0-examples.xml" xpointer="${ask('What is the id of the element you want to include?', text, '')}"/>
+                                    <String>&lt;xi:include href="../TEILex0.examples/examples.xml" corresp="../TEILex0.examples/examples.xml" xpointer="${ask('What is the id of the element you want to include?', text, '')}"/>
 </String>
                                 </field>
                                 <field name="descriptionString">
@@ -3574,6 +3596,83 @@ Results.
                                 </field>
                                 <field name="accelerator">
                                     <String>M1 M2 P</String>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/xml</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>&lt;xr type="${ask('What type of cross-reference is this?', combobox, ('synonymy': 'synonym';'antonymy':'antonymy';'hypernymy':'hypernym'; 'hyponymy':'hyponymy'; 'meronymy':'meronymy'), 'related')}">
+    &lt;lbl>${ask('Cross-reference label', String, '')}&lt;/lbl>
+    &lt;ref type="${ask('reference type', combobox, ('entry':'entry'; 'sense':'sense'), 'entry')}">${ask('Reference istelf', String, '')}&lt;/ref>
+&lt;/xr>
+</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>cross-reference</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <String>M1 M2 C</String>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/xml</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>&lt;entry xml:id="${ask('xml:id', input_type, '')}" xml:lang="${ask('xml:lang', input_type, '')}" type="mainEntry">
+    &lt;form type="lemma">
+        &lt;orth>${ask('Orthographic form of the lemma', input_type, '')}&lt;/orth>
+    &lt;/form>
+    &lt;gramGrp>
+        &lt;gram type="pos">${ask('Part of speech', input_type, '')}&lt;/gram>
+    &lt;/gramGrp>
+    &lt;sense xml:id="${ask('Sense xml:id', input_type, '')}">
+        &lt;def>${ask('Definition', input_type, '')}&lt;/def>
+    &lt;/sense>
+&lt;/entry>
+</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>entry</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <String>M1 M2 E</String>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/xml</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>&lt;cit type="example">
+    &lt;quote>${selection}&lt;/quote>
+&lt;/cit></String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>example</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
                                 </field>
                             </codeTemplateItem>
                             <codeTemplateItem>
@@ -7018,7 +7117,7 @@ ${caret}</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEI Lex-0: ODD to XHTML</String>
+                                        <String>TEI Lex-0: ODD to XHTML (with spec, but no new layout)</String>
                                         <String>TEILex0 ODD to RELAX NG (XML syntax)</String>
                                     </list>
                                 </field>
@@ -7031,6 +7130,46 @@ ${caret}</String>
                                 <field name="scenarioStorageLocations">
                                     <list>
                                         <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.examples/examples.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/04__cross-references.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0 ODD to RELAX NG (XML syntax)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -7075,46 +7214,6 @@ ${caret}</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0-ODD.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEI Lex-0: ODD to XHTML</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>../TEI%20Lex%200%20specification/TEILex0-ODD.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEI Lex-0: ODD to XHTML</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
                         </scenarioAssociation-array>
                     </entry>
                     <entry>
@@ -7125,7 +7224,7 @@ ${caret}</String>
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>TEI Lex-0: ODD to XHTML</String>
+                                    <String>TEI Lex-0: ODD to XHTML (with spec, but no new layout)</String>
                                 </field>
                                 <field name="baseURL">
                                     <String></String>
@@ -7143,7 +7242,7 @@ ${caret}</String>
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${frameworks}/tei/xml/tei/stylesheet/odds/odd2odd.xsl</String>
+                                    <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v22.0/frameworks/http_www.tei_c.org_release_oxygen_updateSite.oxygen/tei/xml/tei/stylesheet/odds/odd2odd.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
@@ -7164,7 +7263,7 @@ ${caret}</String>
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>../../docs/pages/TEILex0/TEILex0.html</String>
+                                    <String>${cfd}/${cfn}.test.html</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
@@ -7196,54 +7295,6 @@ ${caret}</String>
                                             <field name="paramDescription">
                                                 <paramDescriptor>
                                                     <field name="localName">
-                                                        <String>cssFile</String>
-                                                    </field>
-                                                    <field name="prefix">
-                                                        <null/>
-                                                    </field>
-                                                    <field name="namespace">
-                                                        <null/>
-                                                    </field>
-                                                </paramDescriptor>
-                                            </field>
-                                            <field name="value">
-                                                <String>https://www.tei-c.org/release/xml/tei/stylesheet/tei.css</String>
-                                            </field>
-                                            <field name="hasXPathValue">
-                                                <Boolean>false</Boolean>
-                                            </field>
-                                            <field name="isStatic">
-                                                <Boolean>false</Boolean>
-                                            </field>
-                                        </transformationParameter>
-                                        <transformationParameter>
-                                            <field name="paramDescription">
-                                                <paramDescriptor>
-                                                    <field name="localName">
-                                                        <String>cssPrintFile</String>
-                                                    </field>
-                                                    <field name="prefix">
-                                                        <null/>
-                                                    </field>
-                                                    <field name="namespace">
-                                                        <null/>
-                                                    </field>
-                                                </paramDescriptor>
-                                            </field>
-                                            <field name="value">
-                                                <String>https://www.tei-c.org/release/xml/tei/stylesheet/tei-print.css</String>
-                                            </field>
-                                            <field name="hasXPathValue">
-                                                <Boolean>false</Boolean>
-                                            </field>
-                                            <field name="isStatic">
-                                                <Boolean>false</Boolean>
-                                            </field>
-                                        </transformationParameter>
-                                        <transformationParameter>
-                                            <field name="paramDescription">
-                                                <paramDescriptor>
-                                                    <field name="localName">
                                                         <String>defaultSource</String>
                                                     </field>
                                                     <field name="prefix">
@@ -7255,7 +7306,7 @@ ${caret}</String>
                                                 </paramDescriptor>
                                             </field>
                                             <field name="value">
-                                                <String>${frameworks}/tei/xml/tei/odd/p5subset.xml</String>
+                                                <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v22.0/frameworks/http_www.tei_c.org_release_oxygen_updateSite.oxygen/tei/xml/tei/odd/p5subset.xml</String>
                                             </field>
                                             <field name="hasXPathValue">
                                                 <Boolean>false</Boolean>
@@ -7268,9 +7319,92 @@ ${caret}</String>
                                 </field>
                                 <field name="cascadingStylesheets">
                                     <String-array>
-                                        <String>${frameworks}/tei/xml/tei/stylesheet/odds/odd2lite.xsl</String>
-                                        <String>${frameworks}/tei/xml/tei/stylesheet/html/html.xsl</String>
+                                        <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v22.0/frameworks/http_www.tei_c.org_release_oxygen_updateSite.oxygen/tei/xml/tei/stylesheet/odds/odd2lite.xsl</String>
+                                        <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v22.0/frameworks/http_www.tei_c.org_release_oxygen_updateSite.oxygen/tei/xml/tei/stylesheet/html/html.xsl</String>
                                     </String-array>
+                                </field>
+                                <field name="xslTransformer">
+                                    <String>Saxon-PE</String>
+                                </field>
+                                <field name="extensionURLs">
+                                    <String-array/>
+                                </field>
+                            </scenario>
+                            <scenario>
+                                <field name="advancedOptionsMap">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>TEILex0: examples to html (not finished)</String>
+                                </field>
+                                <field name="baseURL">
+                                    <String></String>
+                                </field>
+                                <field name="footerURL">
+                                    <String></String>
+                                </field>
+                                <field name="fOPMethod">
+                                    <String>pdf</String>
+                                </field>
+                                <field name="fOProcessorName">
+                                    <String>Apache FOP</String>
+                                </field>
+                                <field name="headerURL">
+                                    <String></String>
+                                </field>
+                                <field name="inputXSLURL">
+                                    <String>${pdu}/stylesheets/tei-dictionary.xsl</String>
+                                </field>
+                                <field name="inputXMLURL">
+                                    <String>${currentFileURL}</String>
+                                </field>
+                                <field name="defaultScenario">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="isFOPPerforming">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="type">
+                                    <String>XSL</String>
+                                </field>
+                                <field name="saveAs">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="openInBrowser">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="outputResource">
+                                    <String>${cfn}.html</String>
+                                </field>
+                                <field name="openOtherLocationInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="locationToOpenInBrowserURL">
+                                    <null/>
+                                </field>
+                                <field name="openInEditor">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInHTMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInXMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInSVGPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInResultSetPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useXSLTInput">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="xsltParams">
+                                    <list/>
+                                </field>
+                                <field name="cascadingStylesheets">
+                                    <String-array/>
                                 </field>
                                 <field name="xslTransformer">
                                     <String>Saxon-PE</String>
@@ -7501,7 +7635,7 @@ ${caret}</String>
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="locationToOpenInBrowserURL">
-                                    <String>${cfd}/out/TEILex0-ODD.rng</String>
+                                    <String>${cfd}/out/TEILex0.rng</String>
                                 </field>
                                 <field name="openInEditor">
                                     <Boolean>true</Boolean>
@@ -7631,6 +7765,153 @@ ${caret}</String>
                                     <String-array/>
                                 </field>
                             </scenario>
+                            <xprocScenario>
+                                <field name="inputPorts">
+                                    <xprocInputPort-array>
+                                        <xprocInputPort>
+                                            <field name="portName">
+                                                <String>source</String>
+                                            </field>
+                                            <field name="urls">
+                                                <String-array>
+                                                    <String>${pdu}/TEILex0.odd</String>
+                                                </String-array>
+                                            </field>
+                                        </xprocInputPort>
+                                    </xprocInputPort-array>
+                                </field>
+                                <field name="outputPorts">
+                                    <xprocOutputPort-array>
+                                        <xprocOutputPort>
+                                            <field name="portName">
+                                                <String>result</String>
+                                            </field>
+                                            <field name="url">
+                                                <String>../../docs/pages/TEILex0/TEILex0.new.html</String>
+                                            </field>
+                                            <field name="showInSequenceView">
+                                                <Boolean>true</Boolean>
+                                            </field>
+                                        </xprocOutputPort>
+                                    </xprocOutputPort-array>
+                                </field>
+                                <field name="xprocOptions">
+                                    <xprocOption-array/>
+                                </field>
+                                <field name="xprocParameters">
+                                    <xprocParameterPort-array>
+                                        <xprocParameterPort>
+                                            <field name="portName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="parameters">
+                                                <xprocParameter-array/>
+                                            </field>
+                                        </xprocParameterPort>
+                                        <xprocParameterPort>
+                                            <field name="portName">
+                                                <String>parameters</String>
+                                            </field>
+                                            <field name="parameters">
+                                                <xprocParameter-array>
+                                                    <xprocParameter>
+                                                        <field name="namespaceURI">
+                                                            <String></String>
+                                                        </field>
+                                                        <field name="localName">
+                                                            <String>paramName1</String>
+                                                        </field>
+                                                        <field name="value">
+                                                            <null/>
+                                                        </field>
+                                                    </xprocParameter>
+                                                </xprocParameter-array>
+                                            </field>
+                                        </xprocParameterPort>
+                                    </xprocParameterPort-array>
+                                </field>
+                                <field name="advancedOptionsMap">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>TEILex0: Generate documentation (do not use yet, not finished)</String>
+                                </field>
+                                <field name="baseURL">
+                                    <null/>
+                                </field>
+                                <field name="footerURL">
+                                    <null/>
+                                </field>
+                                <field name="fOPMethod">
+                                    <null/>
+                                </field>
+                                <field name="fOProcessorName">
+                                    <null/>
+                                </field>
+                                <field name="headerURL">
+                                    <null/>
+                                </field>
+                                <field name="inputXSLURL">
+                                    <String>${pdu}/xproc/teilex0.xpl</String>
+                                </field>
+                                <field name="inputXMLURL">
+                                    <String></String>
+                                </field>
+                                <field name="defaultScenario">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="isFOPPerforming">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="type">
+                                    <String>XPROC</String>
+                                </field>
+                                <field name="saveAs">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="openInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="outputResource">
+                                    <null/>
+                                </field>
+                                <field name="openOtherLocationInBrowser">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="locationToOpenInBrowserURL">
+                                    <String>../../docs/pages/TEILex0/TEILex0.new.html</String>
+                                </field>
+                                <field name="openInEditor">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInHTMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInXMLPane">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="showInSVGPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInResultSetPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useXSLTInput">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="xsltParams">
+                                    <list/>
+                                </field>
+                                <field name="cascadingStylesheets">
+                                    <String-array/>
+                                </field>
+                                <field name="xslTransformer">
+                                    <String>Add-on for Calabash XProc Engine</String>
+                                </field>
+                                <field name="extensionURLs">
+                                    <String-array/>
+                                </field>
+                            </xprocScenario>
                         </scenario-array>
                     </entry>
                     <entry>

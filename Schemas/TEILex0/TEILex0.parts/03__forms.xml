@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="forms">
+    <head>Written and Spoken Forms</head>
+    <p>The current TEI <hi rend="italic">Guidelines</hi> allows for an extremely wide range of
+        encoding possibilities for written and spoken forms. In the discussion which follows, we
+        suggest ways in which the elements, in particular <gi>form</gi>, can be constrained. We give
+        examples of use types not covered by the <hi rend="italic">Guidelines</hi>, and propose some
+        extensions.</p>
+    <div>
+        <head>A note on inheritance</head>
+        <p>We assume that in order to determine the complete properties of an element inside the
+            entry tree, the principle of default inheritance applies, e.g. grammatical properties of
+            a form are determined by collecting the sibling <gi>gramGrp</gi> of the ancestor-or-self
+            of the focus element, where the superordinate grammatical properties can be overwritten
+            by the lower-level properties. This principle is relatively straightforward in the case
+            of grammatical properties, but more complex for the word paradigm, esp. in cases of
+            variant forms. For more information c.f. Ide et al. (<ref
+                target="https://www.kilgarriff.co.uk/Publications/2000-IdeKilgRomary-Euralex.pdf"
+                    ><hi>2000</hi></ref>) and Erjavec et al. (<ref
+                target="http://www.lrec-conf.org/proceedings/lrec2000/html/summary/335.htm"
+                    ><hi>2000</hi></ref>).</p>
+    </div>
+    <div>
+        <head>Grammatical properties of lexical entries</head>
+        <p>Grammatical properties of lexical entries should be specified in
+                <code>entry/gramGrp</code>. This element will typically specify the part-of-speech
+            of the entry.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <entry xml:lang="en" type="mainEntry" xml:id="on">
+                <form type="lemma"><orth>on</orth></form>
+                <gramGrp>
+                    <gram type="pos">prep</gram>
+                </gramGrp>
+                <!--...-->
+            </entry>
+        </egXML>
+        <p>Notes:</p>
+        <list type="ordered">
+            <item>Grammatical properties of the entry should <hi>not</hi> be specified in
+                    <code>entry/form[@type="lemma"]/gramGrp</code>
+            </item>
+            <item>In cases where headwords are discriminated only on the basis of their orthography
+                (e.g. in English dictionaries which treat conversion pairs of nouns and verbs, such
+                as <hi>run</hi>, as belonging in single entries), <code>entry/gramGrp</code> should
+                not be used, because its role is taken over by the individual
+                    <code>sense/gramGrp</code>. </item>
+        </list>
+        <figure>
+            <graphic n="1005" width="8cm" url="https://imgur.com/b9dNR9m.png" rend="inline"/>
+        </figure>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="ED.aid"/>
+        </egXML>
+    </div>
+
+    <div>
+        <head>Representation of the lemma</head>
+        <p>The form element should always be qualified by its <att>type</att>. The lemma (i.e.
+            headword) form should be encoded as <code>form[@type="lemma"]</code>.</p>
+        <p>If it is necessary to specify the grammatical properties of the lemma form itself (as
+            opposed to the grammatical properties of the entry), this is described by
+                <code>entry/form[@type="lemma"]/gramGrp</code>, e.g.:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="ROTL.1">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="element(go/1)"/>
+        </egXML>
+    </div>
+    <div>
+        <head>Representation of inflected forms</head>
+        <p>Dictionaries often include additional forms next to the lemma. In English, these are used
+            to specify irregular forms, such as “corpus / corpora” or “take / took”, whereas in
+            inflectionally rich languages they are often used to help the user determine the correct
+            paradigm of the word (such as “abeceda / -y” in Czech). </p>
+        <p>Such inflected forms should be encoded in <code>entry/form/@type="inflected"</code>,
+            e.g.:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="go"/>
+        </egXML>
+        <p>Or take this example: <hi rend="bold">abeceda, -y</hi>: <code>-y</code> is a genitive
+            singular suffix for feminine nouns. We can mark-up the grammatical properties of the
+            suffix, while providing the full form of the noun as well:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="en000008"/>
+        </egXML>
+    </div>
+    <div>
+        <head>Paradigms</head>
+        <p>When several inflected forms can be present next to the lemma, these can be embedded into
+                <code>entry/form[@type="paradigm"]</code>. The decision on whether to use this extra
+            element depends on the particular dictionary and language.</p>
+        <p>The other use case for paradigms is when the full inflectional paradigm of the word is
+            embedded in the entry, i.e. when the dictionary also includes all the word-forms of the
+            words covered, which can be useful for example in machine processing. </p>
+        <p>An entry may contain several paradigms, e.g. a partial one for humans and a full one for
+            machines, or one for each stem of a verb. Each paradigm type should be distinguished by
+            the <att>subtype</att> attribute.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="perder"/>
+        </egXML>
+    </div>
+    <div>
+        <head>Representation of variants</head>
+        <p>The representation of variation within a form is highly dependant upon the specifics of
+            the features of the variation and the way in which they vary. However, as a general
+            principle, variation may be encoded as <code>form[@type="variant"]</code> and embedded
+            within the parent element for which a subordinate feature exhibits variation.</p>
+        <div>
+            <head>Orthographic variation</head>
+            <p>Several kinds of orthographic variation may be distinguished. Below, we present some
+                of the options with the corresponding examples.</p>
+            <p>Spelling variation due to change in language’s orthography convention:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="Flussschifffahrt"/>
+            </egXML>
+
+            <p>The following example is from American English in which due to the lack of official
+                conventions for transliteration of Arabic orthography to the English (Latin) script,
+                the initial vowel in the surname ‘Osama Bin Laden’ varies between ‘O’ and ‘U’:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="Osama"/>
+            </egXML>
+        </div>
+        <div>
+            <head>Phonetic Variation</head>
+            <p>In this example, the entry contains the single orthographic form as a direct child of
+                the lemma and phonetic transcriptions of the two roughly equally used variant
+                pronunciations of the word 'caramel' from American English.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="caramel-en"/>
+            </egXML>
+
+            <p>We have an open GitHub <ref
+                    target="https://github.com/DARIAH-ERIC/lexicalresources/issues/16">issue</ref>
+                related to this.</p>
+
+        </div>
+        <div>
+            <head>Regional or dialectal Variation</head>
+            <p> In the following example from Mixtepec-Mixtec, there is variation in the form of the
+                word for the city of Oaxaca between speakers from the village of Yucanany and the
+                rest of the speakers. Since the Yucanany variety makes up only a small portion of
+                the speakers of the language, this case of variation is represented as an embedded
+                    <code>form[@type="variant"]</code> within the lemma. Note the use of
+                    <code>usg[@type="geo"]/placeName</code> to explicitly specify this feature in
+                addition to the use of the private language subtag
+                    (<code>xml:lang="mix-x-YCNY"</code>) as per <ref>BCP 47</ref>.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="Oaxaca-MIX"/>
+            </egXML>
+        </div>
+    </div>
+</div>

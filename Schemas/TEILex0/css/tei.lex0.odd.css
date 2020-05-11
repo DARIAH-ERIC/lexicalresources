@@ -10,7 +10,9 @@
 
 
 
-p, gi, hi, att, egXML, include, head, div, ref, TEI, teiHeader, teiHeader *, list, item, figure, graphic, table, cell, figure > note, cell > note {
+p, gi, hi, att, egXML, include, head, div, ref, TEI, 
+teiHeader, teiHeader *, list, item, figure, graphic, 
+table, cell, figure > note, cell > note, code, specDesc  {
    -oxy-display-tags: none;
 }
 

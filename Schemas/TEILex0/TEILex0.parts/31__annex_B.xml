@@ -14,7 +14,7 @@
         <p>Issues: @norm/@value (@ana? overkill)</p>
         <p>Suggested in <ref>http://jtei.revues.org/540</ref>:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.odd.examples/TEILex0-examples.stripped.xml" corresp="../TEILex0.odd.examples/TEILex0-examples.xml" xpointer="katze"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="katze"/>
         </egXML>
     </div>
 </div>
