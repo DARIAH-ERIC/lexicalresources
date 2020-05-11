@@ -7113,43 +7113,43 @@ ${caret}</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.odd</String>
+                                    <String>TEILex0.examples/examples.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
                                         <String>TEI Lex-0: ODD to XHTML (with spec, but no new layout)</String>
-                                        <String>TEILex0 ODD to RELAX NG (XML syntax)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XSL</String>
-                                        <String>ANT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
-                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.examples/examples.xml</String>
+                                    <String>TEILex0.odd</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                        <String>TEILex0 ODD to RELAX NG (XML syntax)</String>
+                                        <String>TEI Lex-0: ODD to XHTML (with spec, but no new layout)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>XML</String>
+                                        <String>ANT</String>
+                                        <String>XSL</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
+                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -7263,7 +7263,7 @@ ${caret}</String>
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${cfd}/${cfn}.test.html</String>
+                                    <String>../../docs/pages/TEILex0/TEILex0.html</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
