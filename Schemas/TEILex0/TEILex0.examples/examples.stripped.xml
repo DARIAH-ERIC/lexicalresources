@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--This file should not be edited manually. 
+To edit examples, please use TEILex0-examples.xml, 
+then transform using tei-stripper.xsl-->
+
+<?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/Examples">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <!--organize entries alphabetically-->
+
+         <entry type="mainEntry" xml:lang="cz" xml:id="en000008">
+            <form type="lemma" xml:id="en000008.hw1" style="font-weight: bold;">
+               <orth>abeceda</orth>
+            </form>
+            <pc>,</pc>
+            <form type="inflected">
+               <gramGrp>
+                  <gram type="case" value="genitiv"/>
+                  <gram type="number" value="singular"/>
+               </gramGrp>
+               <orth extent="suffix" expand="abecedy">-y</orth>
+            </form>
+            <!--...-->
+         </entry>
+         <!-- TODO what to do about capitalization and labels in oRef?-->
+         <!--more examples from the Guidelines:
+         <cit type="example">
+            <quote>Mr Burton <oRef type="pt">took</oRef> us for French</quote>
+         </cit>    
+         or
+         <entry>
+            <form>
+               <orth>fait-tout</orth>
+            </form>
+            <cit type="example">
+               <quote>
+                  <q>Des casseroles et des "<oRef type="noHyph"/>faitouts" pour les ménagères.</q>
+               </quote>
+            </cit>
+         </entry>       
+         -->
+         <!-- TODO oRef: target or copyOf; github issue on xr type include; -->
+         <entry xml:id="academy" xml:lang="en" type="mainEntry">
+            <form type="lemma">
+               <orth xml:id="academy.lemma">academy</orth>
+            </form>
+            <cit type="example">
+               <quote>The Royal <ref type="oRef" target="#academy.lemma"><lbl>A~</lbl></ref> of
+                  Arts</quote>
+            </cit>
+         </entry>
+         <!--https://imgur.com/b9dNR9m.png-->
+         <!--TODO: lbl vs. num -\- I'd prefer to introduce lbl for ALL labels, and type accordingly -->
+         <entry xml:id="ED.aid" xml:lang="en">
+            <form type="lemma">
+               <orth>aid</orth>
+               <pron>/ed/</pron>
+            </form>
+            <gramGrp>
+               <gram type="pos">noun</gram>
+            </gramGrp>
+            <sense xml:id="ED.aid.n.1" n="1">
+               <lbl type="num">1.</lbl>
+               <def>help, especially money, food or other gifts given to people living in difficult
+                  conditions</def>
+               <cit type="example">
+                  <quote>aid to the earth-quake zone an aid worker</quote>
+               </cit>
+               <note>(NOTE: This meaning of aid has no plural.)</note>
+               <entry type="relatedEntry" xml:id="ED.in_aid_of" xml:lang="en">
+                  <form type="lemma">
+                     <orth>in aid of</orth>
+                  </form>
+                  <sense xml:id="ED.in_aid_of.1">
+                     <def>in order to help</def>
+                     <cit type="example">
+                        <quote>We give money in aid of the Red Cross.</quote>
+                     </cit>
+                     <cit type="example">
+                        <quote>They are collecting money in aid of refugees.</quote>
+                     </cit>
+                  </sense>
+               </entry>
+            </sense>
+            <sense xml:id="ED.aid.n.2" n="2">
+               <lbl type="num">2.</lbl>
+               <def>thing which helps you to do something</def>
+               <cit type="example">
+                  <quote>kitchen aids</quote>
+               </cit>
+            </sense>
+            <sense xml:id="ED.aid.v.1" n="3">
+               <gramGrp>
+                  <gram type="pos">verb</gram>
+               </gramGrp>
+               <sense xml:id="ED.aid.v.1.1" n="3.1">
+                  <lbl type="n">1.</lbl>
+                  <def>to help something to happen</def>
+               </sense>
+               <sense xml:id="ED.aid.v.1.2" n="3.2">
+                  <lbl>2.</lbl>
+                  <def>to help someone</def>
+               </sense>
+            </sense>
+         </entry>
+
+         <!--https://imgur.com/IVutWGQ.png-->
+         <entry type="mainEntry" xml:lang="en" xml:id="aid">
+            <form type="lemma">
+               <orth>Aid</orth>
+            </form>
+            <pc>,</pc>
+            <sense xml:id="aid.1">
+               <gramGrp>
+                  <gram type="pos">v.a.</gram>
+               </gramGrp>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form>
+                     <orth>aider</orth>
+                  </form>
+               </cit>
+               <pc>,</pc>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form>
+                     <orth>assister</orth>
+                  </form>
+               </cit>
+               <pc>,</pc>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form>
+                     <orth>secourir</orth>
+                  </form>
+               </cit>
+            </sense>
+            <pc>;</pc>
+            <sense xml:id="aid.2">
+               <gramGrp>
+                  <gram type="pos">s.</gram>
+               </gramGrp>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form>
+                     <orth>aide</orth>
+                  </form>
+               </cit>
+               <pc>,</pc>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form>
+                     <orth>assistance</orth>
+                     <pc>,</pc>
+                     <gramGrp>
+                        <gram type="gen">f.</gram>
+                     </gramGrp>
+                  </form>
+               </cit>
+               <pc>,</pc>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form>
+                     <orth>secours</orth>
+                     <pc>,</pc>
+                     <gramGrp>
+                        <gram type="gen">m.</gram>
+                     </gramGrp>
+                  </form>
+               </cit>
+            </sense>
+            <pc>;</pc>
+            <sense xml:id="aid.3">
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form>
+                     <orth>sub-side</orth>
+                  </form>
+                  <pc>,</pc>
+                  <gramGrp>
+                     <gen>m.</gen>
+                  </gramGrp>
+               </cit>
+            </sense>
+            <pc>;</pc>
+            <sense xml:id="aid.4">
+               <usg type="hint">(pers)</usg>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form>
+                     <orth>aide</orth>
+                  </form>
+                  <pc>,</pc>
+                  <gramGrp>
+                     <gram type="gen">m.</gram>
+                     <gram type="gen">f.</gram>
+                  </gramGrp>
+               </cit>
+            </sense>
+            <entry type="relatedEntry" xml:lang="en" xml:id="by_the_aid_of">
+               <form type="lemma">
+                  <orth>By the <oRef>_</oRef> of</orth>
+               </form>
+               <pc>,</pc>
+               <sense xml:id="by_the_aid_of.1">
+                  <cit type="translationEquivalent" xml:lang="fr">
+                     <form>
+                        <orth>à l'aide de</orth>
+                     </form>
+                  </cit>
+               </sense>
+            </entry>
+            <pc>.</pc>
+            <entry type="relatedEntry" xml:lang="en" xml:id="in_aid_of">
+               <form>
+                  <orth>In <oRef>_</oRef> of</orth>
+               </form>
+               <pc>,</pc>
+               <sense xml:id="in_aid_of.1">
+                  <usg type="hint">(of performances)</usg>
+                  <cit type="translationEquivalent" xml:lang="fr">
+                     <form><orth>au profit de</orth></form>
+                  </cit>
+                  <pc>,</pc>
+                  <cit type="translationEquivalent">
+                     <form><orth>au bénéfice de</orth></form>
+                  </cit>
+               </sense>
+            </entry>
+            <pc>.</pc>
+            <entry type="derived" xml:lang="en" xml:id="aidless">
+               <form type="lemma">
+                  <orth>_less</orth>
+                  <pc>,</pc>
+                  <gramGrp>
+                     <gram type="pos">adj.</gram>
+                  </gramGrp>
+               </form>
+               <sense xml:id="aidless.1">
+                  <cit type="translationEquivalent" xml:lang="fr">
+                     <form>
+                        <orth>sans aide</orth>
+                     </form>
+                  </cit>
+                  <pc>,</pc>
+                  <cit type="translationEquivalent" xml:lang="fr">
+                     <form>
+                        <orth>sans secours</orth>
+                     </form>
+                  </cit>
+               </sense>
+               <pc>;</pc>
+               <sense xml:id="aidless.2">
+                  <cit type="translationEquivalent" xml:lang="fr">
+                     <form>
+                        <orth>abandonné</orth>
+                     </form>
+                  </cit>
+                  <pc>,</pc>
+                  <cit type="translationEquivalent" xml:lang="fr">
+                     <form>
+                        <orth>délaissé</orth>
+                     </form>
+                  </cit>
+               </sense>
+            </entry>
+         </entry>
+
+         <entry xml:id="arbeitsunfähig" xml:lang="de" type="mainEntry">
+            <form type="lemma">
+               <orth>arbeitsunfähig</orth>
+            </form>
+            <sense xml:id="arbeitsunfähig.1">
+               <xr type="synonymy">
+                  <ref type="entry">bettlägerig</ref>
+               </xr>
+               <pc>,</pc>
+               <xr type="synonymy">
+                  <ref type="entry">krank</ref>
+               </xr>
+               <pc>,</pc>
+               <xr type="synonymy">
+                  <ref type="entry">unpässlich</ref>
+               </xr>
+               <pc>;</pc>
+            </sense>
+            <sense xml:id="arbeitsunfähig.2">
+               <pc>(</pc>
+               <usg type="domain">bildungsspr.</usg>
+               <pc>):</pc>
+               <xr type="synonymy">
+                  <ref type="entry">indisponiert</ref>
+               </xr>
+            </sense>
+            <sense xml:id="arbeitsunfähig.3">
+               <xr>
+                  <pc>(</pc>
+                  <lbl>oft</lbl>
+                  <usg type="attitude">emotional</usg>
+                  <pc>):</pc>
+                  <ref type="entry">malade</ref>
+               </xr>
+               <pc>.</pc>
+            </sense>
+         </entry>
+
+         <entry type="mainEntry" xml:lang="en" xml:id="arrest">
+            <form type="lemma">
+               <orth>arrest</orth>
+               <pron>/ə rest/</pron>
+            </form>
+            <sense xml:id="arrest_verb_sense">
+               <gramGrp>
+                  <gram type="pos">verb</gram>
+               </gramGrp>
+               <usg type="hint">(of the police)</usg>
+               <def>to catch and hold someone who has broken the law</def>
+               <cit type="example">
+                  <quote>The police arrested two men and took them to the police station</quote>
+               </cit>
+               <pc>.</pc>
+               <cit type="example">
+                  <quote>He ended up getting arrested as he tried to leave the country</quote>
+               </cit>
+               <pc>.</pc>
+               <cit type="example">
+                  <quote>She was arrested for stealing</quote>
+               </cit>
+            </sense>
+            <pc>.</pc>
+            <sense xml:id="arrest_noun_sense">
+               <gramGrp>
+                  <gram type="pos">noun</gram>
+               </gramGrp>
+               <def>the act of holding someone for breaking the law</def>
+               <cit type="example">
+                  <quote>The police made several arrests at the demonstration.</quote>
+               </cit>
+               <entry type="relatedEntry" xml:lang="en" xml:id="arrest_related.1">
+                  <form>under arrest</form>
+                  <sense xml:id="arrest_related.1_sense.1">
+                     <def>held by the police</def>
+                     <pc>,</pc>
+                     <cit type="example">
+                        <quote>After the fight, three people were under arrest.</quote>
+                     </cit>
+                  </sense>
+               </entry>
+            </sense>
+         </entry>
+         <entry xml:lang="nl" xml:id="borcht">
+            <form type="lemma">
+               <orth>borcht</orth>
+            </form>
+            <xr type="related">
+               <lbl>Cf.</lbl>
+               <ref target="#M012340" type="entry">burcht</ref>
+            </xr>
+         </entry>
+         <entry type="mainEntry" xml:id="bray" xml:lang="en">
+            <form type="lemma">
+               <orth>bray</orth>
+               <pron>brel</pron>
+            </form>
+            <sense xml:id="bray_n">
+               <gramGrp>
+                  <gram type="pos">n</gram>
+               </gramGrp>
+               <sense xml:id="bray_n.1">
+                  <def>cry of an ass</def>
+               </sense>
+               <pc>;</pc>
+               <sense xml:id="bray_n.2">
+                  <def>sound of a trumpet</def>
+               </sense>
+            </sense>
+            <pc>.</pc>
+            <sense xml:id="bray_vt">
+               <gramGrp>
+                  <gram type="pos">vt</gram>
+                  <gram type="subc">VP2A</gram>
+               </gramGrp>
+               <def>make a cry or sound of this kind</def>
+            </sense>
+            <pc>.</pc>
+         </entry>
+         <entry xml:id="caramel-en" xml:lang="en-US">
+            <form type="lemma">
+               <orth>caramel</orth>
+               <form type="variant">
+                  <pron notation="ipa">'keɹə"mɛl</pron>
+               </form>
+               <form type="variant">
+                  <pron notation="ipa">'kaɹmɫ̩</pron>
+               </form>
+            </form>
+            <gramGrp>
+               <gram type="pos">noun</gram>
+            </gramGrp>
+            <!-- ... -->
+         </entry>
+         <entry type="mainEntry" xml:id="cobuild.house" xml:lang="en">
+            <form type="lemma">
+               <orth>house</orth>
+            </form>
+            <entry type="relatedEntry" xml:id="cobuild.house_1" xml:lang="en">
+               <form type="lemma"><orth>bring the house down</orth></form>
+               <sense xml:id="cobuild.house_1.1" xml:lang="en"><!--...--></sense>
+            </entry>
+            <entry type="relatedEntry" xml:id="cobuild.house_2" xml:lang="en">
+               <form type="lemma"><orth>eat someone out of house and home</orth></form>
+               <sense xml:id="cobuild.house_2.1" xml:lang="en"><!--...--></sense>
+            </entry>
+            <entry type="relatedEntry" xml:id="cobuild.house_3" xml:lang="en">
+               <form type="lemma"><orth>get on like a house on fire</orth></form>
+               <sense xml:id="cobuild.house_3.1" xml:lang="en"><!--...--></sense>
+            </entry>
+         </entry>
+         <entry xml:id="dog" xml:lang="en">
+            <!--this is no longer valid. TODO: fix-->
+            <form type="lemma">
+               <orth>dog</orth>
+            </form>
+            <sense xml:id="dog.1">
+               <gramGrp>
+                  <gram type="gen" value="m">Male or unknown gender</gram>
+               </gramGrp>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form><orth>chien</orth></form>
+               </cit>
+               <cit type="example" xml:lang="fr">
+                  <quote xml:lang="fr"> Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui
+                     fais manger sa soupe. Le soir je lui siffle de venir se coucher</quote>
+                  <bibl>RENARD, Poil de Carotte, 1894, p. 102.</bibl>
+                  <cit type="translation" xml:lang="en">
+                     <!-- included in the french cit, otherwise relation is lost -->
+                     <quote>In the morning, I open the door for the dog, and I <!--...--></quote>
+                  </cit>
+               </cit>
+            </sense>
+            <sense xml:id="dog.2">
+               <gramGrp>
+                  <gram type="gen" value="f">Female</gram>
+               </gramGrp>
+               <cit type="translationEquivalent" xml:lang="fr">
+                  <form type="lemma"><orth>chienne</orth></form>
+               </cit>
+               <cit type="example">
+                  <quote>6. Les fleuristes, murmura Lorilleux, toutes des Marie-couche-toi-là. Eh
+                     bien! Et moi? reprit la grande veuve, les lèvres pincées. Vous êtes galant.
+                     Vous savez, je ne suis pas une <ref type="oRef">chienne</ref>, je ne me mets
+                     pas les pattes en l'air, quand on siffle! </quote>
+                  <bibl>ZOLA, L'Assommoir, 1877, p. 681.</bibl>
+                  <cit type="translation" xml:lang="en">
+                     <quote><!--...--></quote>
+                  </cit>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="XY.dog" xml:lang="en" type="mainEntry">
+            <form type="lemma">
+               <orth>dog</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">n</gram>
+            </gramGrp>
+            <xr type="hypernymy">
+               <ref type="entry">mammal</ref>
+            </xr>
+         </entry>
+
+         <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
+            <form type="lemma">
+               <orth type="segmeted">
+                  <seg>Fluss</seg><seg>schifffahrt</seg>
+               </orth>
+               <form type="variant">
+                  <orth>
+                     <seg>Fluss</seg><pc>-</pc><seg>Schifffahrt</seg>
+                  </orth>
+               </form>
+               <form type="variant">
+                  <orth notAfter="1996">
+                     <seg>Fluß</seg><seg>schifffahrt</seg>
+                  </orth>
+                  <usg type="time">Vor 1996 Rechtschreibung Reform</usg>
+               </form>
+               <gramGrp>
+                  <gram type="pos">noun</gram>
+               </gramGrp>
+            </form>
+            <!--...-->
+         </entry>
+         <!--used as fragment in egXML[@xml:id="ROTL.1"]-->
+         <entry xml:lang="en" xml:id="go">
+            <form type="lemma">
+               <orth>go</orth>
+               <gramGrp>
+                  <gram type="tense">present</gram>
+               </gramGrp>
+            </form>
+            <form type="inflected">
+               <orth>went</orth>
+               <gramGrp>
+                  <gram type="tense">past</gram>
+               </gramGrp>
+            </form>
+            <!--...-->
+         </entry>
+
+         <entry type="wordFamily" xml:lang="de" xml:id="Haus">
+            <entry type="mainEntry" xml:lang="de" xml:id="Haus_nn">
+               <form type="lemma"><orth>Haus</orth>
+                  <gramGrp>
+                     <gram type="pos">nn</gram>
+                  </gramGrp>
+               </form>
+               <sense xml:id="Haus_nn.1"><!--etc.--></sense>
+            </entry>
+            <entry type="relatedEntry" xml:id="Häuschen" xml:lang="de">
+               <form type="lemma">
+                  <orth><seg type="m">Häus</seg><seg type="m">chen</seg></orth>
+               </form>
+               <sense xml:id="Häuschen.1"><!--etc.--></sense>
+            </entry>
+            <!--TODO: what to do with morphems etc., I'd prefer seg type="m"-->
+            <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
+               <form type="lemma">
+                  <orth><m>haus</m><m>en</m></orth>
+               </form>
+               <sense xml:id="hausen.1"><!--...--></sense>
+            </entry>
+         </entry>
+         <entry type="wordFamily" xml:id="Haus-" xml:lang="de">
+            <form type="base">
+               <orth>Haus-</orth>
+            </form>
+            <pc>,</pc>
+            <form type="base">
+               <orth>haus-</orth>
+            </form>
+            <pc>:</pc>
+            <!-- possibly some shared usg information -->
+            <entry type="mainEntry" xml:lang="de" xml:id="Hausaltar">
+               <!-- needs consult-->
+               <form type="lemma">
+                  <orth expand="Hausaltar">-altar</orth>
+                  <pc>,</pc>
+                  <gramGrp>
+                     <gram type="gen" value="masculine">der</gram>
+                  </gramGrp>
+               </form>
+               <sense xml:id="Hausaltar.1">
+                  <!--etc.-->
+               </sense>
+            </entry>
+            <entry type="mainEntry" xml:lang="de" xml:id="Hausandacht">
+               <form type="lemma">
+                  <orth expand="Hausandacht">-andacht</orth>
+                  <pc>,</pc>
+                  <gramGrp>
+                     <gram type="gen" value="feminine">die</gram>
+                  </gramGrp>
+               </form>
+               <sense xml:id="Hausandacht.1">
+                  <!--etc.-->
+               </sense>
+            </entry>
+            <!-- ... -->
+         </entry>
+
+         <entry xml:id="horrifier" type="mainEntry" xml:lang="fr">
+            <form type="lemma">
+               <orth>horrifier</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">v</gram>
+            </gramGrp>
+            <sense xml:id="horrifier.1">
+               <cit type="translationEquivalent" xml:lang="en">
+                  <form>
+                     <orth>horrify</orth>
+                  </form>
+               </cit>
+               <cit type="example">
+                  <quote>elle était horrifiée par la dépense</quote>
+                  <cit type="translation" xml:lang="en">
+                     <quote>she was horrified at the expense</quote>
+                  </cit>
+               </cit>
+            </sense>
+         </entry>
+         <entry xml:id="katze" xml:lang="de" type="mainEntry">
+            <form type="lemma">
+               <gramGrp>
+                  <gram type="gen" norm="feminine">die</gram>
+               </gramGrp>
+               <orth>Katze</orth>
+            </form>
+            <!--...-->
+         </entry>
+         <entry xml:id="Oaxaca-MIX" xml:lang="mix" type="compound">
+            <form type="lemma">
+               <orth>
+                  <seg>Ñuu</seg>
+                  <seg>Ntua</seg>
+               </orth>
+               <pron notation="ipa">
+                  <seg>ɲùù</seg>
+                  <seg>nd̪ùá</seg>
+               </pron>
+               <form type="variant" xml:lang="mix-x-YCNY">
+                  <orth>Ntua</orth>
+                  <pron notation="ipa">nd̪ùá</pron>
+                  <usg type="geographic">
+                     <placeName>Yucanany</placeName>
+                  </usg>
+               </form>
+            </form>
+            <gramGrp>
+               <gram type="pos">locationNoun</gram>
+            </gramGrp>
+            <!--...-->
+         </entry>
+         <!-- TODO: check with Jack about xml:lang  -->
+         <!-- not sure if this is a made up example  -->
+         <entry xml:id="Osama" xml:lang="en">
+            <form type="lemma">
+               <pron notation="ipa">
+                  <seg xml:id="ousma" corresp="#usma #osma">ow."sa.ma</seg>
+                  <seg>bɪn</seg>
+                  <seg>ˈlaːdn̹</seg>
+               </pron>
+               <form type="variant">
+                  <orth type="transliterated">
+                     <seg xml:id="osma" corresp="#usma #ousma">Osama</seg>
+                     <seg>Bin</seg>
+                     <seg>Laden</seg></orth>
+               </form>
+               <form type="variant">
+                  <orth type="transliterated">
+                     <seg xml:id="usma" corresp="#osma #ousma">Usama</seg>
+                     <seg>Bin</seg>
+                     <seg>Laden</seg></orth>
+               </form>
+            </form>
+            <!--...-->
+         </entry>
+         <!--TODO: check source and what's the actual
+         lenna here (I made it up), do we have gramGrp etc.-->
+         <entry xml:id="pflaume" xml:lang="de" type="mainEntry">
+            <form type="lemma">
+               <orth>Pflaume</orth>
+            </form>
+            <sense n="1" xml:id="pflaume.1">
+               <def xml:lang="de">Frucht des Pflaumenbaums</def>
+               <def xml:lang="en">fruit of the plum tree</def>
+            </sense>
+            <sense n="2" xml:id="pflaume.2">
+               <usg type="socioCultural" norm="colloquial">ugs.</usg>
+               <def xml:lang="de">Pflaumenbaum</def>
+               <def xml:lang="en">plum tree</def>
+            </sense>
+            <sense n="3" xml:id="pflaume.3">
+               <usg type="socioCultural" norm="casual">salopp</usg>
+               <usg type="socioCultural" norm="expletive">Schimpfwort</usg>
+               <def xml:lang="de">ungeschickter, untauglicher Mensch</def>
+               <def xml:lang="en">awkward, ineligible person</def>
+            </sense>
+            <sense n="4" xml:id="pflaume.4">
+               <usg type="geographic" norm="regional">landsch.</usg>
+               <usg type="socioCultural" norm="casual">salopp</usg>
+               <def xml:lang="de">anzügliche, leicht boshafte Bemerkung</def>
+               <def xml:lang="en">offensive, slightly mischievous remark</def>
+            </sense>
+         </entry>
+         <entry xml:id="perder" xml:lang="es">
+            <form type="lemma">
+               <orth>perder</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">verb</gram>
+            </gramGrp>
+            <form type="paradigm" subtype="present">
+               <form type="inflected">
+                  <orth>pierdo</orth>
+                  <gramGrp>
+                     <gram type="per">1</gram>
+                     <gram type="number">sg</gram>
+                     <gram type="mood">indic</gram>
+                     <gram type="voice">active</gram>
+                  </gramGrp>
+               </form>
+               <!-- other inflected forms (of present indicative) here -->
+               <gramGrp>
+                  <gram type="tns">present</gram>
+               </gramGrp>
+            </form>
+            <form type="paradigm" subtype="preteritum">
+               <form type="inflected">
+                  <orth>perdí</orth>
+                  <gramGrp>
+                     <gram type="per">1</gram>
+                     <gram type="number">sg</gram>
+                     <gram type="mood">indic</gram>
+                     <gram type="voice">active</gram>
+                  </gramGrp>
+               </form>
+               <gramGrp>
+                  <gram type="tns">preteritum</gram>
+               </gramGrp>
+            </form>
+            <!--... -->
+         </entry>
+         <!--arabic-->
+         <entry type="wordFamily" xml:id="hdjs63" xml:lang="ar">
+            <form type="root"><orth>ﺍﺮﻛ</orth></form>
+            <pc>:</pc>
+            <entry n="١-" type="wordForm" xml:id="xhd32" xml:lang="ar">
+               <form type="lemma">
+                  <orth>ﺃَﺮَﻛَ</orth> -ُ ﺃُﺮُﻛًﺍ</form>
+               <sense> ﺎﻠﺠﻤﻟُ: ﺎﻜﻟ ﻭﺮﻗ ﺍﻷﺭَﺎﻛِ ٠ ﺃَﺮَﻛَ ٠- ﺃَﺮَﻛًﺍ ﺎﻠﺠﻤﻟُ ﺎﺸﺘﻛﻯ ﺐﻄﻨﻫُ ﻢﻧ ﺄَﻜﻟ
+                  ﺍﻷﺭَﺎﻛِ ٠ ﺍﻷﺭﺎﻛ (ﻥ): ﻭﺎﺣﺪﺘﻫُ ﺃَﺭﺎﻛﺓ ﺝ ﺃُﺮُﻛ ﻭ ﺃَﺭَﺎﺌِﻛ. ﺶﺟﺭ ﺫﻭ ﺵﻮﻛ. ﻁﻮﻴﻟ ﺎﻠﺳﺎﻗ،
+                  ﻚﺜﻳﺭ ﺎﻟﻭﺮﻗ ﻭ ﺍﻸﻐﺻﺎﻧ. ﺥﻭَّﺍﺭ ﺎﻠﻋﻭﺩ ﺖﺘَّﺧﺫ ﻢﻨﻫ ﺎﻠﻤﺳﺍﻮﻴﻛ</sense>
+            </entry>
+            <entry n="٢٠ -" type="wordForm">
+               <form type="lemma">
+                  <orth>ﺃَﺮَﻛَ</orth>
+               </form>
+               <sense> ْ -َ ﺃَﺮَﻛًﺍ ﻭ ﺃَﺮِﻛَ ْ -ُ ﺃُﺮﻛًﺍ ﺎﻠﺟﺮﺣُ: ﺏﺭﺃَ</sense>
+            </entry>
+         </entry>
+         <!--TODO: fix-->
+         <entry type="wordFamily" xml:lang="ar" xml:id="jmw34">
+            <form type="root">
+               <orth type="lemma">سيج</orth>
+            </form>
+            <pc>:</pc>
+            <!-- To fence (verb) -->
+            <entry>
+               <form type="lemma">
+                  <orth>سيّج</orth>
+               </form>
+               <sense>الكرم: جعل له سياجا</sense>
+               <pc>٠</pc>
+            </entry>
+            <!-- A fence (noun) -->
+            <entry>
+               <form type="lemma">
+                  <orth>السياج</orth> ج سيَاجات وأسْوِجة وأَسْوِجة وسُوج</form>
+               <pc>:</pc>
+               <sense>الحائط</sense> || <sense>ما أُحيط بهِ على شيءٍ كالكرم و النخل</sense>
+            </entry>
+            <pc>٠</pc>
+            <!-- A kind of fish -->
+            <entry>
+               <form type="lemma">
+                  <orth>السيْجان</orth> (ح)</form>
+               <pc>:</pc>
+               <sense>نوع من السمك</sense>
+            </entry>
+         </entry>
+         <entry type="wordFamily" xml:lang="ar" xml:id="uqy98">
+            <form type="root">
+               <orth>شهم</orth>
+            </form>
+            <pc>:</pc>
+            <entry>١ــ <!-- To rebuff a horse or to scare a man -->
+               <entry>
+                  <form>
+                     <orth type="lemma">شَهَم</orth>َ ــ شَهْمًا وشُهُمًا </form> `<sense>الفرسَ:
+                     زجرهُ || و ــ الرجُلَ: افزعه</sense>
+               </entry> ٠ <entry><form><orth type="lemma"> اَلمشْهوم</orth>
+                  </form>٠: <sense>المذعور</sense></entry> Note: scared (adjective) </entry>
+            <sense>٢٠ ــ <!-- chivalrous -->
+               <entry>
+                  <form>
+                     <form><orth type="lemma">شَهُمَ</orth> ـُـ </form>شَهَامةً و
+                     شُهُومَة</form>ُُ<pc>:</pc>
+                  <sense>كان شهْم</sense></entry> ٠ <entry>
+                  <form><orth type="lemma">الشَهْم </orth>ج شِهام</form>: <sense><sense>الذكيّ
+                        الفؤاد</sense> || <sense>السيِّد النافذ الحكم</sense> || <sense>وــ ج شُهُم:
+                        الفرس النشيط السريع القوي</sense></sense>ّ </entry>Note:
+               powerful/clever/rapid and strong٠ <entry><form><orth type="lemma">اَلمَشْهُوم</orth></form> *: <sense>الذكيّ الفؤاد</sense></entry>Note: clever </sense>
+            <sense>٠٣ ــ <!-- a male Hedgehog -->
+               <entry>
+                  <form><orth type="lemma">الشَيْهَم</orth> ج شَيَهِم (ح) </form>
+                  <sense>ذَكَر القنافذ</sense>
+               </entry>Note: ٠<entry>
+                  <form><orth type="lemma">الشَيْهَمَة</orth></form>:
+               <sense>العجوز</sense></entry>Note: old woman </sense>
+         </entry>
+         <entry type="root" xml:lang="ar" xml:id="www98">
+            <form type="lemma"><orth>ارك</orth>
+            </form>: ١-<sense>
+               <entry>
+                  <form type="lemma"><orth>أَرَكَ</orth> -ُ أُرُكًا</form>
+                  <sense>الجملُ: اكل ورق الأَرَاك</sense>
+               </entry>Note: (verb) to eat the "Salvadora persica" plant&gt;٠<entry>
+                  <form type="lemma"><orth>أَرَكَ ٠</orth>- أَرَكًا</form>
+                  <sense>الجملُ اشتكى بطنهُ من أَكل الأَرَاك</sense>
+               </entry>Note: to have stomachaches from eating the "Salvadora persica" plantِ ٠
+                     <entry><form type="lemma"><orth>الأَراك</orth> (ن): واحدتهُ أَراكة ج أُرُك و
+                     أَرَائِك</form>. <sense>شجر ذو شوك. طويل الساق، كثير الورق و الأغصان. خوَّار
+                     العود تتَّخذ منه المساويك</sense></entry>Note: The "Salvadora persica" plant
+            </sense> ٢٠ - <sense>
+               <entry>
+                  <form type="lemma"><orth>أَرَكَ</orth> ْ -َ</form>
+                  <sense>أَرَكًا</sense>
+               </entry>Note: ? و <entry>
+                  <form type="lemma"><orth>أَرِكَ</orth> ْ -ُ أُركًا</form>
+                  <sense>الجرحُ: برأ</sense>
+               </entry>Note: got healed </sense>َ ٣٠ - <sense>
+               <entry>
+                  <form type="lemma"><orth>أرْوكاريا</orth>(ن)</form>: <sense>شجرة باسقة من فصيلة
+                     الصنوبريَّات.منبتها الاصلي٠ اميركا الجنوبية، تزرع في الحدائق للزينة، اوراقها
+                     شائكة تنبت حتى على الجذع</sense>
+               </entry>Note: Monkey puzzles plant </sense> § ٤٠ -<sense>
+               <entry><form type="lemma"><orth>لأَرِكَة</orth> ج أَرِيْك و أَرائك</form>:
+                     <sense>سرير مزيَّن فاخر</sense>
+               </entry>Note: a luxurious decorated bed </sense>
+         </entry>
+         <!--greek-->
+         <entry xml:id="Aaron" xml:lang="grc" type="mainEntry">
+            <form type="lemma">
+               <orth>Ἀαρών</orth>
+            </form>
+            <pc>,</pc>
+            <gramGrp>
+               <gram type="pos">ὁ</gram>
+            </gramGrp>
+            <!--...-->
+         </entry>
+         <!--serbian-->
+         <entry xml:id="MZ.RGJS.сајдисльк_2" xml:lang="sr">
+            <form type="lemma">
+               <orth>сајдисль́к</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">м</gram>
+            </gramGrp>
+            <etym>
+               <lang value="tr">тур.</lang>
+            </etym>
+            <!--...-->
+            <sense xml:id="MZ.RGJS.сајдисльк_2.1">
+               <def>уважавање.</def>
+               <!--...-->
+            </sense>
+         </entry>
+         <!-- used as fragment in egXML[@xml:id="USG.2"]-->
+         <!-- TODO: хипокористика -\- think about adding new types? -->
+         <entry xml:id="MZ.RGJS.сејче" xml:lang="sr">
+            <form type="lemma">
+               <orth>сејче</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">с</gram>
+            </gramGrp>
+            <xr type="related">
+               <lbl>хип. од</lbl>
+               <ref type="entry">сеја</ref>
+               <pc>.</pc>
+            </xr>
+            <sense xml:id="MZ.RGJS.сејче.1">
+               <cit type="example">
+                  <quote>„Ду́ни, ве́тре, се́јче леб да пе́че”</quote>
+                  <usg type="hint">(рекла сељанка на њиви за време врућине)</usg>
+                  <bibl>(<placeName>Дубница</placeName>).</bibl>
+               </cit>
+            </sense>
+         </entry>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="usage">
+    <head>Usage information</head>
+    <p>In the current TEI guidelines, <gi>usg</gi> is defined as an element which marks up “usage
+        information in a dictionary entry”. Prototypically, usage information is a label which can
+        be attached at various points in the entry hierarchy in order to signal e. g. restrictions
+        in terms of geographic regions, domains of specialized language or stylistic properties for
+        the particular lexical item that it is attached to.</p>
+    <div>
+        <head>Label-like vs. narrative usage descriptions</head>
+        <p>Usage information ca be provided in dictionaries both in the form of label-like
+            descriptors (often abbreviated) and as fuller narrative expressions.</p>
+        <p>Consider, for instance, the following senses taken from a German entry for Pflaume “plum”
+            where usage information is provided by labels taken from fixed sets of values for
+            stylistic and diatopic properties:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="pflaume"/>
+        </egXML>
+        <p>In contrast to the example above, the following sample features an occurrence of a more
+            verbose usage description that does not rely on a fixed vocabulary. The sample is taken
+            from a Serbian dialect dictionary. The quote in the dialect is further qualified by a
+            usage hint: “(said by a peasant woman in the field in hot weather)” which provides a
+            particular context in which the quote was recorded.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="USG.2" source="#Salgado2019a">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml"
+                xpointer="element(MZ.RGJS.сејче/4/1)"/>
+           
+        </egXML>
+    </div>
+    <div>
+        <head>Types of usage information<note place="comment" resp="Katrien_Depuydt"><hi>frequency
+                    information in a dictionary: usage? (corpus based dictionary with frequency
+                    information)oldest attestation: date + location of oldest attestation of an
+                    entry in a corpus based dictionary: usage?</hi></note></head>
+
+        <p>In lexicographic literature, usage information is not always uniformly classified.
+            Compare, for instance, Svendsen (2009): <figure>
+                <graphic url="https://i.imgur.com/uXnKDcE.png" height="373px"/>
+                <figDesc>(image taken from Marcin Overgaard, Theoretical Considerations for the
+                    Improvement of Usage Labelling in Dictionaries: a Combined Formal-Functional
+                    Approach. In: International Journal of Lexicography, Vol. 23 No. 4, pp.
+                    411–442.)</figDesc>
+            </figure>and Atkins and Rundell (2008) <figure>
+                <graphic url="https://i.imgur.com/RDyjhtm.png" width="993px" height="575px"/>
+                <figDesc>B.T. Atkins and M. Rundell, The Oxford Guide to Practical Lexicography.
+                    Oxford University Press, 2008, p. 183</figDesc>
+            </figure></p>
+        <p>Svendsen and Atkins and Rundell can, however, be mapped against each other – with the
+            exception of one category which is present only in the latter: <table>
+                <row>
+                    <cell>Svendsen</cell>
+                    <cell>Atkins and Rundell</cell>
+                    <cell>Examples</cell>
+                    <cell>Summary</cell>
+                </row>
+                <row>
+                    <cell>Diachronic marking (Time)</cell>
+                    <cell>Time</cell>
+                    <cell>arch., dated, ...</cell>
+                    <cell>TIME</cell>
+                </row>
+                <row>
+                    <cell>Diatopic marking (Place)</cell>
+                    <cell>Region</cell>
+                    <cell>AmE., dial. ...</cell>
+                    <cell>GEO</cell>
+                </row>
+                <row>
+                    <cell>Diaintegrative marking (Nationality)</cell>
+                    <cell>-</cell>
+                    <cell>Lat., ...</cell>
+                    <cell>LANGUAGE</cell>
+                </row>
+                <row>
+                    <cell>Diastratic marking (Socio-Cultural)</cell>
+                    <cell>Register / Style</cell>
+                    <cell>formal, informal, journalese ...</cell>
+                    <cell>SOCIO-CULTURAL</cell>
+                </row>
+                <row>
+                    <cell>Diatechnical marking (Technicality)</cell>
+                    <cell>Domain</cell>
+                    <cell>Mil., Biol., ...</cell>
+                    <cell>DOMAIN</cell>
+                </row>
+                <row>
+                    <cell>Diafrequential marking (Frequency)</cell>
+                    <cell/>
+                    <cell/>
+                    <cell>FREQUENCY</cell>
+                </row>
+                <row>
+                    <cell>Diaevaluative marking (Attitude)</cell>
+                    <cell>Attitude</cell>
+                    <cell>pejor., iron., ...</cell>
+                    <cell>ATTITUDE</cell>
+                </row>
+                <row>
+                    <cell>Dianormative marking (Normativity)</cell>
+                    <cell/>
+                    <cell/>
+                    <cell>NORMATIVITY</cell>
+                </row>
+                <row>
+                    <cell/>
+                    <cell>Meaning type</cell>
+                    <cell>Lit., Fig. ...</cell>
+                    <cell>MEANING TYPE</cell>
+                </row>
+            </table></p>
+        <p>In TEI, <gi>usg</gi> is a typed element. The type of a <gi>usg</gi> element can be
+            conceived as a conceptual axis (independent from other types) along which the given
+            value of the element is located. The TEI <hi rend="italic">Guidelines</hi> offer a range
+            of sample values for types to illustrate potential uses of <gi>usg</gi>, but not al of
+            them have been carried over to TEI Lex-0. The following table shows the differences
+            between suggested values of <att>type</att> in TEI and the required values of
+                <att>type</att> in TEI Lex-0:</p>
+        <table rend="rules" cols="4">
+            <row>
+                <cell>suggested values in TEI P5</cell>
+                <cell>corresponding Svendsen – Atkins and Rundell mapping </cell>
+                <cell><hi rend="bold">TEI Lex-0</hi></cell>
+                <cell>example value</cell>
+            </row>
+            <row>
+                <cell>geo</cell>
+                <cell>GEO</cell>
+                <cell><hi rend="bold">geographic</hi></cell>
+                <cell>AmE., dial.</cell>
+            </row>
+            <row>
+                <cell>time</cell>
+                <cell>TIME</cell>
+                <cell><hi rend="bold">temporal</hi></cell>
+                <cell>archaic, old</cell>
+            </row>
+            <row>
+                <cell>dom</cell>
+                <cell>DOMAIN</cell>
+                <cell><hi rend="bold">domain</hi></cell>
+                <cell>scientific, literary</cell>
+            </row>
+            <row>
+                <cell>reg</cell>
+                <cell>SOCIO-CULTURAL</cell>
+                <cell><hi rend="bold">socioCultural</hi></cell>
+                <cell>slang, vulgar</cell>
+            </row>
+            <row>
+                <cell>style</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">meaningType</hi></cell>
+                <cell>figurative, literal</cell>
+            </row>
+            <row>
+                <cell>plev</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">frequency</hi></cell>
+                <cell>rare, occas.</cell>
+            </row>
+            <row>
+                <cell>-</cell>
+                <cell/>
+                <cell><hi rend="bold">attitude</hi></cell>
+                <cell>formal, informal</cell>
+            </row>
+            <row>
+                <cell>-</cell>
+                <cell/>
+                <cell><hi rend="bold">normativity</hi></cell>
+                <cell>non-standard</cell>
+            </row>
+            <row>
+                <cell>lang</cell>
+                <cell>LANGUAGE</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>gram</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>syn</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>hyper</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>colloc</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>comp</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>obj</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>subj</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>verb</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">-</hi></cell>
+                <cell/>
+            </row>
+            <row>
+                <cell>hint</cell>
+                <cell>-</cell>
+                <cell><hi rend="bold">hint</hi></cell>
+                <cell/>
+            </row>
+        </table>
+        <p>In TEI-Lex-0:</p>
+        <list type="ordered">
+            <item>The <att>type</att> attribute is made mandatory.</item>
+            <item>The element <gi>usg</gi> is used in a narrower sense than is currently the case in
+                the TEI <hi rend="italic">Guidelines</hi>.</item>
+            <item>The <att>norm</att> attribute is encouraged.</item>
+        </list>
+        <p>Justification:</p>
+        <list type="ordered">
+            <item>Without <att>type</att> attribute, <gi>usg</gi> would be an underspecified
+                element. Usage labels describe a wide range of linguistic phenomena. Classifying
+                them should be considered a good practice.</item>
+            <item>Currently, the TEI <hi rend="italic">Guidelines</hi> contain an overuse of
+                    <gi>usg</gi> for describing phenomena that could be covered by alternative, more
+                narrowly defined TEI elements. It should be considered a good practice to use the
+                most specific TEI element available. See table above and the next section <ref
+                    target="#RestristingUsg">Restricting the scope of <gi>usg</gi></ref></item>
+            <item>It is good practice to normalize the values of the <gi>usg</gi> elements because
+                dictionaries are not always consistent in the way they use their usage labels. For
+                instance, abbreviated and unabbreviated labels can appear in the same dictionary:
+                they should be normalized to a single value. Normalization should be only restricted
+                to a single dictionary. A global normalization effort is currently beyond the scope
+                of TEI Lex-0.</item>
+        </list>
+    </div>
+    <div xml:id="RestristingUsg">
+        <head>Restricting the scope of <gi>usg</gi>
+        </head>
+        <list type="ordered">
+            <item><p>Do not use <tag>usg type="lang"</tag> to mark up the name of a language in an
+                    etymological or other discussion. The recommended way to encode this information
+                    is using <gi>lang</gi> element within <gi>etym</gi>.</p>
+                <p>INCORRECT</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e3789">
+                    <entryFree xml:id="MZ.RGJS.сајдисльк_1">
+                        <form type="lemma"><orth>сајдисль́к</orth></form>
+                        <gramGrp><gram type="pos">м</gram></gramGrp>
+                        <usg type="lang">тур.</usg>
+                        <sense>
+                            <def>уважавање.</def> … </sense>
+                    </entryFree>
+                </egXML>
+                <p>CORRECT</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e3815">
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                        corresp="../TEILex0.examples/examples.xml"
+                        xpointer="MZ.RGJS.сајдисльк_2"/>
+                </egXML>
+            </item>
+
+            <item>Do not use <tag>usg type="hyper"</tag> or <tag>usg type="syn"</tag> to mark
+                lexical relations such as hyperonymy or synonymy. The recommended way to encode
+                lexical relations is using the reference mechanism provided by <tag>xr
+                    type="syn"</tag>. TOMA TODO: add examples</item>
+            <item>Do not use <tag>usg type="colloc"</tag> or for that matter "comp.", "obj.",
+                "subj.", "verb" etc., but rather <tag>colloc type="object"</tag> or <tag>colloc
+                    type="preposition"</tag>.</item>
+            <item><tag>usg type="hint"</tag> should be used as fallback for cases where the usage
+                information does not fall into one of the recognized cases discussed above. </item>
+            <item>Frequency information on lexicographic entities may differ from other types of
+                usage information in that it often cannot be interpreted without further context. In
+                phrases such as “mostly biology” or “rarely used in American English” it serves the
+                purpose of a modifier (quantifier) to another usage information (or other lexical
+                information). Such use calls for modeling the frequency information as an attribute
+                to the usg element modified. For frequency information provided explicitly (e.g.
+                corpus frequencies), a separate element should be introduced. TODO</item>
+        </list>
+        <p><hi>stuff to think about:</hi></p>
+        <list type="unordered">
+            <item><hi xml:space="preserve">Frequency and source corpus? ie. source attribute &lt;usg type=”frequency” unit=???? source= “this_and_that_corpus”&gt;12&lt;/usg&gt;  </hi></item>
+        </list>
+
+
+    </div>
+</div>
