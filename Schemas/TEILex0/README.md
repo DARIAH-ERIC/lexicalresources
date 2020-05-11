@@ -69,11 +69,10 @@ More advanced users can propose solutions by submitting pull requests. Make sure
 
   - fork this repository
   - clone your fork on your machine
-  - (optionally) create a branch for each new issue you're working on. You could be working in your master branch, but some issues may take longer than others, and you may want to enjoy some compartmentalization this way.
+  - create a branch for each new issue you're working on.
   - when you commit and push, you will be pushing to your fork (i.e. we won't be able to see your changes in our main repository (the so-called "upstream")
-  - when you are ready to submit, first make sure your local branch is up to date with our main repo by merging from the upstream (in GitHub Desktop: Branch > Merge into Current Branch... then select upstream/master)
-  - then create a pull request (in GitHub Desktop: Branch > Create Pull Request)
-  - once your pull request has been merged, you can safely 
+  - when you are ready to submit your contribution to TEI Lex-0, create a pull request (in GitHub Desktop: Branch > Create Pull Request)
+  - once your pull request has been merged, you can safely delete the branch from which you created your pull request.
 
 ## Context
 
