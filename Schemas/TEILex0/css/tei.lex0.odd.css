@@ -1,0 +1,136 @@
+/* =============================================================
+    CSS setup for editing the narrative part of TEI Lex-0 ODD in Oxygen Author mode
+    Author: Toma Tasovac (ttasovac@humanistika.org)
+    Date:   20202-05-03
+============================================================= */
+
+@namespace eg "http://www.tei-c.org/ns/Examples";
+@namespace oxy "http://www.oxygenxml.com/extensions/author";
+@namespace xi "http://www.w3.org/2001/XInclude";
+
+
+
+p, gi, hi, att, egXML, include, head, div, ref, TEI, 
+teiHeader, teiHeader *, list, item, figure, graphic, 
+table, cell, figure > note, cell > note, code, specDesc  {
+   -oxy-display-tags: none;
+}
+
+title {
+  -oxy-display-tags: none;
+  display: block;
+}
+
+entry, form, gramGrp, sense, cit, def {
+    display: block;
+    margin-left: 1em;
+}
+
+pc, usg, etym {
+    display: inline-block;
+}
+
+entry > pc, sense > pc, entry > usg, sense > usg, entry > etym, sense > etym {
+    display:inline-block;
+    margin-left: 0.7em;
+}
+
+
+
+egXML > entry {
+    margin-left: 0; 
+}
+
+egXML {
+   -oxy-editable: false;
+   font-size: 0.9em;
+}
+
+cell > egXML {
+   vertical-align: text-top;
+}
+
+p {
+    font-size: 1em;
+}
+
+/*TEI P5 version - value of 'target' and 'targets' attributes are of type anyURI */
+ref[target]:before, ptr[target]:before {
+  /* Keep just the first ID */
+  link: oxy_replace(attr(target), "(\\S+)(\\s*)(.*)$", "$1", true);
+  content: url(img/link.png);
+}
+
+link[targets]:before {
+  /* Keep just the first ID */
+  link: oxy_replace(attr(targets), "(\\S+)(\\s*)(.*)$", "$1", true);
+  content: url(img/link.png);
+}
+
+xi|include[href]:before{
+    -oxy-link:attr(href);
+/*    content: "Clickk " attr(href) " for opening" ;*/
+      content: url(img/linkd.png);
+}
+
+/*oxy|reference is used to style imported xi:include content*/
+oxy|reference, egXML {
+  background-color: rgb(240 , 240 , 240) !important;
+}
+
+oxy|reference[href]:before {
+-oxy-link:attr(href);
+ content: "Click " attr(href) " for opening" ;
+}
+
+xi|include:before,
+xi|include:after{
+    display:inline !important;
+    background-color:inherit !important;
+    color:#444444 !important;
+    font-weight:bold !important;
+}
+
+oxy|comment {
+    display:block !important;
+    color:green !important;
+    background-color:transparent !important;
+    -oxy-display-tags: none;
+    margin-left: 1em !important;
+}
+
+oxy|comment:before {
+    content: "<--"
+}
+
+oxy|comment:after {
+    content: "-->"
+}
+
+
+
+/*xi|include:before {
+    content:url(img/link.png) attr(href)  !important;
+    link: attr(href) !important;
+}
+xi|include[parse="text"]:before {
+    content:url(img/link.png) !important;
+}*/
+xi|include[xpointer]:before {
+    content:url(img/link.png) attr(corresp) "#" attr(xpointer) !important;
+/*    link: oxy_concat(attr(href), "#", attr(xpointer)) !important;*/
+    link: oxy_concat(attr(corresp), "#", attr(xpointer)) !important;
+    
+}
+
+xi|fallback {
+    display:-oxy-morph !important;
+    margin: 2px !important;
+    border: 1px solid #CB0039 !important;
+}
+
+xi|fallback:before {
+    display:-oxy-morph !important;
+    content:"XInclude fallback: " !important;
+    color:#CB0039 !important;
+}

@@ -331,6 +331,7 @@
                            <valItem ident="translationEquivalent"/>
                            <valItem ident="etymon"/>
                            <valItem ident="cognate"/>
+                           <valItem ident="cognateSet"/>
                         </valList>
                      </attDef>
                   </attList>
@@ -395,15 +396,128 @@
                      </alternate>
                   </content>
                   <attList>
-                     <attDef ident="type" mode="replace" usage="req">
+                     <!-- Values from part 3 (in text): borrowing, inheritance; word-formation: compounding,
+derivation; sense shifts: narrowing, widening, amelioration, pejoration, metaphor, metonymy;
+phonetic/phonological processes: place assimilation, dissimilation, epenthesis, metathesis, hardening,
+weakening, To be CHacked -->
+                     <attDef ident="type" mode="replace" usage="rec">
+                        <desc>This list of values implements normative annex B of LMF-3 (Data categories for etymology
+                           description)</desc>
                         <valList type="closed" mode="change">
-                           <valItem ident="borrowing"/>
-                           <valItem ident="inheritance"/>
+                           <valItem ident="borrowing">
+                              <gloss>Borrowing</gloss>
+                              <desc>Process in which a lexical item, phrase or other linguistic feature from a foreign
+                                 language or dialect is introduced into a given language or dialect.</desc>
+                              <remarks>
+                                 <p>The lexical items which result from borrowing are loanwords.</p>
+                              </remarks>
+                           </valItem>
+                           <valItem ident="inheritance">
+                              <gloss>Inheritance</gloss>
+                              <desc>Identifies where a lexical item is known to or presumed to be inherited into a
+                                 language from its predecessor or “parent” language(s).</desc>
+                              <remarks>
+                                 <p>Items inherited from a predecessor language often undergo any number of different
+                                    separate etymological processes over the course of their diachrony.</p>
+                              </remarks>
+                           </valItem>
+                           <valItem ident="compounding">
+                              <gloss>Compounding</gloss>
+                              <desc>Process of creating a new lexical item from multiple pre-existing ones.</desc>
+                              <remarks>
+                                 <p>Compounds often are created via one or more cognitive semantic processes such as
+                                    metaphor and metonymy and thus can be classified and analyzed etymologically
+                                    according to the particular mechanisms underlying the compound’s creation on the
+                                    semantic level.</p>
+                              </remarks>
+                           </valItem>
+                           <valItem ident="derivation">
+                              <gloss>Derivation</gloss>
+                              <desc>Process by which new lexical items or inflectable stem are formed by the addition of
+                                 an affix.</desc>
+                           </valItem>
+                           <valItem ident="potmanteau"/>
+                           <valItem ident="narrowing"/>
+                           <valItem ident="widening"/>
+                           <valItem ident="amelioration">
+                              <gloss>Amelioration</gloss>
+                              <desc>Process by which the sense of a word which formerly has some negative connotation
+                                 changes to a positive or at least a reduced degree of negativity.</desc>
+                           </valItem>
+                           <valItem ident="pejoration"/>
                            <valItem ident="metaphor"/>
                            <valItem ident="metonymy"/>
-                           <valItem ident="compounding"/>
-                           <valItem ident="grammaticalization"/>
+                           <valItem ident="grammaticalization">
+                              <gloss>Grammaticalization</gloss>
+                              <desc>Diachronically, grammaticalization is a unidirectional process through which lexical
+                                 items over time become more grammatical in nature.</desc>
+                           </valItem>
+                           <valItem ident="folkEtymology">
+                              <gloss>Folk Etymology</gloss>
+                              <desc>The process by which some components of a lexical item or phrase is mentally
+                                 reconfigured (rebracketed) due to an incorrect interpretation of its original form and
+                                 content by speakers.</desc>
+                           </valItem>
+                           <valItem ident="assimilation">
+                              <gloss>Assimilation</gloss>
+                              <desc>The phonological process by which a sound assimilates in one or more features to a
+                                 neighboring sound.</desc>
+                           </valItem>
+                           <valItem ident="dissimilation">
+                              <gloss>Dissimilation</gloss>
+                              <desc>The phonological process by which a sound becomes less similar in one or more
+                                 features to a neighboring sound.</desc>
+                           </valItem>
+                           <valItem ident="deletion">
+                              <gloss>Deletion</gloss>
+                              <desc>The phonological process in which a portion (generally a single phone) in a lexical
+                                 item is removed over time.</desc>
+                              <remarks>
+                                 <p>Process related to clipping (aka ‘shortening’) but whereas clipping generally refers
+                                    to the removal of an extended portion of a lexical item, deletion is generally used
+                                    in reference to the deletion of a single phonetic segment.</p>
+                              </remarks>
+                           </valItem>
+                           <valItem ident="epenthesis">
+                              <gloss>Epenthesis</gloss>
+                              <desc>The phonological process where additional phonological units (syllables or
+                                 individual phones) are added to a lexical item.</desc>
+                           </valItem>
+                           <valItem ident="metathesis">
+                              <gloss>Metathesis</gloss>
+                              <desc>The phonological process by which sounds or segments are rearranged within a lexical
+                                 item.</desc>
+                           </valItem>
+                           <valItem ident="fortition">
+                              <gloss>Fortition</gloss>
+                              <desc>The phonological process by which phone becomes more constricted.</desc>
+                              <remarks>
+                                 <p>Fortition (or Hardening) occurs when a sound change moves leftward on the following
+                                    scale: plosives (stops) &lt;-fricatives &lt;-approximants</p>
+                              </remarks>
+
+                           </valItem>
+                           <valItem ident="lenition">
+                              <gloss>Lenition</gloss>
+                              <desc>The phonological process by which phone becomes less constricted.</desc>
+                              <remarks>
+                                 <p>Lenition (or Weakening) occurs when a sound change moves rightward on the following
+                                    scale: plosives (stops) ->fricatives ->approximants->vowels</p>
+                              </remarks>
+                           </valItem>
+                           <valItem ident="voicing">
+                              <gloss>Voicing</gloss>
+                              <desc>The phonological process in which a voiceless phone becomes voiced.</desc>
+                           </valItem>
+                           <valItem ident="devoicing">
+                              <gloss>Devoicing</gloss>
+                              <desc>The phonological process in which a voice phone becomes unvoiced.</desc>
+                           </valItem>
                         </valList>
+                        <remarks>
+                           <p>When the nature of the etymological process is unknown, the <att>type</att> attribute can
+                              be ommitted.</p>
+                        </remarks>
                      </attDef>
                   </attList>
                   <remarks>
