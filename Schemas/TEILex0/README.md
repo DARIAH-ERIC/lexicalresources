@@ -31,7 +31,7 @@ _TEI Lex-0 is a work in progress._
 In this repository, you will find:
 1. [TEI Lex-0 specification](TEILex0.odd) which comes in a so-called ODD file ("One Document Does it All") -- a single XML resource which contains explanatory prose, examples of usage and formal declarations for components for the TEI Abstract Model (elements and attributes, modules, as well as classes and macros.); and
 2. The [RelaxNG schema](out/TEILex0.rng) generated from the ODD file which you can use to validate the conformance of your dictionary files with TEI Lex-0.
-3. An HTML version of the TEI Lex-0 Guidelines, which you can _consult directly in the browser_, is [here](../../docs/pages/TEILex0/TEILex0.html).
+3. An HTML version of the TEI Lex-0 Guidelines, which you can _consult directly in the browser_, is [here](https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html).
 
 ## How to Contribute
 
