@@ -28,7 +28,7 @@
             <divGen type="toc"/>
         </front>
         <body>
-            <xi:include href="TEILex0.parts/01__introduction.xml" parse="xml"
+   <xi:include href="TEILex0.parts/01__introduction.xml" parse="xml"
                 xpointer="introduction"/>
             <xi:include href="TEILex0.parts/02__senses.xml" parse="xml" xpointer="senses"/>
             <xi:include href="TEILex0.parts/03__forms.xml" parse="xml" xpointer="forms"/>

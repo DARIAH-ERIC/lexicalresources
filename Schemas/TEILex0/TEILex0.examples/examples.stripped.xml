@@ -31,10 +31,11 @@ then transform using tei-stripper.xsl-->
                <gramGrp>
                   <gram type="case" value="genitiv"/>
                   <gram type="number" value="singular"/>
+                  <gram type="gender" value="feminine"/>
                </gramGrp>
                <orth extent="suffix" expand="abecedy">-y</orth>
             </form>
-            <!--...-->
+            <!--...-->      
          </entry>
          <!-- TODO what to do about capitalization and labels in oRef?-->
          <!--more examples from the Guidelines:

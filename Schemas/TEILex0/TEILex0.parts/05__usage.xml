@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
 <?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
 <div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="usage">
-    <head>Usage information</head>
+    <head>Usage</head>
     <p>In the current TEI guidelines, <gi>usg</gi> is defined as an element which marks up “usage
         information in a dictionary entry”. Prototypically, usage information is a label which can
         be attached at various points in the entry hierarchy in order to signal e. g. restrictions
