@@ -2,7 +2,7 @@
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step"
     version="1.0">
     
-    <p:serialization port="result" method="xml" indent="true" omit-xml-declaration="false"/>
+    <p:serialization port="result" method="xml" indent="false" omit-xml-declaration="false"/>
     <p:input port="source" sequence="true"/>
     <p:input port="parameters" kind="parameter"/>
     <p:output port="result" sequence="true"/>
@@ -41,17 +41,17 @@
 
     <p:store href="results/refs.xml"/>
     
-    
     <p:xslt name="html">
         <p:input port="source">
             <p:pipe step="refs" port="result"></p:pipe>
         </p:input>
         <p:with-param name="cssFile" select="'https://www.tei-c.org/release/xml/tei/stylesheet/tei.css'"></p:with-param>
         <p:with-param name="cssSecondaryFile" select="'css/tei.lex0.web.css'"></p:with-param>
-        <p:with-param name="pageLayout" select="'Complex'"></p:with-param>
+<!--        <p:with-param name="pageLayout" select="'Complex'"></p:with-param>-->
         <p:with-param name="parentWords" select="'The Punch Project'"></p:with-param>
-        <p:with-param name="institution" select="'The University of Punch'"></p:with-param>
+        <p:with-param name="institution" select="'DARIAH Working Group on Lexical Resources'"></p:with-param>
         <p:with-param name="defaultSource" select="'https://www.tei-c.org/release/xml/tei/xml/tei/odd/p5subset.xml'"></p:with-param>
+       <!-- TEILex0.xsl has our template overrides + it imports odd2html -->
         <p:input port="stylesheet">
             <p:document href="../stylesheets/TEILex0.xsl"/>
         </p:input>

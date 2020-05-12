@@ -95,13 +95,15 @@ function setupBiblPopups (){
 //into it, so we can retrieve references from it and show them in popups.
 function addBiblFrame(){
 //First make sure we're not running this on the bibliography itself.
-    var biblDoc = new RegExp('bibliography\.html(#.+)?$');
+/*    var biblDoc = new RegExp('bibliography\.html(#.+)?$');
     var isBibliography = biblDoc.exec(window.location);
-    if (isBibliography){return;}
+    if (isBibliography){return;}*/
     biblFrame = document.createElement('iframe');
     biblFrame.style.display = 'none';
+    biblFrame.appendChild($('#bibliography'));
     document.getElementsByTagName('body')[0].appendChild(biblFrame);
-    biblFrame.setAttribute('src', 'bibliography.html');
+    
+    //biblFrame.setAttribute('src', 'bibliography.html');
     $(biblFrame).ready(setupBiblPopups);
 }
 

@@ -32,6 +32,9 @@
                <orth extent="suffix" expand="abecedy">-y</orth>
             </form>
             <!--...-->
+            <usg type="domain" corresp="link-to-medicine">Med.</usg>
+            <usg type="domain" corresp="link-to-type-of-procedure"/>
+            
          </entry>
          <!-- TODO what to do about capitalization and labels in oRef?-->
          <!--more examples from the Guidelines:
