@@ -663,7 +663,7 @@ Note: If this is not defined then the element at the caret position will be used
           arg-reason-code, ''</String>
                                 </field>
                                 <field name="descriptionString">
-                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Changes the document read-only status.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>read-only&lt;/b> = Sets the read-only status of the current document.Can be: 
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Changes the document read-only status.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>read-only&lt;/b> = Sets the read-only status of the current document.Can be:
  - true: for making the document read-only
  - false: for making the document writable
 Default value is true.&lt;/li>&lt;li>&lt;b>reason&lt;/b> = The reason for the document being read-only. It will be displayed when the user tries to edit the document.
@@ -868,8 +868,8 @@ Note: If it is not defined then the element at the caret is unwrapped.&lt;/li>&l
 Note: If it is not defined then the element at the caret position will be used.&lt;/li>&lt;li>&lt;b>targetLocation&lt;/b> = An XPath expression indicating the insert location for the result of the transformation.
 Note: If it is not defined then the insert location will be at the caret.&lt;/li>&lt;li>&lt;b>script&lt;/b> = A path to the script or the script itself.
 When using a path the following apply:
-- a relative path is resolved to the framework directory. 
-- the ${framework} editor variable can also be used to refer resources from the framework directory. 
+- a relative path is resolved to the framework directory.
+- the ${framework} editor variable can also be used to refer resources from the framework directory.
 - the path is passed through the catalog mappings.
 If you provide the actual script, the base system ID for this will be the framework file, so any include/import reference will be resolved relative to the ".framework" file that contains this action definition&lt;/li>&lt;li>&lt;b>action&lt;/b> = The insert action relative to the node determined by the target XPath expression.
 It can be: Replace, At caret position, Before, After, Inside as first child or Inside as last child.
@@ -902,8 +902,8 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 <field name="descriptionString">
                                     <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Executes an XQuery Update script.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>script&lt;/b> = A path to the script or the script itself.
 When using a path the following apply:
-- a relative path is resolved to the framework directory. 
-- the ${framework} editor variable can also be used to refer resources from the framework directory. 
+- a relative path is resolved to the framework directory.
+- the ${framework} editor variable can also be used to refer resources from the framework directory.
 - the path is passed through the catalog mappings.
 If you provide the actual script, the base system ID for this will be the framework file, so any include/import reference will be resolved relative to the ".framework" file that contains this action definition&lt;/li>&lt;li>&lt;b>externalParams&lt;/b> = Provide external parameters to the xquery script.
 Should be inserted as name=value pairs separated by comma or line break.&lt;/li>&lt;li>&lt;b>expandXincludeReferences&lt;/b> = Add the elements referred through XInclude to the document model.&lt;/li>&lt;/ul> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.XQueryUpdateOperation',&lt;br/>          arg-script, '',&lt;br/>          arg-externalParams, '',&lt;br/>          arg-expandXincludeReferences, 'false'&lt;/p>&lt;/body>&lt;/html></String>
@@ -937,8 +937,8 @@ Should be inserted as name=value pairs separated by comma or line break.&lt;/li>
 Note: If it is not defined then the element at the caret position will be used.&lt;/li>&lt;li>&lt;b>targetLocation&lt;/b> = An XPath expression indicating the insert location for the result of the transformation.
 Note: If it is not defined then the insert location will be at the caret.&lt;/li>&lt;li>&lt;b>script&lt;/b> = A path to the script or the script itself.
 When using a path the following apply:
-- a relative path is resolved to the framework directory. 
-- the ${framework} editor variable can also be used to refer resources from the framework directory. 
+- a relative path is resolved to the framework directory.
+- the ${framework} editor variable can also be used to refer resources from the framework directory.
 - the path is passed through the catalog mappings.
 If you provide the actual script, the base system ID for this will be the framework file, so any include/import reference will be resolved relative to the ".framework" file that contains this action definition&lt;/li>&lt;li>&lt;b>action&lt;/b> = The insert action relative to the node determined by the target XPath expression.
 It can be: Replace, At caret position, Before, After, Inside as first child or Inside as last child.
@@ -964,10 +964,10 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_action(
-          name, '${caret}Insert', 
-          description, 'Insert an element after the current one', 
-          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-          icon, url('insert.png'), 
+          name, '${caret}Insert',
+          description, 'Insert an element after the current one',
+          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
+          icon, url('insert.png'),
           arg-fragment, '&lt;element>&lt;/element>',
           arg-insertLocation, '.',
           arg-insertPosition, 'After'
@@ -994,17 +994,17 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 <field name="unparsedInsertString">
                                     <String>oxy_action_list(
   oxy_action(
-          name, '${caret}Insert', 
-          description, 'Insert an element after the current one', 
-          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-          icon, url('insert.png'), 
+          name, '${caret}Insert',
+          description, 'Insert an element after the current one',
+          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
+          icon, url('insert.png'),
           arg-fragment, '&lt;element>&lt;/element>',
           arg-insertLocation, '.',
           arg-insertPosition, 'After'
   ),
   oxy_action(
-          name, 'Delete', 
-          description, 'Deletes the current element', 
+          name, 'Delete',
+          description, 'Deletes the current element',
           operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation'
   )
 )
@@ -1029,7 +1029,7 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_audio(
-   href, oxy_url(oxy_base-uri(),attr(data)), 
+   href, oxy_url(oxy_base-uri(),attr(data)),
    width, attr(width, length)
 )</String>
                                 </field>
@@ -1052,8 +1052,8 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_browser(
-   href, oxy_url(oxy_base-uri(), attr(data)), 
-   width, attr(width, length), 
+   href, oxy_url(oxy_base-uri(), attr(data)),
+   width, attr(width, length),
    height, attr(height, length)
 )</String>
                                 </field>
@@ -1102,7 +1102,7 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                     <String>oxy_buttonGroup(
     icon, url('http://www.oxygenxml.com/img/icn_oxy20.png'),
     label, 'A group of actions',
-    tooltip, 'These actions do this and that..',    
+    tooltip, 'These actions do this and that..',
     actionIDs, 'action1, action2'
 )
 </String>
@@ -1126,22 +1126,22 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_buttonGroup(
-    label, 'A group of actions', 
+    label, 'A group of actions',
     icon, url('http://www.oxygenxml.com/img/icn_oxy20.png'),
-    actions, 
+    actions,
       oxy_action_list(
           oxy_action(
-                name, 'Insert', 
-                description, 'Insert an element after the current one', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                name, 'Insert',
+                description, 'Insert an element after the current one',
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
                 arg-fragment, '&lt;element>&lt;/element>',
                 arg-insertLocation, '.',
                 arg-insertPosition, 'After'
           ),
           oxy_action(
-                name, 'Delete', 
-                description, 'Deletes the current element', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation' 
+                name, 'Delete',
+                description, 'Deletes the current element',
+                operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation'
           )
       )
 )
@@ -1166,10 +1166,10 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_button(action, oxy_action(
-          name, '${caret}Insert', 
-          description, 'Insert an element after the current one', 
-          icon, url('insert.png'), 
-          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+          name, '${caret}Insert',
+          description, 'Insert an element after the current one',
+          icon, url('insert.png'),
+          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
           arg-fragment, '&lt;element>&lt;/element>',
           arg-insertLocation, '.',
           arg-insertPosition, 'After'
@@ -1220,7 +1220,7 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                     <String>text/css</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>oxy_combobox( 
+                                    <String>oxy_combobox(
             edit, '@attribute',
             editable, false,
             values, 'value1, value2, value3',
@@ -1250,17 +1250,17 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
          name, oxy_getActionName('framework.id', 'Fallback'),
          description, 'Insert an "element" and then rename it to "rename"',
 	oxy_action(
-		name, 'Insert', 
-		description, 'Insert an element after the current one', 
-		operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-		icon, url('insert.png'), 
+		name, 'Insert',
+		description, 'Insert an element after the current one',
+		operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
+		icon, url('insert.png'),
 		arg-fragment, '&lt;element>&lt;/element>',
 		arg-insertLocation, '.',
 		arg-insertPosition, 'After'
 	),
 	oxy_action(
-	    name, 'Rename', 
-	    description, 'Renames the current element', 
+	    name, 'Rename',
+	    description, 'Renames the current element',
 	    operation, 'ro.sync.ecss.extensions.commons.operations.RenameElementOperation',
 	    arg-elementName, 'rename',
 	    arg-elementLocation, '.'
@@ -1482,8 +1482,8 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_video(
-   href, oxy_url(oxy_base-uri(), attr(data)), 
-   width, attr(width, length), 
+   href, oxy_url(oxy_base-uri(), attr(data)),
+   width, attr(width, length),
    height, attr(height, length)
 )</String>
                                 </field>
@@ -2357,7 +2357,7 @@ Note: If this is not defined then the element at the caret position will be used
           arg-reason-code, ''</String>
                                 </field>
                                 <field name="descriptionString">
-                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Changes the document read-only status.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>read-only&lt;/b> = Sets the read-only status of the current document.Can be: 
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Changes the document read-only status.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>read-only&lt;/b> = Sets the read-only status of the current document.Can be:
  - true: for making the document read-only
  - false: for making the document writable
 Default value is true.&lt;/li>&lt;li>&lt;b>reason&lt;/b> = The reason for the document being read-only. It will be displayed when the user tries to edit the document.
@@ -2562,8 +2562,8 @@ Note: If it is not defined then the element at the caret is unwrapped.&lt;/li>&l
 Note: If it is not defined then the element at the caret position will be used.&lt;/li>&lt;li>&lt;b>targetLocation&lt;/b> = An XPath expression indicating the insert location for the result of the transformation.
 Note: If it is not defined then the insert location will be at the caret.&lt;/li>&lt;li>&lt;b>script&lt;/b> = A path to the script or the script itself.
 When using a path the following apply:
-- a relative path is resolved to the framework directory. 
-- the ${framework} editor variable can also be used to refer resources from the framework directory. 
+- a relative path is resolved to the framework directory.
+- the ${framework} editor variable can also be used to refer resources from the framework directory.
 - the path is passed through the catalog mappings.
 If you provide the actual script, the base system ID for this will be the framework file, so any include/import reference will be resolved relative to the ".framework" file that contains this action definition&lt;/li>&lt;li>&lt;b>action&lt;/b> = The insert action relative to the node determined by the target XPath expression.
 It can be: Replace, At caret position, Before, After, Inside as first child or Inside as last child.
@@ -2596,8 +2596,8 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 <field name="descriptionString">
                                     <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Executes an XQuery Update script.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>script&lt;/b> = A path to the script or the script itself.
 When using a path the following apply:
-- a relative path is resolved to the framework directory. 
-- the ${framework} editor variable can also be used to refer resources from the framework directory. 
+- a relative path is resolved to the framework directory.
+- the ${framework} editor variable can also be used to refer resources from the framework directory.
 - the path is passed through the catalog mappings.
 If you provide the actual script, the base system ID for this will be the framework file, so any include/import reference will be resolved relative to the ".framework" file that contains this action definition&lt;/li>&lt;li>&lt;b>externalParams&lt;/b> = Provide external parameters to the xquery script.
 Should be inserted as name=value pairs separated by comma or line break.&lt;/li>&lt;li>&lt;b>expandXincludeReferences&lt;/b> = Add the elements referred through XInclude to the document model.&lt;/li>&lt;/ul> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.XQueryUpdateOperation',&lt;br/>          arg-script, '',&lt;br/>          arg-externalParams, '',&lt;br/>          arg-expandXincludeReferences, 'false'&lt;/p>&lt;/body>&lt;/html></String>
@@ -2631,8 +2631,8 @@ Should be inserted as name=value pairs separated by comma or line break.&lt;/li>
 Note: If it is not defined then the element at the caret position will be used.&lt;/li>&lt;li>&lt;b>targetLocation&lt;/b> = An XPath expression indicating the insert location for the result of the transformation.
 Note: If it is not defined then the insert location will be at the caret.&lt;/li>&lt;li>&lt;b>script&lt;/b> = A path to the script or the script itself.
 When using a path the following apply:
-- a relative path is resolved to the framework directory. 
-- the ${framework} editor variable can also be used to refer resources from the framework directory. 
+- a relative path is resolved to the framework directory.
+- the ${framework} editor variable can also be used to refer resources from the framework directory.
 - the path is passed through the catalog mappings.
 If you provide the actual script, the base system ID for this will be the framework file, so any include/import reference will be resolved relative to the ".framework" file that contains this action definition&lt;/li>&lt;li>&lt;b>action&lt;/b> = The insert action relative to the node determined by the target XPath expression.
 It can be: Replace, At caret position, Before, After, Inside as first child or Inside as last child.
@@ -2658,10 +2658,10 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_action(
-          name, '${caret}Insert', 
-          description, 'Insert an element after the current one', 
-          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-          icon, url('insert.png'), 
+          name, '${caret}Insert',
+          description, 'Insert an element after the current one',
+          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
+          icon, url('insert.png'),
           arg-fragment, '&lt;element>&lt;/element>',
           arg-insertLocation, '.',
           arg-insertPosition, 'After'
@@ -2688,17 +2688,17 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 <field name="unparsedInsertString">
                                     <String>oxy_action_list(
   oxy_action(
-          name, '${caret}Insert', 
-          description, 'Insert an element after the current one', 
-          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
-          icon, url('insert.png'), 
+          name, '${caret}Insert',
+          description, 'Insert an element after the current one',
+          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
+          icon, url('insert.png'),
           arg-fragment, '&lt;element>&lt;/element>',
           arg-insertLocation, '.',
           arg-insertPosition, 'After'
   ),
   oxy_action(
-          name, 'Delete', 
-          description, 'Deletes the current element', 
+          name, 'Delete',
+          description, 'Deletes the current element',
           operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation'
   )
 )
@@ -2723,7 +2723,7 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_audio(
-   href, oxy_url(oxy_base-uri(),attr(data)), 
+   href, oxy_url(oxy_base-uri(),attr(data)),
    width, attr(width, length)
 )</String>
                                 </field>
@@ -2746,8 +2746,8 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_browser(
-   href, oxy_url(oxy_base-uri(), attr(data)), 
-   width, attr(width, length), 
+   href, oxy_url(oxy_base-uri(), attr(data)),
+   width, attr(width, length),
    height, attr(height, length)
 )</String>
                                 </field>
@@ -2796,7 +2796,7 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                     <String>oxy_buttonGroup(
     icon, url('http://www.oxygenxml.com/img/icn_oxy20.png'),
     label, 'A group of actions',
-    tooltip, 'These actions do this and that..',    
+    tooltip, 'These actions do this and that..',
     actionIDs, 'action1, action2'
 )
 </String>
@@ -2820,22 +2820,22 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_buttonGroup(
-    label, 'A group of actions', 
+    label, 'A group of actions',
     icon, url('http://www.oxygenxml.com/img/icn_oxy20.png'),
-    actions, 
+    actions,
       oxy_action_list(
           oxy_action(
-                name, 'Insert', 
-                description, 'Insert an element after the current one', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+                name, 'Insert',
+                description, 'Insert an element after the current one',
+                operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
                 arg-fragment, '&lt;element>&lt;/element>',
                 arg-insertLocation, '.',
                 arg-insertPosition, 'After'
           ),
           oxy_action(
-                name, 'Delete', 
-                description, 'Deletes the current element', 
-                operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation' 
+                name, 'Delete',
+                description, 'Deletes the current element',
+                operation, 'ro.sync.ecss.extensions.commons.operations.DeleteElementOperation'
           )
       )
 )
@@ -2860,10 +2860,10 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_button(action, oxy_action(
-          name, '${caret}Insert', 
-          description, 'Insert an element after the current one', 
-          icon, url('insert.png'), 
-          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation', 
+          name, '${caret}Insert',
+          description, 'Insert an element after the current one',
+          icon, url('insert.png'),
+          operation, 'ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation',
           arg-fragment, '&lt;element>&lt;/element>',
           arg-insertLocation, '.',
           arg-insertPosition, 'After'
@@ -2914,7 +2914,7 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                     <String>text/less</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>oxy_combobox( 
+                                    <String>oxy_combobox(
             edit, '@attribute',
             editable, false,
             values, 'value1, value2, value3',
@@ -3135,8 +3135,8 @@ By default the state of track changes is not altered.&lt;/li>&lt;/ul> &lt;br/> T
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>oxy_video(
-   href, oxy_url(oxy_base-uri(), attr(data)), 
-   width, attr(width, length), 
+   href, oxy_url(oxy_base-uri(), attr(data)),
+   width, attr(width, length),
    height, attr(height, length)
 )</String>
                                 </field>
@@ -3721,7 +3721,7 @@ return </String>
                                     <String>text/xpath</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>if (${caret}) 
+                                    <String>if (${caret})
   then expression
   else expression</String>
                                 </field>
@@ -4078,8 +4078,8 @@ return </String>
                                     <String>text/xquery</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>declare function ${caret} ( (: $arg1 as type, ... :) ) as sequence_type 
-{ 
+                                    <String>declare function ${caret} ( (: $arg1 as type, ... :) ) as sequence_type
+{
  }; </String>
                                 </field>
                                 <field name="descriptionString">
@@ -4100,7 +4100,7 @@ return </String>
                                     <String>text/xquery</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>if (${caret}) 
+                                    <String>if (${caret})
   then expression
   else expression</String>
                                 </field>
@@ -4266,7 +4266,7 @@ ${caret}</String>
                                     <String>text/xquery</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>switch (${caret}) 
+                                    <String>switch (${caret})
   case "value" return expression
   default return expression
 </String>
@@ -4289,7 +4289,7 @@ ${caret}</String>
                                     <String>text/xquery</String>
                                 </field>
                                 <field name="unparsedInsertString">
-                                    <String>typeswitch (${caret}) 
+                                    <String>typeswitch (${caret})
   case $var1 as sequence_type return expression
   default $var2 return expression
 </String>
@@ -4416,7 +4416,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:attributeGroup name="${caret}">
-      
+
 &lt;/xs:attributeGroup></String>
                                 </field>
                                 <field name="descriptionString">
@@ -4480,7 +4480,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:attribute name="${caret}">
-    
+
 &lt;/xs:attribute></String>
                                 </field>
                                 <field name="descriptionString">
@@ -4632,7 +4632,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:complexType name="${caret}">
-      
+
 &lt;/xs:complexType></String>
                                 </field>
                                 <field name="descriptionString">
@@ -4654,7 +4654,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:extension base="${caret}">
-      
+
 &lt;/xs:extension></String>
                                 </field>
                                 <field name="descriptionString">
@@ -4676,7 +4676,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:element name="${caret}">
-      
+
 &lt;/xs:element></String>
                                 </field>
                                 <field name="descriptionString">
@@ -4786,7 +4786,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:group name="${caret}">
-      
+
 &lt;/xs:group></String>
                                 </field>
                                 <field name="descriptionString">
@@ -5030,7 +5030,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:restriction base="${caret}">
-      
+
 &lt;/xs:restriction></String>
                                 </field>
                                 <field name="descriptionString">
@@ -5096,7 +5096,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="${caret}">
-      
+
 &lt;/xs:schema></String>
                                 </field>
                                 <field name="descriptionString">
@@ -5162,7 +5162,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xs:simpleType name="${caret}">
-      
+
 &lt;/xs:simpleType></String>
                                 </field>
                                 <field name="descriptionString">
@@ -5658,7 +5658,7 @@ ${caret}</String>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xsl:choose>
       &lt;xsl:when test="${caret}">
-        
+
       &lt;/xsl:when>
 &lt;/xsl:choose></String>
                                 </field>
@@ -5682,10 +5682,10 @@ ${caret}</String>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xsl:choose>
       &lt;xsl:when test="${caret}">
-        
+
       &lt;/xsl:when>
       &lt;xsl:otherwise>
-      
+
       &lt;/xsl:otherwise>
 &lt;/xsl:choose></String>
                                 </field>
@@ -5728,7 +5728,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xsl:element name="${caret}">
-      
+
 &lt;/xsl:element></String>
                                 </field>
                                 <field name="descriptionString">
@@ -5983,7 +5983,7 @@ ${caret}</String>
     &lt;xsl:param name="p" select="">&lt;/xsl:param>
     &lt;xsl:next-iteration>
         &lt;xsl:with-param name="p" select="">
-            
+
         &lt;/xsl:with-param>
     &lt;/xsl:next-iteration>
 &lt;/xsl:iterate></String>
@@ -6718,7 +6718,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xsl:template match="${caret}">
-      
+
 &lt;/xsl:template></String>
                                 </field>
                                 <field name="descriptionString">
@@ -6740,7 +6740,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xsl:template match="${caret}" mode="">
-    
+
 &lt;/xsl:template></String>
                                 </field>
                                 <field name="descriptionString">
@@ -6762,7 +6762,7 @@ ${caret}</String>
                                 </field>
                                 <field name="unparsedInsertString">
                                     <String>&lt;xsl:template name="${caret}">
-      
+
 &lt;/xsl:template></String>
                                 </field>
                                 <field name="descriptionString">
@@ -6869,7 +6869,7 @@ ${caret}</String>
     ${caret}
     &lt;xsl:catch errors="">
         &lt;xsl:message>
-            
+
         &lt;/xsl:message>
     &lt;/xsl:catch>
 &lt;/xsl:try></String>
@@ -7117,16 +7117,20 @@ ${caret}</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
+
                                         <String>TEI ODD XHTML - recreated with a wrapper</String>
+
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XSL</String>
+                                        <String>ANT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
+                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -7308,6 +7312,54 @@ ${caret}</String>
                                 </field>
                                 <field name="xsltParams">
                                     <list>
+                                        <transformationParameter>
+                                            <field name="paramDescription">
+                                                <paramDescriptor>
+                                                    <field name="localName">
+                                                        <String>cssFile</String>
+                                                    </field>
+                                                    <field name="prefix">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="namespace">
+                                                        <null/>
+                                                    </field>
+                                                </paramDescriptor>
+                                            </field>
+                                            <field name="value">
+                                                <String>css/tei.css</String>
+                                            </field>
+                                            <field name="hasXPathValue">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                            <field name="isStatic">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                        </transformationParameter>
+                                        <transformationParameter>
+                                            <field name="paramDescription">
+                                                <paramDescriptor>
+                                                    <field name="localName">
+                                                        <String>cssPrintFile</String>
+                                                    </field>
+                                                    <field name="prefix">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="namespace">
+                                                        <null/>
+                                                    </field>
+                                                </paramDescriptor>
+                                            </field>
+                                            <field name="value">
+                                                <String>css/tei-print.css</String>
+                                            </field>
+                                            <field name="hasXPathValue">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                            <field name="isStatic">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                        </transformationParameter>
                                         <transformationParameter>
                                             <field name="paramDescription">
                                                 <paramDescriptor>
