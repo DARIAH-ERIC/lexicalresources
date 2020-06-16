@@ -75,7 +75,7 @@
                 <gi>xr</gi>. </p>
         <div>
             <head>Typology for <code>xr/@type</code> values </head>
-            <table rend="rules">
+            <table rend="rules" cols="3">
                 <row>
                     <cell>value of @type</cell>
                     <cell>description</cell>
@@ -151,7 +151,21 @@
                 <row>
                     <cell>antonymy</cell>
                     <cell/>
-                    <cell/>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                                corresp="../TEILex0.examples/examples.xml" xpointer="descalçar_258"/>
+                        </egXML></cell>
+                </row>
+                <row>
+                    <cell>include</cell>
+                    <cell><desc>Type of cross-reference which includes content from a different
+                            location in the dictionary, for instance a shortened orthographic
+                            reference to the lemma, or its inflected form, in examples or
+                            collocations. </desc></cell>
+                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                                corresp="../TEILex0.examples/examples.xml" xpointer="academy"/>
+                        </egXML></cell>
                 </row>
             </table>
             <p>The full specification of <gi>xr</gi> in TEI Lex 0 is:<specDesc key="xr" atts="type"
@@ -182,8 +196,6 @@
         </div>
         <div>
             <head>How TEI Lex-0 differs from TEI <hi rend="italic">Guidelines</hi></head>
-            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
-            <p>This section is still not properly encoded.<?oxy_custom_end?></p>
             <table rend="rules">
                 <row>
                     <cell>description</cell>
@@ -195,7 +207,7 @@
                     <cell><egXML xmlns="http://www.tei-c.org/ns/Examples"><usg type="synonym"
                                 >Hund</usg></egXML></cell>
                     <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <xr type="synonym">
+                            <xr type="synonymy">
                                 <ref
                                     target="http://woerterbuchnetz.de/DWB/?sigle=DWB&amp;mode=Vernetzung&amp;lemid=GH13199#XGH13199"
                                     >Hund</ref>
@@ -218,29 +230,10 @@
                     </cell>
                 </row>
                 <row>
-                    <cell>translation vs. translation
-                        equivalent<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
-                        does not belong in this table<?oxy_custom_end?></cell>
-                    <cell><egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <entry>
-                                <!-- ... -->
-                                <cit type="translation" xml:lang="en">
-                                    <quote>to horrify</quote>
-                                </cit>
-                                <cit type="example">
-                                    <quote>elle était horrifiée par la dépense</quote>
-                                    <cit type="translation" xml:lang="en">
-                                        <quote>she was horrified at the expense.</quote>
-                                    </cit>
-                                </cit>
-                            </entry>
-                        </egXML></cell>
-                    <cell>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                            <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                                corresp="../TEILex0.examples/examples.xml" xpointer="horrifier"/>
-                        </egXML>
-                    </cell>
+                    <cell>cross-references inside definitions</cell>
+                    <cell>impossible except for oRef and pRef (i.e.) local orthographic and
+                        pronounciation references to the current headword</cell>
+                    <cell/>
                 </row>
             </table>
         </div>
@@ -254,13 +247,6 @@
                     corresp="../TEILex0.examples/examples.xml" xpointer="dog"/>
             </egXML>
         </div>
-        <div>
-            <head>Cross-references inside definitions</head>
-
-            <p>Under consideration. See this <ref
-                    target="https://github.com/DARIAH-ERIC/lexicalresources/issues/24">issue</ref>
-                on GitHub.</p>
-
-        </div>
+        
     </div>
 </div>

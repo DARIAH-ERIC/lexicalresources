@@ -116,7 +116,8 @@
                 <!--<classes mode="change">
                             <memberOf key="att.notated" mode="add"/>
                         </classes>-->
-
+                <!--2020-05-14 allow inside quote (for cross-references in examples)-->
+                <memberOf key="model.quoteLike" mode="add"/>
             </classes>
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
@@ -186,6 +187,9 @@
                             <desc>The default reference to another lexical unit when no addtional
                                 information is available.</desc>
                         </valItem>
+                        <valItem ident="include">
+                            <desc>Type of cross-reference which includes content from a different location in the dictionary, for instance a shortened orthographic reference to the lemma, or one of its inflected forms, in examples or collocations. </desc>
+                        </valItem>
                         <!-- further values to be added there -->
                     </valList>
                 </attDef>
@@ -200,6 +204,10 @@
         <!-- 2018-09-1 (LR): the <ref> element is adapted to have specific @type values (semi-closed) -->
 
         <elementSpec ident="ref" mode="change">
+            <!--2020-05-14 (TT): to allow expand on ref-->
+            <classes mode="change">
+                <memberOf key="att.lexicographic"></memberOf>
+            </classes>
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
                     <valList type="semi" mode="change">
@@ -415,6 +423,21 @@
                 <memberOf key="model.emphLike" mode="add"/>
             </classes>
         </elementSpec>
+        
+        <!--2020-05-14 add orth and pron to att.datable.w3c to allow @notBefore etc.-->
+        
+        <elementSpec ident="orth" mode="change">
+            <classes mode="change">
+                <memberOf key="att.datable.w3c" mode="add"></memberOf>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="pron" mode="change">
+            <classes mode="change">
+                <memberOf key="att.datable.w3c" mode="add"></memberOf>
+            </classes>
+        </elementSpec>
+       
 
         <!-- Class related declaration here -->
 
