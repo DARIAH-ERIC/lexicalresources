@@ -74,24 +74,14 @@
             verb and a noun:</p>
         <figure>
             <graphic n="10011" width="6.720416666666667cm" height="4.709583333333334cm"
-                url="https://imgur.com/zvd4oEh.png" rend="inline"/>
+                url="https://imgur.com/zvd4oEh.png"/>
         </figure>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <xi:include href="../TEILex0.examples/examples.stripped.xml"
                 corresp="../TEILex0.examples/examples.xml" xpointer="arrest"/>
         </egXML>
     </div>
-    <div>
-        <head>Bilingual dictionaries</head>
-        <figure>
-            <graphic n="1003" width="14cm" url="https://imgur.com/IVutWGQ.png"
-                rend="inline"/>
-        </figure>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                corresp="../TEILex0.examples/examples.xml" xpointer="aid"/>
-        </egXML>
-    </div>
+    
     <div>
         <head>Deprecating <gi>hom</gi></head>
         <p>Making a clear difference between a situation where an entry has to be split
@@ -104,7 +94,7 @@
             element be replaced by the appropriate <gi>sense</gi> construct. For
             instance, the following example from the TEI <hi rend="italic"
                 >Guidelines</hi>:</p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e1498">
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
             <entry>
                 <form>
                     <orth>bray</orth>

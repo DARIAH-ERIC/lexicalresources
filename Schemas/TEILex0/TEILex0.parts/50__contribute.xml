@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:teix="http://www.tei-c.org/ns/Examples" xml:id="contribute">
+    <head>Frequently Asked Questions</head>
+
+    <div>
+        <head>How do I start using TEI Lex-0 in my project?</head>
+        <p>To start using TEI Lex-0 in your own dictionary project, you need to set up your favorite
+            XML editor to validate your dictionary against the TEI Lex-0 schema. This, you can
+            do:</p>
+        <list>
+            <item>
+                <hi rend="italic">in oXygen XML Editor</hi>, by associating an existing TEI document
+                with the TEI Lex-0 schema's url:
+                    <code>https://raw.githubusercontent.com/DARIAH-ERIC/lexicalresources/master/Schemas/TEILex0/out/TEILex0.rng</code>
+                using either menubar actions (Document > Schema > Associate Schema) or the red-pin
+                icon in the oXygen menu bar. Both of these methods will display the Associate Schema
+                dialog box: <figure xml:id="oxy-assoc-schema">
+                    <head>Associating schema in oXygen XML Editor</head>
+                    <graphic url="https://imgur.com/Z11TTWf.png"/>
+
+                </figure>
+            </item>
+            <item>
+                <hi rend="italic">manually</hi> by including the following xml processing
+                instructions at the top of your TEI file:
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;?xml-model href="https://raw.githubusercontent.com/DARIAH-ERIC/lexicalresources/master/Schemas/TEILex0/out/TEILex0.rng" 
+    type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?&gt;
+&lt;?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" 
+    type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0"&gt;<!--etc.--> 
+&lt;/TEI&gt;
+</egXML>
+            </item>
+            <item>by downloading the schema file from
+                    <code>https://raw.githubusercontent.com/DARIAH-ERIC/lexicalresources/master/Schemas/TEILex0/out/TEILex0.rng</code>
+                and associating your xml file with it, using either of the above mentioned methods
+                (see <ptr target="#oxy-assoc-schema"/>). </item>
+        </list>
+        <p>Once you associate your dictionary file with the TEI Lex-0 schema, you can use your XML
+            editor to validate it.</p>
+    </div>
+
+    <div>
+        <head>What should I do if I don't know how to encode something in TEI Lex-0?</head>
+        <p>TEI Lex-0 is a community-based project. If you have a question or need help encoding
+            lexicographic data using TEI Lex-0, get in touch using our <ref
+                target="https://github.com/DARIAH-ERIC/lexicalresources/issues">issue tracker</ref>
+            here on GitHub.</p>
+    </div>
+
+    <div>
+        <head>How can I contribute to the development of TEI Lex-0?</head>
+        <p>More advanced users can propose solutions by submitting pull requests. Make sure you
+            understand the internal nitty-gritty as well as our GitHub workflow.</p>
+    <div>
+        <head>The internal nitty-gritty</head>
+
+        <list>
+            <item><code>TEILex0.odd</code> is an index file: it uses a bunch of
+                    <code>&lt;xi:include&gt;</code> pointers to individual "chapters" which live in
+                    <code>TEILex0.parts</code></item>
+            <item> examples of dictionary entries encoded in TEI Lex-0 live in a file called
+                    <code>examples.xml</code> inside the folder <code>TEILex0.examples</code></item>
+            <item><code>examples.xml</code> validates against the TEI Lex-0 schema compiled in
+                    <code>out/TEILex0.rng</code></item>
+            <item><code>stylesheets/tei-stripper.xsl</code> is used to strip the TEI examples file
+                of the TEI namespace, replacing it with "http://www.tei-c.org/ns/Examples" so that
+                they can be used directly inside <gi>egXML</gi> in our ODD file. For more info about
+                why this is necessary, see <ref
+                    target="https://github.com/BCDH/tei-strip-and-include"
+                    >https://github.com/BCDH/tei-strip-and-include</ref>. </item>
+            <item>to include validated examples, you can either point to the id of the element you
+                want to include using the <code>xpointer()</code> scheme like this:
+                <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+&lt;egXML xmlns="http://www.tei-c.org/ns/Examples"&gt; 
+  &lt;xi:include href="../TEILex0.examples/examples.stripped.xml" 
+      corresp="../TEILex0.examples/examples.xml" xpointer="pflaume"/&gt;
+&lt;/egXML&gt; 
+                </egXML>
+                or, using the <code>element()</code> scheme, you can also include segments:
+                <egXML xmlns="http://www.tei-c.org/ns/Examples"> 
+&lt;egXML xmlns="http://www.tei-c.org/ns/Examples"&gt; 
+  &lt;xi:include href="../TEILex0.examples/examples.stripped.xml"
+      corresp="../TEILex0.examples/examples.xml"
+      xpointer="element(MZ.RGJS.сејче/4/1)"/> 
+&lt;/egXML&gt; </egXML>
+            </item>
+            <item>If you are using oXygen XML, clicking on the link in Author Mode will take you
+                directly to the element or fragment in the <code>examples.xml</code> for editing
+                XML. <figure>
+                    <graphic url="https://i.imgur.com/BLvHW45.png"/>
+                    <head>testing captions</head>
+                </figure>
+            </item>
+            <item> After making any changes to <code>examples.xml</code>, use the
+                    <code>tei-stripper.xsl</code> (or the include TEI Stripper transformation
+                scenario in oXygen) to produce <code>examples.stripped.xml</code>. Without this
+                step, the examples in your ODD file will not validate.</item>
+        </list>
+    </div>
+    <div>
+        <head>GitHub Workflow</head>
+        <p>Before submitting your proposal to change something in the TEI Lex-0 specification or the
+            narrative guidelines, make sure: <list>
+                <item>you have received some feedback from the community using our GitHub
+                    issues</item>
+                <item>you understand the internal nitty-gritty of how the TEI Lex-0 source files are
+                    organized and how the guidelines and the RNG schema is generated from ODD</item>
+            </list>
+        </p>
+        <p>To implement changes, make sure to follow our GitHub forklow: <list>
+                <item>if you're starting for the first time, fork the lexical-resources repository;
+                    then clone your fork on your machine; the cloned fork is your so-called working
+                    copy; the original repository from which you made your clone is called
+                    "upstream"</item>
+                <item>if you've forked and cloned the lexical-resources repository before, make sure
+                    the master branch in your working copy is up-to-date by fetching the latest
+                    changes and merging them into your working master branch from the upstream
+                    master</item>
+                <item>create a new branch off your master branch; name it appropriately (e.g.
+                    fix-attr-values-on-sense)</item>
+                <item>do the work (changing the specification, adding examples, or changing the
+                    narrative sections) in the specific branch you created for this particular
+                    issue</item>
+                <item>commit and push your changes</item>
+                <item>once you've finished implementing all the changes needed, create a
+                    pull-request</item>
+                <item>if editors ask you to make additional changes, keep working in the same branch
+                    (i.e. fix-attr-values-on-sense); commit and push; your changes will be
+                    automatically added to your pull request</item>
+                <item>once the editors accept your pull request, you can safely delete the branch
+                    from which you created your pull request (i.e. fix.attr-values-on-sense)</item>
+                <item>once your pull request has been merged into the upstream master branch by the
+                    editors, you can bring the master branch in your working copy up to date by
+                    fetching and merging changes from upstream master; then pushing them to your
+                    remote repo</item>
+            </list>
+        </p>
+    </div>
+    </div>
+<div>
+    <head>How can I convert dictionaries from TEI Lex-0 to Ontolex-Lemon?</head>
+    <p>Funny you should ask, because we have exactly what you're looking for. Check out the <ref target="https://github.com/elexis-eu/tei2ontolex">tei2ontolex</ref> stylesheet. </p>
+</div>
+
+
+</div>

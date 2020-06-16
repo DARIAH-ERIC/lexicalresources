@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xml:id="patterns">
+    <head>Patterns</head>
+    <div>
+        <head>Inheritance of <att>xml:lang</att></head>
+        <p>Some elements in TEI Lex-0, like <gi>entry</gi>, for instance, have a required attribute
+                <att>xml:lang</att>; others like <gi>form</gi> or <gi>quote</gi> do not. In general,
+            TEI Lex-0, unlike TEI, recommends that the <att>xml:lang</att> be attached to so-called
+            container elements (for instance, <gi>entry</gi> and <gi>cit</gi>) rather than on
+            individual word forms or textual segments. </p>
+        <p>TODO: Add some examples</p>
+        <p>So how can we extract all orthographic forms in a partiuclar language? We need to use an
+            XPath expression like this:
+            <code rend="language-xpath">//orth[ancestor-or-self::*[@xml:lang][1][@xml:lang='en']]</code>
+            .</p>
+        <p>This XPath expression identifies: <list>
+                <item>each <code rend="language-xpath">orth</code> element, regardless of where it is in the document
+                        (<code rend="language-xpath">//</code>) </item>
+            <item>but only if it iself or one of its ancestors has the <code rend="language-xpath">@xml:lang</code>
+                attribute (<code rend="language-xpath">[ancestor-or-self::*[@xml:lang]]</code>)</item>
+            <item>when looking for ancestors with the <code rend="language-xpath">@xml:lang</code> attribute, we stop
+                    at the first such ancestor (i.e. we look for the nearest acestors)
+                    (<code rend="language-xpath">[1]</code>)
+                </item>
+                <item>finally, we filter out only those selected elements with the
+                    <code rend="language-xpath">@xml:lang</code> attribute whose value is <code rend="language-xpath">'en'</code></item>
+            </list>
+        </p>
+        <p>If you are new to XPath, you can check out a DARIAH-Campus tutorial <ref target="https://campus.dariah.eu/resource/xpath-for-dictionary-nerds">XPath for Dictionary Nerds</ref>.</p>
+    </div>
+</div>

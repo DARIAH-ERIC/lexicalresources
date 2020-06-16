@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="css/tei_oxygen.css"?>
 <?xml-stylesheet type="text/css" href="css/tei.lex0.odd.css"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron"
     xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
     xml:lang="en">
@@ -8,12 +11,104 @@
         <fileDesc>
             <titleStmt>
                 <title>TEI Lex-0</title>
-                <title type="sub">A baseline encoding for lexicographic data</title>
+                <title type="subordinate">A baseline encoding for lexicographic data</title>
+                <editor>
+                    <persName>
+                        <forename>Toma</forename>
+                        <surname>Tasovac</surname>
+                    </persName>
+                </editor>
+                <editor>
+                    <persName>
+                        <forename>Laurent</forename>
+                        <surname>Romary</surname>
+                    </persName>
+                </editor>
                 <author>
-                    <name type="organization">DARIAH WG "Lexical Resources"</name>
+                    <persName>
+                        <forename>Toma</forename>
+                        <surname>Tasovac</surname>
+                    </persName>
+                    
                 </author>
-                <editor><name type="person">Laurent Romary</name></editor>
-                <editor><name type="person">Toma Tasovac</name></editor>
+                <author>
+                    <persName>
+                        <forename>Laurent</forename>
+                        <surname>Romary</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Ana</forename>
+                        <surname>Salgado</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Axel</forename>
+                        <surname>Herold</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Jack</forename>
+                        <surname>Bowers</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Alexander</forename>
+                        <surname>Geyken</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Jesse</forename>
+                        <surname>de Does</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Katrien</forename>
+                        <surname>Depuydt</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Mohamed</forename>
+                        <surname>Khemakhem</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Tomaž</forename>
+                        <surname>Erjavec</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Andreas</forename>
+                        <surname>Witt</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Piotr</forename>
+                        <surname>Banski</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Snežana</forename>
+                        <surname>Petrović</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Vera</forename>
+                        <surname>Hildenbrandt</surname>
+                    </persName>
+                </author>
             </titleStmt>
             <publicationStmt>
                 <authority>DARIAH WG "Lexical Resources"</authority>
@@ -28,23 +123,24 @@
             <divGen type="toc"/>
         </front>
         <body>
-   <xi:include href="TEILex0.parts/01__introduction.xml" parse="xml"
+            <xi:include href="TEILex0.parts/01__introduction.xml" parse="xml"
                 xpointer="introduction"/>
-            <xi:include href="TEILex0.parts/02__senses.xml" parse="xml" xpointer="senses"/>
+            <xi:include href="TEILex0.parts/02__entries.xml" parse="xml" xpointer="entries"/>
             <xi:include href="TEILex0.parts/03__forms.xml" parse="xml" xpointer="forms"/>
-            <xi:include href="TEILex0.parts/04__cross-references.xml" parse="xml"
+            <xi:include href="TEILex0.parts/04__senses.xml" parse="xml" xpointer="senses"/>
+            <xi:include href="TEILex0.parts/045__translations.xml" parse="xml" xpointer="translations"/>
+            <xi:include href="TEILex0.parts/05__cross-references.xml" parse="xml"
                 xpointer="cross-references"/>
-            <xi:include href="TEILex0.parts/05__usage.xml" parse="xml" xpointer="usage"/>
-            <xi:include href="TEILex0.parts/06__etymology.xml" parse="xml" xpointer="etymology"/>
-            <xi:include href="TEILex0.parts/20__references.xml" parse="xml" xpointer="references"/>
-            <xi:include href="TEILex0.parts/21__cited_sources.xml" parse="xml"
-                xpointer="cited_sources"/>
-            <xi:include href="TEILex0.parts/22__bibliography.xml" parse="xml"
+            <xi:include href="TEILex0.parts/06__usage.xml" parse="xml" xpointer="usage"/>
+            <xi:include href="TEILex0.parts/07__etymology.xml" parse="xml" xpointer="etymology"/>
+            <xi:include href="TEILex0.parts/08__patterns.xml" parse="xml" xpointer="patterns"/>
+            <xi:include href="TEILex0.parts/20__bibliography.xml" parse="xml"
                 xpointer="bibliography"/>
-            <xi:include href="TEILex0.parts/30__annex_A.xml" parse="xml" xpointer="annex_A"/>
-            <xi:include href="TEILex0.parts/31__annex_B.xml" parse="xml" xpointer="annex_B"/>
+            <!--   <xi:include href="TEILex0.parts/30__annex_A.xml" parse="xml" xpointer="annex_A"/>
+            <xi:include href="TEILex0.parts/31__annex_B.xml" parse="xml" xpointer="annex_B"/>-->
             <xi:include href="TEILex0.parts/40__specification.xml" parse="xml"
                 xpointer="specification"/>
+            <xi:include href="TEILex0.parts/50__contribute.xml" parse="xml" xpointer="contribute"/>
         </body>
     </text>
 </TEI>

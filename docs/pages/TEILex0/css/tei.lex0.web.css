@@ -1,13 +1,182 @@
-.tocHide {
-    display: none;
+@import "pure.css";
+@import url("https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css");
+@import "odd.css";
+@import "prism.css";
+
+/*customizing pure*/
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: 18px;
 }
 
-span.showhide,span.notshowhide {
-    margin-right: 5px;
+.custom-menu, .toc.pure-g [class *= "pure-u"], .tocTree.pure-g [class *= "pure-u"]{
+    font-size: 17px;
 }
-li.tocTree ul {
-    display: none;
+
+/*.logos {
+    margin-bottom: 5em;
 }
+
+.logo-dariah {
+    width:150px;
+    float:left;
+    vertical-align: bottom
+}
+
+.logo-elexis {
+    width: 220px;
+    float:right;
+    padding-top:15px;
+    vertical-align: bottom
+}*/
+
+.floatingText_body {
+    background: bisque;
+	padding: 1em 2em;
+	border-radius: 0.4em;
+}
+
+.floatingText_body h1 {
+    font-size: 18px;
+}
+
+*|*:link {
+    /* color: #1f8dd6;*/
+    color: #1f8dd6;
+}
+
+span.attribute, span.att {
+    color: #f5844c;
+}
+
+.tei_toc {padding-top: 15px;}
+.tei_toc h2 {display:none;}
+
+.maintitle {
+    font-family:  Helvetica, "Helvetica Neue", Calibri;
+
+}
+
+.custom-menu {
+    margin-left: -325px !important;
+    width: 325px !important;
+}
+
+@media (min-width: 48em) {
+.custom-menu {
+    left: 325px !important;
+}
+}
+
+@media (min-width: 48em) {
+.custom-layout {
+    padding-left: 325px !important;
+}
+
+}
+.custom-menu.active, .custom-layout.active, .custom-layout.active .menu-link {
+    left: 325px !important;
+}
+
+
+.pure-menu-item {
+    display:block;
+    border: none;
+padding: 0.6em 0 0.6em 0.6em;
+}
+
+.pure-menu-item a, pure-menu-item span, a.toc {
+    color: #999;
+text-decoration: none;
+white-space: wrap;
+display: inline;
+}
+´
+.pure-g > div {
+ box-sizing: border-box;
+}
+
+div.tocTree, div.toc {
+    margin-top: 15px;
+}
+
+.toc-heading a.toc {
+/*resets the menu item padding*/
+    padding:0 !important;
+    padding-right: 13px !important;
+    display: inline-block;
+
+}
+
+.toc-heading-number{
+   color: #1f8dd6;
+   text-align: right;
+}
+
+.toc-showhide {
+    /*right: 0px;*/
+}
+
+.toc-heading-number span {
+  padding-right: 10px;
+}
+
+/*other stuff*/
+
+.tocHide, .continuedtoc{
+   display: none;
+  /* margin-left: 41px;*/
+   /*margin-top:10px;*/
+}
+
+.plusminus {
+  position: relative;
+  width: 14px;
+  height: 14px;
+ /* left: 20px;*/
+  top: 11px;
+  background: #1f8dd6;
+  transform: translate(-50%, -50%) rotate(0deg);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.4s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+}
+
+.plusminus:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 50%;
+  background: white;
+}
+
+.plusminus:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 2px;
+  background: white;
+}
+
+.plusminus.clicked {
+  transform: translate(-50%, -50%) rotate(360deg);
+  background: #ed6f59;
+}
+
+.plusminus.clicked:before {
+  width: 0;
+}
+
 
 /* Handling of example XML code embedded in pages. */
 pre.teiCode{
@@ -16,7 +185,7 @@ pre.teiCode{
 
 /* We want our XML code to look like code. */
 .xmlTag, .xmlAttName, .xmlAttVal, .teiCode{
-   font-family: monospace;
+   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 /* We want our XML code text to be bold. */
@@ -39,30 +208,111 @@ pre.teiCode{
 }
 
 
+/*images*/
 
-/* MDH 2013-08: The following two rulesets are used for the popup footnote
-   feature added through popupFootnotes.js. */
-div#footnotePopup{
-  box-shadow: 6px 6px 3px #808080;
-  display: none;
-  margin-right: 0;
-  max-height: 50%;
-  overflow: auto;
-  padding: 0.5em;
-  position: fixed;
-  right: 2%;
-  top: 25%;
-  width: 25%;
-  background-color: #F6F6F6;
-  border: 1px solid #2277BB;
+div.figure {
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+    text-align: center;
 }
-div.footnotePopupCloser{
-  border-style: solid;
-  border-width: 1px;
-  cursor: pointer;
-  float: right;
+
+div.figure, div.thumbnail img {
+    border-radius:0.3em;
+    border: 1px solid gainsboro;
+}
+
+div.caption {
+    position:absolute;
+    color: slategray;
+    font-size:0.8em !important;
+    left: 50%; transform: translateX(-50%);
+    bottom:0;
+}
+
+div.gallery div.caption {
+    bottom: -1em;
+}
+
+div.gallery {
+  position: relative;
+  margin-bottom: 2em;
+  /* Prevent vertical gaps */
+  line-height: 0;
+  border-radius: 0.3em;
   text-align: center;
-  vertical-align: middle;
-  width: 1em;
-  background-color: #C0C0C0;
+
+}
+
+div.thumbnail {
+    float: left;
+    width: 100px;
+    padding-right: 10px;
+}
+
+.gallery img {
+  width: 100% !important;
+  /*default height; can be overriden in TEI with height attr.*/
+  height: 300px !important;
+  object-fit: cover;
+}
+
+.imgwrapper.top-left img {
+    border-top-left-radius: 0.3em;
+}
+
+.imgwrapper.top-right img {
+    border-top-right-radius: 0.3em;
+}
+
+.imgwrapper.bottom-right img {
+    border-bottom-right-radius: 0.3em;
+}
+
+.imgwrapper.bottom-left img {
+    border-bottom-left-radius: 0.3em;
+}
+
+/*specification overrides
+*/
+
+td.odd_label {width:100px;}
+
+
+/*logos*/
+
+.logos {
+    padding:0 !important;
+}
+
+.logos .img, .logos .img-hover {
+    width:200px;
+    margin:0 3em;
+    padding-bottom:1em;
+}
+
+.logos .img-hover, .logos:hover .img {
+    display:none;
+}
+
+
+.logos:hover .img-hover{
+    display:block;
+}
+
+/*terms in lists*/
+
+span.term {
+    font-weight: bold;
+}
+
+/*table headings*/
+tr.label {
+    color: white;
+    background: #1f8dd6;;
+}
+
+.pure-table {
+    width: 100%;
 }
