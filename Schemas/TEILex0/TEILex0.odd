@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="css/tei_oxygen.css"?>
 <?xml-stylesheet type="text/css" href="css/tei.lex0.odd.css"?>
-<<<<<<< HEAD
-=======
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!--<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
->>>>>>> varia
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron"
     xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
     xml:lang="en">
@@ -14,14 +11,6 @@
         <fileDesc>
             <titleStmt>
                 <title>TEI Lex-0</title>
-<<<<<<< HEAD
-                <title type="sub">A baseline encoding for lexicographic data</title>
-                <author>
-                    <name type="organization">DARIAH WG "Lexical Resources"</name>
-                </author>
-                <editor><name type="person">Laurent Romary</name></editor>
-                <editor><name type="person">Toma Tasovac</name></editor>
-=======
                 <title type="subordinate">A baseline encoding for lexicographic data</title>
                 <editor>
                     <persName>
@@ -120,7 +109,6 @@
                         <surname>Hildenbrandt</surname>
                     </persName>
                 </author>
->>>>>>> varia
             </titleStmt>
             <publicationStmt>
                 <authority>DARIAH WG "Lexical Resources"</authority>
@@ -135,25 +123,6 @@
             <divGen type="toc"/>
         </front>
         <body>
-<<<<<<< HEAD
-   <xi:include href="TEILex0.parts/01__introduction.xml" parse="xml"
-                xpointer="introduction"/>
-            <xi:include href="TEILex0.parts/02__senses.xml" parse="xml" xpointer="senses"/>
-            <xi:include href="TEILex0.parts/03__forms.xml" parse="xml" xpointer="forms"/>
-            <xi:include href="TEILex0.parts/04__cross-references.xml" parse="xml"
-                xpointer="cross-references"/>
-            <xi:include href="TEILex0.parts/05__usage.xml" parse="xml" xpointer="usage"/>
-            <xi:include href="TEILex0.parts/06__etymology.xml" parse="xml" xpointer="etymology"/>
-            <xi:include href="TEILex0.parts/20__references.xml" parse="xml" xpointer="references"/>
-            <xi:include href="TEILex0.parts/21__cited_sources.xml" parse="xml"
-                xpointer="cited_sources"/>
-            <xi:include href="TEILex0.parts/22__bibliography.xml" parse="xml"
-                xpointer="bibliography"/>
-            <xi:include href="TEILex0.parts/30__annex_A.xml" parse="xml" xpointer="annex_A"/>
-            <xi:include href="TEILex0.parts/31__annex_B.xml" parse="xml" xpointer="annex_B"/>
-            <xi:include href="TEILex0.parts/40__specification.xml" parse="xml"
-                xpointer="specification"/>
-=======
             <xi:include href="TEILex0.parts/01__introduction.xml" parse="xml"
                 xpointer="introduction"/>
             <xi:include href="TEILex0.parts/02__entries.xml" parse="xml" xpointer="entries"/>
@@ -167,12 +136,11 @@
             <xi:include href="TEILex0.parts/08__patterns.xml" parse="xml" xpointer="patterns"/>
             <xi:include href="TEILex0.parts/20__bibliography.xml" parse="xml"
                 xpointer="bibliography"/>
-         <!--   <xi:include href="TEILex0.parts/30__annex_A.xml" parse="xml" xpointer="annex_A"/>
+            <!--   <xi:include href="TEILex0.parts/30__annex_A.xml" parse="xml" xpointer="annex_A"/>
             <xi:include href="TEILex0.parts/31__annex_B.xml" parse="xml" xpointer="annex_B"/>-->
             <xi:include href="TEILex0.parts/40__specification.xml" parse="xml"
                 xpointer="specification"/>
             <xi:include href="TEILex0.parts/50__contribute.xml" parse="xml" xpointer="contribute"/>
->>>>>>> varia
         </body>
     </text>
 </TEI>

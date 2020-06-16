@@ -23,11 +23,7 @@ then transform using tei-stripper.xsl-->
          <!--organize entries alphabetically-->
 
          <entry type="mainEntry" xml:lang="cz" xml:id="en000008">
-<<<<<<< HEAD
-            <form type="lemma" xml:id="en000008.hw1" style="font-weight: bold;">
-=======
             <form type="lemma" xml:id="en000008.hw1">
->>>>>>> varia
                <orth>abeceda</orth>
             </form>
             <pc>,</pc>
@@ -38,12 +34,8 @@ then transform using tei-stripper.xsl-->
                   <gram type="gender" value="feminine"/>
                </gramGrp>
                <orth extent="suffix" expand="abecedy">-y</orth>
-            </form>
-<<<<<<< HEAD
+            </form>           
             <!--...-->
-=======
-           <!--...-->
->>>>>>> varia
          </entry>
          <!-- TODO what to do about capitalization and labels in oRef?-->
          <!--more examples from the Guidelines:
@@ -68,22 +60,8 @@ then transform using tei-stripper.xsl-->
                <orth xml:id="academy.lemma">academy</orth>
             </form>
             <cit type="example">
-<<<<<<< HEAD
-               <quote>The Royal <xr type="include">
-                     <ref type="lemma" target="#academy.lemma" expand="Academy"/>
-                  </xr> of Arts</quote>
-            </cit>
-         </entry>
-         <entry xml:id="academy-refonly" xml:lang="en" type="mainEntry">
-            <form type="lemma">
-               <orth xml:id="academy-refonly.lemma">academy</orth>
-            </form>
-            <cit type="example">
-               <quote>The Royal <ref type="lemma" target="#academy-refonly.lemma" expand="Academy">A~</ref> of Arts</quote>
-=======
                <quote>The Royal <ref type="oRef" target="#academy.lemma">A~</ref> of
                   Arts</quote>
->>>>>>> varia
             </cit>
          </entry>
          <!--https://imgur.com/b9dNR9m.png-->
@@ -214,11 +192,7 @@ then transform using tei-stripper.xsl-->
             </sense>
             <pc>;</pc>
             <sense xml:id="aid.4">
-<<<<<<< HEAD
-               <usg type="hint">(pers)</usg>
-=======
                <gloss>(pers)</gloss>
->>>>>>> varia
                <cit type="translationEquivalent" xml:lang="fr">
                   <form>
                      <orth>aide</orth>
@@ -250,11 +224,7 @@ then transform using tei-stripper.xsl-->
                </form>
                <pc>,</pc>
                <sense xml:id="in_aid_of.1">
-<<<<<<< HEAD
-                  <usg type="hint">(of performances)</usg>
-=======
                   <gloss>(of performances)</gloss>
->>>>>>> varia
                   <cit type="translationEquivalent" xml:lang="fr">
                      <form><orth>au profit de</orth></form>
                   </cit>
@@ -302,9 +272,6 @@ then transform using tei-stripper.xsl-->
                </sense>
             </entry>
          </entry>
-<<<<<<< HEAD
-
-=======
          <entry xml:lang="pt" xml:id="antepassado_a">
             <form type="lemma">
                <orth>antepassado</orth>
@@ -408,7 +375,6 @@ then transform using tei-stripper.xsl-->
                </cit>
             </sense>
          </entry>
->>>>>>> varia
          <entry xml:id="arbeitsunfähig" xml:lang="de" type="mainEntry">
             <form type="lemma">
                <orth>arbeitsunfähig</orth>
@@ -559,129 +525,7 @@ then transform using tei-stripper.xsl-->
                <sense xml:id="cobuild.house_3.1" xml:lang="en"><!--...--></sense>
             </entry>
          </entry>
-<<<<<<< HEAD
-         <!--  the following example should only be used to illustrate antonyms; 
-          the fuller entry follows -->
-         <entry xml:id="descalçar_258" xml:lang="pt" type="mainEntry">
-            <form type="lemma">
-               <orth>descalçar</orth>
-            </form>
-            <gramGrp>
-               <gram type="pos">v</gram>
-            </gramGrp>
-            <sense xml:id="descalçar_258.1">
-               <def>Tirar aquilo que se tem calçado; despir os pés ou as mãos; tirar o
-                  calçado.</def>
-               <metamark>≠</metamark>
-               <xr type="antonymy">
-                  <ref type="entry">calçar</ref>
-               </xr>
-               <pc>,</pc>
-               <xr type="antonymy">
-                  <ref type="entry">enfiar</ref>
-               </xr>
-               <pc>,</pc>
-               <xr type="antonymy">
-                  <ref type="entry">pôr</ref>
-               </xr>
-            </sense>
-         </entry>
 
-         <entry xml:id="descalçar" xml:lang="pt" type="mainEntry">
-            <form type="lemma">
-               <orth>descalçar</orth>
-               <pron notation="?">dɨʃkałsár</pron>
-            </form>
-            <gramGrp>
-               <gram type="pos">v.</gram>
-            </gramGrp>
-            <!--etc.-->
-            <sense xml:id="descalçar.1">
-               <def>Tirar aquilo que se tem calçado; despir os pés ou as mãos; tirar o
-                  calçado.</def>
-               <metamark>≠</metamark>
-               <xr type="antonymy">
-                  <ref type="entry">calçar</ref>
-               </xr>
-               <pc>,</pc>
-               <xr type="antonymy">
-                  <ref type="entry">enfiar</ref>
-               </xr>
-               <pc>,</pc>
-               <xr type="antonymy">
-                  <ref type="entry">pôr</ref>
-               </xr>
-               <cit type="example">
-                  <quote>Descalçou-se mal chegou a casa.</quote>
-               </cit>
-               <cit type="example">
-                  <quote>Descalçou um chinelo e atirou-mo.</quote>
-               </cit>
-               <cit type="example">
-                  <quote>Descalçou a criança e deitou-a</quote>
-               </cit>
-               <form type="collocations">
-                  <form type="collocation">
-                     <orth>
-                        <xr type="include">
-                           <ref type="lemma" expand="agua">
-                              <lbl>+</lbl>
-                           </ref>
-                        </xr>
-                        <seg>as botas</seg>
-                     </orth>
-                     <gramGrp>
-                        <gram type="mwe" value="co-ocorrente_privilegiado"/>
-                     </gramGrp>
-                  </form>
-                  <pc>,</pc>
-                  <form type="collocation">
-                     <orth>
-                        <xr type="include">
-                           <ref type="lemma" expand="agua"/>
-                        </xr>
-                        <seg>as luvas</seg>
-                     </orth>
-                     <gramGrp>
-                        <gram type="mwe" value="co-ocorrente_privilegiado"/>
-                     </gramGrp>
-                  </form>
-                  <pc>,</pc>
-                  <form type="collocation">
-                     <orth>
-                        <xr type="include">
-                           <ref type="lemma" expand="agua"/>
-                        </xr>
-                        <seg>as meias</seg>
-                     </orth>
-                     <gramGrp>
-                        <gram type="mwe" value="co-ocorrente_privilegiado"/>
-                     </gramGrp>
-                  </form>
-               </form>
-               <pc>;</pc>
-               <form type="collocations">
-                  <form type="collocation">
-                     <orth>
-                        <xr type="include">
-                           <ref type="lemma" expand="agua">
-                              <lbl>+</lbl>
-                           </ref>
-                        </xr>
-                        <seg>os sapatos</seg>
-                     </orth>
-                     <gramGrp>
-                        <gram type="mwe" value="co-ocorrente_privilegiado"/>
-                     </gramGrp>
-                  </form>
-               </form>
-               <pc>.</pc>
-            </sense>
-         </entry>
-         <!-- TODO: check ref type oRef -\- this is a weird one, where it's an english dictionary, but 
-         the translation is oRefed. I don't know if this is a real dict, or a made up one. Will need
-         to check.-->
-=======
          <entry xml:id="OALD.competitor" type="mainEntry" xml:lang="en">
             <form type="lemma">
                <orth>competitor</orth>
@@ -697,7 +541,6 @@ then transform using tei-stripper.xsl-->
          </entry>
          <!--TODO: is this a made-up dictionary? need the source. chien is oref to translation equivalent, 
          not entry-->
->>>>>>> varia
          <entry xml:id="dog" xml:lang="en">
             <form type="lemma">
                <orth>dog</orth>
@@ -710,13 +553,8 @@ then transform using tei-stripper.xsl-->
                   <form><orth>chien</orth></form>
                </cit>
                <cit type="example" xml:lang="fr">
-<<<<<<< HEAD
-                  <quote>Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui fais manger sa
-                     soupe. Le soir je lui siffle de venir se coucher</quote>
-=======
                   <quote> Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui
                      fais manger sa soupe. Le soir je lui siffle de venir se coucher</quote>
->>>>>>> varia
                   <bibl>RENARD, Poil de Carotte, 1894, p. 102.</bibl>
                   <cit type="translation" xml:lang="en">
                      <!-- included in the french cit, otherwise relation is lost -->
@@ -731,11 +569,7 @@ then transform using tei-stripper.xsl-->
                <cit type="translationEquivalent" xml:lang="fr">
                   <form type="lemma"><orth>chienne</orth></form>
                </cit>
-<<<<<<< HEAD
-               <cit type="example">
-=======
                <cit type="example" xml:lang="fr">
->>>>>>> varia
                   <quote>6. Les fleuristes, murmura Lorilleux, toutes des Marie-couche-toi-là. Eh
                      bien! Et moi? reprit la grande veuve, les lèvres pincées. Vous êtes galant.
                      Vous savez, je ne suis pas une <ref type="oRef">chienne</ref>, je ne me mets
@@ -758,12 +592,7 @@ then transform using tei-stripper.xsl-->
                <ref type="entry">mammal</ref>
             </xr>
          </entry>
-<<<<<<< HEAD
-=======
-         
 
-
->>>>>>> varia
          <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
             <form type="lemma">
                <orth type="segmeted">
@@ -776,11 +605,7 @@ then transform using tei-stripper.xsl-->
                </form>
                <form type="variant">
                   <orth notAfter="1996">
-<<<<<<< HEAD
                      <seg>Fluß</seg><seg>schiffahrt</seg>
-=======
-                     <seg>Fluß</seg><seg>schifffahrt</seg>
->>>>>>> varia
                   </orth>
                   <usg type="time">Vor 1996 Rechtschreibung Reform</usg>
                </form>
@@ -822,16 +647,10 @@ then transform using tei-stripper.xsl-->
                </form>
                <sense xml:id="Häuschen.1"><!--etc.--></sense>
             </entry>
-<<<<<<< HEAD
-           <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
-               <form type="lemma">
-                  <orth><seg>haus</seg><seg>en</seg></orth>
-=======
             <!--TODO: what to do with morphems etc., I'd prefer seg type="m"-->
             <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
                <form type="lemma">
                   <orth><m>haus</m><m>en</m></orth>
->>>>>>> varia
                </form>
                <sense xml:id="hausen.1"><!--...--></sense>
             </entry>

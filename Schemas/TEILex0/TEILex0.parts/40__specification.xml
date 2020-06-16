@@ -36,12 +36,10 @@
         <moduleRef key="header"
             include="teiHeader fileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc projectDesc seriesStmt
                         notesStmt authority distributor idno edition funder availability licence appInfo classDecl namespace tagUsage tagsDecl rendition"/>
-<<<<<<< HEAD
-        <moduleRef key="namesdates" include="placeName"/>
-=======
+
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
         <moduleRef key="namesdates" include="placeName persName orgName"/>
->>>>>>> varia
+
         <!-- for dialectal properties -->
         <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
 
@@ -71,11 +69,7 @@
             <attList>
                 <attDef ident="xml:id" mode="change" usage="req"/>
                 <attDef ident="xml:lang" mode="change" usage="req"/>
-<<<<<<< HEAD
-                <attDef ident="type" mode="replace" usage="req">
-=======
                 <attDef ident="type" mode="replace" usage="rec">
->>>>>>> varia
                     <defaultVal>mainEntry</defaultVal>
                     <valList mode="change" type="semi">
                         <valItem ident="mainEntry"/>
@@ -125,12 +119,9 @@
                 <!--<classes mode="change">
                             <memberOf key="att.notated" mode="add"/>
                         </classes>-->
-<<<<<<< HEAD
                 <!--2020-05-14 allow inside quote (for cross-references in examples)-->
                 <memberOf key="model.quoteLike" mode="add"/>
-=======
 
->>>>>>> varia
             </classes>
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
@@ -200,12 +191,6 @@
                             <desc>The default reference to another lexical unit when no addtional
                                 information is available.</desc>
                         </valItem>
-<<<<<<< HEAD
-                        <valItem ident="include">
-                            <desc>Type of cross-reference which includes content from a different location in the dictionary, for instance a shortened orthographic reference to the lemma, or one of its inflected forms, in examples or collocations. </desc>
-                        </valItem>
-=======
->>>>>>> varia
                         <!-- further values to be added there -->
                     </valList>
                 </attDef>
@@ -220,13 +205,10 @@
         <!-- 2018-09-1 (LR): the <ref> element is adapted to have specific @type values (semi-closed) -->
 
         <elementSpec ident="ref" mode="change">
-<<<<<<< HEAD
             <!--2020-05-14 (TT): to allow expand on ref-->
             <classes mode="change">
                 <memberOf key="att.lexicographic"></memberOf>
             </classes>
-=======
->>>>>>> varia
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
                     <valList type="semi" mode="change">
@@ -388,16 +370,6 @@
                 <memberOf key="model.sensePart" mode="add"/>
             </classes>
         </elementSpec>
-<<<<<<< HEAD
-=======
-        
-        <!-- 2020-06-10 (TT): allowing notBefore, notAfter etc. on orth -->
-        <elementSpec ident="orth" mode="change">
-            <classes mode="change">
-                <memberOf key="att.datable.w3c" mode="add"/>
-            </classes>
-        </elementSpec>
->>>>>>> varia
 
         <!-- adding gramGrp to model.sensePart -->
         <elementSpec ident="gramGrp" mode="change">
@@ -452,7 +424,6 @@
                 <memberOf key="model.emphLike" mode="add"/>
             </classes>
         </elementSpec>
-<<<<<<< HEAD
         
         <!--2020-05-14 add orth and pron to att.datable.w3c to allow @notBefore etc.-->
         
@@ -467,9 +438,7 @@
                 <memberOf key="att.datable.w3c" mode="add"></memberOf>
             </classes>
         </elementSpec>
-       
-=======
->>>>>>> varia
+      
 
         <!-- Class related declaration here -->
 
