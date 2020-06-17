@@ -100,7 +100,7 @@
                <etym>
                   <cit type="cognate">
                      <lang>Chalcatongo Mixtec</lang>
-                     <usg type="geo">
+                     <usg type="geographic">
                         <placeName>San Miguel El Grande</placeName>
                      </usg>
                      <form><pron notation="trans-macaulay-mig" xml:lang="mig">šinì</pron></form>
@@ -153,6 +153,56 @@
                   </cit>
                </etym>
             </entry>
+         </entry>
+         <!--suffixal derivation-->
+         <entry xml:lang="pt">
+            <form type="lemma">
+               <orth xml:lang="pt">húmanal</orth>
+               <pron xml:lang="pt" notation="ipa">umɐnáł</pron>
+            </form>
+            <gramGrp>
+               <pos>adj.</pos>
+               <gen>m.</gen>
+               <lbl>e</lbl>
+               <gen>f.</gen>
+            </gramGrp>
+            <etym type="suffixalDerivation">
+               <pc>(</pc>
+               <seg type="desc">De</seg>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="pt">humano</orth>
+                  </form>
+               </cit>
+               <pc>+</pc>
+               <cit type="etymon">
+                  <gramGrp>
+                     <gram>suf.</gram>
+                  </gramGrp>
+                  <form>
+                     <orth extent="suff" xml:lang="pt">-al</orth>
+                  </form>
+               </cit>
+               <pc>)</pc>
+            </etym>
+            <!--  rest of entry here -->
+         </entry>
+        <!-- phonological changes-->
+         <entry xml:id="xmxmx" xml:lang="????">
+            <etym>
+               <seg type="desc" part="I">Others have proposed an etymology</seg>
+               <cit type="etymon" xml:id="ad-arti-"><form><orth xml:lang="und-x-pie">*ad-arti-</orth></form></cit>
+               
+               <etym corresp="#ad-arti-">
+                  <seg type="desc" part="I">with intervocalic</seg>
+                  <cit type="etymon" xml:id="c1" next="#c2"><form><orth>d</orth></form></cit>
+                  
+                  <seg type="desc" part="F">becoming</seg> <cit type="etymon" xml:id="c2" prev="#c1"><form><orth>l</orth></form></cit>
+                  <pc>;</pc>
+               </etym>
+               
+               <seg type="desc" part="F">the spelling <xr type="crossReference"><ref xml:lang="la">allers</ref></xr> would then be <xr type="crossReference"><lbl>analogical to</lbl> <ref xml:lang="la">sollers</ref></xr><pc>.</pc></seg> </etym>
+           
             
          </entry>
       </body>
