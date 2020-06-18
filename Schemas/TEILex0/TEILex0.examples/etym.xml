@@ -94,9 +94,9 @@
                      <citedRange>502</citedRange></bibl>
                </etym>
             </entry>
-            
+
             <entry xml:lang="xxxxx" xml:id="xxxxxxy">
-               <!--missing context-->               
+               <!--missing context-->
                <etym>
                   <cit type="cognate">
                      <lang>Chalcatongo Mixtec</lang>
@@ -104,7 +104,8 @@
                         <placeName>San Miguel El Grande</placeName>
                      </usg>
                      <form><pron notation="trans-macaulay-mig" xml:lang="mig">šinì</pron></form>
-                     <ref type="bibl" target="#Macaulay-ChalcatongoMixtec-1996">(Macaulay, 1996)</ref>
+                     <ref type="bibl" target="#Macaulay-ChalcatongoMixtec-1996">(Macaulay,
+                        1996)</ref>
                   </cit>
                   <cit type="cognate">
                      <lang>Ayutla Mixtec</lang>
@@ -114,16 +115,16 @@
                   <cit type="cognate">
                      <lang>Coatzospan Mixtec</lang>
                      <form><pron notation="trans-smll-miz" xml:lang="miz">rkɨ</pron></form>
-                     <ref  type="bibl" target="#Small-CoatzospanMix-1990">(Small, 1990)</ref>
+                     <ref type="bibl" target="#Small-CoatzospanMix-1990">(Small, 1990)</ref>
                   </cit>
                   <cit type="cognate">
                      <lang>San Martín Duraznos</lang>
                      <form><pron notation="ipa" xml:lang="smd">ʃīɲī</pron></form>
                      <ref type="bibl" target="#Padgett-2017">(Padget, 2017)</ref>
-                  </cit>   
+                  </cit>
                </etym>
             </entry>
-            
+
             <!--cognate set from a common bibliographic source-->
             <entry xml:lang="xxxxx" xml:id="xxxxxxy">
                <!--missing context-->
@@ -187,23 +188,74 @@
             </etym>
             <!--  rest of entry here -->
          </entry>
-        <!-- phonological changes-->
+         <!-- phonological changes-->
          <entry xml:id="xmxmx" xml:lang="????">
             <etym>
                <seg type="desc" part="I">Others have proposed an etymology</seg>
-               <cit type="etymon" xml:id="ad-arti-"><form><orth xml:lang="und-x-pie">*ad-arti-</orth></form></cit>
-               
+               <cit type="etymon" xml:id="ad-arti-">
+                  <form><orth xml:lang="und-x-pie">*ad-arti-</orth></form>
+               </cit>
                <etym corresp="#ad-arti-">
                   <seg type="desc" part="I">with intervocalic</seg>
-                  <cit type="etymon" xml:id="c1" next="#c2"><form><orth>d</orth></form></cit>
-                  
-                  <seg type="desc" part="F">becoming</seg> <cit type="etymon" xml:id="c2" prev="#c1"><form><orth>l</orth></form></cit>
+                  <cit type="etymon" xml:id="c1" next="#c2">
+                     <form><orth>d</orth></form>
+                  </cit>
+                  <seg type="desc" part="F">becoming</seg>
+                  <cit type="etymon" xml:id="c2" prev="#c1">
+                     <form><orth>l</orth></form>
+                  </cit>
                   <pc>;</pc>
                </etym>
-               
-               <seg type="desc" part="F">the spelling <xr type="crossReference"><ref xml:lang="la">allers</ref></xr> would then be <xr type="crossReference"><lbl>analogical to</lbl> <ref xml:lang="la">sollers</ref></xr><pc>.</pc></seg> </etym>
-           
-            
+               <seg type="desc" part="F">the spelling <xr type="crossReference">
+                     <ref xml:lang="la">allers</ref>
+                  </xr> would then be <xr type="crossReference">
+                     <lbl>analogical to</lbl>
+                     <ref xml:lang="la">sollers</ref>
+                  </xr><pc>.</pc></seg>
+            </etym>
+
+            <!--  Multiple and/or Conflicting Etymological Accounts-->
+            <entry xml:id="xyxyxy">
+               <etym>
+                  <!-- PIt, PIE etymons-->
+                  <!-- cognates -->
+                  <etym>
+                     <!-- Lat. sollers < *soti-arti- to sollus 'entire'; al(l)ers < *all-arti- to O. alio- 'entire'. -->
+                     <seg type="desc" part="I">According to</seg>
+                     <bibl>Untermann 2000</bibl>, <lang>Latin</lang>
+                     <xr type="crossReference">
+                        <ref xml:lang="la">*all-</ref>
+                     </xr>
+                     <seg type="desc" part="M">was probably borrowed from</seg>
+                     <cit type="etymon" xml:lang="und-x-sabe1249">
+                        <lang>Sabellic</lang>
+                     </cit>, <seg type="desc" part="F">since <lang>Latin</lang> does not have this
+                        word in its lexicon. For a word only occurring in glosses, this is of course
+                        possible.</seg>
+                  </etym>
+                  <etym><seg type="desc" part="I">Others have proposed an etymology</seg>
+                     <cit type="etymon" xml:id="ad-arti-">
+                        <form><orth xml:lang="und-x-pie">*ad-arti-</orth></form>
+                     </cit>
+                     <etym corresp="#ad-arti-">
+                        <seg type="desc" part="I">with intervocalic </seg><cit type="etymon"
+                           xml:id="c1" next="#c2">
+                           <form><orth>d</orth></form>
+                        </cit>
+                        <seg type="desc" part="F">becoming</seg>
+                        <cit type="etymon" xml:id="c2" prev="#c1">
+                           <form><orth>l</orth></form>
+                        </cit>
+                        <pc>;</pc>
+                     </etym>
+                     <seg type="desc" part="F">the spelling <xr type="crossReference">
+                           <ref xml:lang="la">allers</ref>
+                        </xr> would then be <xr type="crossReference">
+                           <lbl>analogical to</lbl>
+                           <ref xml:lang="la">sollers</ref>
+                        </xr><pc>.</pc></seg></etym>
+               </etym>
+            </entry>
          </entry>
       </body>
    </text>
