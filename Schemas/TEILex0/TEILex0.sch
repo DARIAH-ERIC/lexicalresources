@@ -14,20 +14,19 @@
         </rule>
     </pattern>
 
-    <!-- 2019-02-24 (TT):  Allow only one gramGrp per entry-->
+    <!-- 2019-02-24 (TT):  Allow only one gramGrp per node-->
   <pattern>
-    <rule context="tei:entry/tei:gramGrp">
-        <report test="preceding-sibling::tei:gramGrp">There should be no more than one <name/> element as child of entry.</report>
+    <rule context="tei:*/tei:gramGrp">
+        <report test="preceding-sibling::tei:gramGrp">There should be no more than one <name/> element as child of <value-of select="name(..)"/>.</report>
     </rule>
     </pattern>
     
-    <!-- 2019-02-24 (TT):  Allow only one gramGrp per sense-->
+    <!-- 2020-06-18 (TT):  Allow only one gramGrp per node-->
+    
     <pattern>
-        <rule context="tei:sense/tei:gramGrp">
-            <report test="preceding-sibling::tei:gramGrp">There should be no more than one <name/> element as child of sense.</report>
+        <rule context="tei:entry/tei:entry">
+            <report test="not(@type)">Nested entries should be typed. TEI Lex-0 recommends <![CDATA[<entry type='relatedEntry'></entry>]]>.</report>
         </rule>
     </pattern>
-    
-
 
 </schema>

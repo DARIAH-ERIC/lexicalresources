@@ -4,7 +4,7 @@
 To edit examples, please use TEILex0-examples.xml, 
 then transform using tei-stripper.xsl-->
 
-<?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/Examples">
+<?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/Examples">
    <teiHeader>
       <fileDesc>
          <titleStmt>
