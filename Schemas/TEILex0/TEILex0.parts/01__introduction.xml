@@ -24,13 +24,13 @@
         <p>Preliminary work for the establishment of TEI Lex-0 started in the Working Group
             "Retrodigitised Dictionaries" lead by Toma Tasovac and Vera Hildenbrandt as part of the
             COST Action <ref target="http://www.elexicography.eu">European Network of
-                e-Lexicography</ref> (ENeL). Upon the completion of the COST Action, the work on TEI Lex-0 was taken up by the DARIAH Working Group "Lexical Resources". Currently, the work
-            on TEI Lex-0 is conducted by the DARIAH WG "Lexical Resources" (see below) with the
-            support of the H2020-funded <ref target="https://elex.is">European Lexicographic
+                e-Lexicography</ref> (ENeL). Upon the completion of the COST Action, the work on TEI
+            Lex-0 was taken up by the DARIAH Working Group "Lexical Resources". Currently, the work
+            on TEI Lex-0 is also supported by the H2020-funded <ref target="https://elex.is">European Lexicographic
                 Infrastructure</ref> (ELEXIS). </p>
 
         <div>
-            <head>Working Group</head>
+            <head>DARIAH WG on Lexical Resources </head>
             <p>The DARIAH Working Group on Lexical Resources is a self-organized scholarly community
                 working under the auspicies of the pan-European Digital Research Infrastructure for
                 Arts and Humanities (DARIAH-EU). The goals of the WG are: <list>
@@ -56,16 +56,14 @@
                 linking of existing electronic dictionaries in view of their common European
                 heritage.</p>
 
-        </div>
-        <div>
-            <head>WG Chairs</head>
+            <p><hi rend="bold">WG Chairs</hi></p>
             <p>
                 <figure type="thumbnail">
                     <graphic url="images/Laurent_Romary.jpg"/>
                 </figure>
                 <hi rend="bold">Laurent Romary</hi> is Directeur de Recherche at Inria (team
-                ALMAnaCH (France)), France. He received a PhD degree in computational linguistics in
-                1989 and his Habilitation in 1999. He carries out research on the modelling of
+                ALMAnaCH (France)). He received a PhD degree in computational linguistics in 1989
+                and his Habilitation in 1999. He carries out research on the modelling of
                 semi-structured documents, with a specific emphasis on texts and linguistic
                 resources. He has been active in standardisation activities with ISO, as chair of
                 committee ISO/TC 37/SC 4 (2002-2014), chair of ISO/TC 37 (2016-) and the Text
@@ -75,75 +73,119 @@
             <p><figure type="thumbnail">
                     <graphic url="images/Toma_Tasovac.jpg"/>
                 </figure><hi rend="bold">Toma Tasovac</hi> is Director of the Belgrade Center for
-                Digital Humanities (BCDH) and a Director of DARIAH-EU. He was educated at Harvard
+                Digital Humanities (BCDH) and DARIAH-EU. He was educated at Harvard
                 University, Princeton University and Trinity College Dublin. His areas of interest
                 include lexicography, data modeling, TEI, digital editions and research
                 infrastructures. He previously served as the National Coordinator of DARIAH-RS and
                 Chair of the National Coordinators' Committee at DARIAH-EU. Under Toma's leadership,
                 BCDH has received funding from various national and international granting bodies,
                 including Erasmus Plus and Horizon 2020.</p>
+
+            <p><hi rend="bold">DigiLex Blog</hi></p>
+            <p>The working group runs a blog called <ref target="https://digilex.hypotheses.org"
+                    >DigiLex: Legacy Dictionaries Reloaded</ref> as a platform for sharing tips,
+                raising questions and discussing methods for the creation of lexical resources. </p>
         </div>
+
+        <div>
+            <head>ELEXIS</head>
+            <p><ref target="https://elex.is">ELEXIS</ref> is a H2020-funded project which proposes
+                to integrate, extend and harmonise national and regional efforts in the field of
+                lexicography, both modern and historical, with the goal of creating a sustainable
+                infrastructure which will (1) enable efficient access to high-quality lexical data
+                in the digital age, and (2) bridge the gap between more advanced and
+                lesser-resourced scholarly communities working on lexicographic resources.</p>
+        </div>
+
+        <!--the following will generate a list of contributors in alphabetic order from the teiHeader-->
+        <divGen type="contributors"/>
 
         <div>
             <head> Meetings</head>
 
             <p>The Working Group has organized a number of working meetings dedicated to the
                 development of TEI Lex-0. These include: <list>
-                    <item>Toward Best Practice Guidelines for Encoding Legacy
-                            Dictionaries: An ENeL-DARIAH-PARTHENOS Expert Workshop. Preußische
-                        Staatsbibliothek, Berlin (17-19 November 2016).</item>
-                    <item>Overview of Retrodigitized Dictionaries and
-                            Best-Practice Guidelines For Encoding Legacy Dictionaries. ENeL
-                        Annual Meeting, Budapest (24 February 2017). </item>
-                    <item>TEI Lex-0 @DARIAH WG "Lexical Resources". Harnack
-                        Haus, Freie Universität Berlin (27 April 2017).</item>
-                    <item>TEI Lex-0 @DARIAH WG "Lexical Resources". Austrian
-                        Center for Digital Humanities, Austrian Academy of Sciences, Vienna (26 June
-                        2017).</item>
-                    <item>TEI Lex-0: From Best-Practice Guidelines to a TEI
-                            Schema. DARIAH-EU Coordination Office, Berlin (2-3 May 2018).
-                        Funded by DARIAH-EU's Working Groups Funding Scheme and ELEXIS.</item>
-                    <item>TEI Lex-0 and Beyond: A Workshop. University of
-                        Ljubljana (16 July 2018). Funded by DARIAH-EU's Working Group Funding Scheme
-                        and ELEXIS.</item>
-                    <item>TEI Lex-0 Meeting. DARIAH-EU Coordination Office,
-                        Berlin (30 January 2019).</item>
-                    <item>Joint TEI Lex-0 / Ontolex-Lemon Meeting. Collocated
-                        with <ref target="https://elex.link/elex2019/">eLex 2019</ref>. Sintra,
-                        Portugal (4 October 2019). Funded by ELEXIS.</item>
-                    <item>Toward a TEI Lex-0 Publisher: A Workshop, DARIAH-EU
-                        Coordination Office, Berlin (16-17 December 2019). Funded by the Belgrade
-                        Center for Digital Humanities.</item>
+                    <item>Toward Best Practice Guidelines for Encoding Legacy Dictionaries: An
+                        ENeL-DARIAH-PARTHENOS Expert Workshop. Preußische Staatsbibliothek, Berlin
+                        (17-19 November 2016).</item>
+                    <item>Overview of Retrodigitized Dictionaries and Best-Practice Guidelines For
+                        Encoding Legacy Dictionaries. ENeL Annual Meeting, Budapest (24 February
+                        2017). </item>
+                    <item>TEI Lex-0 @DARIAH WG "Lexical Resources". Harnack Haus, Freie Universität
+                        Berlin (27 April 2017).</item>
+                    <item>TEI Lex-0 @DARIAH WG "Lexical Resources". Austrian Center for Digital
+                        Humanities, Austrian Academy of Sciences, Vienna (26 June 2017).</item>
+                    <item>TEI Lex-0: From Best-Practice Guidelines to a TEI Schema. DARIAH-EU
+                        Coordination Office, Berlin (2-3 May 2018). Funded by DARIAH-EU's Working
+                        Groups Funding Scheme and ELEXIS.</item>
+                    <item>TEI Lex-0 and Beyond: A Workshop. University of Ljubljana (16 July 2018).
+                        Funded by DARIAH-EU's Working Group Funding Scheme and ELEXIS.</item>
+                    <item>TEI Lex-0 Meeting. DARIAH-EU Coordination Office, Berlin (30 January
+                        2019).</item>
+                    <item>Joint TEI Lex-0 / Ontolex-Lemon Meeting. Collocated with <ref
+                            target="https://elex.link/elex2019/">eLex 2019</ref>. Sintra, Portugal
+                        (4 October 2019). Funded by ELEXIS.</item>
+                    <item>Toward a TEI Lex-0 Publisher: A Workshop, DARIAH-EU Coordination Office,
+                        Berlin (16-17 December 2019). Funded by the Belgrade Center for Digital
+                        Humanities.</item>
                 </list>
             </p>
-</div><div>
-    <head>Training measures</head>
-    <p>TODO: list training measures</p>
-            <figure type="gallery" xml:id="community-effort">
-                <head>TEI Lex-0 would not be possible without joint community effort</head>
-                <graphic url="https://i.imgur.com/XAMQknR.jpg" rend="pure-u-2-3 top-left"/>
-                <graphic url="https://i.imgur.com/DfL7CWY.jpgg" rend="pure-u-1-3 top-right"/>
-                <graphic url="https://i.imgur.com/UVXnDSy.jpg" rend="pure-u-1-1" height="400px"/>
-                <graphic url="https://i.imgur.com/qEb4eED.jpg" rend="pure-u-1-3"/>
-                <graphic url="https://i.imgur.com/oun5VsX.jpg" rend="pure-u-2-3"/>
-                <graphic url="https://i.imgur.com/i5VmV4m.jpg" rend="pure-u-2-3"/>
-                <graphic url="https://i.imgur.com/6NSzMJ6.jpg" rend="pure-u-1-3"/>
-                <graphic url="https://i.imgur.com/vfxQiYx.png" rend="pure-u-1-1"/>
-                <graphic url="https://i.imgur.com/Wlf8GoD.jpg" rend="pure-u-1-3"/>
-                <graphic url="https://i.imgur.com/LaCPF0q.jpg" rend="pure-u-2-3"/>
-                <!-- https://i.imgur.com/GThOWKf.jpg-->
-                <graphic url="https://i.imgur.com/KWLmMyY.jpg" rend="pure-u-3-4"/>
-                <graphic url="https://i.imgur.com/tObvruE.png" rend="pure-u-1-4"/>
-                <graphic url="https://i.imgur.com/mMkp4g6.jpg" rend="pure-u-1-3 bottom-left"/>
-                <graphic url="https://i.imgur.com/cp4MKJd.jpg" rend="pure-u-2-3 bottom-right"/>
-            </figure>
-
         </div>
-
-
-        <!--the following will generate a list of contributors in alphabetic order from the teiHeader-->
-        <divGen type="contributors"/>
-
+        <div>
+            <head>Training measures</head>
+            <p>TEI Lex-0 and best practices in lexical data modeling have been introduced to large
+                number of young scholars at various training events, including: <list>
+                    <item><ref target="https://lexmc.sciencesconf.org">Lexical Data Masterclass
+                            2017</ref>. Co-organized by DARIAH, the Berlin Brandenburg Academy of
+                        Sciences (BBAW), Inria and the Belgrade Center for Digital Humanities, with
+                        the support of the German Ministry of Education and Research (BMBF), CLARIN
+                        and DARIAH-DE. For an overview, check out this <ref
+                            target="https://digilex.hypotheses.org/386">blog post</ref>.</item>
+                    <item><ref target="https://lexmc18.sciencesconf.org">Lexcal Data Masterclass
+                            2018</ref>. Co-organized by DARIAH, the Berlin Brandenburg Academy of
+                        Sciences (BBAW), Inria and the Belgrade Center for Digital Humanities, with
+                        the support of the German Ministry of Education and Research (BMBF), French
+                        Ministry for Higher Education, Research and Innovation (MESRI), ELEXIS,
+                        CLARIN and DARIAH-DE. For an overview, check out <ref
+                            target="https://digilex.hypotheses.org/551">From Àbèsàbèsì to
+                            XPath</ref> on DigiLex.</item>
+                    <item><ref target="https://clunl.fcsh.unl.pt/en/summer-school-2018/">From Print
+                            to Screen: The Theory and Practice of Digitizing Dictionaries</ref>.
+                        Lisbon Summer School in Linguistics (2-6 July 2018).</item>
+                    <item><ref target="https://clunl.fcsh.unl.pt/summer-school-in-linguistics-2019/"
+                            >Encoding Dictionaries with TEI: A Masterclass</ref>. Lisbon Summer
+                        School in Linguistics (1-5 July 2019).</item>
+                    <item><ref
+                            target="https://www.geschkult.fu-berlin.de/en/e/semiarab/semitistik/termine/Digital-Methods-for-Linguistic-Investigation.html"
+                            >DH Training Workshop: Digital Methods for Linguistic
+                            Investigation</ref> (13-15 November 2019). Organized by the Seminar für
+                        Semitistik und Arabistik, Freie Universität Berlin, with the support of the
+                        Alexander von Humboldt Foundation and Syncro Soft.</item>
+                </list>
+            </p>
+            <p>The <ref target="https://dhmc2020.sciencesconf.org">European Digital Humanities
+                    Masterclass 2020</ref> had to be postponed due to the Corona pandemic.</p>
+            <p><hi rend="bold">A picture is worth a thousand words</hi></p>
+            <p>
+                <figure type="gallery" xml:id="community-effort">
+                    <head>TEI Lex-0 would not be possible without joint community effort</head>
+                    <graphic url="https://i.imgur.com/XAMQknR.jpg" rend="pure-u-2-3 top-left"/>
+                    <graphic url="https://i.imgur.com/DfL7CWY.jpgg" rend="pure-u-1-3 top-right"/>
+                    <graphic url="https://i.imgur.com/UVXnDSy.jpg" rend="pure-u-1-1" height="400px"/>
+                    <graphic url="https://i.imgur.com/qEb4eED.jpg" rend="pure-u-1-3"/>
+                    <graphic url="https://i.imgur.com/oun5VsX.jpg" rend="pure-u-2-3"/>
+                    <graphic url="https://i.imgur.com/i5VmV4m.jpg" rend="pure-u-2-3"/>
+                    <graphic url="https://i.imgur.com/6NSzMJ6.jpg" rend="pure-u-1-3"/>
+                    <graphic url="https://i.imgur.com/vfxQiYx.png" rend="pure-u-1-1"/>
+                    <graphic url="https://i.imgur.com/Wlf8GoD.jpg" rend="pure-u-1-3"/>
+                    <graphic url="https://i.imgur.com/LaCPF0q.jpg" rend="pure-u-2-3"/>
+                    <graphic url="https://i.imgur.com/KWLmMyY.jpg" rend="pure-u-3-4"/>
+                    <graphic url="https://i.imgur.com/tObvruE.png" rend="pure-u-1-4"/>
+                    <graphic url="https://i.imgur.com/mMkp4g6.jpg" rend="pure-u-1-3 bottom-left"/>
+                    <graphic url="https://i.imgur.com/cp4MKJd.jpg" rend="pure-u-2-3 bottom-right"/>
+                </figure>
+            </p>
+        </div>
     </div>
 
     <div>
@@ -171,5 +213,10 @@
                 target="#Romary2015">Romary 2015</ref>)</p>
 
     </div>
-   
+
+    <div>
+        <head>The Guidelines</head>
+        <p>TODO: How to use these Guidelines. </p>
+    </div>
+
 </div>

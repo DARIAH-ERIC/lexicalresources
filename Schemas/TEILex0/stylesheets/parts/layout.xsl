@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples"
-    xmlns:html="http://www.w3.org/1999/xhtml"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0"
-    exclude-result-prefixes="tei teix html">
+    xmlns:html="http://www.w3.org/1999/xhtml" xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+    version="2.0" exclude-result-prefixes="tei teix html">
 
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>[html] the main page structure</desc>
     </doc>
     <xsl:template name="mainPage">
-        <xsl:param name="currentID"/>        
+        <xsl:param name="currentID"/>
         <div id="layout" class="custom-layout language-xml" xmlns="http://www.w3.org/1999/xhtml">
             <!-- Menu toggle -->
             <a href="#menu" id="menuLink" class="menu-link" xmlns="http://www.w3.org/1999/xhtml">
@@ -17,64 +16,38 @@
                 <span/>
             </a>
             <div id="menu" class="custom-menu" xmlns="http://www.w3.org/1999/xhtml">
-                <div class="pure-menu" xmlns="http://www.w3.org/1999/xhtml">
-                    <a class="pure-menu-heading" href="#" xmlns="http://www.w3.org/1999/xhtml">TEI Lex-0</a>
-
-                  
-                    
-              
-
-                     <xsl:for-each select="descendant-or-self::tei:TEI/tei:text/tei:front">
+                <div class="pure-menu">
+                    <a class="pure-menu-heading" href="#">TEI Lex-0</a>
+                    <xsl:for-each select="descendant-or-self::tei:TEI/tei:text/tei:front">
                         <xsl:apply-templates/>
                     </xsl:for-each>
-                    
-                    
-                    
-                    
                 </div>
+                <ul class="pure-menu-list" xmlns="http://www.w3.org/1999/xhtml"
+                    style="position: fixed; bottom: 0; width: 325px; ">
+                    <li xmlns="http://www.w3.org/1999/xhtml" style="background: #191818">
+                        <a href="#" xmlns="http://www.w3.org/1999/xhtml" class="logos">
+                            <img src="images/dariah-lr.png" class="pure-img img-hover"/>
+                            <img src="images/dariah-lr-blue.png" class="pure-img img"/>
+                        </a>
+                    </li>
 
-                <ul class="pure-menu-list" xmlns="http://www.w3.org/1999/xhtml" style="position: fixed; bottom: 0; width: 325px; ">
-                   
                     <li xmlns="http://www.w3.org/1999/xhtml" style="background: #191818">
                         <a href="#" xmlns="http://www.w3.org/1999/xhtml" class="logos">
-                            <img src="images/dariah-lr.png"  class="pure-img img-hover"></img>
-                            <img src="images/dariah-lr-blue.png" class="pure-img img"></img>
+                            <img src="images/elexis.png" class="pure-img img-hover"/>
+                            <img src="images/elexis-blue.png" class="pure-img img"/>
                         </a>
                     </li>
-                    
-                    <li xmlns="http://www.w3.org/1999/xhtml" style="background: #191818">
-                        <a href="#" xmlns="http://www.w3.org/1999/xhtml" class="logos">
-                            <img src="images/elexis.png" class="pure-img img-hover"></img>
-                            <img src="images/elexis-blue.png" class="pure-img img"></img>
-                        </a>
+                    <li class="pure-menu-item h2020" xmlns="http://www.w3.org/1999/xhtml">
+                        Co-funded by the Horizon 2020 innovation and research programme of the European Union under grant no. 731015.
                     </li>
-                    
-                     <!--<li class="pure-menu-item" xmlns="http://www.w3.org/1999/xhtml">                        
-                    </li>-->
                 </ul>
 
             </div>
-
-            <!-- 
-            <xsl:if test="not($REQUEST = '')">
-                <div id="accessibility">
-                    <span class="tocontent">
-                        <a href="{$REQUEST}?style=text">Text only</a> | <a class="skiplinks"
-                            href="#rh-col" title="Go to main page content">Skip links</a>
-                    </span>
-                </div>
-            </xsl:if>
-            -->
-
-
-
-
             <xsl:choose>
                 <xsl:when test="$contentStructure = 'all' or tei:match(@rend, 'all')">
                     <div id="main">
                         <!-- <xsl:call-template name="col1"/>-->
                         <div class="header">
-            
                             <xsl:call-template name="hdr"/>
                         </div>
                         <div class="content">
@@ -104,8 +77,6 @@
                     </xsl:call-template>
                 </xsl:when> -->
             </xsl:choose>
-
-
         </div>
     </xsl:template>
 </xsl:stylesheet>
