@@ -69,7 +69,7 @@
         <xsl:param name="part"/>
         <xsl:param name="force"/>
         <xsl:if test="tei:div | tei:div1 | tei:div2 | tei:div3 | tei:div4 | tei:div5 | tei:div6">
-            <div class="toc{$force} toc_{$part}">
+            <div class="toc{$force} toc_{$part}" xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:apply-templates mode="maketoc"
                     select="tei:div | tei:div1 | tei:div2 | tei:div3 | tei:div4 | tei:div5 | tei:div6">
                     <xsl:with-param name="forcedepth" select="$force"/>
