@@ -964,7 +964,11 @@
             <etym>(<cit type="etymon" xml:lang="de">
                   <lang norm="de" xml:lang="sr">нем.</lang>
                   <form><orth>Krone</orth></form>
-               </cit>, из лат.)</etym>
+               </cit><pc>,</pc>
+               <cit type="etymon" xml:lang="la">
+                  <lbl xml:lang="sr">из</lbl>
+                  <lang expand="латински" norm="la">лат.</lang>
+               </cit>)</etym>
             <sense>
                <num>1.</num>
                <sense>
