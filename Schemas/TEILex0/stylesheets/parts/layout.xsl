@@ -23,22 +23,22 @@
                     </xsl:for-each>
                 </div>
                 <ul class="pure-menu-list" xmlns="http://www.w3.org/1999/xhtml"
-                    style="position: fixed; bottom: 0; width: 325px; ">
-                    <li xmlns="http://www.w3.org/1999/xhtml" style="background: #191818">
+                    style="position: fixed; bottom: 0; width: 325px;">
+                    <li class="dlogo" xmlns="http://www.w3.org/1999/xhtml" style="background: #1a252f">
                         <a href="#" xmlns="http://www.w3.org/1999/xhtml" class="logos">
                             <img src="images/dariah-lr.png" class="pure-img img-hover"/>
                             <img src="images/dariah-lr-blue.png" class="pure-img img"/>
                         </a>
                     </li>
 
-                    <li xmlns="http://www.w3.org/1999/xhtml" style="background: #191818">
+                    <li xmlns="http://www.w3.org/1999/xhtml" style="background: #1a252f">
                         <a href="#" xmlns="http://www.w3.org/1999/xhtml" class="logos">
                             <img src="images/elexis.png" class="pure-img img-hover"/>
                             <img src="images/elexis-blue.png" class="pure-img img"/>
                         </a>
                     </li>
-                    <li class="pure-menu-item h2020" xmlns="http://www.w3.org/1999/xhtml">
-                        Co-funded by the Horizon 2020 innovation and research programme of the European Union under grant no. 731015.
+                    <li class="pure-menu-item h2020" xmlns="http://www.w3.org/1999/xhtml" style="background: #1a252f">
+                        <p xmlns="http://www.w3.org/1999/xhtml">Co-funded by the Horizon 2020 innovation and research programme of the European Union under grant no. 731015.</p>
                     </li>
                 </ul>
 

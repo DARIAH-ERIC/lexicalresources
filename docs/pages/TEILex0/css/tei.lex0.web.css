@@ -16,23 +16,6 @@ html, button, input, select, textarea,
     font-size: 17px;
 }
 
-/*.logos {
-    margin-bottom: 5em;
-}
-
-.logo-dariah {
-    width:150px;
-    float:left;
-    vertical-align: bottom
-}
-
-.logo-elexis {
-    width: 220px;
-    float:right;
-    padding-top:15px;
-    vertical-align: bottom
-}*/
-
 .floatingText_body {
     background: bisque;
 	padding: 1em 2em;
@@ -63,6 +46,7 @@ span.attribute, span.att {
 .custom-menu {
     margin-left: -325px !important;
     width: 325px !important;
+    background: #1a252f !important;
 }
 
 @media (min-width: 48em) {
@@ -103,12 +87,19 @@ div.tocTree, div.toc {
     margin-top: 15px;
 }
 
+
+
+
 .toc-heading a.toc {
 /*resets the menu item padding*/
     padding:0 !important;
     padding-right: 13px !important;
     display: inline-block;
 
+}
+
+.toc-heading:hover a.toc {
+    color: #1f8dd6 !important; 
 }
 
 .toc-heading-number{
@@ -142,7 +133,6 @@ div.tocTree, div.toc {
   transform: translate(-50%, -50%) rotate(0deg);
   border-radius: 50%;
   cursor: pointer;
-  z-index: 100;
   transition: 0.4s cubic-bezier(0.2, 0.6, 0.3, 1.1);
 }
 
@@ -287,9 +277,10 @@ td.odd_label {width:100px;}
 }
 
 .logos .img, .logos .img-hover {
-    width:200px;
-    margin:0 3em;
-    padding-bottom:0.7em;
+    width:160px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logos .img-hover, .logos:hover .img {
@@ -299,6 +290,16 @@ td.odd_label {width:100px;}
 
 .logos:hover .img-hover{
     display:block;
+}
+
+.dlogo .logos img{
+    margin-bottom: 1em; 
+}
+
+.elogo .logos img{
+
+     
+     
 }
 
 /*terms in lists*/
@@ -324,5 +325,100 @@ tr.label {
 .h2020 {
     color: #999;
     font-size: 0.7em;
-    padding: 0 2em 1em 2em;
+    padding: 0.5em 2em 0.5em 2em;
+}
+
+.h2020 p {
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      padding: 1em 0;
+      text-align: center;
+      
+}
+
+.pure-menu-list {
+     background-image: url("../images/dkbl.png");
+}
+
+/* Accordion styles for examples */
+
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+.tabs pre[class *= "language-"] {
+    margin: 0; 
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab {
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+
+}
+.tab-label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em 1em;
+  background: #2c3e50;
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #1a252f;
+}
+.tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: white;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  background: #f2faff;
+}
+.tab-close {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #1a252f;
+}
+
+input:checked + .tab-label {
+  background: #1f8dd6;
+}
+input:checked + .tab-label::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 300vh;
+  padding: 1em;
 }

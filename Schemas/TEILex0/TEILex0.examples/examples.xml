@@ -32,7 +32,7 @@
                   <gram type="gender" value="feminine"/>
                </gramGrp>
                <orth extent="suffix" expand="abecedy">-y</orth>
-            </form>           
+            </form>
             <!--...-->
          </entry>
          <!-- TODO what to do about capitalization and labels in oRef?-->
@@ -58,8 +58,7 @@
                <orth xml:id="academy.lemma">academy</orth>
             </form>
             <cit type="example">
-               <quote>The Royal <ref type="oRef" target="#academy.lemma">A~</ref> of
-                  Arts</quote>
+               <quote>The Royal <ref type="oRef" target="#academy.lemma">A~</ref> of Arts</quote>
             </cit>
          </entry>
          <!--https://imgur.com/b9dNR9m.png-->
@@ -354,8 +353,11 @@
                   <ref type="sense">descendente</ref>
                </xr>
                <cit type="example">
-                  <quote>Certos povos crêem-se descendentes de um antepassado comum. o vaqueiro, pai do vaqueiro, o avô e outros antepassados mais antigos haviam-se acostumado a percorrer veredas, afastando o mato com as mãos. </quote>
-                  <bibl><author>G. RAMOS</author>, <title>Vidas Secas</title>, <citedRange>p. 96</citedRange></bibl>
+                  <quote>Certos povos crêem-se descendentes de um antepassado comum. o vaqueiro, pai
+                     do vaqueiro, o avô e outros antepassados mais antigos haviam-se acostumado a
+                     percorrer veredas, afastando o mato com as mãos. </quote>
+                  <bibl><author>G. RAMOS</author>, <title>Vidas Secas</title>, <citedRange>p.
+                        96</citedRange></bibl>
                </cit>
             </sense>
             <sense xml:id="antepassado_b_2" n="2">
@@ -551,8 +553,8 @@
                   <form><orth>chien</orth></form>
                </cit>
                <cit type="example" xml:lang="fr">
-                  <quote> Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui
-                     fais manger sa soupe. Le soir je lui siffle de venir se coucher</quote>
+                  <quote> Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui fais manger sa
+                     soupe. Le soir je lui siffle de venir se coucher</quote>
                   <bibl>RENARD, Poil de Carotte, 1894, p. 102.</bibl>
                   <cit type="translation" xml:lang="en">
                      <!-- included in the french cit, otherwise relation is lost -->
@@ -955,6 +957,46 @@
             <!--...-->
          </entry>
          <!--serbian-->
+         <entry xml:id="MM.RSSKJ.круна" xml:lang="sr">
+            <form type="lemma">
+               <orth>кру̏на</orth>
+            </form>
+            <etym>(<cit type="etymon" xml:lang="de">
+                  <lang norm="de" xml:lang="sr">нем.</lang>
+                  <form><orth>Krone</orth></form>
+               </cit>, из лат.)</etym>
+            <sense>
+               <num>1.</num>
+               <sense>
+                  <num>а)</num>
+                  <def>украс на глави као знак владарске власти;</def>
+               </sense>
+               <sense>
+                  <num>б)</num>
+                  <usg type="meaningType" expand="фигуративно" norm="figurative">фиг.</usg>
+                  <def>владар.</def>
+               </sense>
+            </sense>
+            <sense>
+               <num>2.</num>
+               <def>новчана јединица у неким европским земљама, разне вредности.</def>
+            </sense>
+            <sense>
+               <num>3.</num>
+               <def>део лиснатог дрвета изнад стабле (гране и лшће);</def>
+               <xr type="synonymy">
+                  <lbl>син.</lbl>
+                  <ref type="sense">крошња</ref>
+                  <pc>.</pc>
+               </xr>
+            </sense>
+            <sense>
+               <num>4.</num>
+               <usg type="meaningType" expand="фигуративно" norm="figurative">фиг.</usg>
+               <def>врхунац, највиши домет неког рада, забаве.</def>
+            </sense>
+         </entry>
+
          <entry xml:id="MZ.RGJS.сајдисльк_2" xml:lang="sr">
             <form type="lemma">
                <orth>сајдисль́к</orth>

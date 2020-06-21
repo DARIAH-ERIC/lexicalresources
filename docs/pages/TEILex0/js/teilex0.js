@@ -45,4 +45,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     });
 
+
+    /*open first example in example sets*/
+    document.querySelectorAll('.examples .tab input')[0].checked = true;
+
 });
