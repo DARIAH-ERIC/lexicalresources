@@ -49,4 +49,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     /*open first example in example sets*/
     document.querySelectorAll('.examples .tab input')[0].checked = true;
 
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'spec.html');
+    xhr.onload = function() {
+    if (xhr.status === 200) {
+        console.log(xhr);
+    }
+    else {
+        console.log('Request failed.  Returned status of ' + xhr.status);
+    }
+};
+xhr.send();
+
+
 });
