@@ -128,7 +128,38 @@
             </div>
         </xsl:for-each>
     </xsl:template>
-
+    
+    <xsl:template match="tei:list[@type='examples']">
+        <xsl:element name="ul" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="class">examples tabs</xsl:attribute>
+            <xsl:apply-templates></xsl:apply-templates>
+        </xsl:element> 
+    </xsl:template>
+    
+    <xsl:template match="tei:item[parent::tei:list[@type='examples']]">
+        <xsl:variable name="pos" select="position()"/>
+        <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="class">tab</xsl:attribute>
+            <input type="checkbox" xmlns="http://www.w3.org/1999/xhtml">
+                <!--will need another unique str. for id-->
+                <xsl:attribute name="id">
+                    <xsl:value-of select="concat('chck', $pos)"></xsl:value-of>
+                </xsl:attribute>    
+            </input>
+            <label class="tab-label" xmlns="http://www.w3.org/1999/xhtml">
+                    <xsl:attribute name="for">
+                        <xsl:value-of select="concat('chck', $pos)"/>
+                    </xsl:attribute>
+                    <text>
+                        <xsl:value-of select="concat('Example ', $pos)"/>
+                    </text>
+                </label>
+            <div class="tab-content" xmlns="http://www.w3.org/1999/xhtml">
+                    <xsl:apply-templates></xsl:apply-templates>
+                </div>
+        </xsl:element>
+    </xsl:template>
+    
  <!--   <xsl:template match="comment() | processing-instruction()" mode="egXML">
         <xsl:copy-of select="."/>
     </xsl:template>

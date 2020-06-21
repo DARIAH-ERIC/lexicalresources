@@ -7,10 +7,18 @@
       <head>General remarks</head>
       <p>An <gi>entry</gi> is a basic reference unit in a dictionary: it groups together all the
          information related to a particular lemma. For instance:</p>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#OALD1974">
-         <xi:include href="../TEILex0.examples/examples.stripped.xml"
-            corresp="../TEILex0.examples/examples.xml" xpointer="OALD.competitor"/>
-      </egXML>
+      <list type="examples">
+         <item>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#OALD1974">
+               <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="OALD.competitor"/>
+            </egXML>
+         </item>
+         <item>
+           <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Московљевић1990">
+               <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="MM.RSSKJ.круна"/>
+            </egXML>
+         </item>
+      </list>
    </div>
    <div>
       <head>Obligatory attributes</head>
@@ -22,19 +30,21 @@
       </list>
 
       <floatingText type="info-panel">
-         <body><head>Iinfo panel</head>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.</p>
-         <p>Consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.</p></body>
+         <body>
+            <head>Iinfo panel</head>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+               dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+               pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+               deserunt mollit anim id est laborum.</p>
+            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+               magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+               ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+               voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+               cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+               laborum.</p>
+         </body>
       </floatingText>
 
    </div>
