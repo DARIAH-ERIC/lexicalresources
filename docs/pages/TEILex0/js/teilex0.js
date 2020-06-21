@@ -22,44 +22,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
 
     document.querySelectorAll('pre').forEach(item => {
-      /*console.log(item);*/
-        /*var nextSibling = item.nextElementSibling;
-          console.log(nextSibling);*/
+        /*console.log(item);*/
+         /*var nextSibling = item.nextElementSibling;
+         console.log(nextSibling);*/
         item.querySelectorAll('.egXML_invalid').forEach(child => {
             item.classList.add('egXML_invalid');
 
-
-
-
             /*if (item.nextElementSibling.classList.contains('toolbar')) {
-                console.log(item);
-                Array.prototype.slice.call(item.nextElementSibling.querySelectorAll(".copy_button")).forEach(cp => {
-                    cp.style.disply='none';
-                })
+             console.log(item);
+             Array.prototype.slice.call(item.nextElementSibling.querySelectorAll(".copy_button")).forEach(cp => {
+             cp.style.disply='none';
+             })
 
-            } else {
-                console.log("none");
-            }*/
+             } else {
+             console.log("none");
+             }*/
         });
-
-
     });
 
 
     /*open first example in example sets*/
     document.querySelectorAll('.examples .tab input')[0].checked = true;
 
+    /*get spec */
+    var bib = document.getElementById('bibliography');
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'spec.html');
-    xhr.onload = function() {
-    if (xhr.status === 200) {
-        console.log(xhr);
-    }
-    else {
-        console.log('Request failed.  Returned status of ' + xhr.status);
-    }
-};
-xhr.send();
-
-
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            bib.parentNode.insertBefore(xhr.response, bib.nextSibling)
+        } else {
+            console.log('Request failed.  Returned status of ' + xhr.status);
+        }
+    };
+    xhr.send();
 });
