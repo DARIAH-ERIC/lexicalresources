@@ -10,30 +10,30 @@
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> Apr 24, 2012</xd:p>
             <xd:p><xd:b>Author:</xd:b> mholmes</xd:p>
-            <xd:p>This stylesheet is designed to post-process the TEI Guidelines HTML version in such a way that 
-                all id attributes on elements are provided with a tei_ prefix, and all href attributes linking to 
+            <xd:p>This stylesheet is designed to post-process the TEI Guidelines HTML version in such a way that
+                all id attributes on elements are provided with a tei_ prefix, and all href attributes linking to
                 them are similarly tweaked to keep all the links working. This is worth doing because we have
-                encountered difficulties with AdBlock Plus filters which have hidden elements arbitrarily on 
-                the main Guidelines site based on their ids; we believe that the tei_ prefix will make this less 
+                encountered difficulties with AdBlock Plus filters which have hidden elements arbitrarily on
+                the main Guidelines site based on their ids; we believe that the tei_ prefix will make this less
                 likely, and if it does happen, we will find it easier to convince the filter list maintainers to whitelist
                 tei_ prefixed ids.
             </xd:p>
         </xd:desc>
     </xd:doc>
-    
+
    <!-- this is hacky but easier to do than to figure out all the intricacies of TEI stylesheets
     will return to the stylesheets when time permits-->
-    
+
     <!--<xsl:template match="html">
         <xsl:copy></xsl:copy>
     </xsl:template>-->
-    
+
     <!--  <xsl:output method="xhtml" doctype-public="-//W3C//DTD XHTML 1.1//EN" doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"/>-->
-  
-    
+
+
     <!-- List of static ids referenced in CSS files, which we're leaving unchanged for now. -->
     <!--<xsl:variable name="staticIds" select="('banner', 'onecol', 'udm', 'container', 'accessibility', 'hdr2', 'hdr3', 'azindex', 'byMod')"/>-->
-    
+
     <!-- Template for matching id attributes. -->
     <!--<xsl:template match="@id">
         <xsl:choose>
@@ -44,9 +44,9 @@
                 <xsl:attribute name="id" select="concat('tei_', .)"/>
             </xsl:otherwise>
         </xsl:choose>
-        
+
     </xsl:template>-->
-    
+
     <!-- Template for matching local links. -->
     <!--<xsl:template match="@href[matches(., '.*#.+') and not(contains(., '://'))]">
         <xsl:choose>
@@ -58,7 +58,7 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>-->
-    
+
     <xsl:template match="div[@id = 'specification']">
         <xsl:result-document href="spec.html">
             <xsl:copy>
@@ -66,13 +66,13 @@
             </xsl:copy>
         </xsl:result-document>
     </xsl:template>
-    
-    
+
+
     <!-- Identity transform. -->
     <xsl:template match="@*|node()">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
-    
+
 </xsl:stylesheet>
