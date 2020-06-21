@@ -46,11 +46,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     /*get spec */
     var bib = document.getElementById('bibliography');
+    var temp = document.createElement('span');
+    temp.setAttribute("id", "get");
+    var get = bib.parentNode.insertBefore(temp, bib.nextSibling);
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'spec.html');
     xhr.onload = function () {
-        if (xhr.status === 200) {
-            bib.parentNode.insertBefore(xhr.response, bib.nextSibling)
+        if (xhr.status === 200) {   
+        
+        get.innerHTML = xhr.response;
         } else {
             console.log('Request failed.  Returned status of ' + xhr.status);
         }
