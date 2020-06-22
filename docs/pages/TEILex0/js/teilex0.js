@@ -53,8 +53,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     xhr.open('GET', 'spec.html');
     xhr.onload = function () {
         if (xhr.status === 200) {   
-        
         get.innerHTML = xhr.response;
+        Prism.highlightAllUnder(get);
         } else {
             console.log('Request failed.  Returned status of ' + xhr.status);
         }
