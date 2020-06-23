@@ -14,36 +14,49 @@
             </egXML>
          </item>
          <item>
-           <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Московљевић1990">
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Московљевић1990">
                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="MM.RSSKJ.круна"/>
             </egXML>
          </item>
       </list>
    </div>
    <div>
-      <head>Obligatory attributes</head>
-      <p>The TEI Lex-0 schema prescribes two obligatory attributes on <gi>entry</gi>:</p>
+      <head>Mandatory attributes</head>
+      <p>The TEI Lex-0 schema prescribes two mandatory attributes on <gi>entry</gi>:</p>
       <list>
-         <item><att>xml:id</att>, which <hi rend="italic">uniquely</hi> identifies the element it is
-            associated with across the TEI document</item>
-         <item><att>xml:lang</att>, which indicates the source language of the entry.</item>
+         <item><att>xml:id</att>
+            <hi rend="italic">uniquely</hi> identifies the element it is associated with;</item>
+         <item><att>xml:lang</att> identifies the object language of the element it is associated
+            with.</item>
       </list>
+      <p>In XML, <att>xml:lang</att> is inherited from the immediately enclosing element or from its
+         closest ancestor that has this attribute. This means that in XML not every element needs to
+         have the <att>xml:lang</att> attribute. </p>
+      <p>TEI Lex-0 recommends that <att>xml:lang</att> be attached to so-called container elements
+         (such as <gi>entry</gi> and <gi>cit</gi>) rather than individual <gi>form</gi> elements. </p>
+      <p>In addition, TEI Lex-0 privileges <code>&lt;entry></code> as the dictioanry's central
+         textual component by requiring both a uniqe identifier (<att>xml:id</att>) as well as
+            <att>xml:lang</att>. </p>
 
       <floatingText type="info-panel">
          <body>
-            <head>Iinfo panel</head>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-               dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-               pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-               deserunt mollit anim id est laborum.</p>
-            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-               magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-               ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-               voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-               cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-               laborum.</p>
+            <head>Naming your languages </head>
+            <p><att>xml:lang</att> identifies the object language of the element it is associated
+               with. The language ‘tag’ (i.e. the value of this attribute) must follow <ref
+                  target="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">IETF BCP 47</ref>, the
+               Internet Engineering Task Force's best-practice document outlining standard
+               identifiers for labeling language content. To learn more about what language tag is
+               appropriate for your project, check out W3C's useful resource on <ref
+                  target="https://www.w3.org/International/questions/qa-choosing-language-tags.en"
+                  >choosing language tags</ref>. </p>
+            <p>If the language or language variety you are working on are not defined in BCP 47,
+               make sure to follow the syntax of Private Use Tags described in BCP 47 <ref
+                  target="https://tools.ietf.org/html/bcp47#section-2.2.7">Section 2.2.7</ref> when
+               creating one. Do this only if you are absolutely certain that no standard tag exists
+               for your object language. </p>
+            <p>If you have created a "private" language tag, you can validate it (in terms of its
+               structural well-formedness and validity) using <ref
+                  target="https://schneegans.de/lv/"> BCP 47 validator</ref>.</p>
          </body>
       </floatingText>
 
