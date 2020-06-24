@@ -7199,16 +7199,16 @@ ${caret}</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.examples/examples.xml</String>
+                                    <String>TEILex0.parts/40__specification.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>XML</String>
+                                        <String>ANT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -7219,16 +7219,39 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>xproc/teilex0.xpl</String>
+                                    <String>TEILex0.odd</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
                                         <String>TEILex0: Generate documentation</String>
+                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XPROC</String>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.examples/examples.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -7259,23 +7282,20 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.odd</String>
+                                    <String>xproc/teilex0.xpl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
                                         <String>TEILex0: Generate documentation</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>ANT</String>
                                         <String>XPROC</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
-                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -7352,26 +7372,6 @@ ${caret}</String>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.parts/40__specification.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>ANT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -7913,7 +7913,7 @@ ${caret}</String>
                                     <String>${pd}/out/TEILex0.rng</String>
                                 </field>
                                 <field name="openInEditor">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="showInHTMLPane">
                                     <Boolean>false</Boolean>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
 <?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
-<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="specification">
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xml:id="specification">
     <head>Specification</head>
     <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
 
@@ -33,8 +34,9 @@
         <!--<moduleRef key="iso-fs" except="bicond binary cond default fDecl fDescr fLib fsConstraints fsDecl fsDescr fsdDecl fsdLink fvLib if iff numeric then vAlt vColl vDefault"/>
                     -->
         <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
+        <!--2020-06-23 (TT): add profileDesc so that we can document langUsage-->
         <moduleRef key="header"
-            include="teiHeader fileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc projectDesc seriesStmt
+            include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc projectDesc seriesStmt
                         notesStmt authority distributor idno edition funder availability licence appInfo classDecl namespace tagUsage tagsDecl rendition"/>
 
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
@@ -207,7 +209,7 @@
         <elementSpec ident="ref" mode="change">
             <!--2020-05-14 (TT): to allow expand on ref-->
             <classes mode="change">
-                <memberOf key="att.lexicographic"></memberOf>
+                <memberOf key="att.lexicographic"/>
             </classes>
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
@@ -424,21 +426,59 @@
                 <memberOf key="model.emphLike" mode="add"/>
             </classes>
         </elementSpec>
-        
+
         <!--2020-05-14 add orth and pron to att.datable.w3c to allow @notBefore etc.-->
-        
+
         <elementSpec ident="orth" mode="change">
             <classes mode="change">
-                <memberOf key="att.datable.w3c" mode="add"></memberOf>
+                <memberOf key="att.datable.w3c" mode="add"/>
             </classes>
         </elementSpec>
-        
+
         <elementSpec ident="pron" mode="change">
             <classes mode="change">
-                <memberOf key="att.datable.w3c" mode="add"></memberOf>
+                <memberOf key="att.datable.w3c" mode="add"/>
             </classes>
         </elementSpec>
-      
+
+<!--        2020-06-24 (TT): allowing langUsage and language to document language tags
+-->
+        <elementRef key="langUsage"/>
+        <elementSpec ident="langUsage" mode="change">
+            <classes mode="change">
+                <memberOf key="att.global" mode="delete"/>
+                <memberOf key="att.global.rendition" mode="delete"/>
+                <memberOf key="att.global.linking" mode="delete"/>
+                <memberOf key="att.global.analytic" mode="delete"/>
+                <memberOf key="att.global.facs" mode="delete"/>
+                <memberOf key="att.global.responsibility" mode="delete"/>
+                <memberOf key="att.global.source" mode="delete"/>
+                <memberOf key="att.global.change" mode="delete"/>
+                <memberOf key="att.declarable" mode="delete"/>
+            </classes>
+        </elementSpec>
+
+        <elementRef key="language"/>
+        <elementSpec ident="language" mode="change">
+
+            <classes mode="change">
+                <memberOf key="att.global" mode="delete"/>
+                <memberOf key="att.global.rendition" mode="delete"/>
+                <memberOf key="att.global.linking" mode="delete"/>
+                <memberOf key="att.global.analytic" mode="delete"/>
+                <memberOf key="att.global.facs" mode="delete"/>
+                <memberOf key="att.global.responsibility" mode="delete"/>
+                <memberOf key="att.global.source" mode="delete"/>
+            </classes>
+           <!-- text node here is to remove the insane macro.phraseSeq.limited
+            which we really don't need; we want language ident in an attribute
+            and the human-readable name of the language as a child text node 
+            of <language>, not all that baggage -->
+            <content>
+                <textNode/>
+            </content>
+
+        </elementSpec>
 
         <!-- Class related declaration here -->
 
@@ -458,6 +498,7 @@
                 <memberOf key="model.entryPart.top" mode="add"/>
             </classes>
         </classSpec>
+
 
         <!--2018-09-02 (TT): Added PB's useful class modifications-->
         <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
@@ -504,8 +545,7 @@
                                 <def>'hin- und herlaufen'</def>
                             </sense>
                         </cit>
-                        <seg type="desc" part="F">zurückgeführt</seg>; <seg type="desc" part="I"
-                            >evtl. auch auf </seg>
+                        <seg type="desc" part="F">zurückgeführt</seg>; <seg type="desc" part="I">evtl. auch auf </seg>
                         <cit type="etymon">
                             <lang>fnhd.</lang>
                             <form>

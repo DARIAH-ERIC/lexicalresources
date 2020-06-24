@@ -22,12 +22,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
 
     document.querySelectorAll('pre').forEach(item => {
-        /*console.log(item);*/
-         /*var nextSibling = item.nextElementSibling;
-         console.log(nextSibling);*/
+
         item.querySelectorAll('.egXML_invalid').forEach(child => {
             item.classList.add('egXML_invalid');
-
+            item.closest('.tab-content').classList.add('egXML_invalid');
             /*if (item.nextElementSibling.classList.contains('toolbar')) {
              console.log(item);
              Array.prototype.slice.call(item.nextElementSibling.querySelectorAll(".copy_button")).forEach(cp => {
@@ -42,7 +40,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     /*open first example in example sets*/
-    document.querySelectorAll('.examples .tab input')[0].checked = true;
+    /*document.querySelectorAll('.examples .tab input')[0].checked = true;*/
+    document.querySelectorAll('.examples').forEach(set => {
+        set.querySelector('.tab').querySelector('input').checked = true; 
+    });
+     
 
     /*get spec */
     var bib = document.getElementById('bibliography');
