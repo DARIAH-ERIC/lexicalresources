@@ -15,7 +15,13 @@
             <p>Information about the source</p>
          </sourceDesc>
       </fileDesc>
-   </teiHeader>
+      <profileDesc>
+         <langUsage>
+            <language ident="mix">ddsdsd</language>
+            <language ident="mix-x-YCNY"></language>
+         </langUsage>
+      </profileDesc>
+        </teiHeader>
    <text>
       <body>
          <!--organize entries alphabetically-->

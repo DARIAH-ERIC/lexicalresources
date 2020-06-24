@@ -6,10 +6,10 @@
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>Process elements teix:egXML</desc>
     </doc>
-    <xsl:template match="teix:egXML">
-        <xsl:param name="simple">false</xsl:param>
+    
+    <xsl:template name="processExample">
+        <xsl:param name="simple"></xsl:param>
         <xsl:param name="highlight"/>
-  
         <pre>
             <code>
             <xsl:attribute name="id">
@@ -32,8 +32,6 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:attribute>
-
-       
                 <xsl:choose>
                     <xsl:when test="$simple = 'true'">
                         <xsl:apply-templates mode="verbatim">
@@ -54,7 +52,40 @@
                 </xsl:choose>
         </code>
         </pre>
+    
     </xsl:template>
+    
+    <xsl:template match="teix:egXML[ancestor::tei:div[@xml:id='specification']]">
+        <xsl:param name="simple">false</xsl:param>
+        <xsl:param name="highlight"/>
+        <xsl:call-template name="processExample">
+            <xsl:with-param name="simple"></xsl:with-param>
+            <xsl:with-param name="highlight"></xsl:with-param>
+        </xsl:call-template>
+        
+    </xsl:template>
+    
+    <xsl:template match="teix:egXML[not(ancestor::tei:list[@type='examples'])][not(ancestor::tei:div[@xml:id='specification'])]">
+        <xsl:element name="ul" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="class">examples tabs</xsl:attribute>
+        <xsl:call-template name="wrapExample">
+            <xsl:with-param name="position" select="''"></xsl:with-param>
+        </xsl:call-template>
+        </xsl:element>
+       
+    </xsl:template>
+    
+    <xsl:template match="teix:egXML[ancestor::tei:list[@type='examples']][not(ancestor::tei:div[@xml:id='specification'])]">
+        <xsl:param name="simple">false</xsl:param>
+        <xsl:param name="highlight"/>
+        <xsl:variable name="pos-in-list" 
+            select="count(../preceding-sibling::tei:item) + 1"/>
+        <xsl:call-template name="wrapExample">
+            <xsl:with-param name="position" select="$pos-in-list"></xsl:with-param>
+        </xsl:call-template> 
+    </xsl:template>
+    
+
     
     <xsl:template name="egXMLEndHook">
         <xsl:choose>
@@ -136,29 +167,46 @@
         </xsl:element> 
     </xsl:template>
     
-    <xsl:template match="tei:item[parent::tei:list[@type='examples']]">
+ <!--   <xsl:template match="tei:item[parent::tei:list[@type='examples']]">
         <xsl:variable name="pos" select="position()"/>
+        
+        <xsl:call-template name="wrapExample">
+            <xsl:with-param name="position" select="$pos"></xsl:with-param>
+        </xsl:call-template>
+        
+       
+    </xsl:template>-->
+    
+    
+    <xsl:template name="wrapExample">
+        <xsl:param name="position"></xsl:param>   
         <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">tab</xsl:attribute>
             <input type="checkbox" xmlns="http://www.w3.org/1999/xhtml">
                 <!--will need another unique str. for id-->
                 <xsl:attribute name="id">
-                    <xsl:value-of select="concat('chck', $pos)"></xsl:value-of>
+                    <xsl:value-of select="concat('chck', generate-id())"></xsl:value-of>
                 </xsl:attribute>    
             </input>
             <label class="tab-label" xmlns="http://www.w3.org/1999/xhtml">
-                    <xsl:attribute name="for">
-                        <xsl:value-of select="concat('chck', $pos)"/>
-                    </xsl:attribute>
-                    <text>
-                        <xsl:value-of select="concat('Example ', $pos)"/>
-                    </text>
-                </label>
+                <xsl:attribute name="for">
+                    <xsl:value-of select="concat('chck', generate-id())"/>
+                </xsl:attribute>
+                <text>
+                    <xsl:value-of select="concat('Example ', $position)"/>
+                </text>
+            </label>
             <div class="tab-content" xmlns="http://www.w3.org/1999/xhtml">
-                    <xsl:apply-templates></xsl:apply-templates>
-                </div>
+                <!--<xsl:apply-templates></xsl:apply-templates>-->
+                <xsl:call-template name="processExample">
+                    <xsl:with-param name="simple"></xsl:with-param>
+                    <xsl:with-param name="highlight"></xsl:with-param>
+                </xsl:call-template>
+            </div>
         </xsl:element>
+        
     </xsl:template>
+    
     
  <!--   <xsl:template match="comment() | processing-instruction()" mode="egXML">
         <xsl:copy-of select="."/>

@@ -74,8 +74,8 @@ pre[class *= "language-"] {
 
 /*invalid*/
 
-pre[class *= "egXML_invalid"]{
-    background: #ffe6e6;
+pre[class *= "egXML_invalid"], .egXML_invalid {
+    background: #ffe6e6 !important;
 
 }
 

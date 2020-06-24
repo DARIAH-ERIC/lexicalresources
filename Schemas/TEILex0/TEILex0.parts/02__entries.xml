@@ -49,14 +49,17 @@
                appropriate for your project, check out W3C's useful resource on <ref
                   target="https://www.w3.org/International/questions/qa-choosing-language-tags.en"
                   >choosing language tags</ref>. </p>
-            <p>If the language or language variety you are working on are not defined in BCP 47,
-               make sure to follow the syntax of Private Use Tags described in BCP 47 <ref
+            <p>If the language or language variety you are working on is not covered by BCP 47, make
+               sure to follow the syntax of Private Use Tags described in BCP 47 <ref
                   target="https://tools.ietf.org/html/bcp47#section-2.2.7">Section 2.2.7</ref> when
                creating one. Do this only if you are absolutely certain that no standard tag exists
                for your object language. </p>
             <p>If you have created a "private" language tag, you can validate it (in terms of its
                structural well-formedness and validity) using <ref
                   target="https://schneegans.de/lv/"> BCP 47 validator</ref>.</p>
+            <p>Language tags containing private-use subtags should be documented in the TEI header,
+               specifically using one or more <gi>language</gi> elements grouped under
+                  <gi>langUsage</gi> inside <gi>profileDesc</gi>.</p>
          </body>
       </floatingText>
 
