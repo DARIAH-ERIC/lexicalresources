@@ -17,7 +17,14 @@ then transform using tei-stripper.xsl-->
             <p>Information about the source</p>
          </sourceDesc>
       </fileDesc>
-   </teiHeader>
+     <!-- TODO: check with Jack-->
+      <profileDesc>
+         <langUsage>
+            <language ident="mix">Mixtepec Mixtec</language>
+            <language ident="mix-x-YCNY">Yucanany Mixtec</language>
+         </langUsage>
+      </profileDesc>
+        </teiHeader>
    <text>
       <body>
          <!--organize entries alphabetically-->
