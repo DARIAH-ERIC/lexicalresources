@@ -38,7 +38,7 @@
          textual component by requiring both a uniqe identifier (<att>xml:id</att>) as well as
             <att>xml:lang</att>. </p>
 
-      <floatingText type="info-panel">
+      <floatingText type="inFocusPanel" xml:id="naming-your-languages">
          <body>
             <head>Naming your languages </head>
             <p><att>xml:lang</att> identifies the object language of the element it is associated
@@ -55,11 +55,20 @@
                creating one. Do this only if you are absolutely certain that no standard tag exists
                for your object language. </p>
             <p>If you have created a "private" language tag, you can validate it (in terms of its
-               structural well-formedness and validity) using <ref
+               structural well-formedness and validity) using the <ref
                   target="https://schneegans.de/lv/"> BCP 47 validator</ref>.</p>
             <p>Language tags containing private-use subtags should be documented in the TEI header,
                specifically using one or more <gi>language</gi> elements grouped under
-                  <gi>langUsage</gi> inside <gi>profileDesc</gi>.</p>
+                  <gi>langUsage</gi> inside <gi>profileDesc</gi>:</p>
+            
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <profileDesc>
+                  <langUsage>
+                     <language ident="mix">Mixtepec Mixtec</language>
+                     <language ident="mix-x-YCNY">Yucanany Mixtec</language>
+                  </langUsage>
+               </profileDesc>
+            </egXML>
          </body>
       </floatingText>
 

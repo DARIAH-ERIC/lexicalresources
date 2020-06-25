@@ -375,6 +375,7 @@ input {
   background: #2c3e50;
   font-weight: bold;
   cursor: pointer;
+  align-items: center; 
   /* Icon */
 }
 .tab-label:hover {
@@ -383,11 +384,21 @@ input {
 .tab-label::after {
   content: "\276F";
   width: 1em;
-  height: 1em;
+  
   text-align: center;
   -webkit-transition: all .35s;
   transition: all .35s;
 }
+
+.tab-label .pure-img {
+  height: 22px;
+}
+
+span.label img {
+    display:inline-block;
+    margin-right: 1em;
+}
+
 .tab-content {
   max-height: 0;
   padding: 0 1em;
@@ -396,7 +407,18 @@ input {
   -webkit-transition: all .35s;
   transition: all .35s;
   background: #f2faff;
+  overflow: hidden;
 }
+
+.infopanels .tab-content {
+   background: bisque;
+}
+
+.infopanels .tab-content div.panelContent {
+    padding: 0 1em;
+}
+
+
 .tab-close {
   display: -webkit-box;
   display: flex;
@@ -415,6 +437,7 @@ input:checked + .tab-label {
   background: #1f8dd6;
 }
 input:checked + .tab-label::after {
+  transform-orgin: 
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
