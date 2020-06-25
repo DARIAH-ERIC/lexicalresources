@@ -66,6 +66,10 @@ span.attribute, span.att {
 }
 
 
+.pure-menu {
+    padding-bottom: 50vh; 
+}
+
 .pure-menu-item {
     display:block;
     border: none;
