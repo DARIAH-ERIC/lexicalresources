@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     /*open first example in example sets*/
     /*document.querySelectorAll('.examples .tab input')[0].checked = true;*/
-    document.querySelectorAll('.examples').forEach(set => {
+    document.querySelectorAll('.tabs').forEach(set => {
         set.querySelector('.tab').querySelector('input').checked = true; 
     });
      
