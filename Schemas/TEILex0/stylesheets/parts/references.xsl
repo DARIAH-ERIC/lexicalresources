@@ -12,8 +12,10 @@
         <xsl:choose>
             <xsl:when test="$howManyAuthors eq 1">
                 <xsl:value-of select="tei:author/tei:persName/tei:surname"/>
-                <xsl:text>, </xsl:text>
-                <xsl:value-of select="tei:author/tei:persName/tei:forename"/>
+                <xsl:if test="tei:author/tei:persName/tei:forename">
+                    <xsl:text>, </xsl:text>
+                    <xsl:value-of select="tei:author/tei:persName/tei:forename"/>
+                </xsl:if>
                 <xsl:text>. </xsl:text>
             </xsl:when>
             <xsl:otherwise>
@@ -21,23 +23,29 @@
                     <xsl:choose>
                         <xsl:when test="position() eq 1">
                             <xsl:value-of select="tei:persName/tei:surname"/>
-                            <xsl:text>, </xsl:text>
-                            <xsl:value-of select="tei:persName/tei:forename"/>
+                            <xsl:if test="tei:persName/tei:forename">
+                                <xsl:text>, </xsl:text>
+                                <xsl:value-of select="tei:persName/tei:forename"/>
+                            </xsl:if>
                             <xsl:if test="$howManyAuthors > 2">
                                 <xsl:text>, </xsl:text>
                             </xsl:if>
                         </xsl:when>
                         <xsl:when test="position() eq last()">
                             <xsl:text> and </xsl:text>
-                            <xsl:value-of select="tei:persName/tei:forename"/>
-                            <xsl:text> </xsl:text>
+                            <xsl:if test="tei:persName/tei:forename">
+                                <xsl:value-of select="tei:persName/tei:forename"/>
+                                <xsl:text> </xsl:text>
+                            </xsl:if>
                             <xsl:value-of select="tei:persName/tei:surname"/>
                             <xsl:text>. </xsl:text>
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:text> </xsl:text>
-                            <xsl:value-of select="tei:persName/tei:forename"/>
-                            <xsl:text> </xsl:text>
+                            <xsl:if test="tei:persName/tei:forename">
+                                <xsl:value-of select="tei:persName/tei:forename"/>
+                                <xsl:text> </xsl:text>
+                            </xsl:if>
                             <xsl:value-of select="tei:persName/tei:surname"/>
                             <xsl:if test="position() != ($howManyAuthors - 1)">
                                 <xsl:text>, </xsl:text>
@@ -73,7 +81,7 @@
                 <xsl:value-of select="tei:idno/@type"/>
                 <xsl:text>: </xsl:text>
             </xsl:if>
-            <xsl:apply-templates select="tei:idno"></xsl:apply-templates>
+            <xsl:apply-templates select="tei:idno"/>
             <xsl:text>.</xsl:text>
         </xsl:if>
     </xsl:template>
@@ -83,8 +91,9 @@
             <xsl:value-of select="tei:title"/>
         </i>
 
-        <xsl:choose> 
-            <xsl:when test="tei:imprint/tei:biblScope[@unit = 'volume'] and tei:imprint/tei:biblScope[@unit = 'page']">
+        <xsl:choose>
+            <xsl:when
+                test="tei:imprint/tei:biblScope[@unit = 'volume'] and tei:imprint/tei:biblScope[@unit = 'page']">
                 <xsl:text> </xsl:text>
                 <xsl:value-of select="tei:imprint/tei:biblScope[@unit = 'volume']"/>
                 <xsl:text>: </xsl:text>
@@ -100,7 +109,7 @@
                 <xsl:text>.</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
-        
+
 
     </xsl:template>
 
@@ -111,28 +120,30 @@
             <xsl:value-of select="tei:author/tei:orgName"/>
         </xsl:if>
         <xsl:if test="tei:author/tei:persName">
-           <!-- this needs to be extended to include multiple authors
+            <!-- this needs to be extended to include multiple authors
             TODO create a separate template for puncutation and "ands" when listing authors-->
             <xsl:value-of select="tei:author/tei:persName/tei:surname"/>
-            <xsl:text>, </xsl:text>
-            <xsl:value-of select="tei:author/tei:persName/tei:forename"/>
+            <xsl:if test="tei:author/tei:persName/tei:forename">
+                <xsl:text>, </xsl:text>
+                <xsl:value-of select="tei:author/tei:persName/tei:forename"/>
+            </xsl:if>
         </xsl:if>
         <xsl:text>. </xsl:text>
         <xsl:value-of select="tei:imprint/tei:date"/>
         <xsl:text>. </xsl:text>
         <i>
-            <xsl:choose> 
-            <xsl:when test="tei:title[@ref]">
-                <xsl:element name="a" xmlns="http://www.w3.org/1999/xhtml">
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="tei:title/@ref"/>
-                    </xsl:attribute>
+            <xsl:choose>
+                <xsl:when test="tei:title[@ref]">
+                    <xsl:element name="a" xmlns="http://www.w3.org/1999/xhtml">
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="tei:title/@ref"/>
+                        </xsl:attribute>
+                        <xsl:value-of select="tei:title"/>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
                     <xsl:value-of select="tei:title"/>
-                </xsl:element>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="tei:title"/>
-            </xsl:otherwise>
+                </xsl:otherwise>
             </xsl:choose>
             <xsl:text>. </xsl:text>
         </i>
@@ -155,7 +166,7 @@
                 <xsl:value-of select="tei:idno/@type"/>
                 <xsl:text>: </xsl:text>
             </xsl:if>
-            <xsl:apply-templates select="tei:idno"></xsl:apply-templates>
+            <xsl:apply-templates select="tei:idno"/>
             <xsl:text>.</xsl:text>
         </xsl:if>
     </xsl:template>
@@ -232,8 +243,8 @@
                             <xsl:call-template name="makeAnchor"/>
                             <!--         <xsl:apply-templates select="tei:analytic" mode="mla"/>
                             <xsl:apply-templates select="tei:monogr" mode="mla"/>-->
-                            
-                            <xsl:apply-templates select="."></xsl:apply-templates>
+
+                            <xsl:apply-templates select="."/>
                         </li>
                     </xsl:for-each>
                 </ol>
@@ -269,33 +280,34 @@
         </xsl:choose>
 
     </xsl:template>
-    
-    <xsl:template match="tei:idno[ lower-case( @type ) = 'arxiv']">
+
+    <xsl:template match="tei:idno[lower-case(@type) = 'arxiv']">
         <xsl:text> </xsl:text>
         <xsl:call-template name="makeExternalLink">
             <xsl:with-param name="ptr" select="false()"/>
             <xsl:with-param name="dest">
-                <xsl:value-of select="concat( 'https://arxiv.org/abs/', normalize-space(.) )"/>
+                <xsl:value-of select="concat('https://arxiv.org/abs/', normalize-space(.))"/>
             </xsl:with-param>
         </xsl:call-template>
     </xsl:template>
-    
-    <xsl:template match="tei:idno[ lower-case( @type ) = 'isbn']">
+
+    <xsl:template match="tei:idno[lower-case(@type) = 'isbn']">
         <xsl:text> </xsl:text>
         <xsl:call-template name="makeExternalLink">
             <xsl:with-param name="ptr" select="false()"/>
             <xsl:with-param name="dest">
-                <xsl:value-of select="concat( 'https://www.worldcat.org/search?q=bn%3A', normalize-space(.) )"/>
+                <xsl:value-of
+                    select="concat('https://www.worldcat.org/search?q=bn%3A', normalize-space(.))"/>
             </xsl:with-param>
         </xsl:call-template>
     </xsl:template>
-    
-    <xsl:template match="tei:idno[ lower-case( @type ) = 'hal']">
+
+    <xsl:template match="tei:idno[lower-case(@type) = 'hal']">
         <xsl:text> </xsl:text>
         <xsl:call-template name="makeExternalLink">
             <xsl:with-param name="ptr" select="false()"/>
             <xsl:with-param name="dest">
-                <xsl:value-of select="concat( 'https://hal.inria.fr/', normalize-space(.) )"/>
+                <xsl:value-of select="concat('https://hal.inria.fr/', normalize-space(.))"/>
             </xsl:with-param>
         </xsl:call-template>
     </xsl:template>
@@ -310,7 +322,7 @@
         <xsl:param name="dest"/>
         <xsl:param name="body"/>
         <xsl:param name="class">
-           
+
             <xsl:text>link_</xsl:text>
             <xsl:value-of select="local-name(.)"/>
         </xsl:param>
@@ -423,5 +435,5 @@
         </xsl:choose>
     </xsl:template>
 
-  
+
 </xsl:stylesheet>
