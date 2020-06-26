@@ -479,9 +479,22 @@
             </content>
 
         </elementSpec>
+        <!--2020-06-25 (TT): num, to be used strictly for numbering entries and senses -->        
+        <elementSpec ident="num" mode="change">
+            <classes mode="replace">
+                <memberOf key="model.entryPart.top"></memberOf>
+                <memberOf key="model.sensePart"></memberOf>      
+            </classes>
+            <!--same as with language above-->
+            <content>
+                <textNode/>
+            </content>
+        </elementSpec>
 
         <!-- Class related declaration here -->
 
+        
+        
         <!-- Introducing new class for the content model of <sense> -->
         <!-- Elements remaining to be put in: dictScrap     re -->
         <!-- and we add: sense to simplify the content model <= but do we want that?!?-->
@@ -498,7 +511,6 @@
                 <memberOf key="model.entryPart.top" mode="add"/>
             </classes>
         </classSpec>
-
 
         <!--2018-09-02 (TT): Added PB's useful class modifications-->
         <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
@@ -580,6 +592,8 @@
                 </alternate>
             </content>
         </macroSpec>
+        
+        
 
     </schemaSpec>
 </div>
