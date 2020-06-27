@@ -16,6 +16,15 @@ html, button, input, select, textarea,
     font-size: 17px;
 }
 
+
+.pure-menu-heading {
+    position: fixed;
+display: block;
+width: 100%;
+z-index: 999;
+}
+
+
 .floatingText_body {
     background: bisque;
 	padding: 1em 2em;
@@ -35,7 +44,7 @@ span.attribute, span.att {
     color: #f5844c;
 }
 
-.tei_toc {padding-top: 15px;}
+.tei_toc {padding-top: 50px;}
 .tei_toc h2 {display:none;}
 
 .maintitle {
@@ -204,17 +213,28 @@ pre.teiCode{
 
 /*images*/
 
+img {
+    display:block; 
+}
+
+img.padded {
+    padding: 1em;
+}
+
 div.figure {
     position: relative;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 2em;
     text-align: center;
 }
 
-div.figure, div.thumbnail img {
-    border-radius:0.3em;
+div.figure img, div.thumbnail img {
+    border-radius:0.4em;
     border: 1px solid gainsboro;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
 
 div.caption {
@@ -223,6 +243,10 @@ div.caption {
     font-size:0.8em !important;
     left: 50%; transform: translateX(-50%);
     bottom:0;
+}
+
+div.figure div.caption {
+    bottom: -2em;
 }
 
 div.gallery div.caption {
@@ -234,8 +258,9 @@ div.gallery {
   margin-bottom: 2em;
   /* Prevent vertical gaps */
   line-height: 0;
-  border-radius: 0.3em;
+  border-radius: 0.4em;
   text-align: center;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -253,19 +278,19 @@ div.thumbnail {
 }
 
 .imgwrapper.top-left img {
-    border-top-left-radius: 0.3em;
+    border-top-left-radius: 0.4em;
 }
 
 .imgwrapper.top-right img {
-    border-top-right-radius: 0.3em;
+    border-top-right-radius: 0.4em;
 }
 
 .imgwrapper.bottom-right img {
-    border-bottom-right-radius: 0.3em;
+    border-bottom-right-radius: 0.4em;
 }
 
 .imgwrapper.bottom-left img {
-    border-bottom-left-radius: 0.3em;
+    border-bottom-left-radius: 0.4em;
 }
 
 /*specification overrides
@@ -350,7 +375,7 @@ tr.label {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
-  margin: 0;
+  margin: 1em 0 1em 0;
   padding: 0;
 }
 

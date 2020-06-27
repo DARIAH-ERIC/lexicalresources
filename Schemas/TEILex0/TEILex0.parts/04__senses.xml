@@ -41,7 +41,7 @@
         <p>In TEI Lex-0, <gi>sense</gi> has a mandatory <att>xml:id</att>.</p>
     </div>
     <div>
-        <head>A limited number of possible contexts for <gi>def</gi></head>
+        <head>Limiting contexts for <gi>def</gi></head>
         <p>In the current TEI guidelines, <gi>def</gi> is allowed to be used within the
             following elements:</p>
         <list type="unordered">
@@ -56,7 +56,7 @@
             embedding <gi>def</gi> within a <gi>sense</gi>.</p>
     </div>
     <div>
-        <head>Encoding sense in entries with multiple parts of speech</head>
+        <head>Senses with multiple parts of speech</head>
         <p>For multi-POS lexical entries, TEI Lex-0 considers each POS as a trigger for
             a new sense. Consequently, we recommend encoding grammatical information in
             each sense coming after the first one to be serialised inside the semantic
@@ -125,5 +125,5 @@
                 corresp="../TEILex0.examples/examples.xml" xpointer="bray"/>
         </egXML>
     </div>
+    
 </div>
-

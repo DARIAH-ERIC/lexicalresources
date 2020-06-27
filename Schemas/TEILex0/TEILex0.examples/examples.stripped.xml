@@ -23,7 +23,7 @@ then transform using tei-stripper.xsl-->
             <language ident="mix-x-YCNY">Yucanany Mixtec</language>
          </langUsage>
       </profileDesc>
-        </teiHeader>
+   </teiHeader>
    <text>
       <body>
          <!--organize entries alphabetically-->
@@ -465,6 +465,39 @@ then transform using tei-stripper.xsl-->
                </entry>
             </sense>
          </entry>
+         <entry xml:lang="pt" xml:id="DLPC.bombeiro" type="mainEntry">
+            <form type="lemma">
+               <orth>bombeiro</orth>
+            </form>
+            <!--etc. -->
+            <sense xml:id="bombeiro.1">
+               <!--etc. -->
+               <entry xml:id="DLPC.bombeiro_voluntario" xml:lang="pt" type="relatedEntry">
+                  <form type="lemma">
+                     <orth>bombeiro voluntário</orth>
+                  </form>
+                  <gramGrp>
+                     <gram type="mwe" value="combinatória_fixa"/>
+                  </gramGrp>
+                  <pc>,</pc>
+                  <sense xml:id="DLPC.bombeiro_voluntario.1">
+                     <def>o que pertence a uma corporação com a obrigatoriedade de acudir a incêndios, acidentes, unicamente por filantropia</def>
+                     <pc>.</pc>
+                  </sense>
+               </entry>
+               <entry xml:id="DLPC.corpo_de_bombeiros" xml:lang="pt" type="relatedEntry">
+                  <form type="lemma">
+                     <orth>
+                        <ref type="entry" scope="currentEntry"><seg>corpo</seg><lbl rend="sup">+</lbl></ref>
+                        <seg>de bombeiros</seg>
+                     </orth>
+                  </form>
+                  <pc>.</pc>
+               </entry>
+            </sense>
+            <!--etc.-->
+         </entry>
+         
          <entry xml:lang="nl" xml:id="borcht">
             <form type="lemma">
                <orth>borcht</orth>
@@ -547,6 +580,58 @@ then transform using tei-stripper.xsl-->
                <def>person who competes.</def>
             </sense>
          </entry>
+         <entry xml:id="DLPC.descalçar" xml:lang="pt">
+            <!--etc.-->
+            <sense xml:id="DLPC.descalçar.1">
+               <!--etc.-->
+               <form type="collocations">
+                  <form type="collocation">
+                     <orth>
+                        <ref type="form" scope="currentEntry" value="descalçar"><lbl>+</lbl></ref>
+                        <seg>as botas</seg>
+                     </orth>
+                     <gramGrp>
+                        <gram type="mwe" value="co-ocorrente_privilegiado"/>
+                     </gramGrp>
+                  </form>
+                  <pc>,</pc>
+                  <form type="collocation">
+                     <orth>
+                        <ref type="form" scope="currentEntry" value="descalçar"/>
+                        <seg>as luvas</seg>
+                     </orth>
+                     <gramGrp>
+                        <gram type="mwe" value="co-ocorrente_privilegiado"/>
+                     </gramGrp>
+                  </form>
+                  <pc>,</pc>
+                  <form type="collocation">
+                     <orth>
+                        <ref type="form" scope="currentEntry" value="descalçar"/>
+                        <seg>as meias</seg>
+                     </orth>
+                     <gramGrp>
+                        <gram type="mwe" value="co-ocorrente_privilegiado"/>
+                     </gramGrp>
+                  </form>
+               </form>
+               <pc>;</pc>
+               <form type="collocations">
+                  <form type="collocation">
+                     <orth>
+                        <ref type="form" scope="currentEntry" value="descalçar"><lbl>+</lbl></ref>
+                        <seg>os sapatos</seg>
+                     </orth>
+                     <gramGrp>
+                        <gram type="mwe" value="co-ocorrente_privilegiado"/>
+                     </gramGrp>
+                  </form>
+               </form>
+               <pc>.</pc>
+            </sense>
+         </entry>
+
+
          <!--TODO: is this a made-up dictionary? need the source. chien is oref to translation equivalent, 
          not entry-->
          <entry xml:id="dog" xml:lang="en">
@@ -964,6 +1049,38 @@ then transform using tei-stripper.xsl-->
             <!--...-->
          </entry>
          <!--serbian-->
+         <entry xml:id="VSK.SR.грдомајчић" xml:lang="sr">
+            <form type="lemma">
+               <orth>грдо́ма̑јчић</orth>
+            </form>
+            <pc>,</pc>
+            <gramGrp>
+               <gram type="pos">м</gram>
+            </gramGrp>
+            <usg type="geographic">
+               <pc>(</pc>у Ц.г.<pc>)</pc>
+            </usg>
+            <sense xml:id="VSK.SR.грдомајчић.1">
+               <def>као укор или поруга, и ваља да значи: којему је <xr type="related">
+                     <ref type="entry" target="#VSK.SR.мајка">мајка</ref>
+                  </xr> била <xr type="related">
+                     <ref type="entry" target="VSK.SR.грдан2">грдна</ref>
+                  </xr></def>
+               <pc>,</pc>
+               <cit type="translationEquivalent" xml:lang="de">
+                  <form type="lemma">
+                     <orth>ein Schimpfwort</orth>
+                  </form>
+               </cit>
+               <pc>,</pc>
+               <cit type="translationEquivalent" xml:lang="la">
+                  <form type="lemma">
+                     <orth>convicium in mulierem</orth>
+                  </form>
+               </cit>
+               <pc>.</pc>
+            </sense>
+         </entry>
          <entry xml:id="MM.RSSKJ.круна" xml:lang="sr">
             <form type="lemma">
                <orth>кру̏на</orth>
@@ -1016,7 +1133,7 @@ then transform using tei-stripper.xsl-->
                <gram type="pos">м</gram>
             </gramGrp>
             <etym>
-               <lang value="tr">тур.</lang>
+               <lang value="tr" expand="турцизам" norm="tr">*</lang>
             </etym>
             <!--...-->
             <sense xml:id="MZ.RGJS.сајдисльк_2.1">

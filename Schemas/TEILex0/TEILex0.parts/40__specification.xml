@@ -210,7 +210,12 @@
             <!--2020-05-14 (TT): to allow expand on ref-->
             <classes mode="change">
                 <memberOf key="att.lexicographic"/>
+          <!--2020-06-25 (TT): This was decided a long time ago but never implemented-->      
+                <memberOf key="att.notated"></memberOf>
+          <!--2020-06-26 (TT): we need scope on ref to indicate current or external entry --> 
+                <memberOf key="att.scoped"></memberOf>
             </classes>
+            
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
                     <valList type="semi" mode="change">
@@ -576,6 +581,19 @@
         </classSpec>
 
         <classSpec ident="att.divLike" mode="delete" type="atts"/>
+        
+        <!--2020-06-26 (TT): att.scoped-->
+        <classSpec type="atts" ident="att.scoped">
+            <attList>
+                <attDef ident="scope">
+                    <desc>TEI Lex-0 specific class for providing elements with an attribute describing their extent.</desc>
+                    <valList>
+                        <valItem ident="currentEntry"></valItem>
+                        <valItem ident="externalEntry"></valItem>
+                    </valList>
+                </attDef>
+            </attList>
+        </classSpec>
 
         <!-- 2019-10-22 (LR) new hack to have <xr> in <def> and similar places -->
         <macroSpec ident="macro.paraContent" mode="change">
