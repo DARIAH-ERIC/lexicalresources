@@ -32,8 +32,8 @@
     
     <xsl:param name="minimalCrossRef">true</xsl:param>
     
-    <!--  <xsl:param name="forceWrap">false</xsl:param>
-    <xsl:param name="wrapLength">65</xsl:param>-->
+      <xsl:param name="forceWrap">false</xsl:param>
+    <xsl:param name="wrapLength">75</xsl:param>
     <xsl:param name="attLength">80</xsl:param>
     
     

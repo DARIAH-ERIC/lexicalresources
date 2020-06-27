@@ -78,7 +78,10 @@
     </xsl:template>
     
     <xsl:template match="tei:graphic[parent::tei:figure[not(@type='gallery')]]">  
-            <img class="pure-img-responsive lazyload" xmlns="http://www.w3.org/1999/xhtml">
+            <xsl:element name="img" xmlns="http://www.w3.org/1999/xhtml">
+                <xsl:attribute name="class">
+                    <xsl:value-of select="concat(@rend, ' pure-img-responsive lazyload')"/>
+                </xsl:attribute>
                 <xsl:attribute name="data-src">
                     <xsl:value-of select="@url"/>
                 </xsl:attribute>
@@ -87,7 +90,7 @@
                         <xsl:value-of select="concat('height: ', @height, ' !important;')"/>
                     </xsl:attribute>
                 </xsl:if>
-            </img>
+            </xsl:element>
     </xsl:template>
     
    

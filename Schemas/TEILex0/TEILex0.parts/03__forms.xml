@@ -23,7 +23,7 @@
                     ><hi>2000</hi></ref>).</p>
     </div>
     <div>
-        <head>Grammatical properties of lexical entries</head>
+        <head>Grammatical properties</head>
         <p>Grammatical properties of lexical entries should be specified in
                 <code>entry/gramGrp</code>. This element will typically specify the part-of-speech
             of the entry.</p>
@@ -51,25 +51,23 @@
             <graphic url="https://imgur.com/b9dNR9m.png"/>
         </figure>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                corresp="../TEILex0.examples/examples.xml" xpointer="ED.aid"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="ED.aid"/>
         </egXML>
     </div>
 
     <div>
-        <head>Representation of the lemma</head>
+        <head>Lemmas</head>
         <p>The form element should always be qualified by its <att>type</att>. The lemma (i.e.
             headword) form should be encoded as <code>form[@type="lemma"]</code>.</p>
         <p>If it is necessary to specify the grammatical properties of the lemma form itself (as
             opposed to the grammatical properties of the entry), this is described by
                 <code>entry/form[@type="lemma"]/gramGrp</code>, e.g.:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="ROTL.1">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                corresp="../TEILex0.examples/examples.xml" xpointer="element(go/1)"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="element(go/1)"/>
         </egXML>
     </div>
     <div>
-        <head>Representation of inflected forms</head>
+        <head>Inflected forms</head>
         <p>Dictionaries often include additional forms next to the lemma. In English, these are used
             to specify irregular forms, such as “corpus / corpora” or “take / took”, whereas in
             inflectionally rich languages they are often used to help the user determine the correct
@@ -77,15 +75,13 @@
         <p>Such inflected forms should be encoded in <code>entry/form/@type="inflected"</code>,
             e.g.:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                corresp="../TEILex0.examples/examples.xml" xpointer="go"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="go"/>
         </egXML>
         <p>Or take this example: <hi rend="bold">abeceda, -y</hi>: <code>-y</code> is a genitive
             singular suffix for feminine nouns. We can mark-up the grammatical properties of the
             suffix, while providing the full form of the noun as well:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                corresp="../TEILex0.examples/examples.xml" xpointer="en000008"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="en000008"/>
         </egXML>
     </div>
     <div>
@@ -100,12 +96,11 @@
             machines, or one for each stem of a verb. Each paradigm type should be distinguished by
             the <att>subtype</att> attribute.</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                corresp="../TEILex0.examples/examples.xml" xpointer="perder"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="perder"/>
         </egXML>
     </div>
     <div>
-        <head>Representation of variants</head>
+        <head>Variants</head>
         <p>The representation of variation within a form is highly dependant upon the specifics of
             the features of the variation and the way in which they vary. However, as a general
             principle, variation may be encoded as <code>form[@type="variant"]</code> and embedded
@@ -116,26 +111,23 @@
                 of the options with the corresponding examples.</p>
             <p>Spelling variation due to change in language’s orthography convention:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                    corresp="../TEILex0.examples/examples.xml" xpointer="Flussschifffahrt"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="Flussschifffahrt"/>
             </egXML>
 
             <p>The following example is from American English in which due to the lack of official
                 conventions for transliteration of Arabic orthography to the English (Latin) script,
                 the initial vowel in the surname ‘Osama Bin Laden’ varies between ‘O’ and ‘U’:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                    corresp="../TEILex0.examples/examples.xml" xpointer="Osama"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="Osama"/>
             </egXML>
         </div>
         <div>
-            <head>Phonetic Variation</head>
+            <head>Phonetic variation</head>
             <p>In this example, the entry contains the single orthographic form as a direct child of
                 the lemma and phonetic transcriptions of the two roughly equally used variant
                 pronunciations of the word 'caramel' from American English.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                    corresp="../TEILex0.examples/examples.xml" xpointer="caramel-en"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="caramel-en"/>
             </egXML>
 
             <p>We have an open GitHub <ref
@@ -144,7 +136,7 @@
 
         </div>
         <div>
-            <head>Regional or dialectal Variation</head>
+            <head>Regional or dialectal variation</head>
             <p> In the following example from Mixtepec-Mixtec, there is variation in the form of the
                 word for the city of Oaxaca between speakers from the village of Yucanany and the
                 rest of the speakers. Since the Yucanany variety makes up only a small portion of
@@ -154,8 +146,50 @@
                 addition to the use of the private language subtag
                     (<code>xml:lang="mix-x-YCNY"</code>) as per <ref>BCP 47</ref>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                    corresp="../TEILex0.examples/examples.xml" xpointer="Oaxaca-MIX"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="Oaxaca-MIX"/>
+            </egXML>
+        </div>
+    </div>
+    <div>
+        <head>Multiword expressions</head>
+        <p>The Dictionary Chapter of the TEI Guidelines is very sparse when it comes to
+            recommendations for encoding polylexical units. The only mention of the adjective “multi-word” appears in the
+            definition of the element <gi>term</gi>: “contains a single-word, multi-word, or
+            symbolic designation which is regarded as a technical term” but this is not relevant for
+            the encoding of polylexical units in general-purpose dictionaries.</p>
+        <p>TEI includes an element <gi>colloc</gi> (collocate), which is defined as containing “any
+            sequence of words that co-occur with the headword with significant frequency” but, in a
+            different example, “colloc” is used as an attribute value for the element <gi>usg</gi>
+            (usage). It is precisely this type of ambiguity that TEI Lex-0 is trying to resolve.</p>
+        <p>The TEI Guidelines recommend the use of <gi>re</gi> (related entry) to encode “related
+            entries for direct derivatives or inflected forms of the entry word, or for compound
+            words, phrases, collocations, and idioms containing the entry word” with barely any
+            useful examples, or discussion of how to encode different types of polylexical units.
+            TEI Lex-0, on the other hand, does not include <gi>re</gi>. In TEI Lex-0, <gi>entry</gi>
+            was made recursive in order to account for nestable entry-like structures without the
+            need to resort to <gi>re</gi>, a differently named element whose content model would be
+            indistinguishable from <gi>entry</gi> itself. Eventually, the new content model of
+            <gi>entry</gi>, which allows nesting, was adopted by TEI itself (<ref target="#Tasovac2020">Tasovac
+                2020</ref>).</p>
+        <p>TODO: explain different types of mwe's from a dict. model perspective refering to <ref target="#Tasovac2020">Tasovac 2020</ref>)</p>
+        <div>
+            <head>Collocations</head>
+            <p>TODO: explain "lexicographically transparent"</p>
+            <figure>
+                <graphic url="https://imgur.com/gcsqdhb.jpg" rend="padded"/>
+            </figure>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DLPC2014">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.descalçar"/>
+        </egXML>
+        </div>
+        <div>
+            <head>Idiomatic expressions</head>
+            <p>TODO text ("lexicographically non-transparent")</p>
+            <figure>
+                <graphic url="https://i.imgur.com/VXwxggA.jpg" rend="padded"></graphic>
+            </figure>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DLPC2014">
+                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.bombeiro"/>
             </egXML>
         </div>
     </div>

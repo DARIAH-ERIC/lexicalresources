@@ -11,24 +11,25 @@
         <list type="unordered">
             <item><gi>gloss</gi> for the provision of simple (non refined) translation equivalents
                 of the head word</item>
-            <item><tag>usg type="synonym"</tag> for synonym references</item>
-            <item><code>cit[@type="translation"]/quote</code> for translation equivalents in
-                bilingual or translation dictionaries</item>
-            <item><gi>oRef</gi>, <gi>pRef</gi> for the resolution of “~" headword placeholders in
+            <item><code>&lt;usg type=&quot;synonym&quot;/&gt;</code> for synonym references</item>
+            <item><code>&lt;cit
+                    type=&quot;translation&quot;&gt;&lt;quote&gt;&lt;!--...--&gt;&lt;/quote&gt;&lt;/cit&gt;</code>
+                for translation equivalents in bilingual or translation dictionaries</item>
+            <item><gi>oRef</gi> and <gi>pRef</gi> for the resolution of “~" headword placeholders in
                 quotations and other dictionary text</item>
-            <item><gi>xr</gi>, <gi>ref</gi> as a general cross-referencing mechanism</item>
-            <item><gi>ptr</gi> as a pointer to another location </item>
-            <item><gi>link</gi></item>
-            <item><gi>mentioned</gi> in the etymology section</item>
-            <item><gi>term</gi> for mentions of technical terms</item>
+            <item><gi>xr</gi> and <gi>ref</gi> as a general cross-referencing mechanism</item>
+            <item><code>&lt;ptr/&gt;</code> as a pointer to another location </item>
+            <item><code>&lt;link/&gt;</code> element</item>
+            <item><code>&lt;mentioned/&gt;</code> in the etymology section</item>
+            <item><code>&lt;term/&gt;</code> for mentions of technical terms</item>
         </list>
         <p>In keeping with the approach of the TEI Lex-0, and considering that links/relations
-            between lexical data elements are increasingly part of the core lexical data model
+            between lexical data elements are an essential part of the core lexical data model
             rather than mere convenience pointers for dictionary users, we need a more unified and
             more constrained mechanism for lexical references, whether they point to an existing
             lexical entity in some dictionary or lexicon, or in a more general way to lexical
             objects without a target reference. </p>
-        <p>The proposed mechanism ha s the following properties </p>
+        <p>The proposed mechanism has the following properties </p>
         <list type="ordered">
             <item>It applies only to references with a clear <hi rend="italic">linguistic</hi>
                 meaning.</item>
@@ -36,8 +37,7 @@
                 the semantics of the reference should not depend on context</item>
             <item>The relation between representing dictionary content and the underlying/implied
                 lexical data model should be as transparent as possible</item>
-            <item>No drastic changes to the TEI guidelines are needed, except for minor changes
-                within the dictionary module</item>
+            <item>No drastic changes to the TEI Guidelines are needed.</item>
         </list>
         <p>In the following section, we first present the recommended encoding, and then elicit how
             existing alternatives can be replaced accordingly.</p>
@@ -59,19 +59,21 @@
                 Its default value is "related". This attribute can be used to indicate the lexical
                 relation between the headword of the entry and the object referred to (see next
                 section) </item>
-            <item><code>ref/@type</code> may be an indication of the target object category (entry,
-                sense).</item>
-            <item><att>xml:lang</att>, which is recommended when <gi>ref</gi> contains an explicit
-                lexical form in a different language</item>
-            <item><code>ref/@target</code> to point to the lexical object (identified by a unique
-                id). Think of the value of this attribute as a machine-readable link to your
+            <item><code rend="language-xpath">ref/@type</code> is required; it indicates the target
+                object category (entry, sense); the <att>type</att> attribute on <gi>ref</gi> is
+                also needed to distinguish lexicographic from bibliographic references..</item>
+            <item><att>xml:lang</att> on <gi>xr</gi> is required when <gi>ref</gi> contains an
+                explicit lexical form in a language which is different from the source
+                language</item>
+            <item><code rend="language-xpath">ref/@target</code> to point to the URI of a lexical
+                object. The value of this attribute is a machine-readable link to your
                 cross-reference.</item>
-            <item><code>ref/@notation</code> to indicate, like we currently do on <gi>orth</gi> or
-                    <gi>pron</gi>, the notation used for the explicit lexical form when
-                applicable</item>
+            <item><code rend="language-xpath">ref/@notation</code> indicates, like we currently do
+                on <gi>orth</gi> or <gi>pron</gi>, the notation used for the explicit lexical form,
+                where applicable</item>
         </list>
         <p>Explicit dictionary labels which indicate the type of relationship between the current
-            lexical item and the crossreference should be encoded as <gi>lbl</gi> inside of
+            lexical item and the cross-reference should be encoded as <gi>lbl</gi> inside of
                 <gi>xr</gi>. </p>
 
         <div>
@@ -229,6 +231,19 @@
         </list>
     </div>-->
     <div>
+        <head>Cross-references in definitions</head>
+        <p>In TEI, it is impossible to have a cross-reference inside a definition, yet some
+            dictionaries do use this mechanism. In TEI Lex-0, <gi>xr</gi> is allowed within
+                <gi>def</gi>:</p>
+        <figure>
+            <graphic url="https://i.imgur.com/1aM02qR.jpg"></graphic>
+        </figure>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="VSK.SR.грдомајчић"/>
+        </egXML>
+    </div>
+
+    <div>
         <head>Further examples</head>
         <div>
             <head>More complex example including quotations</head>
@@ -238,9 +253,9 @@
         </div>
         <div>
             <head>Antepassado</head>
-            <!--TODO: replace with high-res image of antepassado1 only-->
+
             <figure>
-                <graphic url="https://imgur.com/LnPDjAf.png"/>
+                <graphic url="https://imgur.com/Mg7arob.png"/>
             </figure>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="antepassado_a"/>
