@@ -7144,6 +7144,10 @@ ${caret}</String>
                         </documentTypeEntry-array>
                     </entry>
                     <entry>
+                        <String>editor.format.preserve.empty.lines</String>
+                        <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
                         <String>editor.format.preserve.spaces.elements.v11</String>
                         <String-array>
                             <String>xsl:text</String>
@@ -7191,6 +7195,10 @@ ${caret}</String>
                         <Boolean>true</Boolean>
                     </entry>
                     <entry>
+                        <String>key.spellcheck.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
                         <String>key.xml.parser.option.pane</String>
                         <Boolean>true</Boolean>
                     </entry>
@@ -7199,16 +7207,16 @@ ${caret}</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.examples/examples.xml</String>
+                                    <String>TEILex0.parts/04__senses.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                        <String>TEILex0: Generate documentation</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>XML</String>
+                                        <String>XPROC</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -7242,6 +7250,26 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>TEILex0.examples/examples.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>TEILex0.parts/02__entries.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -7262,7 +7290,7 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/04__senses.xml</String>
+                                    <String>TEILex0.parts/01__introduction.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7403,26 +7431,6 @@ ${caret}</String>
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>xproc/teilex0.xpl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.parts/01__introduction.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -8210,6 +8218,92 @@ ${caret}</String>
                                 </field>
                             </xprocScenario>
                         </scenario-array>
+                    </entry>
+                    <entry>
+                        <String>spell.check.options</String>
+                        <spellCheckOptions>
+                            <field name="automaticSpellCheck">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="automaticSpellCheckContentTypes">
+                                <String-array>
+                                    <String>application/xhtml+xml</String>
+                                    <String>text/html</String>
+                                    <String>text/markdown</String>
+                                    <String>text/nvdl</String>
+                                    <String>text/plain</String>
+                                    <String>text/properties</String>
+                                    <String>text/rng</String>
+                                    <String>text/sch</String>
+                                    <String>text/wsdl</String>
+                                    <String>text/xml</String>
+                                    <String>text/xsd</String>
+                                    <String>text/xsl</String>
+                                    <String>text/xspec</String>
+                                </String-array>
+                            </field>
+                            <field name="spellCheckInComments">
+                                <Boolean>false</Boolean>
+                            </field>
+                            <field name="spellCheckInAttributeValues">
+                                <Boolean>false</Boolean>
+                            </field>
+                            <field name="spellCheckInText">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="spellCheckInCDATA">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="language">
+                                <String>en</String>
+                            </field>
+                            <field name="caseSensitive">
+                                <Boolean>false</Boolean>
+                            </field>
+                            <field name="ignoreMixedCase">
+                                <Boolean>false</Boolean>
+                            </field>
+                            <field name="ignoreAcronyms">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="ignoreDigits">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="ignoreDuplicates">
+                                <Boolean>false</Boolean>
+                            </field>
+                            <field name="ignoreURL">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="checkPunctuation">
+                                <Boolean>false</Boolean>
+                            </field>
+                            <field name="allowCompound">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="allowFileExtensions">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="obeyLangAttributes">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="langAttrMissingUseDefault">
+                                <Boolean>true</Boolean>
+                            </field>
+                            <field name="ignoreSpellCheckElements">
+                                <String-array>
+                                    <String>codeblock</String>
+                                    <String>codeph</String>
+                                    <String>filepath</String>
+                                    <String>screen</String>
+                                    <String>gi</String>
+                                    <String>att</String>
+                                </String-array>
+                            </field>
+                            <field name="preferredChecker">
+                                <Integer>1</Integer>
+                            </field>
+                        </spellCheckOptions>
                     </entry>
                     <entry>
                         <String>tagless.editor.tags.display.mode</String>

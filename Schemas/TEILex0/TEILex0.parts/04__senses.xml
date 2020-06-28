@@ -5,83 +5,134 @@
     <head>Senses</head>
     <div>
         <head>General remarks</head>
-        <p>In the current TEI Dictionary Chapter, the content model of <gi>entry</gi>
-            allows one to have sense-related information directly within <gi>entry</gi>.
-            TEI Lex-0 proscribes a stricter use of these elements so that sense-related
-            information is grouped within the <gi>sense</gi> element, in accordance with
-            the underlying semasiological model implemented in the TEI <hi rend="italic"
-                >Guidelines</hi>.</p>
-        <p><gi>sense</gi> should be therefore considered mandatory for any dictionary
-            entry that actually provides sense information for the headword. Further in
-            this document, we consider some additional specific cases e.g. “referencing”
-            entries (entires that simply point to other entries) and inflexional lexica
-            (dictionaries that describe word forms only), where <gi>sense</gi> is not a
-            mandatory child of <gi>entry</gi>.</p>
+        <p>In the current TEI Dictionary Chapter, the content model of <gi>entry</gi> allows one to
+            have sense-related information directly within <gi>entry</gi>. TEI Lex-0 proscribes a
+            stricter use of these elements so that sense-related information is grouped within the
+                <gi>sense</gi> element, in accordance with the underlying semasiological model
+            implemented in the TEI <hi rend="italic">Guidelines</hi>.</p>
+        <p><gi>sense</gi> should be therefore considered mandatory for any dictionary entry that
+            actually provides sense information for the headword. Further in this document, we
+            consider some additional specific cases e.g. “referencing” entries (entries that simply
+            point to other entries) and inflectional lexica (dictionaries that describe word forms
+            only), where <gi>sense</gi> is not a mandatory child of <gi>entry</gi>.</p>
         <p>As a consequence of making the use of <gi>sense</gi> more systematic within
-            <gi>entry</gi>, we have seen (see section on <gi>entry</gi>) that some
-            elements are no longer allowed as children of <gi>entry</gi>. We provide
-            here a specific background for each of them:</p>
+                <gi>entry</gi>, we have seen (see section on <gi>entry</gi>) that some elements are
+            no longer allowed as children of <gi>entry</gi>. We provide here a specific background
+            for each of them:</p>
         <list type="unordered">
-            <item><gi>def</gi> is clearly intended to provide a prose description of a
-                meaning within a <gi>sense</gi> element and should not appear in any
-                other context;</item>
-            <item>In the same way, it is recommended that <gi>cit</gi> be used
-                exclusively as a child of <gi>sense</gi>, or when necessary within
-                <gi>dictScrap</gi>;</item>
-            <item>The case of <gi>hom</gi> is peculiar since it provides a subordinate
-                organization to an entry which is redundant in relation to what
-                <gi>sense</gi> allows one to represent. <gi>hom</gi> is not allowed
-                in TEI Lex-0.</item>
+            <item><gi>def</gi> is clearly intended to provide a prose description of a meaning
+                within a <gi>sense</gi> element and should not appear in any other context;</item>
+            <item>In the same way, it is recommended that <gi>cit</gi> be used exclusively as a
+                child of <gi>sense</gi>, or when necessary within <gi>dictScrap</gi>;</item>
+            <item>The case of <gi>hom</gi> is peculiar since it provides a subordinate organization
+                to an entry which is redundant in relation to what <gi>sense</gi> allows one to
+                represent. <gi>hom</gi> is not allowed in TEI Lex-0.</item>
         </list>
         <p>Note: In the case one has to deal with information that does not fit a
-            <gi>sense</gi>-based organization, for instance in the process of
-            retro-digitizing an existing dictionary source, the use of
-            <gi>dictScrap</gi> is recommended. Further step in the encoding of the
-            lexical content may lead to a more precise encoding in a second phase.</p>
+            <gi>sense</gi>-based organization, for instance in the process of retro-digitizing an
+            existing dictionary source, the use of <gi>dictScrap</gi> is recommended. Further step
+            in the encoding of the lexical content may lead to a more precise encoding in a second
+            phase.</p>
         <p>In TEI Lex-0, <gi>sense</gi> has a mandatory <att>xml:id</att>.</p>
     </div>
     <div>
         <head>Limiting contexts for <gi>def</gi></head>
-        <p>In the current TEI guidelines, <gi>def</gi> is allowed to be used within the
-            following elements:</p>
+        <p>In the current TEI guidelines, <gi>def</gi> is allowed to be used within the following
+            elements:</p>
         <list type="unordered">
             <item>Module core: <gi>cit</gi></item>
-            <item>Module dictionaries: <gi>dictScrap</gi>, <gi>entry</gi>,
-                <gi>entryFree</gi>, <gi>etym</gi>, <gi>hom</gi>, <gi>re</gi>,
-                <gi>sense</gi></item>
+            <item>Module dictionaries: <gi>dictScrap</gi>, <gi>entry</gi>, <gi>entryFree</gi>,
+                    <gi>etym</gi>, <gi>hom</gi>, <gi>re</gi>, <gi>sense</gi></item>
             <item>Module namesdates: <gi>nym</gi></item>
         </list>
         <p>TEI Lex-0 allows the use of <gi>def</gi> in <gi>sense</gi>, <gi>cit</gi> and
-            <gi>etym</gi> only. All other existing contexts would be implemented by
-            embedding <gi>def</gi> within a <gi>sense</gi>.</p>
+                <gi>etym</gi> only. All other existing contexts would be implemented by embedding
+                <gi>def</gi> within a <gi>sense</gi>.</p>
     </div>
-    <div>
-        <head>Senses with multiple parts of speech</head>
-        <p>For multi-POS lexical entries, TEI Lex-0 considers each POS as a trigger for
-            a new sense. Consequently, we recommend encoding grammatical information in
-            each sense coming after the first one to be serialised inside the semantic
-            bloc as follows:</p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e1022">
-            <sense xml:id="xyz">
-                <gramGrp>
-                    <gram type="pos"><!--...--></gram>
-                </gramGrp>
-                <def><!--...--></def>
-                <!--...-->
-            </sense>
-        </egXML>
-        <p>Consider this example, where <mentioned>arrest</mentioned> appears both as a
-            verb and a noun:</p>
+    <div xml:id="grammatical-properties-in-senses">
+        <head>Grammatical properties</head>
+        <p>In some dictionaries, individual dictionary senses may be associated with grammatical
+            properties, such as part of speech or gender, that differ from the rest of the entry:
+            for instance, a particular sense of a countable noun may be used only in plural. In such
+            cases, <gi>gramGrp</gi> will be naturally placed inside the given <gi>sense</gi>: </p>
+        <p>Consider, for instance, the second sense of this entry:</p>
         <figure>
-            <graphic n="10011" width="6.720416666666667cm" height="4.709583333333334cm"
-                url="https://imgur.com/zvd4oEh.png"/>
+            <graphic url="https://i.imgur.com/2UJC9Ae.jpg" rend="padded"/>
         </figure>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml"
-                corresp="../TEILex0.examples/examples.xml" xpointer="arrest"/>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DLPC2014" xml:id="antepassado-gramGrp-in-sense">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.antepassado_b_2"/>
         </egXML>
+        <div xml:id="nested-entries-vs-multiple-senses">
+            <head>Nested entries vs. multiple senses</head>
+            <p>While TEI Lex-0 has been created to simplify the choices available for encoding
+                various lexicographic components, certain levels of ambiguity remain, often due to
+                the highly condensed nature of dictionary content.</p>
+            <p>Consider, for instance, this entry: <figure>
+                    <graphic url="https://i.imgur.com/LlL0H4l.jpg"/>
+                </figure>
+            </p>
+            <p>Is this an entry with two senses? Or are these two entries that were on the account
+                of typographic density merged into one?</p>
+            <p>The answer is as much in the eyes of the beholder, as it is in the eyes of the
+                lexicographers behind the dictionary that the entry stems from, in this case <title
+                    rend="italic">The Chambers Dictionary</title>. Both the encoder <hi
+                    rend="italic">and</hi> lexicographers, however, are influenced by lexicographic
+                and linguistic traditions in which they operate. For an overview of the
+                homonymy-polysemy dilemma, see, for instance, <ref target="#Zöfgen1989">Zöfgen
+                    1989</ref>. </p>
+            <p>It can't be stressed enough that the goal of dictionary encoding is not to resolve
+                linguistic disputes or evaluate lexicographic traditions but rather to create
+                consistent, if abstracted, representations of lexicographic architectures. </p>
+            <p>So, what can we do in this particular case? Should we encode <hi rend="bold"
+                    >gash</hi> as an entry consisting of senses, each with a different part of
+                speech, like this:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="gash-as-grammatical-homonyms">
+                        <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="CHDOEL.gash2"/>
+                    </egXML>
+            <p>This is surely valid TEI Lex-0. There is conceptually nothing wrong with this
+                encoding: it adequately represents the structure implied by the source text.</p>
+            <p> We should, however, try to look at the issue at hand from a broader, comparative,
+                perspective.</p>
+            <list>
+                <item>In the Portuguese polysemous entry <hi rend="bold">antepassado</hi> <ref target="#antepassado-gramGrp-in-sense"
+                        >above</ref>, we had a case in which one particular sense (used in plural
+                    only) deviated from the other senses (which are used in both singular and
+                    plural). Since the senses were numbered in the original, there was never any
+                    doubt about how we would encode this. It was clear from the outset: <list>
+                        <item>that the semantic information in that entry was grouped by a construct
+                            called <gi>sense</gi>;</item>
+                        <item>that senses inherited grammatical properties from the entry as a whole
+                            (i.e. <code rend="language-xpath">entry/gramGrp</code>);</item>
+                        <item>that, implicitly, we could assume that each sense can be used with the
+                            noun in both singular and plural; and</item>
+                        <item>that the plural-only sense was grammatically exceptional, hence <code
+                                rend="language-xpath">entry/sense/gramGrp/</code>).</item>
+                    </list>
+                </item>
+                <item>The English example is different: <hi rend="b">gash</hi> as a verb and as a
+                    noun are grammatical homonyms. If we encode them, as we did <ref
+                        target="#gash-as-grammatical-homonyms">above</ref>, as two senses within one
+                    entry, we end up with an entry in which there is no inheritance (of grammatical
+                    properties) and only exceptions (at each sense-level). </item>
+            </list>
+            <p>Because TEI Lex-0 is aimed at creating a baseline encoding to facilitate data
+                exchange and comparison between different dictionaries, we, therefore, recommend to
+                encode grammatical homonyms in TEI Lex-0 as nested entries and to use
+                    <gi>gramGrp</gi> in <gi>sense</gi> constructs to mark up sense-specific
+                deviations from the rule of grammatical inheritance. </p>
+            <p>For that reason, our preferred encoding of <hi rend="bold">gash</hi> as a verb and a
+                noun would be:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="CH.gash2"/>
+                </egXML>
+            <p>For an example in which grammatical homonyms have themselves multiple senses, one of
+                which is grammatically constrained, see, for instance: </p>
+            <figure>
+                <graphic url="https://imgur.com/b9dNR9m.png"/>
+            </figure>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="ED.aid"/>
+                </egXML>
+        </div>
     </div>
-    
-    
-    
 </div>
