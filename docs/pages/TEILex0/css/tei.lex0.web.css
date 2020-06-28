@@ -19,9 +19,11 @@ html, button, input, select, textarea,
 
 .pure-menu-heading {
     position: fixed;
-display: block;
-width: 100%;
-z-index: 999;
+    display: block;
+    width: 325px;
+    z-index: 999;
+    box-sizing: border-box;
+}
 }
 
 
