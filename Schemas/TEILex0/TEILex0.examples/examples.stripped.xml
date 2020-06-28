@@ -481,7 +481,8 @@ then transform using tei-stripper.xsl-->
                   </gramGrp>
                   <pc>,</pc>
                   <sense xml:id="DLPC.bombeiro_voluntario.1">
-                     <def>o que pertence a uma corporação com a obrigatoriedade de acudir a incêndios, acidentes, unicamente por filantropia</def>
+                     <def>o que pertence a uma corporação com a obrigatoriedade de acudir a
+                        incêndios, acidentes, unicamente por filantropia</def>
                      <pc>.</pc>
                   </sense>
                </entry>
@@ -497,7 +498,7 @@ then transform using tei-stripper.xsl-->
             </sense>
             <!--etc.-->
          </entry>
-         
+
          <entry xml:lang="nl" xml:id="borcht">
             <form type="lemma">
                <orth>borcht</orth>
@@ -512,7 +513,7 @@ then transform using tei-stripper.xsl-->
                <orth>bray</orth>
                <pron>brel</pron>
             </form>
-            <sense xml:id="bray_n">
+            <entry xml:id="bray_n" xml:lang="en">
                <gramGrp>
                   <gram type="pos">n</gram>
                </gramGrp>
@@ -523,16 +524,18 @@ then transform using tei-stripper.xsl-->
                <sense xml:id="bray_n.2">
                   <def>sound of a trumpet</def>
                </sense>
-            </sense>
-            <pc>.</pc>
-            <sense xml:id="bray_vt">
+               <pc>.</pc>
+            </entry>
+            <entry xml:id="bray_vt" xml:lang="en">
                <gramGrp>
                   <gram type="pos">vt</gram>
                   <gram type="subc">VP2A</gram>
                </gramGrp>
-               <def>make a cry or sound of this kind</def>
-            </sense>
-            <pc>.</pc>
+               <sense xml:id="bray_vt.1">
+                  <def>make a cry or sound of this kind</def>
+               </sense>
+               <pc>.</pc>
+            </entry>
          </entry>
          <entry xml:id="caramel-en" xml:lang="en-US">
             <form type="lemma">
