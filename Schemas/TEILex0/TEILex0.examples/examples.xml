@@ -25,7 +25,6 @@
    <text>
       <body>
          <!--organize entries alphabetically-->
-
          <entry type="mainEntry" xml:lang="cz" xml:id="en000008">
             <form type="lemma" xml:id="en000008.hw1">
                <orth>abeceda</orth>
@@ -68,60 +67,72 @@
             </cit>
          </entry>
          <!--https://imgur.com/b9dNR9m.png-->
-         <!--TODO: lbl vs. num -\- I'd prefer to introduce lbl for ALL labels, and type accordingly -->
          <entry xml:id="ED.aid" xml:lang="en">
             <form type="lemma">
                <orth>aid</orth>
                <pron>/ed/</pron>
             </form>
-            <gramGrp>
-               <gram type="pos">noun</gram>
-            </gramGrp>
-            <sense xml:id="ED.aid.n.1" n="1">
-               <lbl type="num">1.</lbl>
-               <def>help, especially money, food or other gifts given to people living in difficult
-                  conditions</def>
-               <cit type="example">
-                  <quote>aid to the earth-quake zone an aid worker</quote>
-               </cit>
-               <note>(NOTE: This meaning of aid has no plural.)</note>
-               <entry type="relatedEntry" xml:id="ED.in_aid_of" xml:lang="en">
-                  <form type="lemma">
-                     <orth>in aid of</orth>
-                  </form>
-                  <sense xml:id="ED.in_aid_of.1">
-                     <def>in order to help</def>
-                     <cit type="example">
-                        <quote>We give money in aid of the Red Cross.</quote>
-                     </cit>
-                     <cit type="example">
-                        <quote>They are collecting money in aid of refugees.</quote>
-                     </cit>
-                  </sense>
-               </entry>
-            </sense>
-            <sense xml:id="ED.aid.n.2" n="2">
-               <lbl type="num">2.</lbl>
-               <def>thing which helps you to do something</def>
-               <cit type="example">
-                  <quote>kitchen aids</quote>
-               </cit>
-            </sense>
-            <sense xml:id="ED.aid.v.1" n="3">
+            <entry xml:id="ED.aid_n" xml:lang="en">
+               <gramGrp>
+                  <gram type="pos">noun</gram>
+               </gramGrp>
+               <sense xml:id="ED.aid_n.1" n="1">
+                  <num>1.</num>
+                  <gramGrp>
+                     <gram type="number" value="singularia tantum"/>
+                  </gramGrp>
+                  <def>help, especially money, food or other gifts given to people living in
+                     difficult conditions</def>
+                  <metamark function="exampleMarker">○</metamark>
+                  <cit type="example">
+                     <quote>aid to the earth-quake zone</quote>
+                  </cit>
+                  <cit type="example">
+                     <quote>an aid worker</quote>
+                  </cit>
+                  <note>(NOTE: This meaning of aid has no plural.)</note>
+                  <metamark function="relatedEntryMarker">○</metamark>
+                  <entry type="relatedEntry" xml:id="ED.aid_n.1.in_aid_of" xml:lang="en">
+                     <form type="lemma">
+                        <orth>in aid of</orth>
+                     </form>
+                     <sense xml:id="ED.aid_n.1.in_aid_of.1">
+                        <def>in order to help</def>
+                        <metamark function="exampleMarker">○</metamark>
+                        <cit type="example">
+                           <quote>We give money in aid of the Red Cross.</quote>
+                        </cit>
+                        <metamark function="exampleMarker">○</metamark>
+                        <cit type="example">
+                           <quote>They are collecting money in aid of refugees.</quote>
+                        </cit>
+                     </sense>
+                  </entry>
+               </sense>
+               <sense xml:id="ED.aid_n.2" n="2">
+                  <num>2.</num>
+                  <def>thing which helps you to do something</def>
+                  <metamark function="exampleMarker">○</metamark>
+                  <cit type="example">
+                     <quote>kitchen aids</quote>
+                  </cit>
+               </sense>
+            </entry>
+            <metamark function="subentryMarker">■</metamark>
+            <entry xml:id="ED.aid_v" xml:lang="en">
                <gramGrp>
                   <gram type="pos">verb</gram>
                </gramGrp>
-               <sense xml:id="ED.aid.v.1.1" n="3.1">
-                  <lbl type="n">1.</lbl>
+               <sense xml:id="ED.aid.v.1" n="1">
+                  <num>1.</num>
                   <def>to help something to happen</def>
                </sense>
-               <sense xml:id="ED.aid.v.1.2" n="3.2">
-                  <lbl>2.</lbl>
+               <sense xml:id="ED.aid.v.2" n="2">
+                  <num>2.</num>
                   <def>to help someone</def>
                </sense>
-            </sense>
+            </entry>
          </entry>
-
          <!--https://imgur.com/IVutWGQ.png-->
          <entry type="mainEntry" xml:lang="en" xml:id="aid">
             <form type="lemma">
@@ -275,7 +286,7 @@
                </sense>
             </entry>
          </entry>
-         <entry xml:lang="pt" xml:id="antepassado_a">
+         <entry xml:lang="pt" xml:id="DLPC.antepassado_a">
             <form type="lemma">
                <orth>antepassado</orth>
                <pron>ɐ̃tɨpɐsˈadu</pron>
@@ -310,7 +321,7 @@
                   </form>
                </cit>
             </etym>
-            <sense xml:id="antepassado_a_1">
+            <sense xml:id="DLPC.antepassado_a_1">
                <def>Que pertence ou viveu numa época anterior.</def>
                <xr type="synonymy">
                   <ref type="sense">antecessor</ref>
@@ -326,7 +337,7 @@
                </xr>
             </sense>
          </entry>
-         <entry xml:lang="pt" xml:id="antepassado_b">
+         <entry xml:lang="pt" xml:id="DLPC.antepassado_b">
             <form type="lemma">
                <orth>antepassado</orth>
                <pron>ɐ̃tɨpɐsˈadu</pron>
@@ -350,7 +361,7 @@
                   </form>
                </cit>
             </etym>
-            <sense xml:id="antepassado_b_1" n="1">
+            <sense xml:id="DLPC.antepassado_b_1" n="1">
                <def>Pessoa que é ascendente de outra ou outras.</def>
                <xr type="synonymy">
                   <ref type="sense">ascendente</ref>
@@ -366,8 +377,10 @@
                         96</citedRange></bibl>
                </cit>
             </sense>
-            <sense xml:id="antepassado_b_2" n="2">
-               <gramGrp><gram type="number">pl.</gram></gramGrp>
+            <sense xml:id="DLPC.antepassado_b_2" n="2">
+               <gramGrp>
+                  <gram type="number">pl.</gram>
+               </gramGrp>
                <def>Pessoas anteriormente ao momento actual.</def>
                <xr type="synonymy">
                   <ref type="sense">antecessores</ref>
@@ -377,6 +390,8 @@
                </xr>
                <cit type="example">
                   <quote>Hérdamos estes costumes dos nossos antepassados.</quote>
+               </cit>
+               <cit type="example">
                   <quote>Culto dos antepassados.</quote>
                </cit>
             </sense>
@@ -418,7 +433,6 @@
                <pc>.</pc>
             </sense>
          </entry>
-
          <entry type="mainEntry" xml:lang="en" xml:id="arrest">
             <form type="lemma">
                <orth>arrest</orth>
@@ -497,7 +511,6 @@
             </sense>
             <!--etc.-->
          </entry>
-
          <entry xml:lang="nl" xml:id="borcht">
             <form type="lemma">
                <orth>borcht</orth>
@@ -568,7 +581,6 @@
                <sense xml:id="cobuild.house_3.1" xml:lang="en"><!--...--></sense>
             </entry>
          </entry>
-
          <entry xml:id="OALD.competitor" type="mainEntry" xml:lang="en">
             <form type="lemma">
                <orth>competitor</orth>
@@ -632,8 +644,6 @@
                <pc>.</pc>
             </sense>
          </entry>
-
-
          <!--TODO: is this a made-up dictionary? need the source. chien is oref to translation equivalent, 
          not entry-->
          <entry xml:id="dog" xml:lang="en">
@@ -687,7 +697,6 @@
                <ref type="entry">mammal</ref>
             </xr>
          </entry>
-
          <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
             <form type="lemma">
                <orth type="segmeted">
@@ -711,22 +720,122 @@
             <!--...-->
          </entry>
          <!--used as fragment in egXML[@xml:id="ROTL.1"]-->
-         <entry xml:lang="en" xml:id="go">
+         <entry xml:lang="en" xml:id="CH.go1">
             <form type="lemma">
                <orth>go</orth>
-               <gramGrp>
-                  <gram type="tense">present</gram>
-               </gramGrp>
+               <pron>gō</pron>
             </form>
+            <lbl rend="sup">1</lbl>
+            <gramGrp>
+               <gram type="pos">vi</gram>
+            </gramGrp>
+            <pc>(</pc>
             <form type="inflected">
-               <orth>went</orth>
                <gramGrp>
-                  <gram type="tense">past</gram>
+                  <gram type="participle">prp</gram>
                </gramGrp>
+               <orth>gō'ing</orth>
             </form>
+            <pc>;</pc>
+            <form type="inflected">
+               <gramGrp>
+                  <gram type="participle">pap</gram>
+               </gramGrp>
+               <orth>gone</orth>
+               <pron>gon</pron>
+               <note>(see separate entries)</note>
+            </form>
+            <pc>;</pc>
+            <form type="inflected">
+               <gramGrp>
+                  <gram type="participle">pat</gram>
+               </gramGrp>
+               <orth>went</orth>
+               <note>(supplied from <xr type="related">
+                     <ref type="entry">wend</ref>
+                  </xr>)</note>
+            </form>
+            <pc>;</pc>
+            <form type="inflected">
+               <gramGrp>
+                  <gram type="person">3rd</gram>
+                  <gram type="tense">pers</gram>
+                  <gram type="number">sing</gram>
+                  <gram type="tense">pres</gram>
+                  <gram type="mood">indicative</gram>
+               </gramGrp>
+               <orth>goes</orth>
+            </form>
+            <pc>;</pc>
             <!--...-->
          </entry>
-
+         <!-- two different encodings of gash follow, to show the difference 
+         between entry/sense/gramGrp and entry/entry/gramGrp-->
+         <entry xml:id="CHDOEL.gash2" xml:lang="en">
+            <!--this, as we'll explain later, is valid but not the preferred encoding-->
+            <form type="lemma">
+               <orth>gash</orth>
+               <pron>gash</pron>
+            </form>
+            <lbl type="homNum" rend="sup">2</lbl>
+            <sense xml:id="CHDOEL.gash2.1">
+               <pc>(</pc>
+               <usg type="socioCultural" expand="slang">sl</usg>
+               <pc>)</pc>
+               <gramGrp>
+                  <gram type="pos">adj</gram>
+               </gramGrp>
+               <def>spare, extra</def>
+               <pc>.</pc>
+            </sense>
+            <metamark function="senseSeparator">◆</metamark>
+            <sense xml:id="CDHDOEL.gash2.2">
+               <gramGrp>
+                  <gram type="pos">n</gram>
+               </gramGrp>
+               <pc>(</pc>
+               <usg type="time" expand="originally">orig</usg>
+               <lbl>and esp</lbl>
+               <usg type="domain" expand="nautical">naut</usg>
+               <pc>)</pc>
+               <def>rubbish, waste</def>
+               <pc>.</pc>
+            </sense>
+         </entry>
+         <entry xml:id="CH.gash2" xml:lang="en">
+            <form type="lemma">
+               <orth>gash</orth>
+               <pron>gash</pron>
+            </form>
+            <lbl type="homNum" rend="sup">2</lbl>
+            <entry xml:id="CH.gash2.1" xml:lang="en">
+               <sense xml:id="CH.gash2.1.1">
+                  <pc>(</pc>
+                  <usg type="socioCultural" expand="slang">sl</usg>
+                  <pc>)</pc>
+                  <gramGrp>
+                     <gram type="pos">adj</gram>
+                  </gramGrp>
+                  <def>spare, extra</def>
+                  <pc>.</pc>
+               </sense>
+            </entry>
+            <metamark function="entrySeparator">◆</metamark>
+            <entry xml:id="CH.gash2.2" xml:lang="en">
+               <gramGrp>
+                  <gram type="pos">n</gram>
+               </gramGrp>
+               <sense xml:id="CH.gahs2.2.1">
+                  <pc>(</pc>
+                  <usg type="time" expand="originally">orig</usg>
+                  <lbl>and esp</lbl>
+                  <usg type="domain" expand="nautical">naut</usg>
+                  <pc>)</pc>
+                  <def>rubbish, waste</def>
+                  <pc>.</pc>
+               </sense>
+            </entry>
+         </entry>
          <entry type="wordFamily" xml:lang="de" xml:id="Haus">
             <entry type="mainEntry" xml:lang="de" xml:id="Haus_nn">
                <form type="lemma"><orth>Haus</orth>
@@ -787,7 +896,6 @@
             </entry>
             <!-- ... -->
          </entry>
-
          <entry xml:id="horrifier" type="mainEntry" xml:lang="fr">
             <form type="lemma">
                <orth>horrifier</orth>
@@ -904,7 +1012,7 @@
                <form type="inflected">
                   <orth>pierdo</orth>
                   <gramGrp>
-                     <gram type="per">1</gram>
+                     <gram type="person">1</gram>
                      <gram type="number">sg</gram>
                      <gram type="mood">indic</gram>
                      <gram type="voice">active</gram>
@@ -919,14 +1027,14 @@
                <form type="inflected">
                   <orth>perdí</orth>
                   <gramGrp>
-                     <gram type="per">1</gram>
+                     <gram type="person">1</gram>
                      <gram type="number">sg</gram>
                      <gram type="mood">indic</gram>
                      <gram type="voice">active</gram>
                   </gramGrp>
                </form>
                <gramGrp>
-                  <gram type="tns">preteritum</gram>
+                  <gram type="tense">preteritum</gram>
                </gramGrp>
             </form>
             <!--... -->
@@ -1127,7 +1235,6 @@
                <def>врхунац, највиши домет неког рада, забаве.</def>
             </sense>
          </entry>
-
          <entry xml:id="MZ.RGJS.сајдисльк_2" xml:lang="sr">
             <form type="lemma">
                <orth>сајдисль́к</orth>

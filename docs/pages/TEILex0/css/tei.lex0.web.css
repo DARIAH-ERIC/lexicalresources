@@ -468,11 +468,18 @@ input:checked + .tab-label {
   background: #1f8dd6;
 }
 input:checked + .tab-label::after {
-  transform-orgin: 
-  -webkit-transform: rotate(90deg);
+
           transform: rotate(90deg);
 }
 input:checked ~ .tab-content {
-  max-height: 500vh;
+  max-height: 1000vh;
   padding: 1em;
+}
+
+div.cit {
+    padding-left: 2em; 
+}
+
+span.italic {
+    font-style:italic;
 }

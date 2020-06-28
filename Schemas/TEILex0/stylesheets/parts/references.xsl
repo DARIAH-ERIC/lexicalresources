@@ -147,6 +147,10 @@
             </xsl:choose>
             <xsl:text>. </xsl:text>
         </i>
+        <xsl:if test="tei:edition">
+            <xsl:value-of select="tei:edition"/>
+            <xsl:text>. </xsl:text>
+        </xsl:if>
         <xsl:if test="tei:imprint/tei:publisher">
             <xsl:value-of select="tei:imprint/tei:publisher"/>
             <xsl:choose>

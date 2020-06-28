@@ -173,7 +173,7 @@
             <p>In TEI Lex-0, antonyms are encoded inside <code>&lt;xr
                     type=&quot;antonymy&quot;&gt;&lt;/xr&gt;</code>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="antepassado_a_1"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.antepassado_a_1"/>
             </egXML>
 
         </div>
@@ -258,7 +258,7 @@
                 <graphic url="https://imgur.com/Mg7arob.png"/>
             </figure>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="antepassado_a"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.antepassado_a"/>
            
         </egXML>
         </div>

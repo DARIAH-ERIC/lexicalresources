@@ -28,6 +28,22 @@
                 
             </monogr>
         </biblStruct>
+        <biblStruct type="dictionary" xml:id="Chambers2014">
+            <monogr>
+                <author>
+                    <orgName>Chambers</orgName>
+                </author>
+                <title level="m">The Chambers Dictionary</title>
+                <edition>12th Edition</edition>
+                <idno type="ISBN">9780550102379</idno>
+                <imprint>
+                    <publisher>Chambers Harrap Publishers</publisher>
+                    <date>2011</date>
+                    <pubPlace>London</pubPlace>  
+                </imprint>
+                
+            </monogr>
+        </biblStruct>
         <biblStruct type="book" xml:id="Cruse1986"
             corresp="http://zotero.org/users/306701/items/BVWPF82Z">
             <monogr>
@@ -319,6 +335,22 @@
                 <title level="j">Slovenšcina 2.0</title>
                 <imprint>
                     <date>2020 (in print)</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <!--TODO: when more time, this should be turned into a book chater in an edited book-->
+        <biblStruct type="journalArticle" xml:id="Zöfgen1989">
+            <analytic>
+                <title level="a" xml:lang="de">Homonymie und Polysemie im allgemeinen einsprachigen Wörterbuch</title>
+                <author><persName><forename>Ekkehard</forename><surname>Zöfgen</surname></persName></author>
+              
+            </analytic>
+            <monogr>
+                <title level="j">Wörterbücher. Ein internationales Handbuch zur Lexikographie.</title>
+                <imprint>
+                    <biblScope unit="volume">I</biblScope>
+                    <biblScope unit="page">425-464</biblScope>
+                    <date>1989</date>
                 </imprint>
             </monogr>
         </biblStruct>
