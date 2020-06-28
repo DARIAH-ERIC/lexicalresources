@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0"
-    exclude-result-prefixes="tei teix">
+    xmlns:xhtml="http://www.w3.org/1999/xhtml" xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+    version="2.0" exclude-result-prefixes="tei teix">
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>Process elements teix:egXML</desc>
     </doc>
@@ -82,10 +82,11 @@
     </xsl:template>
 
     <xsl:template
-        match="teix:egXML
-        [ancestor::tei:list[@type = 'examples']]
-        [not(ancestor::tei:div[@xml:id = 'specification'])]
-        [not(ancestor::tei:floatingText)]">
+        match="
+            teix:egXML
+            [ancestor::tei:list[@type = 'examples']]
+            [not(ancestor::tei:div[@xml:id = 'specification'])]
+            [not(ancestor::tei:floatingText)]">
         <xsl:param name="simple">false</xsl:param>
         <xsl:param name="highlight"/>
         <xsl:variable name="pos-in-list" select="count(../preceding-sibling::tei:item) + 1"/>
@@ -175,8 +176,8 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-    
-   <!-- TODO: when i have more time, merge wrapExample and wrapInFocusPanel
+
+    <!-- TODO: when i have more time, merge wrapExample and wrapInFocusPanel
     accounting for the differences between them-->
 
     <xsl:template name="wrapExample">
@@ -255,10 +256,60 @@
     <xsl:template match="tei:floatingText[@type = 'inFocusPanel']/tei:body/tei:head"> </xsl:template>
 
     <xsl:template match="tei:floatingText[@type = 'inFocusPanel']/tei:body">
-        <div xmlns="http://www.w3.org/1999/xhtml" class='panelContent'>
+        <div xmlns="http://www.w3.org/1999/xhtml" class="panelContent">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
+
+
+
+    <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+        <desc>
+            <p>Process comments in verbatim mode</p>
+            <p>[common] </p>
+        </desc>
+    </doc>
+    <xsl:template match="comment()" mode="verbatim">
+        <xsl:choose>
+            <xsl:when test="ancestor::Wrapper"/>
+            <xsl:when test="ancestor::xhtml:Wrapper"/>
+            <xsl:otherwise>
+                <xsl:call-template name="verbatim-lineBreak">
+                    <xsl:with-param name="id">21</xsl:with-param>
+                </xsl:call-template>
+                <xsl:call-template name="verbatim-makeIndent"/>
+                <xsl:call-template name="Comment">
+                    <xsl:with-param name="content">
+                        <xsl:text>&lt;!--</xsl:text>
+                        <xsl:choose>
+                            <xsl:when test="$forceWrap = 'true'">
+                                <xsl:call-template name="verbatim-reformatText">
+                                    <xsl:with-param name="sofar">0</xsl:with-param>
+                                    <xsl:with-param name="indent">
+                                        <xsl:text> </xsl:text>
+                                    </xsl:with-param>
+                                    <xsl:with-param name="text">
+                                        <xsl:value-of select="normalize-space(.)"/>
+                                    </xsl:with-param>
+                                </xsl:call-template>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:call-template name="verbatim-Text">
+                                    <xsl:with-param name="words">
+                                        <xsl:value-of select="."/>
+                                    </xsl:with-param>
+                                </xsl:call-template>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:text>--&gt;</xsl:text>
+                    </xsl:with-param>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+
+
 
     <!--   <xsl:template match="comment() | processing-instruction()" mode="egXML">
         <xsl:copy-of select="."/>

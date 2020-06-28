@@ -89,8 +89,9 @@ pre[class *= "egXML_invalid"], .egXML_invalid {
 .token.comment,
 .token.prolog,
 .token.doctype,
-.token.cdata {
-    color: slategray;
+.token.cdata,
+span.comment{
+    color: #006700;
 }
 
 .token.punctuation {
