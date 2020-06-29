@@ -32,48 +32,11 @@
     
     <xsl:param name="minimalCrossRef">true</xsl:param>
     
-      <xsl:param name="forceWrap">false</xsl:param>
+    <xsl:param name="forceWrap">false</xsl:param>
     <xsl:param name="wrapLength">75</xsl:param>
     <xsl:param name="attLength">80</xsl:param>
     
-    
-    
-    <!--<xsl:param name="logoFile">images/logo.png</xsl:param>
-    <xsl:param name="cssFile">https://www.tei-c.org/release/xml/tei/stylesheet/tei.css</xsl:param>
-    <xsl:param name="cssSecondaryFile">css/tei.lex0.web.css</xsl:param>
-    <xsl:param name="pageLayout">Complex</xsl:param>
-    <xsl:param name="outputMethod">html</xsl:param>
-    <xsl:param name="parentWords">The Punch Project</xsl:param>
-    <xsl:param name="institution">The University of Punch</xsl:param>-->
-    
-    <!--    <xsl:param name="directory">.</xsl:param>
-    <xsl:param name="outputDir"><xsl:value-of select="$directory"/>/OPS</xsl:param>
-    <xsl:key name="EXAMPLES" match="teix:*[ancestor::teix:egXML]"
-        use="concat(ancestor::tei:div[last()]/@xml:id, local-name())"/>
-    <xsl:key name="HEADS" match="tei:head" use="concat(@xml:lang, @corresp)"/>
-    <xsl:key name="BACKLINKS" match="teix:egXML[@corresp]" use="substring(@corresp, 2)"/>
-    <xsl:key name="BACKLINKS" match="teix:egXML[@source]" use="substring(@source, 2)"/>
-    <xsl:key name="BACKLINKS" match="tei:ref[@type = 'cit']" use="substring(@target, 2)"/>
--->
-    <xsl:template name="javascriptHook">
-        
-        
-        
-        
-        
-        
-        
-        <!--      <script type="text/javascript" src="js/popupFootnotes.js" xmlns="http://www.w3.org/1999/xhtml">
-        <xsl:comment>popupfootnotes</xsl:comment>
-    </script>-->
-        <!--<xsl:call-template name="jsForOdds"/>-->
-    </xsl:template>
-    
-    <xsl:template name="bodyJavascriptHook">
-        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.6/jquery.min.js" xmlns="http://www.w3.org/1999/xhtml">
-            <xsl:comment>JQuery</xsl:comment>
-        </script>-->
-        
+    <xsl:template name="bodyEndHook">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.1-rc2/lazysizes.min.js" xmlns="http://www.w3.org/1999/xhtml">
             <xsl:comment>lazysizes</xsl:comment>
         </script>
@@ -89,10 +52,16 @@
         <script type="text/javascript" src="js/prism-xpath.js" xmlns="http://www.w3.org/1999/xhtml">
             <xsl:comment>prism-xpath</xsl:comment>
         </script>
-        <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js">
-            <xsl:comment>clipboard</xsl:comment>
-        </script>-->
-        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" xmlns="http://www.w3.org/1999/xhtml">
+            <xsl:comment>doc-search</xsl:comment>
+        </script>
+        <script type="text/javascript"> docsearch({
+            apiKey: '27fc9785932247d5056acddcede378cf',
+            indexName: 'tei_lex',
+            inputSelector: '.algo',
+            debug: true // Set debug to true if you want to inspect the dropdown
+            });
+        </script>
     </xsl:template>
     
     
