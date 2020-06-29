@@ -18,12 +18,21 @@
             <div id="menu" class="custom-menu" xmlns="http://www.w3.org/1999/xhtml">
                 <div class="pure-menu">
                     <a class="pure-menu-heading" href="#">TEI Lex-0</a>
+                    <div class="tei_toc">
+                        <div class="input-group">
+                            <input type="search" placeholder="DocSearch input" class="algo"/>
+                        </div>
+                    </div>
                     <xsl:for-each select="descendant-or-self::tei:TEI/tei:text/tei:front">
                         <xsl:apply-templates/>
                     </xsl:for-each>
                 </div>
+                
                 <ul class="pure-menu-list" xmlns="http://www.w3.org/1999/xhtml"
                     style="position: fixed; bottom: 0; width: 325px;">
+                    
+                   
+                    
                     <li class="dlogo" xmlns="http://www.w3.org/1999/xhtml" style="background: #1a252f">
                         <a href="#" xmlns="http://www.w3.org/1999/xhtml" class="logos">
                             <img src="images/dariah-lr.png" class="pure-img img-hover"/>

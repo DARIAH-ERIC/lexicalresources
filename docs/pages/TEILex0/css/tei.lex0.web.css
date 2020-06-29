@@ -2,6 +2,7 @@
 @import url("https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css");
 @import "odd.css";
 @import "prism.css";
+@import url("https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css");
 
 /*customizing pure*/
 
@@ -23,7 +24,6 @@ html, button, input, select, textarea,
     width: 325px;
     z-index: 999;
     box-sizing: border-box;
-}
 }
 
 
@@ -482,4 +482,44 @@ div.cit {
 
 span.italic {
     font-style:italic;
+}
+
+.algo {
+    opacity: 1;
+margin-left: 1em;
+z-index: 9999;
+}
+
+/* Main dropdown wrapper */
+.algolia-autocomplete .ds-dropdown-menu {
+  width: 500px;
+  
+}
+
+/* Main category (eg. Getting Started) */
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+  color: darkgray;
+  border: 1px solid gray;
+}
+
+/* Category (eg. Downloads) */
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
+  color: gray;
+}
+
+/* Title (eg. Bootstrap CDN) */
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  font-weight: bold;
+  color: black;
+}
+
+/* Description description (eg. Bootstrap currently works...) */
+.algolia-autocomplete .algolia-docsearch-suggestion--text {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+/* Highlighted text */
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+  color: blue;
 }
