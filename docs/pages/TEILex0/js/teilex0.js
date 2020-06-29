@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
      
 
     /*get spec */
-    var bib = document.getElementById('bibliography');
+  /*  var bib = document.getElementById('bibliography');
     var temp = document.createElement('span');
     temp.setAttribute("id", "get");
     var get = bib.parentNode.insertBefore(temp, bib.nextSibling);
@@ -61,5 +61,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
             console.log('Request failed.  Returned status of ' + xhr.status);
         }
     };
-    xhr.send();
+    xhr.send();*/
 });

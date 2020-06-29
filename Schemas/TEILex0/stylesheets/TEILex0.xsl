@@ -55,13 +55,13 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" xmlns="http://www.w3.org/1999/xhtml">
             <xsl:comment>doc-search</xsl:comment>
         </script>
-        <script type="text/javascript"> docsearch({
+      <!--  <script type="text/javascript"> docsearch({
             apiKey: '27fc9785932247d5056acddcede378cf',
             indexName: 'tei_lex',
             inputSelector: '.algo',
             debug: true // Set debug to true if you want to inspect the dropdown
             });
-        </script>
+        </script>-->
     </xsl:template>
     
     

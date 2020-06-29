@@ -59,13 +59,13 @@
         </xsl:choose>
     </xsl:template>-->
 
-    <xsl:template match="div[@id = 'specification']">
+  <!--  <xsl:template match="div[@id = 'specification']">
         <xsl:result-document href="spec.html">
             <xsl:copy>
                 <xsl:apply-templates/>
             </xsl:copy>
         </xsl:result-document>
-    </xsl:template>
+    </xsl:template>-->
 
 
     <!-- Identity transform. -->
