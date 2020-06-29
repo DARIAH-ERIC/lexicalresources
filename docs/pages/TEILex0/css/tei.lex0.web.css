@@ -2,6 +2,7 @@
 @import url("https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css");
 @import "odd.css";
 @import "prism.css";
+@import url("https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css");
 
 /*customizing pure*/
 
@@ -23,7 +24,6 @@ html, button, input, select, textarea,
     width: 325px;
     z-index: 999;
     box-sizing: border-box;
-}
 }
 
 
@@ -78,7 +78,7 @@ span.attribute, span.att {
 
 
 .pure-menu {
-    padding-bottom: 50vh; 
+    padding-bottom: 50vh;
 }
 
 .pure-menu-item {
@@ -114,7 +114,7 @@ div.tocTree, div.toc {
 }
 
 .toc-heading:hover a.toc {
-    color: #1f8dd6 !important; 
+    color: #1f8dd6 !important;
 }
 
 .toc-heading-number{
@@ -216,7 +216,7 @@ pre.teiCode{
 /*images*/
 
 img {
-    display:block; 
+    display:block;
 }
 
 img.padded {
@@ -231,7 +231,7 @@ div.figure {
 }
 
 div.tab div.figure {
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
 }
 
 div.figure img, div.thumbnail img {
@@ -328,13 +328,13 @@ td.odd_label {width:100px;}
 }
 
 .dlogo .logos img{
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
 }
 
 .elogo .logos img{
 
-     
-     
+
+
 }
 
 /*terms in lists*/
@@ -354,7 +354,7 @@ tr.label {
 }
 
 .contributors {
-    column-count: 2; 
+    column-count: 2;
 }
 
 .h2020 {
@@ -368,7 +368,7 @@ tr.label {
       border-bottom: 1px solid;
       padding: 1em 0;
       text-align: center;
-      
+
 }
 
 .pure-menu-list {
@@ -386,7 +386,7 @@ tr.label {
 }
 
 .tabs pre[class *= "language-"] {
-    margin: 0; 
+    margin: 0;
 }
 
 input {
@@ -410,7 +410,7 @@ input {
   background: #2c3e50;
   font-weight: bold;
   cursor: pointer;
-  align-items: center; 
+  align-items: center;
   /* Icon */
 }
 .tab-label:hover {
@@ -419,7 +419,7 @@ input {
 .tab-label::after {
   content: "\276F";
   width: 1em;
-  
+
   text-align: center;
   -webkit-transition: all .35s;
   transition: all .35s;
@@ -481,7 +481,7 @@ input:checked ~ .tab-content {
 }
 
 div.cit {
-    padding-left: 2em; 
+    padding-left: 2em;
 }
 
 span.italic {
@@ -489,5 +489,45 @@ span.italic {
 }
 
 span.label {
-  font-weight: bold;  
+  font-weight: bold;
+}
+
+.algo {
+    opacity: 1;
+margin-left: 1em;
+z-index: 9999;
+}
+
+/* Main dropdown wrapper */
+.algolia-autocomplete .ds-dropdown-menu {
+  width: 500px;
+
+}
+
+/* Main category (eg. Getting Started) */
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+  color: darkgray;
+  border: 1px solid gray;
+}
+
+/* Category (eg. Downloads) */
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
+  color: gray;
+}
+
+/* Title (eg. Bootstrap CDN) */
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  font-weight: bold;
+  color: black;
+}
+
+/* Description description (eg. Bootstrap currently works...) */
+.algolia-autocomplete .algolia-docsearch-suggestion--text {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+/* Highlighted text */
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+  color: blue;
 }
