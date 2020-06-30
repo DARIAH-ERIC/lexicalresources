@@ -435,40 +435,42 @@ then transform using tei-stripper.xsl-->
                <pc>.</pc>
             </sense>
          </entry>
+         <!--TODO: add metamarks and then image to the main guidelines-->
          <entry type="mainEntry" xml:lang="en" xml:id="arrest">
             <form type="lemma">
                <orth>arrest</orth>
                <pron>/ə rest/</pron>
             </form>
-            <sense xml:id="arrest_verb_sense">
+            <entry type="homonymicEntry" xml:lang="en" xml:id="arrest_v">
                <gramGrp>
                   <gram type="pos">verb</gram>
                </gramGrp>
-               <usg type="hint">(of the police)</usg>
-               <def>to catch and hold someone who has broken the law</def>
-               <cit type="example">
-                  <quote>The police arrested two men and took them to the police station</quote>
-               </cit>
-               <pc>.</pc>
-               <cit type="example">
-                  <quote>He ended up getting arrested as he tried to leave the country</quote>
-               </cit>
-               <pc>.</pc>
-               <cit type="example">
-                  <quote>She was arrested for stealing</quote>
-               </cit>
-            </sense>
-            <pc>.</pc>
-            <sense xml:id="arrest_noun_sense">
+               <sense xml:id="arrest_v.s1">
+                  <gloss>(of the police)</gloss>
+                  <def>to catch and hold someone who has broken the law</def>
+                  <cit type="example">
+                     <quote>The police arrested two men and took them to the police station.</quote>
+                  </cit>
+                  <cit type="example">
+                     <quote>He ended up getting arrested as he tried to leave the country.</quote>
+                  </cit>
+                  <cit type="example">
+                     <quote>She was arrested for stealing.</quote>
+                  </cit>
+               </sense>
+            </entry>
+            <entry type="homonymicEntry" xml:lang="en" xml:id="arrest_n">
                <gramGrp>
                   <gram type="pos">noun</gram>
                </gramGrp>
-               <def>the act of holding someone for breaking the law</def>
-               <cit type="example">
-                  <quote>The police made several arrests at the demonstration.</quote>
-               </cit>
-               <entry type="relatedEntry" xml:lang="en" xml:id="arrest_related.1">
-                  <form>under arrest</form>
+               <sense xml:id="arrest_n.s1">
+                  <def>the act of holding someone for breaking the law</def>
+                  <cit type="example">
+                     <quote>The police made several arrests at the demonstration.</quote>
+                  </cit>
+               </sense>
+               <entry type="relatedEntry" xml:lang="en" xml:id="arrest_related_n.1.s1.r1">
+                  <form type="lemma">under arrest</form>
                   <sense xml:id="arrest_related.1_sense.1">
                      <def>held by the police</def>
                      <pc>,</pc>
@@ -477,7 +479,7 @@ then transform using tei-stripper.xsl-->
                      </cit>
                   </sense>
                </entry>
-            </sense>
+            </entry>
          </entry>
          <entry xml:lang="pt" xml:id="DLPC.bombeiro" type="mainEntry">
             <form type="lemma">
@@ -1041,7 +1043,6 @@ then transform using tei-stripper.xsl-->
             <!--... -->
          </entry>
          <!--arabic-->
-
          <entry type="wordFamily" xml:id="ark" xml:lang="ar">
             <form type="root">
                <orth>ارك</orth>
@@ -1065,13 +1066,14 @@ then transform using tei-stripper.xsl-->
                   <sense xml:id="ark1_1_sense1">
                      <cit type="example">
                         <quote>الجملُ</quote>
-                     </cit><pc>:</pc> 
+                     </cit>
+                     <pc>:</pc>
                      <def>اكل ورق الأَرَاك</def>
                   </sense>
                </entry>
                <pc>.</pc>
                <entry type="mainEntry" xml:id="ark1_2" xml:lang="ar">
-                  <form type="lemma"> 
+                  <form type="lemma">
                      <orth>أَرَكَ</orth>
                   </form>
                   <form type="scheme">
@@ -1084,9 +1086,10 @@ then transform using tei-stripper.xsl-->
                      <orth>أَرَكًا</orth>
                   </form>
                   <sense xml:id="ark1_2_sense1">
-                      <cit type="example">
-                         <quote>الجملُ</quote>
-                      </cit><pc>:</pc> 
+                     <cit type="example">
+                        <quote>الجملُ</quote>
+                     </cit>
+                     <pc>:</pc>
                      <def>اشتكى بطنهُ من أَكل الأَرَاكِِِ</def>
                   </sense>
                </entry>
@@ -1114,7 +1117,8 @@ then transform using tei-stripper.xsl-->
                   </form>
                   <sense xml:id="ark1_3_sense1">
                      <def>شجر ذو شوك. طويل الساق، كثير الورق و الأغصان. خوَّار العود تتَّخذ منه
-                        المساويكِ</def></sense>
+                        المساويكِ</def>
+                  </sense>
                </entry>
                <pc>.</pc>
             </entry>
@@ -1146,12 +1150,16 @@ then transform using tei-stripper.xsl-->
                      </gramGrp>
                      <orth>أُرَكًا</orth>
                   </form>
-                  <sense xml:id="ark2_1_sense1"> 
-                     <cit type="example"><quote>الجرحُ</quote></cit><pc>:</pc> 
-                     <def>برأَ</def></sense>
+                  <sense xml:id="ark2_1_sense1">
+                     <cit type="example">
+                        <quote>الجرحُ</quote>
+                     </cit>
+                     <pc>:</pc>
+                     <def>برأَ</def>
+                  </sense>
                </entry>
             </entry>
-            <entry n="3" type="wordFamily" xml:id="ark3" xml:lang="ar"> 
+            <entry n="3" type="wordFamily" xml:id="ark3" xml:lang="ar">
                <num>٣٠ -</num>
                <entry type="mainEntry" xml:id="ark3_1" xml:lang="ar">
                   <form type="lemma">
@@ -1160,8 +1168,11 @@ then transform using tei-stripper.xsl-->
                   <pc>(</pc>
                   <usg type="domain" value="plant">ن</usg>
                   <pc>)</pc>
-                  <pc>:</pc> 
-                  <sense xml:id="ark3_1_sense1"><def>شجرة باسقة من فصيلة الصنوبريَّات.منبتها الاصلي٠ اميركا الجنوبية، تزرع في الحدائق للزينة، اوراقها شائكة تنبت حتى على الجذع</def></sense> 
+                  <pc>:</pc>
+                  <sense xml:id="ark3_1_sense1">
+                     <def>شجرة باسقة من فصيلة الصنوبريَّات.منبتها الاصلي٠ اميركا الجنوبية، تزرع في
+                        الحدائق للزينة، اوراقها شائكة تنبت حتى على الجذع</def>
+                  </sense>
                   <pc>§</pc>
                </entry>
             </entry>
@@ -1169,25 +1180,22 @@ then transform using tei-stripper.xsl-->
                <num>٤٠ -</num>
                <entry type="mainEntry" xml:id="ark4_1" xml:lang="ar">
                   <form type="lemma">
-                  <orth>لأَرِكَة</orth>
-               </form>
-               <form type="inflected">
-                  <gramGrp>
-                     <gram type="number" value="plural">ج </gram>
-                  </gramGrp>
-                  <form type="variant"><orth>أَرِِيْك </orth></form>
-                  <lbl>و</lbl>
-                  <form type="variant"><orth>أَرَائِك</orth></form>
-               </form>
+                     <orth>لأَرِكَة</orth>
+                  </form>
+                  <form type="inflected">
+                     <gramGrp>
+                        <gram type="number" value="plural">ج </gram>
+                     </gramGrp>
+                     <form type="variant"><orth>أَرِِيْك </orth></form>
+                     <lbl>و</lbl>
+                     <form type="variant"><orth>أَرَائِك</orth></form>
+                  </form>
                   <sense xml:id="ark4_1_sense1">
                      <def>سرير مزيَّن فاخر</def>
-                  </sense>             
+                  </sense>
                </entry>
             </entry>
          </entry>
-         
-         
-         <!--TODO: fix-->
          <entry type="wordFamily" xml:lang="ar" xml:id="syj">
             <form type="root">
                <orth>سيج</orth>
@@ -1200,8 +1208,9 @@ then transform using tei-stripper.xsl-->
                </form>
                <sense xml:id="syj1_sense1">
                   <cit type="example">
-                     <quote>الكرم</quote></cit>
-                  <pc>:</pc> 
+                     <quote>الكرم</quote>
+                  </cit>
+                  <pc>:</pc>
                   <def>جعل له سياجا</def>
                </sense>
                <pc>٠</pc>
@@ -1214,33 +1223,39 @@ then transform using tei-stripper.xsl-->
                <form type="inflected">
                   <gramGrp>
                      <gram type="number" value="plural">ج</gram>
-                  </gramGrp> 
-                  <form type="variant"><orth>سيَاجات</orth></form> 
+                  </gramGrp>
+                  <form type="variant"><orth>سيَاجات</orth></form>
                   <lbl>و</lbl>
-                  <form type="variant"><orth>أسْوِجة</orth></form> 
+                  <form type="variant"><orth>أسْوِجة</orth></form>
                   <lbl>و</lbl>
-                  <form type="variant"><orth>أَسْوِجة</orth></form> 
+                  <form type="variant"><orth>أَسْوِجة</orth></form>
                   <lbl>و</lbl>
                   <form type="variant"><orth>سُوج</orth></form>
-               </form>  <pc>:</pc>
-               <sense xml:id="syj2_sense1"><def>الحائط</def></sense> <pc>||</pc> 
-               <sense xml:id="syj2_sense2"><def>ما أُحيط بهِ على شيءٍ كالكرم و النخل</def></sense>
+               </form>
+               <pc>:</pc>
+               <sense xml:id="syj2_sense1">
+                  <def>الحائط</def>
+               </sense>
+               <pc>||</pc>
+               <sense xml:id="syj2_sense2">
+                  <def>ما أُحيط بهِ على شيءٍ كالكرم و النخل</def>
+               </sense>
             </entry>
             <pc>٠</pc>
             <!-- A kind of fish -->
             <entry type="mainEntry" xml:lang="ar" xml:id="syj3">
                <form type="lemma">
-                  <orth>السيْجان</orth> 
+                  <orth>السيْجان</orth>
                </form>
                <pc>(</pc>
                <usg type="domain" value="animal">ح</usg>
                <pc>)</pc>
                <pc>:</pc>
-               <sense xml:id="syj3_sense1"><def>نوع من السمك</def></sense>
+               <sense xml:id="syj3_sense1">
+                  <def>نوع من السمك</def>
+               </sense>
             </entry>
          </entry>
-         
-         
          <entry type="wordFamily" xml:lang="ar" xml:id="shahama">
             <form type="root">
                <orth>شهم</orth>
@@ -1248,126 +1263,139 @@ then transform using tei-stripper.xsl-->
             <pc>:</pc>
             <entry type="wordfamily" xml:lang="ar" xml:id="shahama1">
                <num>١ــ</num>
-               <entry type="mainEntry" xml:lang="ar" xml:id="shahama1_1"> 
+               <entry type="mainEntry" xml:lang="ar" xml:id="shahama1_1">
                   <form type="lemma">
                      <orth>شَهَمَ</orth>
-                  </form> 
+                  </form>
                   <form type="scheme">
                      <orth>ـَ</orth>
-                  </form> 
+                  </form>
                   <form type="inflected">
-                     <form type="variant"><orth>شَهْمًا</orth></form> 
-                     <lbl>و</lbl> 
+                     <form type="variant"><orth>شَهْمًا</orth></form>
+                     <lbl>و</lbl>
                      <form type="variant"><orth>شُهُمًا</orth></form>
-                  </form> 
+                  </form>
                   <sense xml:id="shahama1_1_sense1">
-                     <cit type="example"><quote>الفرسَ</quote>
-                     </cit><pc>:</pc> 
+                     <cit type="example">
+                        <quote>الفرسَ</quote>
+                     </cit>
+                     <pc>:</pc>
                      <def>زجره</def>
-                  </sense> <pc>||</pc> 
-                  <lbl>و</lbl>                  
-                  <sense xml:id="shahama1_1_sense2"> 
+                  </sense>
+                  <pc>||</pc>
+                  <lbl>و</lbl>
+                  <sense xml:id="shahama1_1_sense2">
                      <cit type="example">
                         <quote>ــ الرجُل</quote>
-                     </cit><pc>:</pc> 
+                     </cit>
+                     <pc>:</pc>
                      <def>افزعه</def>
                   </sense>
-               </entry> 
+               </entry>
                <pc>٠</pc>
-               <entry type="mainEntry" xml:lang="ar" xml:id="shahama1_2"> 
-                  <form type="lemma"> 
+               <entry type="mainEntry" xml:lang="ar" xml:id="shahama1_2">
+                  <form type="lemma">
                      <orth>اَلمشْهوم</orth>
                   </form>
-                  <pc>٠:</pc> 
+                  <pc>٠:</pc>
                   <sense xml:id="shahama1_2_sense1">
                      <def>المذعور</def>
                   </sense>
                </entry>
             </entry>
-            <entry type="wordFamily" xml:lang="ar" xml:id="shahama2"> 
+            <entry type="wordFamily" xml:lang="ar" xml:id="shahama2">
                <num>٢٠ ــ</num>
-               <entry type="mainEntry" xml:lang="ar" xml:id="shahama2_1"> 
+               <entry type="mainEntry" xml:lang="ar" xml:id="shahama2_1">
                   <form type="lemma">
                      <orth>شَهُم</orth>
-                  </form> 
+                  </form>
                   <form type="scheme">
                      <orth>ـُـ</orth>
-                  </form> 
+                  </form>
                   <form type="inflected">
-                     <form type="variant"><orth>شَهَامةً</orth></form> 
-                     <lbl>و</lbl> 
+                     <form type="variant"><orth>شَهَامةً</orth></form>
+                     <lbl>و</lbl>
                      <form type="variant"><orth>شُهُومَةُُ</orth></form>
-                  </form><lbl>:</lbl>
+                  </form>
+                  <lbl>:</lbl>
                   <sense xml:id="shahama2_1_sense1">
                      <def> كان شهْمًا</def>
                   </sense>
-               </entry> <pc>٠</pc>
-               <entry type="mainEntry" xml:lang="ar" xml:id="shahama2_2"> 
+               </entry>
+               <pc>٠</pc>
+               <entry type="mainEntry" xml:lang="ar" xml:id="shahama2_2">
                   <form type="lemma">
                      <orth>الشَهْم</orth>
-                  </form> 
+                  </form>
                   <form type="inflected">
                      <gramGrp>
                         <gram type="number" value="plural">ج</gram>
-                     </gramGrp> 
+                     </gramGrp>
                      <orth>شِهام</orth>
-                  </form><pc>:</pc> 
+                  </form>
+                  <pc>:</pc>
                   <sense xml:id="shahama2_2_sense1">
                      <def>الذكيّ الفؤاد</def>
-                  </sense> <pc>||</pc> 
+                  </sense>
+                  <pc>||</pc>
                   <sense xml:id="shahama2_2_sense2">
                      <def>السيِّد النافذ الحكم</def>
-                  </sense> <pc>||</pc>  
+                  </sense>
+                  <pc>||</pc>
                   <sense xml:id="shahama2_2_sense3">
                      <lbl>وــ</lbl>
                      <form type="inflected">
                         <gramGrp>
                            <gram type="number" value="plural">ج</gram>
-                        </gramGrp> 
+                        </gramGrp>
                         <orth>شُهُم</orth>
                      </form>
-                     <pc>:</pc> 
+                     <pc>:</pc>
                      <def>الفرس النشيط السريع القويّ</def>
-                  </sense> 
-               </entry><pc>٠</pc> 
+                  </sense>
+               </entry>
+               <pc>٠</pc>
                <entry type="mainEntry" xml:lang="ar" xml:id="shahama2_3">
                   <form type="lemma">
                      <orth>اَلمَشْهُوم</orth>
-                  </form> <pc>*:</pc> 
+                  </form>
+                  <pc>*:</pc>
                   <sense xml:id="shahama2_3_sense1">
                      <def>الذكيّ الفؤاد</def>
                   </sense>
                </entry>
-            </entry> 
+            </entry>
             <entry type="wordFamily" xml:lang="ar" xml:id="shahama3">
                <num>٠٣ ــ</num>
-               <entry type="mainEntry" xml:lang="ar" xml:id="shahama3_1"> 
+               <entry type="mainEntry" xml:lang="ar" xml:id="shahama3_1">
                   <form type="lemma">
                      <orth>الشَيْهَم</orth>
-                  </form> 
+                  </form>
                   <form type="inflected">
                      <gramGrp>
                         <gram type="number" value="plural">ج</gram>
-                     </gramGrp> 
+                     </gramGrp>
                      <orth>شَيَهِم</orth>
-                  </form> <pc>(</pc>
-                  <usg type="domain" value="animal">ح</usg><pc>)</pc> 
-                  <sense xml:id="shahama3_1_sense1"><def>ذَكَر القنافذ</def></sense>
-               </entry> 
-               <pc>٠</pc> 
+                  </form>
+                  <pc>(</pc>
+                  <usg type="domain" value="animal">ح</usg>
+                  <pc>)</pc>
+                  <sense xml:id="shahama3_1_sense1">
+                     <def>ذَكَر القنافذ</def>
+                  </sense>
+               </entry>
+               <pc>٠</pc>
                <entry type="mainEntry" xml:lang="ar" xml:id="shahama3_2">
                   <form type="lemma">
                      <orth>الشَيْهَمَة</orth>
                   </form>
-                  <pc>:</pc> 
+                  <pc>:</pc>
                   <sense xml:id="shahama3_2_sense1">
                      <def>العجوز</def>
                   </sense>
                </entry>
             </entry>
          </entry>
-         
-         
          <!--greek-->
          <entry xml:id="Aaron" xml:lang="grc" type="mainEntry">
             <form type="lemma">

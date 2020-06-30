@@ -37,17 +37,28 @@
     </div>
     <div>
         <head>Limiting contexts for <gi>def</gi></head>
-        <p>In the current TEI guidelines, <gi>def</gi> is allowed to be used within the following
-            elements:</p>
+        <p>In the current <hi rend="italic">TEI Guidelines</hi>, <gi>def</gi> is allowed within the
+            following elements:</p>
         <list type="unordered">
             <item>Module core: <gi>cit</gi></item>
             <item>Module dictionaries: <gi>dictScrap</gi>, <gi>entry</gi>, <gi>entryFree</gi>,
                     <gi>etym</gi>, <gi>hom</gi>, <gi>re</gi>, <gi>sense</gi></item>
             <item>Module namesdates: <gi>nym</gi></item>
         </list>
-        <p>TEI Lex-0 allows the use of <gi>def</gi> in <gi>sense</gi>, <gi>cit</gi> and
-                <gi>etym</gi> only. All other existing contexts would be implemented by embedding
-                <gi>def</gi> within a <gi>sense</gi>.</p>
+        <p>TEI Lex-0 allows the use of <gi>def</gi> in <gi>sense</gi> only. All other existing
+            contexts would be implemented by embedding <gi>def</gi> within a <gi>sense</gi>. </p>
+    </div>
+    <div>
+        <head>Definition or gloss?</head>
+        
+        <p>In TEI Lex-0, <gi>def</gi> is used only within a <gi>sense</gi> construct. <gi>gloss</gi>, on the other hand, 
+            doesn't have to be a child of <gi>sense</gi>. Glosses are reserved for short semantic
+            qualifications that don't meet the criteria of full-fledged lexicographic definitions.</p>
+        <p>Glosses are often used in etymologies as a kind of semantic shorthand signaling the meaning of a foreign word; or in general-purpose dictionaries
+            describing (but not defining) the semantic context of a word. For instance: </p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="arrest"/>
+        </egXML>
     </div>
     <div xml:id="grammatical-properties-in-senses">
         <head>Grammatical properties</head>
@@ -94,11 +105,12 @@
             <p> We should, however, try to look at the issue at hand from a broader, comparative,
                 perspective.</p>
             <list>
-                <item>In the Portuguese polysemous entry <hi rend="bold">antepassado</hi> <ref target="#antepassado-gramGrp-in-sense"
-                        >above</ref>, we had a case in which one particular sense (used in plural
-                    only) deviated from the other senses (which are used in both singular and
-                    plural). Since the senses were numbered in the original, there was never any
-                    doubt about how we would encode this. It was clear from the outset: <list>
+                <item>In the Portuguese polysemous entry <hi rend="bold">antepassado</hi>
+                    <ref target="#antepassado-gramGrp-in-sense">above</ref>, we had a case in which
+                    one particular sense (used in plural only) deviated from the other senses (which
+                    are used in both singular and plural). Since the senses were numbered in the
+                    original, there was never any doubt about how we would encode this. It was clear
+                    from the outset: <list>
                         <item>that the semantic information in that entry was grouped by a construct
                             called <gi>sense</gi>;</item>
                         <item>that senses inherited grammatical properties from the entry as a whole
