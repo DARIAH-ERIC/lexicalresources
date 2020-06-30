@@ -1423,23 +1423,23 @@
                   <lbl xml:lang="sr">из</lbl>
                   <lang expand="латински" norm="la">лат.</lang>
                </cit>)</etym>
-            <sense>
+            <sense xml:id="MM.RSSKJ.круна.1">
                <num>1.</num>
-               <sense>
+               <sense xml:id="MM.RSSKJ.круна.1a">
                   <num>а)</num>
                   <def>украс на глави као знак владарске власти;</def>
                </sense>
-               <sense>
+               <sense xml:id="MM.RSSKJ.круна.1b">
                   <num>б)</num>
                   <usg type="meaningType" expand="фигуративно" norm="figurative">фиг.</usg>
                   <def>владар.</def>
                </sense>
             </sense>
-            <sense>
+            <sense xml:id="MM.RSSKJ.круна.2">
                <num>2.</num>
                <def>новчана јединица у неким европским земљама, разне вредности.</def>
             </sense>
-            <sense>
+            <sense xml:id="MM.RSSKJ.круна.3">
                <num>3.</num>
                <def>део лиснатог дрвета изнад стабле (гране и лшће);</def>
                <xr type="synonymy">
@@ -1448,7 +1448,7 @@
                   <pc>.</pc>
                </xr>
             </sense>
-            <sense>
+            <sense xml:id="MM.RSSKJ.круна.4">
                <num>4.</num>
                <usg type="meaningType" expand="фигуративно" norm="figurative">фиг.</usg>
                <def>врхунац, највиши домет неког рада, забаве.</def>
