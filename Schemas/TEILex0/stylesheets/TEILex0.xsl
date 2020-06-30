@@ -86,7 +86,30 @@
         </xsl:if>
     </xsl:template>
     
+    <!-- rather than having to mess with algolia configs (which I would have to do through them;
+        rather than directly), I'm adding paragraphs to element definitions in spec, 
+        so that they get indexed by algolia-->
     
+    <xsl:template match="//tei:div[@xml:id='specification']//tei:table[@rend='wovenodd']/tei:row[1]">
+        <xsl:element name="tr" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:apply-templates></xsl:apply-templates>
+        </xsl:element>
+    </xsl:template>
+    
+  <xsl:template match="//tei:div[@xml:id='specification']//tei:table[@rend='wovenodd']/tei:row[1]/tei:cell[1]">
+      
+      <xsl:element name="td" namespace="http://www.w3.org/1999/xhtml">
+          <xsl:attribute name="colspan">2</xsl:attribute>
+          <xsl:attribute name="class">wovenodd-col2</xsl:attribute>
+          <xsl:element name="p" namespace="http://www.w3.org/1999/xhtml">
+              <xsl:attribute name="class">specDef</xsl:attribute>
+              <xsl:apply-templates></xsl:apply-templates>
+          </xsl:element>
+      </xsl:element>
+      
+        
+    </xsl:template>
+  
     
     <!-- link from bibl back to egXML -->
     <!-- <xsl:template match="tei:listBibl/tei:biblStruct | tei:listBibl/tei:bibl">

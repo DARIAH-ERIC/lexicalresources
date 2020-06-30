@@ -483,3 +483,7 @@ div.cit {
 span.italic {
     font-style:italic;
 }
+
+span.label {
+  font-weight: bold;  
+}
