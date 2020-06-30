@@ -322,17 +322,21 @@
                         <form type="variant">
                             <orth xml:lang="gmh">vraten</orth>
                         </form>
-                        <def>entzünden; wundreiben; herumziehen; quälen; plagen</def>
+                        <gloss>entzünden</gloss><pc>;</pc> <gloss>wundreiben</gloss><pc>;</pc> <gloss>herumziehen</gloss><pc>;</pc> <gloss>quälen</gloss><pc>;</pc> <gloss>plagen</gloss>
                     </cit>
                 </egXML>
             </exemplum>
         </elementSpec>
 
         <!-- adding def to model.sensePart -->
+        <!--2020-06-30 (TT): def is only allowed within a sense!-->
+        <!--TODO: at the moment, it's still allowed in etym, but it shouldn't be
+        because if there is no sense, we have to use gloss. fix later-->
         <elementSpec ident="def" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
                 <memberOf key="model.entryPart.top" mode="delete"/>
+                <memberOf key="model.entryPart" mode="delete"/>
             </classes>
         </elementSpec>
 

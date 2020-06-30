@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-06-27T14:45:34Z. .
+Schema generated from ODD source 2020-06-30T16:32:52Z. .
 TEI Edition: Version 4.0.0. Last updated on
 	13th February 2020, revision ccd19b0ba
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 4.0.0/
@@ -1638,7 +1638,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="pos"/>
          <ref name="subc"/>
          <ref name="colloc"/>
-         <ref name="def"/>
          <ref name="etym"/>
          <ref name="usg"/>
          <ref name="lbl"/>
