@@ -86,17 +86,17 @@
         </egXML>
       <p>Notes:</p>
       <list type="ordered">
-         <item>Grammatical properties of the entry as a whole should <hi rend="italic">not</hi> be specified in
-               <code rend="language-xpath">entry/form[@type="lemma"]/gramGrp</code>. </item>
+         <item>Grammatical properties of the entry as a whole should <hi rend="italic">not</hi> be
+            specified in <code rend="language-xpath">entry/form[@type="lemma"]/gramGrp</code>. </item>
          <item><code rend="language-xpath">entry/form/gramGrp</code> should be used only if a
-            particular form (a dialectal variant, for instance) has different grammatical
-            properties from the lemma; or to indicate the grammatical properties of the inflected
-            form which clearly deviate from the lemma. </item>
+            particular form (a dialectal variant, for instance) has different grammatical properties
+            from the lemma; or to indicate the grammatical properties of the inflected form which
+            clearly deviate from the lemma. </item>
          <item>For entries which group grammatical homonyms inside single entries (e.g. in English
-            dictionaries which do not have separate entries for conversion pairs of nouns and verbs, such
-            as <hi rend="bold">run</hi> or <hi rend="bold">aid</hi> see the discussion under <ref
-               target="#nested-entries-vs-multiple-senses">Nested entries vs. multiple-senses</ref>.
-         </item>
+            dictionaries which do not have separate entries for conversion pairs of nouns and verbs,
+            such as <hi rend="bold">run</hi> or <hi rend="bold">aid</hi> see the discussion under
+               <ref target="#nested-entries-vs-multiple-senses">Nested entries vs.
+               multiple-senses</ref>. </item>
       </list>
    </div>
    <div>
@@ -117,7 +117,7 @@
          <item><gi>hom</gi>: (homograph) groups information relating to one homograph within an
             entry</item>
       </list>
-      <p>These five elements can be used to distinguish differet types of entries along two
+      <p>These five elements can be used to distinguish different types of entries along two
          conceptual axes:</p>
       <list>
          <item>Structured vs. unstructured entries, i. e. entries that can readily be represented
@@ -181,7 +181,21 @@
          <head><gi>superEntry</gi></head>
          <p>By making <gi>entry</gi> recursive, TEI Lex-0 has eliminated the need for grouping
             entries with <gi>superEntry</gi>.</p>
-         <p>TODO: add one of Mohamed's example after the kasra fix.</p>
+         <p>This is especially important for traditional root-based dictionaries, which start with
+            the root as the main headword, followed by full-fledged lexicographic entries of derived
+            headwords.</p>
+         <list type="examples">
+            <item>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Almonjid2014">
+                  <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="syj"/>
+               </egXML>
+            </item>
+            <item>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Almonjid2014">
+                  <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="shahama"/>
+               </egXML>
+            </item>
+         </list>
          <p>See also Section on <ref target="#grammatical-properties-in-senses">grammatical
                properties in senses</ref>.</p>
       </div>
