@@ -34,8 +34,8 @@
          have the <att>xml:lang</att> attribute. </p>
       <p>TEI Lex-0 recommends that <att>xml:lang</att> be attached to so-called container elements
          (such as <gi>entry</gi> and <gi>cit</gi>) rather than individual <gi>form</gi> elements. </p>
-      <p>In addition, TEI Lex-0 privileges <code>&lt;entry></code> as the dictioanry's central
-         textual component by requiring both a uniqe identifier (<att>xml:id</att>) as well as
+      <p>In addition, TEI Lex-0 privileges <code>&lt;entry></code> as the dictionary’s central
+         textual component by requiring both a unique identifier (<att>xml:id</att>) as well as
             <att>xml:lang</att>. </p>
       <floatingText type="inFocusPanel" xml:id="naming-your-languages">
          <body>
@@ -184,11 +184,9 @@
          <p>This is especially important for traditional root-based dictionaries, which start with
             the root as the main headword, followed by full-fledged lexicographic entries of derived
             headwords.</p>
-         
          <figure>
-            <graphic url="https://imgur.com/Lb2sxyo.png"></graphic>
+            <graphic url="https://imgur.com/d4QTXla.png"/>
          </figure>
-         
          <list type="examples">
             <item>
                <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Almonjid2014">
