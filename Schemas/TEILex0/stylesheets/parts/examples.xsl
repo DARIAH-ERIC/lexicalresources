@@ -3,6 +3,9 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples"
     xmlns:xhtml="http://www.w3.org/1999/xhtml" xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     version="2.0" exclude-result-prefixes="tei teix">
+    
+    
+    
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>Process elements teix:egXML</desc>
     </doc>
@@ -70,9 +73,13 @@
         <xsl:element name="ul" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">examples tabs</xsl:attribute>
             <xsl:call-template name="wrapExample">
-                <xsl:with-param name="position" select="''"/>
+                <!--<xsl:with-param name="position" select="''"/>-->
             </xsl:call-template>
         </xsl:element>
+    </xsl:template>
+    <!--skip image inside items; they'll be picked up later-->
+    <xsl:template match="tei:item[parent::tei:list[@type='examples']]">
+        <xsl:apply-templates select="teix:egXML"></xsl:apply-templates>
     </xsl:template>
     <xsl:template
         match="
@@ -82,11 +89,13 @@
             [not(ancestor::tei:floatingText)]">
         <xsl:param name="simple">false</xsl:param>
         <xsl:param name="highlight"/>
-        <xsl:variable name="pos-in-list" select="count(../preceding-sibling::tei:item) + 1"/>
+      <!--  <xsl:variable name="pos-in-list" select="count(../preceding-sibling::tei:item) + 1"/>-->
+        <xsl:variable name="egImg" select="parent::tei:item/tei:figure"/>
         <xsl:call-template name="wrapExample">
-            <xsl:with-param name="position" select="$pos-in-list"/>
+            <xsl:with-param name="egImg" select="$egImg"/>
         </xsl:call-template>
     </xsl:template>
+    
     <xsl:template name="egXMLEndHook">
         <xsl:choose>
             <xsl:when test="@corresp and id(substring(@corresp, 2))">
@@ -160,10 +169,11 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
+   
     <!-- TODO: when i have more time, merge wrapExample and wrapInFocusPanel
     accounting for the differences between them-->
     <xsl:template name="wrapExample">
-        <xsl:param name="position"/>
+        <xsl:param name="egImg"/>
         <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">tab</xsl:attribute>
             <input type="checkbox" xmlns="http://www.w3.org/1999/xhtml">
@@ -181,6 +191,7 @@
                     ><!--<xsl:value-of select="concat('Example ', $position)"/>--></span>
             </label>
             <div class="tab-content" xmlns="http://www.w3.org/1999/xhtml">
+                <xsl:apply-templates select="$egImg"></xsl:apply-templates>
                 <!--<xsl:apply-templates></xsl:apply-templates>-->
                 <xsl:call-template name="processExample">
                     <xsl:with-param name="simple"/>
@@ -280,31 +291,8 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <!--   <xsl:template match="comment() | processing-instruction()" mode="egXML">
-        <xsl:copy-of select="."/>
-    </xsl:template>
-
-    <xsl:template match="@*[namespace-uri() = '']" mode="egXML">
-        <xsl:attribute name="{local-name()}">
-            <xsl:value-of select="."/>
-        </xsl:attribute>
-    </xsl:template>
-
-    <xsl:template match="@*" mode="egXML">
-        <xsl:copy-of select="."/>
-    </xsl:template>
-
-    <xsl:template match="teix:*" mode="egXML">
-        <xsl:element name="{local-name()}" xmlns="http://www.tei-c.org/ns/Examples">
-            <xsl:apply-templates select="* | @* | processing-instruction() | comment() | text()"
-                mode="egXML"/>
-        </xsl:element>
-    </xsl:template>
-
-    <xsl:template match="*" mode="egXML">
-        <xsl:copy>
-            <xsl:apply-templates select="* | @* | processing-instruction() | comment() | text()"
-                mode="egXML"/>
-        </xsl:copy>
-    </xsl:template>-->
+    
+   
+    
+   
 </xsl:stylesheet>
