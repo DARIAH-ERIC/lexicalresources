@@ -184,16 +184,19 @@
          <p>This is especially important for traditional root-based dictionaries, which start with
             the root as the main headword, followed by full-fledged lexicographic entries of derived
             headwords.</p>
-         <figure>
-            <graphic url="https://imgur.com/d4QTXla.png"/>
-         </figure>
          <list type="examples">
             <item>
+               <figure>
+                  <graphic url="https://imgur.com/d4QTXla.png"/>
+               </figure>
                <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Almonjid2014">
                   <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="syj"/>
                </egXML>
             </item>
             <item>
+               <figure>
+                  <graphic url="https://imgur.com/Lb2sxyo.png"></graphic>
+               </figure>
                <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Almonjid2014">
                   <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="shahama"/>
                </egXML>
