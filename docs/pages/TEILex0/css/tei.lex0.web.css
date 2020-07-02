@@ -230,6 +230,10 @@ div.figure {
     text-align: center;
 }
 
+div.tab div.figure {
+    margin-bottom: 1em; 
+}
+
 div.figure img, div.thumbnail img {
     border-radius:0.4em;
     border: 1px solid gainsboro;
