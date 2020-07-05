@@ -18,9 +18,9 @@
             <div id="menu" class="custom-menu" xmlns="http://www.w3.org/1999/xhtml">
                 <div class="pure-menu">
                     <a class="pure-menu-heading" href="#">TEI Lex-0</a>
-                    <div class="tei_toc">
+                    <div class="tei_toc_search">
                         <div class="input-group">
-                            <input type="search" placeholder="DocSearch input" class="algo"/>
+                            <input type="search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="algo"/>
                         </div>
                     </div>
                     <xsl:for-each select="descendant-or-self::tei:TEI/tei:text/tei:front">

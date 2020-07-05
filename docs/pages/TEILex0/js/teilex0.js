@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     /*open first example in example sets*/
-    /*document.querySelectorAll('.examples .tab input')[0].checked = true;*/
+     /*document.querySelectorAll('.examples .tab input')[0].checked = true;*/
     document.querySelectorAll('.tabs').forEach(set => {
-        set.querySelector('.tab').querySelector('input').checked = true; 
+        set.querySelector('.tab').querySelector('input').checked = true;
     });
-     
+
 
     /*get spec */
  /*   var bib = document.getElementById('bibliography');
@@ -54,9 +54,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'spec.html');
     xhr.onload = function () {
-        if (xhr.status === 200) {   
-        get.innerHTML = xhr.response;
-        Prism.highlightAllUnder(get);
+        if (xhr.status === 200) {
+            get.innerHTML = xhr.response;
+            Prism.highlightAllUnder(get);
         } else {
             console.log('Request failed.  Returned status of ' + xhr.status);
         }
