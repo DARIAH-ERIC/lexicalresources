@@ -116,10 +116,10 @@
                 word for the city of Oaxaca between speakers from the village of Yucanany and the
                 rest of the speakers. Since the Yucanany variety makes up only a small portion of
                 the speakers of the language, this case of variation is represented as an embedded
-                    <code>form[@type="variant"]</code> within the lemma. Note the use of
-                    <code>usg[@type="geo"]/placeName</code> to explicitly specify this feature in
+                    <code rend="language-xpath">form[@type="variant"]</code> within the lemma. Note the use of
+                    <code rend="language-xpath">usg[@type="geographic"]/placeName</code> to explicitly specify this feature in
                 addition to the use of the private language subtag
-                    (<code>xml:lang="mix-x-YCNY"</code>) as per <ref>BCP 47</ref>.</p>
+                    (<code rend="language-xpath">@xml:lang="mix-x-YCNY"</code>) as per <ref>BCP 47</ref>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="Oaxaca-MIX"/>
             </egXML>
