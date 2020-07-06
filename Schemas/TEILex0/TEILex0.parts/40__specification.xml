@@ -5,14 +5,15 @@
     xml:id="specification">
     <head>Specification</head>
     <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
-
         <moduleRef key="gaiji" except="localName"/>
         <!-- 2018-09-02 (TT): changed moduleRef for linking based on PB -->
         <moduleRef key="linking" include="seg"/>
         <!-- for segmentation inside orth/pron -->
         <!-- 2018-09-02 (TT): removed re hom -->
         <!-- 2018-09-02 (TT): put dictScrap back, I think we still want it -->
-        <moduleRef key="dictionaries" except="entryFree superEntry re hom"/>
+        <!-- 2020-07-06 (TT): removing unnecessary gramatical elements + oRef and pRef (for which we use ref) -->
+        <moduleRef key="dictionaries"
+            except="entryFree superEntry re hom case colloc gen iType mood number oRef pRef per pos subc tns"/>
         <!-- 2018-09-02 (TT): explicitly encoded what we allow from core -->
         <!-- 2018-09-11 (TT): removed list, item and label because i don't
                     see them as lexicographically relevant. I don't thin we need p either
@@ -38,16 +39,12 @@
         <moduleRef key="header"
             include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc projectDesc seriesStmt
                         notesStmt authority distributor idno edition funder availability licence appInfo classDecl namespace tagUsage tagsDecl rendition"/>
-
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
         <moduleRef key="namesdates" include="placeName persName orgName"/>
-
         <!-- for dialectal properties -->
         <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
-
         <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->
         <moduleRef key="transcr" include="metamark"/>
-
         <!-- Initial change to make entry recursive (LR) -->
         <!-- 2018-09-03 (LR): making @xml:id required -->
         <elementSpec ident="entry" mode="change">
@@ -82,9 +79,7 @@
                 </attDef>
             </attList>
         </elementSpec>
-
         <!-- 2018-09-03 (LR): making @xml:id mandatory on sense -->
-
         <elementSpec ident="sense" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
@@ -106,12 +101,10 @@
                 <attDef ident="level" mode="delete"/>
             </attList>
         </elementSpec>
-
         <!-- 2018-07-17 (LR): the <xr> element is adapted to have specific @type values -->
         <!-- implemented default value to lexical -->
         <!-- introducing @subtype (note to myself: make feature request to TEI so that xr belongs to att.typed -->
         <!-- made member of att.notated (for having @notation) ==> to be discussed -->
-
         <elementSpec ident="xr" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
@@ -123,7 +116,6 @@
                         </classes>-->
                 <!--2020-05-14 allow inside quote (for cross-references in examples)-->
                 <memberOf key="model.quoteLike" mode="add"/>
-
             </classes>
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
@@ -157,7 +149,6 @@
                                     violin very well/He plays the fiddle very well.</p>
                             </remarks>
                         </valItem>
-
                         <valItem ident="hyponymy">
                             <desc> Relation between lexical units X and Y characterised by the
                                 property that the sentence This is a(n) X entails, but is not
@@ -203,19 +194,16 @@
                 </attDef>
             </attList>
         </elementSpec>
-
         <!-- 2018-09-1 (LR): the <ref> element is adapted to have specific @type values (semi-closed) -->
-
         <elementSpec ident="ref" mode="change">
             <!--2020-05-14 (TT): to allow expand on ref-->
             <classes mode="change">
                 <memberOf key="att.lexicographic"/>
-          <!--2020-06-25 (TT): This was decided a long time ago but never implemented-->      
-                <memberOf key="att.notated"></memberOf>
-          <!--2020-06-26 (TT): we need scope on ref to indicate current or external entry --> 
-                <memberOf key="att.scoped"></memberOf>
+                <!--2020-06-25 (TT): This was decided a long time ago but never implemented-->
+                <memberOf key="att.notated"/>
+                <!--2020-06-26 (TT): we need scope on ref to indicate current or external entry -->
+                <memberOf key="att.scoped"/>
             </classes>
-            
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
                     <valList type="semi" mode="change">
@@ -228,7 +216,6 @@
                 </attDef>
             </attList>
         </elementSpec>
-
         <!-- 2018-07-17 (TT): the <usg> element is adapted to have specific @type values -->
         <elementSpec ident="usg" mode="change">
             <classes mode="change">
@@ -292,7 +279,6 @@
                 </egXML>
             </exemplum>
         </elementSpec>
-
         <!-- adding lang to model.entryPart (to make it member of <cit>, if you ask) -->
         <!-- 2019-10-22 (LR) created ambiguous models... mended -->
         <elementSpec ident="lang" mode="change">
@@ -327,7 +313,6 @@
                 </egXML>
             </exemplum>
         </elementSpec>
-
         <!-- adding def to model.sensePart -->
         <!--2020-06-30 (TT): def is only allowed within a sense!-->
         <!--TODO: at the moment, it's still allowed in etym, but it shouldn't be
@@ -339,7 +324,6 @@
                 <memberOf key="model.entryPart" mode="delete"/>
             </classes>
         </elementSpec>
-
         <!-- adding cit to model.sensePart -->
         <elementSpec ident="cit" mode="change">
             <classes mode="change">
@@ -374,21 +358,18 @@
                 </attDef>
             </attList>
         </elementSpec>
-
         <!-- adding form to model.sensePart -->
         <elementSpec ident="form" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
             </classes>
         </elementSpec>
-
         <!-- adding gramGrp to model.sensePart -->
         <elementSpec ident="gramGrp" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
             </classes>
         </elementSpec>
-
         <!-- adding etym to model.sensePart -->
         <elementSpec ident="etym" mode="change">
             <classes mode="change">
@@ -424,7 +405,6 @@
                 </attDef>
             </attList>
         </elementSpec>
-
         <!-- adding lbl to model.sensePart -->
         <elementSpec ident="lbl" mode="change">
             <classes mode="change">
@@ -435,22 +415,18 @@
                 <memberOf key="model.emphLike" mode="add"/>
             </classes>
         </elementSpec>
-
         <!--2020-05-14 add orth and pron to att.datable.w3c to allow @notBefore etc.-->
-
         <elementSpec ident="orth" mode="change">
             <classes mode="change">
                 <memberOf key="att.datable.w3c" mode="add"/>
             </classes>
         </elementSpec>
-
         <elementSpec ident="pron" mode="change">
             <classes mode="change">
                 <memberOf key="att.datable.w3c" mode="add"/>
             </classes>
         </elementSpec>
-
-<!--        2020-06-24 (TT): allowing langUsage and language to document language tags
+        <!--        2020-06-24 (TT): allowing langUsage and language to document language tags
 -->
         <elementRef key="langUsage"/>
         <elementSpec ident="langUsage" mode="change">
@@ -466,10 +442,8 @@
                 <memberOf key="att.declarable" mode="delete"/>
             </classes>
         </elementSpec>
-
         <elementRef key="language"/>
         <elementSpec ident="language" mode="change">
-
             <classes mode="change">
                 <memberOf key="att.global" mode="delete"/>
                 <memberOf key="att.global.rendition" mode="delete"/>
@@ -479,48 +453,89 @@
                 <memberOf key="att.global.responsibility" mode="delete"/>
                 <memberOf key="att.global.source" mode="delete"/>
             </classes>
-           <!-- text node here is to remove the insane macro.phraseSeq.limited
+            <!-- text node here is to remove the insane macro.phraseSeq.limited
             which we really don't need; we want language ident in an attribute
             and the human-readable name of the language as a child text node 
             of <language>, not all that baggage -->
             <content>
                 <textNode/>
             </content>
-
         </elementSpec>
-        <!--2020-06-25 (TT): num, to be used strictly for numbering entries and senses -->        
+        <!--2020-06-25 (TT): num, to be used strictly for numbering entries and senses -->
         <elementSpec ident="num" mode="change">
             <classes mode="replace">
-                <memberOf key="model.entryPart.top"></memberOf>
-                <memberOf key="model.sensePart"></memberOf>      
+                <memberOf key="model.entryPart.top"/>
+                <memberOf key="model.sensePart"/>
             </classes>
             <!--same as with language above-->
             <content>
                 <textNode/>
             </content>
         </elementSpec>
-
+        <elementSpec ident="gram" mode="change">
+            <attList>
+                <attDef ident="type" mode="replace" usage="req">
+                    <valList type="semi" mode="change">
+                        <valItem ident="pos">
+                            <equiv name="pos"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pos.html"
+                            />
+                        </valItem>
+                        <valItem ident="aspect"/>
+                        <valItem ident="case">
+                            <equiv name="case"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-case.html"
+                            />
+                        </valItem>
+                        <valItem ident="gender">
+                            <equiv name="gen"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gen.html"
+                            />
+                        </valItem>
+                        <valItem ident="inflectionType">
+                            <equiv name="iType"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-iType.html"
+                            />
+                        </valItem>
+                        <valItem ident="mood">
+                            <equiv name="mood"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-mood.html"
+                            />
+                        </valItem>
+                        <valItem ident="number">
+                            <equiv name="number"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-number.html"
+                            />
+                        </valItem>
+                        <valItem ident="tense">
+                            <equiv name="tns"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-tns.html"
+                            />
+                        </valItem>
+                        <valItem ident="transitivity"/>
+                        <valItem ident="collocate">
+                            <equiv name="colloc"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-colloc.html"
+                            />
+                        </valItem>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
         <!-- Class related declaration here -->
-
-        
-        
         <!-- Introducing new class for the content model of <sense> -->
         <!-- Elements remaining to be put in: dictScrap     re -->
         <!-- and we add: sense to simplify the content model <= but do we want that?!?-->
-
         <classSpec type="model" ident="model.sensePart">
             <desc>groups together all the elements from the dictionary modules that can appear as
                 child of <gi>sense</gi></desc>
         </classSpec>
-
         <!-- Making model.biblLike member of model.entryPart.top so that <bibl> is available in <entry> -->
-
         <classSpec type="model" ident="model.biblLike" mode="change">
             <classes mode="change">
                 <memberOf key="model.entryPart.top" mode="add"/>
             </classes>
         </classSpec>
-
         <!--2018-09-02 (TT): Added PB's useful class modifications-->
         <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
                         rend, and xml:base are removed from the att.global class, so that this now makes available
@@ -531,14 +546,12 @@
                         <att>n</att>, <att>xml:lang</att>. The attribute class <ident>att.declaring</ident> is
                         deleted completely, so that none of its members inherit the <att>decls</att> attribute
                         defined in the unmodified TEI.-->
-
         <classSpec ident="att.global" mode="change" type="atts">
             <attList>
                 <attDef ident="xml:space" mode="delete"/>
                 <attDef ident="xml:base" mode="delete"/>
             </attList>
         </classSpec>
-
         <!-- @rend is reintroduced, as per: https://github.com/DARIAH-ERIC/lexicalresources/issues/53#issuecomment-499463980 -->
         <!--<classSpec ident="att.global.rendition" mode="change" type="atts">
                         <attList>
@@ -546,9 +559,7 @@
                         </attList>
                     </classSpec>
                     -->
-
         <classSpec ident="att.declaring" mode="delete" type="atts"/>
-
         <classSpec ident="att.fragmentable" type="atts" mode="change">
             <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -583,22 +594,20 @@
                 </egXML>
             </exemplum>
         </classSpec>
-
         <classSpec ident="att.divLike" mode="delete" type="atts"/>
-        
         <!--2020-06-26 (TT): att.scoped-->
         <classSpec type="atts" ident="att.scoped">
             <attList>
                 <attDef ident="scope">
-                    <desc>TEI Lex-0 specific class for providing elements with an attribute describing their extent.</desc>
+                    <desc>TEI Lex-0 specific class for providing elements with an attribute
+                        describing their extent.</desc>
                     <valList>
-                        <valItem ident="currentEntry"></valItem>
-                        <valItem ident="externalEntry"></valItem>
+                        <valItem ident="currentEntry"/>
+                        <valItem ident="externalEntry"/>
                     </valList>
                 </attDef>
             </attList>
         </classSpec>
-
         <!-- 2019-10-22 (LR) new hack to have <xr> in <def> and similar places -->
         <macroSpec ident="macro.paraContent" mode="change">
             <content>
@@ -614,8 +623,5 @@
                 </alternate>
             </content>
         </macroSpec>
-        
-        
-
     </schemaSpec>
 </div>

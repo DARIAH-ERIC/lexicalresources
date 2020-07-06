@@ -72,10 +72,12 @@
    </div>
    <div>
       <head>Grammatical properties</head>
-      <p>Grammatical properties of lexical entries should be specified in
-         <code>entry/gramGrp</code>. This element will typically specify the part-of-speech of the
-         entry.</p>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <div>
+         <head>General remarks</head>
+         <p>Grammatical properties of lexical entries should be specified in <code
+               rend="language-xpath">entry/gramGrp/gram</code>. This <gi>gram</gi> element will
+            typically specify the part-of-speech of the entry:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <entry xml:lang="en" type="mainEntry" xml:id="on">
                 <form type="lemma"><orth>on</orth></form>
                 <gramGrp>
@@ -84,20 +86,169 @@
                 <!--...-->
             </entry>
         </egXML>
-      <p>Notes:</p>
-      <list type="ordered">
-         <item>Grammatical properties of the entry as a whole should <hi rend="italic">not</hi> be
-            specified in <code rend="language-xpath">entry/form[@type="lemma"]/gramGrp</code>. </item>
-         <item><code rend="language-xpath">entry/form/gramGrp</code> should be used only if a
-            particular form (a dialectal variant, for instance) has different grammatical properties
-            from the lemma; or to indicate the grammatical properties of the inflected form which
-            clearly deviate from the lemma. </item>
-         <item>For entries which group grammatical homonyms inside single entries (e.g. in English
-            dictionaries which do not have separate entries for conversion pairs of nouns and verbs,
-            such as <hi rend="bold">run</hi> or <hi rend="bold">aid</hi> see the discussion under
-               <ref target="#nested-entries-vs-multiple-senses">Nested entries vs.
-               multiple-senses</ref>. </item>
-      </list>
+         <p>Notes:</p>
+         <list type="ordered">
+            <item>Grammatical properties of the entry as a whole should <hi rend="italic">not</hi>
+               be specified in <code rend="language-xpath">entry/form[@type="lemma"]/gramGrp</code>. </item>
+            <item><code rend="language-xpath">entry/form/gramGrp</code> should be used only if a
+               particular form (a dialectal variant, for instance) has different grammatical
+               properties from the lemma; or to indicate the grammatical properties of the inflected
+               form which clearly deviate from the lemma. </item>
+            <item>For entries which group grammatical homonyms inside single entries (e.g. in
+               English dictionaries which do not have separate entries for conversion pairs of nouns
+               and verbs, such as <hi rend="bold">run</hi> or <hi rend="bold">aid</hi> see the
+               discussion under <ref target="#nested-entries-vs-multiple-senses">Nested entries vs.
+                  multiple-senses</ref>. </item>
+         </list>
+      </div>
+      <div>
+         <head>Typology of <gi>gram</gi></head>
+         <p>The <hi rend="italic">TEI Guidelines</hi> define: <list>
+               <item>seven <hi rend="italic">specific</hi> elements which can be used to mark up
+                  particular grammatical properties:<gi>case</gi>, <gi>gen</gi> (for gender),
+                     <gi>iType</gi> (for inflection type), <gi>mood</gi>, <gi>number</gi>,
+                     <gi>per</gi> (for person) and <gi>tns</gi> (for tense); and </item>
+               <item>one <hi rend="italic">general</hi> element (<gi>gram</gi>) which can be used to
+                  encode different kinds of grammatical properties.</item>
+            </list></p>
+         <p>The <hi rend="italic">Guidelines</hi> themselves do not explain the reasoning behind
+            having two different mechanisms for encoding the same kind of information. The two
+            mechanisms are treated as fully interchangeable: see, for instance, the first two
+            examples in <ref
+               target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DITPGR">Section
+               9.3.2</ref>.</p>
+         <p>While it is perfectly understandable why marking up grammatical information using a
+            number of specific, granular elements can be considered desirable, the current situation
+            is less than perfect: <list>
+               <item>if both <code rend="language-xml">&lt;pos>prep&lt;/pos></code> and <code
+                     rend="language-xml">&lt;gram type="pos">prep&lt;/gram></code> are possible, and
+                  if both mean exactly the same thing, the choice about how to encode grammatical
+                  information will always be partially arbitrary;</item>
+               <item>the <hi rend="italic">specific</hi> grammatical elements in TEI cover some
+                  important grammatical categories, but are certainly not exhaustive: for instance,
+                  Slavic dictionaries will, as a rule, indicate aspect (imperfective or perfective)
+                  as the defining grammatical property of verbs, yet there is no specific element
+                  for: <gi>aspect</gi> in TEI.</item>
+               <item>if there are no <hi rend="italic">specific</hi> elements for every possible
+                  grammatical category, mixing specific and general elements (for instance <code
+                     rend="language-xml">&lt;pos>v.&lt;/pos></code> and <code rend="language-xml"
+                     >&lt;gram type="aspect">imperf.&lt;/gram></code> within the same entry and/or
+                  dictionary will most likely further complicate data processing and data
+                  interoperability.</item>
+            </list></p>
+         <p>Considering the goals of TEI Lex-0 to serve as a common baseline and target format for
+            transforming and comparing different lexical resources, we have decided to do away with
+            the specific elements for grammatical properties. Instead, we recommend the use of typed
+               <gi>gram</gi> elements. This is a decision that wasn't taken lightly and one which
+            solicited a great deal of discussion. It goes without saying that TEI itself will
+            continue to support both mechanisms and that an XSLT transformation from <code
+               rend="language-xpath">&lt;pos>prep&lt;/pos></code> to <code rend="language-xpath"
+               >&lt;gram type="pos">prep&lt;/gram></code> for those who want to convert their
+            dictionaries to TEI Lex-0 would be easily accomplished. </p>
+         <p>The following table shows a mapping between the specific TEI elements and the typed
+               <gi>gram</gi> elements in TEI Lex-0:<table rows="7" cols="2"
+               rend="pure-table pure-table-bordered">
+               <head>Mapping between specific elements in TEI and the generalized mechanism in TEI
+                  Lex-0</head>
+               <row role="label">
+                  <cell>TEI</cell>
+                  <cell>TEI Lex-0</cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;pos>n.&lt;/pos></code></cell>
+                  <cell><code>&lt;gram type="pos">n.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;case>acc.&lt;/case></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="case">acc.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;gen>f.&lt;/gen></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="gender">f.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;iType>7&lt;/iType></code></cell>
+                  <cell><code rend="language-xml">&lt;gram
+                     type="inflectionType">7&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;mood>indic.&lt;/mood></code></cell>
+                  <cell><code rend="language-xml">&lt;gram
+                     type="mood">indic.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;number>sg.&lt;/number></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="number">sg.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;per>3rd&lt;/per></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="person">3rd&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;tns>aorist&lt;/tns></code></cell>
+                  <cell><code rend="language-xml">&lt;gram
+                     type="tense">aorist&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell>-</cell>
+                  <cell><code rend="language-xml">&lt;gram
+                     type="aspect">imperf.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell>-</cell>
+                  <cell><code rend="language-xml">&lt;gram
+                        type="transitivity">intr.&lt;/gram></code></cell>
+               </row>
+            </table></p>
+         <p>Note: See also section on <ref target="#collocates">Collocates</ref>.</p>
+         <p>The attribute values for <code rend="language-xpath">gram/@type</code> are a semi-closed
+            list: this means that we will discuss and adopt additional values as demonstrated by
+            examples from dictionaries that are encoded by members of our community. </p>
+         <p>If your dictionary has grammatical labels that do not fit into the above categories, do
+            let us know by <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/new"
+               >filing a ticket on GitHub</ref>. </p>
+      </div>
+      <div xml:id="collocates">
+         <head>Collocates</head>
+         <p>The <hi rend="italic">TEI Guidelines</hi> define a specific element <gi>colloc</gi>
+            (collocate) for marking up "any sequence of words that co-occur with the headword with
+            significant frequency." The prototypical example from the <hi rend="italic"
+               >Guidelines</hi> is this:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
+               <entry>
+                  <form>
+                     <orth>médire</orth>
+                  </form>
+                  <gramGrp>
+                     <colloc>de</colloc>
+                  </gramGrp>
+                </entry>
+            </egXML></p>
+         <p>In line with the simplification of the elements used to describe grammatical properties
+            in dictionaries, TEI Lex-0 recommends the use of <code rend="language-xml">&lt;gram
+               type="collocate">&lt;/gram></code> to encode these phenomena, i.e.:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <entry xml:lang="fr" xml:id="DDLF.médire">
+                  <form type="lemma">
+                     <orth>médire</orth>
+                  </form>
+                  <gramGrp>
+                     <gram type="collocate">de</gram>
+                  </gramGrp>
+                </entry>
+            </egXML>
+         </p>
+         <p>In addition to marking up "sequences of words", <code rend="language-xpath"
+               >gram/@type="collocate"</code> is also used in TEI Lex-0 for encoding various types
+            of grammatical relations (differently referred to in the literature as valency, rection,
+            dependency etc.):
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <gramGrp>
+               <gram type="collocate">[+ conj.]</gram>
+            </gramGrp>
+         </egXML>
+         </p>
+      </div>
    </div>
    <div>
       <head>Deprecated entry-like elements</head>
@@ -195,7 +346,7 @@
             </item>
             <item>
                <figure>
-                  <graphic url="https://imgur.com/Lb2sxyo.png"></graphic>
+                  <graphic url="https://imgur.com/Lb2sxyo.png"/>
                </figure>
                <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Almonjid2014">
                   <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="shahama"/>
