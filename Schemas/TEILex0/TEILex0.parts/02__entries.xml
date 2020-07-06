@@ -101,7 +101,7 @@
                   multiple-senses</ref>. </item>
          </list>
       </div>
-      <div>
+      <div xml:id="typology-of-gram">
          <head>Typology of <gi>gram</gi></head>
          <p>The <hi rend="italic">TEI Guidelines</hi> define: <list>
                <item>seven <hi rend="italic">specific</hi> elements which can be used to mark up
@@ -142,7 +142,7 @@
                <gi>gram</gi> elements. This is a decision that wasn't taken lightly and one which
             solicited a great deal of discussion. It goes without saying that TEI itself will
             continue to support both mechanisms and that an XSLT transformation from <code
-               rend="language-xpath">&lt;pos>prep&lt;/pos></code> to <code rend="language-xpath"
+               rend="language-xml">&lt;pos>prep&lt;/pos></code> to <code rend="language-xml"
                >&lt;gram type="pos">prep&lt;/gram></code> for those who want to convert their
             dictionaries to TEI Lex-0 would be easily accomplished. </p>
          <p>The following table shows a mapping between the specific TEI elements and the typed
