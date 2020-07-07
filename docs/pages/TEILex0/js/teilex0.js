@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     /*open first example in example sets*/
      /*document.querySelectorAll('.examples .tab input')[0].checked = true;*/
-    document.querySelectorAll('.tabs').forEach(set => {
+   /* document.querySelectorAll('.tabs').forEach(set => {
         set.querySelector('.tab').querySelector('input').checked = true;
-    });
+    });*/
 
 
     /*get spec */
@@ -62,4 +62,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     };
     xhr.send();*/
+});
+
+document.querySelectorAll('.tabs').forEach(set => {
+    set.querySelector('.tab').querySelector('input').checked = true;
 });
