@@ -20,7 +20,7 @@
                     <a class="pure-menu-heading" href="#">TEI Lex-0</a>
                     <div class="tei_toc_search">
                         <div class="input-group">
-                            <input type="search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="algo"/>
+                            <input type="search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="algo rounded"/>
                         </div>
                     </div>
                     <xsl:for-each select="descendant-or-self::tei:TEI/tei:text/tei:front">

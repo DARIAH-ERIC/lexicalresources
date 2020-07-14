@@ -3,7 +3,6 @@
 <?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
 <div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
     xml:id="bibliography">
-
     <!--Bibliography rules to follow
 - dictionaries that are known by their publisher don't need authors names, see #Duden2007
 - use biblScope unit = volume for journals; those with issue and volume should get 
@@ -11,7 +10,6 @@
 - at the moment we can do journal-like and book-like things. 
 - my xslt doesn't do edited collections yet, if we get them, I will update xslt
     -->
-
     <head>Bibliography</head>
     <listBibl>
         <biblStruct type="dictionary" xml:id="Almonjid2014">
@@ -25,7 +23,31 @@
                     <date>2014</date>
                     <pubPlace>Beirut</pubPlace>
                 </imprint>
-                
+            </monogr>
+        </biblStruct>
+        <biblStruct type="book" xml:id="Atkins2008"
+            corresp="http://zotero.org/users/306701/items/AGCUGM2M">
+            <monogr>
+                <title level="m">The Oxford Guide to Practical Lexicography</title>
+                <idno type="ISBN">9780199277711</idno>
+                <idno type="callNumber">P327 .A88 2008</idno>
+                <author>
+                    <persName>
+                        <forename>B. T. S.</forename>
+                        <surname>Atkins</surname>
+                    </persName>
+                </author>
+                <author>
+                    <persName>
+                        <forename>Michael</forename>
+                        <surname>Rundell</surname>
+                    </persName>
+                </author>
+                <imprint>
+                    <pubPlace>Oxford; New York</pubPlace>
+                    <publisher>Oxford University Press</publisher>
+                    <date>2008</date>
+                </imprint>
             </monogr>
         </biblStruct>
         <biblStruct type="dictionary" xml:id="Chambers2014">
@@ -39,9 +61,8 @@
                 <imprint>
                     <publisher>Chambers Harrap Publishers</publisher>
                     <date>2011</date>
-                    <pubPlace>London</pubPlace>  
+                    <pubPlace>London</pubPlace>
                 </imprint>
-                
             </monogr>
         </biblStruct>
         <biblStruct type="book" xml:id="Cruse1986"
@@ -64,10 +85,9 @@
             <monogr>
                 <title level="m">Meaning in language: an introduction to semantics and
                     pragmatics</title>
-               
                 <idno type="ISBN">9780199559466</idno>
-               
-                <author><persName><forename>D. A.</forename><surname>Cruse</surname></persName></author>
+                <author><persName><forename>D.
+                    A.</forename><surname>Cruse</surname></persName></author>
                 <edition>3rd ed</edition>
                 <imprint>
                     <pubPlace>Oxford</pubPlace>
@@ -88,7 +108,6 @@
                     <date>2001</date>
                     <pubPlace>Lisboa</pubPlace>
                 </imprint>
-                
             </monogr>
         </biblStruct>
         <biblStruct type="dictionary" xml:id="Duden2007">
@@ -102,7 +121,6 @@
                     <date>2007</date>
                     <pubPlace>Mannheim</pubPlace>
                 </imprint>
-
             </monogr>
         </biblStruct>
         <biblStruct xml:id="DuCange1688" type="dictionary">
@@ -112,7 +130,6 @@
                 <title level="m"
                     ref="http://anemi.lib.uoc.gr/metadata/f/4/b/metadata-01-0000493.tkl">Glossarium
                     ad Scriptores Mediae et Infimae Graecitatis</title>
-
                 <imprint>
                     <date>1688</date>
                     <pubPlace>Lugduni</pubPlace>
@@ -120,34 +137,7 @@
                 </imprint>
             </monogr>
         </biblStruct>
-        <biblStruct type="dictionary" xml:id="OALD1974">
-            <monogr>
-                <author>
-                    <orgName>OALD</orgName>
-                </author>
-                <!-- our biblio doesn't dipslay editors at the moment
-                   but it does put them into the xref. orgName is better
-                   for xref because it's more recognizable;
-                   eventually, i will want orgName in xref, but allow
-                   ediotrs to be displayed in the bibliography (Edited by...)
-                   or (eds). -->
-                <!--
-                   <editor>
-                    <persName>
-                        <forename>A. S.</forename>
-                        <surname>Hornby</surname>
-                    </persName>
-                </editor>-->
-                <title level="m">Oxford Advanced Learner's Dictionary of Current English</title>
-                <imprint>
-                    <publisher>Oxford University Press</publisher>
-                    <date>1974</date>
-                    <pubPlace>Oxford</pubPlace>
-                </imprint>
-
-            </monogr>
-        </biblStruct>
-
+        
         <biblStruct type="journalArticle" xml:id="Erjavec2000">
             <analytic>
                 <author><persName><surname>Erjavec</surname>
@@ -220,16 +210,57 @@
                 </imprint>
             </monogr>
         </biblStruct>
+        <biblStruct type="book" xml:id="LDOCE2003"
+            corresp="http://zotero.org/users/306701/items/66WSN5U8">
+            <monogr>
+                <title level="m">Longman Dictionary of Contemporary English</title>
+                <idno type="ISBN">0582776465</idno>
+                <author><orgName>LDOCE</orgName></author>
+                <edition>4th Edition</edition>
+                <editor><forename>Adam</forename><surname>Gadsby</surname></editor>
+                <imprint>
+                    <pubPlace>Harlow</pubPlace>
+                    <publisher>Longman</publisher>
+                    <date>2003</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
         <biblStruct xml:id="Московљевић1990" type="dictionary">
             <monogr>
                 <author><persName><forename>Милош С.</forename>
-                    <surname>Московљевић</surname></persName></author>
-                <title level="m">Речник савременог српскохрватског књижевног језика с књижевним саветником</title>
-                
+                        <surname>Московљевић</surname></persName></author>
+                <title level="m">Речник савременог српскохрватског књижевног језика с књижевним
+                    саветником</title>
                 <imprint>
                     <date>1990</date>
                     <pubPlace>Београд</pubPlace>
                     <publisher>Аполон</publisher>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="dictionary" xml:id="OALD1974">
+            <monogr>
+                <author>
+                    <orgName>OALD</orgName>
+                </author>
+                <!-- our biblio doesn't dipslay editors at the moment
+                   but it does put them into the xref. orgName is better
+                   for xref because it's more recognizable;
+                   eventually, i will want orgName in xref, but allow
+                   ediotrs to be displayed in the bibliography (Edited by...)
+                   or (eds). -->
+                <!--
+                   <editor>
+                    <persName>
+                        <forename>A. S.</forename>
+                        <surname>Hornby</surname>
+                    </persName>
+                </editor>-->
+                <title level="m">Oxford Advanced Learner's Dictionary of Current English</title>
+                <imprint>
+                    <publisher>Oxford University Press</publisher>
+                    <date>1974</date>
+                    <pubPlace>Oxford</pubPlace>
                 </imprint>
             </monogr>
         </biblStruct>
@@ -245,7 +276,6 @@
                 <idno type="HAL">hal-00762664</idno>
             </analytic>
             <monogr>
-
                 <title level="j"> Journal for language technology and computational linguistics </title>
                 <imprint>
                     <biblScope unit="volume">30(1)</biblScope>
@@ -254,7 +284,6 @@
                     </publisher>
                 </imprint>
             </monogr>
-
         </biblStruct>
         <biblStruct type="conferencePaper" xml:id="Romary2018"
             corresp="http://zotero.org/users/306701/items/ZACWD2K3">
@@ -306,7 +335,6 @@
                     <biblScope unit="page">133–156</biblScope>
                     <date>2019</date>
                 </imprint>
-
             </monogr>
         </biblStruct>
         <biblStruct type="book" xml:id="Svensén2009"
@@ -341,16 +369,35 @@
         <!--TODO: when more time, this should be turned into a book chater in an edited book-->
         <biblStruct type="journalArticle" xml:id="Zöfgen1989">
             <analytic>
-                <title level="a" xml:lang="de">Homonymie und Polysemie im allgemeinen einsprachigen Wörterbuch</title>
+                <title level="a" xml:lang="de">Homonymie und Polysemie im allgemeinen einsprachigen
+                    Wörterbuch</title>
                 <author><persName><forename>Ekkehard</forename><surname>Zöfgen</surname></persName></author>
-              
             </analytic>
             <monogr>
-                <title level="j">Wörterbücher. Ein internationales Handbuch zur Lexikographie.</title>
+                <title level="j">Wörterbücher. Ein internationales Handbuch zur
+                    Lexikographie.</title>
                 <imprint>
                     <biblScope unit="volume">I</biblScope>
                     <biblScope unit="page">425-464</biblScope>
                     <date>1989</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct type="book" xml:id="Zgusta1971"
+            corresp="http://zotero.org/users/306701/items/PBAR5AAR">
+            <monogr>
+                <title level="m">Manual of Lexicography</title>
+                <idno type="ISBN">9783111980461</idno>
+                <author>
+                    <persName>
+                        <forename>Ladislav</forename>
+                        <surname>Zgusta</surname>
+                    </persName>
+                </author>
+                <imprint>
+                    <pubPlace>Prague</pubPlace>
+                    <publisher>Academia</publisher>
+                    <date>1971</date>
                 </imprint>
             </monogr>
         </biblStruct>
@@ -373,20 +420,19 @@
                     <biblScope unit="page">187–192</biblScope>
                     <date>2009</date>
                 </imprint>
-
             </monogr>
         </biblStruct>
         <biblStruct xml:id="Златановић2017" type="dictionary">
             <monogr>
                 <author><persName><forename>Момчило</forename>
-                    <surname>Златановић</surname></persName></author>
-                <title level="m"
-                    ref="http://raskovnik.org/recnici/MZ.RGJS">Речник говора јужне Србије: електронско издање</title>
-                
+                        <surname>Златановић</surname></persName></author>
+                <title level="m" ref="http://raskovnik.org/recnici/MZ.RGJS">Речник говора јужне
+                    Србије: електронско издање</title>
                 <imprint>
                     <date>2017</date>
                     <pubPlace>Београд</pubPlace>
-                    <publisher>Институт за српски језик САНУ и Центар за дигиталне хуманистичке науке</publisher>
+                    <publisher>Институт за српски језик САНУ и Центар за дигиталне хуманистичке
+                        науке</publisher>
                 </imprint>
             </monogr>
         </biblStruct>

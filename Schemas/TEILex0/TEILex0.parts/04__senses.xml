@@ -49,16 +49,83 @@
             contexts would be implemented by embedding <gi>def</gi> within a <gi>sense</gi>. </p>
     </div>
     <div>
-        <head>Definition or gloss?</head>
-        
-        <p>In TEI Lex-0, <gi>def</gi> is used only within a <gi>sense</gi> construct. <gi>gloss</gi>, on the other hand, 
-            doesn't have to be a child of <gi>sense</gi>. Glosses are reserved for short semantic
-            qualifications that don't meet the criteria of full-fledged lexicographic definitions.</p>
-        <p>Glosses are often used in etymologies as a kind of semantic shorthand signaling the meaning of a foreign word; or in general-purpose dictionaries
-            describing (but not defining) the semantic context of a word. For instance: </p>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="arrest"/>
-        </egXML>
+        <head>Glosses</head>
+        <div>
+            <head>Gloss vs. definition?</head>
+            <p>In the lexicographic literature, gloss is a rather amorphous category. Zgusta, in his
+                classic <hi rend="italic">Manual of Lexicography</hi>
+                <ref target="#Zgusta1971">(1971)</ref>, defines it as "any descriptive or
+                explanatory note within the entry" which includes "short comments, explanatory
+                remarks, semantic characteristics or qualifications" (270). Atkins and Rundell <ref
+                    target="#Atkins2008">(2008)</ref> see the gloss as "a more informal explanation
+                of the meaning of a multiword expression or example (or even part of one) in the
+                entry,[...] chiefly used in monolingual dictionaries for learners, to help
+                understanding" (209). While one could argue about the statement that this type of
+                lexicographic construct is used "chiefly... in monolingual dictionaries for
+                learners", it is certainly the case that glosses are expected to help users better
+                understand or more easily locate the particular meaning of a word that they are
+                looking up. </p>
+            <p>In other words, the prototypical gloss contextualizes and clarifies the meaning of
+                the word. Take this example from Zgusta: <list type="ordered">
+                    <item><hi rend="bold">fugitive</hi> (of persons)</item>
+                    <item><hi rend="bold">fugitive</hi> (verses)</item>
+                </list> Here, glosses are used to signal the meaning of <hi rend="bold"
+                    >fugitive</hi>: in the first sense "fugitive" refers to persons, and in the
+                second example, to verses. In TEI Lex-0, this could be represented as:
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <entry xml:id="ED.fugitive" xml:lang="en">
+                    <form type="lemma">
+                        <orth>fugitive</orth>
+                    </form>
+                    <sense n="1">
+                        <gloss>(of persons)</gloss>
+                    </sense>
+                    <sense n="2">
+                        <gloss>(verses)</gloss>
+                    </sense>
+                </entry>
+            </egXML>
+                Glosses, however, are <hi rend="italic">not</hi> definitions: one can imagine the
+                above two senses to contain proper lexicographic definitions as well:
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <entry xml:id="ED.fugitive" xml:lang="en">
+                    <form type="lemma">
+                        <orth>fugitive</orth>
+                    </form>
+                    <sense n="1">
+                        <gloss>(of persons)</gloss>
+                        <def>given to, or in the act of, running away from a place, especially to avoid arrest or persecution.</def>
+                    </sense>
+                    <sense n="2">
+                        <gloss>(verses)</gloss>
+                        <def>concerned or dealing with subjects of passing interest; ephemeral, occasional.</def>
+                    </sense>
+                </entry>
+            </egXML>Zgusta
+                notes a certain amount of overlapping between glosses and other categories, "the
+                most important probably being that of the examples" (ibid.) This is especially
+                evident in sense no. 2 above where "fugitive verses" or "~ verses" could have been
+                used as an example. The absence of the lemma or lemma reference in "(verses)" as
+                well as the brackets are a clear indicator that the whole construct is not to be
+                read as an example, but rather as a semantic signpost for the given sense. </p>
+            <p>On sense-distinguishing grammatical properties, see section <ref target="#grammatical-properties-in-senses">Grammatical properties in senses</ref></p>
+        </div>
+        <div>
+            <head>Glossing examples</head>
+            <p>Semantic glosses can occur at different levels of the entry hierarchy. In the
+                previous section, we saw examples in which glosses were used as a kind of semantic
+                shorthand for an individual sense. They can, however, be used to further qualify
+                individual examples in the entry. Take, for instance, this entry from the Longman
+                Dictionary of Contemporary English <ref target="#LDOCE2003">(2003)</ref>:</p>
+            <p><hi rend="bold">living</hi> /... / adj <hi rend="bold">1</hi> alive now [...] | <hi
+                    rend="italic">The sun affects all <hi rend="bold">living</hi> things</hi>
+                (=people, animals, and plants). | <hi rend="italic">A <hi rend="bold">living</hi>
+                    language </hi> (=one that people still use) [….] </p>
+            <p>In TEI Lex-0, this entry would be represented as:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#LDOCE2003">
+               <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="LDOCE.living"/>
+           </egXML>
+        </div>
     </div>
     <div xml:id="grammatical-properties-in-senses">
         <head>Grammatical properties</head>
@@ -73,6 +140,40 @@
         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DLPC2014" xml:id="antepassado-gramGrp-in-sense">
             <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.antepassado_b_2"/>
         </egXML>
+        <div xml:id="grammatical-glosses">
+            <head>Grammatical glosses? </head>
+            <p>Zgusta also uses "gloss" to describe "grammatical indications in the broadest sense
+                of the word" <ref target="#Zgusta1971"> (1971, 240)</ref>, using an example familiar
+                from Latin (and many other) dictionaries: <list type="ordered">
+                    <item><hi rend="bold">petere</hi>
+                        <hi rend="italic">aliquid ab aliquo</hi> [to ask <hi rend="italic">for
+                            something from somebody</hi>] </item>
+                    <item><hi rend="bold">petere</hi>
+                        <hi rend="italic">Romam</hi> [to rush <hi rend="italic">to Rome</hi>]</item>
+                </list>
+            </p>
+            <p>In theory, one could choose to encode such phenomena using <gi>gloss</gi>, but TEI
+                Lex-0 recommends a clear separation of roles: <gi>gloss</gi> should be used for semantic
+                or pragmatic information, whereas grammatical information should be encoded using
+                the familiar <code rend="language-xpath">gramGrp/gram</code> constructs: </p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <sense n="1" xml:id="LD.peto.1">
+                    <gramGrp>
+                        <gram type="rection">aliquid ab aliquo</gram>
+                    </gramGrp>
+                </sense>
+                <sense n="1" xml:id="LD.peto.2">
+                    <gramGrp>
+                        <gram type="rection">Romam</gram>
+                    </gramGrp>
+                </sense>
+            </egXML>
+            <p>Here, too, it is important to note the possibility of ambiguity: unlike "petere
+                aliquid ab aliquo", "petere Romam" could be interpreted as an example. The decision
+                on such ambiguous cases should never be taken in isolation: editors of a digital
+                edition need to consider the conventions of the dictionary as a whole before
+                advising encoders on how to mark up such ambiguous cases. </p>
+        </div>
         <div xml:id="nested-entries-vs-multiple-senses">
             <head>Nested entries vs. multiple senses</head>
             <p>While TEI Lex-0 has been created to simplify the choices available for encoding

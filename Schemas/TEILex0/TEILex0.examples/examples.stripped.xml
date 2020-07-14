@@ -929,6 +929,25 @@ then transform using tei-stripper.xsl-->
             </form>
             <!--...-->
          </entry>
+         <entry xml:id="LDOCE.living" xml:lang="en" type="mainEntry">
+            <form type="lemma"><orth>living</orth></form>
+            <gramGrp><gram type="pos">adj</gram></gramGrp>
+            <sense n="1" xml:id="LDOCE.living.1">
+               <num>1</num>
+               <def>alive now <!--[...] --></def>
+               <metamark>|</metamark>
+               <cit type="example">
+                  <quote>The sun affects all <ref type="entry" scope="local??????">living</ref>
+                     things <gloss>(=people, animals, and plants)</gloss>.</quote>
+               </cit>
+               <metamark>|</metamark>
+               <cit type="example">
+                  <quote>A <ref type="entry" scope="??????????">living</ref> language <gloss>(=one
+                        that people still use)</gloss>
+                     <!--[….] --></quote>
+               </cit>
+            </sense>
+         </entry>
          <entry xml:id="Oaxaca-MIX" xml:lang="mix" type="compound">
             <form type="lemma">
                <orth>

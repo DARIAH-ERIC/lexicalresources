@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-07-06T17:09:34Z. .
+Schema generated from ODD source 2020-07-17T10:33:46Z. .
 TEI Edition: Version 4.0.0. Last updated on
 	13th February 2020, revision ccd19b0ba
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 4.0.0/
@@ -4060,7 +4060,7 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <ref name="att.lexicographic.attributes"/>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionType; 6] mood; 7] number; 8] tense; 9] transitivity; 10] collocate</a:documentation>
+Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionType; 6] mood; 7] number; 8] tense; 9] transitivity; 10] collocate; 11] rection</a:documentation>
             <choice>
                <value>pos</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -4081,6 +4081,8 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                <value>transitivity</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>collocate</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>rection</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <data type="Name"/>
             </choice>

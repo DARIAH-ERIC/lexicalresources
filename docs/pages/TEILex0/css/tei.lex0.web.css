@@ -614,3 +614,13 @@ span.label {
 .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
     color: #1f8dd6;
 }
+
+input.rounded {
+	border: none;
+	-moz-border-radius: 14px;
+	-webkit-border-radius: 14px;
+	border-radius: 14px;
+	padding: 4px 7px 4px 14px;
+	outline: 0;
+	-webkit-appearance: none;
+}

@@ -56,7 +56,7 @@
         </pre>
     </xsl:template>
     <xsl:template
-        match="teix:egXML[ancestor::tei:div[@xml:id = 'specification'] or ancestor::tei:floatingText]">
+        match="teix:egXML[ancestor::tei:div[@xml:id = 'specification'] or ancestor::tei:floatingText or @rend='unwrapped']">
         <xsl:param name="simple">false</xsl:param>
         <xsl:param name="highlight"/>
         <xsl:call-template name="processExample">
@@ -69,7 +69,8 @@
             teix:egXML
             [not(ancestor::tei:list[@type = 'examples'])]
             [not(ancestor::tei:div[@xml:id = 'specification'])]
-            [not(ancestor::tei:floatingText)]">
+            [not(ancestor::tei:floatingText)]
+            [not(@rend='unwrapped')]">
         <xsl:element name="ul" namespace="http://www.w3.org/1999/xhtml">
             <xsl:attribute name="class">examples tabs</xsl:attribute>
             <xsl:call-template name="wrapExample">
@@ -86,7 +87,8 @@
             teix:egXML
             [ancestor::tei:list[@type = 'examples']]
             [not(ancestor::tei:div[@xml:id = 'specification'])]
-            [not(ancestor::tei:floatingText)]">
+            [not(ancestor::tei:floatingText)]
+            [not(@rend='unwrapped')]">
         <xsl:param name="simple">false</xsl:param>
         <xsl:param name="highlight"/>
       <!--  <xsl:variable name="pos-in-list" select="count(../preceding-sibling::tei:item) + 1"/>-->
