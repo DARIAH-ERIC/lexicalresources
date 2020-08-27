@@ -436,6 +436,12 @@ weakening, To be CHacked -->
                               <desc>Process by which new lexical items or inflectable stem are formed by the addition of
                                  an affix.</desc>
                            </valItem>
+                           <valItem ident="backFormation">
+                              <gloss>Back formation</gloss>
+                              <desc>Type of folk etymology in which either a word is modified morphologically based on
+                                 mistaken assumptions of its morphological composition, or in which a new word of one
+                                 class is created based on root components of another</desc>
+                           </valItem>
                            <valItem ident="potmanteau"/>
                            <valItem ident="narrowing"/>
                            <valItem ident="widening"/>
