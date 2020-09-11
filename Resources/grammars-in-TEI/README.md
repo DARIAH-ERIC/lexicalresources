@@ -18,9 +18,9 @@ From the outset, one should also try to establish a consistent practice in terms
 
 As we'll show later, achieving both of the above-mentioned goals is not possible without customizing TEI.
 
-TEI Lex-0 has been so far focused on dictionaries rather than grammars, which is why TEI Lex-0 is itself not yet ready to accommodate the above-mentioned goals.
+TEI Lex-0, which has so far been focused on dictionaries rather than grammars, is capable of representing grammatically annotated linguistic forms, both individually and as paradigms. But it also does not currently cover the embedding of linguistic forms inside paragraphs of running text.
 
-Our hope is to explore descriptive grammars and work toward proposing solutions that will eventually make it to TEI Lex-0, and, if there is wider interest, to TEI itself.
+Our hope here is to explore descriptive grammars and work toward proposing solutions that will eventually make it to TEI Lex-0, and, if there is wider interest, to TEI itself.
 
 ## Paradigm tables
 
