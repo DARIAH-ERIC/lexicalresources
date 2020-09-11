@@ -24,7 +24,7 @@ Our hope is to explore descriptive grammars and work toward proposing solutions 
 
 ## Paradigm tables
 
-Let's take a look at a paradigm table from Jonas' dissertation ADD INFO...
+Let's take a look at a paradigm table. This is from Jonas Lau's PhD dissertation (TODO: add full reference)
 
 ![](https://i.imgur.com/56XEUeD.png)
 
@@ -345,13 +345,125 @@ By the "intermediate" view, we refer to the representation of paradigm tables as
 </table>
 ```
 
-### Level Three: Full Paradigm
+### Level Three: The Dictionary View
 
+#### Level 3: Full Paradigm as a Lexicographic Entry
 
+The table views of a full paradigm are based on the visual representation of lexical data placed inside a grid for easy consultation. The underlying data model, however, has no need for columns or rows, because full paradigms are no more than grammatically annotated linguistic forms.
+
+A paradigm can therefore be represented as a lexicographic entry consisting of a number of inflected forms, each of which is grammatically tagged.
+
+- Current TEI 5 compatibility: full
+- Current TEI Lex-0 compatibility: full
+- Advantages over Level 2
+  - the data model is not based on tables and rows, but on the lexicographic treatment of inflected forms; this makes data extraction very easy
+  - the data model is fully compatible with dictionary entries in TEI P5 and TEI Lex-0, which means that datasets from grammar books can be easily integrated into existing or new dictionaries
+  - the dictionary view of a full paradigm can be transformed to a table representation (see entry2table.xsl) which is useful if you are, for instance, producing a digital edition of a grammar book
+  - the model is flexible enough to allow for lexicographic enrichment: you can encode each inflected form at a high level of granularity , while choosing which aspects of your grammatical annotation will be displayed to the end user
+- Disadvantages over Level 2
+  - requires more linguistic skills from the encoder than a straight-forward table representation
+  - needs an XSLT stylesheet to transform into a table for display
+
+```xml
+<entry xml:id="tb4-3" n="4.1" rend="table" type="fullParadigm">
+    <note rend="head">Independent pronouns</note>
+    <form type="inflectedForms">
+        <form xml:lang="ibe" type="inflectedForm">
+            <orth>ònì</orth>
+            <gramGrp>
+                <gram type="pos">pronoun</gram>
+                <!--a @rend attribute indicates whether a gram element
+                should be used to generate the row or column labels
+                once transformed to the table view-->
+                <gram type="person" rend="row" value="1P">1</gram>                
+                <gram type="number" rend="column">singular</gram>
+            </gramGrp>
+        </form>
+        <form xml:lang="ibe" type="inflectedForm">
+            <orth>àbès</orth>
+            <gramGrp>
+                <!--grammatical annotations without a @rend attribute
+                are not used for creating labels in the table view-->                
+                <gram type="pos">pronoun</gram>
+                <!--use @value attribute if you want your label in the
+                    table view to have a different value from the tag  
+                    you use in your grammatical annotation -->
+                <gram type="person" rend="row" value="1P">1</gram>
+                <gram type="number" rend="column">plural</gram>
+            </gramGrp>
+        </form>
+        <form xml:lang="ibe" type="inflectedForm">
+            <orth>òsì</orth>
+            <gramGrp>
+                <gram type="pos">pronoun</gram>
+                <gram type="person" rend="row" value="2P">2</gram>
+                <gram type="number" rend="column">singular</gram>
+            </gramGrp>
+        </form>
+        <form xml:lang="ibe" type="inflectedForm">
+            <orth>àbèn</orth>
+            <gramGrp>
+                <gram type="pos">pronoun</gram>
+                <gram type="person" rend="row" value="2P">2</gram>
+                <gram type="number" rend="column">plural</gram>
+            </gramGrp>
+        </form>
+        <form xml:lang="ibe" type="inflectedForm">
+            <orth>àu</orth>
+            <gramGrp>
+                <gram type="pos">pronoun</gram>
+                <gram type="person" rend="row">3P</gram>
+                <gram type="number" rend="column">singular</gram>
+                <gram type="animacy" rend="row" value=".HUM">human</gram>
+            </gramGrp>
+        </form>
+        <form xml:lang="ibe" type="inflectedForm">
+            <orth>àba</orth>
+            <gramGrp>
+                <gram type="pos">pronoun</gram>
+                <gram type="person" rend="row">3P</gram>
+                <gram type="number" rend="column">plural</gram>
+                <gram type="animacy" rend="row" value=".HUM">human</gram>
+            </gramGrp>
+        </form>
+        <form xml:lang="ibe" type="inflectedForm">
+            <orth>ɛ̀jì</orth>
+            <gramGrp>
+                <gram type="pos">pronoun</gram>
+                <gram type="person" rend="row">3P</gram>
+                <gram type="number" rend="column">singular</gram>
+                <gram type="animacy" rend="row" value=".NHUM">nonhuman</gram>
+            </gramGrp>
+        </form>
+        <form xml:lang="ibe" type="inflectedForm">
+            <orth>ìjì</orth>
+            <gramGrp>
+                <gram type="pos">pronoun</gram>
+                <gram type="person" rend="row">3P</gram>
+                <gram type="number" rend="column">plural</gram>
+                <gram type="animacy" rend="row" value=".NHUM">nonhuman</gram>
+            </gramGrp>
+        </form>
+    </form>
+</entry>
+```
+
+When converted to html using entry2table.xsl, we can generate this (no styling applied yet):
+
+![Снимок экрана 2020-09-11 в 10.35.38](https://i.imgur.com/omZnNHp.png)
+
+## Why are all three levels important?
+
+Even though we prefer Level 3 as the most advanced representation of a full paradigm, we believe that all three levels are equally important because they reflect the realities of the encoding process.
+
+Encoding can be an iterative process: starting with simple and moving toward more complex representations. Different projects have different levels of resources available to them: some will only be able to create a surface representation and will not be able to go beyond the bare minimum. We need to provide support and sufficient documentation for each level.
 
 ## Forms in text
 
+This is Jonas' example. I haven't had time to go into this yet...
+
 ![](https://i.imgur.com/k4182ii.png)
+
 
 ```xml
 <p>The forms <mentioned>àbès</mentioned> - <gloss>1<abbr corresp="glossary.xml#pl"/>.<abbr
@@ -361,6 +473,15 @@ By the "intermediate" view, we refer to the representation of paradigm tables as
     />). </p>
 
 ```
+
+## Things to consider
+
+This is off the top of my head:
+
+- forms in unstructured text with the goal of aligning data extraction from structured
+- testing more complex xslt transformations (see Laurent's Japanese table)
+- writing XSLT transformation from Levels 1 and 2 to Level 3.
+- etc. etc. etc.
 
 
 ## References

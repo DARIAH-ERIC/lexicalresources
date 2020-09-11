@@ -298,7 +298,7 @@
                   </cell>
                </row>
             </table>
-            <!-- Level 3 -->
+            <!-- Level 3: Full Paradigm as a Lexicographic Entry -->
             <entry xml:id="tb4-3" n="4.1" rend="table" type="fullParadigm">
                <note rend="head">Independent pronouns</note>
                <form type="inflectedForms">
@@ -306,14 +306,22 @@
                      <orth>ònì</orth>
                      <gramGrp>
                         <gram type="pos">pronoun</gram>
-                        <gram type="person" rend="row" value="1P">1</gram>
+                        <!--a @rend attribute indicates whether a gram element
+                should be used to generate the row or column labels
+                once transformed to the table view-->
+                        <gram type="person" rend="row" value="1P">1</gram>                
                         <gram type="number" rend="column">singular</gram>
                      </gramGrp>
                   </form>
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>àbès</orth>
                      <gramGrp>
+                        <!--grammatical annotations without a @rend attribute
+                are not used for creating labels in the table view-->                
                         <gram type="pos">pronoun</gram>
+                        <!--use @value attribute if you want your label in the
+                    table view to have a different value from the tag  
+                    you use in your grammatical annotation -->
                         <gram type="person" rend="row" value="1P">1</gram>
                         <gram type="number" rend="column">plural</gram>
                      </gramGrp>
@@ -340,7 +348,6 @@
                         <gram type="pos">pronoun</gram>
                         <gram type="person" rend="row">3P</gram>
                         <gram type="number" rend="column">singular</gram>
-                        <!--if rend value is different from gram's text node-->
                         <gram type="animacy" rend="row" value=".HUM">human</gram>
                      </gramGrp>
                   </form>
@@ -373,7 +380,7 @@
                   </form>
                </form>
             </entry>
-
+            
             <!--  forms-in-text-->
             <!--NOT DONE YET-->
             <p>The forms <mentioned>àbès</mentioned> - <gloss>1<abbr corresp="glossary.xml#pl"
