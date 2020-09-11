@@ -26,51 +26,52 @@
                     <xsl:value-of select="child::note[@rend='head']"/>
                 </caption>
             </xsl:if>
-           <!--count rows and columns-->
-           
+           <!--count columns-->
            <xsl:variable name="columns">
                <xsl:value-of select="count(distinct-values(descendant::form[@type='inflectedForm']/string-join(descendant::gram[@rend='column'])))"/>
            </xsl:variable>
-           <xsl:variable name="rows">
-               <xsl:value-of select="count(distinct-values(descendant::form[@type='inflectedForm']/string-join(descendant::gram[@rend='row'])))"/>
-           </xsl:variable>
-           <!--we're assuming we have wrapped all inflected forms in form type="inflectedForms"-->
-           <xsl:variable name="inflectedForms" select="form[@type='inflectedForms']"/>
-           <xsl:value-of select="$columns"/>
-           <xsl:value-of select="$rows"/>
-           
-         
-           
-           <xsl:for-each-group select="form[@type='inflectedForms']/form[@type='inflectedForm']" group-adjacent="2">
-               <tr>
-               </tr>
+           <xsl:for-each-group select="form[@type='inflectedForms']/form[@type='inflectedForm']" group-adjacent="ceiling(position() div $columns)">
+
+               <xsl:choose>
+                   <xsl:when test="position() =1">
+                       <tr>
+                           <th></th>
+                           <xsl:apply-templates select="current-group()" mode="column-label"></xsl:apply-templates>
+                       </tr>
+                       <tr>
+                           <xsl:apply-templates select="current-group()[1]" mode="row-label"></xsl:apply-templates>
+                           <xsl:apply-templates select="current-group()" mode="data"></xsl:apply-templates>
+                       </tr>
+                   </xsl:when>
+                   <xsl:otherwise>
+                       <tr>
+                           <xsl:apply-templates select="current-group()[1]" mode="row-label"></xsl:apply-templates>
+                           <xsl:apply-templates select="current-group()" mode="data"></xsl:apply-templates>
+                       </tr>
+                   </xsl:otherwise>
+               </xsl:choose>
            </xsl:for-each-group>
-           
-          <!-- <xsl:iterate select="1 to $rows">
-               <xsl:variable name="whichRow" select="." as="xs:integer"/>
-               <tr n="{$whichRow}">
-                   <xsl:iterate select="1 to $columns">
-                       <xsl:variable name="whichColumn" select="." as="xs:integer"/>
-                       <th n="{($whichRow * $columns) - $whichColumn}"> 
-                           <xsl:value-of select="$inflectedForms/descendant::form[@type='inflectedForm'][$whichRow * $whichColumn]/string-join(descendant::gram[@rend='column'] )"/>
-                       </th>
-                   </xsl:iterate>
-                   <xsl:iterate select="1 to $columns">
-                       <xsl:variable name="whichColumn" select="." as="xs:integer"/>
-                       <td n="{$whichRow * $whichColumn}">
-                           
-                       </td>
-                   </xsl:iterate>
-               </tr>
-           </xsl:iterate>-->
-           
+               
        </table>
        
    </xsl:template>
+    <xsl:template match="form[@type='inflectedForm']" mode="column-label">
+        <th>
+            <xsl:value-of select="string-join(descendant::gram[@rend='column'])"/>
+        </th>
+    </xsl:template>
     
-   
+    <xsl:template match="form[@type='inflectedForm']" mode="row-label">
+        <th>
+            <xsl:value-of select="string-join( descendant::gram[@rend='row']  )"/>
+        </th>
+    </xsl:template>
     
-    
+    <xsl:template match="form[@type='inflectedForm']" mode="data">
+        <td>
+            <xsl:value-of select="orth"/>
+        </td>
+    </xsl:template>
     
     
     
