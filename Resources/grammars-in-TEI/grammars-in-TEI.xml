@@ -305,39 +305,39 @@
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>ònì</orth>
                      <gramGrp>
-                        <gram type="pos" rend="none">pronoun</gram>
-                        <gram type="person" rend="row">1P</gram>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row" value="1P">1</gram>
                         <gram type="number" rend="column">singular</gram>
                      </gramGrp>
                   </form>
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>àbès</orth>
                      <gramGrp>
-                        <gram type="pos" rend="none">pronoun</gram>
-                        <gram type="person" rend="row">1P</gram>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row" value="1P">1</gram>
                         <gram type="number" rend="column">plural</gram>
                      </gramGrp>
                   </form>
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>òsì</orth>
                      <gramGrp>
-                        <gram type="pos" rend="none">pronoun</gram>
-                        <gram type="person" rend="row">2P</gram>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row" value="2P">2</gram>
                         <gram type="number" rend="column">singular</gram>
                      </gramGrp>
                   </form>
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>àbèn</orth>
                      <gramGrp>
-                        <gram type="pos" rend="none">pronoun</gram>
-                        <gram type="person" rend="row">2P</gram>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row" value="2P">2</gram>
                         <gram type="number" rend="column">plural</gram>
                      </gramGrp>
                   </form>
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>àu</orth>
                      <gramGrp>
-                        <gram type="pos" rend="none">pronoun</gram>
+                        <gram type="pos">pronoun</gram>
                         <gram type="person" rend="row">3P</gram>
                         <gram type="number" rend="column">singular</gram>
                         <!--if rend value is different from gram's text node-->
@@ -347,7 +347,7 @@
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>àba</orth>
                      <gramGrp>
-                        <gram type="pos" rend="none">pronoun</gram>
+                        <gram type="pos">pronoun</gram>
                         <gram type="person" rend="row">3P</gram>
                         <gram type="number" rend="column">plural</gram>
                         <gram type="animacy" rend="row" value=".HUM">human</gram>
@@ -356,7 +356,7 @@
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>ɛ̀jì</orth>
                      <gramGrp>
-                        <gram type="pos" rend="none">pronoun</gram>
+                        <gram type="pos">pronoun</gram>
                         <gram type="person" rend="row">3P</gram>
                         <gram type="number" rend="column">singular</gram>
                         <gram type="animacy" rend="row" value=".NHUM">nonhuman</gram>
@@ -365,7 +365,7 @@
                   <form xml:lang="ibe" type="inflectedForm">
                      <orth>ìjì</orth>
                      <gramGrp>
-                        <gram type="pos" rend="none">pronoun</gram>
+                        <gram type="pos">pronoun</gram>
                         <gram type="person" rend="row">3P</gram>
                         <gram type="number" rend="column">plural</gram>
                         <gram type="animacy" rend="row" value=".NHUM">nonhuman</gram>
@@ -375,6 +375,7 @@
             </entry>
 
             <!--  forms-in-text-->
+            <!--NOT DONE YET-->
             <p>The forms <mentioned>àbès</mentioned> - <gloss>1<abbr corresp="glossary.xml#pl"
                      />.<abbr corresp="glossary.xml#idp"/></gloss> and <mentioned>àbèn</mentioned> -
                      <gloss>2<abbr corresp="glossary.xml#pl"/>.<abbr corresp="glossary.xml#idp"
