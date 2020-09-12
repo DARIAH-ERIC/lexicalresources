@@ -309,7 +309,7 @@
                         <!--a @rend attribute indicates whether a gram element
                 should be used to generate the row or column labels
                 once transformed to the table view-->
-                        <gram type="person" rend="row" value="1P">1</gram>                
+                        <gram type="person" rend="row" value="1P">1</gram>
                         <gram type="number" rend="column">singular</gram>
                      </gramGrp>
                   </form>
@@ -317,7 +317,7 @@
                      <orth>àbès</orth>
                      <gramGrp>
                         <!--grammatical annotations without a @rend attribute
-                are not used for creating labels in the table view-->                
+                are not used for creating labels in the table view-->
                         <gram type="pos">pronoun</gram>
                         <!--use @value attribute if you want your label in the
                     table view to have a different value from the tag  
@@ -380,19 +380,43 @@
                   </form>
                </form>
             </entry>
-            
+
             <!--  forms-in-text-->
-            <!--NOT DONE YET-->
-            <p>The forms <mentioned>àbès</mentioned> - <gloss>1<abbr corresp="glossary.xml#pl"
-                     />.<abbr corresp="glossary.xml#idp"/></gloss> and <mentioned>àbèn</mentioned> -
-                     <gloss>2<abbr corresp="glossary.xml#pl"/>.<abbr corresp="glossary.xml#idp"
-                  /></gloss> are also used as possessive and object pronouns (sections <ref
-                  target="#ch5-sc1-3"/> and <ref target="#ch6-sc1"/>). The forms
-                  <mentioned>àu</mentioned> - <gloss>3<abbr corresp="glossary.xml#sg"/>.<abbr
-                     corresp="glossary.xml#hum"/><abbr corresp="glossary.xml#idp"/></gloss> and
-                  <mentioned>ɛ̀jì</mentioned> - <gloss>3<abbr corresp="glossary.xml#sg"/>.<abbr
-                     corresp="glossary.xml#nhum"/><abbr corresp="glossary.xml#idp"/></gloss> are
-               also used as logophoric pronouns (see following paragraph).</p>
+
+            <!--Level 1: The bare minimum-->
+            <!--Level 1.0: Mentioned forms and grammatical tags as abbreviations-->
+
+
+            <p>The forms <mentioned xml:lang="ibe">àbès </mentioned> - <abbr>1PL.IDP</abbr> and
+                  <mentioned xml:lang="ibe">àbèn</mentioned> - <abbr>2.PL.IDP</abbr> are also used
+               as possessive and object pronouns.</p>
+
+            <!--Level Two: Intermediate View-->
+            <!-- Level 2.0: Mentioned forms and grammatical tags as abbreviations inside glosses -->
+            <p>The forms <gloss><mentioned xml:lang="ibe">àbès </mentioned>
+                  <pc>-</pc>
+                  <abbr>1PL</abbr><pc>.</pc><abbr>IDP</abbr></gloss> and <gloss><mentioned
+                     xml:lang="ibe">àbèn</mentioned>
+                  <pc>-</pc>
+                  <abbr>2PL</abbr><pc>.</pc><abbr>IDP</abbr></gloss> are also used as possessive and
+               object pronouns.</p>
+
+            <!--  Level Three: The Dictionary View-->
+            <!--Level 3.0: Excplicit forms wtih grammatical groups-->
+
+            <p>The forms <form type="inflectedForm" xml:lang="ibe"><orth>àbès </orth>
+                  <pc>-</pc>
+                  <gramGrp><gram type="person">1</gram><gram type="number">PL</gram><pc>.</pc><gram
+                        type="pos">IDP</gram><gram type="pos" rend="none">POP</gram><gram type="pos"
+                        rend="none">OBP</gram></gramGrp></form> and <form type="inflectedForm"
+                  xml:lang="ibe"><orth>àbèn</orth>
+                  <pc>-</pc>
+                  <gram type="person">1</gram><gram type="number">PL</gram><pc>.</pc><gram
+                     type="pos">IDP</gram><gram type="pos" rend="none">POP</gram><gram type="pos"
+                     rend="none">OBP</gram></form> are also used as possessive and object
+               pronouns.</p>
+
+          
          </div>
       </body>
    </text>
