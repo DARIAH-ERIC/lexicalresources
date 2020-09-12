@@ -1,10 +1,10 @@
 # Grammars in TEI
 
-Descriptive grammars of human languages are one of the cornerstones of the study of language: while dictionaries, broadly speaking, describe the meaning of words, grammar books describe how the words are constructed and how they are put together to form meaningful sentences.
+Descriptive grammars are one of the cornerstones of the study of language: while dictionaries, broadly speaking, describe the meaning of words, grammar books describe how the words are constructed and how they are put together to form meaningful sentences.
 
 And just like dictionaries, grammars created in the past are still of interest to humanities scholars: they document not only the past epochs of particular languages, but also the evolving thought about language as such and its central role in society.
 
-As part of the TEI Lex-0 initiative, @ttasovac and @laurentromary have started looking into the challenges of encoding grammar books in TEI. This is our playground and a place to document our current thinking about the problems at hand.  
+As part of the TEI Lex-0 initiative, [@ttasovac](https://github.com/ttasovac) and [@laurentromary](https://github.com/laurentromary) have started looking into the challenges of encoding grammar books in TEI. This is our playground and a place to document our current thinking about the problems at hand.  
 
 ## Why are grammar books difficult to encode?
 
@@ -452,7 +452,7 @@ When converted to html using entry2table.xsl, we can generate this (no styling a
 
 ![Снимок экрана 2020-09-11 в 10.35.38](https://i.imgur.com/omZnNHp.png)
 
-## Why are all three levels important?
+### Why are all three levels important?
 
 Even though we prefer Level 3 as the most advanced representation of a full paradigm, we believe that all three levels are equally important because they reflect the realities of the encoding process.
 
@@ -460,27 +460,68 @@ Encoding can be an iterative process: starting with simple and moving toward mor
 
 ## Forms in text
 
-This is Jonas' example. I haven't had time to go into this yet...
+Let's take a look at a simple example of linguistic forms being discussed inside running text:
 
-![](https://i.imgur.com/k4182ii.png)
+`The forms  àbès  -  1PL.IDP  and  àbèn  -  2.PL.IDP    are also used as possessive and object pronouns.`
 
+The abbreviations 1PL and 2PL refer to 1st and 2nd person plural, whereas IDP stands for independent personal pronouns.
+
+### Level One: The Surface View
+
+#### Level 1: Mentioned forms and grammatical tags as abbreviations
+
+- Valid TEI P5, but:
+- linguistic forms and abbreviations containing grammatical tags are associated with each other only by proximity
+- `<abbr>` is a generic element for all abbreviations, rather than a specific element for grammatical tagging
+- it's practically impossible to add ("enrich") the grammatical annotation beyond what's already in the text
 
 ```xml
-<p>The forms <mentioned>àbès</mentioned> - <gloss>1<abbr corresp="glossary.xml#pl"/>.<abbr
-            corresp="glossary.xml#idp"/></gloss> and <mentioned>àbèn</mentioned> - <gloss>2<abbr
-            corresp="glossary.xml#pl"/>.<abbr corresp="glossary.xml#idp"/></gloss> are also used as
-    possessive and object pronouns (sections <ref target="#ch5-sc1-3"/> and <ref target="#ch6-sc1"
-    />). </p>
+<p>The forms  <mentioned xml:lang="ibe">àbès</mentioned> -  <abbr>1PL.IDP</abbr>  
+and  <mentioned xml:lang="ibe">àbèn</mentioned>  -  <abbr>2.PL.IDP</abbr>  are
+also used as possessive and object pronouns.</p>
+```
 
+### Level Two: Intermediate View
+#### Level 2.0: Mentioned forms and grammatical tags as abbreviations inside glosses  
+
+- Valid TEI P5
+- Advantages over Level 1:
+  - each "mentioned" forms and its grammatical tags are grouped together as glosses
+
+```xml
+<p>The forms <gloss><mentioned xml:lang="ibe">àbès</mentioned> <pc>-</pc> <abbr>1PL</abbr>
+<pc>.</pc><abbr>IDP</abbr></gloss> and <gloss><mentioned xml:lang="ibe">àbèn</mentioned>
+<pc>-</pc> <abbr>2PL</abbr><pc>.</pc><abbr>IDP</abbr></gloss> are also used as possessive
+and object pronouns.</p>
+```
+
+### Level Three: The Dictionary View
+#### Level 3.0: Excplicit forms wtih grammatical groups
+
+- Advantages over Level 2:
+  - `<form>`, `<gramGrp>` and <gram> are semantically most appropriate elements for encoding linguistic forms and grammatical annotations
+  - it's easy to enrich grammatical annotations with values not present in the original text or with those that appear later in the running text (for instance: `<gram type="pos" rend="none">OBP</gram>` for object pronouns)
+- Disadvantage over Level 2:
+  - invalid TEI P5: `<form>` is not allowed as a child of `<p>`.
+
+```xml
+<p>The forms <form type="inflectedForm" xml:lang="ibe"><orth>àbès</orth> <pc>-</pc>
+<gramGrp><gram type="person">1</gram><gram type="number">PL</gram><pc>.</pc>
+<gram type="pos">IDP</gram><gram type="pos" rend="none">POP</gram>
+<gram type="pos" rend="none">OBP</gram></gramGrp></form> and
+<form type="inflectedForm" xml:lang="ibe"><orth>àbèn</orth><pc>-</pc>
+<gram type="person">1</gram><gram type="number">PL</gram><pc>.</pc><gram type="pos">IDP</gram>
+<gram type="pos" rend="none">POP</gram><gram type="pos" rend="none">OBP</gram></form>
+are also used as possessive and object pronouns.</p>
 ```
 
 ## Things to consider
 
 This is off the top of my head:
 
-- forms in unstructured text with the goal of aligning data extraction from structured
 - testing more complex xslt transformations (see Laurent's Japanese table)
 - writing XSLT transformation from Levels 1 and 2 to Level 3.
+- "inflectedForm" and "inflectedFroms" vs. "inflected" (which is recommended by TEI Lex-0, check how we type nested forms, paradigms etc. )
 - etc. etc. etc.
 
 
