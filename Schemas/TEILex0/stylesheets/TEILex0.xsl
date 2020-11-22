@@ -4,9 +4,10 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0"
     exclude-result-prefixes="tei teix">
     <xsl:output method="html" doctype-system="about:legacy-compat"/>
-    <!--<xsl:import href="https://www.tei-c.org/release/xml/tei/stylesheet/odds/odd2odd.xsl"/>-->
-    <!--<xsl:import href="https://www.tei-c.org/release/xml/tei/stylesheet/odds/odd2lite.xsl"/>-->
-    <xsl:import href="https://www.tei-c.org/release/xml/tei/stylesheet/html/html.xsl"/>
+ 
+    <xsl:variable name="version" select="//tei:fileDesc/tei:editionStmt/tei:edition/@n"/>
+    <xsl:import href="html/html.xsl"/>
+    <!-- html.xsl will also import common.xsl and functions.xsl from common-->
     <xsl:import href="parts/layout.xsl"/>
     <xsl:import href="parts/pageHeader.xsl"/>
     <xsl:import href="parts/toc.xsl"/>
@@ -69,9 +70,8 @@
                     // in a new tab.
                     if (context.selectionMethod === 'click') {
                         input.setVal('');
-
-                         window.open(suggestion.url, '_self');
-
+                        
+                        window.open(suggestion.url, '_self');
                     }
                 },
             });</script>
@@ -91,198 +91,34 @@
         <xsl:if test="not(ancestor::*[@xml:space][1]/@xml:space = 'preserve')">
             <xsl:variable name="depth"
                 select="count(ancestor::*[not(namespace-uri() = 'http://www.tei-c.org/ns/1.0')]) - 1"/>
-            <xsl:sequence
-                select="
+            <xsl:sequence select="
                     for $i in 1 to $depth
                     return
-                        concat($spaceCharacter, $spaceCharacter)"
-            />
+                        concat($spaceCharacter, $spaceCharacter)"/>
         </xsl:if>
     </xsl:template>
-
     <!-- rather than having to mess with algolia configs (which I would have to do through them;
         rather than directly), I'm adding paragraphs to element definitions in spec,
         so that they get indexed by algolia-->
-
-    <xsl:template match="//tei:div[@xml:id='specification']//tei:table[@rend='wovenodd']/tei:row[1]">
+    <xsl:template
+        match="//tei:div[@xml:id = 'specification']//tei:table[@rend = 'wovenodd']/tei:row[1]">
         <xsl:element name="tr" namespace="http://www.w3.org/1999/xhtml">
-            <xsl:apply-templates></xsl:apply-templates>
+            <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-
-  <xsl:template match="//tei:div[@xml:id='specification']//tei:table[@rend='wovenodd']/tei:row[1]/tei:cell[1]">
-
-      <xsl:element name="td" namespace="http://www.w3.org/1999/xhtml">
-          <xsl:attribute name="colspan">2</xsl:attribute>
-          <xsl:attribute name="class">wovenodd-col2</xsl:attribute>
-          <xsl:element name="p" namespace="http://www.w3.org/1999/xhtml">
-              <xsl:attribute name="class">specDef</xsl:attribute>
-              <xsl:apply-templates></xsl:apply-templates>
-          </xsl:element>
-      </xsl:element>
-
-
+    <xsl:template
+        match="//tei:div[@xml:id = 'specification']//tei:table[@rend = 'wovenodd']/tei:row[1]/tei:cell[1]">
+        <xsl:element name="td" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="colspan">2</xsl:attribute>
+            <xsl:attribute name="class">wovenodd-col2</xsl:attribute>
+            <xsl:element name="p" namespace="http://www.w3.org/1999/xhtml">
+                <xsl:attribute name="class">specDef</xsl:attribute>
+                <xsl:apply-templates/>
+            </xsl:element>
+        </xsl:element>
     </xsl:template>
-
-
-    <!-- link from bibl back to egXML -->
-    <!-- <xsl:template match="tei:listBibl/tei:biblStruct | tei:listBibl/tei:bibl">
-        <xsl:apply-templates/>
-        <xsl:variable name="id" select="@xml:id"/>
-        <xsl:for-each select="key('BACKLINKS', @xml:id)">
-            <!-\- XML code examples within tei:exemplum -\->
-            <xsl:if test="self::teix:egXML and parent::tei:exemplum">
-                <!-\- The following xsl:choose switch is taken from the <xsl:template match="tei:exemplum" mode="doc"> template from common_tagdocs.xsl -\->
-                <!-\- Those two switches should most probably stay in sync -\->
-                <xsl:choose>
-                    <xsl:when test="count(ancestor::tei:exemplum) gt 1">
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                    <xsl:when test="parent::tei:exemplum[not(@xml:lang)]">
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                    <xsl:when test="parent::tei:exemplum[@xml:lang = 'und']">
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                    <xsl:when
-                        test="parent::tei:exemplum[@xml:lang = 'mul'] and not($documentationLanguage = 'zh-TW')">
-                        <!-\- will need to generalize this if other langs come along like chinese -\->
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                    <xsl:when test="parent::tei:exemplum[@xml:lang = $documentationLanguage]">
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                    <!-\-<xsl:when
-            test="not(parent::tei:exemplum[@xml:lang = $documentationLanguage]) and (@xml:lang = 'en' or @xml:lang = 'und' or @xml:lang = 'mul')">
-            <xsl:call-template name="backLink"/>
-          </xsl:when>-\->
-                </xsl:choose>
-            </xsl:if>
-
-            <!-\- XML code examples within tei:remarks -\->
-            <xsl:if test="self::teix:egXML and ancestor::tei:remarks">
-                <!-\- The following <xsl:choose> is a modification of the <xsl:if test="self::teix:egXML and parent::tei:exemplum"> clause, above -\->
-                <!-\- These two switches should most probably stay in sync -\->
-                <xsl:choose>
-                    <xsl:when test="ancestor::tei:remarks[not(@xml:lang)]">
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                    <xsl:when test="ancestor::tei:remarks[@xml:lang = 'und']">
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                    <xsl:when
-                        test="ancestor::tei:remarks[@xml:lang = 'mul'] and not($documentationLanguage = 'zh-TW')">
-                        <!-\- will need to generalize this if other langs come along like chinese -\->
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                    <xsl:when test="ancestor::tei:remarks[@xml:lang = $documentationLanguage]">
-                        <xsl:call-template name="backLink"/>
-                    </xsl:when>
-                </xsl:choose>
-            </xsl:if>
-
-            <!-\- XML code examples within running text(?) -\->
-            <xsl:if
-                test="self::teix:egXML and not(ancestor::tei:exemplum) and not(ancestor::tei:remarks)">
-                <xsl:call-template name="backLink"/>
-            </xsl:if>
-
-            <!-\-references in running text-\->
-            <xsl:if test="self::tei:ref[@type = 'cit']">
-                <xsl:call-template name="backLink"/>
-            </xsl:if>
-
-        </xsl:for-each>
-    </xsl:template>-->
-    <!--  <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
-        <desc>Helper template for creating an html:a backlink</desc>
-    </doc>
-    <xsl:template name="backLink">
-        <xsl:text> </xsl:text>
-        <a class="link_return" title="Go back to text">
-            <xsl:attribute name="href">
-                <xsl:apply-templates select="." mode="generateLink"/>
-            </xsl:attribute>
-            <xsl:text>↵</xsl:text>
-        </a>
-    </xsl:template>-->
-
     <xsl:template name="egXMLReferencePopup">
-        <xsl:param name="id"></xsl:param>
-        <xsl:apply-templates select="ancestor::tei:TEI//biblStruct[@xml:id=$id]"></xsl:apply-templates>
+        <xsl:param name="id"/>
+        <xsl:apply-templates select="ancestor::tei:TEI//biblStruct[@xml:id = $id]"/>
     </xsl:template>
-
-
-
-    <!--<xsl:template name="figureHook">
-        <xsl:if test="@corresp and id(substring(@corresp, 2))">
-            <div style="float: right;">
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:apply-templates mode="generateLink" select="id(substring(@corresp, 2))"
-                        />
-                    </xsl:attribute>
-                    <xsl:text>bibliography</xsl:text>
-                </a>
-            </div>
-        </xsl:if>
-    </xsl:template>-->
-    <!-- Handling of <egXML> elements in the TEI example namespace. -->
-    <!--  <xsl:template match="teix:egXML">
-        <pre class="teiCode">
-       <xsl:apply-templates/>
-     </pre>
-    </xsl:template>-->
-    <!-- Escaping all tags and attributes within the teix (examples)
-namespace except for
-the containing egXML. -->
-    <!--    <xsl:template match="teix:*[not(local-name(.) = 'egXML')]">
-        <!-\- Indent based on the number of ancestor elements.   -\->
-        <xsl:variable name="indent">
-            <xsl:for-each select="ancestor::teix:*"> </xsl:for-each>
-        </xsl:variable>
-        <!-\- Indent before every opening tag if not inside a paragraph. -\->
-        <xsl:if test="not(ancestor::teix:p)">
-            <xsl:value-of select="$indent"/>
-        </xsl:if>
-        <!-\- Opening tag, including any attributes. -\->
-        <span class="xmlTag">&lt;<xsl:value-of select="name()"/></span>
-        <xsl:for-each select="@*">
-            <span class="xmlAttName"><xsl:text> </xsl:text><xsl:value-of select="name()"/>=</span>
-            <span class="xmlAttVal">"<xsl:value-of select="."/>"</span>
-        </xsl:for-each>
-        <span class="xmlTag">&gt;</span>
-        <!-\- Return before processing content, if not inside a p. -\->
-        <xsl:if test="not(ancestor::teix:p)">
-            <xsl:text>
-</xsl:text>
-        </xsl:if>
-        <xsl:apply-templates select="* | text() | comment()"/>
-        <!-\- Closing tag, following indent if not in a p. -\->
-        <xsl:if test="not(ancestor::teix:p)">
-            <xsl:value-of select="$indent"/>
-        </xsl:if>
-        <span class="xmlTag">&lt;/<xsl:value-of select="local-name()"/>&gt;</span>
-        <!-\- Return after closing tag, if not in a p. -\->
-        <xsl:if test="not(ancestor::teix:p)">
-            <xsl:text>
-</xsl:text>
-        </xsl:if>
-    </xsl:template>-->
-    <!-- For good-looking tree output, we need to include a return after any
-text content, assuming
-       we're not inside a paragraph tag. -->
-    <!--    <xsl:template match="teix:*/text()">
-        <xsl:if test="not(ancestor::teix:p)">
-            <xsl:for-each select="ancestor::teix:*"> </xsl:for-each>
-        </xsl:if>
-        <xsl:value-of select="replace(., '&amp;', '&amp;amp;')"/>
-        <xsl:if
-            test="
-                not(ancestor::teix:p) or
-                not(following-sibling::* or following-sibling::text())">
-            <xsl:text>
-</xsl:text>
-        </xsl:if>
-    </xsl:template>-->
 </xsl:stylesheet>

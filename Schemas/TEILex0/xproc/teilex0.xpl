@@ -12,10 +12,7 @@
     <p:output port="final" primary="false">
         <p:pipe port="result" step="post-process"></p:pipe>
     </p:output>
-<!--    <p:output port="third" primary="false" sequence="true">
-        <p:pipe port="result" step="split"></p:pipe>
-    </p:output>
--->
+    
     <p:xinclude fixup-xml-base="false" fixup-xml-lang="false" name="expand"/>
 
     <p:xslt name="odd2odd">
@@ -77,14 +74,4 @@
         </p:input>
     </p:xslt>
     
-<!--    <p:xslt name="split" version="2.0">
-        <p:input port="source">
-            <p:pipe step="html" port="result"/>
-        </p:input>
-        <p:input port="stylesheet">
-            <p:document href="../stylesheets/html-split.xsl"/>
-        </p:input>
-    </p:xslt>-->
-  
-
 </p:declare-step>
