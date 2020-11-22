@@ -17,7 +17,11 @@
             </a>
             <div id="menu" class="custom-menu" xmlns="http://www.w3.org/1999/xhtml">
                 <div class="pure-menu">
-                    <a class="pure-menu-heading" href="#">TEI Lex-0</a>
+                    <a class="pure-menu-heading" href="#">
+                        <span style="line-height:30px; vertical-align:middle">TEI Lex-0</span>
+                        <span style="float:right; text-transform:capitalize; margin-right: 0.75em; line-height:30px; vertical-align:middle; font-size:85%">Version <xsl:value-of select="$version"/></span>
+                    </a>
+                    
                     <div class="tei_toc_search">
                         <div class="input-group">
                             <input type="search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="algo rounded"/>
