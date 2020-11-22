@@ -24,98 +24,106 @@
                         <surname>Romary</surname>
                     </persName>
                 </editor>
-                <author>
+                <author xml:id="TT" role="main">
                     <persName>
                         <forename>Toma</forename>
                         <surname>Tasovac</surname>
                     </persName>
                     
                 </author>
-                <author>
+                <author xml:id="LR" role="main">
                     <persName>
                         <forename>Laurent</forename>
                         <surname>Romary</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="AS" role="contributing">
                     <persName>
                         <forename>Ana</forename>
                         <surname>Salgado</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="AH" role="contributing">
                     <persName>
                         <forename>Axel</forename>
                         <surname>Herold</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="JB" role="contributing">
                     <persName>
                         <forename>Jack</forename>
                         <surname>Bowers</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="AG" role="contributing">
                     <persName>
                         <forename>Alexander</forename>
                         <surname>Geyken</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="JD" role="contributing">
                     <persName>
                         <forename>Jesse</forename>
                         <surname>de Does</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="KD" role="contributing">
                     <persName>
                         <forename>Katrien</forename>
                         <surname>Depuydt</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="MK" role="contributing">
                     <persName>
                         <forename>Mohamed</forename>
                         <surname>Khemakhem</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="TE" role="contributing">
                     <persName>
                         <forename>Tomaž</forename>
                         <surname>Erjavec</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="AW" role="contributing">
                     <persName>
                         <forename>Andreas</forename>
                         <surname>Witt</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="PB" role="contributing">
                     <persName>
                         <forename>Piotr</forename>
                         <surname>Banski</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="SP" role="contributing">
                     <persName>
                         <forename>Snežana</forename>
                         <surname>Petrović</surname>
                     </persName>
                 </author>
-                <author>
+                <author xml:id="VH" role="contributing">
                     <persName>
                         <forename>Vera</forename>
                         <surname>Hildenbrandt</surname>
                     </persName>
                 </author>
             </titleStmt>
+            <editionStmt>
+                <edition n="0.8.5"></edition>
+            </editionStmt>
             <publicationStmt>
-                <authority>DARIAH WG "Lexical Resources"</authority>
+                <authority>DARIAH Working Group on Lexical Resources</authority>
+                <date when="2018"></date>
+                <ptr target="https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html"/>
+                
             </publicationStmt>
+          
             <sourceDesc>
                 <p>Born digital</p>
             </sourceDesc>
+           
         </fileDesc>
     </teiHeader>
     <text>
