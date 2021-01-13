@@ -29,7 +29,6 @@
                         <forename>Toma</forename>
                         <surname>Tasovac</surname>
                     </persName>
-                    
                 </author>
                 <author xml:id="LR" role="main">
                     <persName>
@@ -111,19 +110,18 @@
                 </author>
             </titleStmt>
             <editionStmt>
-                <edition n="0.8.5"></edition>
+                <edition n="0.8.6"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
-                <date when="2018"></date>
-                <ptr target="https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html"/>
-                
+                <date when="2018"/>
+                <ptr
+                    target="https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html"
+                />
             </publicationStmt>
-          
             <sourceDesc>
                 <p>Born digital</p>
             </sourceDesc>
-           
         </fileDesc>
     </teiHeader>
     <text>
@@ -136,7 +134,8 @@
             <xi:include href="TEILex0.parts/02__entries.xml" parse="xml" xpointer="entries"/>
             <xi:include href="TEILex0.parts/03__forms.xml" parse="xml" xpointer="forms"/>
             <xi:include href="TEILex0.parts/04__senses.xml" parse="xml" xpointer="senses"/>
-            <xi:include href="TEILex0.parts/045__translations.xml" parse="xml" xpointer="translations"/>
+            <xi:include href="TEILex0.parts/045__translations.xml" parse="xml"
+                xpointer="translations"/>
             <xi:include href="TEILex0.parts/05__cross-references.xml" parse="xml"
                 xpointer="cross-references"/>
             <xi:include href="TEILex0.parts/06__usage.xml" parse="xml" xpointer="usage"/>
