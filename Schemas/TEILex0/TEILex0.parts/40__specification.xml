@@ -331,7 +331,7 @@
             </classes>
             <content>
                 <alternate minOccurs="1" maxOccurs="unbounded">
-                    <classRef key="model.qLike"/>
+                    <classRef key="model.quoteLike"/>
                     <classRef key="model.egLike"/>
                     <classRef key="model.biblLike"/>
                     <classRef key="model.ptrLike"/>
@@ -518,7 +518,7 @@
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-colloc.html"
                             />
                         </valItem>
-                        <valItem ident="rection"></valItem>
+                        <valItem ident="rection"/>
                     </valList>
                 </attDef>
             </attList>
