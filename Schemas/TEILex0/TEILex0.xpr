@@ -7234,7 +7234,7 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>xproc/teilex0-alt.xpl</String>
+                                    <String>stylesheets/TEILex0.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7254,7 +7254,7 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>stylesheets/TEILex0.xsl</String>
+                                    <String>xproc/teilex0-alt.xpl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
