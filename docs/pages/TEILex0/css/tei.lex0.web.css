@@ -214,9 +214,14 @@ div.toc {
     width: 0;
 }
 
+td.wovenodd-col1  {
+    min-height: 1px;  
+}
 
 /* Handling of example XML code embedded in pages. */
-pre.teiCode , code[class *= "language-"], pre[class *= "language-"]{
+pre.teiCode,
+code[class *= "language-"],
+pre[class *= "language-"] {
     white-space: pre-wrap;
 }
 
