@@ -72,7 +72,7 @@
                <orth>aid</orth>
                <pron>/ed/</pron>
             </form>
-            <entry xml:id="ED.aid_n" xml:lang="en">
+            <entry xml:id="ED.aid_n" xml:lang="en" type="homonymicEntry">
                <gramGrp>
                   <gram type="pos">noun</gram>
                </gramGrp>
@@ -119,7 +119,7 @@
                </sense>
             </entry>
             <metamark function="subentryMarker">■</metamark>
-            <entry xml:id="ED.aid_v" xml:lang="en">
+            <entry xml:id="ED.aid_v" xml:lang="en" type="homonymicEntry">
                <gramGrp>
                   <gram type="pos">verb</gram>
                </gramGrp>
@@ -423,7 +423,7 @@
                </xr>
             </sense>
             <sense xml:id="arbeitsunfähig.3">
-               <xr>
+               <xr type="synonymy">
                   <pc>(</pc>
                   <lbl>oft</lbl>
                   <usg type="attitude">emotional</usg>
@@ -527,7 +527,7 @@
                <orth>bray</orth>
                <pron>brel</pron>
             </form>
-            <entry xml:id="bray_n" xml:lang="en">
+            <entry xml:id="bray_n" xml:lang="en" type="homonymicEntry">
                <gramGrp>
                   <gram type="pos">n</gram>
                </gramGrp>
@@ -540,7 +540,7 @@
                </sense>
                <pc>.</pc>
             </entry>
-            <entry xml:id="bray_vt" xml:lang="en">
+            <entry xml:id="bray_vt" xml:lang="en" type="homonymicEntry">
                <gramGrp>
                   <gram type="pos">vt</gram>
                   <gram type="subc">VP2A</gram>
@@ -810,7 +810,7 @@
                <pron>gash</pron>
             </form>
             <lbl type="homNum" rend="sup">2</lbl>
-            <entry xml:id="CH.gash2.1" xml:lang="en">
+            <entry xml:id="CH.gash2.1" xml:lang="en" type="homonymicEntry">
                <sense xml:id="CH.gash2.1.1">
                   <pc>(</pc>
                   <usg type="socioCultural" expand="slang">sl</usg>
@@ -823,7 +823,7 @@
                </sense>
             </entry>
             <metamark function="entrySeparator">◆</metamark>
-            <entry xml:id="CH.gash2.2" xml:lang="en">
+            <entry xml:id="CH.gash2.2" xml:lang="en" type="homonymicEntry">
                <gramGrp>
                   <gram type="pos">n</gram>
                </gramGrp>

@@ -4,10 +4,14 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0"
     exclude-result-prefixes="tei teix">
     <xsl:output method="html" doctype-system="about:legacy-compat"/>
- 
+
+    <!--this is hardcoded; https://github.com/TEIC/Stylesheets.git must be cloned in the same
+    directory as DARIAH-ERIC's lesicalresources; this is far from ideal, but i don't have the time
+    to deal with it at the moment. -->
+    <xsl:import href="../stylesheets/html/html.xsl"/>
+
     <xsl:variable name="version" select="//tei:fileDesc/tei:editionStmt/tei:edition/@n"/>
-    <xsl:import href="html/html.xsl"/>
-    <!-- html.xsl will also import common.xsl and functions.xsl from common-->
+  
     <xsl:import href="parts/layout.xsl"/>
     <xsl:import href="parts/pageHeader.xsl"/>
     <xsl:import href="parts/toc.xsl"/>
