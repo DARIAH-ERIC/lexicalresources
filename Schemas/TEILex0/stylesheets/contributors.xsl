@@ -4,8 +4,6 @@
     xmlns:html="http://www.w3.org/1999/xhtml" xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     version="2.0" exclude-result-prefixes="tei teix html">
 
-    <xsl:import href="https://www.tei-c.org/release/xml/tei/stylesheet/odds/odd2lite.xsl"/>
-
     <xsl:variable name="contributorsList">
         <!--sorted alphabetically-->
         <xsl:for-each select="//tei:fileDesc/tei:titleStmt/tei:author">
@@ -121,5 +119,13 @@
         </xsl:element>
 
     </xsl:template>
-
+    
+    
+    <xsl:template match="node() | @*">
+        <xsl:copy>
+            <xsl:apply-templates select="node() | @*"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    
 </xsl:stylesheet>
