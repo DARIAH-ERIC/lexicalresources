@@ -216,7 +216,7 @@ div.toc {
 
 
 /* Handling of example XML code embedded in pages. */
-pre.teiCode {
+pre.teiCode , code[class *= "language-"], pre[class *= "language-"]{
     white-space: pre-wrap;
 }
 
@@ -271,8 +271,9 @@ div.tab div.figure {
     margin-bottom: 1em;
 }
 
-div.figure img, div.thumbnail img {
-    border-radius:0.4em;
+div.figure img,
+div.thumbnail img {
+    border-radius: 0.4em;
     border: 1px solid gainsboro;
     box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
     max-width: 100%;
@@ -369,7 +370,7 @@ td.odd_label {
     display: block;
 }
 
-.dlogo .logos img{
+.dlogo .logos img {
     margin-bottom: 1em;
 }
 
@@ -407,10 +408,10 @@ tr.label {
 }
 
 .h2020 p {
-      border-top: 1px solid;
-      border-bottom: 1px solid;
-      padding: 1em 0;
-      text-align: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 1em 0;
+    text-align: center;
 
 }
 
@@ -532,7 +533,7 @@ span.italic {
 }
 
 span.label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .algo {
@@ -616,11 +617,11 @@ span.label {
 }
 
 input.rounded {
-	border: none;
-	-moz-border-radius: 14px;
-	-webkit-border-radius: 14px;
-	border-radius: 14px;
-	padding: 4px 7px 4px 14px;
-	outline: 0;
-	-webkit-appearance: none;
+    border: none;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+    padding: 4px 7px 4px 14px;
+    outline: 0;
+    -webkit-appearance: none;
 }

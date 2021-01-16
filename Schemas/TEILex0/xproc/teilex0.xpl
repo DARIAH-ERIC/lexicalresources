@@ -6,14 +6,14 @@
         standalone="true"/>
     <p:input port="source"/>
     <p:input port="stylesheet-odd2odd"/>
-    <p:input port="stylesheet-odd2lite"/> 
+    <p:input port="stylesheet-odd2lite"/>
     <p:input port="stylesheet-odd2html">
-        <p:document href="../stylesheets/TEILex0.xsl"></p:document>
-    </p:input> 
+        <p:document href="../stylesheets/TEILex0.xsl"/>
+    </p:input>
     <!--hardcoded, one day should find a workaround-->
     <p:input port="stylesheet-html">
-        <p:document href="../stylesheets/html/html.xsl"></p:document>
-    </p:input> 
+        <p:document href="../stylesheets/html/html.xsl"/>
+    </p:input>
     <p:output port="result"/>
     <p:output port="final" primary="false">
         <p:pipe port="result" step="post-process"/>
@@ -52,12 +52,12 @@
             <p:empty/>
         </p:input>
     </p:xslt>
-      <p:xslt name="xmlbase-fix">
+    <p:xslt name="xmlbase-fix">
         <p:input port="source">
             <p:pipe step="contributors" port="result"/>
         </p:input>
         <p:input port="stylesheet">
-          <!--  includes an xml:base fix for ugly and unnecessary attributes in our examples-->
+            <!--  includes an xml:base fix for ugly and unnecessary attributes in our examples-->
             <p:document href="../stylesheets/xmlbase-fix.xsl"/>
         </p:input>
         <p:input port="parameters">
@@ -70,7 +70,7 @@
             <p:pipe step="xmlbase-fix" port="result"/>
         </p:input>
         <p:input port="stylesheet">
-            <p:pipe port="stylesheet-odd2html" step="generateDocumentation"></p:pipe>
+            <p:pipe port="stylesheet-odd2html" step="generateDocumentation"/>
         </p:input>
         <p:input port="parameters">
             <p:empty/>
