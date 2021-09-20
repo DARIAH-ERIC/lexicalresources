@@ -21,9 +21,10 @@
         <!--2018-09-20 (TT): added quote! -->
         <!--2019-07-04 (TT): added graphic, we need it for images! -->
         <!--2021-09-19 (TT): added monogr for header expansion-->
+        <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
         <moduleRef key="core"
             include="author head title cit quote bibl biblStruct biblScope listBibl gloss
-                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p"/>
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email"/>
         <!--PB's simplified textstructure declaratiopn-->
         <moduleRef key="textstructure" include="TEI text body div front back"/>
         <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
