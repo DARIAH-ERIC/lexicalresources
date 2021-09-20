@@ -38,7 +38,7 @@
         <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
         <!--2020-06-23 (TT): add profileDesc so that we can document langUsage-->
         <moduleRef key="header"
-            include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc projectDesc seriesStmt
+            include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc editorialDecl projectDesc seriesStmt
                         notesStmt authority distributor idno edition funder availability licence appInfo classDecl namespace tagUsage tagsDecl rendition"/>
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
         <!--        2021-09-19 (TT): added forename, surname; need for detailed biblStruct/author/persName-->
