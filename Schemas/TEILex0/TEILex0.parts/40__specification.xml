@@ -526,6 +526,16 @@
                 </attDef>
             </attList>
         </elementSpec>
+        <!--2021-09-20 (TT): make availability required in publicationStmt-->
+        <elementSpec ident="publicationStmt" mode="change">
+            <content>
+                <sequence>
+                    <classRef key="model.publicationStmtPart.agency" minOccurs="1"/>
+                    <classRef key="model.publicationStmtPart.detail" minOccurs="0" maxOccurs="unbounded"/>
+                    <elementRef key="availability"/>
+                </sequence>
+            </content>
+        </elementSpec>
         <!-- Class related declaration here -->
         <!-- Introducing new class for the content model of <sense> -->
         <!-- Elements remaining to be put in: dictScrap     re -->
