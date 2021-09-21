@@ -527,10 +527,14 @@
             </attList>
         </elementSpec>
         <!--2021-09-20 (TT): make availability required in publicationStmt-->
+        <!--2021-09-21 (TT): make publicationStmtPart.agency unbound so that one can
+            add both authority and publisher; we agreed that authority should be used 
+            for encoding rights holders-->
         <elementSpec ident="publicationStmt" mode="change">
             <content>
                 <sequence>
-                    <classRef key="model.publicationStmtPart.agency" minOccurs="1"/>
+                    <classRef key="model.publicationStmtPart.agency" minOccurs="1"
+                        maxOccurs="unbounded"/>
                     <classRef key="model.publicationStmtPart.detail" minOccurs="0"
                         maxOccurs="unbounded"/>
                     <elementRef key="availability"/>
