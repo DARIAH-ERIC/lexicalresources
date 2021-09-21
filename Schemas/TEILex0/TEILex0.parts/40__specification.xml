@@ -531,10 +531,36 @@
             <content>
                 <sequence>
                     <classRef key="model.publicationStmtPart.agency" minOccurs="1"/>
-                    <classRef key="model.publicationStmtPart.detail" minOccurs="0" maxOccurs="unbounded"/>
+                    <classRef key="model.publicationStmtPart.detail" minOccurs="0"
+                        maxOccurs="unbounded"/>
                     <elementRef key="availability"/>
                 </sequence>
             </content>
+        </elementSpec>
+        <!--2021-09-21 (TT): allow only biblStruct in sourceDesc-->
+        <elementSpec ident="sourceDesc" mode="change">
+            <content>
+                <elementRef key="biblStruct" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="sw34hfa">
+                    <sourceDesc>
+                        <biblStruct>
+                            <monogr>
+                                <author>
+                                    <surname>Miklosich</surname>
+                                    <forename>Franz</forename></author>
+                                <title>Lexicon Palaeoslovenico-Graeco-Latinum</title>
+                                <imprint>
+                                    <publisher>Guilelmus Braumueller</publisher>
+                                      <pubPlace>Vindobonae</pubPlace>
+                                    <date>1862</date>
+                                </imprint>
+                            </monogr>
+                        </biblStruct>
+                    </sourceDesc>
+                </egXML>
+            </exemplum>
         </elementSpec>
         <!-- Class related declaration here -->
         <!-- Introducing new class for the content model of <sense> -->
