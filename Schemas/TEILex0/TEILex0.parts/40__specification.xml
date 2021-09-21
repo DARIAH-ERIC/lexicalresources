@@ -541,6 +541,14 @@
                 </sequence>
             </content>
         </elementSpec>
+        <!--2021-09-21 (TT): add @role to authority so that we can specify
+        what kind of authority we're talking about; for instance 
+        <authority role="rightsHolder"></authority>-->
+        <elementSpec ident="authority" mode="change">
+            <attList>
+                <attDef ident="role" mode="add"></attDef>
+            </attList>
+        </elementSpec>
         <!--2021-09-21 (TT): allow only biblStruct in sourceDesc-->
         <elementSpec ident="sourceDesc" mode="change">
             <content>
