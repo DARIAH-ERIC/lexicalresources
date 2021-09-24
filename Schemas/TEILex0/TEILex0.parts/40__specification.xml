@@ -429,9 +429,8 @@
                 <memberOf key="att.datable.w3c" mode="add"/>
             </classes>
         </elementSpec>
-        <!--        2020-06-24 (TT): allowing langUsage and language to document language tags
--->
-        <elementRef key="langUsage"/>
+        <!-- 2020-06-24 (TT): allowing langUsage and language to document language tags-->
+        <elementRef key="langUsage"></elementRef>
         <elementSpec ident="langUsage" mode="change">
             <classes mode="change">
                 <memberOf key="att.global" mode="delete"/>
@@ -444,6 +443,29 @@
                 <memberOf key="att.global.change" mode="delete"/>
                 <memberOf key="att.declarable" mode="delete"/>
             </classes>
+            <!-- 2021-09-23 (TT): make language required-->
+            <content>
+                <classRef key="model.pLike" minOccurs="0"
+                        maxOccurs="unbounded"/>
+                <elementRef key="language" minOccurs="1"
+                        maxOccurs="unbounded"/>   
+            </content>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <langUsage>
+                        <language ident="chu" role="sourceLanguage">Old Church Slavic</language>
+                        <language ident="la" role="targetLanguage">Latin</language>
+                        <language ident="grc" role="targetLanguage">(Premodern) Greek</language>
+                </langUsage>
+                </egXML>
+            </exemplum>
+        </elementSpec>
+        <!--2021-09-23 (TT): make langUsage required (through model.profileDescPart)-->
+        <elementSpec ident="profileDesc" mode="change">
+            <content>
+                <classRef key="model.profileDescPart"
+                    minOccurs="1" maxOccurs="unbounded"/>
+            </content>
         </elementSpec>
         <elementRef key="language"/>
         <elementSpec ident="language" mode="change">
@@ -462,6 +484,74 @@
             of <language>, not all that baggage -->
             <content>
                 <textNode/>
+            </content>
+            <!--2021-09-21 (TT): add @role so that we can properly document language use in the header-->
+            <attList>
+                <attDef ident="role" mode="add" usage="req">
+                    <valList mode="add" type="closed">
+                        <valItem ident="objectLanguage">
+                            <desc>Object language is the "language being described." (ISO
+                                16642:2017)</desc>
+                        </valItem>
+                        <valItem ident="workingLanguage">
+                            <desc>Working language is the "language used to describe objects." (ISO
+                                16642:2017)</desc>
+                        </valItem>
+                        <valItem ident="sourceLanguage">
+                            <desc>Source language is the language of the content to be translated.
+                                (ISO 17100:215)</desc>
+                        </valItem>
+                        <valItem ident="targetLanguage">
+                            <desc>Target language is the language of the content into which source
+                                language content is translated. (ISO 17100:215)</desc>
+                        </valItem>
+                    </valList>
+                </attDef>
+            </attList>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <langUsage>
+                        <language ident="ru" role="objectLanguage" xml:lang="ru">Русский литературный язык XIX века</language>
+                        <language ident="ru" role="workingLanguage" xml:lang="ru">Современный русский язык</language>
+                        <language ident="ru" role="objectLanguage" xml:lang="en">19th-century literary Russian</language>
+                        <language ident="ru" role="workingLanguage" xml:lang="en">Modern Russian</language>
+                </langUsage>
+                </egXML>
+            </exemplum>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">  
+                    <langUsage>
+                        <language ident="chu" role="sourceLanguage">Old Church Slavic</language>
+                        <language ident="la" role="targetLanguage">Latin</language>
+                        <language ident="grc" role="targetLanguage">(Premodern) Greek</language>
+                    </langUsage>   
+                </egXML>
+            </exemplum>
+            <remarks>
+                <p>In a monolingual dictionary, where the object language and the working language
+                    are the same, one should list each as a separate <gi>language</gi> element with
+                    a specific <att>role</att> attribute. A human-readable, informal prose
+                    characterization should be supplied as content for the element. When the
+                    human-readable name(s) of languages are provided in multiple languages, the
+                    attribute <att>xml:lang</att> should be used to indicate what language is used
+                    to name the given object or working language. </p>
+                <p>A bilingual dictionary could be documented as having two object languages. In
+                    those cases, however, it is recommended -- and more precise -- to describe each
+                    object language as either a source language or a target language.</p>
+            </remarks>
+        </elementSpec>
+        <!--2021-09-24 (TT): make profileDesc required to document use of languages in langUsage-->
+        <elementSpec ident="teiHeader" mode="change">
+            <content>
+                <sequence>
+                    <elementRef key="fileDesc"/>
+                    <elementRef key="encodingDesc" minOccurs="0"/>
+                    <elementRef key="profileDesc" minOccurs="1"/>
+                    <!--<classRef key="model.teiHeaderPart"
+                        minOccurs="0" maxOccurs="unbounded"/>-->
+                    <elementRef key="revisionDesc"
+                        minOccurs="0"/>
+                </sequence>
             </content>
         </elementSpec>
         <!--2020-06-25 (TT): num, to be used strictly for numbering entries and senses -->
@@ -546,7 +636,7 @@
         <authority role="rightsHolder"></authority>-->
         <elementSpec ident="authority" mode="change">
             <attList>
-                <attDef ident="role" mode="add"></attDef>
+                <attDef ident="role" mode="add"/>
             </attList>
         </elementSpec>
         <!--2021-09-21 (TT): allow only biblStruct in sourceDesc-->
