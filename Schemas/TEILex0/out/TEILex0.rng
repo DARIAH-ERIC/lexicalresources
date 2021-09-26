@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-09-24T04:59:41Z. .
+Schema generated from ODD source 2021-09-26T17:08:12Z. .
 TEI Edition: Version 4.1.0. Last updated on
 	19th August 2020, revision b414ba550
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -72,6 +72,27 @@ TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
             <ref name="model.gLike"/>
          </choice>
       </zeroOrMore>
+   </define>
+   <define name="anyElement-xenoData">
+      <element>
+         <anyName>
+            <except>
+               <nsName ns="http://www.tei-c.org/ns/1.0"/>
+               <name ns="http://www.tei-c.org/ns/Examples">egXML</name>
+            </except>
+         </anyName>
+         <zeroOrMore>
+            <attribute>
+               <anyName/>
+            </attribute>
+         </zeroOrMore>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="anyElement-xenoData"/>
+            </choice>
+         </zeroOrMore>
+      </element>
    </define>
    <define name="att.canonical.attributes">
       <ref name="att.canonical.attribute.key"/>
@@ -1830,7 +1851,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="author"/>
          <ref name="editor"/>
          <ref name="respStmt"/>
-         <ref name="funder"/>
       </choice>
    </define>
    <define name="model.divWrapper">
@@ -2521,7 +2541,6 @@ Suggested values include: 1] entry; 2] sense; 3] bibliography</a:documentation>
                         <ref name="idno"/>
                         <ref name="model.ptrLike"/>
                         <ref name="editor"/>
-                        <ref name="funder"/>
                         <ref name="respStmt"/>
                      </choice>
                   </zeroOrMore>
@@ -2609,11 +2628,8 @@ Suggested values include: 1] entry; 2] sense; 3] bibliography</a:documentation>
          <ref name="att.datable.attributes"/>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the title according to some convenient typology.
-Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] short; 5] desc (descriptive)</a:documentation>
-               <data type="token">
-                  <param name="pattern">[^\p{C}\p{Z}]+</param>
-               </data>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
             </attribute>
          </optional>
          <optional>
@@ -4957,6 +4973,12 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                <ref name="encodingDesc"/>
             </optional>
             <ref name="profileDesc"/>
+            <optional>
+               <ref name="xenoData"/>
+            </optional>
+            <optional>
+               <ref name="revisionDesc"/>
+            </optional>
          </group>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -4982,9 +5004,9 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                   <ref name="notesStmt"/>
                </optional>
             </group>
-            <oneOrMore>
+            <zeroOrMore>
                <ref name="sourceDesc"/>
-            </oneOrMore>
+            </zeroOrMore>
          </group>
          <ref name="att.global.attributes"/>
          <empty/>
@@ -5002,15 +5024,6 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
             </zeroOrMore>
          </group>
          <ref name="att.global.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="funder">
-      <element name="funder">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(funding body) specifies the name of an individual, institution, or organization responsible for the funding of a project or text. [2.2.1. The Title Statement]</a:documentation>
-         <ref name="macro.phraseSeq.limited"/>
-         <ref name="att.global.attributes"/>
-         <ref name="att.canonical.attributes"/>
          <empty/>
       </element>
    </define>
@@ -5081,8 +5094,17 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
          <ref name="att.canonical.attributes"/>
          <optional>
             <attribute name="role">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <text/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+Suggested values include: 1] funder; 2] sponsor; 3] rightsHolder</a:documentation>
+               <choice>
+                  <value>funder</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>sponsor</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>rightsHolder</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <data type="Name"/>
+               </choice>
             </attribute>
          </optional>
          <empty/>
@@ -5367,6 +5389,28 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
             <ref name="model.profileDescPart"/>
          </oneOrMore>
          <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="xenoData">
+      <element name="xenoData">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(non-TEI metadata) provides a container element into which metadata in non-TEI formats may be placed. [2.5. Non-TEI Metadata]</a:documentation>
+         <choice>
+            <text/>
+            <ref name="anyElement-xenoData"/>
+         </choice>
+         <ref name="att.global.attributes"/>
+         <ref name="att.declarable.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="revisionDesc">
+      <element name="revisionDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(revision description) summarizes the revision history for a file. [2.6. The Revision Description 2.1.1. The TEI Header and Its Components]</a:documentation>
+         <empty/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.docStatus.attributes"/>
          <empty/>
       </element>
    </define>

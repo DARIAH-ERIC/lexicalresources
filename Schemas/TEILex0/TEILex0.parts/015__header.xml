@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="header">
+   <head>Header</head>
+   <div>
+      <head>General remarks</head>
+      <p>A lexical resource encoded in TEI Lex-0 must, like any TEI file, start with a
+            <gi>teiHeader</gi> element. A TEI header contains information about the lexical resource
+         itself, its source(s), its encoding, and its revisions. Proper, structured metadata of this
+         kind is equally important for scholars using the resource, for software processing them,
+         and for cataloguers in libraries and archives.</p>
+      <p>The TEI header of a lexical resource has five major parts:<list>
+            <item>a <hi rend="italic">file description</hi>, tagged <gi>fileDesc</gi>, provides a
+               full bibliographic description of the electronic lexical resource itself as well as
+               the source(s), analogue or digital, from which it may have been derived. For details,
+               see section <ref target="#file-description">File Description</ref> below. </item>
+            <item>an <hi rend="italic">encoding description</hi>, tagged <gi>encodingDesc</gi>,
+               describes the relationship between the electronic resource and its source(s). It
+               allows for detailed description of whether (or how) the electronic resource was
+               produced, transcribed or normalized, how the encoder resolved ambiguities in the
+               source, what levels of encoding or analysis were applied etc.</item>
+            <item>a <hi rend="italic">profile description</hi>, tagged <gi>profileDesc</gi>,
+               contains classificatory and contextual information about the lexical resource
+               including its object and working languages.</item>
+            <item>a <hi rend="italic">container for external metadata</hi>, tagged
+               <gi>xenoData</gi>, contains metadata from non-TEI schemas, for instance Dublin Core,
+               MARCXML or MODS, if available.</item>
+            <item>a <hi rend="italic">revision history</hi>, tagged <gi>revisionDesc</gi>, contains
+               a list of changes made during the development of the lexical resource, both before
+               and after its official release. </item>
+         </list></p>
+      <p>Of these, two elements are required in TEI Lex-0: <gi>fileDesc</gi> and
+            <gi>profileDesc</gi>. It is highly recommended to include additional information in
+            <gi>encodingDesc</gi>. It is also an example of good practice to record changes in
+            <gi>revisionDesc</gi>. </p>
+   </div>
+   <div xml:id="file-description">
+      <head>File description</head>
+      <p>The bibliographic description of the given machine-readable lexical resource is absolutely
+         essential for identifying the basic information about the resource itself, its creators and
+         publishers as well as the conditions under which it is made available to the public. </p>
+      <p> The elements that make up <gi>fileDesc</gi> are: <specList>
+            <specDesc key="titleStmt"/>
+            <specDesc key="editionStmt"/>
+            <specDesc key="extent"/>
+            <specDesc key="publicationStmt"/>
+            <specDesc key="seriesStmt"/>
+            <specDesc key="sourceDesc"/>
+         </specList>
+      </p>
+      <p><gi>fileDesc</gi> is a mandatory element in plain TEI as well, but in TEI Lex-0 there are
+         some additional constraints and recommendations related to the content of this element.</p>
+      <p>
+         <list>
+            <item>In <gi>titleStmt</gi>, TEI Lex-0 <hi rend="italic">recommends</hi> the use of
+                  <att>type</att> on <gi>title</gi> (with values either <val>full</val> or
+                  <val>abbr</val>) to record both the full bibliographic title of the lexicographic
+               resource and the preferred abbreviated title for easy reference, should one exist. </item>
+            <item>In <gi>titleStmt</gi>, TEI Lex-0 <hi rend="italic">recommends</hi> the use of
+                  <gi>persName</gi> and <gi>orgName</gi> to distinguish between the names of persons
+               and organizations. This is especially important since in some cases, the name of an
+               institution is used to take up the collective authorship of a work.</item>
+            <item>When using <gi>persName</gi>, TEI Lex-0 <hi rend="italic">recommends</hi> to
+               further structure the name with elements <gi>forename</gi> and
+               <gi>surname</gi>.</item>
+            <item>In <gi>publicationStmt</gi>, TEI Lex-0 <hi rend="italic">requires</hi> the use of
+                  <gi>availability</gi> to record the <gi>licence</gi> of the given lexicographic
+               resource. In other words, a TEI Lex-0 <hi rend="italic">must</hi> include explicit
+               information on the conditions under which the given resource can be used. </item>
+            <item>In addition to <gi>publisher</gi> and <gi>distributor</gi>, the
+                  <gi>publicationStmt</gi> in TEI Lex-0 <hi rend="italic">may</hi> include
+               information on any other <gi>authority</gi> responsible for creating or making the
+               resource available. </item>
+            <item>If using <gi>authority</gi>, TEI Lex-0 <hi rend="italic">requires</hi> the use of
+                  <att>role</att> with values <val>funder</val>, <val>sponsor</val> or
+                  <val>rightsHolder</val>.</item>
+            <item>In TEI Lex-0, <gi>sourceDesc</gi> is an optional element. Born-digital resources
+               or those which cannot be properly sourced do not require a <gi>sourceDesc</gi>. </item>
+            <item>If a resource <hi rend="italic">is</hi> sourced, <gi>sourceDesc</gi> in TEI Lex-0
+               requires the use of <gi>biblStruct</gi> for structuring bibliographic information
+               about the source(s). This is a departure from vanilla TEI which is more permissive in
+               this respect. </item>
+         </list>
+      </p>
+      <list type="examples">
+         <item>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="fd-port" source="#VOLP">
+         <fileDesc>
+         <titleStmt>
+            <title type="full">Vocabulário Ortográfico da Língua Portuguesa [em linha]</title>
+            <title type="abbr">VOLP-1940</title>
+            <editor>
+               <persName>
+                  <forename>Ana</forename>
+                  <surname>Salgado</surname>
+               </persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName>Academia das Ciências de Lisboa</orgName>
+            </publisher>
+            <publisher>
+               <orgName>
+                  <orgName>Imprensa Nacional de Lisboa</orgName>
+               </orgName>
+            </publisher>
+            <authority role="funder">
+               <orgName>Fundo de Apoio à Comunidade Científica (FACC) — FCT</orgName>
+            </authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                  Attribution 4.0 International (CC BY 4.0)</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>Vocabulário Ortográfico da Língua Portuguesa</title>
+                  <author>
+                     <orgName>Academia das Ciências</orgName>
+                  </author>
+                  <imprint>
+                     <publisher>Imprensa Nacional de Lisboa</publisher>
+                     <date>1940</date>
+                  </imprint>
+                  <extent>1 volume</extent>
+                  <extent>821 pp.</extent>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      </egXML>
+         </item>
+         <item>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#EtymWB-XML">
+               <fileDesc>
+               <titleStmt>
+                  <title type="full">Etymologisches Wörterbuch des Deutschen: Die XML-Edition</title>
+                  <title type="abbr">EtymWB-XML</title>
+                  <editor xml:id="WP">
+                     <persName>
+                        <forename>Wolfgang</forename>
+                        <surname>Pfeifer</surname>
+                     </persName>
+                  </editor>
+                  <!-- ... -->
+                  <respStmt xml:id="OT">
+                     <resp>annotated by</resp>
+                     <persName>
+                        <forename>Oxana</forename>
+                        <surname>Tsunykowa</surname>
+                     </persName>
+                  </respStmt>
+                  <respStmt xml:id="YW">
+                     <resp>annotated by</resp>
+                     <persName>
+                        <forename>Yvonne</forename> 
+                        <surname>Wirkus</surname>
+                     </persName>
+                  </respStmt>
+                  <respStmt xml:id="LL">
+                     <resp>restructured by</resp>
+                     <persName>
+                        <forename>Lothar</forename> 
+                        <surname>Lemnitzer</surname>
+                     </persName>
+                  </respStmt>
+                  <respStmt xml:id="AH">
+                     <resp>restructured by</resp>
+                     <persName>
+                        <forename>Axel</forename> 
+                        <surname>Herold</surname>
+                     </persName>
+                  </respStmt>
+               </titleStmt>
+               <editionStmt>
+                  <edition>
+                     <title>XML encoded version</title>
+                     <date>2006-11-17</date>
+                  </edition>
+               </editionStmt>
+               <publicationStmt>
+                  <publisher>Berlin-Brandenburgische Akademie der Wissenschaften</publisher>
+                  <publisher>Digitales Wörterbuch der deutschen Sprache</publisher>
+                  <authority role="funder">Berlin-Brandenburgische Akademie der Wissenschaften</authority>
+                  <pubPlace>Berlin</pubPlace>
+                  <date>2009</date>
+                  <availability>
+                     <licence>Copyright 2002-2009</licence>
+                  </availability>
+               </publicationStmt>
+               <sourceDesc>
+                  <biblStruct>
+                     <monogr>
+                        <author>Wolfgang Pfeifer</author>
+                        <title>Etymologisches Wörterbuch des Deutschen</title>
+                        <edition>2</edition>
+                        <imprint>
+                           <publisher>Akademie Verlag</publisher>
+                           <pubPlace>Berlin</pubPlace>
+                           <date>1993</date>
+                           <note>with additional notes by the author</note>
+                        </imprint>
+                     </monogr>
+                  </biblStruct>
+               </sourceDesc>
+            </fileDesc>
+            </egXML>
+         </item>
+      </list>
+   </div>
+   <div xml:id="profile-description">
+      <head>Profile description</head>
+      <p>In plain TEI, <gi>profileDesc</gi> is an optional element, whereas in TEI Lex-0, it is
+         required. This is because the nature lexicographic resources is such that it is essential
+         to identify and record the language(s) used as part of the resource metadata. </p>
+      <p>That's why <gi>profileDesc</gi> requires <gi>langUsage</gi> and <gi>langUsage</gi> requires
+         at least one <gi>language</gi> element.</p>
+      <p>Regarding the use of the required attribute <att>role</att> and its possible values
+            (<val>objectLanguage</val>, <val>workingLanguage</val>, <val>sourceLanguage</val> or
+            <val>targetLanguage</val>), see the specification details for <gi>language</gi>. </p>
+   </div>
+</div>
