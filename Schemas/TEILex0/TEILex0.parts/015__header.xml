@@ -83,9 +83,9 @@
                this respect. </item>
          </list>
       </p>
-      <list type="examples">
-         <item>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="fd-port" source="#VOLP">
+      <!--<list type="examples">
+         <item>-->
+           <!-- <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="fd-port" source="#VOLP">
          <fileDesc>
          <titleStmt>
             <title type="full">Vocabulário Ortográfico da Língua Portuguesa [em linha]</title>
@@ -131,9 +131,9 @@
             </biblStruct>
          </sourceDesc>
       </fileDesc>
-      </egXML>
-         </item>
-         <item>
+      </egXML>-->
+        <!-- </item>
+         <item>-->
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#EtymWB-XML">
                <fileDesc>
                <titleStmt>
@@ -208,8 +208,8 @@
                </sourceDesc>
             </fileDesc>
             </egXML>
-         </item>
-      </list>
+    <!--     </item>
+      </list>-->
    </div>
    <div xml:id="profile-description">
       <head>Profile description</head>
