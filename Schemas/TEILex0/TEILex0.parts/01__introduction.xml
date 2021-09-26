@@ -32,7 +32,7 @@
         <div>
             <head>DARIAH Working Group</head>
             <p>The DARIAH Working Group on Lexical Resources is a self-organized scholarly community
-                working under the auspicies of the pan-European Digital Research Infrastructure for
+                working under the auspices of the pan-European Digital Research Infrastructure for
                 Arts and Humanities (DARIAH-EU). The goals of the WG are: <list>
                     <item>to explore, assess and recommend standard tools and methods for the
                         creation, application and dissemination of born-digital and retro-digitized
@@ -141,7 +141,7 @@
                         the support of the German Ministry of Education and Research (BMBF), CLARIN
                         and DARIAH-DE. For an overview, check out this <ref
                             target="https://digilex.hypotheses.org/386">blog post</ref>.</item>
-                    <item><ref target="https://lexmc18.sciencesconf.org">Lexcal Data Masterclass
+                    <item><ref target="https://lexmc18.sciencesconf.org">Lexical Data Masterclass
                             2018</ref>. Co-organized by DARIAH, the Berlin Brandenburg Academy of
                         Sciences (BBAW), Inria and the Belgrade Center for Digital Humanities, with
                         the support of the German Ministry of Education and Research (BMBF), French
@@ -218,6 +218,7 @@
         <head>The guidelines</head>
        <!-- <p>TODO: How to use these guidelines. </p>-->
         <divGen type="how-to-cite"></divGen>
+        <divGen type="revision-history"></divGen>
     </div>
 
 </div>

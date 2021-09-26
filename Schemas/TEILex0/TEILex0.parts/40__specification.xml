@@ -20,9 +20,11 @@
                     but I'm leaving it for now, in case we need it in the header-->
         <!--2018-09-20 (TT): added quote! -->
         <!--2019-07-04 (TT): added graphic, we need it for images! -->
+        <!--2021-09-19 (TT): added monogr for header expansion-->
+        <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
         <moduleRef key="core"
             include="author head title cit quote bibl biblStruct biblScope listBibl gloss
-                        citedRange imprint analytic publisher pubPlace ref date hi editor respStmt name num resp term note graphic p"/>
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email"/>
         <!--PB's simplified textstructure declaratiopn-->
         <moduleRef key="textstructure" include="TEI text body div front back"/>
         <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
@@ -36,11 +38,13 @@
                     -->
         <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
         <!--2020-06-23 (TT): add profileDesc so that we can document langUsage-->
+        <!--2021-09-25 (TT): add xenoData and revisionDesc-->
         <moduleRef key="header"
-            include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc projectDesc seriesStmt
-                        notesStmt authority distributor idno edition funder availability licence appInfo classDecl namespace tagUsage tagsDecl rendition"/>
+            include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc revisionDesc xenoData editorialDecl projectDesc seriesStmt
+                        notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition"/>
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
-        <moduleRef key="namesdates" include="placeName persName orgName"/>
+        <!--        2021-09-19 (TT): added forename, surname; need for detailed biblStruct/author/persName-->
+        <moduleRef key="namesdates" include="placeName persName orgName forename surname"/>
         <!-- for dialectal properties -->
         <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
         <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->
@@ -426,8 +430,7 @@
                 <memberOf key="att.datable.w3c" mode="add"/>
             </classes>
         </elementSpec>
-        <!--        2020-06-24 (TT): allowing langUsage and language to document language tags
--->
+        <!-- 2020-06-24 (TT): allowing langUsage and language to document language tags-->
         <elementRef key="langUsage"/>
         <elementSpec ident="langUsage" mode="change">
             <classes mode="change">
@@ -441,6 +444,26 @@
                 <memberOf key="att.global.change" mode="delete"/>
                 <memberOf key="att.declarable" mode="delete"/>
             </classes>
+            <!-- 2021-09-23 (TT): make language required-->
+            <content>
+                <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
+                <elementRef key="language" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <langUsage>
+                        <language ident="chu" role="sourceLanguage">Old Church Slavic</language>
+                        <language ident="la" role="targetLanguage">Latin</language>
+                        <language ident="grc" role="targetLanguage">(Premodern) Greek</language>
+                </langUsage>
+                </egXML>
+            </exemplum>
+        </elementSpec>
+        <!--2021-09-23 (TT): make langUsage required (through model.profileDescPart)-->
+        <elementSpec ident="profileDesc" mode="change">
+            <content>
+                <classRef key="model.profileDescPart" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
         </elementSpec>
         <elementRef key="language"/>
         <elementSpec ident="language" mode="change">
@@ -459,6 +482,96 @@
             of <language>, not all that baggage -->
             <content>
                 <textNode/>
+            </content>
+            <!--2021-09-21 (TT): add @role so that we can properly document language use in the header-->
+            <attList>
+                <attDef ident="role" mode="add" usage="req">
+                    <valList mode="add" type="closed">
+                        <valItem ident="objectLanguage">
+                            <desc>Object language is the "language being described." (ISO
+                                16642:2017)</desc>
+                        </valItem>
+                        <valItem ident="workingLanguage">
+                            <desc>Working language is the "language used to describe objects." (ISO
+                                16642:2017)</desc>
+                        </valItem>
+                        <valItem ident="sourceLanguage">
+                            <desc>Source language is the language of the content to be translated.
+                                (ISO 17100:215)</desc>
+                        </valItem>
+                        <valItem ident="targetLanguage">
+                            <desc>Target language is the language of the content into which source
+                                language content is translated. (ISO 17100:215)</desc>
+                        </valItem>
+                    </valList>
+                </attDef>
+            </attList>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <langUsage>
+                        <language ident="ru" role="objectLanguage" xml:lang="ru">Русский литературный язык XIX века</language>
+                        <language ident="ru" role="workingLanguage" xml:lang="ru">Современный русский язык</language>
+                        <language ident="ru" role="objectLanguage" xml:lang="en">19th-century literary Russian</language>
+                        <language ident="ru" role="workingLanguage" xml:lang="en">Modern Russian</language>
+                </langUsage>
+                </egXML>
+            </exemplum>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">  
+                    <langUsage>
+                        <language ident="chu" role="sourceLanguage">Old Church Slavic</language>
+                        <language ident="la" role="targetLanguage">Latin</language>
+                        <language ident="grc" role="targetLanguage">(Premodern) Greek</language>
+                    </langUsage>   
+                </egXML>
+            </exemplum>
+            <remarks>
+                <p>In a monolingual dictionary, where the object language and the working language
+                    are the same, one should list each as a separate <gi>language</gi> element with
+                    a specific <att>role</att> attribute. A human-readable, informal prose
+                    characterization should be supplied as content for the element. When the
+                    human-readable name(s) of languages are provided in multiple languages, the
+                    attribute <att>xml:lang</att> should be used to indicate what language is used
+                    to name the given object or working language. </p>
+                <p>A bilingual dictionary could be documented as having two object languages. In
+                    those cases, however, it is recommended -- and more precise -- to describe each
+                    object language as either a source language or a target language.</p>
+            </remarks>
+        </elementSpec>
+        <!--2021-09-24 (TT): make profileDesc required to document use of languages in langUsage-->
+        <elementSpec ident="teiHeader" mode="change">
+            <content>
+                <sequence>
+                    <elementRef key="fileDesc"/>
+                    <elementRef key="encodingDesc" minOccurs="0"/>
+                    <elementRef key="profileDesc" minOccurs="1"/>
+                    <!--<classRef key="model.teiHeaderPart"
+                        minOccurs="0" maxOccurs="unbounded"/>-->
+                    <elementRef key="xenoData" minOccurs="0"/>
+                    <elementRef key="revisionDesc" minOccurs="0"/>
+                </sequence>
+            </content>
+        </elementSpec>
+        <!-- 2021-09-26 (TT): dont't require sourceDesc in fileDesc; we want it 
+        only if we can provide a proper biblStruct for it; otherwise, it's useless
+        (i.e. we don't want <sourceDesc><p>Born digital</p></sourceDesc> -->
+        <elementSpec ident="fileDesc" mode="change">
+            <content>
+                <sequence>
+                    <sequence>
+                        <elementRef key="titleStmt"/>
+                        <elementRef key="editionStmt"
+                            minOccurs="0"/>
+                        <elementRef key="extent" minOccurs="0"/>
+                        <elementRef key="publicationStmt"/>
+                        <elementRef key="seriesStmt"
+                            minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="notesStmt"
+                            minOccurs="0"/>
+                    </sequence>
+                    <elementRef key="sourceDesc"
+                        minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
             </content>
         </elementSpec>
         <!--2020-06-25 (TT): num, to be used strictly for numbering entries and senses -->
@@ -519,6 +632,74 @@
                             />
                         </valItem>
                         <valItem ident="rection"/>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!--2021-09-20 (TT): make availability required in publicationStmt-->
+        <!--2021-09-21 (TT): make publicationStmtPart.agency unbound so that one can
+            add both authority and publisher; we agreed that authority should be used 
+            for encoding rights holders-->
+        <elementSpec ident="publicationStmt" mode="change">
+            <content>
+                <sequence>
+                    <classRef key="model.publicationStmtPart.agency" minOccurs="1"
+                        maxOccurs="unbounded"/>
+                    <classRef key="model.publicationStmtPart.detail" minOccurs="0"
+                        maxOccurs="unbounded"/>
+                    <elementRef key="availability"/>
+                </sequence>
+            </content>
+        </elementSpec>
+        <!--2021-09-21 (TT): add @role to authority so that we can specify
+        what kind of authority we're talking about; for instance 
+        <authority role="rightsHolder"></authority>-->
+        <elementSpec ident="authority" mode="change">
+            <attList>
+                <attDef ident="role" mode="add">
+                    <valList mode="add" type="semi">
+                        <valItem ident="funder"/>
+                        <valItem ident="sponsor"/>
+                        <valItem ident="rightsHolder"/>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!--2021-09-21 (TT): allow only biblStruct in sourceDesc-->
+        <elementSpec ident="sourceDesc" mode="change">
+            <content>
+                <elementRef key="biblStruct" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="sw34hfa">
+                    <sourceDesc>
+                        <biblStruct>
+                            <monogr>
+                                <author>
+                                    <surname>Miklosich</surname>
+                                    <forename>Franz</forename></author>
+                                <title>Lexicon Palaeoslovenico-Graeco-Latinum</title>
+                                <imprint>
+                                    <publisher>Guilelmus Braumueller</publisher>
+                                      <pubPlace>Vindobonae</pubPlace>
+                                    <date>1862</date>
+                                </imprint>
+                            </monogr>
+                        </biblStruct>
+                    </sourceDesc>
+                </egXML>
+            </exemplum>
+        </elementSpec>
+        <elementSpec ident="title" mode="change">
+            <attList>
+                <attDef ident="type" mode="replace" usage="rec">
+                    <valList>
+                        <valItem ident="full">
+                            <desc>The full title of a lexicographic resource, such as <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="full">The Oxford English Dictionary</title></egXML>.</desc>
+                        </valItem>
+                        <valItem ident="abbr">
+                            <desc>The preferred abbreviated title of a lexicographic resource, such as the <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="abbr">OED</title></egXML>.</desc>
+                        </valItem>
                     </valList>
                 </attDef>
             </attList>

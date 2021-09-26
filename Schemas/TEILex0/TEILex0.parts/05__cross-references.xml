@@ -106,7 +106,7 @@
             <head>Related</head>
             <p> The default reference to another lexical unit when no more granular information
                 about the type of relationship is available.</p>
-            <p>In TEI Lex-0, cross-references are by default enoded as <code>&lt;xr
+            <p>In TEI Lex-0, cross-references are by default encoded as <code>&lt;xr
                     type=&quot;related&quot;&gt;&lt;/xr&gt;</code>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                             <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="borcht"/>
