@@ -560,17 +560,13 @@
                 <sequence>
                     <sequence>
                         <elementRef key="titleStmt"/>
-                        <elementRef key="editionStmt"
-                            minOccurs="0"/>
+                        <elementRef key="editionStmt" minOccurs="0"/>
                         <elementRef key="extent" minOccurs="0"/>
                         <elementRef key="publicationStmt"/>
-                        <elementRef key="seriesStmt"
-                            minOccurs="0" maxOccurs="unbounded"/>
-                        <elementRef key="notesStmt"
-                            minOccurs="0"/>
+                        <elementRef key="seriesStmt" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="notesStmt" minOccurs="0"/>
                     </sequence>
-                    <elementRef key="sourceDesc"
-                        minOccurs="0" maxOccurs="unbounded"/>
+                    <elementRef key="sourceDesc" minOccurs="0" maxOccurs="unbounded"/>
                 </sequence>
             </content>
         </elementSpec>
@@ -695,10 +691,13 @@
                 <attDef ident="type" mode="replace" usage="rec">
                     <valList>
                         <valItem ident="full">
-                            <desc>The full title of a lexicographic resource, such as <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="full">The Oxford English Dictionary</title></egXML>.</desc>
+                            <desc>The full title of a lexicographic resource, such as
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="full">The Oxford English Dictionary</title></egXML>.</desc>
                         </valItem>
                         <valItem ident="abbr">
-                            <desc>The preferred abbreviated title of a lexicographic resource, such as the <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="abbr">OED</title></egXML>.</desc>
+                            <desc>The preferred abbreviated title of a lexicographic resource, such
+                                as the
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="abbr">OED</title></egXML>.</desc>
                         </valItem>
                     </valList>
                 </attDef>

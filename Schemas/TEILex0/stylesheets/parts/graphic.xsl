@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0"
-    exclude-result-prefixes="tei teix">
+    exclude-result-prefixes="tei teix xhtml">
     
    <xsl:template match="tei:head[parent::tei:figure]">
        <xsl:element name="div" namespace="http://www.w3.org/1999/xhtml">

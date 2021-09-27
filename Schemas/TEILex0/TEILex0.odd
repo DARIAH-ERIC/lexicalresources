@@ -131,8 +131,13 @@
         </fileDesc>
         <revisionDesc>
             <listChange>
+                <listChange n="0.9.1">
+                    <!--choose correct date pefore publishing-->
+                    <change when="2021-09-27" type="html">fix namespace issues in html output</change>
+                    <change type="docs">add new examples to TEI Header documentation</change>
+                </listChange>
                 <listChange n="0.9.0">
-                    <change when="2021-09-27" type="docs">add section on <ref target="#header">TEI
+                    <change when="2021-09-26" type="docs">add section on <ref target="#header">TEI
                         Header</ref></change>
                     <change type="docs">correction of various misspellings</change>
                     <change type="spec">add <gi>monogr</gi> (needed for

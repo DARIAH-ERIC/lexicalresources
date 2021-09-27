@@ -56,7 +56,14 @@
             <item>In <gi>titleStmt</gi>, TEI Lex-0 <hi rend="italic">recommends</hi> the use of
                   <att>type</att> on <gi>title</gi> (with values either <val>full</val> or
                   <val>abbr</val>) to record both the full bibliographic title of the lexicographic
-               resource and the preferred abbreviated title for easy reference, should one exist. </item>
+               resource and the preferred abbreviated title for easy reference, should one exist.
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <titleStmt>
+                     <title type="full">Lexicon Serbico-Germanico-Latinum</title>
+                     <title type="abbr">LSGL</title>
+                  </titleStmt>
+               </egXML>
+            </item>
             <item>In <gi>titleStmt</gi>, TEI Lex-0 <hi rend="italic">recommends</hi> the use of
                   <gi>persName</gi> and <gi>orgName</gi> to distinguish between the names of persons
                and organizations. This is especially important since in some cases, the name of an
@@ -67,7 +74,30 @@
             <item>In <gi>publicationStmt</gi>, TEI Lex-0 <hi rend="italic">requires</hi> the use of
                   <gi>availability</gi> to record the <gi>licence</gi> of the given lexicographic
                resource. In other words, a TEI Lex-0 <hi rend="italic">must</hi> include explicit
-               information on the conditions under which the given resource can be used. </item>
+               information on the conditions under which the given resource can be used.
+               <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="Stčeg">
+                  <teiHeader>
+                     <fileDesc n="{1ADA5193-4375-4269-8222-D8BE81D597DB}">
+        <titleStmt>
+            <title type="full">Staročeský slovník</title>
+            <title type="abbr">StčS</title>
+        </titleStmt>
+        <publicationStmt>
+            <publisher>Ústav pro jazyk český AV ČR, v. v. i.</publisher>
+            <pubPlace>Praha</pubPlace>
+            <date>1968–2006</date>
+            <availability>
+                <licence target="http://creativecommons.org/licenses/by/3.0/" notBefore="2016-11-16">
+                    <p>The Creative Commons Attribution 3.0 Unported (CC BY 3.0) Licence applies to this document.</p>
+                </licence>
+            </availability>
+        </publicationStmt>
+         </fileDesc>
+             <!--etc.-->
+         </teiHeader>
+               </egXML>
+            
+            </item>
             <item>In addition to <gi>publisher</gi> and <gi>distributor</gi>, the
                   <gi>publicationStmt</gi> in TEI Lex-0 <hi rend="italic">may</hi> include
                information on any other <gi>authority</gi> responsible for creating or making the
@@ -80,12 +110,30 @@
             <item>If a resource <hi rend="italic">is</hi> sourced, <gi>sourceDesc</gi> in TEI Lex-0
                requires the use of <gi>biblStruct</gi> for structuring bibliographic information
                about the source(s). This is a departure from vanilla TEI which is more permissive in
-               this respect. </item>
+               this respect. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <sourceDesc>
+              <biblStruct>
+               <monogr>
+                  <title>Vocabulário Ortográfico da Língua Portuguesa</title>
+                  <author>
+                     <orgName>Academia das Ciências</orgName>
+                  </author>
+                  <imprint>
+                     <publisher>Imprensa Nacional de Lisboa</publisher>
+                     <date>1940</date>
+                  </imprint>
+                  <extent>1 volume</extent>
+                  <extent>821 pp.</extent>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+               </egXML>
+            </item>
          </list>
       </p>
       <!--<list type="examples">
          <item>-->
-           <!-- <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="fd-port" source="#VOLP">
+      <!-- <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="fd-port" source="#VOLP">
          <fileDesc>
          <titleStmt>
             <title type="full">Vocabulário Ortográfico da Língua Portuguesa [em linha]</title>
@@ -132,9 +180,9 @@
          </sourceDesc>
       </fileDesc>
       </egXML>-->
-        <!-- </item>
+      <!-- </item>
          <item>-->
-            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#EtymWB-XML">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#EtymWB-XML">
                <fileDesc>
                <titleStmt>
                   <title type="full">Etymologisches Wörterbuch des Deutschen: Die XML-Edition</title>
@@ -194,7 +242,12 @@
                <sourceDesc>
                   <biblStruct>
                      <monogr>
-                        <author>Wolfgang Pfeifer</author>
+                        <author>
+                           <persName>
+                              <forename>Wolfgang</forename> 
+                              <surname>Pfeifer</surname>
+                           </persName>
+                        </author>
                         <title>Etymologisches Wörterbuch des Deutschen</title>
                         <edition>2</edition>
                         <imprint>
@@ -208,7 +261,7 @@
                </sourceDesc>
             </fileDesc>
             </egXML>
-    <!--     </item>
+      <!--     </item>
       </list>-->
    </div>
    <div xml:id="profile-description">

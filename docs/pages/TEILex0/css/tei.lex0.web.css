@@ -456,11 +456,12 @@ input {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    padding: 0.5em 1em;
+    padding: 0.25em 1em;
     background: #2c3e50;
     font-weight: bold;
     cursor: pointer;
     align-items: center;
+    font-size:0.9em;
     /* Icon */
 }
 .tab-label:hover {
@@ -476,7 +477,7 @@ input {
 }
 
 .tab-label .pure-img {
-    height: 22px;
+    height: 18px;
 }
 
 span.label img {
@@ -486,7 +487,7 @@ span.label img {
 
 .tab-content {
     max-height: 0;
-    padding: 0 1em;
+    /*padding: 0 1em;*/
     color: #2c3e50;
     background: white;
     -webkit-transition: all .35s;
@@ -503,6 +504,9 @@ span.label img {
     padding: 0 1em;
 }
 
+.tab-content .figure {
+    margin-left: 0.9em;
+}
 
 .tab-close {
     display: -webkit-box;
@@ -527,7 +531,15 @@ input:checked + .tab-label::after {
 }
 input:checked ~ .tab-content {
     max-height: 1000vh;
-    padding: 1em;
+    /*padding: 0 0.5em 0 0;*/
+}
+
+.panelContent .code-toolbar {
+    margin-bottom: 1em;
+}
+
+div.code-toolbar > .toolbar {
+    right:0.6em;
 }
 
 div.cit {
