@@ -655,3 +655,11 @@ input.rounded {
     font-size:medium;
     vertical-align:text-top;
 }
+
+blockquote.quote {
+    border-left-color: #1f8dd6;
+    border-left-width: 4px;
+    border-left-style: solid;
+    padding-left: 1em;
+    margin-left: 20px;
+}

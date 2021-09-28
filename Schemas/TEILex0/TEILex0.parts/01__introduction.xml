@@ -26,9 +26,8 @@
             COST Action <ref target="http://www.elexicography.eu">European Network of
                 e-Lexicography</ref> (ENeL). Upon the completion of the COST Action, the work on TEI
             Lex-0 was taken up by the DARIAH Working Group "Lexical Resources". Currently, the work
-            on TEI Lex-0 is also supported by the H2020-funded <ref target="https://elex.is">European Lexicographic
-                Infrastructure</ref> (ELEXIS). </p>
-
+            on TEI Lex-0 is also supported by the H2020-funded <ref target="https://elex.is"
+                >European Lexicographic Infrastructure</ref> (ELEXIS). </p>
         <div>
             <head>DARIAH Working Group</head>
             <p>The DARIAH Working Group on Lexical Resources is a self-organized scholarly community
@@ -55,7 +54,6 @@
                 evaluates current practices and formulates guidelines on data enrichment and mutual
                 linking of existing electronic dictionaries in view of their common European
                 heritage.</p>
-
             <p><hi rend="bold">WG Chairs</hi></p>
             <p>
                 <figure type="thumbnail">
@@ -73,20 +71,18 @@
             <p><figure type="thumbnail">
                     <graphic url="images/Toma_Tasovac.jpg"/>
                 </figure><hi rend="bold">Toma Tasovac</hi> is Director of the Belgrade Center for
-                Digital Humanities (BCDH) and DARIAH-EU. He was educated at Harvard
-                University, Princeton University and Trinity College Dublin. His areas of interest
-                include lexicography, data modeling, TEI, digital editions and research
-                infrastructures. He previously served as the National Coordinator of DARIAH-RS and
-                Chair of the National Coordinators' Committee at DARIAH-EU. Under Toma's leadership,
-                BCDH has received funding from various national and international granting bodies,
-                including Erasmus Plus and Horizon 2020.</p>
-
+                Digital Humanities (BCDH) and DARIAH-EU. He was educated at Harvard University,
+                Princeton University and Trinity College Dublin. His areas of interest include
+                lexicography, data modeling, TEI, digital editions and research infrastructures. He
+                previously served as the National Coordinator of DARIAH-RS and Chair of the National
+                Coordinators' Committee at DARIAH-EU. Under Toma's leadership, BCDH has received
+                funding from various national and international granting bodies, including Erasmus
+                Plus and Horizon 2020.</p>
             <p><hi rend="bold">DigiLex Blog</hi></p>
             <p>The working group runs a blog called <ref target="https://digilex.hypotheses.org"
                     >DigiLex: Legacy Dictionaries Reloaded</ref> as a platform for sharing tips,
                 raising questions and discussing methods for the creation of lexical resources. </p>
         </div>
-
         <div>
             <head>ELEXIS</head>
             <p><ref target="https://elex.is">ELEXIS</ref> is a H2020-funded project which proposes
@@ -96,13 +92,19 @@
                 in the digital age, and (2) bridge the gap between more advanced and
                 lesser-resourced scholarly communities working on lexicographic resources.</p>
         </div>
-
         <!--the following will generate a list of contributors in alphabetic order from the teiHeader-->
         <divGen type="contributors"/>
-
+        <div>
+            <head>The Rahtz Prize</head>
+            <p>In recognition of their work on TEI Lex-0, the DARIAH WG Lexical
+                Resources was awarded the 2020 Rahtz Prize for TEI Ingenuity.</p>
+            <quote>Members of the DARIAH Working Group Lexical Resources have made a valuable
+                contribution to the Dictionaries Chapter of the TEI Guidelines. Their efforts and
+                their expertise have been formidable and highly appreciated by the TEI Community for
+                many years. — <bibl rend="italic">Martina Scholger, Chair of the TEI Technical Council</bibl></quote>
+        </div>
         <div>
             <head> Meetings</head>
-
             <p>The Working Group has organized a number of working meetings dedicated to the
                 development of TEI Lex-0. These include: <list>
                     <item>Toward Best Practice Guidelines for Encoding Legacy Dictionaries: An
@@ -187,7 +189,6 @@
             </p>
         </div>
     </div>
-
     <div>
         <head>The rationale</head>
         <p>To what extent can we achieve consistent encoding within a given community of practice by
@@ -211,14 +212,11 @@
             to stay as aligned as possible with the TEI subset developed in conjunction with the
             revision of the ISO LMF (Lexical Markup Framework) standard (cf. <ref
                 target="#Romary2015">Romary 2015</ref>)</p>
-
     </div>
-
     <div>
         <head>The guidelines</head>
-       <!-- <p>TODO: How to use these guidelines. </p>-->
-        <divGen type="how-to-cite"></divGen>
-        <divGen type="revision-history"></divGen>
+        <!-- <p>TODO: How to use these guidelines. </p>-->
+        <divGen type="how-to-cite"/>
+        <divGen type="revision-history"/>
     </div>
-
 </div>
