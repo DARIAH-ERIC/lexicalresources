@@ -56,7 +56,7 @@
         </script>
         <script type="text/javascript">
             docsearch({
-                apiKey: '27fc9785932247d5056acddcede378cf',
+                apiKey: '994929125d5532cbc5b1f0a1b987add3',
                 indexName: 'tei_lex',
                 inputSelector: '.algo',
                 debug: true, // Set debug to true if you want to inspect the dropdown
