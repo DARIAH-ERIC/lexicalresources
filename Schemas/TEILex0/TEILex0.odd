@@ -108,9 +108,15 @@
                         <surname>Hildenbrandt</surname>
                     </persName>
                 </author>
+                <author xml:id="BL" role="contributing">
+                    <persName>
+                        <forename>Boris</forename>
+                        <surname>Lehečka</surname>
+                    </persName>
+                </author>
             </titleStmt>
             <editionStmt>
-                <edition n="0.8.6"/>
+                <edition n="0.9.0"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
@@ -123,6 +129,40 @@
                 <p>Born digital</p>
             </sourceDesc>
         </fileDesc>
+        <revisionDesc>
+            <listChange>
+                <listChange n="0.9.0">
+                    <change when="2021-09-27" type="docs">add section on <ref target="#header">TEI
+                        Header</ref></change>
+                    <change type="docs">correction of various misspellings</change>
+                    <change type="spec">add <gi>monogr</gi> (needed for
+                            <gi>biblStruct</gi>)</change>
+                    <change type="spec">add <gi>forename</gi> and <gi>surname</gi> for more
+                        fine-grained bibliographic information</change>
+                    <change type="spec">add <gi>editorialDecl</gi></change>
+                    <change type="spec">add <gi>email</gi> to make possible contact information in
+                        the header</change>
+                    <change type="spec">require <gi>availability</gi> in <gi>publicationStmt</gi> to
+                        provide <gi>licence</gi></change>
+                    <change type="spec">make <gi>sourceDesc</gi> optional</change>
+                    <change type="spec">allow only <gi>biblStruct</gi> in
+                        <gi>sourceDesc</gi></change>
+                    <change type="spec">make <ref target="#TEI.model.publicationStmtPart.agency"
+                            >model.publicationStmtPart.agency</ref> unbound to allow both
+                            <gi>publisher</gi> and <gi>authority</gi> in
+                        <gi>publicationStmt</gi></change>
+                    <change type="spec">add <att>role</att> to <gi>authority</gi> with suggested
+                        values: <val>funder</val>, <val>sponsor</val>,
+                        <val>rightsHolder</val></change>
+                    <change type="spec">require <gi>language</gi>, <gi>langUsage</gi> and
+                            <gi>profileDesc</gi></change>
+                    <change type="spec">add <att>role</att> to <gi>language</gi> with a closed list
+                        of values: <val>objectLanguage</val>, <val>workingLanguage</val>,
+                            <val>sourceLanguage</val>, <val>targetLanguage</val></change>
+                    
+                </listChange>
+            </listChange>
+        </revisionDesc>
     </teiHeader>
     <text>
         <front>
@@ -131,6 +171,7 @@
         <body>
             <xi:include href="TEILex0.parts/01__introduction.xml" parse="xml"
                 xpointer="introduction"/>
+            <xi:include href="TEILex0.parts/015__header.xml" parse="xml" xpointer="header"/>
             <xi:include href="TEILex0.parts/02__entries.xml" parse="xml" xpointer="entries"/>
             <xi:include href="TEILex0.parts/03__forms.xml" parse="xml" xpointer="forms"/>
             <xi:include href="TEILex0.parts/04__senses.xml" parse="xml" xpointer="senses"/>

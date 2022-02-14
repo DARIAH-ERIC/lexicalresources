@@ -229,7 +229,8 @@ pre[class *= "language-"] {
 .xmlTag,
 .xmlAttName,
 .xmlAttVal,
-.teiCode {
+.teiCode,
+span.val{
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
@@ -250,7 +251,7 @@ pre[class *= "language-"] {
     color: #f5844c;
 }
 
-.xmlAttVal {
+.xmlAttVal, span.val, .valList .odd_label {
     color: #993300;
 }
 
@@ -629,4 +630,16 @@ input.rounded {
     padding: 4px 7px 4px 14px;
     outline: 0;
     -webkit-appearance: none;
+}
+
+/*labels in revision history*/
+
+.button-xsmall {
+    padding:  0.1em 0.4em;
+    background-color: black;
+    color:white;
+    border-radius: .3em;
+    margin-right: 0.3em;
+    font-size:medium;
+    vertical-align:text-top;
 }

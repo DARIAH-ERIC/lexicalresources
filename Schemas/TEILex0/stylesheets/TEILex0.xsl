@@ -125,4 +125,10 @@
         <xsl:param name="id"/>
         <xsl:apply-templates select="ancestor::tei:TEI//biblStruct[@xml:id = $id]"/>
     </xsl:template>
+    <xsl:template match="tei:label">
+        <xsl:element name="span" namespace="http://www.w3.org/1999/xhtml">
+            <xsl:attribute name="class">button-xsmall pure-button</xsl:attribute>
+            <xsl:apply-templates></xsl:apply-templates>
+        </xsl:element>
+    </xsl:template>
 </xsl:stylesheet>

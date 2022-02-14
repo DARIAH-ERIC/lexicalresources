@@ -178,6 +178,23 @@
                 </imprint>
             </monogr>
         </biblStruct>
+        <biblStruct type="dictionary" xml:id="EtymWB-XML">
+            <monogr>
+                <author><orgName>EtymWB-XML</orgName></author>
+                <title level="m">Wörterbuch des Deutschen: Die XML-Edition</title>
+                <!--<editor>
+                    <persName>
+                    <forename>Wolfgang</forename>
+                    <surname>Pfeifer</surname>
+                </persName>
+                </editor>-->
+                <imprint>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Berlin-Brandenburgische Akademie der Wissenschaften</publisher>
+                    <date>2009</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
         <biblStruct type="conferencePaper" xml:id="Ide2000">
             <analytic>
                 <author role="aut">
@@ -366,6 +383,19 @@
                 </imprint>
             </monogr>
         </biblStruct>
+        <!--<biblStruct type="dictionary" xml:id="VOLP">
+            <monogr>
+                <author>
+                    <orgName>VOLP-1940</orgName>
+                </author>
+                <title>Vocabulário Ortográfico da Língua Portuguesa [em linha]</title>
+                <imprint>
+                    <publisher>Academia das Ciências de Lisboa/Imprensa Nacional de Lisboa</publisher>
+                    <pubPlace>Lisboa</pubPlace>
+                    <date>1940</date>
+                </imprint>
+            </monogr>
+        </biblStruct>-->
         <!--TODO: when more time, this should be turned into a book chater in an edited book-->
         <biblStruct type="journalArticle" xml:id="Zöfgen1989">
             <analytic>
