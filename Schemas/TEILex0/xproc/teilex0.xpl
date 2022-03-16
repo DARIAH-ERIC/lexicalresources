@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step"
     version="1.0" name="generateDocumentation">
-    <p:serialization port="result" method="xml" indent="true" omit-xml-declaration="true"/>
-    <p:serialization port="final" method="html" indent="false" doctype-system="about:legacy-compat"
-        standalone="true"/>
-    <p:input port="source"/>
-    <p:input port="stylesheet-odd2odd"/>
-    <p:input port="stylesheet-odd2lite"/>
-    <p:input port="stylesheet-odd2html">
-        <p:document href="../stylesheets/TEILex0.xsl"/>
+    <!-- ================================================================== -->
+    <!-- PROLOG: -->
+   <!-- <p:serialization port="result" method="html" indent="false" omit-xml-declaration="true" />
+    <p:serialization port="secondary" method="html" indent="false" omit-xml-declaration="true" />-->
+    <p:input port="source">
+        <p:document href="../TEILex0.odd"/>
     </p:input>
-    <!--hardcoded, one day should find a workaround-->
-    <p:input port="stylesheet-html">
-        <p:document href="../stylesheets/html/html.xsl"/>
+    <p:input port="stylesheet-odd2odd">
+        <p:document href="../../../../TEI-C/Stylesheets/odds/odd2odd.xsl"/>
     </p:input>
-    <p:output port="result"/>
-    <p:output port="final" primary="false">
-        <p:pipe port="result" step="post-process"/>
-    </p:output>
+    <p:input port="stylesheet-odd2lite">
+        <p:document href="../../../../TEI-C/Stylesheets/odds/odd2lite.xsl"/>
+    </p:input>
+   <!-- <p:output port="result" primary="true"/>
+    <p:output port="secondary" primary="false"/>-->
+    <!-- ================================================================== -->
+    <!-- BODY: -->
     <p:xslt name="odd2odd">
         <p:input port="source">
             <p:pipe step="generateDocumentation" port="source"/>
@@ -70,13 +70,15 @@
             <p:pipe step="xmlbase-fix" port="result"/>
         </p:input>
         <p:input port="stylesheet">
-            <p:pipe port="stylesheet-odd2html" step="generateDocumentation"/>
+            <p:document href="../stylesheets/TEILex0.xsl"/>
         </p:input>
         <p:input port="parameters">
             <p:empty/>
         </p:input>
     </p:xslt>
-    <p:store href="results-new/odd2html-pre.html" method="xml" indent="false"/>
+    <p:store href="results-new/pre.html" method="xhtml">
+        
+    </p:store>
     <p:xslt name="post-process" version="2.0">
         <p:input port="source">
             <p:pipe step="odd2html" port="result"/>
@@ -88,4 +90,22 @@
             <p:empty/>
         </p:input>
     </p:xslt>
+    <p:store href="../../../docs/pages/TEILex0/TEILex0.html" method="xhtml">
+        <p:input port="source">
+            <p:pipe port="result" step="post-process"></p:pipe>
+        </p:input>
+    </p:store>
+    <p:store href="../../../docs/pages/TEILex0/spec.html" method="xhtml">
+        <p:input port="source">
+            <p:pipe port="secondary" step="post-process"></p:pipe>
+        </p:input>
+    </p:store>
+    <!--<p:for-each>
+        <p:iteration-source>
+            <p:pipe step="post-process" port="secondary"/>
+        </p:iteration-source>
+        <p:store encoding="utf-8" indent="true" omit-xml-declaration="false">
+            <p:with-option name="href" select="xxx"/>
+        </p:store>
+    </p:for-each>-->
 </p:declare-step>

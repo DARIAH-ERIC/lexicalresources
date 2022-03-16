@@ -374,7 +374,7 @@
                 <div class="{tei:tocRevealClass($tocLevel)} toc-showhide" xmlns="http://www.w3.org/1999/xhtml">
                     <xsl:choose>
                         <xsl:when test="child::div and $toc">
-                            <div class="plusminus"></div>
+                            <div id="menu-{translate(tei:head, ' ', '')}" class="plusminus"></div>
                         </xsl:when>
                         <xsl:otherwise>
                             
