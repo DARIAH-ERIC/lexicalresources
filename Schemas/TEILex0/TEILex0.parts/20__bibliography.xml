@@ -354,6 +354,19 @@
                 </imprint>
             </monogr>
         </biblStruct>
+        <biblStruct type="dictionary" xml:id="StčS">
+            <monogr>
+                <author>
+                    <orgName>StčS</orgName>
+                </author>
+                <title>Staročeský slovník</title>
+                <imprint>
+                    <publisher>Ústav pro jazyk český AV ČR, v. v. i.</publisher>
+                    <pubPlace>Praha</pubPlace>
+                    <date>1999-2011</date>
+                </imprint>
+            </monogr>
+        </biblStruct>
         <biblStruct type="book" xml:id="Svensén2009"
             corresp="http://zotero.org/users/306701/items/HIIAR8IE">
             <monogr>
@@ -379,14 +392,14 @@
             <monogr>
                 <title level="j">Slovenšcina 2.0</title>
                 <imprint>
-                    <date>2020 (in print)</date>
+                    <date>2020</date>
                 </imprint>
             </monogr>
         </biblStruct>
-        <!--<biblStruct type="dictionary" xml:id="VOLP">
+        <biblStruct type="dictionary" xml:id="VOLP">
             <monogr>
                 <author>
-                    <orgName>VOLP-1940</orgName>
+                    <orgName>VOLP</orgName>
                 </author>
                 <title>Vocabulário Ortográfico da Língua Portuguesa [em linha]</title>
                 <imprint>
@@ -395,7 +408,7 @@
                     <date>1940</date>
                 </imprint>
             </monogr>
-        </biblStruct>-->
+        </biblStruct>
         <!--TODO: when more time, this should be turned into a book chater in an edited book-->
         <biblStruct type="journalArticle" xml:id="Zöfgen1989">
             <analytic>

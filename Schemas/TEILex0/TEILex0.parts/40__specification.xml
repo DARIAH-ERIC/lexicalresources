@@ -39,9 +39,10 @@
         <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
         <!--2020-06-23 (TT): add profileDesc so that we can document langUsage-->
         <!--2021-09-25 (TT): add xenoData and revisionDesc-->
+        <!--2022-03-24 (TT): add taxonomy-->
         <moduleRef key="header"
             include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc revisionDesc xenoData editorialDecl projectDesc seriesStmt
-                        notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition"/>
+                        notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition taxonomy category catDesc"/>
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
         <!--        2021-09-19 (TT): added forename, surname; need for detailed biblStruct/author/persName-->
         <moduleRef key="namesdates" include="placeName persName orgName forename surname"/>
@@ -560,17 +561,13 @@
                 <sequence>
                     <sequence>
                         <elementRef key="titleStmt"/>
-                        <elementRef key="editionStmt"
-                            minOccurs="0"/>
+                        <elementRef key="editionStmt" minOccurs="0"/>
                         <elementRef key="extent" minOccurs="0"/>
                         <elementRef key="publicationStmt"/>
-                        <elementRef key="seriesStmt"
-                            minOccurs="0" maxOccurs="unbounded"/>
-                        <elementRef key="notesStmt"
-                            minOccurs="0"/>
+                        <elementRef key="seriesStmt" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="notesStmt" minOccurs="0"/>
                     </sequence>
-                    <elementRef key="sourceDesc"
-                        minOccurs="0" maxOccurs="unbounded"/>
+                    <elementRef key="sourceDesc" minOccurs="0" maxOccurs="unbounded"/>
                 </sequence>
             </content>
         </elementSpec>
@@ -695,10 +692,13 @@
                 <attDef ident="type" mode="replace" usage="rec">
                     <valList>
                         <valItem ident="full">
-                            <desc>The full title of a lexicographic resource, such as <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="full">The Oxford English Dictionary</title></egXML>.</desc>
+                            <desc>The full title of a lexicographic resource, such as
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="full">The Oxford English Dictionary</title></egXML>.</desc>
                         </valItem>
                         <valItem ident="abbr">
-                            <desc>The preferred abbreviated title of a lexicographic resource, such as the <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="abbr">OED</title></egXML>.</desc>
+                            <desc>The preferred abbreviated title of a lexicographic resource, such
+                                as the
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="abbr">OED</title></egXML>.</desc>
                         </valItem>
                     </valList>
                 </attDef>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml" xpath-default-namespace="http://www.tei-c.org/ns/1.0"
-    version="2.0" exclude-result-prefixes="tei teix">
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xpath-default-namespace="http://www.tei-c.org/ns/1.0"
+    version="2.0" exclude-result-prefixes="tei teix xhtml">
     
     
     
@@ -12,7 +13,7 @@
     <xsl:template name="processExample">
         <xsl:param name="simple"/>
         <xsl:param name="highlight"/>
-        <pre>
+        <pre xmlns="http://www.w3.org/1999/xhtml">
             <code>
             <xsl:attribute name="id">
                 <xsl:apply-templates mode="ident" select="."/>
@@ -101,7 +102,7 @@
     <xsl:template name="egXMLEndHook">
         <xsl:choose>
             <xsl:when test="@corresp and id(substring(@corresp, 2))">
-                <span class="eg_biblStruct">
+                <span class="eg_biblStruct" xmlns="http://www.w3.org/1999/xhtml">
                     <xsl:call-template name="makeInternalLink">
                         <xsl:with-param name="target" select="id(substring(@corresp, 2))"/>
                         <xsl:with-param name="ptr" select="true()"/>
@@ -126,7 +127,7 @@
                 </span>
             </xsl:when>
             <xsl:when test="@source and id(substring(@source, 2))">
-                <span class="eg_biblStruct">
+                <span class="eg_biblStruct" xmlns="http://www.w3.org/1999/xhtml">
                     <xsl:call-template name="makeInternalLink">
                         <xsl:with-param name="target" select="id(substring(@source, 2))"/>
                         <xsl:with-param name="ptr" select="true()"/>
@@ -157,7 +158,7 @@
             </xsl:when>
         </xsl:choose>
         <xsl:for-each select="ancestor::tei:elementSpec">
-            <div style="float: right;">
+            <div style="float: right;" xmlns="http://www.w3.org/1999/xhtml">
                 <a href="examples-{@ident}.html">
                     <xsl:sequence select="tei:i18n('Show all')"/>
                 </a>
@@ -188,7 +189,7 @@
                 <xsl:attribute name="for">
                     <xsl:value-of select="concat('chck', generate-id())"/>
                 </xsl:attribute>
-                <img class="pure-img" xmlns="http://www.w3.org/1999/xhtml" src="images/code.png"/>
+                <img class="pure-img" src="images/code.png"/>
                 <span style="display:inline-block"
                     ><!--<xsl:value-of select="concat('Example ', $position)"/>--></span>
             </label>
@@ -213,16 +214,16 @@
                     <xsl:value-of select="concat('chck', generate-id())"/>
                 </xsl:attribute>
             </input>
-            <label class="tab-label" namespace="http://www.w3.org/1999/xhtml">
+            <label class="tab-label" xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:attribute name="for">
                     <xsl:value-of select="concat('chck', generate-id())"/>
                 </xsl:attribute>
-                <img class="pure-img" namespace="http://www.w3.org/1999/xhtml"
+                <img class="pure-img"
                     src="images/focus.png"/>
                 <xsl:text>In focus: </xsl:text>
                 <xsl:value-of select="tei:body/tei:head"/>
             </label>
-            <div class="tab-content" namespace="http://www.w3.org/1999/xhtml">
+            <div class="tab-content" xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:apply-templates/>
                 <!--<xsl:call-template name="processExample">
                     <xsl:with-param name="simple"></xsl:with-param>
@@ -245,7 +246,7 @@
     </xsl:template>
     <xsl:template match="tei:floatingText[@type = 'inFocusPanel']/tei:body/tei:head"> </xsl:template>
     <xsl:template match="tei:floatingText[@type = 'inFocusPanel']/tei:body">
-        <div namespace="http://www.w3.org/1999/xhtml" class="panelContent">
+        <div class="panelContent" xmlns="http://www.w3.org/1999/xhtml">
             <xsl:apply-templates/>
         </div>
     </xsl:template>

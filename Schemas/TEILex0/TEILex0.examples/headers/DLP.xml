@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Dicionário da Língua Portuguesa</title>
+            <title type="abbr">DLP</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <title>XML encoded version</title>
+               <date>December 2021</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Academia das Ciências de Lisboa</publisher>
+            <publisher>Instituto de Lexicologia e Lexicografia da Língua Portuguesa</publisher>
+            <pubPlace>Lisboa</pubPlace>
+            <date>2021-2022</date>
+            <availability>
+               <licence>Copyright Academia das Ciências de Lisboa</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <imprint>
+                     <publisher>Imprensa Nacional de Lisboa</publisher>
+                     <date>1940</date>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:id="domain">
+               <category xml:id="domain.earth_sciences">
+                  <catDesc xml:lang="en">Earth Sciences</catDesc>
+                  <catDesc xml:lang="pt">Ciências da Terra</catDesc>
+                  <catDesc xml:lang="es">Ciencias de la Tierra</catDesc>
+                  <catDesc xml:lang="fr">sciences de la Terre </catDesc>
+                  <category xml:id="domain.earth_sciences.geology">
+                     <catDesc xml:lang="en">Geology</catDesc>
+                     <catDesc xml:lang="pt">Geologia</catDesc>
+                     <catDesc xml:lang="es">Geología</catDesc>
+                     <catDesc xml:lang="fr">Geologie</catDesc>
+                     <category xml:id="domain.earth_sciences.geology.mineralogy">
+                        <catDesc xml:lang="en">Mineralogy</catDesc>
+                        <catDesc xml:lang="pt">Mineralogia</catDesc>
+                        <catDesc xml:lang="es">Mineralogía</catDesc>
+                        <catDesc xml:lang="fr">Mineralogie</catDesc>
+                     </category>
+                  </category>
+               </category>
+               <category xml:id="domain.sports">
+                  <catDesc xml:lang="en">Sport</catDesc>
+                  <catDesc xml:lang="pt">Desporto</catDesc>
+                  <catDesc xml:lang="es">Deporte</catDesc>
+                  <catDesc xml:lang="fr">Sport</catDesc>
+                  <category xml:id="domain.sports.football">
+                     <catDesc xml:lang="en">Football</catDesc>
+                     <catDesc xml:lang="pt">Futebol</catDesc>
+                     <catDesc xml:lang="es">Fútebol</catDesc>
+                     <catDesc xml:lang="fr">Football</catDesc>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="pt"/>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry type="mainEntry" xml:lang="pt" xml:id="DLPC.cristalografia">
+            <form type="lemma">
+               <orth>cristalografia</orth>
+               <pron>kriʃtɐluɡrɐˈfiɐ</pron>
+            </form>
+            <gramGrp>
+               <gram type="pos" norm="NOUN">n.</gram>
+               <gram type="gen">f.</gram>
+            </gramGrp>
+            <sense xml:id="DLPC.cristalografia_1">
+               <usg type="domain" corresp="#domain.earth_sciences.geology.mineralogy"/>
+               <def>ciência que estuda e descreve a forma e a estrutura dos cristais, bem como as
+                  leis que regem a sua formação</def>
+            </sense>
+            <!--etc.-->
+         </entry>
+         <!--         I'm repeating the full entry here in case we need to use some parts of it differently
+-->
+         <entry type="mainEntry" xml:lang="pt" xml:id="DLPC.cristalografia-part">
+            <form type="lemma">
+               <orth>cristalografia</orth>
+               <pron>kriʃtɐluɡrɐˈfiɐ</pron>
+            </form>
+            <gramGrp>
+               <gram type="pos" norm="NOUN">n.</gram>
+               <gram type="gen">f.</gram>
+            </gramGrp>
+            <sense xml:id="DLPC.cristalografia_1-part">
+               <usg type="domain" corresp="#domain.earth_sciences.geology.mineralogy"/>
+               <def>ciência que estuda e descreve a forma e a estrutura dos cristais, bem como as
+                  leis que regem a sua formação</def>
+            </sense>
+            <etym>
+               <etym type="inheritance">
+                  <seg type="desc">Do grego</seg>
+                  <cit type="etymon" xml:lang="grc">
+                     <form><orth>κρύσταλλος</orth></form>
+                     <pc>,</pc>
+                     <pc>'</pc>
+                     <gloss>cristal</gloss>
+                     <pc>'</pc>
+                  </cit>
+               </etym>
+               <metamark>+</metamark>
+               <etym type="grammaticalization">
+                  <seg type="desc">sufixo</seg>
+                  <cit type="etymon" xml:lang="pt">
+                     <form>
+                        <orth extent="suf">-grafia</orth>
+                     </form>
+                  </cit>
+               </etym>
+            </etym>
+         </entry>
+      </body>
+   </text>
+</TEI>

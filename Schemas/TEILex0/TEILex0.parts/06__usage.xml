@@ -19,7 +19,8 @@
             where usage information is provided by labels taken from fixed sets of values for
             stylistic and diatopic properties:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="pflaume"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="pflaume"/>
         </egXML>
         <p>In contrast to the example above, the following sample features an occurrence of a more
             verbose usage description that does not rely on a fixed vocabulary. The sample is taken
@@ -27,8 +28,8 @@
             usage hint: “(said by a peasant woman in the field in hot weather)” which provides a
             particular context in which the quote was recorded.</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="USG.2" source="#Златановић2017">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="element(MZ.RGJS.сејче/4/1)"/>
-           
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="element(MZ.RGJS.сејче/4/1)"/>
         </egXML>
     </div>
     <div>
@@ -45,7 +46,8 @@
                     <term>temporal label</term>: <gloss>marker which identifies the use of a given
                         lexical unit on a scale from old to new. Syn: diachronic marking; diachronic
                         information; time label.</gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg type="time"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg
+                            type="time"/></egXML>
                 </item>
                 <item>
                     <term>geographic label</term>: <gloss>marker which identifies the place or
@@ -55,51 +57,59 @@
                         Portuguese, or <hi rend="italic">покр.</hi> (abbrev. for <hi rend="italic"
                             >покрајински</hi>) in Serbian). Syn: diatopic marking; diatopic
                         information; region label.</gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg type="geographic"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg
+                            type="geographic"/></egXML>
                 </item>
                 <item>
                     <term>domain label</term>: <gloss>marker which identifies the specialized field
                         of knowledge in which a lexical unit is mainly used. Syn: diatechnical
                         marking; domain label; field label; subject field label; topic
                         label.</gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg type="domain"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg
+                            type="domain"/></egXML>
                 </item>
                 <item>
                     <term>frequency label</term>: <gloss>marker which identifies the relative rate
                         of occurrence of a lexical unit in a given textual context. Syn:
                         diafrequential marking; diafrequential information </gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unrwrapped"><usg type="frequency"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unrwrapped"><usg
+                            type="frequency"/></egXML>
                 </item>
                 <item>
                     <term>textType label</term>: <gloss>marker which identifies the typical use of a
                         lexical unit in a particular discourse type or genre Syn: diatextual
                         information.</gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg type="textType"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg
+                            type="textType"/></egXML>
                 </item>
                 <item>
                     <term>attitude label</term>: <gloss>marker which identifies the speaker’s
                         subjective point of view, positive or negative, regarding the object
                         referred to by a given lexical unit. Syn: diaevaluative marking;
                         diaevaluative information.</gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg type="attitude"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg
+                            type="attitude"/></egXML>
                 </item>
                 <item>
                     <term>socioCultural label</term>: <gloss>marker which identifies the use of a
                         given lexical unit by particular social groups and/or in certain types of
                         communicative situations depending on their level of formality Syn:
                         diaphasic marking; diaphasic information. </gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg type="socioCultural"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg
+                            type="socioCultural"/></egXML>
                 </item>
                 <item>
                     <term>meaningType label</term>: <gloss>marker which identifies a semantic
                         extension of the sense of a given lexical unit.</gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg type="meaningType"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg
+                            type="meaningType"/></egXML>
                 </item>
                 <item>
                     <term>normativity label</term>: <gloss>marker which identifies the use of a
                         given lexical unit which is in some aspect considered to be non-standard or
                         incorrect.</gloss>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg type="normativity"/></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" rend="unwrapped"><usg
+                            type="normativity"/></egXML>
                 </item>
             </list>
         </p>
@@ -253,7 +263,8 @@
                 </egXML>
                 <p>CORRECT</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e3815">
-                    <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="MZ.RGJS.сајдисльк_2"/>
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                        corresp="../TEILex0.examples/examples.xml" xpointer="MZ.RGJS.сајдисльк_2"/>
                 </egXML>
             </item>
             <item>Do not use <code>&lt;usg type=&quot;hyper&quot;&gt;&lt;/usg&gt;</code> or
@@ -276,10 +287,35 @@
                 to the usg element modified. For frequency information provided explicitly (e.g.
                 corpus frequencies), a separate element should be introduced. TODO</item>
         </list>
-        <p><hi>Also TODO:</hi></p>
-        <list type="unordered">
-            <item>Frequency and source corpus? ie. source attribute &lt;usg type=”frequency”
-                unit=???? source= “this_and_that_corpus”&gt;12&lt;/usg&gt; </item>
-        </list>
+    </div>
+    <div xml:id="HierarchicalUsageLabels">
+        <head>Hierarchical usage labels</head>
+        <p>Usage labels tend to be described in dictionaries as flat lists: the list of all labels
+            usually appears in the front matter, and often as part of lists of abbreviations, which
+            may include different types of content, i.e. not only usage labels but also other types
+            of abbreviations (grammatical, etymological etc.) This is less than ideal from a
+            data-modeling point of view, especially when more generic usage labels (such as <hi
+                rend="smallcaps">sport</hi>) appear together with more specific types of labels
+            (such as <hi rend="smallcaps">football</hi>, <hi rend="smallcaps">basketball</hi> or <hi
+                rend="smallcaps">volleyball</hi>). </p>
+        <p>To overcome the deficiency of flat representation of labels in general-language
+            dictionaries, TEI-Lex0 recommends that canonical, possibly
+            multilingual, labels be defined, when needed, in the <gi>teiHeader</gi> and then pointed to from the
+            individual entries or senses in which these labels are used. For this purpose, TEI Lex-0
+            recommends the use the already available mechanism for defining a <gi>taxonomy</gi>.
+            This is possible in both TEI and TEI Lex-0 but has not been documented until now as a
+            solution for representing usage labels. </p>
+        <p>The following example shows the recommended way of encoding two super domains <hi
+                rend="smallcaps">earth science</hi> and <hi rend="smallcaps">sport</hi>, together
+            with some of their subdomains:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/headers/DLP.stripped.xml"
+                corresp="../TEILex0.examples/headers/DLP.xml" xpointer="element(/1/1/2)"/>
+        </egXML>
+        <p>To apply a domain label inside a sense, use the <gi>usg</gi> element with a <att>corresp</att> attribute pointing to the <code>xml:id</code> of appropriate category in the taxonomy.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/headers/DLP.stripped.xml"
+                corresp="../TEILex0.examples/headers/DLP.xml" xpointer="element(/1/2/1/1)"/>
+        </egXML>     
     </div>
 </div>

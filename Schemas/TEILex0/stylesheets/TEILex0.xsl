@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0"
-    exclude-result-prefixes="tei teix">
+    exclude-result-prefixes="tei teix xhtml">
     <xsl:output method="html" doctype-system="about:legacy-compat"/>
 
     <!--this is hardcoded; https://github.com/TEIC/Stylesheets.git must be cloned in the same
@@ -54,31 +55,8 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" xmlns="http://www.w3.org/1999/xhtml">
             <xsl:comment>doc-search</xsl:comment>
         </script>
-        <script type="text/javascript">
-            docsearch({
-                apiKey: '27fc9785932247d5056acddcede378cf',
-                indexName: 'tei_lex',
-                inputSelector: '.algo',
-                debug: true, // Set debug to true if you want to inspect the dropdown
-                transformData: function (hits) {
-                    // Transform the list of hits
-                    hits.forEach(hit => {
-                        //console.log(hit.url.replace('https://dariah-eric.github.io/', ''));
-                        hit.url = hit.url.replace('https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html', '');
-                        console.log(hit.url);
-                    });
-                    return hits;
-                },
-                handleSelected: function (input, event, suggestion, datasetNumber, context) {
-                    // Prevents the default behavior on click and rather opens the suggestion
-                    // in a new tab.
-                    if (context.selectionMethod === 'click') {
-                        input.setVal('');
-                        
-                        window.open(suggestion.url, '_self');
-                    }
-                },
-            });</script>
+        <script type="text/javascript" src="js/algo.js" xmlns="http://www.w3.org/1999/xhtml"/>
+                
     </xsl:template>
     <xsl:template match="ab[@xml:space = 'preserve']">
         <pre xmlns="http://www.w3.org/1999/xhtml"><code>

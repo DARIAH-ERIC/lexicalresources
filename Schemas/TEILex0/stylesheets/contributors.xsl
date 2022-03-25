@@ -113,6 +113,7 @@
     <!--generate how to cite guidelines -->
     <xsl:template match="tei:divGen[@type = 'revision-history']">
         <xsl:element name="div" namespace="http://www.tei-c.org/ns/1.0">
+            <xsl:attribute name="xml:id">revisionHistory</xsl:attribute>
             <head xmlns="http://www.tei-c.org/ns/1.0">Revision history</head>
             <xsl:element name="p" namespace="http://www.tei-c.org/ns/1.0"> Changes to the TEI Lex-0
                 specification up to version 0.8.6 were included in comments inside the ODD file

@@ -116,7 +116,7 @@
                 </author>
             </titleStmt>
             <editionStmt>
-                <edition n="0.9.0"/>
+                <edition n="0.9.1"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
@@ -131,8 +131,16 @@
         </fileDesc>
         <revisionDesc>
             <listChange>
+                <listChange n="0.9.1">
+                    <!--choose correct date pefore publishing-->
+                    <change when="2021-03-24" type="html">fix namespace issues in html output</change>
+                    <change type="docs">add new examples to the <ref target="#header">Header</ref> section</change>
+                    <change type="docs">add section on <ref target="#HierarchicalUsageLabels">hierarchichal usage labels</ref></change>
+                    <change type="spec">allow <gi>taxonomy</gi>, <gi>category</gi> and <gi>catDesc</gi> in <gi>classDecl</gi> </change>
+                    <change type="docs">move the <ref target="#specification">specification</ref> to a different webpage for quicker loading</change>
+                </listChange>
                 <listChange n="0.9.0">
-                    <change when="2021-09-27" type="docs">add section on <ref target="#header">TEI
+                    <change when="2021-09-26" type="docs">add section on <ref target="#header">TEI
                         Header</ref></change>
                     <change type="docs">correction of various misspellings</change>
                     <change type="spec">add <gi>monogr</gi> (needed for

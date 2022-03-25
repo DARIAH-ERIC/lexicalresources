@@ -266,6 +266,27 @@ Note: If it is not defined then the element at the caret position will be used.&
                                     <String>text/css</String>
                                 </field>
                                 <field name="unparsedInsertString">
+                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation',
+          arg-scenarioNames, ''</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Run a named validation scenario defined in the associated document type.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>scenarioNames&lt;/b> = The names of the validation scenario which will be executed, separated by new lines.&lt;/li>&lt;/ul> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation',&lt;br/>          arg-scenarioNames, ''&lt;/p>&lt;/body>&lt;/html></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>op_ExecuteValidationScenariosOperation</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/css</String>
+                                </field>
+                                <field name="unparsedInsertString">
                                     <String>operation, 'ro.sync.ecss.extensions.commons.operations.InsertEquationOperation',
           arg-fragment, '&lt;mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">&lt;/mml:math>'</String>
                                 </field>
@@ -745,6 +766,26 @@ Can be: true, false. Default value is true.&lt;/li>&lt;/ul> &lt;br/> Template: &
                                 </field>
                                 <field name="renderString">
                                     <String>op_SurroundWithTextOperation</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/css</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.ToggleCommentOperation'</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Wrap selection in an XML comment or unwrap existing XML comment&lt;/p>&lt;br/>Arguments: &lt;p style="margin-left:10px;">This operation has no arguments.&lt;/p> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.ToggleCommentOperation'&lt;/p>&lt;/body>&lt;/html></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>op_ToggleCommentOperation</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
@@ -1960,6 +2001,27 @@ Note: If it is not defined then the element at the caret position will be used.&
                                     <String>text/less</String>
                                 </field>
                                 <field name="unparsedInsertString">
+                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation',
+          arg-scenarioNames, ''</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Run a named validation scenario defined in the associated document type.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>scenarioNames&lt;/b> = The names of the validation scenario which will be executed, separated by new lines.&lt;/li>&lt;/ul> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation',&lt;br/>          arg-scenarioNames, ''&lt;/p>&lt;/body>&lt;/html></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>op_ExecuteValidationScenariosOperation</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/less</String>
+                                </field>
+                                <field name="unparsedInsertString">
                                     <String>operation, 'ro.sync.ecss.extensions.commons.operations.InsertEquationOperation',
           arg-fragment, '&lt;mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML">&lt;/mml:math>'</String>
                                 </field>
@@ -2439,6 +2501,26 @@ Can be: true, false. Default value is true.&lt;/li>&lt;/ul> &lt;br/> Template: &
                                 </field>
                                 <field name="renderString">
                                     <String>op_SurroundWithTextOperation</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/less</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.ToggleCommentOperation'</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Wrap selection in an XML comment or unwrap existing XML comment&lt;/p>&lt;br/>Arguments: &lt;p style="margin-left:10px;">This operation has no arguments.&lt;/p> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.ToggleCommentOperation'&lt;/p>&lt;/body>&lt;/html></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>op_ToggleCommentOperation</String>
                                 </field>
                                 <field name="enabled">
                                     <Boolean>true</Boolean>
@@ -7074,48 +7156,6 @@ ${caret}</String>
                                     <null/>
                                 </field>
                             </codeTemplateItem>
-                            <codeTemplateItem>
-                                <field name="contentType">
-                                    <String>text/css</String>
-                                </field>
-                                <field name="unparsedInsertString">
-                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation',
-          arg-scenarioNames, ''</String>
-                                </field>
-                                <field name="descriptionString">
-                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Run a named validation scenario defined in the associated document type.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>scenarioNames&lt;/b> = The names of the validation scenario which will be executed, separated by new lines.&lt;/li>&lt;/ul> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation',&lt;br/>          arg-scenarioNames, ''&lt;/p>&lt;/body>&lt;/html></String>
-                                </field>
-                                <field name="renderString">
-                                    <String>op_ExecuteValidationScenariosOperation</String>
-                                </field>
-                                <field name="enabled">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="accelerator">
-                                    <null/>
-                                </field>
-                            </codeTemplateItem>
-                            <codeTemplateItem>
-                                <field name="contentType">
-                                    <String>text/less</String>
-                                </field>
-                                <field name="unparsedInsertString">
-                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation',
-          arg-scenarioNames, ''</String>
-                                </field>
-                                <field name="descriptionString">
-                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Run a named validation scenario defined in the associated document type.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>scenarioNames&lt;/b> = The names of the validation scenario which will be executed, separated by new lines.&lt;/li>&lt;/ul> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteValidationScenariosOperation',&lt;br/>          arg-scenarioNames, ''&lt;/p>&lt;/body>&lt;/html></String>
-                                </field>
-                                <field name="renderString">
-                                    <String>op_ExecuteValidationScenariosOperation</String>
-                                </field>
-                                <field name="enabled">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="accelerator">
-                                    <null/>
-                                </field>
-                            </codeTemplateItem>
                         </codeTemplateItem-array>
                     </entry>
                     <entry>
@@ -7123,44 +7163,8 @@ ${caret}</String>
                         <documentTypeDescriptor-array/>
                     </entry>
                     <entry>
-                        <String>document.types.order</String>
-                        <documentTypeEntry-array>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>4/tei/teip5odd.framework/TEI ODD</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                            <documentTypeEntry>
-                                <field name="documentTypeID">
-                                    <String>4/tei/teip5.framework/TEI P5</String>
-                                </field>
-                                <field name="enable">
-                                    <Boolean>false</Boolean>
-                                </field>
-                            </documentTypeEntry>
-                        </documentTypeEntry-array>
-                    </entry>
-                    <entry>
                         <String>editor.format.preserve.empty.lines</String>
                         <Boolean>false</Boolean>
-                    </entry>
-                    <entry>
-                        <String>editor.format.preserve.spaces.elements.v11</String>
-                        <String-array>
-                            <String>xsl:text</String>
-                            <String>xsl:comment</String>
-                            <String>xsl:processing-instruction</String>
-                            <String>literallayout</String>
-                            <String>programlisting</String>
-                            <String>screen</String>
-                            <String>synopsis</String>
-                            <String>pre</String>
-                            <String>xd:pre</String>
-                            <String>egXML</String>
-                        </String-array>
                     </entry>
                     <entry>
                         <String>enable.project.master.files.support</String>
@@ -7207,27 +7211,36 @@ ${caret}</String>
                         <Boolean>true</Boolean>
                     </entry>
                     <entry>
+                        <String>key.xslt.proc.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>key.xslt.saxon8.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>saxon.latest.expand.attribute.defaults</String>
+                        <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
                         <String>scenario.associations</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/40__specification.xml</String>
+                                    <String>TEILex0.parts/20__bibliography.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
                                         <String>TEILex0: Generate documentation</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>ANT</String>
                                         <String>XPROC</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
-                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -7254,18 +7267,98 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>TEILex0.examples/headers/St%C4%8DS.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/015__header.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.examples/headers/VOLP.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.examples/headers/DLP.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0 Examples XProc</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>xproc/teilex0.xpl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
                                         <String>TEILex0: Generate documentation</String>
+                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>ANT</String>
                                         <String>XPROC</String>
+                                        <String>ANT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -7277,7 +7370,53 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>stylesheets/TEILex0.xsl</String>
+                                    <String>TEILex0.parts/06__usage.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/40__specification.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/01__introduction.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7297,7 +7436,7 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>xproc/teilex0-alt.xpl</String>
+                                    <String>stylesheets/contributors.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7337,7 +7476,7 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>stylesheets/contributors.xsl</String>
+                                    <String>stylesheets/TEILex0.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7357,7 +7496,107 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/01__introduction.xml</String>
+                                    <String>xproc/teilex0-examples.xpl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0 Examples XProc</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.examples/headers/EtymWB-XML.stripped.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/02__entries.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>stylesheets/tei-stripper.xsl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>xproc/new-teilex0.xpl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>xproc/teilex0-alt.xpl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7397,47 +7636,7 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/02__entries.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>TEILex0.parts/03__forms.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.parts/20__bibliography.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7467,26 +7666,6 @@ ${caret}</String>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>stylesheets/tei-stripper.xsl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEI Stripper (NS prep for inclusion into main odd file)</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XML</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -7598,26 +7777,6 @@ ${caret}</String>
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>TEILex0.parts/045__translations.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.parts/06__usage.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7934,7 +8093,7 @@ ${caret}</String>
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="showConsoleAlways">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="advancedOptionsMap">
                                     <null/>
@@ -7985,7 +8144,7 @@ ${caret}</String>
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="locationToOpenInBrowserURL">
-                                    <String>${pd}/out/TEILex0.rng</String>
+                                    <String></String>
                                 </field>
                                 <field name="openInEditor">
                                     <Boolean>false</Boolean>
@@ -8029,6 +8188,7 @@ ${caret}</String>
                                         <String>${oxygenHome}/lib/xml-apis-ext.jar</String>
                                         <String>${oxygenHome}/lib/log4j.jar</String>
                                         <String>${oxygenHome}/lib/oxygen-basic-utilities.jar</String>
+                                        <String>${oxygenHome}/lib/*saxon*10*.jar</String>
                                     </String-array>
                                 </field>
                             </antScenario>
@@ -8120,9 +8280,152 @@ ${caret}</String>
                                     <xprocInputPort-array>
                                         <xprocInputPort>
                                             <field name="urls">
-                                                <String-array>
-                                                    <String>${pdu}/TEILex0.odd</String>
-                                                </String-array>
+                                                <String-array/>
+                                            </field>
+                                            <field name="portName">
+                                                <String>source</String>
+                                            </field>
+                                        </xprocInputPort>
+                                    </xprocInputPort-array>
+                                </field>
+                                <field name="outputPorts">
+                                    <xprocOutputPort-array/>
+                                </field>
+                                <field name="xprocOptions">
+                                    <xprocOption-array/>
+                                </field>
+                                <field name="xprocParameters">
+                                    <xprocParameterPort-array>
+                                        <xprocParameterPort>
+                                            <field name="portName">
+                                                <String>*</String>
+                                            </field>
+                                            <field name="parameters">
+                                                <xprocParameter-array>
+                                                    <xprocParameter>
+                                                        <field name="namespaceURI">
+                                                            <String></String>
+                                                        </field>
+                                                        <field name="localName">
+                                                            <String>paramName1</String>
+                                                        </field>
+                                                        <field name="value">
+                                                            <null/>
+                                                        </field>
+                                                    </xprocParameter>
+                                                </xprocParameter-array>
+                                            </field>
+                                        </xprocParameterPort>
+                                        <xprocParameterPort>
+                                            <field name="portName">
+                                                <String>parameters</String>
+                                            </field>
+                                            <field name="parameters">
+                                                <xprocParameter-array>
+                                                    <xprocParameter>
+                                                        <field name="namespaceURI">
+                                                            <String></String>
+                                                        </field>
+                                                        <field name="localName">
+                                                            <String>paramName1</String>
+                                                        </field>
+                                                        <field name="value">
+                                                            <null/>
+                                                        </field>
+                                                    </xprocParameter>
+                                                </xprocParameter-array>
+                                            </field>
+                                        </xprocParameterPort>
+                                    </xprocParameterPort-array>
+                                </field>
+                                <field name="advancedOptionsMap">
+                                    <null/>
+                                </field>
+                                <field name="name">
+                                    <String>TEILex0 Examples XProc</String>
+                                </field>
+                                <field name="baseURL">
+                                    <null/>
+                                </field>
+                                <field name="footerURL">
+                                    <null/>
+                                </field>
+                                <field name="fOPMethod">
+                                    <null/>
+                                </field>
+                                <field name="fOProcessorName">
+                                    <null/>
+                                </field>
+                                <field name="headerURL">
+                                    <null/>
+                                </field>
+                                <field name="inputXSLURL">
+                                    <String>${pdu}/xproc/teilex0-examples.xpl</String>
+                                </field>
+                                <field name="inputXMLURL">
+                                    <String></String>
+                                </field>
+                                <field name="defaultScenario">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="isFOPPerforming">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="type">
+                                    <String>XPROC</String>
+                                </field>
+                                <field name="saveAs">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="openInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="outputResource">
+                                    <null/>
+                                </field>
+                                <field name="openOtherLocationInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="locationToOpenInBrowserURL">
+                                    <String>${pdu}/../../docs/pages/TEILex0/TEILex0.html</String>
+                                </field>
+                                <field name="openInEditor">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInHTMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInXMLPane">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="showInSVGPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInResultSetPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useXSLTInput">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="xsltParams">
+                                    <list/>
+                                </field>
+                                <field name="cascadingStylesheets">
+                                    <String-array/>
+                                </field>
+                                <field name="xslTransformer">
+                                    <String>Add-on for Calabash XProc Engine</String>
+                                </field>
+                                <field name="extensionURLs">
+                                    <String-array/>
+                                </field>
+                            </xprocScenario>
+                            <xprocScenario>
+                                <field name="inputPorts">
+                                    <xprocInputPort-array>
+                                        <xprocInputPort>
+                                            <field name="urls">
+                                                <String-array/>
                                             </field>
                                             <field name="portName">
                                                 <String>source</String>
@@ -8130,9 +8433,7 @@ ${caret}</String>
                                         </xprocInputPort>
                                         <xprocInputPort>
                                             <field name="urls">
-                                                <String-array>
-                                                    <String>${frameworks}/tei/xml/tei/stylesheet/odds/odd2odd.xsl</String>
-                                                </String-array>
+                                                <String-array/>
                                             </field>
                                             <field name="portName">
                                                 <String>stylesheet-odd2odd</String>
@@ -8140,9 +8441,7 @@ ${caret}</String>
                                         </xprocInputPort>
                                         <xprocInputPort>
                                             <field name="urls">
-                                                <String-array>
-                                                    <String>../../../../TEI-C/Stylesheets/odds/odd2lite.xsl</String>
-                                                </String-array>
+                                                <String-array/>
                                             </field>
                                             <field name="portName">
                                                 <String>stylesheet-odd2lite</String>
@@ -8153,7 +8452,7 @@ ${caret}</String>
                                                 <String-array/>
                                             </field>
                                             <field name="portName">
-                                                <String>stylesheet-odd2html</String>
+                                                <String>examples</String>
                                             </field>
                                         </xprocInputPort>
                                         <xprocInputPort>
@@ -8161,7 +8460,15 @@ ${caret}</String>
                                                 <String-array/>
                                             </field>
                                             <field name="portName">
-                                                <String>stylesheet-html</String>
+                                                <String>stylesheet-stripper</String>
+                                            </field>
+                                        </xprocInputPort>
+                                        <xprocInputPort>
+                                            <field name="urls">
+                                                <String-array/>
+                                            </field>
+                                            <field name="portName">
+                                                <String>exs</String>
                                             </field>
                                         </xprocInputPort>
                                     </xprocInputPort-array>
@@ -8181,13 +8488,24 @@ ${caret}</String>
                                         </xprocOutputPort>
                                         <xprocOutputPort>
                                             <field name="url">
-                                                <String>${pdu}/../../docs/pages/TEILex0/TEILex0.html</String>
+                                                <null/>
                                             </field>
                                             <field name="showInSequenceView">
                                                 <Boolean>true</Boolean>
                                             </field>
                                             <field name="portName">
-                                                <String>final</String>
+                                                <String>secondary</String>
+                                            </field>
+                                        </xprocOutputPort>
+                                        <xprocOutputPort>
+                                            <field name="url">
+                                                <null/>
+                                            </field>
+                                            <field name="showInSequenceView">
+                                                <Boolean>true</Boolean>
+                                            </field>
+                                            <field name="portName">
+                                                <String>exsout</String>
                                             </field>
                                         </xprocOutputPort>
                                     </xprocOutputPort-array>
@@ -8431,6 +8749,10 @@ ${caret}</String>
                     <entry>
                         <String>validation.base.uri.fixup</String>
                         <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
+                        <String>xsltproc.no.dtd.attr.on</String>
+                        <Boolean>true</Boolean>
                     </entry>
                 </serializableOrderedMap>
             </serialized>
