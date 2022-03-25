@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<grammar xmlns:xlink="http://www.w3.org/1999/xlink"
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
          xmlns:tei="http://www.tei-c.org/ns/1.0"
          xmlns:teix="http://www.tei-c.org/ns/Examples"
-         xmlns="http://relaxng.org/ns/structure/1.0"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2022-03-14T07:47:23Z. .
+Schema generated from ODD source 2022-03-24T15:48:48Z. .
 TEI Edition: Version 4.3.0. Last updated on
         31st August 2021, revision b4f72b1ff
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.3.0/
@@ -412,10 +412,10 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="TEILex0-att.datable.w3c-att-datable-w3c-when-constraint-rule-1">
-      <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@when]">
          <sch:report test="@notBefore|@notAfter|@from|@to" role="nonfatal">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
@@ -423,10 +423,10 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="TEILex0-att.datable.w3c-att-datable-w3c-from-constraint-rule-2">
-      <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@from]">
          <sch:report test="@notBefore" role="nonfatal">The @from and @notBefore attributes cannot be used together.</sch:report>
@@ -434,10 +434,10 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="TEILex0-att.datable.w3c-att-datable-w3c-to-constraint-rule-3">
-      <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@to]">
          <sch:report test="@notAfter" role="nonfatal">The @to and @notAfter attributes cannot be used together.</sch:report>
@@ -464,10 +464,10 @@ Sample values include: 1] all; 2] most; 3] range</a:documentation>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="TEILex0-att.datable-calendar-calendar-constraint-rule-4">
-      <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@calendar]">
          <sch:assert test="string-length(.) gt 0"> @calendar indicates one or more systems or calendars to
@@ -931,10 +931,10 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="TEILex0-att.typed-subtypeTyped-constraint-rule-5">
-      <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@subtype]">
          <sch:assert test="@type">The <sch:name/> element should not be categorized in detail with @subtype unless also categorized in general with @type</sch:assert>
@@ -962,10 +962,10 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="TEILex0-att.pointing-targetLang-targetLang-constraint-rule-6">
-      <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[not(self::tei:schemaSpec)][@targetLang]">
          <sch:assert test="@target">@targetLang should only be used on <sch:name/> if @target is specified.</sch:assert>
@@ -1039,10 +1039,10 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="TEILex0-att.spanning-spanTo-spanTo-2-constraint-rule-7">
-      <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@spanTo]">
          <sch:assert test="id(substring(@spanTo,2)) and following::*[@xml:id=substring(current()/@spanTo,2)]">
@@ -1083,10 +1083,10 @@ The element indicated by @spanTo (<sch:value-of select="@spanTo"/>) must follow 
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
             id="TEILex0-att.styleDef-schemeVersion-schemeVersionRequiresScheme-constraint-rule-8">
-      <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                xmlns="http://www.tei-c.org/ns/1.0"
-                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 xmlns:xi="http://www.w3.org/2001/XInclude"
                 context="tei:*[@schemeVersion]">
          <sch:assert test="@scheme and not(@scheme = 'free')">
@@ -1910,6 +1910,9 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <ref name="distributor"/>
       </choice>
    </define>
+   <define name="model.catDescPart">
+      <notAllowed/>
+   </define>
    <define name="model.addressLike">
       <choice>
          <ref name="email"/>
@@ -2205,8 +2208,8 @@ Suggested values include: 1] full (full form); 2] pref (prefix); 3] suff (suffix
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="TEILex0-p-abstractModel-structure-p-constraint-report-4">
             <rule context="tei:p">
-               <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
                        test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
         Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
@@ -2216,8 +2219,8 @@ Suggested values include: 1] full (full form); 2] pref (prefix); 3] suff (suffix
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="TEILex0-p-abstractModel-structure-l-constraint-report-5">
             <rule context="tei:p">
-               <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
                        test="(ancestor::tei:l or ancestor::tei:lg) and not(parent::tei:figure or parent::tei:note or ancestor::tei:floatingText)">
         Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab, unless p is a child of figure or note, or is a descendant of floatingText.
@@ -2378,8 +2381,8 @@ Measures]</a:documentation>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="TEILex0-ref-refAtts-constraint-report-6">
             <rule context="tei:ref">
-               <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
                        test="@target and @cRef">Only one of the
 	attributes @target' and @cRef' may be supplied on <name/>
@@ -4430,24 +4433,24 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                </oneOrMore>
             </choice>
          </group>
-         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:s="http://purl.oclc.org/dsdl/schematron"
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
-         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:s="http://purl.oclc.org/dsdl/schematron"
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
                  prefix="xs"
                  uri="http://www.w3.org/2001/XMLSchema"/>
-         <sch:ns xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                 xmlns="http://www.tei-c.org/ns/1.0"
-                 xmlns:s="http://purl.oclc.org/dsdl/schematron"
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:s="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                  xmlns:xi="http://www.w3.org/2001/XInclude"
                  prefix="rng"
                  uri="http://relaxng.org/ns/structure/1.0"/>
@@ -4662,8 +4665,8 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="TEILex0-div-abstractModel-structure-l-constraint-report-7">
             <rule context="tei:div">
-               <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
                        test="(ancestor::tei:l or ancestor::tei:lg) and not(ancestor::tei:floatingText)">
         Abstract model violation: Lines may not contain higher-level structural elements such as div, unless div is a descendant of floatingText.
@@ -4673,8 +4676,8 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="TEILex0-div-abstractModel-structure-p-constraint-report-8">
             <rule context="tei:div">
-               <report xmlns:s="http://purl.oclc.org/dsdl/schematron"
-                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:s="http://purl.oclc.org/dsdl/schematron"
                        xmlns:xi="http://www.w3.org/2001/XInclude"
                        test="(ancestor::tei:p or ancestor::tei:ab) and not(ancestor::tei:floatingText)">
         Abstract model violation: p and ab may not contain higher-level structural elements such as div, unless div is a descendant of floatingText.
@@ -5378,7 +5381,88 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
    <define name="classDecl">
       <element name="classDecl">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(classification declarations) contains one or more taxonomies defining any classificatory codes used elsewhere in the text. [2.3.7. The Classification Declaration 2.3. The Encoding Description]</a:documentation>
+         <oneOrMore>
+            <ref name="taxonomy"/>
+         </oneOrMore>
          <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="taxonomy">
+      <element name="taxonomy">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(taxonomy) defines a typology either implicitly, by means of a bibliographic citation, or explicitly by a structured taxonomy. [2.3.7. The Classification Declaration]</a:documentation>
+         <choice>
+            <choice>
+               <oneOrMore>
+                  <choice>
+                     <ref name="category"/>
+                     <ref name="taxonomy"/>
+                  </choice>
+               </oneOrMore>
+               <group>
+                  <oneOrMore>
+                     <choice>
+                        <ref name="model.descLike"/>
+                        <ref name="gloss"/>
+                     </choice>
+                  </oneOrMore>
+                  <zeroOrMore>
+                     <choice>
+                        <ref name="category"/>
+                        <ref name="taxonomy"/>
+                     </choice>
+                  </zeroOrMore>
+               </group>
+            </choice>
+            <group>
+               <ref name="model.biblLike"/>
+               <zeroOrMore>
+                  <choice>
+                     <ref name="category"/>
+                     <ref name="taxonomy"/>
+                  </choice>
+               </zeroOrMore>
+            </group>
+         </choice>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="category">
+      <element name="category">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(category) contains an individual descriptive category, possibly nested within a superordinate category, within a user-defined taxonomy. [2.3.7. The Classification Declaration]</a:documentation>
+         <group>
+            <choice>
+               <oneOrMore>
+                  <ref name="catDesc"/>
+               </oneOrMore>
+               <zeroOrMore>
+                  <choice>
+                     <ref name="model.descLike"/>
+                     <ref name="gloss"/>
+                  </choice>
+               </zeroOrMore>
+            </choice>
+            <zeroOrMore>
+               <ref name="category"/>
+            </zeroOrMore>
+         </group>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="catDesc">
+      <element name="catDesc">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(category description) describes some category within a taxonomy or text typology, either in the form of a brief prose description or in terms of the situational parameters used by the TEI formal <code xmlns="http://www.w3.org/1999/xhtml">&lt;textDesc&gt;</code>. [2.3.7. The Classification Declaration]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.limitedPhrase"/>
+               <ref name="model.catDescPart"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attributes"/>
+         <ref name="att.canonical.attributes"/>
          <empty/>
       </element>
    </define>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="full">Etymologisches Wörterbuch des Deutschen: Die XML-Edition</title>
+            <title type="abbr">EtymWB-XML</title>
+            <editor xml:id="WP">
+               <persName>
+                  <forename>Wolfgang</forename>
+                  <surname>Pfeifer</surname>
+               </persName>
+            </editor>
+            <!-- ... -->
+            <respStmt xml:id="OT">
+               <resp>annotated by</resp>
+               <persName>
+                  <forename>Oxana</forename>
+                  <surname>Tsunykowa</surname>
+               </persName>
+            </respStmt>
+            <respStmt xml:id="YW">
+               <resp>annotated by</resp>
+               <persName>
+                  <forename>Yvonne</forename>
+                  <surname>Wirkus</surname>
+               </persName>
+            </respStmt>
+            <respStmt xml:id="LL">
+               <resp>restructured by</resp>
+               <persName>
+                  <forename>Lothar</forename>
+                  <surname>Lemnitzer</surname>
+               </persName>
+            </respStmt>
+            <respStmt xml:id="AH">
+               <resp>restructured by</resp>
+               <persName>
+                  <forename>Axel</forename>
+                  <surname>Herold</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <title>XML encoded version</title>
+               <date>2006-11-17</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Berlin-Brandenburgische Akademie der Wissenschaften</publisher>
+            <publisher>Digitales Wörterbuch der deutschen Sprache</publisher>
+            <authority role="funder">Berlin-Brandenburgische Akademie der
+               Wissenschaften</authority>
+            <pubPlace>Berlin</pubPlace>
+            <date>2009</date>
+            <availability>
+               <licence>Copyright 2002-2009</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>
+                     <persName>
+                        <forename>Wolfgang</forename>
+                        <surname>Pfeifer</surname>
+                     </persName>
+                  </author>
+                  <title>Etymologisches Wörterbuch des Deutschen</title>
+                  <edition>2</edition>
+                  <imprint>
+                     <publisher>Akademie Verlag</publisher>
+                     <pubPlace>Berlin</pubPlace>
+                     <date>1993</date>
+                     <note>with additional notes by the author</note>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="de"></language>
+            <language role="workingLanguage" ident="de"></language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+   </text>
+</TEI>

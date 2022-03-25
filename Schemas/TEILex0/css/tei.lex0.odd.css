@@ -134,3 +134,17 @@ xi|fallback:before {
     content:"XInclude fallback: " !important;
     color:#CB0039 !important;
 }
+
+specList specDesc {
+    display: block;
+}
+
+egXML *, egXML title {
+ 
+    text-align : left ;
+    -oxy-display-tags: default !important;
+}
+
+egXML title {
+    -oxy-display-tags: default;
+}
