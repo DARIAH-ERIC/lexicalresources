@@ -3,7 +3,7 @@ docsearch({
     indexName: 'tei_lex',
     inputSelector: '.algo',
     debug: true, // Set debug to true if you want to inspect the dropdown
-    transformData: function (hits) {
+ /*   transformData: function (hits) {
         // Transform the list of hits
         hits.forEach(hit => {
             //console.log(hit.url.replace('https://dariah-eric.github.io/', ''));
@@ -11,7 +11,7 @@ docsearch({
             console.log(hit.url);
         });
         return hits;
-    },
+    },*/
     handleSelected: function (input, event, suggestion, datasetNumber, context) {
         // Prevents the default behavior on click and rather opens the suggestion
         // in a new tab.
