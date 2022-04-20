@@ -145,4 +145,12 @@
             (<val>objectLanguage</val>, <val>workingLanguage</val>, <val>sourceLanguage</val> or
             <val>targetLanguage</val>), see the specification details for <gi>language</gi>. </p>
    </div>
+   <div>
+      <head>Revision description</head>
+      <p><gi>revisionDesc</gi> is optional in both TEI and TEI Lex-0. The element is used to
+         document the revision history of the given file. For each recorded revision, one should use
+         the <gi>change</gi> element , together with the appropriate attributes: <att>when</att> to
+         indicate the date of the implemented change, <att>resp</att> to assign responsibility and
+            <att>n</att> to assign a number to the particular change, </p>
+   </div>
 </div>
