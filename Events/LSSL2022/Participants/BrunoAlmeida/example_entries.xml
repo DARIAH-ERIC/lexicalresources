@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DictEncod xml:lang="pt" xmlns="https://clunl.fcsh.unl.pt/ns0">
+    <entry xml:id="0001" xml:src="https://dicionario.priberam.org/alegoria">
+        <form type="lemma">
+            <writtenRep>alegoria</writtenRep>
+            <syllableDiv>a·le·go·ri·a</syllableDiv>
+        </form>
+        <pos type="noun">n.</pos>
+        <gen type="feminine">f.</gen>
+        <sense xml:id="alegoria_1">Modo indirecto de representar uma coisa ou uma ideia sob a
+            aparência de outra.</sense>
+    </entry>
+    <entry xml:id="0002" xml:src="https://dicionario.priberam.org/gatafunho">
+        <form type="lemma">
+            <writtenRep>gatafunho</writtenRep>
+            <syllableDiv>ga·ta·fu·nho</syllableDiv>
+        </form>
+        <pos type="noun">n.</pos>
+        <gen type="masculine">m.</gen>
+        <sense xml:id="gatafunho_1">Escrita ou desenho pouco claros.</sense>
+        <rel type="synonymy">garatuja</rel>
+        <rel type="synonymy">rabisco</rel>
+    </entry>
+    <entry xml:id="0003" xml:src="https://dicionario.priberam.org/surrar">
+        <form type="lemma">
+            <writtenRep>surrar</writtenRep>
+            <syllableDiv>sur·rar</syllableDiv>
+        </form>
+        <gramInfo>
+            <pos type="verb">v.</pos>
+            <synProp type="transitive">tr.<sense xml:id="surrar_1">Tirar o pêlo às peles e
+                    limpar-lhes o carnaz.</sense>
+                <sense xml:id="surrar_2">
+                    <def>Dar surra ou sova em.</def>
+                    <rel type="synonymy">açoitar</rel>
+                    <rel type="synonymy">fustigar</rel>
+                    <rel type="synonymy">sovar</rel>
+                </sense>
+                <sense xml:id="surrar_3">
+                    <def>Gastar a superfície com o uso.</def>
+                </sense>
+            </synProp>
+            <synProp type="pronominal">pron.<sense xml:id="surrar_4">Gastar-se; coçar-se.</sense>
+                <sense xml:id="surrar_5">Ir-se a furto, abalar. <usg type="socioCultural"
+                        >Informal</usg>
+                </sense>
+            </synProp>
+        </gramInfo>
+        <rel>zurrar</rel>
+    </entry>
+</DictEncod>
