@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:lang="pt" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Dictionary Entries in TEI</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>A few entries taken from Dicionário Priberam Online de Português Contemporâneo</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>https://dicionario.priberam.org/</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry xml:id="entry.1">
+            <form>
+               <orth>alegoria</orth>
+               <syll>a·le·go·ri·a</syll>
+            </form>
+            <gramGrp>
+               <pos norm="noun">n.</pos>
+               <gen norm="feminine">f.</gen>
+            </gramGrp>
+            <sense>
+               <def xml:id="alegoria.1">Modo indirecto de representar uma coisa ou uma ideia sob a
+                  aparência de outra.</def>
+            </sense>
+         </entry>
+         <entry xml:id="entry.2">
+            <form>
+               <orth>surrar</orth>
+               <syll>sur·rar</syll>
+            </form>
+            <gramGrp>
+               <pos norm="verb">v.</pos>
+               <subc norm="transitive">tr.</subc>
+               <subc norm="pronominal">pron.</subc>
+            </gramGrp>
+            <entry xml:id="entry.2.1">
+               <gramGrp>
+                  <pos norm="verb">verbo</pos>
+                  <subc norm="transitive">transitivo</subc>
+               </gramGrp>
+               <sense xml:id="surrar.1">
+                  <def>>Tirar o pêlo às peles e limpar-lhes o carnaz.</def>
+               </sense>
+               <sense xml:id="surrar.2">
+                  <def>Dar surra ou sova em.</def>
+               </sense>
+               <sense xml:id="surrar.3">
+                  <def>Gastar a superfície com o uso.</def>
+               </sense>
+            </entry>
+            <entry xml:id="entry.2.2">
+               <gramGrp>
+                  <pos norm="verb">verbo</pos>
+                  <subc norm="pronominal">pronominal</subc>
+               </gramGrp>
+               <sense xml:id="surrar.4">
+                  <def>Gastar-se; coçar-se.</def>
+               </sense>
+               <sense xml:id="surrar.5">
+                  <def>Ir-se a furto, abalar.</def>
+                  <usg type="socioCultural">Informal</usg>
+               </sense>
+            </entry>
+            <xr type="cf">zurrar</xr>
+         </entry>
+      </body>
+   </text>
+</TEI>
