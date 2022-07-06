@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Le Grand Robert de la langue française</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Version électronique, 2005</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Version imprimée 2001</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="preface">
+            <head>Préface du Grand Robert de la langue française par Alain REY</head>
+            <p>Encore qu'il s'agisse de l'édition augmentée d'un ouvrage reconnu, ce dictionnaire de
+               langue constitue une nouveauté dans l'histoire du genre. En effet, tous les grands
+               ouvrages alphabétiques sur la langue française ont apporté une vision historiquement
+               déterminée du lexique et des vocabulaires; et leurs qualités mêmes les ont condamnés
+               à une pérennité immobile. Moderniser le Littré est une entreprise absurde. En
+               revanche, enrichir et mettre à jour le Grand Robert, édité sous une forme plus
+               maniable, était une démarche naturelle.</p>
+         </div>
+      </front>
+      <body>
+         <div type="alphabet">
+            <entry>
+               <form>collaboration</form>
+               <gramGrp><pos>n</pos><gen>f</gen></gramGrp>
+               <sens n="1">
+                  <def>Action de travailler en commun (avec qqn). Résultat de cette action.</def>
+               </sens>
+               <sens n="2">
+                  <def>Attitude des personnes qui, durant l'occupation allemande (1939 à 1944-45),
+                     désiraient appliquer une politique favorable à l'« Europe nouvelle » dominée
+                     par les nazis, en coopération avec l'Allemagne (notamment en France).</def>
+               </sens>
+            </entry>
+            <p>Some text here.</p>
+         </div>
+      </body>
+   </text>
+</TEI>
