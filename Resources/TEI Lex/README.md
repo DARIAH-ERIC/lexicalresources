@@ -1,3 +1,0 @@
-# TEI-Lex
-
-More soon...
