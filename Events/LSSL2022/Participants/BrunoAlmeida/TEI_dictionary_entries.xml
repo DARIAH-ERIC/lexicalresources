@@ -2,17 +2,19 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="xslt_example.xsl"?>
 <TEI xml:lang="pt" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Dictionary Entries in TEI</title>
+            <title>Priberam Dictionary Entries in TEI</title>
          </titleStmt>
          <publicationStmt>
-            <p>A few entries taken from Dicionário Priberam Online de Português Contemporâneo</p>
+            <publisher>A few entries taken from Dicionário Priberam Online de Português Contemporâneo</publisher>
+            <ptr target="https://dicionario.priberam.org/"/>
          </publicationStmt>
          <sourceDesc>
-            <p>https://dicionario.priberam.org/</p>
+            <p>Online dictionary</p>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
@@ -27,8 +29,8 @@
                <pos norm="noun">n.</pos>
                <gen norm="feminine">f.</gen>
             </gramGrp>
-            <sense>
-               <def xml:id="alegoria.1">Modo indirecto de representar uma coisa ou uma ideia sob a
+            <sense xml:id="alegoria.1">
+               <def>Modo indirecto de representar uma coisa ou uma ideia sob a
                   aparência de outra.</def>
             </sense>
          </entry>
@@ -47,13 +49,16 @@
                   <pos norm="verb">verbo</pos>
                   <subc norm="transitive">transitivo</subc>
                </gramGrp>
-               <sense xml:id="surrar.1">
-                  <def>>Tirar o pêlo às peles e limpar-lhes o carnaz.</def>
+               <sense n="1." xml:id="surrar.1">
+                  <def>Tirar o pêlo às peles e limpar-lhes o carnaz.</def>
                </sense>
-               <sense xml:id="surrar.2">
+               <sense n="2." xml:id="surrar.2">
                   <def>Dar surra ou sova em.</def>
+                  <xr type="syn">açoitar</xr>
+                  <xr type="syn">fustigar</xr>
+                  <xr type="syn">sovar</xr>
                </sense>
-               <sense xml:id="surrar.3">
+               <sense n="3." xml:id="surrar.3">
                   <def>Gastar a superfície com o uso.</def>
                </sense>
             </entry>
@@ -62,15 +67,15 @@
                   <pos norm="verb">verbo</pos>
                   <subc norm="pronominal">pronominal</subc>
                </gramGrp>
-               <sense xml:id="surrar.4">
+               <sense n="4." xml:id="surrar.4">
                   <def>Gastar-se; coçar-se.</def>
                </sense>
-               <sense xml:id="surrar.5">
-                  <def>Ir-se a furto, abalar.</def>
+               <sense n="5." xml:id="surrar.5">
                   <usg type="socioCultural">Informal</usg>
+                  <def>Ir-se a furto, abalar.</def>
                </sense>
             </entry>
-            <xr type="cf">zurrar</xr>
+            <xr type="cf">zurrar</xr><pc>.</pc>
          </entry>
       </body>
    </text>
