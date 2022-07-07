@@ -21,15 +21,16 @@
     </xsl:template>
     
     <xsl:template match="mentioned|quote">
-        <i/>
+        <i>
             <xsl:apply-templates/>
+        </i>
     </xsl:template>
     
     <xsl:template match="sense">
-        <p/>
+        <p>
         <b><xsl:value-of select="@n"/></b>
             <xsl:apply-templates/>
-        
+        </p>
     </xsl:template>
     
     <xsl:template match="orth">
