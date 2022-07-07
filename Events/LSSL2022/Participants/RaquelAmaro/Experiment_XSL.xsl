@@ -9,11 +9,16 @@
     
     <xsl:template match="teiHeader"/>
     
-    <xsl:template match="entry|hom|hyph|pron|etym|re">
+    <xsl:template match="entry|hom|hyph|etym|re">
         <p/>
             <xsl:apply-templates/>
     </xsl:template>
-    
+   
+    <xsl:template match="pron">
+        <p/><xsl:text>[</xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>]</xsl:text>
+    </xsl:template>
     
     <xsl:template match="mentioned|quote">
         <i/>
@@ -21,11 +26,11 @@
     </xsl:template>
     
     <xsl:template match="sense">
-        <p/><b/>
+        <p/>
         <xsl:value-of select="@n"/>
-        <span style="text-transform:bold;">
+        <b/>
             <xsl:apply-templates/>
-        </span>
+        
     </xsl:template>
     
     <xsl:template match="orth">
