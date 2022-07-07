@@ -27,8 +27,7 @@
     
     <xsl:template match="sense">
         <p/>
-        <xsl:value-of select="@n"/>
-        <b/>
+        <b><xsl:value-of select="@n"/></b>
             <xsl:apply-templates/>
         
     </xsl:template>
