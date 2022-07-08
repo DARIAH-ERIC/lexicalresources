@@ -20,10 +20,18 @@
                 <xsl:apply-templates select="descendant::entry[gramGrp/pos ='n']"/>
                 ...-->
                 <!--<xsl:apply-templates select="descendant::entry"/>-->
+                <h1>Table of content</h1>
                 
-                <xsl:apply-templates select="descendant::entry">
-                    <xsl:sort select="form[@type='lemma']/orth[1]"/> 
-                </xsl:apply-templates>
+                <xsl:for-each select="descendant::entry">
+                    <xsl:sort></xsl:sort>
+                    <a href="#{@xml:id}"><xsl:value-of select="form/orth"/></a>
+                    <br/>
+                </xsl:for-each>
+                
+                <h1>My dictionary</h1>
+                <xsl:apply-templates select="descendant::entry"/>
+                    
+                
             </body>
         </html>
     </xsl:template>
@@ -31,7 +39,7 @@
     <xsl:template match="teiHeader"/>
 
     <xsl:template match="entry">
-        <p>
+        <p id="{@xml:id}">
             <xsl:apply-templates/>
         </p>
     </xsl:template>

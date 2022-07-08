@@ -18,7 +18,7 @@
    </teiHeader>
    <text>
       <body>
-         <entry>
+         <entry xml:id="comp23">
             <form>
                <orth>competitor</orth>
                <hyph>com|peti|tor</hyph>
@@ -29,7 +29,7 @@
             </gramGrp>
             <def>person who competes.</def>
          </entry>
-         <entry>
+         <entry xml:id="dis34">
             <form>
                <orth>disproof</orth>
                <pron>dIs"pru:f</pron>
