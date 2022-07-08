@@ -10,7 +10,7 @@
             <title>Priberam Dictionary Entries in TEI</title>
          </titleStmt>
          <publicationStmt>
-            <publisher>A few entries taken from Dicionário Priberam Online de Português Contemporâneo</publisher>
+            <publisher>Priberam</publisher>
             <ptr target="https://dicionario.priberam.org/"/>
          </publicationStmt>
          <sourceDesc>
@@ -20,21 +20,7 @@
    </teiHeader>
    <text>
       <body>
-         <entry xml:id="entry.1">
-            <form type="lemma">
-               <orth>alegoria</orth>
-               <syll>a·le·go·ri·a</syll>
-            </form>
-            <gramGrp>
-               <pos norm="noun">n.</pos>
-               <gen norm="feminine">f.</gen>
-            </gramGrp>
-            <sense xml:id="alegoria.1">
-               <def>Modo indirecto de representar uma coisa ou uma ideia sob a
-                  aparência de outra.</def>
-            </sense>
-         </entry>
-         <entry xml:id="entry.2">
+         <entry xml:id="entry.2"  xml:lang="pt">
             <form type="lemma">
                <orth>surrar</orth>
                <syll>sur·rar</syll>
@@ -76,6 +62,40 @@
                </sense>
             </entry>
             <xr type="cf">zurrar</xr><pc>.</pc>
+         </entry>
+         <entry xml:id="entry.1" xml:lang="pt">
+            <form type="lemma">
+               <orth>alegoria</orth>
+               <syll>a·le·go·ri·a</syll>
+            </form>
+            <gramGrp>
+               <pos norm="noun">n.</pos>
+               <gen norm="feminine">f.</gen>
+            </gramGrp>
+            <sense xml:id="alegoria.1">
+               <def>Modo indirecto de representar uma coisa ou uma ideia sob a
+                  aparência de outra.</def>
+            </sense>
+         </entry>
+         <entry xml:id="entry.3" xml:lang="pt">
+            <form type="lemma">
+               <orth>transgénero</orth>
+               <syll>trans·gé·ne·ro</syll>
+            </form>
+            <gramGrp>
+               <pos norm="adjective">adj.</pos>
+               <gen>2 g.</gen>
+               <number>2 núm</number>
+            </gramGrp>
+            <sense n="1." xml:id="transgenero.1">
+               <def>Relativo a ou que tem uma 
+                  identidade de género diferente do sexo que foi atribuído à nascença, 
+                  por oposição a cisgénero (ex.: pessoas transgénero).</def>
+            </sense>
+            <sense n="2." xml:id="transgenero.2">
+               <def>Relativo a ou que tem uma identidade de género que não é claramente feminina ou masculina.</def>
+               <xr type="syn">intergénero</xr>
+            </sense>
          </entry>
       </body>
    </text>
