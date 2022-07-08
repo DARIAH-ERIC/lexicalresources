@@ -2,12 +2,12 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet type="text/xsl" href="Four%20Dictionary%20Entries%20-%20XSL.xsl"?>
+<?xml-stylesheet type="text/xsl" href="Four%20Dictionary%20Entries%20-%20XSL%20-%20Clean%20Version.xsl"?>
 <TEI xml:lang="eng" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>4 Dictionary Entries in TEI</title>
+            <title>4 Dictionary Entries from Lexico.com</title>
             <author>Carlos Guimarães</author>
             <respStmt>
                <resp>Compiled and encoded by</resp>
@@ -91,7 +91,7 @@
                <pron notation="ipa">/ˈreɪzə/</pron>      
             </form>
             <gramGrp>
-               <pos>Noun</pos>
+               <pos>noun</pos>
             </gramGrp>
             <sense>
                <def>A person who razes something; in later use especially a person who destroys or demolishes buildings.</def>
