@@ -1,0 +1,665 @@
+@import "pure.css";
+@import url("https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css");
+@import "odd.css";
+@import "prism.css";
+@import url("https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css");
+
+/*customizing pure*/
+
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: 18px;
+}
+
+.custom-menu,
+.toc.pure-g [class *= "pure-u"],
+.tocTree.pure-g [class *= "pure-u"] {
+    font-size: 17px;
+}
+
+
+.pure-menu-heading {
+    position: fixed;
+    display: block;
+    width: 325px;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+
+.floatingText_body {
+    background: bisque;
+    padding: 1em 2em;
+    border-radius: 0.4em;
+}
+
+.floatingText_body h1 {
+    font-size: 18px;
+}
+
+*|*:link {
+    /* color: #1f8dd6;*/
+    color: #1f8dd6;
+}
+
+span.attribute,
+span.att {
+    color: #f5844c;
+}
+
+/*.tei_toc {padding-top: 50px;}*/
+.tei_toc h2 {
+    display: none;
+}
+
+.tei_toc {
+
+    height: calc(100vh - 340px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.tei_toc_search {
+    padding-top: 70px;
+    padding-bottom: 10px;
+}
+
+.maintitle {
+    font-family: Helvetica, "Helvetica Neue", Calibri;
+
+}
+
+.custom-menu {
+    margin-left: -325px !important;
+    width: 325px !important;
+    background: #1a252f !important;
+    overflow: visible !important;
+}
+
+@media (min-width : 48em) {
+    .custom-menu {
+        left: 325px !important;
+    }
+}
+
+@media (min-width : 48em) {
+    .custom-layout {
+        padding-left: 325px !important;
+    }
+
+}
+.custom-menu.active,
+.custom-layout.active,
+.custom-layout.active .menu-link {
+    left: 325px !important;
+}
+
+
+.pure-menu {
+    padding-bottom: 50vh;
+}
+
+.pure-menu-item {
+    display: block;
+    border: none;
+    padding: 0.6em 0 0.6em 0.6em;
+}
+
+.pure-menu-item a,
+pure-menu-item span,
+a.toc {
+    color: #999;
+    text-decoration: none;
+    white-space: wrap;
+    display: inline;
+}
+´
+.pure-g > div {
+ box-sizing: border-box;
+}
+
+div.tocTree,
+div.toc {
+    margin-top: 15px;
+}
+
+
+
+
+.toc-heading a.toc {
+    /*resets the menu item padding*/
+    padding: 0 !important;
+    padding-right: 13px !important;
+    display: inline-block;
+
+}
+
+.toc-heading:hover a.toc {
+    color: #1f8dd6 !important;
+}
+
+.toc-heading-number {
+    color: #1f8dd6;
+    text-align: right;
+}
+
+.toc-showhide {
+    /*right: 0px;*/
+}
+
+.toc-heading-number span {
+    padding-right: 10px;
+}
+
+/*other stuff*/
+
+.tocHide,
+.continuedtoc {
+    display: none;
+    /* margin-left: 41px;*/
+    /*margin-top:10px;*/
+}
+
+.tocTree.active > .continuedtoc {
+    display: block;
+}
+
+.plusminus {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    /* left: 20px;*/
+    top: 11px;
+    background: #1f8dd6;
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.2, 0.6, 0.3, 1.1);
+}
+
+.plusminus:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 50%;
+    background: white;
+}
+
+.plusminus:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 2px;
+    background: white;
+}
+
+.plusminus.clicked {
+    transform: translate(-50%, -50%) rotate(360deg);
+    background: #ed6f59;
+}
+
+.plusminus.clicked:before {
+    width: 0;
+}
+
+td.wovenodd-col1  {
+    min-height: 1px;  
+}
+
+/* Handling of example XML code embedded in pages. */
+pre.teiCode,
+code[class *= "language-"],
+pre[class *= "language-"] {
+    white-space: pre-wrap;
+}
+
+/* We want our XML code to look like code. */
+.xmlTag,
+.xmlAttName,
+.xmlAttVal,
+.teiCode,
+span.val{
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* We want our XML code text to be bold. */
+.xmlTag,
+.xmlAttName,
+.xmlAttVal {
+    font-weight: bold;
+}
+
+/* We want syntax highlighting. */
+/* I think I stole these colour values from oXygen. Sorry George! */
+.xmlTag {
+    color: #000099;
+}
+
+.xmlAttName {
+    color: #f5844c;
+}
+
+.xmlAttVal, span.val, .valList .odd_label {
+    color: #993300;
+}
+
+
+/*images*/
+
+img {
+    display: block;
+}
+
+img.padded {
+    padding: 1em;
+}
+
+div.figure {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+div.tab div.figure {
+    margin-bottom: 1em;
+}
+
+div.figure img,
+div.thumbnail img {
+    border-radius: 0.4em;
+    border: 1px solid gainsboro;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+div.caption {
+    position: absolute;
+    color: slategray;
+    font-size: 0.8em !important;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+div.figure div.caption {
+    bottom: -2em;
+}
+
+div.gallery div.caption {
+    bottom: -1em;
+}
+
+div.gallery {
+    position: relative;
+    margin-bottom: 2em;
+    /* Prevent vertical gaps */
+    line-height: 0;
+    border-radius: 0.4em;
+    text-align: center;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+
+}
+
+div.thumbnail {
+    float: left;
+    width: 100px;
+    padding-right: 10px;
+}
+
+.gallery img {
+    width: 100% !important;
+    /*default height; can be overriden in TEI with height attr.*/
+    height: 300px !important;
+    object-fit: cover;
+}
+
+.imgwrapper.top-left img {
+    border-top-left-radius: 0.4em;
+}
+
+.imgwrapper.top-right img {
+    border-top-right-radius: 0.4em;
+}
+
+.imgwrapper.bottom-right img {
+    border-bottom-right-radius: 0.4em;
+}
+
+.imgwrapper.bottom-left img {
+    border-bottom-left-radius: 0.4em;
+}
+
+/*specification overrides
+*/
+
+td.odd_label {
+    width: 100px;
+}
+
+
+/*logos*/
+
+.logos {
+    padding: 0 !important;
+}
+
+.logos .img,
+.logos .img-hover {
+    width: 160px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logos .img-hover,
+.logos:hover .img {
+    display: none;
+}
+
+
+.logos:hover .img-hover {
+    display: block;
+}
+
+.dlogo .logos img {
+    margin-bottom: 1em;
+}
+
+.elogo .logos img {
+
+
+
+}
+
+/*terms in lists*/
+
+span.term {
+    font-weight: bold;
+}
+
+/*table headings*/
+tr.label {
+    color: white;
+    background: #1f8dd6;
+    ;
+}
+
+.pure-table {
+    width: 100%;
+}
+
+.contributors {
+    column-count: 2;
+}
+
+.h2020 {
+    color: #999;
+    font-size: 0.7em;
+    padding: 0.5em 2em 0.5em 2em;
+}
+
+.h2020 p {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 1em 0;
+    text-align: center;
+
+}
+
+.pure-menu-list {
+    background-image: url("../images/dkbl.png");
+}
+
+/* Accordion styles for examples */
+
+.tabs {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    margin: 1em 0 1em 0;
+    padding: 0;
+}
+
+.tabs pre[class *= "language-"] {
+    margin: 0;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab {
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+
+}
+.tab-label {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0.25em 1em;
+    background: #2c3e50;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    font-size:0.9em;
+    /* Icon */
+}
+.tab-label:hover {
+    background: #1a252f;
+}
+.tab-label::after {
+    content: "\276F";
+    width: 1em;
+
+    text-align: center;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+
+.tab-label .pure-img {
+    height: 18px;
+}
+
+span.label img {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.tab-content {
+    max-height: 0;
+    /*padding: 0 1em;*/
+    color: #2c3e50;
+    background: white;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+    background: #f2faff;
+    overflow: hidden;
+}
+
+.infopanels .tab-content {
+    background: bisque;
+}
+
+.infopanels .tab-content div.panelContent {
+    padding: 0 1em;
+}
+
+.tab-content .figure {
+    margin-left: 0.9em;
+}
+
+.tab-close {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+}
+.tab-close:hover {
+    background: #1a252f;
+}
+
+input:checked + .tab-label {
+    background: #1f8dd6;
+}
+input:checked + .tab-label::after {
+
+    transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+    max-height: 1000vh;
+    /*padding: 0 0.5em 0 0;*/
+}
+
+.panelContent .code-toolbar {
+    margin-bottom: 1em;
+}
+
+div.code-toolbar > .toolbar {
+    right:0.6em;
+}
+
+div.cit {
+    padding-left: 2em;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+span.label {
+    font-weight: bold;
+}
+
+.algo {
+    opacity: 1;
+    margin-left: 1em;
+    z-index: 9999;
+    width: 290px;
+}
+
+.ds-dropdown-menu:before {
+
+}
+
+/* Main dropdown wrapper */
+.algolia-autocomplete .ds-dropdown-menu {
+    width: 500px;
+
+
+}
+
+/* Main category (eg. Getting Started) */
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+    color: darkgray;
+    border-bottom: 1px solid gainsboro;
+    /* text-decoration: none; */
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header:hover {
+    color: #1f8dd6;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion {
+    text-decoration: none;
+
+}
+
+/*dark mode
+
+.algolia-autocomplete .algolia-docsearch-suggestion,
+.algolia-autocomplete .ds-dropdown-menu [class^="ds-dataset-"] {
+   background: #1a252f;
+}*/
+
+/* Category (eg. Downloads) */
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
+    color: gray;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column::before {
+    background: gainsboro;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--content::before {
+    background: none;
+}
+
+.algolia-autocomplete .ds-dropdown-menu .ds-suggestion.ds-cursor .algolia-docsearch-suggestion.suggestion-layout-simple,
+.algolia-autocomplete .ds-dropdown-menu .ds-suggestion.ds-cursor .algolia-docsearch-suggestion:not(.suggestion-layout-simple) .algolia-docsearch-suggestion--content {
+    background-color: #f2faff;
+}
+
+/* Title (eg. Bootstrap CDN) */
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+    font-weight: bold;
+    /*color: white; darkmode*/
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--title:hover {
+    color: black; /*darkmode*/
+}
+
+/* Description description (eg. Bootstrap currently works...) */
+.algolia-autocomplete .algolia-docsearch-suggestion--text {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* Highlighted text */
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+    color: #1f8dd6;
+}
+
+input.rounded {
+    border: none;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+    padding: 4px 7px 4px 14px;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+/*labels in revision history*/
+
+.button-xsmall {
+    padding:  0.1em 0.4em;
+    background-color: black;
+    color:white;
+    border-radius: .3em;
+    margin-right: 0.3em;
+    font-size:medium;
+    vertical-align:text-top;
+}
+
+blockquote.quote {
+    border-left-color: #1f8dd6;
+    border-left-width: 4px;
+    border-left-style: solid;
+    padding-left: 1em;
+    margin-left: 20px;
+}

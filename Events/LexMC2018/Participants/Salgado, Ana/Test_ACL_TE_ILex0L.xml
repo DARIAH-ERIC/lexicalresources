@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="TEILex0-ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Dicionário da Academia das Ciências de Lisboa</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Academia das Ciências de Lisboa</publisher>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Dicionário da Língua Portuguesa Contemporânea</title>
+               <extent>2 volumes</extent>
+               <idno type="ISBN">ISBN 9789722220460</idno>
+               <extent>3809 pp.</extent>
+               <author>Academia das Ciências</author>
+               <publisher>Editorial Verbo</publisher>
+               <date>2001</date>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         
+            <entry xml:id="DACL.TRIMENSÁRIO" xml:lang="pt">
+            <form type="lemma">
+               <orth>trimensário</orth>
+               <pron>trimẽsˈarju</pron>
+            </form>
+            <gramGrp>
+               <pos>n.</pos>
+               <gen>m.</gen>
+            </gramGrp>
+               <sense xml:id="DACL.TRIMENSÁRIO.6">
+               <def>Periódico que se publica de três em três meses; jornal trimestral.</def>
+            </sense>
+            <etym type="suffixalDerivation">
+               <seg type="desc">De</seg>
+               <cit type="etymon">
+                  <form>
+                     <orth extent="pref">tri-</orth>
+                  </form>
+               </cit>
+               
+               <lbl>+</lbl>
+               <cit type="etymon"> <lang>lat.</lang> <form><orth xml:lang="la">mensis</orth></form> <def>’mês'</def></cit>
+               <lbl>+</lbl>
+               <cit type="etymon">
+                  <form><orth extent="suf">-ário-</orth>
+                  </form>
+               </cit>
+            </etym>
+         </entry>
+         
+         <entry xml:id="DACL.NEURASTENIA" xml:lang="pt">
+            <form type="lemma">
+               <orth>neurastenia</orth>
+               <pron>newrɐʃtɨnˈiɐ</pron>
+            </form>
+            <gramGrp>
+               <pos>n.</pos>
+               <gen>f.</gen>
+            </gramGrp>
+            <sense xml:id="DACL.NEURASTENIA.6" n="1">
+                  <usg type="domain">Psiq.</usg>
+                  <def>Perturbação psíquica em que os sintomas predominantes são fadiga intensa, humor depressivo, perturbações digestivas e sentimento de incapacidade. </def>
+               </sense>
+            <sense xml:id="DACL.NEURASTENIA.8" n="2">
+                  <def>Estado de irritabilidade, de depressão.</def>
+               <xr type="synonymy"><ref type="sense">neura</ref></xr>
+               </sense>
+            <etym>
+               <seg type="desc">De</seg>
+               <cit type="suffixalDerivation">
+                  <form>
+                     <orth extent="pref">neuro-</orth>
+                  </form>
+               </cit>
+               <lbl>+</lbl>
+               <cit type="etymon"> <lang>grc.</lang> <form><orth xml:lang="la">ἀσθένεια</orth></form> <def>’falta de vigor'</def></cit>
+            </etym>
+         </entry>
+         
+            
+         <entry xml:id="DACL.WORKSHOP" xml:lang="pt">
+            <form type="lemma">
+               <orth>workshop</orth>
+               <pron>wˈorkʃɔp</pron>
+            </form>
+            <gramGrp>
+               <pos>n.</pos>
+               <gen>m.</gen>
+            </gramGrp>
+            <sense xml:id="DACL.WORKSHOP.6">
+               <def>Reunião destinada à discussão ou realização de trabalho prático sobre um assunto específico, em que é feita uma aprendizagem através da troca de conhecimentos e experiências.</def>
+               <cit type="example"><quote>Durante o <i>workshop</i>sobre a articulação dos hospitais com os tribunais, foi visível a desconfiança de algumas pessoas</quote>
+                  <bibl><title>DN</title><date>21.2.1992</date></bibl>
+               </cit>
+            </sense>
+            <form type="inflected">
+               <gramGrp> <gram type="number">Pl.</gram></gramGrp>
+               <orth>Workshops.</orth>
+            </form>
+            <etym type="borrowing"><lang>Ing.</lang></etym>
+            
+            <entry type="compound" xml:id="DACL.DECRETO-LEI" xml:lang="pt">
+               <form type="lemma">
+                  <orth>decreto-lei</orth>
+               <pron>dɨkrεtulˈɐj</pron>
+               </form>
+               <gramGrp><pos>n.</pos><gen>m.</gen></gramGrp>
+               <usg type="domain">Dir.</usg>
+               <sense xml:id="DACL.DECRETO-LEI.10">
+                  <def>Acto normativo proveniente do Governo da República.</def>
+                  <cit type="example"><quote>Actualmente, os decretos-leis são publicados na primeira série-A do Diário da República.</quote></cit>
+               </sense>
+               <form type="inflected">
+                  <gramGrp> <gram type="number">Pl.</gram></gramGrp>
+                  <orth>decretos-leis.</orth>
+               </form>
+            </entry>
+            
+            <entry type="multiWordExpression" xml:id="DACL.FIAT.LUX" xml:lang="pt">
+               <form type="lemma">
+                  <orth>fiat lux</orth>
+               </form>
+               
+               <gramGrp><pos>loc. lat.</pos></gramGrp>
+               <sense xml:id="DACL.FIAT.LUX.8">
+                  <def>Exprime o desejo de que se torne clara alguma coisa importante.</def>
+               </sense>
+            </entry>
+            
+            <entry type="abbr" xml:id="DACL.AG" xml:lang="pt">
+               <form type="lemma">
+                  <orth>Ag</orth>
+               </form>
+               <gramGrp>símb.</gramGrp>
+               <sense xml:id="DACL.AG.6">
+                  <def>Símbolo da prata.</def>
+               </sense>
+               <etym type="suffixalDerivation">
+                  <seg type="desc">De</seg>
+                  <cit type="etymon">
+                     <form>
+                        <orth extent="full"><i>a</i>r<i>g</i>entum</orth></form> <def>prata</def>
+                  </cit>
+               </etym>
+            </entry>
+            
+            <entry type="abbr" xml:id="DACL.VIP" xml:lang="pt">
+               <form type="lemma">
+                  <orth>VIP</orth>
+               </form>
+               
+               <gramGrp>sigla</gramGrp>
+               <sense xml:id="DACL.VIP.8">
+                  <cit type="translation">
+                     <quote xml:lang="en">Very Important Person</quote>
+                     <cit type="translation">
+                        <quote xml:lang="pt">(Pessoa Muito Importante)</quote>
+                     </cit>
+                  </cit>
+               </sense>
+            </entry>
+            
+            <entry xml:id="DACL.DONUT" xml:lang="pt">
+               <form type="lemma">
+                  <orth>donut</orth>
+                  <lbl>®</lbl>
+                  <pron>dˈɔnut</pron>
+               </form>
+               <gramGrp>
+                  <pos>n.</pos>
+                  <gen>m.</gen>
+               </gramGrp>
+               <xr>
+                  <lbl>V.</lbl>
+                  <ref type="entry">dónute</ref>
+               </xr>
+               <etym>Ing.</etym>
+            </entry>
+            
+            <entry xml:id="DACL.CAPITAL:1" xml:lang="pt">
+               <form type="lemma">
+                  
+                  <orth>capital</orth>
+                  <lbl>:1</lbl>
+                  <pron>kɐpitˈał</pron>
+               </form>
+               <gramGrp>
+                  <pos>adj.</pos>
+                  <gen>m. e f.</gen>
+               </gramGrp>
+               <sense xml:id="DACL.CAPITAL.6" n="1">
+                  <usg type="hint">P. us.</usg>
+                  <def>Que é relativo a cabeça. 
+                  </def>
+               </sense>
+               <sense xml:id="DACL.CAPITAL.8" n="2">
+                  <def> Que está relacionado com a condenação à morte.</def>
+                  <cit type="example"><quote>Os jurados pronunciaram-se a favor de uma sentença capital para o criminoso.</quote>
+                  </cit>
+                  <entry xml:id="DACL.EXECUÇÃO.CAPITAL" xml:lang="pt">
+                     <form><orth>execução capital</orth></form>
+                  </entry>
+                  <entry xml:id="DACL.PECADO.CAPITAL" xml:lang="pt">
+                     <form><orth>pecado capital</orth></form>
+                  </entry>
+                  
+                  <entry xml:id="DACL.OU.EXECUÇÃO" xml:lang="pt">
+                     <form><orth>ou execução</orth></form>
+                  </entry>
+                  
+                  <entry xml:id="DACL.PENA.CAPITAL" xml:lang="pt">
+                     <form><orth>pena capital</orth></form>
+                  </entry>
+               </sense>
+               <sense xml:id="DACL.CAPITAL.10" n="3" xml:lang="pt">
+                  <def> Que é de primeira ou grande importância.</def>
+                  <xr type="synonymy"><ref type="sense">essencial</ref></xr>
+                  <xr type="synonymy"><ref type="sense">fundamental</ref></xr>
+                  <xr type="synonymy"><ref type="sense">principal</ref></xr>
+                  <cit type="example"><quote>Preocupação capital. Assunto de interesse capital.</quote>
+                  </cit>
+               </sense>
+               <entry xml:id="DACL.LETRA.CAPITAL.11" xml:lang="pt">
+                  <form><orth>letra capital</orth></form>
+               </entry>
+               <entry xml:id="DACL.PECADO.CAPITAL.12" xml:lang="pt">
+                  <form><orth>pecado capital</orth></form>
+               </entry>
+               <etym>
+                  <seg type="desc">Do</seg>
+                  <cit type="etymon"> <lang>la.</lang> <form><orth xml:lang="la">capitālis</orth></form>
+                  </cit>
+               </etym>
+            </entry>
+            
+            <entry xml:id="DACL.CAPITAL:2" xml:lang="pt">
+               <form type="lemma">
+                  <orth>capital</orth>
+                  <lbl>:2</lbl>
+                  <pron>kɐpitˈał</pron>
+               </form>
+               <gramGrp>
+                  <pos>n.</pos>
+                  <gen>f.</gen>
+               </gramGrp>
+               <sense xml:id="DACL.CAPITAL.6" n="1">
+                  <def>Cidade onde está situada a sede administrativa de um país, província, região... </def>
+                  <cit type="example">
+                     <quote>Duarte, um mês depois, era preso, interrogado, e remetido para a capital, onde a identidade da pessoa foi de muitos reconhecida.</quote>
+                     <bibl><author>CAMILO</author>, <title>As Três Irmãs</title>, <citedRange>151</citedRange></bibl>
+                  </cit>
+                  
+                  <entry xml:id="DACL.CAPITAL.8." xml:lang="pt">
+                     <form><orth>+ de distrito.</orth></form>
+                  </entry>
+               </sense>
+               <sense xml:id="DACL.CAPITAL.9" n="2">
+                  <def>Cidade que constitui o centro de uma actividade.</def>
+                  <cit type="example">
+                     <quote>Diz-se que Paços de Ferreira é a capital do móvel.</quote>
+                  </cit>
+               </sense>
+               <sense xml:id="DACL.CAPITAL.10" n="3">
+                  <def>Letra maiúscula; letra maiúscula que inicia um capítulo.</def>
+               </sense>
+               <etym>
+                  <seg type="desc">Do</seg>
+                  <cit type="etymon"> <lang>la.</lang> <form><orth xml:lang="la">capitālis</orth></form>
+                  </cit>
+               </etym>
+            </entry>
+            
+            <entry xml:id="DACL.OURIÇO-CACHEIRO" xml:lang="pt">
+               <form type="lemma">
+                  
+                  <orth>ouriço-cacheiro</orth>
+                  <orth type="variant">oiriço-cacheiro</orth>
+                  <usg type="frequency">P. us.</usg>
+                  <pron>orisukaʃˈɐjru</pron>
+                  <pron type="variant">ojrisukaʃˈɐjru</pron>
+               </form>
+               <gramGrp>
+                  <pos>n.</pos>
+                  <gen>m.</gen>
+               </gramGrp>
+               <sense xml:id="DACL.OURIÇO-CACHEIRO.6" n="1">
+                  <usg type="domain">Zool.</usg>
+                  <def> Mamífero insectívoro da família dos erinacídeos <mentioned author="Linn">Erinaceus europaeus</mentioned>, de corpo arredondado e coberto de espinhos, de pequenas dimensões, cabeça pequena e pontiaguda, extremidades e cauda curtas, susceptível de se enrolar como uma bola ao mínimo sinal de perigo. </def>
+                  <cit type="example">
+                     <quote type="example">O ouriço-cacheiro ataca, além de insectos, pequenos mamíferos, aves e répteis, como, por exemplo, a víbora.</quote>
+                  </cit>
+               </sense>
+               <sense xml:id="DACL.OURIÇO-CACHEIRO.8" n="2">
+                  <usg type="geo">Bras.</usg>
+                  <usg type="domain">Zool.</usg>
+                  <def> Mamífero roedor da família dos eretizontídeos <mentioned author="Lac.">Coendou</mentioned> e <mentioned author="Gray">Chaetomys</mentioned>, arborícola, com cauda preênsil que se enrola pelo dorso, duros pêlos  aparecendo entre a pelagem. </def>
+               </sense>
+               <form type="inflected">
+                  <gramGrp> <gram type="number">Pl.</gram></gramGrp>
+                  <orth>ouriços-cacheiros</orth>
+                  <orth type="variant">, oiriços-cacheiros</orth>
+               </form>
+            </entry>
+            
+            <entry xml:id="DACL.BOLA" xml:lang="pt">
+               <form type="lemma">
+                  <orth>bola</orth>
+                  <lbl>:2</lbl>
+                  <pron>bˈolɐ</pron>
+               </form>
+               <gramGrp>
+                  <pos>n.</pos>
+                  <gen>f.</gen>
+               </gramGrp>
+               <sense xml:id="DACL.BOLA.6" n="1">
+                  <def>Pão de milho de forma redonda e achatada.</def>
+               </sense>
+               <sense n="2" xml:id="DACL.BOLA.8">
+                  <usg type="geo">Region. (Beiras).</usg>
+                  <def> Pão grande e doce.</def>
+                  <xr type="synonymy"><ref type="sense">fogaça</ref></xr> <!-- type might be remove from ref  -->
+               </sense>
+               <sense n="3" xml:id="DACL.BOLA.10">
+                  <def>Palmatoada.</def>
+               </sense>
+               <entry xml:id="DACL.BOLA.DE.CARNE" xml:lang="pt">
+                  <form type="lemma"><orth>bola de carne</orth></form>
+                  <form type="variant">bola</form>
+                  <usg type="geo">Region.</usg>
+               </entry>
+               <sense xml:id="DACL.BOLA.16">
+                  <def>espécie de pão feito da massa do pão de trigo a que se acrescentam ovos e em que se dispõem camadas de presunto, salpicão e outrs carnes. </def>
+               </sense>
+               <etym>
+                  <seg type="desc">De</seg>
+                  <cit type="etymon">
+                     <form>
+                        <orth>bolo</orth>
+                     </form>
+                  </cit>
+               </etym>
+            </entry>
+            
+            <entry xml:id="DACL.ACTUALIZADO" xml:lang="pt">
+               <form type="lemma">
+                  <orth xml:lang="pt-PT">actualizado</orth>
+                  <form type="inflected">
+                     <orth extent="suff">-a</orth>
+                  </form>
+                  <orth notBefore= "1990">atualizado</orth>
+                  <usg type="time">Acordo Ortográfico de 1990</usg>          
+                  <!-- I have to fix it! -->
+                  <pron>ɐtwɐlizˈadu, -ɐ</pron>
+               </form>
+           </entry>
+            
+           
+         </entry>
+      </body>
+  </text>
+</TEI>

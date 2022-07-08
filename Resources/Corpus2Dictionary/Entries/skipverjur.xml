@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: skipverjur</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>skipverjur</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="önundur" type="nken-s">Önundur</w>
+                     <w lemma="spyrja" type="sfg3eþ">spurði</w>
+                     <w lemma="skipverjur" type="nkfo">skipverja</w>
+                     <w lemma="sinn" type="fekfo">sína</w>
+                     <w lemma="hvort" type="c">hvort</w>
+                     <w lemma="hann" type="fpkfn">þeir</w>
+                     <w lemma="vilja" type="sfg3fþ">vildu</w>
+                     <w lemma="leita" type="sng">leita</w>
+                     <w lemma="fyrir" type="ao">fyrir</w>
+                     <w lemma="vestan" type="aa">vestan</w>
+                     <w lemma="land" type="nheog">landið</w>
+                     <w lemma="eða" type="c">eða</w>
+                     <w lemma="hafa" type="sng">hafa</w>
+                     <w lemma="slíkur" type="fbheo">slíkt</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="hann" type="fpkfþ">þeim</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="til" type="aa">til</w>
+                     <w lemma="vísa" type="sþghen">vísað</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hafliði" type="nken-s">Hafliði</w>
+                     <w lemma="fara" type="sfg3eþ">fór</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="hann" type="fpkfe">þeirra</w>
+                     <w lemma="skipverjur" type="nkfe">skipverja</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="mæla" type="sfg3eþ">mælti</w>
+                     <pc>:</pc>
+                     <w lemma="«" type="«">«</w>
+                     <w lemma="mikið" type="nken-s">Mikið</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="erfiði" type="nhen">erfiði</w>
+                     <w lemma="yðvarur" type="lhensf">yðvart</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="von" type="nven">von</w>
+                     <w lemma="að" type="aþ">að</w>
+                     <w lemma="þú" type="fp2fþ">yður</w>
+                     <w lemma="lík" type="nheþ">líki</w>
+                     <w lemma="illa" type="aa">illa</w>
+                     <w lemma="við" type="ao">við</w>
+                     <w lemma="grettir" type="nkeo-s">Gretti</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

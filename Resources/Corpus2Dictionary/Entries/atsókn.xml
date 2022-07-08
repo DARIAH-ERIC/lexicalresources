@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: atsókn</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>atsókn</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="björn" type="nken-s">Björn</w>
+                     <w lemma="eggja" type="sfg3eþ">eggjaði</w>
+                     <w lemma="þá" type="aa">þá</w>
+                     <w lemma="mjög" type="aa">mjög</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="atsókn" type="nvee">atsóknar</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="þó" type="aa">þó</w>
+                     <w lemma="ganga" type="sfg3eþ">gekk</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="eiga" type="svg3en">eigi</w>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="nærri" type="aam">nær</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hann" type="fpkeþ">honum</w>
+                     <w lemma="vera" type="svg3eþ">væri</w>
+                     <w lemma="við" type="ao">við</w>
+                     <w lemma="nokkura" type="nveþ">nokkuru</w>
+                     <w lemma="hætta" type="ssg">hætt</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="»" type="»">»</w>
+                     <w lemma="þórir" type="nken-s">Þórir</w>
+                     <w lemma="eggja" type="sfg3eþ">eggjaði</w>
+                     <w lemma="mjög" type="aa">mjög</w>
+                     <w lemma="maður" type="nkfn">menn</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="atsókn" type="nvee">atsóknar</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þórarinn" type="nken-s">Þórarinn</w>
+                     <w lemma="frá" type="aþ">frá</w>
+                     <w lemma="ökra" type="nvfþ-s">Ökrum</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="gamall" type="lkensf">gamall</w>
+                     <w lemma="maður" type="nken">maður</w>
+                     <w lemma="mjög" type="aa">mjög</w>
+                     <pc>,</pc>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="ekki" type="aa">ekki</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="atsókn" type="nveþg">atsókninni</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hann" type="fpkfn">Þeir</w>
+                     <w lemma="eggja" type="sfg3fþ">eggjuðu</w>
+                     <w lemma="maður" type="nkfn">menn</w>
+                     <w lemma="mjög" type="aa">mjög</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="atsókn" type="nvee">atsóknar</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hann" type="nken-s">Hann</w>
+                     <w lemma="hafa" type="sfg3eþ">hafði</w>
+                     <w lemma="margur" type="lhfþse">flestum</w>
+                     <w lemma="veita" type="ssg">veitt</w>
+                     <w lemma="nokkur" type="foveo">nokkura</w>
+                     <w lemma="áverki" type="nkeo">áverka</w>
+                     <w lemma="sá" type="fakfþ">þeim</w>
+                     <w lemma="sem" type="ct">sem</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="atsókn" type="nveþg">atsókninni</w>
+                     <w lemma="vera" type="sfg3fþ">voru</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="drepa" type="sþghen">drepið</w>
+                     <w lemma="þrír" type="tfkfo">þrjá</w>
+                     <w lemma="fylgdarmaður" type="nkfo">fylgdarmenn</w>
+                     <w lemma="öngulur" type="nkee-s">Önguls</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

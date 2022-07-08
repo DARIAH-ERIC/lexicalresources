@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/css" href="johnson.css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entryFree>
+            <form type="lemma"><orth>Lexicógrapher</orth></form>
+            <gramGrp><pos>n.s.</pos></gramGrp>
+            <etym><mentioned xml:lang="el">λεξικὸν</mentioned> and <mentioned xml:lang="el"
+                  >γράφω</mentioned>; <mentioned xml:lang="fr">lexicographe</mentioned>, <lang
+                  value="fr">French</lang>.</etym>
+            <sense><def>A writer of dictionaries; a harmless drudge, that busies himself in tracing
+                  the original, and detailing the signification of words.</def>
+               <cit type="example">
+                  <quote>Commentators and lexicographers acquainted with the Syriac language, have
+                     given these hints in their writings on scripture.</quote>
+                  <bibl>Watts.</bibl>
+               </cit>
+            </sense></entryFree>
+      </body>
+   </text>
+</TEI>

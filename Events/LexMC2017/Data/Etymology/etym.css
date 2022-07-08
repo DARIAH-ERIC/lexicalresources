@@ -1,0 +1,47 @@
+TEI {
+	margin: 0px;
+	font-size: 1em;
+	line-height: 1.3em;
+}
+
+teiHeader { display: none; }
+
+titlePage {
+	display: block;
+	border: 1px solid black;
+	padding: 1em;
+	margin: 1em;
+	text-align: center;
+}
+
+/*[rendition] { background-color: yellow; }*/
+[rendition~="#c"] { text-align: center; }
+[rendition~="#larger"] { font-size: 150%; }
+[rendition~="#smaller"] { font-size: 80%; }
+[rendition~="#g"] { letter-spacing: 0.25em; }
+[rendition~="#b"] { font-weight: bold; }
+[rendition~="#i"] { font-style: italic; }
+[rendition~="#k"] { font-variant: small-caps; }
+
+pb { display: block; }
+lb { display: block; }
+
+p {
+	text-indent: 1.5em;
+	display: block;
+}
+
+/* lexicographic microstructure */
+
+entry {
+	border: 1px dotted black;
+	display: block;
+}
+
+form {
+	display: block;
+}
+
+def { text-decoration: underline; }
+mentioned { background-color: Coral; }
+lang { background-color: DarkTurquoise; }

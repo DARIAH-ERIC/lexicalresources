@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="entries">
+   <head>Entries</head>
+   <div>
+      <head>General remarks</head>
+      <p>An <gi>entry</gi> is a basic reference unit in a dictionary: it groups together all the
+         information related to a particular lemma. For instance:</p>
+      <list type="examples">
+         <item>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#OALD1974">
+               <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="OALD.competitor"/>
+            </egXML>
+         </item>
+         <item>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Московљевић1990">
+               <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="MM.RSSKJ.круна"/>
+            </egXML>
+         </item>
+      </list>
+   </div>
+   <div>
+      <head>Mandatory attributes</head>
+      <p>The TEI Lex-0 schema prescribes two mandatory attributes on <gi>entry</gi>:</p>
+      <list>
+         <item><att>xml:id</att>
+            <hi rend="italic">uniquely</hi> identifies the element it is associated with;</item>
+         <item><att>xml:lang</att> identifies the object language of the element it is associated
+            with.</item>
+      </list>
+      <p>In XML, <att>xml:lang</att> is inherited from the immediately enclosing element or from its
+         closest ancestor that has this attribute. This means that in XML not every element needs to
+         have the <att>xml:lang</att> attribute. </p>
+      <p>TEI Lex-0 recommends that <att>xml:lang</att> be attached to so-called container elements
+         (such as <gi>entry</gi> and <gi>cit</gi>) rather than individual <gi>form</gi> elements. </p>
+      <p>In addition, TEI Lex-0 privileges <code>&lt;entry></code> as the dictionary’s central
+         textual component by requiring both a unique identifier (<att>xml:id</att>) as well as
+            <att>xml:lang</att>. </p>
+      <floatingText type="inFocusPanel" xml:id="naming-your-languages">
+         <body>
+            <head>Naming your languages </head>
+            <p><att>xml:lang</att> identifies the object language of the element it is associated
+               with. The language ‘tag’ (i.e. the value of this attribute) must follow <ref
+                  target="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">IETF BCP 47</ref>, the
+               Internet Engineering Task Force's best-practice document outlining standard
+               identifiers for labeling language content. To learn more about what language tag is
+               appropriate for your project, check out W3C's useful resource on <ref
+                  target="https://www.w3.org/International/questions/qa-choosing-language-tags.en"
+                  >choosing language tags</ref>. </p>
+            <p>If the language or language variety you are working on is not covered by BCP 47, make
+               sure to follow the syntax of Private Use Tags described in BCP 47 <ref
+                  target="https://tools.ietf.org/html/bcp47#section-2.2.7">Section 2.2.7</ref> when
+               creating one. Do this only if you are absolutely certain that no standard tag exists
+               for your object language. </p>
+            <p>If you have created a "private" language tag, you can validate it (in terms of its
+               structural well-formedness and validity) using the <ref
+                  target="https://schneegans.de/lv/"> BCP 47 validator</ref>.</p>
+            <p>Language tags containing private-use subtags should be documented in the TEI header,
+               specifically using one or more <gi>language</gi> elements grouped under
+                  <gi>langUsage</gi> inside <gi>profileDesc</gi>:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <profileDesc>
+                  <langUsage>
+                     <language ident="mix" role="objectLanguage">Mixtepec Mixtec</language>
+                     <language ident="mix-x-YCNY" role="objectLanguage">Yucanany Mixtec</language>
+                  </langUsage>
+               </profileDesc>
+            </egXML>
+         </body>
+      </floatingText>
+   </div>
+   <div>
+      <head>Grammatical properties</head>
+      <div>
+         <head>General remarks</head>
+         <p>Grammatical properties of lexical entries should be specified in <code
+               rend="language-xpath">entry/gramGrp/gram</code>. This <gi>gram</gi> element will
+            typically specify the part-of-speech of the entry:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <entry xml:lang="en" type="mainEntry" xml:id="on">
+                <form type="lemma"><orth>on</orth></form>
+                <gramGrp>
+                    <gram type="pos">prep</gram>
+                </gramGrp>
+                <!--...-->
+            </entry>
+        </egXML>
+         <p>Notes:</p>
+         <list type="ordered">
+            <item>Grammatical properties of the entry as a whole should <hi rend="italic">not</hi>
+               be specified in <code rend="language-xpath">entry/form[@type="lemma"]/gramGrp</code>. </item>
+            <item><code rend="language-xpath">entry/form/gramGrp</code> should be used only if a
+               particular form (a dialectal variant, for instance) has different grammatical
+               properties from the lemma; or to indicate the grammatical properties of the inflected
+               form which clearly deviate from the lemma. </item>
+            <item>For entries which group grammatical homonyms inside single entries (e.g. in
+               English dictionaries which do not have separate entries for conversion pairs of nouns
+               and verbs, such as <hi rend="bold">run</hi> or <hi rend="bold">aid</hi> see the
+               discussion under <ref target="#nested-entries-vs-multiple-senses">Nested entries vs.
+                  multiple-senses</ref>. </item>
+         </list>
+      </div>
+      <div xml:id="typology-of-gram">
+         <head>Typology of <gi>gram</gi></head>
+         <p>The <hi rend="italic">TEI Guidelines</hi> define: <list>
+               <item>seven <hi rend="italic">specific</hi> elements which can be used to mark up
+                  particular grammatical properties:<gi>case</gi>, <gi>gen</gi> (for gender),
+                     <gi>iType</gi> (for inflection type), <gi>mood</gi>, <gi>number</gi>,
+                     <gi>per</gi> (for person) and <gi>tns</gi> (for tense); and </item>
+               <item>one <hi rend="italic">general</hi> element (<gi>gram</gi>) which can be used to
+                  encode different kinds of grammatical properties.</item>
+            </list></p>
+         <p>The <hi rend="italic">Guidelines</hi> themselves do not explain the reasoning behind
+            having two different mechanisms for encoding the same kind of information. The two
+            mechanisms are treated as fully interchangeable: see, for instance, the first two
+            examples in <ref
+               target="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html#DITPGR">Section
+               9.3.2</ref>.</p>
+         <p>While it is perfectly understandable why marking up grammatical information using a
+            number of specific, granular elements can be considered desirable, the current situation
+            is less than perfect: <list>
+               <item>if both <code rend="language-xml">&lt;pos>prep&lt;/pos></code> and <code
+                     rend="language-xml">&lt;gram type="pos">prep&lt;/gram></code> are possible, and
+                  if both mean exactly the same thing, the choice about how to encode grammatical
+                  information will always be partially arbitrary;</item>
+               <item>the <hi rend="italic">specific</hi> grammatical elements in TEI cover some
+                  important grammatical categories, but are certainly not exhaustive: for instance,
+                  Slavic dictionaries will, as a rule, indicate aspect (imperfective or perfective)
+                  as the defining grammatical property of verbs, yet there is no specific element
+                  for: <gi>aspect</gi> in TEI.</item>
+               <item>if there are no <hi rend="italic">specific</hi> elements for every possible
+                  grammatical category, mixing specific and general elements (for instance <code
+                     rend="language-xml">&lt;pos>v.&lt;/pos></code> and <code rend="language-xml"
+                     >&lt;gram type="aspect">imperf.&lt;/gram></code> within the same entry and/or
+                  dictionary will most likely further complicate data processing and data
+                  interoperability.</item>
+            </list></p>
+         <p>Considering the goals of TEI Lex-0 to serve as a common baseline and target format for
+            transforming and comparing different lexical resources, we have decided to do away with
+            the specific elements for grammatical properties. Instead, we recommend the use of typed
+               <gi>gram</gi> elements. This is a decision that wasn't taken lightly and one which
+            solicited a great deal of discussion. It goes without saying that TEI itself will
+            continue to support both mechanisms and that an XSLT transformation from <code
+               rend="language-xml">&lt;pos>prep&lt;/pos></code> to <code rend="language-xml"
+               >&lt;gram type="pos">prep&lt;/gram></code> for those who want to convert their
+            dictionaries to TEI Lex-0 would be easily accomplished. </p>
+         <p>The following table shows a mapping between the specific TEI elements and the typed
+               <gi>gram</gi> elements in TEI Lex-0:<table rows="7" cols="2"
+               rend="pure-table pure-table-bordered">
+               <head>Mapping between specific elements in TEI and the generalized mechanism in TEI
+                  Lex-0</head>
+               <row role="label">
+                  <cell>TEI</cell>
+                  <cell>TEI Lex-0</cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;pos>n.&lt;/pos></code></cell>
+                  <cell><code>&lt;gram type="pos">n.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;case>acc.&lt;/case></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="case">acc.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;gen>f.&lt;/gen></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="gender">f.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;iType>7&lt;/iType></code></cell>
+                  <cell><code rend="language-xml">&lt;gram
+                     type="inflectionType">7&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;mood>indic.&lt;/mood></code></cell>
+                  <cell><code rend="language-xml">&lt;gram
+                     type="mood">indic.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;number>sg.&lt;/number></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="number">sg.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;per>3rd&lt;/per></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="person">3rd&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell><code rend="language-xml">&lt;tns>aorist&lt;/tns></code></cell>
+                  <cell><code rend="language-xml">&lt;gram
+                     type="tense">aorist&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell>-</cell>
+                  <cell><code rend="language-xml">&lt;gram
+                     type="aspect">imperf.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell>-</cell>
+                  <cell><code rend="language-xml">&lt;gram
+                        type="transitivity">intr.&lt;/gram></code></cell>
+               </row>
+            </table></p>
+         <p>Note: See also section on <ref target="#collocates">Collocates</ref>.</p>
+         <p>The attribute values for <code rend="language-xpath">gram/@type</code> are a semi-closed
+            list: this means that we will discuss and adopt additional values as demonstrated by
+            examples from dictionaries that are encoded by members of our community. </p>
+         <p>If your dictionary has grammatical labels that do not fit into the above categories, do
+            let us know by <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/new"
+               >filing a ticket on GitHub</ref>. </p>
+      </div>
+      <div xml:id="collocates">
+         <head>Collocates</head>
+         <p>The <hi rend="italic">TEI Guidelines</hi> define a specific element <gi>colloc</gi>
+            (collocate) for marking up "any sequence of words that co-occur with the headword with
+            significant frequency." The prototypical example from the <hi rend="italic"
+               >Guidelines</hi> is this:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
+               <entry>
+                  <form>
+                     <orth>médire</orth>
+                  </form>
+                  <gramGrp>
+                     <colloc>de</colloc>
+                  </gramGrp>
+                </entry>
+            </egXML></p>
+         <p>In line with the simplification of the elements used to describe grammatical properties
+            in dictionaries, TEI Lex-0 recommends the use of <code rend="language-xml">&lt;gram
+               type="collocate">&lt;/gram></code> to encode these phenomena, i.e.:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <entry xml:lang="fr" xml:id="DDLF.médire">
+                  <form type="lemma">
+                     <orth>médire</orth>
+                  </form>
+                  <gramGrp>
+                     <gram type="collocate">de</gram>
+                  </gramGrp>
+                </entry>
+            </egXML>
+         </p>
+         <p>In addition to marking up "sequences of words", <code rend="language-xpath"
+               >gram/@type="collocate"</code> is also used in TEI Lex-0 for encoding various types
+            of grammatical relations (differently referred to in the literature as valency, rection,
+            dependency etc.):
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <gramGrp>
+               <gram type="collocate">[+ conj.]</gram>
+            </gramGrp>
+         </egXML>
+         </p>
+      </div>
+   </div>
+   <div>
+      <head>Deprecated entry-like elements</head>
+      <p>The current TEI Guidelines define five different container elements that may serve as
+         grouping devices for entry-level lexical information:</p>
+      <list>
+         <item><gi>entry</gi>: contains a single <hi rend="italic">structured entry</hi> in any kind
+            of lexical resource, such as a dictionary or lexicon.</item>
+         <item><gi>entryFree</gi>: contains a single <hi rend="italic">unstructured entry</hi> in
+            any kind of lexical resource, such as a dictionary or lexicon.</item>
+         <item><gi>superEntry</gi>: groups a sequence of entries within any kind of lexical
+            resource, such as a dictionary or lexicon which function as a single unit, for example a
+            set of homographs.</item>
+         <item><gi>re</gi>: (related entry) contains a dictionary entry for a lexical item related
+            to the headword, such as a compound phrase or derived form, embedded inside a larger
+            entry.</item>
+         <item><gi>hom</gi>: (homograph) groups information relating to one homograph within an
+            entry</item>
+      </list>
+      <p>These five elements can be used to distinguish different types of entries along two
+         conceptual axes:</p>
+      <list>
+         <item>Structured vs. unstructured entries, i. e. entries that can readily be represented
+            (in the lexical view) in the spirit of the TEI Guideline’s Dictionary Chapter
+               (<gi>entry</gi>, <gi>re</gi>) vs. entries that for some reason violate the generic
+            content model of <gi>entry</gi> or <gi>re</gi> and thus have to be represented more
+            freely (<gi>entryFree</gi>). A third category in this respect are entries that exhibit a
+            highly reduced amount of lexical content while this content is still of essentially
+            entry-like nature (<gi>superEntry</gi>). </item>
+         <item>Containing vs. contained entries: entries may contain additional lexical information
+            that can be conceived as an additional dictionary entry in its own right. Specifically,
+               <gi>superEntry</gi> may contain <gi>entry</gi>, and <gi>entry</gi> in turn may
+            contain <gi>re</gi> to represent the embedding of lexical entries on three distinct
+            levels. Due to <gi>re</gi> being allowed to be used recursively, the number of levels
+            for representing entry-like lexical information inside other such blocks is effectively
+            unrestricted. At the same time, two different mechanism can be used to create
+            homographic entries: <gi>superEntry</gi> containing multiple <gi>entry</gi> elements; or
+               <gi>entry</gi> containing multiple <gi>hom</gi> elements. </item>
+      </list>
+      <div>
+         <head><gi>hom</gi></head>
+         <p>Making a clear difference between a situation where an entry has to be split into two or
+            more homonyms and one where these differences correspond to a semantic alternation is
+            lexicographically difficult. Still, the main danger in keeping both possibilities in the
+            representation of a lexical entry in a digital lexicon is to introduce a systematic
+            structural ambiguity as to where the appropriate information is to be found. We thus
+            deprecate <gi>hom</gi> altogether in the present recommendation and have this element be
+            replaced by the nested <gi>entry</gi> construct. For instance, the following example
+            from the TEI <hi rend="italic">Guidelines</hi>:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
+            <entry>
+                <form>
+                    <orth>bray</orth>
+                    <pron>breI</pron>
+                </form>
+                <hom>
+                    <gramGrp>
+                        <gram type="pos">n</gram>
+                    </gramGrp>
+                    <sense>
+                        <def>cry of an ass; sound of a trumpet.</def>
+                    </sense>
+                </hom>
+                <hom>
+                    <gramGrp>
+                        <gram type="pos">vt</gram>
+                        <subc>VP2A</subc>
+                    </gramGrp>
+                    <sense>
+                        <def>make a cry or sound of this kind.</def>
+                    </sense>
+                </hom>
+            </entry>
+        </egXML>
+         <p>would in TEI Lex-0 be represented as:</p>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="bray"/>
+        </egXML>
+      </div>
+      <div>
+         <head><gi>superEntry</gi></head>
+         <p>By making <gi>entry</gi> recursive, TEI Lex-0 has eliminated the need for grouping
+            entries with <gi>superEntry</gi>.</p>
+         <p>This is especially important for traditional root-based dictionaries, which start with
+            the root as the main headword, followed by full-fledged lexicographic entries of derived
+            headwords.</p>
+         <list type="examples">
+            <item>
+               <figure>
+                  <graphic url="https://imgur.com/d4QTXla.png"/>
+               </figure>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Almonjid2014">
+                  <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="syj"/>
+               </egXML>
+            </item>
+            <item>
+               <figure>
+                  <graphic url="https://imgur.com/Lb2sxyo.png"/>
+               </figure>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Almonjid2014">
+                  <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="shahama"/>
+               </egXML>
+            </item>
+         </list>
+         <p>See also Section on <ref target="#grammatical-properties-in-senses">grammatical
+               properties in senses</ref>.</p>
+      </div>
+   </div>
+</div>

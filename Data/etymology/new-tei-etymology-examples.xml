@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../Schemas/TEILex0/out/TEILex0-ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sample Etymological Phenomena for TEI Lex0 Etymology Paper</title>
+            <author>Jack Bowers</author>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <ab>Examples are encoded in TEI-Lex0 Etymology format</ab>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <!-- Cognate Set -->
+         <entry xml:lang="en" xml:id="girl-en">
+            <form type="lemma">
+               <orth>girl</orth>
+            </form>
+            <etym>
+               <cit type="cognateSet">
+                  <lbl>Cf.</lbl>
+                  <cit type="cognate">
+                     <lang>NFries.</lang>
+                     <form>
+                        <orth xml:lang="ffr">gör</orth>
+                     </form>
+                     <def>a girl</def>
+                  </cit>
+                  <cit type="cognate" xml:lang="nds-x-pom"><!-- Pomeran. german dialect variety of low german 
+                     a more specific variety "East Pomeranian"
+                     has no ISO tag but a Glottolog one: east2293 -->
+                     <lang>Pomeran.</lang>
+                     <form>
+                        <orth>goer</orth>
+                     </form>
+                     <def>a child</def>
+                  </cit>
+                  <cit type="cognate">
+                     <lang>O. Low. G.</lang>
+                     <form>
+                        <orth xml:lang="nds">gör</orth>
+                     </form>
+                     <def>a child</def>
+                     <bibl>Bremen Wörterbuch, ii. 528</bibl>
+                  </cit>
+                  <cit type="cognate">
+                     <lang>Swiss</lang>
+                     <form type="variant">
+                        <orth xml:lang="gsw">gurre</orth>
+                     </form>
+                     <form type="variant">
+                        <orth xml:lang="gsw">gurrli</orth>
+                     </form>
+                     <def>a depreciatory term for a girl</def>
+                     <bibl>Sanders, G. Dict. i. 609. 641</bibl>
+                  </cit>
+                  <cit type="cognate">
+                     <lang>Norw.</lang>
+                     <form>
+                        <orth xml:lang="nor">gorre</orth>
+                     </form>
+                     <def>a small child</def>
+                     <bibl>(Aasen)</bibl>
+                  </cit>
+                  <cit type="cognate">
+                     <lang>Swed. dial.</lang>
+                     <form type="variant">
+                        <orth xml:lang="swe-x-dia">gårrä</orth>
+                     </form>
+                     <form type="variant">
+                        <orth xml:lang="swe-x-dia">gurre</orth>
+                     </form>
+                     <def>a small child</def>
+                  </cit>
+               </cit>
+            </etym>
+         </entry>
+         <!-- Portmanteau (Blends) -->
+         <entry xml:lang="en" xml:id="brexit-en">
+            <form type="lemma">
+               <orth>Brexit</orth>
+            </form>
+            <gramGrp>
+               <gram/>
+            </gramGrp>
+            <sense xml:id="brexit-en-sense1">
+               <!-- sense info here -->
+            </sense>
+            <etym type="portmanteau">
+               <seg type="desc">portmanteau of</seg>
+               <cit type="etymon">
+                  <form>
+                     <orth>Britain</orth>
+                  </form>
+                  <!-- add pron? -->
+               </cit>
+               <pc>+</pc>
+               <cit type="etymon">
+                  <form>
+                     <orth>exit</orth>
+                  </form>
+                  <!-- add pron? -->
+               </cit>
+               <!-- (interesting extra component, overlaps with other new phenomena to introduce) -->
+               <!-- formed by analogy with "Grexit" -->
+               <bibl type="source" corresp="https://en.wiktionary.org/wiki/Brexit"/>
+               <!-- or should this be <ref type="bibl" target="https://en.wiktionary.org/wiki/Brexit"/> ? or <re>?-->
+            </etym>
+         </entry>
+         <!-- 
+         The first one is the problem of lexicalisation of inflected forms (e.g., in English or French, a past participle which also became an adjective, often with a slightly different meaning).
+         
+         -->
+         <!-- 
+          The other one is analogical leveling and metanalysis. 
+         An example of metanalysis is English "pea", an "erroneous" singular created from the form "peas", borrowed from French "pois", erroneously interpreted as a plural form (in -s).
+         
+         Same story with "cherry", an erroneous singular for of "cherries", erroneously understood as a plural (from French (dial.?) "c(h)erise").
+       
+       As for analogical leveling itself, it is especially problematic when it affects citation forms 
+         (cf. Finnish Nom. Sg. lahti, Gen. Sg. lahden ‘bay’, vs. older Nom. Sg. laksi, which was replaced by lahti by analogy with a regular pattern Xhti / Xhden, cf. lehti / lehden ‘star’). 
+         -->
+         <!-- Folk Etymology
+         <entry xml:lang="en" xml:id="asparagus-en">
+            <form>
+               <orth>asparagus</orth>
+            </form>
+            <gramGrp>
+               <gram/>
+            </gramGrp>
+            <etym/>
+         </entry>
+         -->
+         <!-- Underspecified Contents -->
+         <!-- borrowing -->
+         <entry xml:id="h405_qdb-d1e12076" xml:lang="bar">
+            <form type="hauptlemma">
+               <orth>hetzen</orth>
+            </form>
+            <gramGrp>
+               <pos>Verb</pos>
+            </gramGrp>
+            <form type="lehnwort" n="1">
+               <lang expand="Slovenian">slow.</lang>
+               <pron notation="tustep">höcati</pron>
+            </form>
+            <sense xml:id="hetzen-bar-sense1">
+               <def xml:lang="de">hetzen</def>
+            </sense>
+            <etym type="borrowing">
+               <seg type="desc">aus</seg>
+               <cit type="etymon" xml:lang="sl">
+                  <lang>slow.</lang>
+               </cit>
+            </etym>
+            <ref type="bibl">
+               <bibl>Slg.Preschern</bibl>
+            </ref>
+            <usg type="geo">
+               <placeName>slow.Kä.</placeName>
+            </usg>
+         </entry>
+         <!-- inheritance -->
+         <entry xml:id="z884_qdb-d1e11959" xml:lang="bar">
+            <form type="hauptlemma">
+               <orth xml:lang="bar">(Fer)zug</orth>
+            </form>
+            <gramGrp>
+               <pos>Subst</pos>
+            </gramGrp>
+            <form type="lautung" n="1">
+               <pron notation="tustep">verzug</pron>
+               <gramGrp>
+                  <gram>[m]</gram>
+               </gramGrp>
+            </form>
+            <sense corresp="this:LT1" xml:id="Ferzug-bar-sense1">
+               <def xml:lang="de">Säumniss</def>
+            </sense>
+            <etym type="inheritance">
+               <cit type="etymon" xml:lang="gmh">
+                  <lang>mhd.</lang>
+                  <bibl>Lexer Wb. III 324</bibl>
+               </cit>
+               
+            </etym> 
+            <ref type="bibl">
+               <bibl>SteirKäWeistGl. S. HW-3742/6/b</bibl>
+            </ref>
+        
+         </entry>
+         <!--  Conflicting Etymologies-->
+         
+         <!-- Onomatopeia -->
+         <entry xml:id="oink-kat" xml:lang="kat">
+            <form type="lemma">
+               <orth xml:lang="kat">ღრუტუ ღრუტუ</orth>
+               <pron/>
+               <!-- ideally onomatapeia examples should have pronunciation -->
+            </form>
+            <sense xml:id="oink-kat-sense1">
+               <def xml:lang="en">The sound of a pig grunting</def>
+            </sense>
+            <etym type="onomatopeia"/>
+         </entry>
+
+         <!-- 
+ Latin: “oriente” 
+	derivation of:
+“orior, oriori, oratus sum” - “to rise”
+ metonymy: (partForWhole: action(rising) for placeOfAction(east))
+desc: the cardinal direction through with which the sun rises, and according to which humans (and most animals) organize their daytime activity (metonymy); thus the verb “orior,-...”, used to describe the action of rising….;
+see also: (it) orientarsi, (en) to orient,...(these are both cognates and descendants)
+
+      
+         <entry>
+            <form>
+               <orth>oriente</orth>
+            </form>
+            <sense/>
+            <etym>
+               <seg type="desc">derivation of</seg>
+               <cit type="etym">
+                  <form>
+                     <orth/>
+                  </form>
+                  <form>
+                     <orth/>
+                  </form>
+                  <form>
+                     <orth/>
+                  </form>
+                  <form>
+                     <orth/>
+                  </form>
+                  <def>to rise</def>
+               </cit>
+               <seg type="desc"/>
+            </etym>
+         </entry> 
+         -->
+         <entry xml:id="fickfacken" xml:lang="bar">
+            <form type="lemma">
+               <orth>fickfacken</orth>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+            </gramGrp>
+            <etym>
+               <seg type="desc" part="I">seit dem</seg>
+               <usg type="time">
+                  <date>18.  Jh.</date>
+               </usg>
+               <seg type="desc" part="M">belegt, auf</seg>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="de">fickfacken</orth>
+                  </form>
+                  <sense xml:id="fickfacken-s1">
+                     <def xml:lang="de">'hin- und herlaufen'</def>
+                  </sense>
+               </cit>
+               <seg type="desc" part="F">zurückgeführt</seg>;    
+               <seg type="desc" part="I">evtl. auch auf </seg>
+               <cit type="etymon">
+                  <lang>fnhd.</lang>
+                  <form>
+                     <orth xml:lang="de-x-FNHD">fatzen</orth>
+                  </form>
+                  <!-- frühneuhochdeutsch -->
+                  <sense xml:id="fickfacken-s1">
+                     <def xml:lang="de">'spotten, zum Narren halten'</def>
+                  </sense>
+               </cit>
+               <seg type="desc" part="F">zurückführbar</seg>
+               <bibl>(vgl. Pfeifer 2014: 329)</bibl>
+            </etym>
+         </entry>
+         <entry>
+            <etym>
+               <usg type="date">
+                  <date>(early 15c.,)</date>
+               </usg>
+            </etym>
+            <cit type="cognate">
+               <lang>Chalcatongo Mixtec</lang>
+               <usg type="geo">
+                  <placeName>(San Miguel El Grande)</placeName>
+               </usg>
+               <form>
+                  <pron notation="trans-macaulay-mig" xml:lang="mig">šinì</pron>
+               </form>
+               <bibl source="#Macaulay-ChalcatongoMixtec-1996">(Macaulay, 1996)</bibl>
+            </cit>
+            <cit type="cognate">
+               <lang>Ayutla Mixtec</lang>
+               <form>
+                  <pron notation="trans-hill-1990-miy" xml:lang="miy">shīhih</pron>
+               </form>
+               <bibl source="#Hills-AyutlaMixtec-1990">(Hills, 1990)</bibl>
+            </cit>
+            <cit type="cognate">
+               <lang>Coatzospan Mixtec</lang>
+               <form>
+                  <pron notation="trans-smll-miz" xml:lang="miz">rkɨ</pron>
+               </form>
+               <bibl  source="#Small-CoatzospanMix-1990">(Small, 1990)</bibl>
+            </cit>
+            <cit type="cognate">
+               <lang>San Martín Duraznos</lang>
+               <form>
+                  <pron notation="ipa" xml:lang="smd">ʃīɲī</pron>
+               </form>
+               <bibl  source="#Padgett-2017">(Padget, 2017)</bibl>
+            </cit>
+         </entry>
+         <!-- tei-lex0 -->
+         <entry xml:id="cieling" type="compound" xml:lang="mix">
+            <form type="lemma">
+               <orth>xiní ve'e</orth>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense xml:id="cieling-mix-sense1" corresp="http://dbpedia.org/resource/Ceiling">
+               <usg type="domain"
+                    corresp="http://dbpedia.org/resource/Category:Architectural_elements">Architectural_elements</usg>
+               <xr type="lexical" subtype="meronym">
+                  <ref target="#house" xml:lang="mix">ve'e</ref>
+               </xr>
+               <xr type="lexical" subtype="meronym">
+                  <ref target="#house" xml:lang="en">house</ref>
+               </xr>
+               <cit type="translation">
+                  <orth xml:lang="en">cieling</orth>
+               </cit>
+               <cit type="translation">
+                  <orth xml:lang="es">techo</orth>
+               </cit>
+               <etym type="compounding">
+                  <seg type="desc" xml:lang="en">This word is derived from a compound of 'head' and 'house'. The use of the former represents a shift in the domain of the source term from 'head' as a direct meronym of 'body' to a meronym of a building. Thus the semantic profile shift is: 'TOP partOf BODY' to 'TOP partOf BUILDING' </seg>
+                  <etym type="metaphor">
+                     <cit type="etymon">
+                        <form>
+                           <orth corresp="#body-head">xiní</orth>
+                        </form>
+                        <gloss xml:lang="en">head</gloss>
+                        <gloss xml:lang="es">cabeza</gloss>
+                        <usg type="domain">AnatomicalStructure</usg>
+                        <xr type="lexical" subtype="meronym">
+                           <ref target="#body" xml:lang="mix">kuñu</ref>
+                        </xr>
+                        <xr type="meronymOf">
+                           <ref target="#body" xml:lang="en">body</ref>
+                        </xr>
+                     </cit>
+                  </etym>
+                  <cit type="etymon">
+                     <form>
+                        <orth corresp="#house">ve'e</orth>
+                     </form>
+                     <gloss xml:lang="en">house</gloss>
+                     <gloss xml:lang="es">casa</gloss>
+                  </cit>
+               </etym>
+            </sense>
+         </entry>
+         <!-- tei-lex0 -->
+         <entry xml:lang="pt" xml:id="humanal-pt">
+            <form type="lemma">
+               <orth xml:lang="pt">húmanal</orth>
+               <pron xml:lang="pt" notation="ipa">umɐnáł</pron>
+            </form>
+            <gramGrp>
+               <pos>adj.</pos>
+               <gen>m.</gen>
+               <lbl>e</lbl>
+               <gen>f.</gen>
+            </gramGrp>
+            <etym type="derivation">
+               <pc>(</pc>
+               <seg type="desc">De</seg>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="pt">humano</orth>
+                  </form>
+               </cit>
+               <pc>+</pc>
+               <cit type="etymon">
+                  <gramGrp>
+                     <gram>suf.</gram>
+                  </gramGrp>
+                  <form>
+                     <orth extent="suff">-al</orth>
+                  </form>
+               </cit>
+               <pc>)</pc>
+            </etym>
+         </entry>
+         <entry><!-- 
+            http://gtb.inl.nl/iWDB/search?actie=article&wdb=WNT&id=M082500&lemmodern=vork&domein=0&conc=true
+            -->
+            <pc> —</pc>
+            <form>VORKE, VURK </form>
+            <pc>—</pc>
+            <pc>,</pc>
+            znw. vr. en eert. soms ook m., mv. -en (gewest. soms ook -ens).
+            
+            <etym>
+               <cit type="etymon">
+                  <lang>Mnl.</lang>
+                  <form>
+                     <orth>vorke</orth>
+                  </form>
+               </cit>;
+                
+                <cit type="cognate">
+                  <lang>ohd.</lang>
+                  <form>
+                     <orth>furka</orth>
+                  </form>
+               </cit>,
+                <cit type="cognate">
+                  <lang>nhd.</lang>
+                  <form>
+                     <orth>furke</orth>
+                  </form>
+               </cit>; 
+                <cit type="cognate">
+                  <lang>os.</lang>
+                  <form>
+                     <orth>furka</orth>
+                  </form>
+               </cit>,
+                <cit type="cognate">
+                  <lang>mnd.</lang>
+                  <form>
+                     <orth>vorke</orth>
+                  </form>
+               </cit>, 
+                <cit type="cognate">
+                  <lang>nnd.</lang>
+                  <form>
+                     <orth>förk(e)</orth>
+                  </form>
+               </cit>;
+                <cit type="cognate">
+                  <lang>ofri.</lang>
+                  <form>forke</form>
+                  <form>
+                     <orth>(farke)</orth>
+                  </form>
+               </cit>; 
+                <cit type="cognate">
+                  <lang>oe.</lang>
+                  <form>
+                     <orth>forca</orth>
+                  </form>
+               </cit>,
+                <cit>
+                  <lang>ne.</lang>
+                  <form>
+                     <orth>fork</orth>
+                  </form>
+               </cit>; 
+                <cit type="etymon">
+                  <lang>on.</lang>
+                  <form>
+                     <orth>forkr</orth>
+                  </form>
+               </cit>. 
+                
+                <!-- account (1) FRINGS -->
+               <etym>
+                   Het woord vork in de bet. ‘<xr>hooivork</xr>’<!-- reference to sense --> is volgens <persName>frings</persName> in het Rijnlandsch een <lang>lat.</lang> ontleening.
+                   <cit type="etymon" xml:lang="la"/>
+                  <!-- need to declare source of borrowing (etymon) but no form is given! -->
+               </etym>
+               <!-- account (2) WEIJNEN -->
+               <etym>
+                  Dit acht <persName>weijnen</persName>
+                  <bibl>(Med. V.A. 1967, 425 volg.)</bibl> erg onwaarschijnlijk voor vork (`<xr>hooivork</xr>’) in het <lang>ndl.</lang> taalgebied.
+                
+                Hij baseert deze meening op grond van de verbreiding: vork komt in het W. en in het N.-O. voor, maar het ontbreekt in het <lang>Limb.</lang> waar men het, als het al een <lang>lat.</lang> ontleening was, zeker ook verwacht zou hebben. 
+                
+                Zelf denkt hij eerder aan een latere ontleening, via <lang>rom.</lang> bemiddeling. 
+                  
+                  Die ontleening moet dan in ieder geval <usg type="time">vóór <date>± 700</date>
+                  </usg> hebben plaatsgevonden, gezien het feit dat de k niet gepalataliseerd is. 
+                  
+                Een latere ontleening zou eventueel nog mogelijk zijn uit fr. dialecten waarin k (voor a) niet tot tsj werd, zooals het <lang>Picardisch</lang>.
+               </etym>
+               
+                Dat deze vork-`hooivork`-gevallen op het <lang>Picardisch</lang> teruggevoerd zouden moeten worden is echter niet erg waarschijnlijk. 
+                De ontleening van vork vond, zooals uit het bovenstaande blijkt, plaats in een bet. ‘<xr>hooivork</xr>’ (mog. onder invloed van de rom. cultuur een hooivork met ijzeren tanden, dit in tegenst. tot gaffel, het oorspr. <lang>germ.</lang> woord dat in ieder geval aanvankelijk wel de hooivork met houten tanden zal hebben aangeduid). 
+                
+                Het gebruik van vork voor het bekende keuken- of eetgerei is van aanzienlijk jongeren datum (<lang>fr.</lang>
+               <xr>fourchette</xr> is b.v. pas sinds <usg type="time">
+                  <date>1313</date>
+               </usg> overgeleverd). 
+                
+                <lang>Mnl.</lang> W. 9, 1149 bevat bewijsplaatsen in dit "culinair" verband vanaf de <usg type="time">
+                  <date>14de</date>
+               </usg> e. <bibl>(Rek. v. Zeel. 1, 244 [c. 1332], O.R. v. Dordr. 2, 39 [1421], Cod. Dipl. U. 2¹, 169 [1444], Rek. d. Buurk. 190 [1483])</bibl>. 
+                
+                In het <lang>ndl.</lang> taalgebied is vork in die nieuwe bet. ‘<xr>eetvork</xr>’ vooral in <lang>N.-Nederl.</lang> in zwang gekomen en in de standaardtaal het gewone gebr. geworden. 
+                
+                Voor dat begrip hebben zuid. dial., inz. in Vl.-België, ben. als forkèt, ferkèt, vorkèt, verkèt of forsjèt, fersjèt, versjèt, ontleend aan het <lang>Picardisch</lang> of het fr. <xr>(vgl. ook VORKET)</xr>.
+                
+               Zie voor dialectkaarten verder bovengenoemd art. van <persName>weijnen</persName>.
+            </etym>
+         </entry>
+         <!-- 
+         This according to Weijnen (Med.V.A. 1967, 425 follow) is very unlikely for fork (`pitchfork ') in the ndl. language area. He bases this opinion on the basis of the spreading: fork comes in the W. and in N.-O. for, but it is missing in the Limb. where it is, if it is already a bar. borrowing, certainly expected. He himself thinks of a later borrowing, via rom. mediation. 
+ ===========
+         That borrowing must then have taken place in any case before ± 700, in view of the fact that the k is not paralized. A later borrowing could possibly be possible from fr. Dialects in which k (for a) did not become a tsj, like the Picardian.
+         
+         That these fork-pitchfork cases should be returned to the Picardian is not very likely. The borrowing of fork, as is clear from the above, took place in a bet. 'Pitchfork' (possibly under the influence of the Roman culture a pitchfork with iron teeth, this in opposition to fork, the original word that in any case initially would have indicated the pitchfork with wooden teeth). The use of a fork for the familiar kitchen or eating utensils is of considerable young people's date (for example, fourchette has only been surrendered since 1313). Mnl. W. 9, 1149 contains evidence places in this "culinary" context from the 14th. (Exhibit of Zeals 1, 244 [c.1332], OR v. Dordr 2, 39 [1421], Cod, Dipl.U. 2, 169 [1444], Rek, d, Buurk 190 [1483]). ]).
+         
+         In the ndl. language area is fork in that new bet. 'Eating fork' especially in N. Nederl. came into vogue and in the standard language the ordinary user. become.
+         
+         South has that understanding. dial., in. in Vl.-Belgium, am. as forkèt, ferkèt, forkèt, verkèt or forsjèt, fersjèt, versjèt, derived from the Picardian or the fr. (see also VORKET).
+         
+For dialect cards, see the aforementioned art. of weasels.
+         
+         -->
+         
+         
+         <!-- 
+ars, artis
+'skill, art; trick'
+[f. /] (P1.+)
+
+Derivatives: 
+iners 'clumsy, lazy' [abl.sg. inerti] (Naev.+); 
+sollers 'clever, skilled' (Cato+);
+al(l)ers 'learned, clever' (gloss,);
+artifex, -ficis (Van artufices) 'practitioner, craftsman' (PL+),
+artificium * skill, craft' (Cic.+).
+
+Pit. *arft-.
+PIE *h2r-ti- 'thefitting'
+·IE cognates:
+  OAv. araiti-, 
+  YAv. asi- [f.] 'reward',
+  Gr. άρτι 'just, exactly', άρτίν 'correctly' in cp.
+  
+Lat. sollers < *soti-arti- to sollus 'entire';
+al(l)ers < *all-arti- to O. alio- 'entire'.
+
+According to Untermann 2000, Latin *all- was probably borrowed from Sabellic, since Latin does not have this word in its lexicon. For a word only occurring in glosses, this is of course possible. 
+
+Others have proposed an etymology *ad-arti- with intervocalic V becoming /; the spelling allers would then be analogical to sollers.
+
+Bibl.: WH I: 70, EM 48£, IEW 55ff., Schrijver 1991: 68, Untermann 2000: 81, LIV l.*h2er-. -+arma
+         -->
+         <entry xml:id="ars-artis-la" xml:lang="la">
+            <form>ars, artis</form>
+            
+           <sense xml:id="ars-artis-la-sense1"><def>'skill, art; trick'</def></sense>
+           <gramGrp>[f. i] (Pl.+)</gramGrp>
+            
+            <lbl>Derivatives:</lbl>
+            <entry xml:id="iners-la" xml:lang="la" type="derivative">
+               <form><orth>iners</orth></form>
+               <sense xml:id="iners-la-sense1">'clumsy, lazy'</sense>
+               [abl.sg. inerti]
+               (Naev.+); 
+            </entry>
+            <entry xml:id="sollers-la" xml:lang="la" type="derivative">
+               <form><orth>sollers</orth></form>
+               <sense xml:id="sollers-la-sense1">'clever, skilled'</sense> 
+               (Cato+);
+            </entry>
+            <entry xml:id="allers-la" xml:lang="la" type="derivative">
+               <form><orth>al(l)ers</orth></form> 
+               <sense xml:id="allers-la-sense1">'learned, clever'</sense> 
+               (gloss.);
+            </entry>
+            <entry xml:id="artifex-la" xml:lang="la" type="derivative">
+               <form type="lemma">
+                  <orth>artifex</orth>,
+               </form>
+               <form type="inflected"><orth extent="suff">-ficis</orth></form>
+               (Van artufices)
+               <sense xml:id="artifex-la-sense1"><gloss>'practitioner, craftsman'</gloss> </sense>
+               (PL+),
+            </entry>
+            <entry xml:id="artificium-la" xml:lang="la" type="derivative">
+               <form><orth>artificium</orth></form>
+               <sense xml:id="artificium-la-sense1">'skill, craft'</sense>
+               (Cic.+).
+            </entry>
+            
+            <etym>
+               <cit type="etymon">
+                  <form><orth xml:lang="PIt">*arti-</orth></form>
+               </cit>
+               <cit type="etymon">
+                  <form><orth xml:lang="PIE">*h₂r-ti-</orth></form>
+                  <sense xml:id="h2rti-PIE-sense1"><def>'thefitting'</def></sense>
+               </cit>
+               <pc></pc><lbl></lbl>
+               <!-- cognates -->
+               <etym>
+                  <!-- Lat. sollers < *soti-arti- to sollus 'entire'; al(l)ers < *all-arti- to O. alio- 'entire'. -->
+                  <seg type="desc" part="I">According to</seg> <bibl>Untermann 2000</bibl>, 
+                  <lang>Latin</lang> <xr type="crossReference"><ref xml:lang="la">*all-</ref></xr> <seg type="desc" part="M">was probably borrowed from</seg> <cit type="etymon" xml:lang="nds-x-sabe1249"><lang>Sabellic</lang></cit>, <seg type="desc" part="F">since <lang>Latin</lang> does not have this word in its lexicon. For a word only occurring in glosses, this is of course possible.</seg>
+               </etym>
+               
+               <etym><seg type="desc" part="I">Others have proposed an etymology</seg> <cit type="etymon"><form><orth xml:lang="ine">*ad-arti-</orth></form></cit> with intervocalic <c xml:id="c1" next="#c2">d</c> becoming <c xml:id="c2" prev="#c1">l</c><pc>;</pc> <seg type="desc" part="F">the spelling <xr type="crossReference"><ref xml:lang="la">allers</ref></xr> would then be analogical to <xr type="crossReference"><ref xml:lang="la">sollers</ref></xr><pc>.</pc></seg></etym>
+            </etym>
+         </entry>      
+         
+         <!-- 
+amarus 'bitter' [adj. ο/ā] (P1.+)
+Derivatives: amariludo 'bitterness' (Varro+), amaror [m.] 'bitter taste' (Lucr.+).
+
+Pit. *o/am-?
+PIE *h₂h₃m-ro-?
+
+IE cognates: Skt. amla- 'sour, acid', OIc. apr 'shaip, cold', OE ampre 'sour one', MDu, amper 'bitter, sour' < PGm. *am(p)ra- 'sour'; ? Olr. om 'raw', W. of possibly <*h₂h₃-emo-, Skt. a/wi- [adj.] 'Raw, uncooked', Gr. ω ός 'raw' Arm. howm <*h₂e₃hmo-*
+
+The suffix -arus is only attested as a primary derivative in avarus 'greedy' to aveo, but there is no verb to which amarus might belong.
+
+Kortlandt 1980a connects it with Greek and Armenian words for 'raw' and reconstructs *HHm-,
+
+but 
+
+Schrijver 1991: 77 argues that the semantics are not compelling. 
+
+The connection with Skt. and Gm. 'sour' is semantically more convincing; these might go back to PIE *h₂em~ro-. In that case, Latin must have replaced the suffix *-ro- by *-aro-. Thus, some details remain unclear. It is also possible to reconstruct earlier *om- 'raw' for Italo-Celtic, and posit unrounding of *#omV- >amV-as per Rasmussen 1993: 181.
+
+BibL: WH I: 35, EM 25, IEW 777f., Kortlandt 1980a, Schrijver 1991: 43, Heidermanns 1993: 99f.
+         -->
+         
+         <!-- 
+            arcessō, -ere / accersō, -ere
+            'to summon, send for'
+            
+            [v. Ill; pf. arcessīvī  -/iī, ppp arcessītum]
+            
+            (
+            Pl.+; pr. accers-, arcess- 
+            PI. Ter. Cato, pf. arcess-
+            Cic.+; several ī-con forms, cf. TLL
+            )
+Pit. *kers-s-e/o~.
+PIE *kers- 'to run
+\
+IE cognates: see s.v. currō.
+
+The stem occurs in two variants, accers- and arcess-, which suggests that on developed from the other by an unusual metathesis or an analogical replacement.
+
+Both variants seem to have been sprachwirklich in Plautus' times. The pr. is productive from PL onwards, whereas the pf. is hardly attested before Cicero. Since the pf. clearly favors the variant arcess-^ one might hypothesize that arcess- was in the process of ousting accers-^ and that the latter must therefore be the original forn Nussbaum 2007b gives two more arguments for regarding accerso as original: the noun dorsum > dossum shows a phonetic change of *rs > ssm3 a verb in -cesso meaning 'go get' would be favoured by its semantic neighbours capessō and (ex)petessō
+Nussbaum suggests that accerso may reflect *ad<-kers-s-e/o-, an «s-present to the root *krs- 'to run' (whence Lat. curro). -->
+         
+         <entry xml:id="arcessō-accersō" xml:lang="la">
+            <form type="lemma">
+               <form type="variant">
+               <orth>arcessō</orth>, <form><orth extent="part">-ere</orth></form>
+            </form>
+               <form type="variant">
+               <orth>accersō</orth>, -ere
+            </form></form>
+            <sense xml:id="arcessō-accersō-s1">
+               <!--  'to summon, send for' -->
+            </sense>
+            <!-- [v. Ill; pf. arcessīvī  -/iī, ppp arcessītum] -->
+            <etym>
+               <seg type="desc" part="I">The stem occurs in two variants,</seg> <xr type="crossReference"><ref xml:lang="la" type="entry">accers-</ref></xr> <seg type="desc" part="M">and</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">arcess-</ref></xr><seg type="desc" part="F">, which suggests that on developed from the other by an unusual metathesis or an analogical replacement.</seg>
+               
+               <seg type="desc" part="I">Both variants seem to have been sprachwirklich in Plautus' times. The pr. is productive from PL onwards, whereas the pf. is hardly attested before Cicero. Since the pf. clearly favors the variant</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">arcess-</ref></xr><seg type="desc" part="M">, one might hypothesize that</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">arcess-</ref></xr> <seg type="desc" part="M">was in the process of ousting</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">accers-</ref></xr><seg type="desc" part="M"><seg type="desc" part="F">, and that the latter must therefore be the original form.</seg>
+                  
+                  Nussbaum 2007b gives two more arguments for regarding</seg> <xr type="crossReference"><ref type="entry" xml:lang="la">accersō</ref></xr> as original: 
+               
+               <!-- this portion could optionally be an embedded <etym> -->
+               
+               the noun dorsum → <xr type="crossReference"><ref type="entry">dossum</ref></xr> shows a phonetic change of <cit type="etymon" xml:id="etym-rs"><form><orth xml:lang="la">*rs</orth></form></cit> → <xr type="crossReference" prev="#etym-rs"><ref type="phone">ss</ref></xr>;
+               
+               a verb in <xr type="crossReference"><ref type="entry" xml:lang="la">-cessō</ref> <lbl>meaning</lbl> <ref type="sense">'go get'</ref></xr> would be favoured by its semantic neighbours <xr type="crossReference"><ref type="entry">capessō</ref></xr> and <xr type="crossReference"><ref type="entry">(ex)petessō</ref></xr>.
+               
+               Nussbaum suggests that  <xr type="crossReference"><ref type="entry" xml:lang="la">accersō</ref></xr> may reflect <cit type="etymon"><form><orth>*ad-kers-s-e/o-</orth></form></cit>, an s-present to the root <xr type="crossReference"><ref type="entry">*krs-</ref> <ref type="sense">'to run'</ref></xr> (<xr type="crossReference"><lbl>whence</lbl> <lang>Lat.</lang> <ref type="entry" xml:lang="la">curro</ref></xr>). 
+               
+            </etym>
+         </entry>
+      </body>
+   </text>
+</TEI>

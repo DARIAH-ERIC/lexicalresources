@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: veturtaksmaður</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>veturtaksmaður</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="eða" type="c">Eða</w>
+                     <w lemma="hversu" type="aa">hversu</w>
+                     <w lemma="hafa" type="sfg3en">hefir</w>
+                     <w lemma="þú" type="fp2fþ">ykkur</w>
+                     <w lemma="til" type="aa">til</w>
+                     <w lemma="ganga" type="ssg">gengið</w>
+                     <w lemma="síðan" type="aa">síðan</w>
+                     <w lemma="vera" type="sfg1en">er</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="fara" type="sfg3eþ">fór</w>
+                     <w lemma="heiman" type="aa">heiman</w>
+                     <pc>?</pc>
+                     <w lemma="»" type="»">»</w>
+                     <w lemma="húnn" type="nken-s">Hún</w>
+                     <w lemma="segja" type="sfg3en">segir</w>
+                     <pc>:</pc>
+                     <w lemma="«" type="«">«</w>
+                     <w lemma="vel" type="nken-s">Vel</w>
+                     <w lemma="hafa" type="sfg3en">hefir</w>
+                     <w lemma="úr" type="aþ">úr</w>
+                     <w lemma="ráða" type="svm3en">ráðist</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="liggja" type="sfg3eþ">lá</w>
+                     <w lemma="ég" type="fp1fþ">oss</w>
+                     <w lemma="við" type="aþ">við</w>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="mikill" type="lveþsf">mikilli</w>
+                     <w lemma="svívirðing" type="nveþ">svívirðingu</w>
+                     <w lemma="að" type="cn">að</w>
+                     <w lemma="ég" type="fp1fn">vér</w>
+                     <w lemma="hafa" type="svg1fþ">hefðum</w>
+                     <w lemma="aldrei" type="aa">aldrei</w>
+                     <w lemma="bót" type="nveo">bót</w>
+                     <w lemma="fá" type="ssg">fengið</w>
+                     <w lemma="ef" type="c">ef</w>
+                     <w lemma="eigi" type="aa">eigi</w>
+                     <w lemma="hafa" type="svg3eþ">hefði</w>
+                     <w lemma="veturtaksmaður" type="nken">veturtaksmaður</w>
+                     <w lemma="þinn" type="feken">þinn</w>
+                     <w lemma="hjálpa" type="ssg">hjálpað</w>
+                     <w lemma="ég" type="fp1fþ">oss</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

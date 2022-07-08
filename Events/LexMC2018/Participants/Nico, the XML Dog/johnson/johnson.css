@@ -1,0 +1,57 @@
+body {
+	font-family: "Lucida Grande", "Times New Roman", "Lucida Sans Unicode", Verdana, sans-serif;
+}
+
+teiHeader {
+	display: none;
+}
+
+entry {
+	margin-bottom: 1em;
+}
+
+form[type="lemma"] {
+	font-weight: bold;
+	color: blue;
+}
+
+gramGrp pos {
+	color: #ff2600;
+}
+
+sense def {
+	color: #ff9200;
+}
+
+cit bibl{
+	color: #9437ff;
+}
+
+sense cit quote {
+	color: #935100;
+}
+
+
+ etym {
+	color: #00f900;
+}
+
+etym:before {
+	content: " [";
+}
+
+etym:after {
+	content: " ] ";
+}
+
+etym lang {
+	color: #009192;
+}
+
+etym mentioned {
+	background-color: #008e00;
+	color: #feffff;
+	font-style: italic;
+
+}
+

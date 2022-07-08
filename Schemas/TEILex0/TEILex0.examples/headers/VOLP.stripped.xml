@@ -1,0 +1,66 @@
+
+
+<!--This file should not be edited manually. 
+To edit examples, please use TEILex0-examples.xml, 
+then transform using tei-stripper.xsl-->
+
+<?xml-model href="../../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/Examples">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt xml:id="VOLP.titleStmt">
+            <title type="full">Vocabulário Ortográfico da Língua Portuguesa [em linha]</title>
+            <title type="abbr">VOLP-1940</title>
+            <editor>
+               <persName>
+                  <forename>Ana</forename>
+                  <surname>Salgado</surname>
+               </persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>
+               <orgName>Academia das Ciências de Lisboa</orgName>
+            </publisher>
+            <publisher>
+               <orgName>
+                  <orgName>Imprensa Nacional de Lisboa</orgName>
+               </orgName>
+            </publisher>
+            <authority role="funder">
+               <orgName>Fundo de Apoio à Comunidade Científica (FACC) — FCT</orgName>
+            </authority>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                  Attribution 4.0 International (CC BY 4.0)</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title>Vocabulário Ortográfico da Língua Portuguesa</title>
+                  <author>
+                     <orgName>Academia das Ciências</orgName>
+                  </author>
+                  <imprint>
+                     <publisher>Imprensa Nacional de Lisboa</publisher>
+                     <date>1940</date>
+                  </imprint>
+                  <extent>1 volume</extent>
+                  <extent>821 pp.</extent>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="pt"/>
+            <language role="workingLanguage" ident="pt"/>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+   </text>
+</TEI>

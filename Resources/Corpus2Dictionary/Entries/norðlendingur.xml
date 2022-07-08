@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: norðlendingur</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>norðlendingur</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="mart" type="nken-s">Mart</w>
+                     <w lemma="bera" type="sfg3eþ">bar</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="tíðindi" type="nhfe">tíðinda</w>
+                     <w lemma="um" type="ao">um</w>
+                     <w lemma="sameign" type="nveo">sameign</w>
+                     <w lemma="það" type="fphfe">þeirra</w>
+                     <w lemma="biskup" type="nkee">biskups</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="norðlendingur" type="nkfe-s">Norðlendinga</w>
+                     <pc>,</pc>
+                     <w lemma="það" type="fphen">það</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="ekki" type="aa">ekki</w>
+                     <w lemma="koma" type="sfg3en">kemur</w>
+                     <w lemma="við" type="ao">við</w>
+                     <w lemma="þessi" type="faveo">þessa</w>
+                     <w lemma="saga" type="nveo">sögu</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="að" type="aþ">Að</w>
+                     <w lemma="sá" type="fakeþ">þeim</w>
+                     <w lemma="maður" type="nkeþ">manni</w>
+                     <w lemma="kaupa" type="sfg3fþ">keyptu</w>
+                     <w lemma="norðlendingur" type="nkfn-s">Norðlendingar</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="skulu" type="svg3eþ">skyldi</w>
+                     <w lemma="drepa" type="sng">drepa</w>
+                     <w lemma="grettir" type="nkeþ-s">Gretti</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="heita" type="sfg3fþ">hétu</w>
+                     <w lemma="hann" type="fpkeþ">honum</w>
+                     <w lemma="frelsi" type="nheo">frelsi</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="fégjöf" type="nvfþ">fégjöfum</w>
+                     <w lemma="ef" type="c">ef</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="koma" type="svg3eþ">kæmi</w>
+                     <w lemma="því" type="aa">því</w>
+                     <w lemma="fram" type="aa">fram</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

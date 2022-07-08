@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: vínlendingur</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>vínlendingur</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hún" type="fpveo">Hana</w>
+                     <w lemma="eiga" type="sfg3eþ">átti</w>
+                     <w lemma="gamli" type="nken-s">Gamli</w>
+                     <w lemma="þórhallsson" type="nkeo-s">Þórhallsson</w>
+                     <w lemma="vínlendingur" type="nkee-s">Vínlendings</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="en" type="c">En</w>
+                     <w lemma="eftir" type="ao">eftir</w>
+                     <w lemma="vígi" type="nheog">vígið</w>
+                     <w lemma="á" type="aþ">á</w>
+                     <w lemma="fagrabrekka" type="nveþ-s">Fagrabrekku</w>
+                     <w lemma="ráða" type="sfm3eþ">réðst</w>
+                     <w lemma="þórir" type="nken-s">Þórir</w>
+                     <w lemma="suður" type="aa">suður</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="haukadalur" type="nkeþ-s">Haukadal</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="búa" type="sfg3eþ">bjó</w>
+                     <w lemma="á" type="aþ">á</w>
+                     <w lemma="skarð" type="nheþ-s">Skarði</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="selja" type="sfg3eþ">seldi</w>
+                     <w lemma="land" type="nheog">landið</w>
+                     <w lemma="á" type="aþ">á</w>
+                     <w lemma="melur" type="nkfþ-s">Melum</w>
+                     <w lemma="þórhalli" type="nken-s">Þórhalli</w>
+                     <w lemma="gamlasynur" type="nkeþ-s">Gamlasyni</w>
+                     <w lemma="vínlendingur" type="nkeþ-s">Vínlendingi</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

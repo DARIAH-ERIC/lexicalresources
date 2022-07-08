@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div xml:id="ch4-sc2-3-1" n="4.2.3.1">
+            <head>Independent Pronouns</head>
+            <p> This paradigm contains pronouns that are prosodically, morphologically and
+               syntactically independent. The pronouns all start with the vowel
+                  <mentioned>/ò/</mentioned> or <mentioned>/à/</mentioned> followed by a part that
+               is formally similar to the possessive/object pronouns (sections <ref
+                  target="#ch5-sc1-3"/> and <ref target="#ch6-sc1-3"/>). While the first and second
+               person pronouns carry only low tones, the third person human pronouns carry a low and
+               a mid tone. Independent pronouns never adhere to vowel harmony.</p>
+            <!--  paradigm tables-->
+            <!--Level One: Surface View-->
+            <!--Level 1.1: The bare minimum: rows and cells-->
+            <table xml:id="tb4-1.1" n="4.1">
+               <head>Independent pronouns</head>
+               <row>
+                  <cell/>
+                  <cell>Singular</cell>
+                  <cell>Plural</cell>
+               </row>
+               <row>
+                  <cell>1P</cell>
+                  <cell>ònì</cell>
+                  <cell>àbès</cell>
+               </row>
+               <row>
+                  <cell>2P</cell>
+                  <cell>òsì</cell>
+                  <cell>àbèn</cell>
+               </row>
+               <row>
+                  <cell>3P.HUM</cell>
+                  <cell>àu</cell>
+                  <cell>àba</cell>
+               </row>
+               <row>
+                  <cell>3P.NHUM</cell>
+                  <cell>ɛ̀jì</cell>
+                  <cell>ìjì</cell>
+               </row>
+            </table>
+            <!--Level 1.2: The bare minimum: labels and data cells with "mentioned" word forms-->
+            <table xml:id="tb4-1.2" n="4.1">
+               <head>Independent pronouns</head>
+               <row>
+                  <cell/>
+                  <cell role="label">Singular</cell>
+                  <cell role="label">Plural</cell>
+               </row>
+               <row>
+                  <cell role="label">1P</cell>
+                  <cell role="data">
+                     <mentioned xml:lang="ibe">ònì</mentioned>
+                  </cell>
+                  <cell>
+                     <mentioned xml:lang="ibe">àbès</mentioned>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="label">2P</cell>
+                  <cell role="data">
+                     <mentioned xml:lang="ibe">òsì</mentioned>
+                  </cell>
+                  <cell role="data">
+                     <mentioned xml:lang="ibe">àbèn</mentioned>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="label">3P.HUM</cell>
+                  <cell role="data">
+                     <mentioned xml:lang="ibe">àu</mentioned>
+                  </cell>
+                  <cell role="data">
+                     <mentioned xml:lang="ibe">àba</mentioned>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="label">3P.NHUM</cell>
+                  <cell role="data">
+                     <mentioned xml:lang="ibe">ɛ̀jì</mentioned>
+                  </cell>
+                  <cell role="data">
+                     <mentioned xml:lang="ibe">ìjì</mentioned>
+                  </cell>
+               </row>
+            </table>
+            <!-- Level 2: The Intermediate View -->
+            <!-- Level 2.1 The middle way: tables with clusters of semantically explicit grammatical labels and linguistic data-->
+            <table xml:id="tb4-2.1" n="4.1">
+               <head>Independent pronouns</head>
+               <row>
+                  <cell/>
+                  <cell role="grammaticalLabel">
+                     <gramGrp>
+                        <gram type="number">Singular</gram>
+                     </gramGrp>
+                  </cell>
+                  <cell role="grammaticalLabel">
+                     <gramGrp>
+                        <gram type="number">Plural</gram>
+                     </gramGrp>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="grammaticalLabel">
+                     <gramGrp>
+                        <gram type="person">1P</gram>
+                     </gramGrp>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>ònì</orth>
+                     </form>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>àbès</orth>
+                     </form>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="grammaticalLabel">
+                     <gramGrp>
+                        <gram type="person">2P</gram>
+                     </gramGrp>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>òsì</orth>
+                     </form>
+                  </cell>
+                  <cell>
+                     <form xml:lang="ibe">
+                        <orth>àbèn</orth>
+                     </form>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="grammaticalLabel">
+                     <gramGrp>
+                        <gram type="person">3P</gram>
+                        <pc>.</pc>
+                        <gram type="agency">HUM</gram>
+                     </gramGrp>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>àu</orth>
+                     </form>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>àba</orth>
+                     </form>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="grammaticalLabel">
+                     <gramGrp>
+                        <gram type="person">3P</gram>
+                        <pc>.</pc>
+                        <gram type="animacy">NHUM</gram>
+                     </gramGrp>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>ɛ̀jì</orth>
+                     </form>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>ìjì</orth>
+                     </form>
+                  </cell>
+               </row>
+            </table>
+            <!-- Level 2.1 The middle way: tables with clusters of explicitly labeled linguistic data-->
+            <table xml:id="tb4-2.2" n="4.1">
+               <head>Independent pronouns</head>
+               <row>
+                  <cell/>
+                  <cell role="grammaticalLabel">Singular</cell>
+                  <cell role="grammaticalLabel">Plural</cell>
+               </row>
+               <row>
+                  <cell role="grammaticalLabel">1P</cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>ònì</orth>
+                        <gramGrp>
+                           <gram type="pos">pronoun</gram>
+                           <gram type="person">1</gram>
+                           <gram type="number">singular</gram>
+                        </gramGrp>
+                     </form>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>àbès</orth>
+                        <gramGrp>
+                           <gram type="pos">pronoun</gram>
+                           <gram type="person">1</gram>
+                           <gram type="number">plural</gram>
+                        </gramGrp>
+                     </form>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="grammaticalLabel">2P</cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>òsì</orth>
+                        <gramGrp>
+                           <gram type="pos">pronoun</gram>
+                           <gram type="person">2</gram>
+                           <gram type="number">singular</gram>
+                        </gramGrp>
+                     </form>
+                  </cell>
+                  <cell>
+                     <form xml:lang="ibe">
+                        <orth>àbèn</orth>
+                        <gramGrp>
+                           <gram type="pos">pronoun</gram>
+                           <gram type="person">2</gram>
+                           <gram type="number">plural</gram>
+                        </gramGrp>
+                     </form>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="grammaticalLabel">3P.HUM</cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>àu</orth>
+                        <gramGrp>
+                           <gram type="pos">pronoun</gram>
+                           <gram type="person">3</gram>
+                           <gram type="number">singular</gram>
+                           <gram type="animacy">human</gram>
+                        </gramGrp>
+                     </form>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>àba</orth>
+                        <gramGrp>
+                           <gram type="pos">pronoun</gram>
+                           <gram type="person">3</gram>
+                           <gram type="number">plural</gram>
+                           <gram type="animacy">human</gram>
+                        </gramGrp>
+                     </form>
+                  </cell>
+               </row>
+               <row>
+                  <cell role="grammaticalLabel">3P.NHUM</cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>ɛ̀jì</orth>
+                        <gramGrp>
+                           <gram type="pos">pronoun</gram>
+                           <gram type="person">3</gram>
+                           <gram type="number">singular</gram>
+                           <gram type="animacy">nonhuman</gram>
+                        </gramGrp>
+                     </form>
+                  </cell>
+                  <cell role="linguisticForm">
+                     <form xml:lang="ibe">
+                        <orth>ìjì</orth>
+                        <gramGrp>
+                           <gram type="pos">pronoun</gram>
+                           <gram type="person">3</gram>
+                           <gram type="number">plural</gram>
+                           <gram type="animacy">nonhuman</gram>
+                        </gramGrp>
+                     </form>
+                  </cell>
+               </row>
+            </table>
+            <!-- Level 3: Full Paradigm as a Lexicographic Entry -->
+            <entry xml:id="tb4-3" n="4.1" rend="table" type="fullParadigm">
+               <note rend="head">Independent pronouns</note>
+               <form type="inflectedForms">
+                  <form xml:lang="ibe" type="inflectedForm">
+                     <orth>ònì</orth>
+                     <gramGrp>
+                        <gram type="pos">pronoun</gram>
+                        <!--a @rend attribute indicates whether a gram element
+                should be used to generate the row or column labels
+                once transformed to the table view-->
+                        <gram type="person" rend="row" value="1P">1</gram>
+                        <gram type="number" rend="column">singular</gram>
+                     </gramGrp>
+                  </form>
+                  <form xml:lang="ibe" type="inflectedForm">
+                     <orth>àbès</orth>
+                     <gramGrp>
+                        <!--grammatical annotations without a @rend attribute
+                are not used for creating labels in the table view-->
+                        <gram type="pos">pronoun</gram>
+                        <!--use @value attribute if you want your label in the
+                    table view to have a different value from the tag  
+                    you use in your grammatical annotation -->
+                        <gram type="person" rend="row" value="1P">1</gram>
+                        <gram type="number" rend="column">plural</gram>
+                     </gramGrp>
+                  </form>
+                  <form xml:lang="ibe" type="inflectedForm">
+                     <orth>òsì</orth>
+                     <gramGrp>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row" value="2P">2</gram>
+                        <gram type="number" rend="column">singular</gram>
+                     </gramGrp>
+                  </form>
+                  <form xml:lang="ibe" type="inflectedForm">
+                     <orth>àbèn</orth>
+                     <gramGrp>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row" value="2P">2</gram>
+                        <gram type="number" rend="column">plural</gram>
+                     </gramGrp>
+                  </form>
+                  <form xml:lang="ibe" type="inflectedForm">
+                     <orth>àu</orth>
+                     <gramGrp>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row">3P</gram>
+                        <gram type="number" rend="column">singular</gram>
+                        <gram type="animacy" rend="row" value=".HUM">human</gram>
+                     </gramGrp>
+                  </form>
+                  <form xml:lang="ibe" type="inflectedForm">
+                     <orth>àba</orth>
+                     <gramGrp>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row">3P</gram>
+                        <gram type="number" rend="column">plural</gram>
+                        <gram type="animacy" rend="row" value=".HUM">human</gram>
+                     </gramGrp>
+                  </form>
+                  <form xml:lang="ibe" type="inflectedForm">
+                     <orth>ɛ̀jì</orth>
+                     <gramGrp>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row">3P</gram>
+                        <gram type="number" rend="column">singular</gram>
+                        <gram type="animacy" rend="row" value=".NHUM">nonhuman</gram>
+                     </gramGrp>
+                  </form>
+                  <form xml:lang="ibe" type="inflectedForm">
+                     <orth>ìjì</orth>
+                     <gramGrp>
+                        <gram type="pos">pronoun</gram>
+                        <gram type="person" rend="row">3P</gram>
+                        <gram type="number" rend="column">plural</gram>
+                        <gram type="animacy" rend="row" value=".NHUM">nonhuman</gram>
+                     </gramGrp>
+                  </form>
+               </form>
+            </entry>
+
+            <!--  forms-in-text-->
+
+            <!--Level 1: The bare minimum-->
+            <!--Level 1.0: Mentioned forms and grammatical tags as abbreviations-->
+
+
+            <p>The forms <mentioned xml:lang="ibe">àbès </mentioned> - <abbr>1PL.IDP</abbr> and
+                  <mentioned xml:lang="ibe">àbèn</mentioned> - <abbr>2.PL.IDP</abbr> are also used
+               as possessive and object pronouns.</p>
+
+            <!--Level Two: Intermediate View-->
+            <!-- Level 2.0: Mentioned forms and grammatical tags as abbreviations inside glosses -->
+            <p>The forms <gloss><mentioned xml:lang="ibe">àbès </mentioned>
+                  <pc>-</pc>
+                  <abbr>1PL</abbr><pc>.</pc><abbr>IDP</abbr></gloss> and <gloss><mentioned
+                     xml:lang="ibe">àbèn</mentioned>
+                  <pc>-</pc>
+                  <abbr>2PL</abbr><pc>.</pc><abbr>IDP</abbr></gloss> are also used as possessive and
+               object pronouns.</p>
+
+            <!--  Level Three: The Dictionary View-->
+            <!--Level 3.0: Excplicit forms wtih grammatical groups-->
+
+            <p>The forms <form type="inflectedForm" xml:lang="ibe"><orth>àbès </orth>
+                  <pc>-</pc>
+                  <gramGrp><gram type="person">1</gram><gram type="number">PL</gram><pc>.</pc><gram
+                        type="pos">IDP</gram><gram type="pos" rend="none">POP</gram><gram type="pos"
+                        rend="none">OBP</gram></gramGrp></form> and <form type="inflectedForm"
+                  xml:lang="ibe"><orth>àbèn</orth>
+                  <pc>-</pc>
+                  <gram type="person">1</gram><gram type="number">PL</gram><pc>.</pc><gram
+                     type="pos">IDP</gram><gram type="pos" rend="none">POP</gram><gram type="pos"
+                     rend="none">OBP</gram></form> are also used as possessive and object
+               pronouns.</p>
+
+          
+         </div>
+      </body>
+   </text>
+</TEI>

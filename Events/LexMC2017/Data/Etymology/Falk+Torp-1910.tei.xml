@@ -1,0 +1,566 @@
+<?xml-stylesheet type="text/xsl" href="retro-dict-view.xsl"?>
+<?xml-model href="basisformat.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"
+?>
+<?xml-model href="basisformat.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"
+?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="dtabf">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Norwegisch-dänisches etymologisches
+          Wörterbuch.</title>
+        <title type="sub">Erster Teil (A–O)</title>
+        <author>
+          <persName ref="http://d-nb.info/gnd/136512119">
+            <surname>Falk</surname>
+            <forename>Hjalmar</forename>
+          </persName>
+        </author>
+        <author>
+          <persName ref="http://d-nb.info/gnd/117406651">
+            <surname>Torp</surname>
+            <forename>Alf</forename>
+          </persName>
+        </author>
+        <editor corresp="#DTACorpusPublisher">
+          <persName ref="http://d-nb.info/gnd/1127209485">
+            <surname>Herold</surname>
+            <forename>Axel</forename>
+          </persName>
+        </editor>
+      </titleStmt>
+      <editionStmt>
+        <edition>partly digitized and proof-read edition</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher xml:id="DTACorpusPublisher">
+          <orgName ref="https://github.com/xlhrld/retro-dict"
+            >retro-dict</orgName>
+        </publisher>
+        <date type="publication">2017-11-28</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by/4.0/">
+            <p>This work is licensed under a Creative Commons Attribution
+              4.0 International License.</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Falk, H. S.; Torp, Alf: Norwegisch-dänisches etymologisches
+          Wörterbuch. Erster Teil (A – O). Heidelberg, 1910.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Norwegisch-dänisches etymologisches
+              Wörterbuch</title>
+            <title type="sub">Erster Teil (A – O)</title>
+            <author>
+              <persName ref="http://d-nb.info/gnd/136512119">
+                <surname>Falk</surname>
+                <forename>H. S.</forename>
+              </persName>
+            </author>
+            <author>
+              <persName ref="http://d-nb.info/gnd/117406651">
+                <surname>Alf</surname>
+                <forename>Torp</forename>
+              </persName>
+            </author>
+          </titleStmt>
+          <editionStmt>
+            <edition n="1"/>
+          </editionStmt>
+          <publicationStmt>
+            <publisher>
+              <name>Carl Winter's Universitätsbuchhandlung</name>
+            </publisher>
+            <pubPlace>Heidelberg</pubPlace>
+            <date type="publication">1910</date>
+          </publicationStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Archive.org (via MSN)</repository>
+            <idno>
+              <idno type="URLImages"
+                >http://www.archive.org/details/norwegischdnis01falkuoft</idno>
+            </idno>
+          </msIdentifier>
+          <physDesc>
+            <typeDesc>
+              <p>Antiqua</p>
+            </typeDesc>
+          </physDesc>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>font properties preserved, no character normalization, line
+          breaks not preserved, signature marks not preserved, hyphenation
+          not preserved (words reconstructed)</p>
+        <p>TEI markup according to the DTA base format (<ref
+            target="http://www.deutschestextarchiv.de/doku/basisformat/"
+            >DTABf</ref>), a TEI customization for historical texts)</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="deu">German</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <pb facs="#f0001" n="[II]"/>
+      <titlePage type="series">
+        <docTitle>
+          <titlePart type="series">Germanische Bibliothek</titlePart>
+        </docTitle>
+        <byline><hi rendition="#smaller">HERAUSGEGEBEN VON</hi>
+          <lb/><docAuthor corresp="http://d-nb.info/gnd/117317500">WILHELM
+            STREITBERG</docAuthor></byline>
+        <docTitle>
+          <titlePart type="sub">I. SAMMLUNG <lb/>GERMANISCHER ELEMENTAR-
+            UND HANDBÜCHER</titlePart>
+          <milestone rendition="#hr" unit="section"/>
+          <titlePart type="sub">IV. REIHE: WÖRTERBÜCHER</titlePart>
+          <titlePart type="sub">ERSTER BAND</titlePart>
+          <titlePart type="main">NORWEGISCH-DÄNISCHES ETYMOLOGISCHES
+            WÖRTERBUCH</titlePart>
+        </docTitle>
+        <byline>von <lb/><docAuthor
+            corresp="http://d-nb.info/gnd/136512119"><hi
+              rendition="#larger">H. S. FALK</hi></docAuthor> und
+            <docAuthor corresp="http://d-nb.info/gnd/117406651"><hi
+              rendition="#larger">ALF TORP</hi></docAuthor></byline>
+        <lb/>
+        <milestone rendition="#hr" unit="section"/>
+        <lb/>
+        <docImprint>
+          <pubPlace><hi rendition="#larger">HEIDELBERG</hi></pubPlace>
+          <docDate><hi rendition="#larger">1910</hi></docDate>
+          <lb/><publisher>CARL WINTER'S
+            UNIVERSITÄTSBUCHHANDLUNG</publisher>
+        </docImprint>
+      </titlePage>
+      <pb facs="#f0002" n="[III]"/>
+      <titlePage type="main">
+        <docTitle>
+          <titlePart type="main">NORWEGISCH-DÄNISCHES <lb/>ETYMOLOGISCHES
+            <lb/>WÖRTERBUCH</titlePart>
+        </docTitle>
+        <lb/>
+        <byline>AUF GRUND DER ÜBERSETZUNG VON Dr. <persName>H.
+            DAVIDSEN</persName>
+          <lb/>NEU BEARBEITETE DEUTSCHE AUSGABE <lb/>MIT
+          LITERATURNACHWEISEN STRITTIGER ETYMOLOGIEN <lb/>SOWIE DEUTSCHEM
+          UND ALTNORDISCHEM <lb/>WÖRTERVERZEICHNIS <lb/><hi
+            rendition="#smaller">von</hi>
+          <lb/><docAuthor corresp="http://d-nb.info/gnd/136512119"><hi
+              rendition="#larger">H. S. FALK</hi></docAuthor> und
+            <docAuthor corresp="http://d-nb.info/gnd/117406651"><hi
+              rendition="#larger">ALF TORP</hi></docAuthor>
+          <lb/><hi rendition="#smaller">PROFESSOREN AN DER UNIVERSITÄT
+            KRISTIANIA</hi>
+        </byline>
+        <lb/>
+        <titlePart type="volume">ERSTER TEIL <lb/><hi rendition="#smaller"
+            >A—O</hi></titlePart>
+        <lb/>
+        <lb/>
+        <docImprint>
+          <pubPlace><hi rendition="#larger">HEIDELBERG</hi></pubPlace>
+          <docDate><hi rendition="#larger">1910</hi></docDate>
+          <lb/><publisher>CARL WINTER'S
+            UNIVERSITÄTSBUCHHANDLUNG</publisher>
+          <lb/><hi rendition="#smaller">Verlags-Nr. 184.</hi>
+        </docImprint>
+      </titlePage>
+      <pb facs="#f0003" n="[IV]"/>
+      <pb facs="#f0004" n="V"/>
+      <div xml:id="preface">
+        <pb n="VI" facs="#f0005"/>
+      </div>
+      <pb n="VII" facs="#f0006"/>
+      <div xml:id="abbreviations">
+        <pb n="[VIII]" facs="#f0007"/>
+      </div>
+    </front>
+    <body xml:id="dictionary">
+      <pb n="[1]" facs="#f0008"/>
+      <div xml:id="section-a">
+        <pb n="2" facs="#f0009"/>
+        <pb n="3" facs="#f0010"/>
+        <pb n="4" facs="#f0011"/>
+        <pb n="5" facs="#f0012"/>
+        <pb n="6" facs="#f0013"/>
+        <pb n="7" facs="#f0014"/>
+        <pb n="8" facs="#f0015"/>
+        <pb n="9" facs="#f0016"/>
+        <pb n="10" facs="#f0017"/>
+        <pb n="11" facs="#f0018"/>
+        <pb n="12" facs="#f0019"/>
+        <pb n="13" facs="#f0020"/>
+        <pb n="14" facs="#f0021"/>
+        <pb n="15" facs="#f0022"/>
+        <pb n="16" facs="#f0023"/>
+        <pb n="17" facs="#f0024"/>
+        <pb n="18" facs="#f0025"/>
+        <pb n="19" facs="#f0026"/>
+        <pb n="20" facs="#f0027"/>
+        <pb n="21" facs="#f0028"/>
+        <pb n="22" facs="#f0029"/>
+        <pb n="23" facs="#f0030"/>
+        <pb n="24" facs="#f0031"/>
+        <pb n="25" facs="#f0032"/>
+        <pb n="26" facs="#f0033"/>
+        <pb n="27" facs="#f0034"/>
+        <pb n="28" facs="#f0035"/>
+        <pb n="29" facs="#f0036"/>
+        <pb n="30" facs="#f0037"/>
+        <p><hi rendition="#b">Ank</hi> oder <hi rendition="#b">anke</hi>
+          (klage, beschwerde), norw. dial. <hi rendition="#i">ank</hi>
+          „gewimmer, seufzer, kummer, reue“, ält. dän. <hi rendition="#i"
+            >ank</hi> „unwille, kummer“. Die grundbedeutung „stöhnen“ liegt
+          vor im mnd. <hi rendition="#i">anken</hi> „stöhnen, seufzen“,
+          air. <hi rendition="#i">ong</hi> „stöhnen, klage, betrübnis“. Die
+          germ. grundform scheint <hi rendition="#i">*angəka-</hi> zu sein,
+          von germ. wurzel <hi rendition="#i">*ang</hi> „eng sein“ (siehe
+            <hi rendition="#g #i">anger</hi> und <hi rendition="#g #i"
+            >angst</hi>); vgl. gr. στένω „bin eng, stöhne“. Ein
+          unverwandtes wort ist wohl anord. <hi rendition="#i">ekki</hi> m.
+          „kummer“ = ags. <hi rendition="#i">inca</hi> „beschwerde, groll,
+          zweifei, verdacht“; dazu außerhalb des germ. aslav. <hi
+            rendition="#i">jęza</hi> „krankheit“, lit. <hi rendition="#i"
+            >éngiu</hi> „tue etwas mühsam und schwerfallig“, <hi
+            rendition="#i">nu-éngti</hi> „abquälen, abtreiben“. Siehe <hi
+            rendition="#g #i">ynke</hi>.</p>
+        <p><hi rendition="#b">Ankel,</hi> schw. <hi rendition="#i"
+            >ankel</hi>, neunorw. <hi rendition="#i">okla</hi>, anord. <hi
+            rendition="#i">ǫkkla</hi> n. = ags. <hi rendition="#i"
+            >ancléow</hi> (engl. <hi rendition="#i">ankle</hi>), mnd. <hi
+            rendition="#i">enkel</hi> (holl. <hi rendition="#i"
+          >enkel</hi>), ahd. <hi rendition="#i">ankal</hi>, <hi
+            rendition="#i">enkil</hi> und <hi rendition="#i">anklâo</hi>
+          (nhd. <hi rendition="#i">Enkel</hi>). Von diesen sind ags. <hi
+            rendition="#i">ancléow</hi> und ahd. <hi rendition="#i"
+            >anklâo</hi> mit dem worte für <hi rendition="#g #i">klo</hi>
+          (klaue) verknüpft. Die anord. form <hi rendition="#i">ǫkull</hi>
+          (in <hi rendition="#i">ǫkulbrø̂kr</hi> und <hi rendition="#i"
+            >ǫkulskûađr</hi>) ist aus <hi rendition="#i">*ǫkkull</hi>
+          entstanden, indem <hi rendition="#i">k</hi> in den kontrahierten
+          kasus vereinfacht wurde. Auf dem sogenannten „halvemaal“ (vgl.
+            <hi rendition="#g #i">imbre</hi>) beruht anord. <hi
+            rendition="#i">hǫkull</hi> (in <hi rendition="#i"
+            >hǫkulskûađr</hi>), neunorw. <hi rendition="#i">høkul</hi>, <hi
+            rendition="#i">høkel</hi>. <hi rendition="#g #i">Ankel</hi> ist
+          von mhd. <hi rendition="#i">anke</hi> m. „gelenk am fuße,
+          nacken“, skr. <hi rendition="#i">ánga-</hi> „glied, gelenk“
+          abgeleitet. Eine andere bildung ist anord. <hi rendition="#i"
+            >ekkja</hi> „knöchel, ferse“ und ahd. <hi rendition="#i"
+            >enka</hi> „schenkel, knochenröhre“ (frz. <hi rendition="#i"
+            >anche</hi> „rohr“, <hi rendition="#i">hanche</hi>
+          „hüfte“).</p>
+        <p><hi rendition="#b">Anker</hi> I (schiffsanker), ält. dän. <hi
+            rendition="#i">anker</hi> und <hi rendition="#i">akker(e)</hi>,
+          schw. <hi rendition="#i">anker(e)</hi>, anord. <hi rendition="#i"
+            >akkeri</hi> n. = ags. <hi rendition="#i">ancor</hi> (engl. <hi
+            rendition="#i">anchor</hi>), mnd. <hi rendition="#i">anker</hi>
+          (holl. <hi rendition="#i">anker</hi>), ahd. <hi rendition="#i"
+            >ankar</hi> (nhd. <hi rendition="#i">Anker</hi>). Altes
+          lehnwort aus lat. <hi rendition="#i">ancora</hi> (von gr.
+          ἄγκυρα); verwandt mit <hi rendition="#g #i">angel</hi>. — <hi
+            rendition="#b">Ankerflig,</hi> norw. dial. <hi rendition="#i"
+            >ankarfli</hi>, schw. <hi rendition="#i">ankarfly</hi>, anord.
+            <hi rendition="#i">akkerisfleinn</hi> „ankerarm“: sämtliche
+          worte scheinen etymologisch mit anord. <hi rendition="#i"
+            >fleinn</hi> „ankerarm“ zusammenzuhängen (siehe <hi
+            rendition="#g #i">flen</hi>), indem vielleicht das norw. wort
+          von norw. dial. <hi rendition="#i">fli</hi> f. „scheibe, platte“,
+          das dänische von d. <hi rendition="#i">Ankerfliege</hi>, und das
+          schwed. von d. <hi rendition="#i">Ankerflügel</hi> beeinflußt
+          ist. — <hi rendition="#g #i">Ankerspil</hi>, schw. <hi
+            rendition="#i">ankarspel</hi>: siehe <hi rendition="#g #i"
+            >spil</hi> II.</p>
+        <p><hi rendition="#b">Anker</hi> II (tönnchen, fäßchen), schw. <hi
+            rendition="#i">ankare</hi>, entlehnt aus nd. holl. <hi
+            rendition="#i">anker</hi> = nhd. <hi rendition="#i">Anker</hi>,
+          engl. <hi rendition="#i">anker</hi>. Das wort stammt aus m. lat.
+            <hi rendition="#i">ancheria</hi> (afrz. <hi rendition="#i"
+            >anchere</hi>), dessen bedeutung „ein kleineres faß, kübel“ die
+          ableitung aus ahd. <hi rendition="#i">hant-kar</hi> „handkübel“
+          wahrscheinlich macht. Siehe <hi rendition="#i">kar</hi>.</p>
+        <p><hi rendition="#b">Anneks,</hi> von lat. <hi rendition="#i"
+            >annexa</hi>
+          <hi rendition="#i">(ecclesia)</hi> zu <hi rendition="#i"
+            >adnectere</hi> „anknüpfen“.</p>
+        <p><hi rendition="#b">Ansjos,</hi> schw. <hi rendition="#i"
+            >ansjovis</hi>, aus holl. <hi rendition="#i">ansjovis</hi> =
+          engl. <hi rendition="#i">anchovy</hi>, d. <hi rendition="#i"
+            >Anchovi</hi>, die alle aus span. <hi rendition="#i"
+            >anchoa</hi> stammen (vielleicht eigentlich ein baskisches
+          wort), woher auch frz. <hi rendition="#i">anchois</hi>.</p>
+        <p><hi rendition="#b">Ansvar,</hi> schw. <hi rendition="#i"
+            >ansvar</hi>, ält. dän. <hi rendition="#i">andsvar</hi>
+          „gegenantwort“ (<hi rendition="#i">andsvare</hi> „verantwortung
+          tragen für“), norw. dial. <hi rendition="#i">andsvar</hi>
+          „verpflichtung“, anord. <hi rendition="#i">andsvar</hi> „antwort,
+          verantwortung in rechtssachen“ (<hi rendition="#i">andsvara</hi>
+          „verantwortlich sein“) = afries. <hi rendition="#i">ondser</hi>,
+          as. <hi rendition="#i">antswor</hi> „antwort“, ags. <hi
+            rendition="#i">andswaru</hi> (engl. <hi rendition="#i"
+            >answer</hi> „antwort, verantwortung“). Grundbedeutung ist
+          „gegenwort“, von <hi rendition="#g #i">and-</hi> „gegen“; vgl. d.
+            <hi rendition="#i">Antwort</hi> und <hi rendition="#i"
+            >Verantwortlichkeit</hi>, engl. <hi rendition="#i"
+            >response</hi> „antwort“ und <hi rendition="#i"
+            >responsibility</hi> „verantwortung“. Siehe <hi
+            rendition="#g #i">svar</hi> und vgl. <hi rendition="#g #i"
+            >svare</hi>
+          <hi rendition="#g #i">for</hi> „die verantwortung haben für“.</p>
+        <p><hi rendition="#b">Aparte</hi> ist das d. adj. <hi
+            rendition="#i">apart</hi>, das aus dem frz. <hi rendition="#i"
+            >à</hi>
+          <hi rendition="#i">part</hi> „beiseite, für sich“ stammt.</p>
+        <pb n="31" facs="#f0038"/>
+        <p><hi rendition="#b">Appelsin,</hi> schw. <hi rendition="#i"
+            >apelsin</hi>, von holl. <hi rendition="#i">appelsien</hi>, nd.
+            <hi rendition="#i">appelsine</hi> = nhd. <hi rendition="#i"
+            >Apfelsine</hi>, d. dial. <hi rendition="#i">appeldesine</hi>,
+          eine wiedergabe des frz. <hi rendition="#i">pomme</hi>
+          <hi rendition="#i">de</hi>
+          <hi rendition="#i">Sine</hi>, dem ält. d. <hi rendition="#i"
+            >Chinapfel</hi>, engl. <hi rendition="#i">China</hi>
+          <hi rendition="#i">orange</hi>, span. <hi rendition="#i"
+            >noranja</hi>
+          <hi rendition="#i">de</hi>
+          <hi rendition="#i">la</hi>
+          <hi rendition="#i">China</hi> entspricht: die orangen wurden im
+          jahre 1548 von den Portugiesen aus China nach Europa
+          gebracht.</p>
+        <p><hi rendition="#b">April,</hi> von lat. <hi rendition="#i"
+            >aprilis</hi>, das von <hi rendition="#i">aperire</hi> „öffnen“
+          abgeleitet wird, indem nach alter rechnung das jahr mit diesem
+          monat anfing. — <hi rendition="#g #i">Narre</hi>
+          <hi rendition="#g #i">april</hi> stammt von d. <hi rendition="#i"
+            >jemand</hi>
+          <hi rendition="#i">in</hi>
+          <hi rendition="#i">den</hi>
+          <hi rendition="#i">April</hi>
+          <hi rendition="#i">schicken</hi> (wozu <hi rendition="#i"
+            >Aprilnarr</hi> = engl. <hi rendition="#i">April</hi>
+          <hi rendition="#i">fool</hi>), eigentlich nur „einen den monat
+          april beginnen lassen“. Die redensart stammt wahrscheinlich von
+          den altgermanischen frühlingsfesten und den damit verbundenen
+          scherzen. Die franzosen haben den ausdrurk <hi rendition="#i"
+            >poisson</hi>
+          <hi rendition="#i">d’avril</hi> für aprilscherze, was von einem
+          alten brauch herstammen soll, einander einen billigen fisch
+          (makrele) an dem tage zu schenken.</p>
+        <p><hi rendition="#b">Arbeide,</hi> ält. dän. <hi rendition="#i"
+            >arbede</hi>, <hi rendition="#i">arbeid</hi>, schw. <hi
+            rendition="#i">arbete</hi>, entlehnt aus mnd. <hi
+            rendition="#i">arbeit</hi> (holl. <hi rendition="#i"
+            >arbeid</hi>) = as. <hi rendition="#i">arbêd(i)</hi>
+          „beschwerde“, ahd. <hi rendition="#i">ar(a)beit</hi> „arbeit,
+          mühe, not“ (nhd. <hi rendition="#i">Arbeit</hi>), ags. <hi
+            rendition="#i">earfoþ</hi>, <hi rendition="#i">earfeþe</hi>
+          „mühe, beschwerde“, got. <hi rendition="#i">arbaiþs</hi>
+          „bedrängnis, not“, anord. <hi rendition="#i">erfiđi</hi> „mühe“
+          (ält. dän. <hi rendition="#i">ærvede</hi>, aschw. <hi
+            rendition="#i">aerviþi</hi> und <hi rendition="#i">arvoþe</hi>,
+          schw. <hi rendition="#i">arfvode</hi> „bezahlung für arbeit,
+          honorar“). Dazu das adj. anord. <hi rendition="#i">erfiđr</hi>
+          „beschwerlich“, ags. <hi rendition="#i">earfeþe</hi>. Das wort
+          wird mit aslav. <hi rendition="#i">rabota</hi> „dienerarbeit“
+          (ins d. als <hi rendition="#i">Robott</hi> „frondienst“
+          übernommen) zu <hi rendition="#i">rabŭ</hi>, robŭ „sklave“ (von
+            <hi rendition="#i">*orbŭ</hi> = idg. <hi rendition="#i"
+            >*orbho-</hi> „leibeigen“) zusammengestellt. Ableitungen sind
+          arm. <hi rendition="#i">arbaneak</hi> „mithelfer, diener“ und
+          lit. <hi rendition="#i">arbônas</hi> „ochse“, eigentlich „das
+          arbeitende tier“ und also nicht direkt mit anord. <hi
+            rendition="#i">arfr</hi> „ochse“ zu verbinden, das
+          wahrscheinlich von der bedeutung „erbschaft“ ausgeht.
+          Wahrscheinlich sind hierher auch zu stellen gr. ὀρφανός, lat. <hi
+            rendition="#i">orbus</hi> „elternlos“ (siehe <hi
+            rendition="#g #i">arv</hi>), sowie germ. <hi rendition="#i"
+            >*arb(u)ma-</hi> „elend“ (siehe adj. <hi rendition="#g #i"
+            >arm</hi>), so daß die bedeutungsentwicklung wird: verlassen
+          &gt; unglücklich, elend &gt; mühsam; vgl. gr. πόνος „arbeit“:
+          πένομαι „bin arm“.</p>
+        <p><hi rendition="#b">Ard</hi> (norw. = einfacher holzpflug),
+          anord. <hi rendition="#i">arđr</hi> (gen. <hi rendition="#i"
+            >-rs</hi>), ält. dän. <hi rendition="#i">aarer</hi>
+          <hi rendition="#i">(aarbille)</hi>, aschw. <hi rendition="#i"
+            >arþer</hi>, schw. <hi rendition="#i">årder</hi>
+          <hi rendition="#i">(år)</hi>. Dem entspricht lat. <hi
+            rendition="#i">aratrum</hi>, gr. ἄροτρον, air. <hi
+            rendition="#i">arathar</hi>; vgl. aslav. <hi rendition="#i"
+            >ralo</hi> (von <hi rendition="#i">*ardhlo</hi>) und <hi
+            rendition="#i">oralo</hi> (aus dem slav. stammt wohl mhd. und
+          nhd. dial. <hi rendition="#i">arl</hi>), lit. <hi rendition="#i"
+            >árklas</hi>, arm. <hi rendition="#i">araur</hi>. Im indischen
+          und persischen fehlt das wort. Das substantiv ist abgeleitet von
+          einem idg. vb. für „pflügen“: got. <hi rendition="#i">arjan</hi>,
+          anord. <hi rendition="#i">erja</hi> (schw. <hi rendition="#i"
+            >ärja</hi>), ahd. <hi rendition="#i">erren</hi>, ags. <hi
+            rendition="#i">erian</hi>, lat. <hi rendition="#i">arare</hi>,
+          gr. ἀρόω, aslav. <hi rendition="#i">orją</hi>, lit. <hi
+            rendition="#i">ariù</hi>, air. <hi rendition="#i">airim</hi>.
+          Hierzu auch lat. <hi rendition="#i">arvum</hi> „kornfeld“, air.
+            <hi rendition="#i">arbe</hi> „korn“ (von <hi rendition="#i"
+            >*arvio-</hi>). Siehe <hi rendition="#g #i">art</hi>.</p>
+        <p><hi rendition="#b">Are</hi> oder <hi rendition="#b">ar</hi> (ein
+          flächenmaß, 100 qm), schw. <hi rendition="#i">ar</hi> = d. <hi
+            rendition="#i">Ar</hi>, von frz. <hi rendition="#i">are</hi>,
+          das wieder lat. <hi rendition="#i">area</hi> „freier platz,
+          fläche“ ist.</p>
+        <p><hi rendition="#b">Arg</hi> (böse) ist dasselbe wort wie <hi
+            rendition="#g #i">arrig</hi> (bösartig). schw. <hi
+            rendition="#i">arg</hi>, anord. <hi rendition="#i">argr</hi>
+          (und <hi rendition="#i">ragr</hi>) „unmännlich, weich, wollüstig,
+          böse, schlecht“ = ahd. <hi rendition="#i">arg</hi>, <hi
+            rendition="#i">arag</hi> „geizig, feige, untauglich“ (nhd. <hi
+            rendition="#i">arg</hi>), mnd. <hi rendition="#i">arch</hi>,
+            <hi rendition="#i">arich</hi> „schlecht, böse, schlimm“ (holl.
+            <hi rendition="#i">erg</hi>). ags. <hi rendition="#i">earg</hi>
+          „feige, träge, böse“. Ein got. <hi rendition="#i">*args</hi>
+          beweist span. <hi rendition="#i">aragan</hi> „träge“ und finnisch
+            <hi rendition="#i">arka</hi> „feige“. Das wort gehört wohl zu
+          skr. <hi rendition="#i">r̥gháyati</hi> „bebt, zittert, rast“,
+          avest. <hi rendition="#i">ereghant</hi> „böse“. Verwandt scheint
+          gr. ὄρχις „testikel“ und anord. <hi rendition="#i">ǫgurr</hi>
+          „penis“ für <hi rendition="#i">*ǫrgurr</hi> (wie <hi
+            rendition="#i">ǫgur-stund</hi> „wolluststunde“ für <hi
+            rendition="#i">*ǫrgur-stund</hi>, von <hi rendition="#i"
+            >*arga</hi> „wollust“); was die bedeutung betrifft, <pb n="32"
+            facs="#f0039"/>so vgl. <hi rendition="#g #i">bævergjel</hi>.
+          Die wurzel ist id. <hi rendition="#i">*eregh</hi>, <hi
+            rendition="#i">ereqh</hi> (vgl. zend <hi rendition="#i"
+            >erezi-</hi> „hode“), was die anord. nebenform <hi
+            rendition="#i">ragr</hi> erklärt (vgl. <hi rendition="#g #i"
+            >ars</hi>). — <hi rendition="#g #i">Argelist</hi> ist aus d.
+            <hi rendition="#i">Arg(e)list</hi> = holl. <hi rendition="#i"
+            >arglist</hi> (älter <hi rendition="#i">argelist</hi>)
+          entlehnt.</p>
+        <p><hi rendition="#b">Arild,</hi> adän. <hi rendition="#i"
+            >arælde</hi>, anord. <hi rendition="#i">âr</hi>
+          <hi rendition="#i">alda</hi> „früh in den zeiten, in alten
+          zeiten“. Über <hi rendition="#i">âr</hi> „vormals, früh“ siehe
+            <hi rendition="#g #i">aarle</hi>; <hi rendition="#i">alda</hi>
+          ist gen. pl. von <hi rendition="#i">ǫld</hi> „zeit“, worüber
+          siehe <hi rendition="#g #i">old</hi>. <hi rendition="#g #i"
+            >Fra</hi>
+          <hi rendition="#g #i">arilds</hi>
+          <hi rendition="#g #i">tid</hi>, norw. dial. <hi rendition="#i"
+            >fraa</hi>
+          <hi rendition="#i">arals</hi>
+          <hi rendition="#i">tid</hi>, ist also eine tautologische
+          verbindung. Der ausdruck ist mannigfachen umdeutungen ausgesetzt
+          gewesen: man hat die geschichte von einem manne namens Arild
+          erfunden — was ja wirklich ein männlicher name ist — der einmal
+          in alten zeiten gelebt haben sollte; die Schweden haben den
+          ausdruck in <hi rendition="#i">kung</hi>
+          <hi rendition="#i">Orres</hi>
+          <hi rendition="#i">tid</hi> umgewandelt; in norw. dial. findet
+          sich <hi rendition="#i">fraa</hi>
+          <hi rendition="#i">Ariels</hi>
+          <hi rendition="#i">tid</hi> und <hi rendition="#i">fraa</hi>
+          <hi rendition="#i">Arons</hi>
+          <hi rendition="#i">tid</hi>. Eine neuere, teilweise richtige
+          aufputzung ist <hi rendition="#g #i">fra</hi>
+          <hi rendition="#g #i">urolds</hi>
+          <hi rendition="#g #i">tid</hi>.</p>
+        <p><hi rendition="#b">Ark</hi> I (kiste), schw. <hi rendition="#i"
+            >ark</hi>, anord. <hi rendition="#i">ǫrk</hi> f. = got. <hi
+            rendition="#i">arka</hi> „kiste, Noahs arche“, ags. <hi
+            rendition="#i">earce</hi> „kiste, Noahs arche“ (engl. <hi
+            rendition="#i">ark</hi>), mnd. <hi rendition="#i">arke</hi>
+          (holl. <hi rendition="#i">ark</hi>), ahd. <hi rendition="#i"
+            >aracha</hi>, <hi rendition="#i">archa</hi> (nhd. <hi
+            rendition="#i">Arche</hi>). Das wort stammt von lat. <hi
+            rendition="#i">arca</hi> „kiste“ und ist in der eigentlichen
+          bedeutung vielleicht schon vor dem christentum in die germ.
+          sprachen aufgenommen worden (vgl. <hi rendition="#g #i"
+            >kiste</hi>). Das lat. <hi rendition="#i">arca</hi> hängt
+          wieder zusammen mit <hi rendition="#i">arcere</hi>
+          „einschließen“.</p>
+        <p><hi rendition="#b">Ark</hi> II (bogen papier), schw. <hi
+            rendition="#i">ark</hi>, stammt vermittels mnd. <hi
+            rendition="#i">ark</hi> aus lat. <hi rendition="#i">arcus</hi>
+          „bogen“, eigentlich „das zusammengebogene papier“; vgl. mnd. <hi
+            rendition="#i">arkel</hi> von lat. <hi rendition="#i"
+            >arcula</hi>. Eine übersetzung ist d. <hi rendition="#i"
+            >Bogen</hi>.</p>
+        <p><hi rendition="#b">Ark</hi> III (norw. = dachstube, mansarde,
+          ausbau an einem haus mit einem fenster), alt. dän. <hi
+            rendition="#i">arkenet</hi> „ausbau, erker“, von mnd. <hi
+            rendition="#i">arkener</hi> = nhd. <hi rendition="#i"
+            >Erker</hi>, das wieder zu mlat. <hi rendition="#i">arcora</hi>
+          (barbarischer plural zu lat. <hi rendition="#i">arcus</hi>
+          „bogen“) gehört.</p>
+        <p><hi rendition="#b">Arkeli</hi> (pulvermagazin auf schiffen),
+          früher auch in der bedeutung „artillerie“, schw. <hi
+            rendition="#i">arkli</hi>, von mnd. <hi rendition="#i"
+            >arkelie</hi>, <hi rendition="#i">arkelei</hi> „artillerie,
+          schießmaterial“ = nhd. <hi rendition="#i">Arkelei</hi>, dasselbe
+          wort wie <hi rendition="#g #i">artilleri</hi>.</p>
+        <p><hi rendition="#b">Arm</hi> (subst.), schw. <hi rendition="#i"
+            >arm</hi>, anord. <hi rendition="#i">armr</hi>, got. <hi
+            rendition="#i">arms</hi>, ahd. <hi rendition="#i">ar(a)m</hi>
+          (nhd. <hi rendition="#i">Arm</hi>), ags. <hi rendition="#i"
+            >earm</hi> (engl. <hi rendition="#i">arm</hi>), mnd. <hi
+            rendition="#i">arm</hi> (holl. <hi rendition="#i">arm</hi>).
+          Urverwandt ist lat. <hi rendition="#i">armus</hi> „schulterblatt,
+          bug“, aslav. <hi rendition="#i">ramę</hi> „schulter, arm“,
+          apreuß. <hi rendition="#i">irmo</hi> „arm“, skr. <hi
+            rendition="#i">îrmá-</hi> „bug, arm“, avest. <hi rendition="#i"
+            >arᵉma-</hi> „arm“. — <hi rendition="#b">Armbrøst</hi> verdankt
+          seine verknüpfung mit „arm“ und „brust“ nur einer
+          volksetymologie: anord. <hi rendition="#i">armbrist</hi> und <hi
+            rendition="#i">arbyst</hi>, ält. dän. <hi rendition="#i"
+            >armbø(r)st</hi> und <hi rendition="#i">arborst</hi>
+          „schloßbogen“, schw. <hi rendition="#i">armborst</hi>
+          „flitzbogen“ (früher auch <hi rendition="#i">arborst</hi>), alle
+          von mnd. <hi rendition="#i">armborst</hi>, <hi rendition="#i"
+            >amborst</hi>, <hi rendition="#i">ambost</hi> = mhd. <hi
+            rendition="#i">armbrust</hi> (nhd. <hi rendition="#i"
+            >Armbrust</hi>). Zugrunde liegt mlat. <hi rendition="#i"
+            >arbalista</hi>, <hi rendition="#i">arcubalista</hi>,
+          eigentlich „bogen- wurfmaschine“, von <hi rendition="#i"
+            >arcus</hi> „bogen“ und mlat. <hi rendition="#i">balista</hi>
+          „wurfmaschine“ (gr. βάλλω „werfe“), wovon auch engl. <hi
+            rendition="#i">arbalist</hi>, frz. <hi rendition="#i"
+            >arbalète</hi> „stangenbogen“, ital. <hi rendition="#i"
+            >balestra</hi>.</p>
+        <p><hi rendition="#b">Arm</hi> (elend, dürftig), schw. <hi
+            rendition="#i">arm</hi>, anord. <hi rendition="#i">armr</hi>
+          „unglücklich, elend“ = got. <hi rendition="#i">arms</hi> „elend“,
+          ags. <hi rendition="#i">earm</hi>, as. <hi rendition="#i"
+            >arm</hi> „arm, elend“ (holl. <hi rendition="#i">arm</hi>),
+          ahd. <hi rendition="#i">ar(a)m</hi> „arm, elend“ (nhd. <hi
+            rendition="#i">arm</hi>). Die bedeutung „dürftig“ ist aus dem
+          d. ins nord. gedrungen und gehört nur den westgerm. sprachen an.
+          Dieselbe bedeutung wie anord. <hi rendition="#i">armr</hi> hat
+            <hi rendition="#i">aumr</hi> (siehe <hi rendition="#i #g"
+            >øm</hi>), und die beiden worte sind in wirklichkeit auch nur
+          nebenformen, beide von idg. <hi rendition="#i">*orbh(u)mo-</hi>,
+          das zu lat. <hi rendition="#i">orbus</hi> „elternlos“ <pb n="33"
+            facs="#f0040"/>usw. gehört: siehe <hi rendition="#g #i"
+            >arbeide</hi> und <hi rendition="#g #i">arv</hi>. — <hi
+            rendition="#b">Armod,</hi> schw. <hi rendition="#i">armod</hi>
+          n., entlehnt aus mnd. <hi rendition="#i">armød</hi> = mhd. <hi
+            rendition="#i">armuot</hi> (nhd. <hi rendition="#i"
+          >Armut</hi>). Im späteren anord. findet sich <hi rendition="#i"
+            >armø̂đa</hi> „mühe, beschwerde“, das aus der mnd. nebenform
+            <hi rendition="#i">armôde</hi> (holl. <hi rendition="#i"
+            >armoede</hi>) = ahd. <hi rendition="#i">aramuoti</hi> entlehnt
+          ist unter anknüpfung an <hi rendition="#i">mǿđa</hi> „mühe,
+          beschwerde“.</p>
+      </div>
+    </body>
+    <back/>
+  </text>
+</TEI>

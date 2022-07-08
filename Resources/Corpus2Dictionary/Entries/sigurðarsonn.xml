@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: sigurðarsonn</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>sigurðarsonn</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="og" type="c">Og</w>
+                     <w lemma="það" type="fpheo">það</w>
+                     <w lemma="segja" type="sfg3fn">segja</w>
+                     <w lemma="maður" type="nkfn">menn</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="hafa" type="svg3en">hafi</w>
+                     <w lemma="leita" type="ssg">leitað</w>
+                     <w lemma="ráða" type="sng">ráða</w>
+                     <w lemma="undir" type="ao">undir</w>
+                     <w lemma="haraldur" type="nkeo-s">Harald</w>
+                     <w lemma="sigurðarsonn" type="nkeo-s">Sigurðarson</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="ætla" type="sfg3fn">ætla</w>
+                     <w lemma="maður" type="nkfn">menn</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="það" type="fphfn">þau</w>
+                     <w lemma="hafa" type="svg3fþ">hefðu</w>
+                     <w lemma="eigi" type="aa">eigi</w>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="úr" type="aa">úr</w>
+                     <w lemma="ráða" type="ssg">ráðið</w>
+                     <w lemma="ef" type="c">ef</w>
+                     <w lemma="það" type="fphfn">þau</w>
+                     <w lemma="hafa" type="svg3fþ">hefðu</w>
+                     <w lemma="eigi" type="aa">eigi</w>
+                     <w lemma="hann" type="fpkee">hans</w>
+                     <w lemma="við" type="aa">við</w>
+                     <w lemma="njóta" type="ssg">notið</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="hann" type="fpkee">hans</w>
+                     <w lemma="viska" type="nveo">visku</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

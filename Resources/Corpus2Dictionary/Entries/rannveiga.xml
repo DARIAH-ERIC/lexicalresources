@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: rannveiga</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>rannveiga</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hans" type="nken-s">Hans</w>
+                     <w lemma="son" type="nxen">son</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="gamli" type="nken-s">Gamli</w>
+                     <w lemma="er" type="ct">er</w>
+                     <w lemma="eiga" type="sfg3eþ">átti</w>
+                     <w lemma="rannveiga" type="nveo-s">Rannveigu</w>
+                     <w lemma="dóttir" type="nveo">dóttur</w>
+                     <w lemma="ásmundar" type="nkee-s">Ásmundar</w>
+                     <w lemma="hærulangur" type="nkee">hærulangs</w>
+                     <pc>,</pc>
+                     <w lemma="systir" type="nvfn">systur</w>
+                     <w lemma="grettir" type="nkee-s">Grettis</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

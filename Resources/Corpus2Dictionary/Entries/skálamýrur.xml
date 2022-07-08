@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: skálamýrur</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>skálamýrur</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hann" type="nken-s">Hann</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="bjarnarson" type="nken-s">Bjarnarson</w>
+                     <pc>,</pc>
+                     <w lemma="ófeigsson" type="nkee-s">Ófeigssonar</w>
+                     <w lemma="þunnskeggur" type="nkee">þunnskeggs</w>
+                     <pc>,</pc>
+                     <w lemma="kráku-hreiðarssonar" type="nkee-s">Kráku-Hreiðarssonar</w>
+                     <pc>,</pc>
+                     <w lemma="sonur" type="nkee">sonar</w>
+                     <w lemma="það" type="fphee">þess</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="eiríkur" type="nken-s">Eiríkur</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="goðdölur" type="nkfþ-s">Goðdölum</w>
+                     <w lemma="gefa" type="sfg3eþ">gaf</w>
+                     <w lemma="tunga" type="nveog">tunguna</w>
+                     <w lemma="niður" type="aa">niður</w>
+                     <w lemma="frá" type="aþ">frá</w>
+                     <w lemma="skálamýrur" type="nkeþ-s">Skálamýri</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xml:id="patterns">
+    <head>Patterns</head>
+    <div>
+        <head>Inheritance of <att>xml:lang</att></head>
+        <p>Some elements in TEI Lex-0, like <gi>entry</gi>, for instance, have a required attribute
+                <att>xml:lang</att>; others like <gi>form</gi> or <gi>quote</gi> do not. In general,
+            TEI Lex-0, unlike TEI, recommends that the <att>xml:lang</att> be attached to so-called
+            container elements (for instance, <gi>entry</gi> and <gi>cit</gi>) rather than on
+            individual word forms or textual segments. </p>
+        <p>TODO: Add some examples</p>
+        <p>So how can we extract all orthographic forms in a particular language? We can use an
+            XPath expression like this: <code rend="language-xpath"
+                >//orth[ancestor-or-self::*[@xml:lang][1][@xml:lang='en']]</code> .</p>
+        <p>This XPath expression identifies: <list>
+                <item>each <code rend="language-xpath">orth</code> element, regardless of where it
+                    is in the document (<code rend="language-xpath">//</code>) </item>
+                <item>but only if it itself or one of its ancestors has the <code
+                        rend="language-xpath">@xml:lang</code> attribute (<code
+                        rend="language-xpath">[ancestor-or-self::*[@xml:lang]]</code>)</item>
+                <item>when looking for ancestors with the <code rend="language-xpath"
+                        >@xml:lang</code> attribute, we stop at the first such ancestor (i.e. we
+                    look for the nearest ancestors) (<code rend="language-xpath">[1]</code>) </item>
+                <item>finally, we filter out only those selected elements with the <code
+                        rend="language-xpath">@xml:lang</code> attribute whose value is <code
+                        rend="language-xpath">'en'</code></item>
+            </list>
+        </p>
+        <p>If your dictionary uses multiple language tags for one language (as in <code>'en'</code>, <code>'en-GB</code>' and
+            <code>'en-US'</code>) and you want to capture all language varieties with one XPath expression, you can use the XPath <code>lang()</code> function as in:
+                <code rend="language-xpath"
+                >//orth[ancestor-or-self::*[@xml:lang][1][lang('en')]]</code>. </p>
+        <p>While the predicate <code rend="language-xpath">[@xml:lang='en']</code> will match only
+            those elements whose <code>xml:lang</code> is exactly equal to <code>'en</code>', the predicate with
+            the function <code rend="language-xpath">[lang('en')]</code> will match all the elements whose language is tagged as either English (i.e. <code>'en'</code>) or one of its 'sublanguages' such as <code>'en-GB'</code>. 
+        </p>
+        <p>If you are new to XPath, you can check out a DARIAH-Campus tutorial <ref
+                target="https://campus.dariah.eu/resource/xpath-for-dictionary-nerds">XPath for
+                Dictionary Nerds</ref>.</p>
+    </div>
+</div>

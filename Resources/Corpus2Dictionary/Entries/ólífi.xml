@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: ólífi</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>ólífi</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="ólafur" type="nken-s">Ólafur</w>
+                     <w lemma="höggva" type="sfg3eþ">hjó</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="ófeigur" type="nkee-s">Ófeigs</w>
+                     <w lemma="grettir" type="nkee">grettis</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="særa" type="sfg3eþ">særði</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="ólífi" type="nhee">ólífis</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þur" type="nkfn-s">Þar</w>
+                     <w lemma="vera" type="sfg3fþ">voru</w>
+                     <w lemma="fallnur" type="lkfnsf">fallnir</w>
+                     <w lemma="fimm" type="tfkfn">fimm</w>
+                     <w lemma="maður" type="nkfn">menn</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="fimm" type="tfkfn">fimm</w>
+                     <w lemma="sár" type="lkfnsf">sárir</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="ólífi" type="nhee">ólífis</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="örkumla" type="lkenof">örkumla</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>
