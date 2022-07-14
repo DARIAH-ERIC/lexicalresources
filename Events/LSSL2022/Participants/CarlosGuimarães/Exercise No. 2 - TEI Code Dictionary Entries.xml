@@ -17,7 +17,7 @@
          <publicationStmt>
             <distributor>Carlos Guimarães</distributor>
             <address>
-               <addrLine>carlosguimaraes@ua.pt</addrLine>
+               <addrLine>carlosfilipeguimaraes@ua.pt</addrLine>
             </address>
             <availability>
                <p>Freely available on a non-commercial basis.</p>
@@ -25,7 +25,7 @@
             <date when="2022">2022</date>
          </publicationStmt>
          <sourceDesc>
-            <p>Online Dictionary Lexico.com</p>
+            <bibl>Oxford University Press (OUP). (n.d.). Lexico.com. https://www.lexico.com/</bibl>
          </sourceDesc> 
       </fileDesc>
   </teiHeader>
@@ -48,7 +48,7 @@
             <etym>Mid 19th century from German Poltergeist, from poltern ‘create a disturbance’ + Geist ‘ghost’.</etym>     
          </entry>
          <entry xml:id="lollygag">
-            <form n="1">
+            <form type="lemma">
                <orth>lollygag</orth>
                <pron notation="ipa">/ˈlɒlɪɡaɡ/</pron>
                <form type="inflected">
@@ -60,9 +60,9 @@
                <form type="inflected">
                   <orth>lollygagged</orth>
                </form>
-                  <form n="2">
-                     <orth>lallygag</orth>
-                  </form>
+               <form type="variant">
+                  <orth>lallygag</orth>
+               </form>
             </form>
             <gramGrp>
                <pos>verb</pos>
@@ -77,7 +77,7 @@
                </cit>
                   <sense n="1.1">
                      <lbl>with adverbial of direction</lbl>
-                     <def>Dawdle</def>
+                     <gloss>Dawdle</gloss>
                      <cit type="example">
                         <quote>We're lollygagging along</quote>
                      </cit>
@@ -99,7 +99,7 @@
             <etym>Late 16th century; earliest use found in Alexander Nowell (d. 1602), dean of St Paul's. From raze + -er.</etym>
          </entry>
          <entry xml:id="meek">
-            <form>
+            <form type="lemma">
                <orth>meek</orth>
                <pron notation="ipa">/miːk/</pron>
             </form>
@@ -111,8 +111,8 @@
                <cit type="example">
                   <quote>She brought her meek little husband along</quote>
                </cit>
-               <etym>Middle English me(o)c (also in the sense ‘courteous or indulgent’), from Old Norse mjúkr ‘soft, gentle’.</etym>
             </sense>
+            <etym>Middle English me(o)c (also in the sense ‘courteous or indulgent’), from Old Norse mjúkr ‘soft, gentle’.</etym>
          </entry>
       </body>
   </text>

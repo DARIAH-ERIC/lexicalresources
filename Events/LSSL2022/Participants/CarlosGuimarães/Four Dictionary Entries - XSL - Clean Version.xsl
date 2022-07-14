@@ -21,7 +21,7 @@
                 <h1>Adjectives</h1>
                 <xsl:apply-templates select="descendant::entry[gramGrp/pos = 'Adjective']"/>
                 <xsl:apply-templates select="descendant::entry"/>-->
-                <h1>Table of Content</h1>
+                <h1>Table of Contents</h1>
                 <xsl:for-each select="descendant::entry">
                     <xsl:sort></xsl:sort>
                     <a href="#{@xml:id}"><xsl:value-of select="form/orth"/></a>
@@ -95,6 +95,12 @@
         <p>
             <xsl:apply-templates/>
         </p>    
+    </xsl:template>
+    
+    <xsl:template match="gloss">
+        <p>
+            <xsl:apply-templates/>
+        </p>
     </xsl:template>
          
     <xsl:template match="cit[@type='example']/quote">
