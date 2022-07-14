@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: flysjuhverfi</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>flysjuhverfi</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="nærri" type="aþm">Nær</w>
+                     <w lemma="réttur" type="lkeþsf">réttum</w>
+                     <w lemma="um" type="ao">um</w>
+                     <w lemma="haust" type="nheog">haustið</w>
+                     <w lemma="fara" type="sfg3eþ">fór</w>
+                     <w lemma="grettir" type="nken-s">Grettir</w>
+                     <w lemma="ofan" type="aa">ofan</w>
+                     <w lemma="í" type="ao">í</w>
+                     <w lemma="flysjuhverfi" type="nheo-s">Flysjuhverfi</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="sækja" type="sfg3eþ">sótti</w>
+                     <w lemma="sig" type="fpkeþ">sér</w>
+                     <w lemma="sauður" type="nkfo">sauði</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="bjarni" type="nken-s">Bjarni</w>
+                     <w lemma="heita" type="sfg3eþ">hét</w>
+                     <w lemma="maður" type="nken">maður</w>
+                     <w lemma="er" type="ct">er</w>
+                     <w lemma="búa" type="sfg3eþ">bjó</w>
+                     <w lemma="á" type="aþ">á</w>
+                     <w lemma="jörvi" type="nkeþ-s">Jörva</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="flysjuhverfi" type="nheþ-s">Flysjuhverfi</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: sjálfráða</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>sjálfráða</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="setja" type="sfg1en">Set</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="þessi" type="faven">þessi</w>
+                     <w lemma="gur" type="nheog">grið</w>
+                     <w lemma="fyrir" type="ao">fyrir</w>
+                     <w lemma="ég" type="fp1fo">oss</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="vor" type="feveo">vora</w>
+                     <w lemma="frændi" type="nkfo">frændur</w>
+                     <pc>,</pc>
+                     <w lemma="vinur" type="nkfo">vini</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="venslamaður" type="nkfo">venslamenn</w>
+                     <pc>,</pc>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="kona" type="nvfn">konur</w>
+                     <w lemma="sem" type="ct">sem</w>
+                     <w lemma="karl" type="nkfo">karla</w>
+                     <pc>,</pc>
+                     <w lemma="þýjar" type="nvfo">þýjar</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="þræll" type="nkfo">þræla</w>
+                     <pc>,</pc>
+                     <w lemma="sveinur" type="nkfo">sveina</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="sjálfráða" type="lkfoof">sjálfráða</w>
+                     <w lemma="maður" type="nkfo">menn</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

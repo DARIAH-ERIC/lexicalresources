@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="../XSLT/XSLTExample.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Dictionary samples from the TEI guidelines</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form>
+               <orth>competitor</orth>
+               <hyph>com|peti|tor</hyph>
+               <pron>k@m"petit@(r)</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+            <def>person who competes.</def>
+         </entry>
+         <entry>
+            <form>
+               <orth>disproof</orth>
+               <pron>dIs"pru:f</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+            <sense n="1">
+               <def>facts that disprove something.</def>
+            </sense>
+            <sense n="2">
+               <def>the act of disproving.</def>
+            </sense>
+         </entry>
+         <entry>
+            <form>
+               <orth>bray</orth>
+               <pron>breI</pron>
+            </form>
+            <hom>
+               <gramGrp>
+                  <pos>n</pos>
+               </gramGrp>
+               <sense>
+                  <def>cry of an ass; sound of a trumpet.</def>
+               </sense>
+            </hom>
+            <hom>
+               <gramGrp>
+                  <pos>vt</pos>
+                  <subc>VP2A</subc>
+               </gramGrp>
+               <sense>
+                  <def>make a cry or sound of this kind.</def>
+               </sense>
+            </hom>
+         </entry>
+         <entry>
+            <form>
+               <orth>careen</orth>
+               <hyph>ca|reen</hyph>
+               <pron>k@"ri:n</pron>
+            </form>
+            <gramGrp>
+               <pos>vt</pos>
+               <pos>vi</pos>
+            </gramGrp>
+            <sense n="1">
+               <gramGrp>
+                  <subc>VP6A</subc>
+               </gramGrp>
+               <def>turn (a ship) on one side for cleaning, repairing, etc.</def>
+            </sense>
+            <sense n="2">
+               <gramGrp>
+                  <subc>VP6A</subc>
+                  <subc>VP2A</subc>
+               </gramGrp>
+               <def>(cause to) tilt, lean over to one side.</def>
+            </sense>
+         </entry>
+         <superEntry>
+            <form>
+               <orth>abandon</orth>
+               <hyph>a|ban|don</hyph>
+               <pron>@"band@n</pron>
+            </form>
+            <entry n="1">
+               <gramGrp>
+                  <pos>v</pos>
+                  <subc>T1</subc>
+               </gramGrp>
+               <sense n="1">
+                  <def>to leave completely and for ever … </def>
+               </sense>
+               <sense n="2"/>
+            </entry>
+            <entry n="2">
+               <gramGrp>
+                  <pos>n</pos>
+                  <subc>U</subc>
+               </gramGrp>
+               <sense>
+                  <def>the state when one's feelings and actions are uncontrolled; freedom from control…</def>
+               </sense>
+            </entry>
+         </superEntry>
+         <entry>
+            <form type="abbrev">
+               <orth>MTBF</orth>
+            </form>
+            <form type="full">
+               <lbl>abbrev. for</lbl>
+               <orth>mean time between failures</orth>
+            </form>
+         </entry>
+         <entry>
+            <form>
+               <orth>zaptié</orth>
+               <orth>zaptyé</orth>
+            </form>
+            <def>Gendarme ottoman</def>
+         </entry>
+         <entry>
+            <form>
+               <orth>obverse</orth>
+               <pron>'äb-`ərs</pron>, <pron extent="pref">äb-`</pron>, <pron extent="pref">əb-`</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+         </entry>
+         <entry>
+            <form>
+               <orth>amygdale</orth>
+               <pron extent="full">[ami(g)dal]</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+         </entry>
+         <entry>
+            <form>
+               <orth>transcription</orth>
+               <pron notation="IPA">trænskrɪpʃən</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+         </entry>
+         <entry>
+            <form>
+               <orth>將</orth>
+               <pron>jiang4</pron>
+            </form>
+            <gramGrp>
+               <pos>名詞</pos>
+            </gramGrp>
+         </entry>
+
+         <entry>
+            <form>
+               <orth>competitor</orth>
+               <hyph>com|peti|tor</hyph>
+               <pron>k@m"petit@(r)</pron>
+            </form>
+         </entry>
+         <entry>
+            <form>
+               <orth>demi-dieu</orth>
+               <hyph>demi|dieu</hyph>
+               <pron>[d(th)midjø]</pron>
+            </form>
+         </entry>
+         <entry>
+            <form>
+               <orth>音</orth>
+               <hyph>( 因漢字無法以連字符號拆解，故不提供範例。)</hyph>
+               <pron>yin</pron>
+            </form>
+         </entry>
+         <entry>
+            <form>
+               <orth>pamplemousse</orth>
+            </form>
+            <gramGrp>
+               <gram type="pos">noun</gram>
+               <gram type="gen">masculine</gram>
+            </gramGrp>
+         </entry>
+         <entry>
+            <form>
+               <orth>wits</orth>
+               <pron>wIts</pron>
+            </form>
+            <gramGrp>
+               <number>pl</number>
+               <pos>n</pos>
+            </gramGrp>
+         </entry>
+         <entry>
+            <form>
+               <orth>épousailles</orth>
+               <pron>[epuzaj]</pron>
+            </form>
+            <gramGrp>
+               <number>pl.</number>
+               <pos>n.</pos>
+            </gramGrp>
+         </entry>
+
+         <entry>
+            <form type="lemma">
+               <gramGrp>
+                  <pos value="noun"/>
+                  <gen value="n"/>
+               </gramGrp>
+               <form type="determiner">
+                  <orth>Das</orth>
+               </form>
+               <form type="headword">
+                  <orth>Evangelium</orth>,</form>
+            </form>
+            <form type="inflected">
+               <gramGrp>
+                  <case value="genitive"/>
+                  <number value="singular"/>
+               </gramGrp>
+               <form type="determiner">
+                  <orth>des</orth>
+               </form>
+               <form type="headword">
+                  <orth>
+                     <oRef>Evangelii</oRef>,</orth>
+               </form>
+            </form>
+         </entry>
+         <entry>
+            <form type="lemma">
+               <gramGrp>
+                  <pos value="noun"/>
+                  <gen value="n"/>
+               </gramGrp>
+               <form type="determiner">
+                  <orth>Das</orth>
+               </form>
+               <form type="headword">
+                  <orth>Evangelium</orth>,</form>
+            </form>
+            <form type="inflected">
+               <gramGrp>
+                  <case value="genitiv"/>
+                  <number value="singular"/>
+               </gramGrp>
+               <form type="determiner">
+                  <orth>des</orth>
+               </form>
+               <form type="headword">
+                  <orth>
+                     <oRef>Evangelii</oRef>,</orth>
+               </form>
+            </form>
+         </entry>
+         <entry>
+            <form type="inflected">
+               <gramGrp>
+                  <per value="2"/>
+                  <number value="singular"/>
+                  <tns value="present"/>
+                  <mood value="indicative"/>
+               </gramGrp>
+               <form type="personalpronoun">
+                  <orth>du</orth>
+               </form>
+               <form type="headword">
+                  <orth>
+                     <oRef>triffst</oRef>
+                  </orth>
+               </form>
+            </form>
+         </entry>
+         <entry>
+            <form type="flexion">
+               <gramGrp>
+                  <per value="2"/>
+                  <number value="singulier"/>
+                  <tns value="présent"/>
+                  <mood value="indicatif"/>
+               </gramGrp>
+               <form type="pronom_personnel">
+                  <orth>tu</orth>
+               </form>
+               <form type="entrée">
+                  <orth>
+                     <oRef>vas</oRef>
+                  </orth>
+               </form>
+            </form>
+         </entry>
+         <entry>
+            <form type="inflected">
+               <gramGrp>
+                  <per value="2"/>
+                  <number value="singular"/>
+                  <tns value="present"/>
+                  <mood value="indicative"/>
+               </gramGrp>
+               <form type="personalpronoun">
+                  <orth>du</orth>
+               </form>
+               <form type="headword">
+                  <orth>
+                     <oRef>triffst</oRef>
+                  </orth>
+               </form>
+            </form>
+         </entry>
+         <entry>
+            <form>
+               <orth>wits</orth>
+               <pron>wIts</pron>
+            </form>
+            <gramGrp>
+               <number>pl</number>
+               <pos>n</pos>
+            </gramGrp>
+            <sense n="1">
+               <gramGrp>
+                  <number>sometimes sing.</number>
+               </gramGrp>
+               <def>the ability to reason and act, esp. quickly …</def>
+            </sense>
+         </entry>
+         <entry>
+            <form>
+               <orth>luire</orth>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <subc>intransitive</subc>
+            </gramGrp>
+         </entry>
+         <entry>
+            <form>
+               <orth>isotope</orth>
+            </form>
+            <gramGrp>
+               <pos>adj</pos>
+            </gramGrp>
+         </entry>
+         <entry>
+            <form>
+               <orth>médire</orth>
+            </form>
+            <gramGrp>
+               <subc>t ind</subc>
+               <colloc>de</colloc>
+            </gramGrp>
+         </entry>
+         <entry>
+            <form>
+               <orth>demigod</orth>
+               <pron> … </pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+            <sense n="1">
+               <sense n="a">
+                  <def>a being who is part mortal, part god.</def>
+               </sense>
+               <sense n="b">
+                  <def>a lesser deity.</def>
+               </sense>
+            </sense>
+            <sense n="2">
+               <def>a godlike person.</def>
+            </sense>
+         </entry>
+         <entry>
+            <form>
+               <orth>rémoulade</orth>
+               <pron>Remulad</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+               <gen>f</gen>
+            </gramGrp>
+            <cit type="translation" xml:lang="en">
+               <quote>remoulade</quote>
+               <quote>rémoulade</quote>
+               <def>dressing containing mustard and herbs</def>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>competitor</orth>
+               <hyph>com|peti|tor</hyph>
+               <pron>k@m"petit@(r)</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+            <def>person who competes.</def>
+         </entry>
+         <entry>
+            <form>
+               <orth>compétiteur</orth>
+               <hyph>com|péti|teur</hyph>
+               <pron> [köpetitœR]</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+            <def>Personne qui entre en compétition.</def>
+         </entry>
+         <entry n="1">
+            <form>
+               <orth>dresser</orth>
+            </form>
+            <sense n="a">
+               <sense>
+                  <usg type="dom">Theat</usg>
+                  <cit type="translation" xml:lang="fr">
+                     <quote>habilleur</quote>
+                     <gramGrp>
+                        <gen>m</gen>
+                     </gramGrp>
+                  </cit>
+                  <cit type="translation" xml:lang="fr">
+                     <quote>-euse</quote>
+                     <gramGrp>
+                        <gen>f</gen>
+                     </gramGrp>
+                  </cit>
+               </sense>
+               <sense>
+                  <usg type="dom">Comm</usg>
+                  <form type="compound">
+                     <orth>window <oRef/>
+                     </orth>
+                  </form>
+                  <cit type="translation" xml:lang="fr">
+                     <quote>étalagiste</quote>
+                     <gramGrp>
+                        <gen>mf</gen>
+                     </gramGrp>
+                  </cit>
+               </sense>
+               <cit type="example">
+                  <quote>she's a stylish <oRef/>
+                  </quote>
+                  <cit type="translation" xml:lang="fr">
+                     <quote>elle s'habille avec chic</quote>
+                  </cit>
+               </cit>
+               <xr type="see">V. <ref target="#hair">hair</ref>
+               </xr>
+            </sense>
+            <sense n="b">
+               <usg type="category">tool</usg>
+               <sense>
+                  <usg type="hint">for wood</usg>
+                  <cit type="translation" xml:lang="fr">
+                     <quote>raboteuse</quote>
+                     <gramGrp>
+                        <gen>f</gen>
+                     </gramGrp>
+                  </cit>
+               </sense>
+               <sense>
+                  <usg type="hint">for stone</usg>
+                  <cit type="translation" xml:lang="fr">
+                     <quote>rabotin</quote>
+                     <gramGrp>
+                        <gen>m</gen>
+                     </gramGrp>
+                  </cit>
+               </sense>
+            </sense>
+         </entry>
+         <entry>
+            <!-- ... -->
+            <cit type="translation" xml:lang="en">
+               <quote>OAS</quote>
+               <def>illegal military organization supporting French rule of Algeria</def>
+            </cit>
+         </entry>
+         <entry type="foreign">
+            <form>
+               <orth>havdalah</orth>
+               <orth>havdoloh</orth>
+               <gramGrp>
+                  <gram type="pos">n.</gram>
+               </gramGrp>
+            </form>
+            <sense>
+               <usg type="dom">Judaism</usg>
+               <def>the ceremony marking the end of the sabbath or of a festival, including the blessings over wine, candles and spices.</def>
+            </sense>
+            <cit type="translation" xml:lang="en">
+               <usg type="style">literally</usg>
+               <quote>separation</quote>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>abismo</orth>
+            </form>
+            <etym>del <lang>gr.</lang>
+               <mentioned>a</mentioned> priv. y <mentioned>byssos</mentioned>, <gloss>fondo</gloss>
+            </etym>
+            <!-- ... -->
+         </entry>
+         <entry>
+            <!-- ... -->
+            <etym>
+               <lang>F</lang> fr. <lang>ML</lang>
+               <mentioned>pneuma</mentioned>
+               <mentioned>neuma</mentioned> fr. <lang>Gk</lang>
+               <mentioned>pneuma</mentioned>
+               <gloss>breath</gloss>
+               <xr type="etym">more at <ptr target="#pneumatic"/>
+               </xr>
+            </etym>
+            <sense>
+               <def>any of various symbols used in the notation of Gregorian chant <!-- ... -->
+               </def>
+            </sense>
+         </entry>
+         <entry>
+            <form>
+               <orth>publish</orth> ... </form>
+            <etym>
+               <lang>ME.</lang>
+               <mentioned>publisshen</mentioned>, <lang>F.</lang>
+               <mentioned>publier</mentioned>, <lang>L.</lang>
+               <mentioned>publicare, publicatum</mentioned>. <xr>See <ref>public</ref>; cf. 2d <ref>-ish</ref>.</xr>
+            </etym>
+            <ref>(From: Webster's Second International)</ref>
+         </entry>
+         <entry>
+            <form>
+               <orth>publier</orth> ... </form>
+            <etym>Emprunté au <lang>latin</lang>
+               <mentioned>publicare</mentioned>
+               <def>mettre à la disposition du public ; montrer au public ; publier (un livre)</def> , <label>dérivé de </label>
+               <mentioned>publicus</mentioned>, <xr>v. <ref>public1</ref>
+               </xr>. La forme <mentioned>puplier</mentioned>, <mentioned>poplier</mentioned>
+               <label>attesté en </label>
+               <lang>anc. fr.</lang>
+               <xr> (v. <ref>supra, <bibl>Grand dictionnaire de la langue française</bibl>. et. <bibl>Tobler-Lommatzsch</bibl>
+                  </ref>.)</xr> à côté de<mentioned> publier</mentioned>, que l'on trouve à partir de la <date>2e moitié du XIIIe s.</date>
+               <bibl>[ms. de la <date>fin XIIIe s.</date>] </bibl>
+               <bibl>(Légende de Girart de Roussillon, 64 dans Tobler-Lommatzsch),</bibl> est une <label>altération d'après</label>
+               <mentioned> peuple</mentioned>.</etym>
+         </entry>
+         <entry>
+            <form>
+               <orth>publish</orth> ... </form>
+            <etym>
+               <lang>ME.</lang>
+               <mentioned>publisshen</mentioned>, <lang>F.</lang>
+               <mentioned>publier</mentioned>, <lang>L.</lang>
+               <mentioned>publicare, publicatum</mentioned>. <xr>See <ref>public</ref>; cf. <ref>2d -ish</ref>.</xr>
+            </etym>
+         </entry>
+         <entry>
+            <form>
+               <orth>publier</orth> ... </form>
+            <etym>Emprunté au <lang>latin</lang>
+               <mentioned>publicare</mentioned>
+               <def>mettre à la disposition du public ; montrer au public ; publier (un livre)</def> , <label>dérivé de </label>
+               <mentioned>publicus</mentioned>, <xr>v. <ref>public1</ref>
+               </xr>. La forme <mentioned>puplier</mentioned>, <mentioned>poplier</mentioned>
+               <label>attesté en </label>
+               <lang>anc. fr.</lang>
+               <xr> (v. <ref>supra, <bibl>Grand dictionnaire de la langue française</bibl>. et. <bibl>Tobler-Lommatzsch</bibl>
+                  </ref>.)</xr> à côté de<mentioned> publier</mentioned>, que l'on trouve à partir de la <date>2e moitié du XIIIe s.</date>
+               <bibl>[ms. de la <date>fin XIIIe s.</date>] </bibl>
+               <bibl>(Légende de Girart de Roussillon, 64 dans Tobler-Lommatzsch),</bibl> est une <label>altération d'après</label>
+               <mentioned> peuple</mentioned>.</etym>
+         </entry>
+         <entry>
+            <form>
+               <orth>佛陀</orth> ... </form>
+            <etym>從<lang>梵語</lang>
+               <term>buddha</term>傳入的<lang>中古漢語</lang>音譯; </etym>
+         </entry>
+         <entry>
+            <!-- ... -->
+            <cit type="translation" xml:lang="en">
+               <quote>to horrify</quote>
+            </cit>
+            <cit type="example">
+               <quote>elle était horrifiée par la dépense</quote>
+               <cit type="translation" xml:lang="en">
+                  <quote>she was horrified at the expense.</quote>
+               </cit>
+            </cit>
+         </entry>
+         <entry>
+            <cit type="translation" xml:lang="en">
+               <quote>reseating</quote>
+               <quote>rebottoming</quote>
+               <usg type="hint">with straw</usg>
+            </cit>
+         </entry>
+         <entry>
+            <form type="abbrev">
+               <orth>MTBF</orth>
+            </form>
+            <form type="full">
+               <lbl>abbrev. for</lbl>
+               <orth>mean time between failures</orth>
+            </form>
+         </entry>
+         <entry>
+            <form type="abbrev">
+               <orth>cf.</orth>
+            </form>
+            <form type="full">
+               <lbl>abréviation pour</lbl>
+               <orth>confer</orth>
+            </form>
+         </entry>
+         <entry>
+            <form type="abbrev">
+               <orth>台大</orth>
+            </form>
+            <form type="full">
+               <lbl>縮寫</lbl>
+               <orth>台灣大學</orth>
+            </form>
+         </entry>
+         <entry>
+            <form>
+               <orth>glee</orth>
+            </form>
+            <xr>Compare <ptr target="#madrigal.1"/>
+            </xr>
+         </entry>
+         <entry xml:id="madrigal.1">
+            <form>
+               <!-- ... -->
+            </form>
+         </entry>
+         <entry n="2">
+            <form>
+               <orth>rose</orth>
+            </form>
+            <xr type="inflectedForm">
+               <lbl>the past tense of</lbl>
+               <ref target="#rise">rise</ref>
+            </xr>
+         </entry>
+         <!-- ... -->
+         <entry xml:id="rise">
+            <form>
+               <orth>rise</orth>
+            </form>
+            <!-- main entry for "rise" as verb -->
+         </entry>
+         <entry>
+            <form>
+               <orth>lavage</orth>
+            </form>
+            <etym>[Fr. &lt; <mentioned>laver</mentioned>; L. <mentioned>lavare</mentioned>, to wash; <xr>see <ref>lather</ref>
+               </xr>]. </etym>
+         </entry>
+         <entry>
+            <form>
+               <orth>publier</orth> ... </form>
+            <etym>Emprunté au <lang>latin</lang>
+               <mentioned>publicare</mentioned>
+               <def>mettre à la disposition du public ; montrer au public ; publier (un livre)</def> , <label>dérivé de </label>
+               <mentioned>publicus</mentioned>, <xr>v. <ref>public1</ref>
+               </xr>. La forme <mentioned>puplier</mentioned>, <mentioned>poplier</mentioned>
+               <label>attesté en </label>
+               <lang>anc. fr.</lang>
+               <xr> (v. <ref>supra, <bibl>Grand dictionnaire de la langue française</bibl>. et. <bibl>Tobler-Lommatzsch</bibl>
+                  </ref>.)</xr> à côté de<mentioned> publier</mentioned>, que l'on trouve à partir de la <date>2e moitié du XIIIe s.</date>
+               <bibl>[ms. de la <date>fin XIIIe s.</date>] </bibl>
+               <bibl>(Légende de Girart de Roussillon, 64 dans Tobler-Lommatzsch),</bibl> est une <label>altération d'après</label>
+               <mentioned> peuple</mentioned>.</etym>
+         </entry>
+         <entry>
+            <form>
+               <orth>clef</orth>
+            </form>
+            <xr type="syn">SYN. <ref>clé</ref>
+            </xr>
+         </entry>
+
+         <entry>
+            <form>
+               <orth>癲</orth>
+            </form>
+            <etym>詩經．大雅．雲漢：<mentioned>瘨</mentioned>，病、使困苦； <xr>參見 <ref>癲</ref>
+               </xr>。 </etym>
+         </entry>
+         <entry>
+            <form>
+               <orth>lawful</orth>
+            </form>
+            <xr type="syn">SYN. see <ref>legal</ref>
+            </xr>
+         </entry>
+         <entry>
+            <form type="contraction">
+               <orth>ain't</orth>
+               <pron>eInt</pron>
+            </form>
+            <usg type="reg">Not standard</usg>
+            <form type="full">
+               <lbl>contraction of</lbl>
+               <orth>am not</orth>
+               <orth>is not</orth>
+               <orth>are not</orth>
+               <orth>have not</orth>
+               <orth>has not</orth>
+            </form>
+            <cit type="example">
+               <quote>I ain't seen it.</quote>
+            </cit>
+            <note type="usage">Although the interrogative form <mentioned>ain't I?</mentioned> would be a natural contraction of <mentioned>am I not?</mentioned>, it is generally avoided in spoken
+               English and never used in formal English.</note>
+         </entry>
+         <entry>
+            <form>
+               <orth>bevvy</orth>
+               <pron>"bEvI</pron>
+            </form>
+            <usg type="reg">Dialect</usg>
+            <hom>
+               <gramGrp>
+                  <pos>n</pos>
+               </gramGrp>
+               <sense n="1">
+                  <def>a drink, esp. an alcoholic one: we had a few bevvies last night.</def>
+               </sense>
+            </hom>
+            <!-- ... sense 2 ... -->
+            <hom>
+               <gramGrp>
+                  <pos>vb</pos>
+               </gramGrp>
+               <sense n="3">
+                  <def>to drink alcohol</def>
+               </sense>
+            </hom>
+            <etym>probably from <lang>Old French</lang>
+               <mentioned>bevee</mentioned>, <mentioned>buvee</mentioned>
+               <gloss>drinking</gloss>
+            </etym>
+            <re type="derived">
+               <form>
+                  <orth>bevvied</orth>
+               </form>
+               <gramGrp>
+                  <pos>adj</pos>
+               </gramGrp>
+            </re>
+         </entry>
+         <entry>
+            <form>
+               <orth>neu·ral</orth>
+               <pron>'n(y)ūr-əl</pron>
+            </form>
+            <gramGrp>
+               <pos>adj</pos>
+            </gramGrp>
+            <sense n="1">
+               <def>of, relating to, or affecting a nerve or the nervous system</def>
+            </sense>
+            <sense n="2"> ... </sense>
+            <re>
+               <form>
+                  <orth>neurally</orth>
+                  <pron extent="suff">-ə-lē</pron>
+               </form>
+               <gramGrp>
+                  <pos>adv</pos>
+               </gramGrp>
+            </re>
+         </entry>
+         <entry>
+            <form>
+               <orth>siphonner</orth>
+               <pron>[sifóne]</pron>
+            </form>
+            <gramGrp>
+               <pos>v.</pos>
+            </gramGrp>
+            <sense>
+               <def>Faire fonctionner un siphon, transvaser (un liquide) au moyen d'un siphon.</def>
+            </sense>
+            <re>
+               <form>
+                  <orth>siphonnage</orth>
+                  <pron extent="suff">[as]</pron>
+               </form>
+               <gramGrp>
+                  <pos>n.</pos>
+               </gramGrp>
+            </re>
+         </entry>
+         <entry>
+            <form>
+               <orth>politique</orth>
+            </form>
+            <gramGrp>
+               <pos>n.</pos>
+               <gen>f. </gen>
+            </gramGrp>
+            <sense n="1.">
+               <def>Art de conduire les affaires de l'Etat</def> ; </sense>
+            <sense n="2.">
+               <def>Ligne de conduite raisonnée</def> ; </sense>
+            <sense n="3.">
+               <def>Habileté manifestée dans les rapports avec les autres et qui consiste essentiellement à amener autrui à faire ce que l'on désire, sans pour autant dévoiler ses propres
+                  intentions.</def>
+            </sense>
+            <re>
+               <form>
+                  <orth>politicisme</orth> : </form>
+               <sense>
+                  <def>théorie selon laquelle les événements et les transformations historiques sont dus essentiellement à la politique et à ses évolutions</def> ; </sense>
+            </re>
+            <re>
+               <form>
+                  <orth>politiciste</orth> : </form>
+               <sense>
+                  <def>qui relève du politicisme ou lui est propre</def> ; </sense>
+            </re>
+            <re>
+               <form>
+                  <orth>politicomanie</orth> : </form>
+               <sense>
+                  <def>manie de la politique</def> ; </sense>
+            </re>
+            <re>
+               <form>
+                  <orth>politicaille</orth> : </form>
+               <sense>
+                  <def>politique envisagée sous un angle déprécié ou méprisable</def>.</sense>
+            </re>
+         </entry>
+         <entry>
+            <form>
+               <orth>kilo-</orth>
+            </form>
+            <gramGrp>
+               <pos>élém. formant</pos>
+            </gramGrp>
+            <sense>
+               <def>entrant dans la constr. de subst. désignant des unités de mesure, dans tous les domaines de la phys., valant mille fois l'unité de base </def> ; <xr>v. <ref>kilogramme,
+                     kilogrammètre, kilomètre, kilotonne, kilowatt et aussi : </ref>
+               </xr>
+            </sense>
+            <re>
+               <form>
+                  <orth>kilocalorie </orth> : </form>
+               <sense>
+                  <def> unité de mesure de quantité de chaleur valant mille calories (<abbr type="symb">symb. kcal</abbr>)</def> ; </sense>
+            </re>
+            <re>
+               <form>
+                  <orth>kilohertz</orth> : </form>
+               <sense>
+                  <def>Unité de mesure de fréquence valant mille hertz (<abbr type="symb">kHz</abbr> )</def> ; </sense>
+            </re>
+            <re>
+               <form>
+                  <orth>kilojoule</orth> : </form>
+               <sense>
+                  <def>unité de mesure de travail valant mille joules (<abbr type="symb">kJ</abbr>) </def> ; </sense>
+            </re>
+            <re>
+               <form>
+                  <orth>kiloparsec</orth> : </form>
+               <sense>
+                  <def>unité de mesure de longueur astronomique valant mille parsecs</def> ; </sense>
+            </re>
+            <re>
+               <form>
+                  <orth>kilovolt</orth> : </form>
+               <sense>
+                  <def>unité de mesure de différences de potentiel, valant mille volts (<abbr type="symb">kv</abbr>)</def>.</sense>
+            </re>
+         </entry>
+         <entry>
+            <form>
+               <orth>調皮</orth>
+               <pron>tiau2 pi2</pron>
+            </form>
+            <gramGrp>
+               <pos>形容詞</pos>
+            </gramGrp>
+            <sense n="1">
+               <def>不馴順；狡猾不易對付。</def>
+            </sense>
+            <sense n="2"> ... </sense>
+            <re>
+               <form>
+                  <orth>調皮地</orth>
+                  <pron extent="suff">tiau2 pi2 de</pron>
+               </form>
+               <gramGrp>
+                  <pos>副詞</pos>
+               </gramGrp>
+            </re>
+         </entry>
+         <entry>
+            <form>
+               <orth>abeja</orth>
+            </form>
+            <gramGrp>
+               <gen>f. </gen>
+            </gramGrp>
+            <sense n="1.">
+               <usg type="domain"> (ento.) </usg>
+               <def> bee </def>. </sense>
+            <sense n="2.">
+               <def> busy bee, hard worker </def>. </sense>
+            <sense n="3.">
+               <usg orig="A." type="domain"> (astron.) </usg>, <def> Musca </def> — </sense>
+            <re>
+               <form>
+                  <orth orig="a. albanila"> abeja albanila </orth>, </form>
+               <sense>
+                  <def>mason bee</def>;</sense>
+            </re>
+            <re>
+               <form>
+                  <orth orig="a. carpintera"> abeja carpintera </orth>, </form>
+               <sense>
+                  <def>carpenter bee </def>;</sense>
+            </re>
+            <re>
+               <form>
+                  <orth xml:id="re-o3" orig="a. reina or maestra"> abeja reina </orth>
+                  <orth mergedIn="#re-o4"> abeja maestra </orth>
+               </form>
+               <sense>
+                  <def> queen bee </def>;</sense>
+            </re>
+            <re>
+               <form>
+                  <orth xml:id="re-o4" orig="a. neutra or obrera"> abeja neutra </orth>
+                  <orth mergedIn="#re-o3"> abeja obrera </orth>
+               </form>
+               <sense>
+                  <def>worker bee</def>.</sense>
+            </re>
+         </entry>
+         <entry>
+            <form>
+               <orth xml:id="di-o1">vag-</orth>
+               <orth xml:id="di-o2">vago-</orth>
+            </form>
+            <def>vagus nerve</def>
+            <cit type="example">
+               <quote>
+                  <oRef target="#di-o1" type="noHyph"/>al</quote>
+               <quote>
+                  <oRef target="#di-o2" type="noHyph"/>tomy</quote>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>academy</orth>
+            </form>
+            <cit type="example">
+               <quote>The Royal <oRef type="cap"/> of Arts</quote>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>fait-tout</orth>
+            </form>
+            <cit type="example">
+               <quote>
+                  <q>Des casseroles et des "<oRef type="noHyph"/>faitouts" pour les ménagères.</q>
+               </quote>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>學院</orth>
+            </form>
+            <cit type="example">
+               <quote>皇家藝術<oRef/>
+               </quote>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>umfahren</orth>
+               <pron xml:id="umfahren1">umf'ahren</pron>
+               <pron xml:id="umfahren2">'umfahren</pron>
+            </form>
+            <cit>
+               <quote>Paul musste die Pfütze <pRef target="#umfahren1"/>, wenn er nicht nass werden wollte.</quote>
+            </cit>
+            <cit>
+               <quote>Paul wollte das Schild nicht absichtlich <pRef target="#umfahren2"/> und beschädigen.</quote>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>pinna</orth>
+               <pron>("pIn@)</pron>
+            </form>
+            <gramGrp>
+               <pos>n.</pos>, </gramGrp>
+            <form type="inflected">
+               <number>pl.</number>
+               <form>
+                  <orth type="lat" extent="part">-nae</orth>
+                  <pron extent="part">(-ni:)</pron>
+               </form> or <orth type="std" extent="part">-nas</orth>
+            </form>
+            <sense n="1">1. <def>any leaflet of a pinnate compound leaf.</def>
+            </sense>
+            <sense n="2">2. <usg type="dom">Zoology</usg>
+               <def>a feather, wing, fin, or similarly shaped part.</def>
+            </sense>
+            <sense n="3">3. <xr type="syn">
+                  <lbl>another name for</lbl>
+                  <ref target="#auricle.2">auricle (sense 2).</ref>
+               </xr>
+            </sense>
+            <etym>[<date>C18</date>: via <lang>New Latin</lang> from <lang>Latin</lang>: <gloss>wing</gloss>, <gloss>feather</gloss>, <gloss>fin</gloss>]</etym>
+         </entry>
+         <entry xml:id="auricle.2">
+            <form>
+               <!-- ... -->
+            </form>
+         </entry>
+         <entry>
+            <form>
+               <orth>biryani</orth>
+               <orth>biriani</orth>
+               <pron rend="noleftparen">%bIrI"A:nI</pron>
+            </form>
+            <def>any of a variety of Indian dishes … </def>
+            <etym>from <lang>Urdu</lang>
+            </etym>
+         </entry>
+         <entry>
+            <form>
+               <orth>pinna</orth>
+               <pron>"pIn@</pron>
+               <form type="inflected">
+                  <number>pl</number>
+                  <form>
+                     <orth type="lat">pinnae</orth>
+                     <pron>'pIni:</pron>
+                  </form>
+                  <orth type="std">pinnas</orth>
+               </form>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+            <sense n="1">
+               <def>any leaflet of a pinnate compound leaf.</def>
+            </sense>
+            <sense n="2">
+               <usg type="dom">Zoology</usg>
+               <def>a feather, wing, fin, or similarly shaped part.</def>
+            </sense>
+            <sense n="3">
+               <xr type="syn">
+                  <ptr target="#auricle.2"/>
+               </xr>
+            </sense>
+            <etym>
+               <date>C18</date>: via <lang>New Latin</lang> from <lang>Latin</lang>: <gloss>wing</gloss>, <gloss>feather</gloss>, <gloss>fin</gloss>
+            </etym>
+         </entry>
+         <entry>
+            <dictScrap>
+               <orth>biryani</orth> or <orth>biriani</orth>
+               <pron>(%bIrI"A:nI)</pron>
+               <def>any of a variety of Indian dishes …</def>
+               <etym>[from <lang>Urdu</lang>]</etym>
+            </dictScrap>
+         </entry>
+         <entry>
+            <form>
+               <orth>to horrify</orth>
+            </form>
+            <cit type="translation" xml:lang="en">
+               <quote>horrifier</quote>
+            </cit>
+            <cit type="example">
+               <quote>she was horrified at the expense.</quote>
+               <cit type="translation" xml:lang="en">
+                  <quote>elle était horrifiée par la dépense.</quote>
+               </cit>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>horrifier</orth>
+            </form>
+            <cit type="translation" xml:lang="en">
+               <quote>to horrify</quote>
+            </cit>
+            <cit type="example">
+               <quote>elle était horrifiée par la dépense</quote>
+               <cit type="translation" xml:lang="en">
+                  <quote>she was horrified at the expense.</quote>
+               </cit>
+            </cit>
+         </entry>
+         <entry>
+            <form>
+               <orth>bray</orth>
+               <pron>breI</pron>
+            </form>
+            <hom>
+               <gramGrp>
+                  <pos>n</pos>
+               </gramGrp>
+               <def>cry of an ass; sound of a trumpet.</def>
+            </hom>
+            <hom>
+               <gramGrp>
+                  <pos>vt</pos>
+                  <subc>VP2A</subc>
+               </gramGrp>
+               <def>make a cry or sound of this kind.</def>
+            </hom>
+         </entry>
+         <entry>
+            <form>
+               <orth>poussin</orth>
+               <pron>[pusë]</pron>
+            </form>
+            <gramGrp>
+               <pos>n.</pos>
+               <gen>m.</gen>
+            </gramGrp>
+            <sense n="1">Jeune poulet, nouvellement sorti de l'oeuf, encore couvert de duvet. La poule et ses poussins.</sense>
+            <sense n="2">Zool. Jeune oiseau (par rapport aux adultes, aux parents). </sense>
+            <sense n="3"> (êtres humains) <def n="1">Fam. Terme d'affection (enfant). </def>
+               <def n="2"> Sports. Catégorie d'âge (9 ans) qui précède celle des benjamins.</def>
+               <def n="3">Elève de première année dans certaines écoles (Air, Aéronautique).</def>
+            </sense>
+         </entry>
+         <entry>
+            <form>
+               <orth>disproof</orth>
+               <pron>dIs"pru:f</pron>
+            </form>
+            <gramGrp>
+               <pos>n</pos>
+            </gramGrp>
+            <sense n="1">
+               <def>facts that disprove something.</def>
+            </sense>
+            <sense n="2">
+               <def>the act of disproving.</def>
+            </sense>
+         </entry>
+         <entry>
+            <form>
+               <orth>證明</orth>
+               <pron>zheng-meng</pron>
+            </form>
+            <gramGrp>
+               <pos>名詞</pos>
+            </gramGrp>
+            <sense n="1">
+               <def>可靠的證據或事實</def>
+            </sense>
+            <sense n="2">
+               <def>用可靠的證據或事實來表明或斷定人或事物的真實性。</def>
+            </sense>
+         </entry>
+         <entry>
+            <form>
+               <orth>canon</orth>
+               <pron>[kanö] </pron>
+            </form>
+            <hom>
+               <gramGrp>
+                  <pos>n</pos>
+                  <gen>m.</gen>
+               </gramGrp>
+               <def>Pièce d'artillerie servant à lancer des projectiles lourds.</def>
+            </hom>
+            <hom>
+               <gramGrp>
+                  <pos>n.</pos>
+                  <gen>m.</gen>
+               </gramGrp>
+               <def>Théol. Loi ecclésiastique.</def>
+            </hom>
+         </entry>
+         <entry>
+            <form>
+               <orth>將</orth>
+               <pron>jiang4</pron>
+            </form>
+            <hom>
+               <gramGrp>
+                  <pos>名</pos>
+               </gramGrp>
+               <def>軍階名；技藝優良的人。</def>
+            </hom>
+            <hom>
+               <gramGrp>
+                  <pos>動詞</pos>
+                  <subc>及物</subc>
+               </gramGrp>
+               <def>統率軍隊</def>
+            </hom>
+         </entry>
+         <entry>
+            <dictScrap>
+               <orth>biryani</orth> or <orth>biriani</orth>
+               <pron>(%bIrI"A:nI)</pron>
+               <def>any of a variety of Indian dishes ...</def>
+               <etym>[from <lang>Urdu</lang>]</etym>
+            </dictScrap>
+         </entry>
+         <entry>
+            <dictScrap>
+               <orth>cattleya </orth> ou <orth>catleya</orth>
+               <pron>[katleja]</pron>
+               <def>Orchidée épiphyte, originaire d'Amérique tropicale, et dont l'espèce la plus connue est très recherchée pour l'élégance de ses fleurs mauves à grand labelle en cornet
+                  onduleux.</def>
+               <etym>1845 cattleye (BESCH.); 1893 cattleya (Gde Encyclop.). Lat. sc. cattleya, nom donné par John Lindley, botaniste angl. (1799-1865) à un genre d'orchidées en hommage au botaniste
+                  angl. W. Cattley (NED. Suppl.; DEI et Gde Encyclop.) </etym>
+            </dictScrap>
+         </entry>
+         <entry>
+            <dictScrap>
+               <orth>折羅</orth> 或 <orth>遮羅</orth>
+               <pron>zhe2 luo2</pron>
+               <def>Cālā (人名)</def>
+               <etym>音譯自 <lang>梵文</lang>
+               </etym>
+            </dictScrap>
+         </entry>
+         <superEntry>
+            <form>
+               <orth>abandon</orth>
+               <hyph>a|ban|don</hyph>
+               <pron>@"band@n</pron>
+            </form>
+            <entry n="1">
+               <gramGrp>
+                  <pos>v</pos>
+                  <subc>T1</subc>
+               </gramGrp>
+               <sense n="1">
+                  <def>to leave completely and for ever ... </def>
+               </sense>
+               <sense n="2"/>
+            </entry>
+            <entry n="2">
+               <gramGrp>
+                  <pos>n</pos>
+                  <subc>U</subc>
+               </gramGrp>
+               <def>the state when one's feelings and actions are uncontrolled; freedom from control</def>
+            </entry>
+         </superEntry>
+         <superEntry>
+            <form>
+               <orth>homme</orth>
+               <hyph>hom|me</hyph>
+               <pron>óm</pron>
+            </form>
+            <entry n="1">
+               <gramGrp>
+                  <pos>n.</pos>
+               </gramGrp>
+               <sense n="1">
+                  <def>Etre appartenant à l'espèce animale la plus évoluée de la Terre</def>
+               </sense>
+               <sense n="2"/>
+            </entry>
+            <entry n="2">
+               <gramGrp>
+                  <pos>n.</pos>
+               </gramGrp>
+               <def>Etre humain mâle et (le plus souvent) adulte.</def>
+            </entry>
+         </superEntry>
+         <superEntry>
+            <form>
+               <orth>弼</orth>
+               <hyph> (因漢字無法以連字符號拆解，故不提供範例。)</hyph>
+               <pron>bi4</pron>
+            </form>
+            <entry n="1">
+               <gramGrp>
+                  <pos>動詞</pos>
+                  <subc>及物</subc>
+               </gramGrp>
+               <sense n="1">
+                  <def>輔助；矯正過失</def>
+               </sense>
+               <sense n="2"/>
+            </entry>
+            <entry n="2">
+               <gramGrp>
+                  <pos>名詞</pos>
+                  <subc>可數</subc>
+               </gramGrp>
+               <def>古時矯正弓的器具</def>
+            </entry>
+         </superEntry>
+      </body>
+   </text>
+</TEI>

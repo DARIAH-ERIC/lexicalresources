@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: kjartan</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>kjartan</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="kjartan" type="nken-s">Kjartan</w>
+                     <w lemma="heita" type="sfg3eþ">hét</w>
+                     <w lemma="sonur" type="nkeo">son</w>
+                     <w lemma="hann" type="fpkee">hans</w>
+                     <pc>,</pc>
+                     <w lemma="röskur" type="lkensf">röskur</w>
+                     <w lemma="maður" type="nken">maður</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="vel" type="aa">vel</w>
+                     <w lemma="á" type="aþ">á</w>
+                     <w lemma="leggur" type="nkeþ">legg</w>
+                     <w lemma="koma" type="sþgken">kominn</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="hann" type="nken-s">Hann</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="fyrr" type="aae">fyrst</w>
+                     <w lemma="kenna" type="sþgken">kenndur</w>
+                     <w lemma="kjartan" type="nkeþ-s">Kjartani</w>
+                     <w lemma="sonur" type="nkeþ">syni</w>
+                     <w lemma="steinn" type="nkee-s">Steins</w>
+                     <w lemma="prestur" type="nkee">prests</w>
+                     <w lemma="að" type="aþ">að</w>
+                     <w lemma="eyjardalsá" type="nveþ-s">Eyjardalsá</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

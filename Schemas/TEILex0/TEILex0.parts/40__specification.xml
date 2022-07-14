@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xml:id="specification">
+    <head>Specification</head>
+    <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
+        <moduleRef key="gaiji" except="localName"/>
+        <!-- 2018-09-02 (TT): changed moduleRef for linking based on PB -->
+        <moduleRef key="linking" include="seg"/>
+        <!-- for segmentation inside orth/pron -->
+        <!-- 2018-09-02 (TT): removed re hom -->
+        <!-- 2018-09-02 (TT): put dictScrap back, I think we still want it -->
+        <!-- 2020-07-06 (TT): removing unnecessary gramatical elements + oRef and pRef (for which we use ref) -->
+        <moduleRef key="dictionaries"
+            except="entryFree superEntry re hom case colloc gen iType mood number oRef pRef per pos subc tns"/>
+        <!-- 2018-09-02 (TT): explicitly encoded what we allow from core -->
+        <!-- 2018-09-11 (TT): removed list, item and label because i don't
+                    see them as lexicographically relevant. I don't thin we need p either
+                    but I'm leaving it for now, in case we need it in the header-->
+        <!--2018-09-20 (TT): added quote! -->
+        <!--2019-07-04 (TT): added graphic, we need it for images! -->
+        <!--2021-09-19 (TT): added monogr for header expansion-->
+        <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
+        <moduleRef key="core"
+            include="author head title cit quote bibl biblStruct biblScope listBibl gloss
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email"/>
+        <!--PB's simplified textstructure declaratiopn-->
+        <moduleRef key="textstructure" include="TEI text body div front back"/>
+        <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
+                    leaving this here. Also head (from the core module is needed if we have images
+                    with explicit titles as opposed to captions. This we will come back to of course.-->
+        <moduleRef key="figures" include="figDesc figure"/>
+        <!--2018-09-11 (TT): this is superflous because we're removing all elements
+                    from analysis -->
+        <moduleRef key="analysis" except="cl interp interpGrp m phr s span spanGrp w"/>
+        <!--<moduleRef key="iso-fs" except="bicond binary cond default fDecl fDescr fLib fsConstraints fsDecl fsDescr fsdDecl fsdLink fvLib if iff numeric then vAlt vColl vDefault"/>
+                    -->
+        <!-- 2018-09-02 (TT): added PB's simplified declaration of the header and namesdates -->
+        <!--2020-06-23 (TT): add profileDesc so that we can document langUsage-->
+        <!--2021-09-25 (TT): add xenoData and revisionDesc-->
+        <!--2022-03-24 (TT): add taxonomy-->
+        <moduleRef key="header"
+            include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc revisionDesc xenoData editorialDecl projectDesc seriesStmt
+                        notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition taxonomy category catDesc"/>
+        <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
+        <!--        2021-09-19 (TT): added forename, surname; need for detailed biblStruct/author/persName-->
+        <moduleRef key="namesdates" include="placeName persName orgName forename surname"/>
+        <!-- for dialectal properties -->
+        <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
+        <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->
+        <moduleRef key="transcr" include="metamark"/>
+        <!-- Initial change to make entry recursive (LR) -->
+        <!-- 2018-09-03 (LR): making @xml:id required -->
+        <elementSpec ident="entry" mode="change">
+            <classes mode="change">
+                <memberOf key="model.entryPart.top" mode="add"/>
+                <!-- 2018-12-06 [LR] in order to have (recursive) <entry> in <sense> -->
+                <memberOf key="model.sensePart" mode="add"/>
+            </classes>
+            <!-- 2018-09-03 (TT): added explicit content model in order
+                        to include pc; see: https://github.com/TEIC/TEI/commit/1f6bd0115c67fa7f3db56dc9f9152ab855beee4d#diff-30a258b526be65d489a9dcfd0a239b69
+                        this is temporary because of issue with oxygen and tei-c servers; is already part of TEI -->
+            <content>
+                <alternate minOccurs="1" maxOccurs="unbounded">
+                    <elementRef key="sense"/>
+                    <elementRef key="pc"/>
+                    <classRef key="model.entryPart.top"/>
+                    <classRef key="model.global"/>
+                    <classRef key="model.ptrLike"/>
+                </alternate>
+            </content>
+            <attList>
+                <attDef ident="xml:id" mode="change" usage="req"/>
+                <attDef ident="xml:lang" mode="change" usage="req"/>
+                <attDef ident="type" mode="replace" usage="rec">
+                    <defaultVal>mainEntry</defaultVal>
+                    <valList mode="change" type="semi">
+                        <valItem ident="mainEntry"/>
+                        <valItem ident="wordFamily"/>
+                        <valItem ident="homonymicEntry"/>
+                        <valItem ident="relatedEntry"/>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!-- 2018-09-03 (LR): making @xml:id mandatory on sense -->
+        <elementSpec ident="sense" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+            </classes>
+            <content>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                    <!-- 2019-06-25 (TT): removed <textNode/> because we don't mixed content in sense-->
+                    <classRef key="model.gLike"/>
+                    <!-- following line useless since sense is member of model.sensePart -->
+                    <!--<elementRef key="sense"/>
+                                -->
+                    <classRef key="model.sensePart"/>
+                    <classRef key="model.phrase"/>
+                    <classRef key="model.global"/>
+                </alternate>
+            </content>
+            <attList>
+                <attDef ident="xml:id" mode="change" usage="req"/>
+                <attDef ident="level" mode="delete"/>
+            </attList>
+        </elementSpec>
+        <!-- 2018-07-17 (LR): the <xr> element is adapted to have specific @type values -->
+        <!-- implemented default value to lexical -->
+        <!-- introducing @subtype (note to myself: make feature request to TEI so that xr belongs to att.typed -->
+        <!-- made member of att.notated (for having @notation) ==> to be discussed -->
+        <elementSpec ident="xr" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+                <!-- 2018-12-04 [LR] to have <xr> in <def> and few other cool places -->
+                <!-- 2019-10-22 [LR] deleted to prevent ambiguous content model -->
+                <!--<memberOf key="model.emphLike" mode="add"/>-->
+                <!--<classes mode="change">
+                            <memberOf key="att.notated" mode="add"/>
+                        </classes>-->
+                <!--2020-05-14 allow inside quote (for cross-references in examples)-->
+                <memberOf key="model.quoteLike" mode="add"/>
+            </classes>
+            <content>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                    <classRef key="model.gLike"/>
+                    <classRef key="model.phrase"/>
+                    <classRef key="model.inter"/>
+                    <elementRef key="usg"/>
+                    <elementRef key="lbl"/>
+                    <classRef key="model.global"/>
+                </alternate>
+            </content>
+            <attList>
+                <attDef ident="type" mode="replace" usage="req">
+                    <defaultVal>related</defaultVal>
+                    <valList type="closed" mode="change">
+                        <!-- 2018-12-06-->
+                        <!--<valItem ident="crossReference"/>-->
+                        <valItem ident="synonymy">
+                            <desc>Relation between two lexical units X and Y which are syntactically
+                                identical and have the property that any declarative sentence S
+                                containing X has equivalent truth conditions to another sentence S’
+                                which is identical to S, except that X is replaced by Y. (Adapted
+                                from Cruse (1986).)</desc>
+                            <remarks>
+                                <p>Synonymy is the linguistic parallel of the identity relation
+                                    between classes. Synonyms differ in peripheral traits, related
+                                    for example to stylistic, dialectal or diachronic
+                                    variations.</p>
+                                <p>Examples: [de] {Hund, Köter}, [en] {flashlight, torch}, [en]
+                                    {glad, joyful, happy}, [en] {violin, fiddle} [en] He plays the
+                                    violin very well/He plays the fiddle very well.</p>
+                            </remarks>
+                        </valItem>
+                        <valItem ident="hyponymy">
+                            <desc> Relation between lexical units X and Y characterised by the
+                                property that the sentence This is a(n) X entails, but is not
+                                entailed by the sentence This is a(n) Y. (Adapted from Cruse (1986)) </desc>
+                            <remarks>
+                                <p>Hyponymy and its converse hypernymy are the linguistic parallels
+                                    of the relation of inclusion between two classes.</p>
+                                <p>Examples: [en] animal/dog, red/scarlet, to kill/to murder</p>
+                                <p>[en] This is a dog. => This is an animal.</p>
+                                <p>[en] This is a scarlet flower. => This is a red flower.</p>
+                            </remarks>
+                        </valItem>
+                        <valItem ident="hypernymy">
+                            <desc>Relation between lexical heads X and Y characterised by the
+                                property that the sentence This is a(n) Y entails, but is not
+                                entailed by the sentence This is a(n) X. (Adapted from Cruse (1986)) </desc>
+                            <remarks>
+                                <p>Hyperonymy is the converse of hyponymy.</p>
+                                <p> Example: dog/animal (animal is a hypernym of dog)</p>
+                            </remarks>
+                        </valItem>
+                        <valItem ident="meronymy">
+                            <desc>An inclusion relation between lexical heads X and Y which reflect
+                                a potential part-whole relation between their referents in
+                                discourse. (Adapted from Cruse (2011, p. 140))</desc>
+                            <remarks>
+                                <p>Example: finger:hand (finger is said to be a meronym of hand, and
+                                    hand is said to be the holonym of finger).</p>
+                            </remarks>
+                        </valItem>
+                        <valItem ident="antonymy"/>
+                        <valItem ident="related">
+                            <desc>The default reference to another lexical unit when no addtional
+                                information is available.</desc>
+                        </valItem>
+                        <!-- further values to be added there -->
+                    </valList>
+                </attDef>
+                <attDef ident="subtype" mode="replace" usage="opt">
+                    <datatype>
+                        <dataRef key="teidata.enumerated"/>
+                    </datatype>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!-- 2018-09-1 (LR): the <ref> element is adapted to have specific @type values (semi-closed) -->
+        <elementSpec ident="ref" mode="change">
+            <!--2020-05-14 (TT): to allow expand on ref-->
+            <classes mode="change">
+                <memberOf key="att.lexicographic"/>
+                <!--2020-06-25 (TT): This was decided a long time ago but never implemented-->
+                <memberOf key="att.notated"/>
+                <!--2020-06-26 (TT): we need scope on ref to indicate current or external entry -->
+                <memberOf key="att.scoped"/>
+            </classes>
+            <attList>
+                <attDef ident="type" mode="replace" usage="req">
+                    <valList type="semi" mode="change">
+                        <valItem ident="entry"/>
+                        <valItem ident="sense"/>
+                        <!-- 2019-07-04 (LR): added bibliography -->
+                        <valItem ident="bibliography"/>
+                        <!-- further values to be added there -->
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!-- 2018-07-17 (TT): the <usg> element is adapted to have specific @type values -->
+        <elementSpec ident="usg" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+            </classes>
+            <attList>
+                <attDef ident="type" mode="replace" usage="req">
+                    <valList type="closed" mode="change">
+                        <valItem ident="time">
+                            <desc>marker which identifies the use of a given lexical unit on a scale
+                                from old to new</desc>
+                        </valItem>
+                        <valItem ident="geographic">
+                            <desc>marker which identifies the place or region where a lexical unit
+                                is mainly used</desc>
+                        </valItem>
+                        <valItem ident="socioCultural">
+                            <desc>marker which identifies the use of a given lexical unit by
+                                particular social groups and/or in certain types of communicative
+                                situations depending on their level of formality</desc>
+                        </valItem>
+                        <valItem ident="domain">
+                            <desc>marker which identifies the specialized field of knowledge in
+                                which a lexical unit is mainly used</desc>
+                        </valItem>
+                        <valItem ident="frequency">
+                            <desc>marker which identifies the relative rate of occurrence of a
+                                lexical unit in a given textual context</desc>
+                        </valItem>
+                        <valItem ident="attitude">
+                            <desc>marker which identifies the speaker’s subjective point of view,
+                                positive or negative, regarding the object referred to by a given
+                                lexical unit</desc>
+                        </valItem>
+                        <valItem ident="normativity">
+                            <desc> marker which identifies the use of a given lexical unit which is
+                                in some aspect considered to be non-standard or incorrect </desc>
+                        </valItem>
+                        <valItem ident="meaningType">
+                            <desc>marker which identifies a semantic extension of the sense of a
+                                given lexical unit</desc>
+                        </valItem>
+                        <valItem ident="textType">
+                            <desc>marker which identifies the typical use of a lexical unit in a
+                                particular discourse type or genre</desc>
+                        </valItem>
+                        <valItem ident="hint">
+                            <desc>marker which cannot be classified otherwise</desc>
+                        </valItem>
+                    </valList>
+                </attDef>
+            </attList>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <form>
+                        <form>
+                            <usg type="geographic">U.S.</usg>
+                            <orth>color</orth>
+                        </form>
+                    </form>
+                </egXML>
+            </exemplum>
+        </elementSpec>
+        <!-- adding lang to model.entryPart (to make it member of <cit>, if you ask) -->
+        <!-- 2019-10-22 (LR) created ambiguous models... mended -->
+        <elementSpec ident="lang" mode="change">
+            <!--<classes mode="change">
+                            <memberOf key="model.entryPart" mode="add"/>
+                        </classes>-->
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e5322">
+                    <cit type="cognate">
+                        <lang>dän.</lang>
+                        <form>
+                            <orth xml:lang="da">indgang</orth>
+                        </form>
+                    </cit>
+                </egXML>
+            </exemplum>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e5340">
+                    <cit type="etymon">
+                        <lang>mhd.</lang>
+                        <form type="variant">
+                            <orth xml:lang="gmh">vreten</orth>
+                        </form>
+                        <form type="variant">
+                            <orth xml:lang="gmh">vretten</orth>
+                        </form>
+                        <form type="variant">
+                            <orth xml:lang="gmh">vraten</orth>
+                        </form>
+                        <gloss>entzünden</gloss><pc>;</pc> <gloss>wundreiben</gloss><pc>;</pc> <gloss>herumziehen</gloss><pc>;</pc> <gloss>quälen</gloss><pc>;</pc> <gloss>plagen</gloss>
+                    </cit>
+                </egXML>
+            </exemplum>
+        </elementSpec>
+        <!-- adding def to model.sensePart -->
+        <!--2020-06-30 (TT): def is only allowed within a sense!-->
+        <!--TODO: at the moment, it's still allowed in etym, but it shouldn't be
+        because if there is no sense, we have to use gloss. fix later-->
+        <elementSpec ident="def" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+                <memberOf key="model.entryPart.top" mode="delete"/>
+                <memberOf key="model.entryPart" mode="delete"/>
+            </classes>
+        </elementSpec>
+        <!-- adding cit to model.sensePart -->
+        <elementSpec ident="cit" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+            </classes>
+            <content>
+                <alternate minOccurs="1" maxOccurs="unbounded">
+                    <classRef key="model.quoteLike"/>
+                    <classRef key="model.egLike"/>
+                    <classRef key="model.biblLike"/>
+                    <classRef key="model.ptrLike"/>
+                    <classRef key="model.global"/>
+                    <classRef key="model.entryPart"/>
+                    <!-- 2019-06-25 (TT): adding  model.segLike to allow pc etc. in cit -->
+                    <classRef key="model.segLike"/>
+                    <!-- 2019-10-22 (LR): adding <lang> to deal with etymological descriptions -->
+                    <elementRef key="lang"/>
+                    <!-- 2019-11-20 (LR): adding <gloss> to deal with etymological descriptions -->
+                    <elementRef key="gloss"/>
+                </alternate>
+            </content>
+            <attList>
+                <attDef ident="type" mode="replace" usage="req">
+                    <valList type="closed" mode="change">
+                        <valItem ident="example"/>
+                        <valItem ident="translation"/>
+                        <valItem ident="translationEquivalent"/>
+                        <valItem ident="etymon"/>
+                        <valItem ident="cognate"/>
+                        <valItem ident="cognateSet"/>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!-- adding form to model.sensePart -->
+        <elementSpec ident="form" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+            </classes>
+        </elementSpec>
+        <!-- adding gramGrp to model.sensePart -->
+        <elementSpec ident="gramGrp" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+            </classes>
+        </elementSpec>
+        <!-- adding etym to model.sensePart -->
+        <elementSpec ident="etym" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+            </classes>
+            <content>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                    <textNode/>
+                    <classRef key="model.gLike"/>
+                    <classRef key="model.global"/>
+                    <classRef key="model.inter"/>
+                    <classRef key="model.phrase"/>
+                    <classRef key="model.descLike"/>
+                    <elementRef key="def"/>
+                    <elementRef key="etym"/>
+                    <elementRef key="gramGrp"/>
+                    <elementRef key="lbl"/>
+                    <elementRef key="usg"/>
+                    <elementRef key="xr"/>
+                </alternate>
+            </content>
+            <attList>
+                <attDef ident="type" mode="replace" usage="rec">
+                    <valList type="closed" mode="change">
+                        <valItem ident="borrowing"/>
+                        <valItem ident="inheritance"/>
+                        <valItem ident="metaphor"/>
+                        <valItem ident="metonymy"/>
+                        <valItem ident="compounding"/>
+                        <valItem ident="grammaticalization"/>
+                        <valItem ident="derivation"/>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!-- adding lbl to model.sensePart -->
+        <elementSpec ident="lbl" mode="change">
+            <classes mode="change">
+                <memberOf key="model.sensePart" mode="add"/>
+                <!--2019-02-19 (TT): changed from 'delete' (which was in error) to 'add' in model.entryPart.top";
+                                this is temporary because of issue with oxygen and tei-c servers; is already part of TEI-->
+                <memberOf key="model.entryPart.top" mode="add"/>
+                <memberOf key="model.emphLike" mode="add"/>
+            </classes>
+        </elementSpec>
+        <!--2020-05-14 add orth and pron to att.datable.w3c to allow @notBefore etc.-->
+        <elementSpec ident="orth" mode="change">
+            <classes mode="change">
+                <memberOf key="att.datable.w3c" mode="add"/>
+            </classes>
+        </elementSpec>
+        <elementSpec ident="pron" mode="change">
+            <classes mode="change">
+                <memberOf key="att.datable.w3c" mode="add"/>
+            </classes>
+        </elementSpec>
+        <!-- 2020-06-24 (TT): allowing langUsage and language to document language tags-->
+        <elementRef key="langUsage"/>
+        <elementSpec ident="langUsage" mode="change">
+            <classes mode="change">
+                <memberOf key="att.global" mode="delete"/>
+                <memberOf key="att.global.rendition" mode="delete"/>
+                <memberOf key="att.global.linking" mode="delete"/>
+                <memberOf key="att.global.analytic" mode="delete"/>
+                <memberOf key="att.global.facs" mode="delete"/>
+                <memberOf key="att.global.responsibility" mode="delete"/>
+                <memberOf key="att.global.source" mode="delete"/>
+                <memberOf key="att.global.change" mode="delete"/>
+                <memberOf key="att.declarable" mode="delete"/>
+            </classes>
+            <!-- 2021-09-23 (TT): make language required-->
+            <content>
+                <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
+                <elementRef key="language" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <langUsage>
+                        <language ident="chu" role="sourceLanguage">Old Church Slavic</language>
+                        <language ident="la" role="targetLanguage">Latin</language>
+                        <language ident="grc" role="targetLanguage">(Premodern) Greek</language>
+                </langUsage>
+                </egXML>
+            </exemplum>
+        </elementSpec>
+        <!--2021-09-23 (TT): make langUsage required (through model.profileDescPart)-->
+        <elementSpec ident="profileDesc" mode="change">
+            <content>
+                <classRef key="model.profileDescPart" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+        </elementSpec>
+        <elementRef key="language"/>
+        <elementSpec ident="language" mode="change">
+            <classes mode="change">
+                <memberOf key="att.global" mode="delete"/>
+                <memberOf key="att.global.rendition" mode="delete"/>
+                <memberOf key="att.global.linking" mode="delete"/>
+                <memberOf key="att.global.analytic" mode="delete"/>
+                <memberOf key="att.global.facs" mode="delete"/>
+                <memberOf key="att.global.responsibility" mode="delete"/>
+                <memberOf key="att.global.source" mode="delete"/>
+            </classes>
+            <!-- text node here is to remove the insane macro.phraseSeq.limited
+            which we really don't need; we want language ident in an attribute
+            and the human-readable name of the language as a child text node 
+            of <language>, not all that baggage -->
+            <content>
+                <textNode/>
+            </content>
+            <!--2021-09-21 (TT): add @role so that we can properly document language use in the header-->
+            <attList>
+                <attDef ident="role" mode="add" usage="req">
+                    <valList mode="add" type="closed">
+                        <valItem ident="objectLanguage">
+                            <desc>Object language is the "language being described." (ISO
+                                16642:2017)</desc>
+                        </valItem>
+                        <valItem ident="workingLanguage">
+                            <desc>Working language is the "language used to describe objects." (ISO
+                                16642:2017)</desc>
+                        </valItem>
+                        <valItem ident="sourceLanguage">
+                            <desc>Source language is the language of the content to be translated.
+                                (ISO 17100:215)</desc>
+                        </valItem>
+                        <valItem ident="targetLanguage">
+                            <desc>Target language is the language of the content into which source
+                                language content is translated. (ISO 17100:215)</desc>
+                        </valItem>
+                    </valList>
+                </attDef>
+            </attList>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <langUsage>
+                        <language ident="ru" role="objectLanguage" xml:lang="ru">Русский литературный язык XIX века</language>
+                        <language ident="ru" role="workingLanguage" xml:lang="ru">Современный русский язык</language>
+                        <language ident="ru" role="objectLanguage" xml:lang="en">19th-century literary Russian</language>
+                        <language ident="ru" role="workingLanguage" xml:lang="en">Modern Russian</language>
+                </langUsage>
+                </egXML>
+            </exemplum>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">  
+                    <langUsage>
+                        <language ident="chu" role="sourceLanguage">Old Church Slavic</language>
+                        <language ident="la" role="targetLanguage">Latin</language>
+                        <language ident="grc" role="targetLanguage">(Premodern) Greek</language>
+                    </langUsage>   
+                </egXML>
+            </exemplum>
+            <remarks>
+                <p>In a monolingual dictionary, where the object language and the working language
+                    are the same, one should list each as a separate <gi>language</gi> element with
+                    a specific <att>role</att> attribute. A human-readable, informal prose
+                    characterization should be supplied as content for the element. When the
+                    human-readable name(s) of languages are provided in multiple languages, the
+                    attribute <att>xml:lang</att> should be used to indicate what language is used
+                    to name the given object or working language. </p>
+                <p>A bilingual dictionary could be documented as having two object languages. In
+                    those cases, however, it is recommended -- and more precise -- to describe each
+                    object language as either a source language or a target language.</p>
+            </remarks>
+        </elementSpec>
+        <!--2021-09-24 (TT): make profileDesc required to document use of languages in langUsage-->
+        <elementSpec ident="teiHeader" mode="change">
+            <content>
+                <sequence>
+                    <elementRef key="fileDesc"/>
+                    <elementRef key="encodingDesc" minOccurs="0"/>
+                    <elementRef key="profileDesc" minOccurs="1"/>
+                    <!--<classRef key="model.teiHeaderPart"
+                        minOccurs="0" maxOccurs="unbounded"/>-->
+                    <elementRef key="xenoData" minOccurs="0"/>
+                    <elementRef key="revisionDesc" minOccurs="0"/>
+                </sequence>
+            </content>
+        </elementSpec>
+        <!-- 2021-09-26 (TT): dont't require sourceDesc in fileDesc; we want it 
+        only if we can provide a proper biblStruct for it; otherwise, it's useless
+        (i.e. we don't want <sourceDesc><p>Born digital</p></sourceDesc> -->
+        <elementSpec ident="fileDesc" mode="change">
+            <content>
+                <sequence>
+                    <sequence>
+                        <elementRef key="titleStmt"/>
+                        <elementRef key="editionStmt" minOccurs="0"/>
+                        <elementRef key="extent" minOccurs="0"/>
+                        <elementRef key="publicationStmt"/>
+                        <elementRef key="seriesStmt" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="notesStmt" minOccurs="0"/>
+                    </sequence>
+                    <elementRef key="sourceDesc" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+            </content>
+        </elementSpec>
+        <!--2020-06-25 (TT): num, to be used strictly for numbering entries and senses -->
+        <elementSpec ident="num" mode="change">
+            <classes mode="replace">
+                <memberOf key="model.entryPart.top"/>
+                <memberOf key="model.sensePart"/>
+            </classes>
+            <!--same as with language above-->
+            <content>
+                <textNode/>
+            </content>
+        </elementSpec>
+        <elementSpec ident="gram" mode="change">
+            <attList>
+                <attDef ident="type" mode="replace" usage="req">
+                    <valList type="semi" mode="change">
+                        <valItem ident="pos">
+                            <equiv name="pos"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-pos.html"
+                            />
+                        </valItem>
+                        <valItem ident="aspect"/>
+                        <valItem ident="case">
+                            <equiv name="case"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-case.html"
+                            />
+                        </valItem>
+                        <valItem ident="gender">
+                            <equiv name="gen"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gen.html"
+                            />
+                        </valItem>
+                        <valItem ident="inflectionType">
+                            <equiv name="iType"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-iType.html"
+                            />
+                        </valItem>
+                        <valItem ident="mood">
+                            <equiv name="mood"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-mood.html"
+                            />
+                        </valItem>
+                        <valItem ident="number">
+                            <equiv name="number"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-number.html"
+                            />
+                        </valItem>
+                        <valItem ident="tense">
+                            <equiv name="tns"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-tns.html"
+                            />
+                        </valItem>
+                        <valItem ident="transitivity"/>
+                        <valItem ident="collocate">
+                            <equiv name="colloc"
+                                uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-colloc.html"
+                            />
+                        </valItem>
+                        <valItem ident="rection"/>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!--2021-09-20 (TT): make availability required in publicationStmt-->
+        <!--2021-09-21 (TT): make publicationStmtPart.agency unbound so that one can
+            add both authority and publisher; we agreed that authority should be used 
+            for encoding rights holders-->
+        <elementSpec ident="publicationStmt" mode="change">
+            <content>
+                <sequence>
+                    <classRef key="model.publicationStmtPart.agency" minOccurs="1"
+                        maxOccurs="unbounded"/>
+                    <classRef key="model.publicationStmtPart.detail" minOccurs="0"
+                        maxOccurs="unbounded"/>
+                    <elementRef key="availability"/>
+                </sequence>
+            </content>
+        </elementSpec>
+        <!--2021-09-21 (TT): add @role to authority so that we can specify
+        what kind of authority we're talking about; for instance 
+        <authority role="rightsHolder"></authority>-->
+        <elementSpec ident="authority" mode="change">
+            <attList>
+                <attDef ident="role" mode="add">
+                    <valList mode="add" type="semi">
+                        <valItem ident="funder"/>
+                        <valItem ident="sponsor"/>
+                        <valItem ident="rightsHolder"/>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!--2021-09-21 (TT): allow only biblStruct in sourceDesc-->
+        <elementSpec ident="sourceDesc" mode="change">
+            <content>
+                <elementRef key="biblStruct" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="sw34hfa">
+                    <sourceDesc>
+                        <biblStruct>
+                            <monogr>
+                                <author>
+                                    <surname>Miklosich</surname>
+                                    <forename>Franz</forename></author>
+                                <title>Lexicon Palaeoslovenico-Graeco-Latinum</title>
+                                <imprint>
+                                    <publisher>Guilelmus Braumueller</publisher>
+                                      <pubPlace>Vindobonae</pubPlace>
+                                    <date>1862</date>
+                                </imprint>
+                            </monogr>
+                        </biblStruct>
+                    </sourceDesc>
+                </egXML>
+            </exemplum>
+        </elementSpec>
+        <elementSpec ident="title" mode="change">
+            <attList>
+                <attDef ident="type" mode="replace" usage="rec">
+                    <valList>
+                        <valItem ident="full">
+                            <desc>The full title of a lexicographic resource, such as
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="full">The Oxford English Dictionary</title></egXML>.</desc>
+                        </valItem>
+                        <valItem ident="abbr">
+                            <desc>The preferred abbreviated title of a lexicographic resource, such
+                                as the
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples"><title type="abbr">OED</title></egXML>.</desc>
+                        </valItem>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        <!-- Class related declaration here -->
+        <!-- Introducing new class for the content model of <sense> -->
+        <!-- Elements remaining to be put in: dictScrap     re -->
+        <!-- and we add: sense to simplify the content model <= but do we want that?!?-->
+        <classSpec type="model" ident="model.sensePart">
+            <desc>groups together all the elements from the dictionary modules that can appear as
+                child of <gi>sense</gi></desc>
+        </classSpec>
+        <!-- Making model.biblLike member of model.entryPart.top so that <bibl> is available in <entry> -->
+        <classSpec type="model" ident="model.biblLike" mode="change">
+            <classes mode="change">
+                <memberOf key="model.entryPart.top" mode="add"/>
+            </classes>
+        </classSpec>
+        <!--2018-09-02 (TT): Added PB's useful class modifications-->
+        <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
+                        rend, and xml:base are removed from the att.global class, so that this now makes available
+                        to all elements only the following attributes: <att>xml:id</att>, <att>n</att>, and
+                        <att>xml:lang</att>.-->
+        <!--  Three un-needed attributes are removed from the att.divLike class so that the
+                        <gi>div</gi> element inherits from it only the following attributes: <att>xml:id</att>,
+                        <att>n</att>, <att>xml:lang</att>. The attribute class <ident>att.declaring</ident> is
+                        deleted completely, so that none of its members inherit the <att>decls</att> attribute
+                        defined in the unmodified TEI.-->
+        <classSpec ident="att.global" mode="change" type="atts">
+            <attList>
+                <attDef ident="xml:space" mode="delete"/>
+                <attDef ident="xml:base" mode="delete"/>
+            </attList>
+        </classSpec>
+        <!-- @rend is reintroduced, as per: https://github.com/DARIAH-ERIC/lexicalresources/issues/53#issuecomment-499463980 -->
+        <!--<classSpec ident="att.global.rendition" mode="change" type="atts">
+                        <attList>
+                            <attDef ident="rend" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    -->
+        <classSpec ident="att.declaring" mode="delete" type="atts"/>
+        <classSpec ident="att.fragmentable" type="atts" mode="change">
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <etym>
+                        <seg type="desc" part="I">seit dem</seg>
+                        <usg type="date">
+                            <date>18. Jh.</date>
+                        </usg>
+                        <seg type="desc" part="M">belegt, auf</seg>
+                        <cit type="etymon">
+                            <form>
+                                <orth xml:lang="de">fickfacken</orth>
+                            </form>
+                            <sense>
+                                <def>'hin- und herlaufen'</def>
+                            </sense>
+                        </cit>
+                        <seg type="desc" part="F">zurückgeführt</seg>; <seg type="desc" part="I">evtl. auch auf </seg>
+                        <cit type="etymon">
+                            <lang>fnhd.</lang>
+                            <form>
+                                <orth xml:lang="de-x-FNHD">fatzen</orth>
+                            </form>
+                            <!-- frühneuhochdeutsch -->
+                            <sense>
+                                <def>'spotten, zum Narren halten'</def>
+                            </sense>
+                        </cit>
+                        <seg type="desc" part="F">zurückführbar</seg>
+                        <bibl>(vgl. Pfeifer 2014: 329)</bibl>
+                    </etym>
+                </egXML>
+            </exemplum>
+        </classSpec>
+        <classSpec ident="att.divLike" mode="delete" type="atts"/>
+        <!--2020-06-26 (TT): att.scoped-->
+        <classSpec type="atts" ident="att.scoped">
+            <attList>
+                <attDef ident="scope">
+                    <desc>TEI Lex-0 specific class for providing elements with an attribute
+                        describing their extent.</desc>
+                    <valList>
+                        <valItem ident="currentEntry"/>
+                        <valItem ident="externalEntry"/>
+                    </valList>
+                </attDef>
+            </attList>
+        </classSpec>
+        <!-- 2019-10-22 (LR) new hack to have <xr> in <def> and similar places -->
+        <macroSpec ident="macro.paraContent" mode="change">
+            <content>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                    <textNode/>
+                    <classRef key="model.gLike"/>
+                    <classRef key="model.phrase"/>
+                    <classRef key="model.inter"/>
+                    <classRef key="model.global"/>
+                    <elementRef key="lg"/>
+                    <classRef key="model.lLike"/>
+                    <elementRef key="xr"/>
+                </alternate>
+            </content>
+        </macroSpec>
+    </schemaSpec>
+</div>

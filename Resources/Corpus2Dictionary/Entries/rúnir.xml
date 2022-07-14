@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: rúnir</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>rúnir</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="en" type="c">En</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="prestur" type="nken">prestur</w>
+                     <w lemma="koma" type="sfg3eþ">kom</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="kirkja" type="nvee">kirkju</w>
+                     <w lemma="um" type="ao">um</w>
+                     <w lemma="morgunn" type="nkeog">morguninn</w>
+                     <w lemma="finna" type="sfg3eþ">fann</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="kefli" type="nheog">keflið</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="sá" type="fahen">það</w>
+                     <w lemma="sem" type="ct">sem</w>
+                     <w lemma="fylgja" type="sfg3eþ">fylgdi</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="lesa" type="sfg3eþ">las</w>
+                     <w lemma="rúnir" type="nvfog">rúnirnar</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="síðan" type="aa">Síðan</w>
+                     <w lemma="taka" type="sfg3eþ">tók</w>
+                     <w lemma="hún" type="fpven">hún</w>
+                     <w lemma="hnífur" type="nkeo">hníf</w>
+                     <w lemma="sinn" type="fekeo">sinn</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="reisa" type="ssg">reist</w>
+                     <w lemma="rúnir" type="nvfo">rúnir</w>
+                     <w lemma="á" type="aþ">á</w>
+                     <w lemma="rót" type="nveþg">rótinni</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="rauður" type="lvensf">rauð</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="blóð" type="nheþ">blóði</w>
+                     <w lemma="sinn" type="feheþ">sínu</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="kveða" type="sfg3eþ">kvað</w>
+                     <w lemma="yfir" type="ao">yfir</w>
+                     <w lemma="galdur" type="nkfo">galdra</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

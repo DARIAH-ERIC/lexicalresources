@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <!--organize entries alphabetically-->
+         <entry xml:id="Eingang" xml:lang="de">
+            <form type="lemma"><orth>Eingang</orth></form>
+            <gramGrp><gen>m.</gen></gramGrp>
+            <etym>
+               <cit type="etymon">
+                  <lang expand="Mittel Hoch Deutsch">mhd.</lang>
+                  <form><orth xml:lang="gmh">īnganc</orth></form>
+               </cit>
+               <cit type="cognate">
+                  <lang expand="Neuniederländisch">nnl.</lang>
+                  <form><orth>ingang</orth></form>
+               </cit>
+               <cit type="cognate">
+                  <lang expand="Dänisch">dän.</lang>
+                  <form><orth xml:lang="da">indgang</orth></form>
+               </cit>
+               <cit type="cognate">
+                  <lang expand="Schwedisch">schwed.</lang>
+                  <form><orth xml:lang="sv">ingång</orth></form>
+               </cit>
+               <seg type="desc">Lehnübersetzung des</seg>
+               <cit type="etymon">
+                  <lang expand="Latein">lat.</lang>
+                  <form><orth xml:lang="la">introitus</orth></form>
+               </cit>
+               <seg type="desc">Aus dem ‘Hineingehen’ als Handlung ist die ‘Stelle, an der man ins
+                  Haus, in den Saal geht’ geworden, neuerdings auch die ‘Gesamtheit der
+                  eingegangenen Geschäftssachen, Mannschaften’ usw. Vgl. <xr type="crossReference">
+                     <ref>Zugang</ref>
+                  </xr>. <bibl>(Kluge, 1975) p. 159</bibl></seg>
+            </etym>
+            <entry xml:id="Eingang2" xml:lang="de">
+               <etym type="inheritance">
+                  <cit type="etymon">
+                     <lang expand="Middle High German">mhd.</lang>
+                     <form><orth xml:lang="gmh">īnganc</orth></form>
+                  </cit>
+                  <!-- cognates here -->
+                  <etym type="borrowing" subtype="calque">
+                     <seg type="desc">Lehnübersetzung des</seg>
+                     <cit type="etymon">
+                        <lang expand="Latein">lat.</lang>
+                        <form><orth xml:lang="la">introitus</orth></form>
+                     </cit>
+                     <seg type="desc">Aus dem ‘Hineingehen’ als Handlung ist die ‘Stelle, an der man
+                        ins Haus, in den Saal geht’ geworden, neuerdings auch die ‘Gesamtheit der
+                        eingegangenen Geschäftssachen, Mannschaften’ usw. Vgl. <xr
+                           type="crossReference">
+                           <ref>Zugang</ref>
+                        </xr>. <bibl>(Kluge, 1975) p. 159</bibl></seg>
+                  </etym>
+               </etym>
+
+            </entry>
+
+            <entry xml:lang="xxx" xml:id="xxxx">
+               <!--missing context-->
+               <etym>
+                  <cit type="etymon">
+                     <lang>mhd.</lang>
+                     <form type="variant">
+                        <orth xml:lang="gmh">vreten</orth>
+                     </form>
+                     <form type="variant">
+                        <orth xml:lang="gmh">vretten</orth>
+                     </form>
+                     <form type="variant">
+                        <orth xml:lang="gmh">vraten</orth>
+                     </form>
+                     <def>entzünden; wundreiben; herumziehen; quälen; plagen</def>
+                  </cit>
+                  <bibl>vgl. <title>LEXER</title>
+                     <date>1878</date>
+                     <edition>III</edition>
+                     <citedRange>502</citedRange></bibl>
+               </etym>
+            </entry>
+
+            <entry xml:lang="xxxxx" xml:id="xxxxxxy">
+               <!--missing context-->
+               <etym>
+                  <cit type="cognate">
+                     <lang>Chalcatongo Mixtec</lang>
+                     <usg type="geographic">
+                        <placeName>San Miguel El Grande</placeName>
+                     </usg>
+                     <form><pron notation="trans-macaulay-mig" xml:lang="mig">šinì</pron></form>
+                     <ref type="bibl" target="#Macaulay-ChalcatongoMixtec-1996">(Macaulay,
+                        1996)</ref>
+                  </cit>
+                  <cit type="cognate">
+                     <lang>Ayutla Mixtec</lang>
+                     <form><pron notation="trans-hill-1990-miy" xml:lang="miy">shīhih</pron></form>
+                     <ref type="bibl" target="#Hills-AyutlaMixtec-1990">(Hills, 1990)</ref>
+                  </cit>
+                  <cit type="cognate">
+                     <lang>Coatzospan Mixtec</lang>
+                     <form><pron notation="trans-smll-miz" xml:lang="miz">rkɨ</pron></form>
+                     <ref type="bibl" target="#Small-CoatzospanMix-1990">(Small, 1990)</ref>
+                  </cit>
+                  <cit type="cognate">
+                     <lang>San Martín Duraznos</lang>
+                     <form><pron notation="ipa" xml:lang="smd">ʃīɲī</pron></form>
+                     <ref type="bibl" target="#Padgett-2017">(Padget, 2017)</ref>
+                  </cit>
+               </etym>
+            </entry>
+
+            <!--cognate set from a common bibliographic source-->
+            <entry xml:lang="xxxxx" xml:id="xxxxxxy">
+               <!--missing context-->
+               <etym>
+                  <cit type="cognateSet">
+                     <seg type="desc">Cf.</seg>
+                     <cit type="cognate">
+                        <form>
+                           <orth xml:lang="ffr"/>
+                        </form>
+                        <!--…-->
+                     </cit>
+                     <cit type="cognate">
+                        <form>
+                           <orth xml:lang="und-x-pom"/>
+                        </form>
+                        <!--…-->
+                     </cit>
+                     <cit type="cognate">
+                        <form>
+                           <orth xml:lang="und-x-opd"/>
+                        </form>
+                        <!--…-->
+                     </cit>
+                     <!--…-->
+                     <bibl>Bibl Source Here</bibl>
+                  </cit>
+               </etym>
+            </entry>
+         </entry>
+         <!--suffixal derivation-->
+         <entry xml:lang="pt">
+            <form type="lemma">
+               <orth xml:lang="pt">húmanal</orth>
+               <pron xml:lang="pt" notation="ipa">umɐnáł</pron>
+            </form>
+            <gramGrp>
+               <pos>adj.</pos>
+               <gen>m.</gen>
+               <lbl>e</lbl>
+               <gen>f.</gen>
+            </gramGrp>
+            <etym type="suffixalDerivation">
+               <pc>(</pc>
+               <seg type="desc">De</seg>
+               <cit type="etymon">
+                  <form>
+                     <orth xml:lang="pt">humano</orth>
+                  </form>
+               </cit>
+               <pc>+</pc>
+               <cit type="etymon">
+                  <gramGrp>
+                     <gram>suf.</gram>
+                  </gramGrp>
+                  <form>
+                     <orth extent="suff" xml:lang="pt">-al</orth>
+                  </form>
+               </cit>
+               <pc>)</pc>
+            </etym>
+            <!--  rest of entry here -->
+         </entry>
+         <!-- phonological changes-->
+         <entry xml:id="xmxmx" xml:lang="????">
+            <etym>
+               <seg type="desc" part="I">Others have proposed an etymology</seg>
+               <cit type="etymon" xml:id="ad-arti-">
+                  <form><orth xml:lang="und-x-pie">*ad-arti-</orth></form>
+               </cit>
+               <etym corresp="#ad-arti-">
+                  <seg type="desc" part="I">with intervocalic</seg>
+                  <cit type="etymon" xml:id="c1" next="#c2">
+                     <form><orth>d</orth></form>
+                  </cit>
+                  <seg type="desc" part="F">becoming</seg>
+                  <cit type="etymon" xml:id="c2" prev="#c1">
+                     <form><orth>l</orth></form>
+                  </cit>
+                  <pc>;</pc>
+               </etym>
+               <seg type="desc" part="F">the spelling <xr type="crossReference">
+                     <ref xml:lang="la">allers</ref>
+                  </xr> would then be <xr type="crossReference">
+                     <lbl>analogical to</lbl>
+                     <ref xml:lang="la">sollers</ref>
+                  </xr><pc>.</pc></seg>
+            </etym>
+
+            <!--  Multiple and/or Conflicting Etymological Accounts-->
+            <entry xml:id="xyxyxy">
+               <etym>
+                  <!-- PIt, PIE etymons-->
+                  <!-- cognates -->
+                  <etym>
+                     <!-- Lat. sollers < *soti-arti- to sollus 'entire'; al(l)ers < *all-arti- to O. alio- 'entire'. -->
+                     <seg type="desc" part="I">According to</seg>
+                     <bibl>Untermann 2000</bibl>, <lang>Latin</lang>
+                     <xr type="crossReference">
+                        <ref xml:lang="la">*all-</ref>
+                     </xr>
+                     <seg type="desc" part="M">was probably borrowed from</seg>
+                     <cit type="etymon" xml:lang="und-x-sabe1249">
+                        <lang>Sabellic</lang>
+                     </cit>, <seg type="desc" part="F">since <lang>Latin</lang> does not have this
+                        word in its lexicon. For a word only occurring in glosses, this is of course
+                        possible.</seg>
+                  </etym>
+                  <etym><seg type="desc" part="I">Others have proposed an etymology</seg>
+                     <cit type="etymon" xml:id="ad-arti-">
+                        <form><orth xml:lang="und-x-pie">*ad-arti-</orth></form>
+                     </cit>
+                     <etym corresp="#ad-arti-">
+                        <seg type="desc" part="I">with intervocalic </seg><cit type="etymon"
+                           xml:id="c1" next="#c2">
+                           <form><orth>d</orth></form>
+                        </cit>
+                        <seg type="desc" part="F">becoming</seg>
+                        <cit type="etymon" xml:id="c2" prev="#c1">
+                           <form><orth>l</orth></form>
+                        </cit>
+                        <pc>;</pc>
+                     </etym>
+                     <seg type="desc" part="F">the spelling <xr type="crossReference">
+                           <ref xml:lang="la">allers</ref>
+                        </xr> would then be <xr type="crossReference">
+                           <lbl>analogical to</lbl>
+                           <ref xml:lang="la">sollers</ref>
+                        </xr><pc>.</pc></seg></etym>
+               </etym>
+            </entry>
+         </entry>
+      </body>
+   </text>
+</TEI>

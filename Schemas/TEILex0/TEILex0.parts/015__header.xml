@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="header">
+   <head>Header</head>
+   <div>
+      <head>General remarks</head>
+      <p>A lexical resource encoded in TEI Lex-0 must, like any TEI file, start with a
+            <gi>teiHeader</gi> element. A TEI header contains information about the lexical resource
+         itself, its source(s), its encoding, and its revisions. Proper, structured metadata of this
+         kind is equally important for scholars using the resource, for software processing them,
+         and for cataloguers in libraries and archives.</p>
+      <p>The TEI header of a lexical resource has five major parts:<list>
+            <item>a <hi rend="italic">file description</hi>, tagged <gi>fileDesc</gi>, provides a
+               full bibliographic description of the electronic lexical resource itself as well as
+               the source(s), analogue or digital, from which it may have been derived. For details,
+               see section <ref target="#file-description">File Description</ref> below. </item>
+            <item>an <hi rend="italic">encoding description</hi>, tagged <gi>encodingDesc</gi>,
+               describes the relationship between the electronic resource and its source(s). It
+               allows for detailed description of whether (or how) the electronic resource was
+               produced, transcribed or normalized, how the encoder resolved ambiguities in the
+               source, what levels of encoding or analysis were applied etc.</item>
+            <item>a <hi rend="italic">profile description</hi>, tagged <gi>profileDesc</gi>,
+               contains classificatory and contextual information about the lexical resource
+               including its object and working languages.</item>
+            <item>a <hi rend="italic">container for external metadata</hi>, tagged
+               <gi>xenoData</gi>, contains metadata from non-TEI schemas, for instance Dublin Core,
+               MARCXML or MODS, if available.</item>
+            <item>a <hi rend="italic">revision history</hi>, tagged <gi>revisionDesc</gi>, contains
+               a list of changes made during the development of the lexical resource, both before
+               and after its official release. </item>
+         </list></p>
+      <p>Of these, two elements are required in TEI Lex-0: <gi>fileDesc</gi> and
+            <gi>profileDesc</gi>. It is highly recommended to include additional information in
+            <gi>encodingDesc</gi>. It is also an example of good practice to record changes in
+            <gi>revisionDesc</gi>. </p>
+   </div>
+   <div xml:id="file-description">
+      <head>File description</head>
+      <p>The bibliographic description of the given machine-readable lexical resource is absolutely
+         essential for identifying the basic information about the resource itself, its creators and
+         publishers as well as the conditions under which it is made available to the public. </p>
+      <p> The elements that make up <gi>fileDesc</gi> are: <specList>
+            <specDesc key="titleStmt"/>
+            <specDesc key="editionStmt"/>
+            <specDesc key="extent"/>
+            <specDesc key="publicationStmt"/>
+            <specDesc key="seriesStmt"/>
+            <specDesc key="sourceDesc"/>
+         </specList>
+      </p>
+      <p><gi>fileDesc</gi> is a mandatory element in plain TEI as well, but in TEI Lex-0 there are
+         some additional constraints and recommendations related to the content of this element.</p>
+      <p>
+         <list>
+            <item>In <gi>titleStmt</gi>, TEI Lex-0 <hi rend="italic">recommends</hi> the use of
+                  <att>type</att> on <gi>title</gi> (with values either <val>full</val> or
+                  <val>abbr</val>) to record both the full bibliographic title of the lexicographic
+               resource and the preferred abbreviated title for easy reference, should one exist.
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <titleStmt>
+                     <title type="full">Lexicon Serbico-Germanico-Latinum</title>
+                     <title type="abbr">LSGL</title>
+                  </titleStmt>
+               </egXML>
+            </item>
+            <item>In <gi>titleStmt</gi>, TEI Lex-0 <hi rend="italic">recommends</hi> the use of
+                  <gi>persName</gi> and <gi>orgName</gi> to distinguish between the names of persons
+               and organizations. This is especially important since in some cases, the name of an
+               institution is used to take up the collective authorship of a work.</item>
+            <item>When using <gi>persName</gi>, TEI Lex-0 <hi rend="italic">recommends</hi> to
+               further structure the name with elements <gi>forename</gi> and
+               <gi>surname</gi>.</item>
+            <item>In <gi>publicationStmt</gi>, TEI Lex-0 <hi rend="italic">requires</hi> the use of
+                  <gi>availability</gi> to record the <gi>licence</gi> of the given lexicographic
+               resource. In other words, a TEI Lex-0 <hi rend="italic">must</hi> include explicit
+               information on the conditions under which the given resource can be used. <egXML
+                  xmlns="http://www.tei-c.org/ns/Examples" source="#StčS"><xi:include
+                     href="../TEILex0.examples/headers/StčS.stripped.xml"
+                     corresp="../TEILex0.examples/headers/StčS.xml"
+                     xpointer="element(/1/1/1/2)"/>
+               </egXML>
+            </item>
+            <item>In addition to <gi>publisher</gi> and <gi>distributor</gi>, the
+                  <gi>publicationStmt</gi> in TEI Lex-0 <hi rend="italic">may</hi> include
+               information on any other <gi>authority</gi> responsible for creating or making the
+               resource available. </item>
+            <item>If using <gi>authority</gi>, TEI Lex-0 <hi rend="italic">requires</hi> the use of
+                  <att>role</att> with values <val>funder</val>, <val>sponsor</val> or
+                  <val>rightsHolder</val>.</item>
+         </list>
+      </p>
+      <div>
+         <head>Source description</head>
+         
+            <p>In TEI Lex-0, <gi>sourceDesc</gi> is an optional element. Born-digital resources
+               or those which cannot be properly sourced do not require a <gi>sourceDesc</gi>. </p>
+            <p>If a resource <hi rend="italic">is</hi> sourced, <gi>sourceDesc</gi> in TEI Lex-0
+               requires the use of <gi>biblStruct</gi> for structuring bibliographic information
+               about the source. This is a departure from vanilla TEI which is more permissive in
+               this respect. <list type="examples">
+                  <item>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#VOLP">
+                        <xi:include href="../TEILex0.examples/headers/VOLP.stripped.xml"
+                           corresp="../TEILex0.examples/headers/VOLP.xml"
+                           xpointer="element(/1/1/1/3)"/>
+                     </egXML>
+                  </item>
+                  <item>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#EtymWB-XML">
+                        <xi:include href="../TEILex0.examples/headers/EtymWB-XML.stripped.xml"
+                           corresp="../TEILex0.examples/headers/EtymWB-XML.stripped.xml"
+                           xpointer="element(/1/1/1/4)"/>
+                     </egXML>
+                  </item>
+               </list>
+            </p>
+         <p>If a dictionary has more than one source, each source should be encoded in its own
+               <gi>biblStruct</gi> element. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <xi:include href="../TEILex0.examples/headers/StčS.stripped.xml"
+                  corresp="../TEILex0.examples/headers/StčS.xml" xpointer="element(/1/1/1/3)"/>
+            </egXML>
+         </p>
+         
+      </div>
+   </div>
+   <div xml:id="encodingDescription">
+      <head>Encoding description</head>
+      <p><gi>encodingDesc</gi> is an optional element, which can be used to document the methods and
+         editorial principles which governed the transcription or encoding of the lexicographic
+         resource in hand and may also include sets of coded definitions used elsewhere in the
+         text.</p>
+      <p>For an explanation of how to encode a taxonomy of domain labels to be used for encoding
+         usage labels, see section on <ref target="#HierarchicalUsageLabels">hierarchical usage
+            labels</ref>. </p>
+   </div>
+   <div xml:id="profile-description">
+      <head>Profile description</head>
+      <p>In plain TEI, <gi>profileDesc</gi> is an optional element, whereas in TEI Lex-0, it is
+         required. This is because the nature lexicographic resources is such that it is essential
+         to identify and record the language(s) used as part of the resource metadata. </p>
+      <p>That's why <gi>profileDesc</gi> requires <gi>langUsage</gi> and <gi>langUsage</gi> requires
+         at least one <gi>language</gi> element.</p>
+      <p>Regarding the use of the required attribute <att>role</att> and its possible values
+            (<val>objectLanguage</val>, <val>workingLanguage</val>, <val>sourceLanguage</val> or
+            <val>targetLanguage</val>), see the specification details for <gi>language</gi>. </p>
+   </div>
+</div>

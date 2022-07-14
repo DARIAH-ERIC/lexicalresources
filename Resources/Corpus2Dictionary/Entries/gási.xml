@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: gási</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>gási</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="skip" type="nhen">Skip</w>
+                     <w lemma="standa" type="sfg3eþ">stóð</w>
+                     <w lemma="uppi" type="aa">uppi</w>
+                     <w lemma="að" type="aþ">að</w>
+                     <w lemma="gási" type="nhfþ-s">Gásum</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="eyjafjörður" type="nkeþ-s">Eyjafirði</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þessi" type="fahen">Þetta</w>
+                     <w lemma="sumar" type="nhen">sumar</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="nú" type="aa">nú</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="frá" type="aa">frá</w>
+                     <w lemma="segja" type="sþghen">sagt</w>
+                     <w lemma="koma" type="sfg3eþ">kom</w>
+                     <w lemma="skip" type="nhfn">skip</w>
+                     <w lemma="út" type="aa">út</w>
+                     <w lemma="fyrir" type="ao">fyrir</w>
+                     <w lemma="þing" type="nheo">þing</w>
+                     <w lemma="á" type="aþ">á</w>
+                     <w lemma="gási" type="nhfþ-s">Gásum</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þorbjörn" type="nken-s">Þorbjörn</w>
+                     <w lemma="öngull" type="nken">öngull</w>
+                     <w lemma="ráða" type="sfm3eþ">réðst</w>
+                     <w lemma="í" type="ao">í</w>
+                     <w lemma="skip" type="nheo">skip</w>
+                     <w lemma="að" type="aþ">að</w>
+                     <w lemma="gási" type="nhfþ-s">Gásum</w>
+                     <w lemma="með" type="ao">með</w>
+                     <w lemma="allur" type="foheo">allt</w>
+                     <w lemma="sá" type="faheo">það</w>
+                     <w lemma="sem" type="ct">sem</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="mega" type="sfg3eþ">mátti</w>
+                     <w lemma="með" type="aa">með</w>
+                     <w lemma="koma" type="snm">komast</w>
+                     <w lemma="af" type="aþ">af</w>
+                     <w lemma="fé" type="nheþ">fé</w>
+                     <w lemma="sinn" type="feheþ">sínu</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="hjalti" type="nken-s">Hjalti</w>
+                     <w lemma="bróðir" type="nken">bróðir</w>
+                     <w lemma="hann" type="fpkee">hans</w>
+                     <w lemma="taka" type="sfg3eþ">tók</w>
+                     <w lemma="við" type="aþ">við</w>
+                     <w lemma="jörð" type="nvfþ">jörðum</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

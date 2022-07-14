@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: féskylfa</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>féskylfa</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="verða" type="sfg3eþ">Varð</w>
+                     <w lemma="hann" type="fpkeþ">honum</w>
+                     <w lemma="þá" type="aa">þá</w>
+                     <w lemma="féskylfa" type="sþghen">féskylft</w>
+                     <w lemma="mjög" type="aa">mjög</w>
+                     <w lemma="það" type="fpheþ">því</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="vilja" type="sfg3eþ">vildi</w>
+                     <w lemma="einn" type="tfken">einn</w>
+                     <w lemma="halda" type="sng">halda</w>
+                     <w lemma="upp" type="aa">upp</w>
+                     <w lemma="fébóta" type="nvfþ">fébótum</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="verða" type="sfg3eþ">Varð</w>
+                     <w lemma="hún" type="fpveþ">henni</w>
+                     <w lemma="féskylfa" type="sþghen">féskylft</w>
+                     <w lemma="mjög" type="aa">mjög</w>
+                     <w lemma="það" type="fpheþ">því</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hún" type="fpven">hún</w>
+                     <w lemma="halda" type="sfg3eþ">hélt</w>
+                     <w lemma="sig" type="fpveþ">sér</w>
+                     <w lemma="mjög" type="aa">mjög</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="vinsæld" type="nvfe">vinsælda</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

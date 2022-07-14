@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="annex_B">
+    <head>Annex B: additional examples </head>
+    <div>
+        <head>Implicit grammatical information (morpheme or particle)</head>
+        <p>cf. TEI List <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e5031"
+            ><orth>Ἀαρών, ὁ</orth></egXML> (Jonathan Robie)</p>
+        <p>Piotr suggested: </p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            
+        </egXML>
+        <p>Issues: @norm/@value (@ana? overkill)</p>
+        <p>Suggested in <ref>http://jtei.revues.org/540</ref>:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="katze"/>
+        </egXML>
+    </div>
+</div>

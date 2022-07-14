@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: hallmundarkviða</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>hallmundarkviða</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="þá" type="aa">Þá</w>
+                     <w lemma="kveða" type="sfg3eþ">kvað</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="hallmundarkviða" type="nvee-s">Hallmundarkviðu</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="þessi" type="fahen">þetta</w>
+                     <w lemma="þar" type="aa">þar</w>
+                     <w lemma="í" type="aa">í</w>
+                     <pc>:</pc>
+                     <w lemma="margur" type="lvfesf">Margra</w>
+                     <w lemma="athöfn" type="nvfe">athafna</w>
+                     <w lemma="sinn" type="fevfe">sinna</w>
+                     <w lemma="geta" type="sfg3eþ">gat</w>
+                     <w lemma="hallmundur" type="nken-s">Hallmundur</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="kviða" type="nveþg">kviðunni</w>
+                     <w lemma="það" type="fpheþ">því</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="hafa" type="sfg3eþ">hafði</w>
+                     <w lemma="fara" type="ssg">farið</w>
+                     <w lemma="um" type="ao">um</w>
+                     <w lemma="allur" type="foheo">allt</w>
+                     <w lemma="land" type="nheog">landið</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

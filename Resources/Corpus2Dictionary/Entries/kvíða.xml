@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: kvíða</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>kvíða</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="kvíða" type="sfg1en">Kvíði</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="eiga" type="svg1en">eigi</w>
+                     <w lemma="það" type="fpheþ">því</w>
+                     <w lemma="ef" type="c">ef</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="lifa" type="sfg1en">lifi</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="ég" type="fp1en">eg</w>
+                     <w lemma="geta" type="svg1en">geti</w>
+                     <w lemma="eigi" type="aa">eigi</w>
+                     <w lemma="hefna" type="ssg">hefnt</w>
+                     <w lemma="þessi" type="fahee">þessa</w>
+                     <w lemma="atvik" type="nhee">atviks</w>
+                     <w lemma="sem" type="ct">sem</w>
+                     <w lemma="ég" type="fp1eþ">mér</w>
+                     <w lemma="hafa" type="sfg3en">hefir</w>
+                     <w lemma="gera" type="sþghen">gert</w>
+                     <w lemma="vera" type="ssg">verið</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

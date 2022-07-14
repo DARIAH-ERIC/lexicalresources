@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: yfirvald</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>yfirvald</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="síðan" type="aa">Síðan</w>
+                     <w lemma="fara" type="sfg3eþ">fór</w>
+                     <w lemma="jarl" type="nken">jarl</w>
+                     <w lemma="úr" type="aþ">úr</w>
+                     <w lemma="land" type="nheþ">landi</w>
+                     <w lemma="sem" type="ct">sem</w>
+                     <w lemma="segja" type="sfg3en">segir</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="saga" type="nveþ">sögu</w>
+                     <w lemma="hann" type="fpkee">hans</w>
+                     <w lemma="en" type="c">en</w>
+                     <w lemma="sveinn" type="nken-s">Sveinn</w>
+                     <w lemma="jarl" type="nken">jarl</w>
+                     <w lemma="hafa" type="sfg3eþ">hafði</w>
+                     <w lemma="yfirvald" type="nheo">yfirvald</w>
+                     <w lemma="í" type="aþ">í</w>
+                     <w lemma="noregur" type="nkeþ-s">Noregi</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="ríki" type="nheþ">ríki</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

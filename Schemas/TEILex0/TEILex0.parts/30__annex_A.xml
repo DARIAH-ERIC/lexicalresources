@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../css/tei_oxygen.css"?>
+<?xml-stylesheet type="text/css" href="../css/tei.lex0.odd.css"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="annex_A">
+
+    <head>Annex A: Arabic examples (FIXME)</head>
+    <p>TODO: Integrate into main content, once fixed.</p>
+
+    <table rend="rules">
+        <row>
+            <cell><hi>Digitised Sample</hi></cell>
+            <cell><hi>TEI-Lex Encoding</hi></cell>
+        </row>
+        <row>
+            <cell>
+                <figure>
+                    <graphic n="10012" width="7cm"
+                        url="https://imgur.com/d4QTXla.png" rend="inline"/>
+                    <note place="comment" resp="Mohamed_Khemakhem"><hi>In this example,
+                        the root entry contains entries which don't have necessarily
+                        related meanings</hi></note>
+                </figure>
+            </cell>
+            <cell>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="jmw34"/>
+                    
+                </egXML>
+            </cell>
+        </row>
+        <row>
+            <cell>
+                <note resp="Mohamed_Khemakhem" place="inline">In this example, the
+                    content of the root entry is organised by sense where each sense is
+                    composed of different entries listed by POS.</note>
+                <figure>
+                    <graphic n="10013" width="7cm" url="https://imgur.com/Lb2sxyo.png"
+                        rend="block"/>
+                </figure></cell>
+            <cell>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e4774">
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="uqy98"/>
+                </egXML>
+            </cell>
+        </row>
+        <row>
+            <cell><figure>
+                <graphic n="10014" width="7cm"
+                    url="https://imgur.com/Bl4zhav.png"
+                    rend="block"> </graphic>
+            </figure></cell>
+            <cell>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="www98"/>
+                </egXML>
+            </cell>
+        </row>
+    </table>
+</div>

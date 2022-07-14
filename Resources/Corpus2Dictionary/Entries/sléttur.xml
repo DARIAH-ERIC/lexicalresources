@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: sléttur</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>sléttur</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="á" type="ao">Á</w>
+                     <w lemma="lítill" type="lvensf">lítil</w>
+                     <w lemma="falla" type="sfg3eþ">féll</w>
+                     <w lemma="eftir" type="aþ">eftir</w>
+                     <w lemma="dalur" type="nkeþg">dalnum</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="sléttur" type="lvfnsf">sléttar</w>
+                     <w lemma="eyrur" type="nvee">eyrar</w>
+                     <w lemma="báðir" type="fohfþ">báðum</w>
+                     <w lemma="megin" type="aa">megin</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="loft" type="nheng">Loftið</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="auður" type="lhensf">autt</w>
+                     <w lemma="svo" type="aa">svo</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="þar" type="aa">þar</w>
+                     <w lemma="vera" type="sfg3eþ">var</w>
+                     <w lemma="engi" type="nhen">engi</w>
+                     <w lemma="hlutur" type="nken">hlutur</w>
+                     <w lemma="inni" type="aa">inni</w>
+                     <w lemma="nema" type="c">nema</w>
+                     <w lemma="sléttur" type="lhensf">slétt</w>
+                     <w lemma="gólf" type="nheng">gólfið</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="palli" type="nkfn">pallar</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

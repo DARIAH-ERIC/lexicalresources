@@ -1,0 +1,142 @@
+
+
+<!--This file should not be edited manually. 
+To edit examples, please use TEILex0-examples.xml, 
+then transform using tei-stripper.xsl-->
+
+<?xml-model href="../../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/Examples">
+   <teiHeader>
+      <fileDesc n="{1ADA5193-4375-4269-8222-D8BE81D597DB}">
+         <titleStmt>
+            <title type="full">Staročeský slovník</title>
+            <title type="abbr">StčS</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Ústav pro jazyk český AV ČR, v. v. i.</publisher>
+            <pubPlace>Praha</pubPlace>
+            <date>1999-2011</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                  Attribution 4.0 International (CC BY 4.0)</licence>
+            </availability>
+         </publicationStmt>
+         <!--     im rushing now so i can't fix this completely
+            see email from Boris, there are two TEI dictioanries
+            here the fileDesc describes one and sourceDesc the sources
+            of a different one. In the guidelines they are used
+            separately, but eventually this should be split into
+            two files.-->
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <title level="m" type="main">Slovník staročeský</title>
+                  <title level="m" type="sub">A – J</title>
+                  <author>
+                     <persName>
+                        <forename>Jan</forename>
+                        <surname>Gebauer</surname>
+                     </persName>
+                  </author>
+                  <edition>druhé, nezměněné vydání</edition>
+                  <imprint>
+                     <date>1970</date>
+                     <publisher>Academia</publisher>
+                     <pubPlace>Praha</pubPlace>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <biblStruct>
+               <monogr>
+                  <title level="m" type="main">Slovník staročeský</title>
+                  <title level="m" type="sub">K – N</title>
+                  <author>
+                     <persName>
+                        <forename>Jan</forename>
+                        <surname>Gebauer</surname>
+                     </persName>
+                  </author>
+                  <edition>druhé, nezměněné vydání</edition>
+                  <imprint>
+                     <date>1970</date>
+                     <publisher>Academia</publisher>
+                     <pubPlace>Praha</pubPlace>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <classDecl>
+            <taxonomy xml:id="taxonomy">
+               <category xml:id="taxonomy-dictionary">
+                  <catDesc xml:lang="cs-cz">slovník</catDesc>
+                  <category xml:id="taxonomy-dictionary-contemporary">
+                     <catDesc xml:lang="cs-cz">soudobý</catDesc>
+                  </category>
+                  <category xml:id="taxonomy-dictionary-historical">
+                     <catDesc xml:lang="cs-cz">dobový</catDesc>
+                  </category>
+               </category>
+               <category xml:id="taxonomy-historical_text">
+                  <catDesc xml:lang="cs-cz">historický text</catDesc>
+                  <category xml:id="taxonomy-historical_text-old_czech">
+                     <catDesc xml:lang="cs-cz">staročeský</catDesc>
+                  </category>
+                  <category xml:id="taxonomy-historical_text-medieval_czech">
+                     <catDesc xml:lang="cs-cz">středněčeský</catDesc>
+                  </category>
+               </category>
+               <category xml:id="taxonomy-scholary_text">
+                  <catDesc xml:lang="cs-cz">odborný text</catDesc>
+               </category>
+               <category xml:id="taxonomy-digitized-grammar">
+                  <catDesc xml:lang="cs-cz">digitalizovaná mluvnice</catDesc>
+               </category>
+               <category xml:id="taxonomy-card-index">
+                  <catDesc xml:lang="cs-cz">lístková kartotéka</catDesc>
+               </category>
+            </taxonomy>
+            <taxonomy xml:id="output">
+               <category xml:id="output-dictionary">
+                  <catDesc xml:lang="cs-cz">slovníky</catDesc>
+               </category>
+               <category xml:id="output-editions">
+                  <catDesc xml:lang="cs-cz">edice</catDesc>
+               </category>
+               <category xml:id="output-text_bank">
+                  <catDesc xml:lang="cs-cz">textová banka</catDesc>
+                  <category xml:id="output-text_bank-old_czech">
+                     <catDesc xml:lang="cs-cz">staročeská textová banka</catDesc>
+                  </category>
+                  <category xml:id="output-text_bank-middle_czech">
+                     <catDesc xml:lang="cs-cz">středněčeská textová banka</catDesc>
+                  </category>
+               </category>
+               <category xml:id="output-scholary_literature">
+                  <catDesc xml:lang="cs-cz">odborná literatura</catDesc>
+               </category>
+               <category xml:id="output-digitized-grammar">
+                  <catDesc xml:lang="cs-cz">digitalizované mluvnice</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="">Old Czech?</language>
+            <language role="targetLanguage" ident="">?</language>
+         </langUsage>
+         <textClass>
+            <catRef target="#taxonomy-dictionary-contemporary #output-dictionary"/>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change n="fc06a370-19b3-42b6-b054-597b679ab8c9" when="2016-02-06T23:25:39.4992891Z">Uploaded by BatchImport client</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+   </text>
+</TEI>

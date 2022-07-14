@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: umfang</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>umfang</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="sjá" type="nken-s">Sjá</w>
+                     <w lemma="snúa" type="sfg3eþ">sneri</w>
+                     <w lemma="til" type="ae">til</w>
+                     <w lemma="skáli" type="nkeeg">skálans</w>
+                     <w lemma="það" type="fpheþ">því</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="heyra" type="sfg3eþ">heyrði</w>
+                     <w lemma="umfang" type="nheo">umfang</w>
+                     <w lemma="mikið" type="aa">mikið</w>
+                     <w lemma="er" type="c">er</w>
+                     <w lemma="hann" type="fpkfn">þeir</w>
+                     <w lemma="eiga" type="sfm3fþ">áttust</w>
+                     <w lemma="við" type="aa">við</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="margur" type="lhfþsf">Mörgum</w>
+                     <w lemma="þykja" type="sfg3eþ">þótti</w>
+                     <w lemma="þessi" type="fahen">þetta</w>
+                     <w lemma="maklega" type="aa">maklega</w>
+                     <w lemma="gera" type="ssg">gert</w>
+                     <w lemma="við" type="ao">við</w>
+                     <w lemma="gísli" type="nkeo-s">Gísla</w>
+                     <w lemma="fyrir" type="ao">fyrir</w>
+                     <w lemma="umfang" type="nheo">umfang</w>
+                     <w lemma="sinn" type="feheo">sitt</w>
+                     <w lemma="og" type="c">og</w>
+                     <w lemma="raup" type="nheo">raup</w>
+                     <w lemma="vera" type="sfg3en">er</w>
+                     <w lemma="hann" type="fpken">hann</w>
+                     <w lemma="hafa" type="sfg3eþ">hafði</w>
+                     <w lemma="af" type="aþ">af</w>
+                     <w lemma="sig" type="fpveþ">sér</w>
+                     <w lemma="gera" type="ssg">gert</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>

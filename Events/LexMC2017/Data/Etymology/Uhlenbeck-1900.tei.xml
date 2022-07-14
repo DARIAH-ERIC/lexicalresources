@@ -1,0 +1,490 @@
+<?xml-stylesheet type="text/xsl" href="retro-dict-view.xsl"?>
+<?xml-model href="basisformat.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"
+?>
+<?xml-model href="basisformat.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"
+?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Kurzgefaßtes etymologisches Wörterbuch der
+          gotischen Sprache</title>
+        <author>
+          <persName ref="http://d-nb.info/gnd/117268739">
+            <surname>Uhlenbeck</surname>
+            <forename>Christianus Cornelius</forename>
+          </persName>
+        </author>
+        <editor corresp="#DTACorpusPublisher">
+          <persName ref="http://d-nb.info/gnd/1127209485">
+            <surname>Herold</surname>
+            <forename>Axel</forename>
+          </persName>
+        </editor>
+      </titleStmt>
+      <editionStmt>
+        <edition>partly digitized and proof-read edition</edition>
+      </editionStmt>
+      <publicationStmt>
+        <publisher xml:id="DTACorpusPublisher">
+          <orgName ref="https://github.com/xlhrld/retro-dict"
+            >retro-dict</orgName>
+        </publisher>
+        <date type="publication">2017-07-19</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by/4.0/">
+            <p>This work is licensed under a Creative Commons Attribution
+              4.0 International License.</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Uhlenbeck, C. C.: Kurzgefaßtes etymologisches Wörterbuch der
+          gotischen Sprache. Amsterdam, 1900.</bibl>
+        <biblFull>
+          <titleStmt>
+            <title type="main">Kurzgefaßtes etymologisches Wörterbuch der
+              gotischen Sprache</title>
+            <author>
+              <persName ref="http://d-nb.info/gnd/117268739">
+                <surname>Uhlenbeck</surname>
+                <forename>Christianus Cornelius</forename>
+              </persName>
+            </author>
+          </titleStmt>
+          <editionStmt>
+            <edition n="2">zweite verbesserte Auflage</edition>
+          </editionStmt>
+          <publicationStmt>
+            <publisher>
+              <name>Johannes Müller</name>
+            </publisher>
+            <pubPlace>Amsterdam</pubPlace>
+            <date type="publication">1900</date>
+          </publicationStmt>
+        </biblFull>
+        <msDesc>
+          <msIdentifier>
+            <repository>Archive.org (via Google Books)</repository>
+            <idno>
+              <idno type="URLImages"
+                >https://books.google.de/books?id=cy0QAAAAYAAJ&amp;oe=UTF-8</idno>
+              <idno type="URLImages"
+                >https://archive.org/details/KurzgefasstesEtymologischesWrterbuchDerGotischenSprache</idno>
+              <idno type="URLImages"
+                >https://archive.org/details/bub_gb_cy0QAAAAYAAJ</idno>
+            </idno>
+          </msIdentifier>
+          <physDesc>
+            <typeDesc>
+              <p>Antiqua</p>
+            </typeDesc>
+          </physDesc>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>font properties preserved, no character normalization, line
+          breaks not preserved, signature marks not preserved, hyphenation
+          not preserved (words reconstructed)</p>
+        <p>TEI markup according to the DTA base format (<ref
+            target="http://www.deutschestextarchiv.de/doku/basisformat/"
+            >DTABf</ref>), a TEI customization for historical texts)</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="deu">German</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <pb facs="#f0001" n="[I]"/>
+    <front>
+      <titlePage type="main">
+        <docTitle>
+          <titlePart type="main">KURZGEFASSTES <lb/><hi rendition="#larger"
+              >ETYMOLOGISCHES WÖRTERBUCH</hi>
+            <lb/><hi rendition="#smaller">DER</hi>
+            <lb/>GOTISCHEN SPRACHE</titlePart>
+        </docTitle>
+        <lb/>
+        <byline>von <lb/><docAuthor
+            corresp="http://d-nb.info/gnd/117268739">Dr. C. C. <hi
+              rendition="#g">UHLENBECK</hi>,</docAuthor>
+          <lb/><hi rendition="#smaller">Professor an der Univ. Leiden.</hi>
+        </byline>
+        <lb/>
+        <docEdition>ZWEITE VERBESSERTE AUFLAGE.</docEdition>
+        <lb/>
+        <milestone rendition="#hr" unit="section"/>
+        <lb/>
+        <docImprint>
+          <pubPlace><hi rendition="#b">AMSTERDAM.</hi></pubPlace>
+          <lb/><publisher>JOHANNES MÜLLER.</publisher>
+        </docImprint>
+        <lb/>
+        <docDate>1900.</docDate>
+      </titlePage>
+      <pb facs="#f0002" n="[II]"/>
+      <pb facs="#f0003" n="[III]"/>
+      <div xml:id="preface">
+        <pb facs="#f0004" n="IV"/>
+        <pb facs="#f0005" n="[V]"/>
+          <pb facs="#f0006" n="VI"/>
+      </div>
+    </front>
+    <body xml:id="dictionary">
+      <pb facs="#f0007" n="[1]"/>
+      <pb facs="#f0008" n="2"/>
+      <pb facs="#f0009" n="3"/>
+      <pb facs="#f0010" n="4"/>
+      <pb facs="#f0011" n="5"/>
+      <pb facs="#f0012" n="6"/>
+      <pb facs="#f0013" n="7"/>
+      <pb facs="#f0014" n="8"/>
+      <pb facs="#f0015" n="9"/>
+      <pb facs="#f0016" n="10"/>
+      <pb facs="#f0017" n="11"/>
+      <pb facs="#f0018" n="12"/>
+      <pb facs="#f0019" n="13"/>
+      <pb facs="#f0020" n="14"/>
+      <pb facs="#f0021" n="15"/>
+      <pb facs="#f0022" n="16"/>
+      <pb facs="#f0023" n="17"/>
+      <pb facs="#f0024" n="18"/>
+      <pb facs="#f0025" n="19"/>
+      <pb facs="#f0026" n="20"/>
+      <pb facs="#f0027" n="21"/>
+      <pb facs="#f0028" n="22"/>
+      <pb facs="#f0029" n="23"/>
+      <pb facs="#f0030" n="24"/>
+      <pb facs="#f0031" n="25"/>
+      <pb facs="#f0032" n="26"/>
+      <pb facs="#f0033" n="27"/>
+      <pb facs="#f0034" n="28"/>
+      <pb facs="#f0035" n="29"/>
+      <pb facs="#f0036" n="30"/>
+      <pb facs="#f0037" n="31"/>
+      <pb facs="#f0038" n="32"/>
+      <pb facs="#f0039" n="33"/>
+      <pb facs="#f0040" n="34"/>
+      <pb facs="#f0041" n="35"/>
+      <pb facs="#f0042" n="36"/>
+      <pb facs="#f0043" n="37"/>
+      <pb facs="#f0044" n="38"/>
+      <pb facs="#f0045" n="39"/>
+      <div xml:id="section-f">
+        <cb type="start"/>
+        <pb facs="#f0046" n="40"/>
+        <cb n="1"/>
+        <p><hi rendition="#b">faian</hi> tadeln, ablautend mit <hi
+            rendition="#g">fijan</hi>, zur wz. <hi rendition="#i"
+            >*pēi-</hi>, <hi rendition="#i">*pī̆-</hi> (vgl. lat. <hi
+            rendition="#i">pēior</hi> schlechter, gr. <hi rendition="#i"
+            >πῆμα</hi> leid, verderben, ai. <hi rendition="#i">pāpá-</hi>
+          schlecht, <hi rendition="#i">pāpmán-</hi> unheil, schaden,
+          sünde).</p>
+        <p><hi rendition="#b">faih</hi> n. betrug (dazu <hi rendition="#g"
+            >bifaihō</hi>, <hi rendition="#i">bifaihōn</hi>), vgl. mit
+          abweichendem consonantismus an. <hi rendition="#i">feikn</hi>
+          verderben, ags. <hi rendition="#i">fácen</hi>, as. <hi
+            rendition="#i">fēcan</hi>, ahd. <hi rendition="#i">feihhan</hi>
+          arglist und ags. <hi rendition="#i">ficol</hi> unbeständig,
+          frivol (also wz. <hi rendition="#i">*peik-</hi>, <hi
+            rendition="#i">*peig-</hi>). Ausserhalb des germ. finden wir
+            <hi rendition="#i">*peik-</hi> und <hi rendition="#i"
+            >*peiϰ-</hi>: lit. <hi rendition="#i">pêikti</hi> fluchen, <hi
+            rendition="#i">pìktas</hi> böse, <hi rendition="#i">pýkti</hi>
+          zornig werden, apr. <hi rendition="#i">-paikā</hi> trügt, air.
+            <hi rendition="#i">óech</hi> feind (ags. <hi rendition="#i"
+            >bepǽcan</hi> betrügen geht als lehnwort auf kelt. <hi
+            rendition="#i">*poiko-</hi> zurück), ai. <hi rendition="#i"
+            >píçuna-</hi> böse gesinnt, verräterisch, verläumderisch, <hi
+            rendition="#i">piçācá-</hi> daemon. Vgl. <hi rendition="#g"
+            >filufaihs</hi>.</p>
+        <p><hi rendition="#b">faihōn,</hi> s. <hi rendition="#g"
+            >bifaihō</hi> (<hi rendition="#i">bifaihōn</hi>).</p>
+        <p><hi rendition="#b">faihs,</hi> s. <hi rendition="#g"
+            >filufaihs</hi>.</p>
+        <p><hi rendition="#b">faíhu</hi> n. vermögen, geld, an. <hi
+            rendition="#i">fé</hi>, ags. <hi rendition="#i">feoh</hi>, as.
+            <hi rendition="#i">fëho</hi>, ahd. <hi rendition="#i"
+          >fihu</hi>, <hi rendition="#i">fëho</hi> vieh, vermögen, alit.
+            <hi rendition="#i">pekus</hi>, apr. <hi rendition="#i"
+            >pecku</hi>, lat. <hi rendition="#i">pecu</hi>, <hi
+            rendition="#i">pecus</hi>, avest. <hi rendition="#i"
+          >pasu-</hi>, ai. <hi rendition="#i">paçú-</hi> (<hi
+            rendition="#i">páçu-</hi>) vieh. Auffällig ist das <hi
+            rendition="#i">k</hi> im baltischen gegenüber avest. <hi
+            rendition="#i">s</hi>, ai. <hi rendition="#i">ç</hi> (s.
+          ähnliches unter <hi rendition="#g">swaíhra</hi>). Vgl. für die
+          bedeutuugsentwicklung ‘vieh, vermögen, geld’ lat. <hi
+            rendition="#i">pecūlium</hi> vermögen, <hi rendition="#i"
+            >pecūnia</hi> geld zu <hi rendition="#i">pecu</hi>, <hi
+            rendition="#i">pecus</hi> und <hi rendition="#g"
+          >skatts</hi>.</p>
+        <p><hi rendition="#b">faíhufriks</hi> geldgierig, an. <hi
+            rendition="#i">frëkr</hi> gierig, kühn, ags. <hi rendition="#i"
+            >frëc</hi> verwegen, ahd. <hi rendition="#i">frëh</hi>
+          habsüchtig, begierig, unerklärt (Kauffmann, Beitr. 12, 514 und
+          Hirt, Beitr. 23, 352 denken an zusammenhang mit <hi
+            rendition="#g">fraíhnan</hi>). Davon <hi rendition="#i"
+            >faíhufrikei</hi> f. geldgier, vgl. ahd. <hi rendition="#i"
+            >frëchī</hi>, <hi rendition="#i">frëcchī</hi> habsucht,
+          begier.</p>
+        <p><hi rendition="#b">faíhugaírns</hi> habsüchtig, an. fégjarn, <cb
+            n="2"/>s. <hi rendition="#g">faíhu</hi> und <hi rendition="#g"
+            >gaírnei</hi> (<hi rendition="#i">gaírns</hi>).</p>
+        <p><hi rendition="#b">faíhugeigō</hi> f. habsucht, s. <hi
+            rendition="#g">faíhu</hi> und <hi rendition="#g"
+          >geigan</hi>.</p>
+        <p><hi rendition="#b">faíhuþraíhns</hi> m. (oder <hi rendition="#i"
+            >faíhuþraíhn</hi> n.?) reichtum enthält als zweites
+          compositionsglied <hi rendition="#i">-þraíhns</hi> gedränge,
+          haufe, menge, zu <hi rendition="#g">þreihan</hi>.</p>
+        <p><hi rendition="#b">faír</hi>
+          <hi rendition="#i">ver-</hi>, untrennbare partikel, ahd. <hi
+            rendition="#i">fir-</hi>, <hi rendition="#i">far-</hi> (vgl.
+            <hi rendition="#g">faúr</hi>, <hi rendition="#g">fra</hi>).
+          Wahrscheinlich ist <hi rendition="#i">faír</hi> aus idg. <hi
+            rendition="#i">*peri</hi> entstanden (vgl. <hi rendition="#i"
+            >fri-</hi> in <hi rendition="#g">frisahts</hi>) und identisch
+          mit lit. <hi rendition="#i">pêr</hi> durch (vgl. aksl. <hi
+            rendition="#i">prě-</hi>, russ. <hi rendition="#i">pere-</hi>
+          durch, über einen raum hin), lat. <hi rendition="#i">per</hi>
+          durch, gr. <hi rendition="#i">περί</hi>, <hi rendition="#i"
+            >πέρι</hi> um, über, avest. <hi rendition="#i">pairi</hi> vor,
+          gegen (als praefix ‘um’), ai. <hi rendition="#i">pári</hi> rings,
+          um, gegen, von-her.</p>
+        <p><hi rendition="#b">faírguni</hi> n. berg, ags. <hi
+            rendition="#i">firgen-</hi> waldhöhe, ahd. <hi rendition="#i"
+            >Virgunnia</hi> Böhmerwald und Erzgebirge, an. <hi
+            rendition="#i">Fjǫrgyn</hi> mutter des donnergottes, kelt. <hi
+            rendition="#i">Hercynia silva</hi>, zu ags. <hi rendition="#i"
+            >furh</hi> fichte, ahd. <hi rendition="#i">foraha</hi> föhre,
+          lat. <hi rendition="#i">quercus</hi> (aus <hi rendition="#i"
+            >*perqos</hi>) eiche, skr. <hi rendition="#i">parkaṭī</hi>
+          ficus infectoria und lit. <hi rendition="#i">Perkúnas</hi>
+          donnergott, eigl. ‘eichengott’ (Hirt, Idg. forschungen 1, 479 f.
+          f.). Anders Wiedemann (Idg. forschungen 1, 436), der aksl. <hi
+            rendition="#i">pragŭ</hi> schwelle, russ. <hi rendition="#i"
+            >poróg</hi> schwelle, stromschnelle vergleicht. S. noch von
+          Grienberger (Arch. f. slav. phil. 18, 13), dessen ausführungen
+          mich nicht überzeugen. Synonyme wörter findet man unter <hi
+            rendition="#g">baírgahei</hi>.</p>
+        <p><hi rendition="#b">faírhwus</hi> m. welt, an. <hi rendition="#i"
+            >fjǫr</hi>, ags. <hi rendition="#i">feorh</hi>, ahd. <hi
+            rendition="#i">fërah</hi> leben, an. <hi rendition="#i"
+            >firar</hi>, ags. <hi rendition="#i">firas</hi> männer,
+          menschen, as. <hi rendition="#i">mid firihun</hi>, ahd. <hi
+            rendition="#i">mit firahim</hi> unter den menschen (vgl.
+          krimgot. <hi rendition="#i">fers</hi> mann = got. <hi
+            rendition="#i">*faírhws</hi>). Gr. <hi rendition="#i"
+            >πραπίδες</hi>
+          <pb facs="#f0047" n="41"/><cb n="1"/>zwerchfell liegt begrifflich
+          zu weit ab. Verfehlt ist auch von Grienbergers erklärungsversuch
+          (Arch. f. slav. phil. 18, 14 f.), der als grundbedeutung ‘das
+          herz, als schlagendes’ annimmt und lit. <hi rendition="#i"
+            >Perkúnas</hi> heranzieht.</p>
+        <p><hi rendition="#b">faírina</hi> f. beschuldigung, schuld, an.
+            <hi rendition="#i">firn</hi>, ags. <hi rendition="#i"
+            >firen</hi>, as. ahd. <hi rendition="#i">firina</hi>
+          verbrechen. Vielleicht ist <hi rendition="#i">faír-</hi> praefix
+          und darf man an zusammenhang mit <hi rendition="#g">inilō</hi>
+          denken.</p>
+        <p><hi rendition="#b">faírinōn</hi> beschuldigen, an. <hi
+            rendition="#i">firna</hi> dasselbe, ags. <hi rendition="#i"
+            >firenian</hi> sündigen, ahd. <hi rendition="#i">firinōn</hi>
+          mit schuld beflecken, zu <hi rendition="#g">faírina</hi>.</p>
+        <p><hi rendition="#b">faírneis</hi> alt, ags. <hi rendition="#i"
+            >fyrn</hi> alt, as. <hi rendition="#i">fërn</hi> vergangen (vom
+          jahre), ahd. <hi rendition="#i">firni</hi> alt (daneben mit
+          anderer ablautsstufe an. <hi rendition="#i">forn</hi> alt, as.
+          ahd. <hi rendition="#i">forn</hi> ehemals), zunächst verwant mit
+          lit. <hi rendition="#i">pérnai</hi> im vorigen jahr und ap. <hi
+            rendition="#i">parana-</hi> ehemalig, früher. Vgl. an. <hi
+            rendition="#i">í fjǫrđ</hi>, mhd. <hi rendition="#i">vërt</hi>,
+          air. <hi rendition="#i">inn-urid</hi>, gr. <hi rendition="#i"
+            >πέρυτι</hi>, <hi rendition="#i">πέρυσι</hi>, armen. <hi
+            rendition="#i">heru</hi>, ai. <hi rendition="#i">parút</hi> im
+          vorigen jahr, welche als zweites compositionsglied <hi
+            rendition="#i">*-ut</hi> aus <hi rendition="#i">*-wet</hi>
+          (vgl. gr. <hi rendition="#i">ἔτος</hi> jahr) zu enthalten
+          scheinen. Wahrscheinlich ist idg. <hi rendition="#i">*per-</hi>
+          alt, vergangen mit <hi rendition="#i">*per-</hi> fern (s. <hi
+            rendition="#g">faírra</hi>) urspr. identisch. Von <hi
+            rendition="#i">faírneis</hi> ist <hi rendition="#i"
+            >faírniþa</hi> f. alter (vgl. an. <hi rendition="#i"
+          >fyrnd</hi>) abgeleitet.</p>
+        <p><hi rendition="#b">faírra</hi> fern (davon <hi rendition="#i"
+            >faírraþrō</hi> von ferne), an. <hi rendition="#i">fjarre</hi>,
+          ags. <hi rendition="#i">feor</hi>, as. <hi rendition="#i"
+            >fër</hi>, ahd. <hi rendition="#i">fërro</hi>, vgl. air. <hi
+            rendition="#i">ire</hi> jenseitig, gr. <hi rendition="#i"
+            >πέρᾱ</hi> weiter, <hi rendition="#i">πέρᾱν</hi> jenseits, <hi
+            rendition="#i">περαῖος</hi> jenseitig, armen. <hi
+            rendition="#i">heri</hi> fern, ai. <hi rendition="#i"
+            >pára-</hi> entfernter, <hi rendition="#i">parás</hi> fern,
+          weiter, jenseits (neben <hi rendition="#i">purás</hi> vor, avest.
+            <hi rendition="#i">parō</hi> vor, von-her, gr. <hi
+            rendition="#i">πάρος</hi> früher, vor, s. <hi rendition="#g"
+            >faúr</hi>). Verwantschaft mit <hi rendition="#g">faírneis</hi>
+          ist wahrscheinlich.</p>
+        <cb n="2"/>
+        <p><hi rendition="#b">faírweitjan</hi> umherspähen, auf etwas
+          hinsehen, zu <hi rendition="#g">witan</hi>.</p>
+        <p><hi rendition="#b">faírweitl</hi> n. schauspiel, zu <hi
+            rendition="#g">faírweitjan</hi>.</p>
+        <p><hi rendition="#b">faírzna</hi> f. ferse, as. <hi rendition="#i"
+            >fërsna</hi>, ahd. <hi rendition="#i">fërsana</hi>, daneben der
+            <hi rendition="#i">i</hi>-stamm ags. <hi rendition="#i"
+            >fyrsn</hi>, urverwant mit lat. <hi rendition="#i">perna</hi>
+          hinterkeule, schinken (dazu <hi rendition="#i">pernix</hi>
+          schnell, hurtig), gr. <hi rendition="#i">πτέρνα</hi> ferse,
+          schinken, avest. <hi rendition="#i">pāšna-</hi>, ai. <hi
+            rendition="#i">pā́rṣṇi-</hi> ferse (= ags. <hi rendition="#i"
+            >fyrsn</hi>).</p>
+        <p><hi rendition="#b">falþan</hi> falten, an. <hi rendition="#i"
+            >falda</hi>, ags. <hi rendition="#i">fealdan</hi>, ahd. <hi
+            rendition="#i">falten</hi>, mit <hi rendition="#i">-falþs</hi>
+          (s. <hi rendition="#i">ainfalþs</hi>) zu gr. <hi rendition="#i"
+            >-παλτος</hi>, <hi rendition="#i">-πλασιος</hi> -fach, -fältig
+          und skr. <hi rendition="#i">puṭa-</hi> falte, tasche, tüte. Doch
+          aksl. <hi rendition="#i">pletą</hi> flechte muss von <hi
+            rendition="#i">falþan</hi> getrennt werden (s. <hi
+            rendition="#g">flahta</hi>).</p>
+        <p><hi rendition="#b">fana</hi> m. stück zeug, schweisstuch, ags.
+          afris. <hi rendition="#i">fana</hi>, as. ahd. <hi rendition="#i"
+            >fano</hi> zeug, tuch (ags. <hi rendition="#i">gúđfana</hi>,
+          ahd. <hi rendition="#i">gundfano</hi> fahne), sicher verwant mit
+          lat. <hi rendition="#i">pannus</hi> lappen, gr. <hi
+            rendition="#i">πῆνος</hi>, <hi rendition="#i">πηνίος</hi> (dor.
+            <hi rendition="#i">πᾱνίον</hi>) einschlagfaden. Man vergleicht
+          lit. <hi rendition="#i">pìnti</hi> flechten, aksl. <hi
+            rendition="#i">pęti</hi> spannen, <hi rendition="#i">opona</hi>
+          vorhang (<hi rendition="#i">o-pona</hi>), <hi rendition="#i"
+            >ponjava</hi> umhang, kleid, welche wörter jedenfalls mit <hi
+            rendition="#g">spinnan</hi> verwant sind: die idg. wz. ist <hi
+            rendition="#i">*spen-</hi>, <hi rendition="#i">*pen-</hi>.</p>
+        <p><hi rendition="#b">fani</hi> n. kot, an. ags. <hi rendition="#i"
+            >fen</hi>, afris. <hi rendition="#i">fenne</hi>, ahd. <hi
+            rendition="#i">fenna</hi> sumpf, urverwant mit apr. <hi
+            rendition="#i">pannean</hi> moosbruch, gall. <hi rendition="#i"
+            >ana</hi> sumpf, wozu vielleicht noch skr. <hi rendition="#i"
+            >paṅka-</hi> schlamm, kot, sumpf und ags. <hi rendition="#i"
+            >fúht</hi>, ahd. <hi rendition="#i">fūht</hi> feucht (Lidén,
+          Bezz. Beitr. 21, 93).</p>
+        <p><hi rendition="#b">faran</hi> fahren, wandern, an. <hi
+            rendition="#i">fara</hi>, ags. as. ahd. <hi rendition="#i"
+            >faran</hi>, wozu das causativum an. <hi rendition="#i"
+            >fǿra</hi> bringen, ags. <hi rendition="#i">féran</hi> gehen,
+          ziehen, as. <hi rendition="#i">fōrian</hi>, ahd. <hi
+            rendition="#i">fuoren</hi> führen, urverwant mit aksl. <hi
+            rendition="#i">perą</hi>
+          <pb facs="#f0048" n="42"/><cb n="1"/>fliege (inf. <hi
+            rendition="#i">pĭrati</hi>, <hi rendition="#i">prati</hi>), <hi
+            rendition="#i">pariti</hi> fliegen, schweben, gr. <hi
+            rendition="#i">πείρω</hi> durchdringe, <hi rendition="#i"
+            >πόρος</hi> durchgang, furt, <hi rendition="#i">πορεύομαι</hi>
+          reise, ai. <hi rendition="#i">píparti</hi>, <hi rendition="#i"
+            >pāráyati</hi> führt hinüber u. s. w. Vgl. <hi rendition="#g"
+            >faír</hi>, <hi rendition="#g">faírneis</hi>, <hi
+            rendition="#g">faírra</hi>, <hi rendition="#g">farjan</hi>, <hi
+            rendition="#g">faúr</hi>, <hi rendition="#g">faúra</hi>, <hi
+            rendition="#g">fra</hi>, <hi rendition="#g">gafaúrds</hi>.</p>
+        <p><hi rendition="#b">farjan</hi> zu schiffe fahren, an. <hi
+            rendition="#i">ferja</hi>, ags. as. <hi rendition="#i"
+            >ferian</hi>, ahd. <hi rendition="#i">ferjen</hi>, zu <hi
+            rendition="#g">faran</hi>.</p>
+        <p><hi rendition="#b">faskja</hi> m. binde, aus lat. <hi
+            rendition="#i">fascia</hi> entlehnt.</p>
+        <p><hi rendition="#b">fastan</hi> festhalten, fasten, an. <hi
+            rendition="#i">fasta</hi>, ags. <hi rendition="#i"
+          >fæ̇stan</hi>, ahd. <hi rendition="#i">fastēn</hi>, <hi
+            rendition="#i">fastōn</hi> fasten (aksl. <hi rendition="#i"
+            >postŭ</hi> fasten, fastenzeit, <hi rendition="#i">postiti</hi>
+          fasten sind lehnwörter aus dem germ.), zu <hi rendition="#i"
+            >*fastu-</hi>, an. <hi rendition="#i">fastr</hi>, ags. <hi
+            rendition="#i">fæst</hi>, as. <hi rendition="#i">fast</hi>,
+          ahd. <hi rendition="#i">festi</hi> fest, dem armen. <hi
+            rendition="#i">hast</hi> fest vollkommen entspricht. Wegen des
+          verwanten ai. <hi rendition="#i">pastyà-</hi> haus und hof, feste
+          wohnstätte ist die idg. grundform mit <hi rendition="#i">st</hi>,
+          nicht mit <hi rendition="#i">zd</hi> anzusetzen (Beitr. 20, 328).
+          Vgl. <hi rendition="#g">fastubni</hi>.</p>
+        <p><hi rendition="#b">fastubni</hi> n. haltung, beobachtung,
+          fasten, vgl. an. as. ahd. <hi rendition="#i">fasta</hi> fasten,
+          fastenzeit, zu <hi rendition="#g">fastan</hi>.</p>
+        <p><hi rendition="#b">faþa</hi> f. zaun, mhd. <hi rendition="#i"
+            >vade</hi> zaun, scheidewand, unbekannten ursprunges.</p>
+        <p><hi rendition="#b">faþs,</hi> s. <hi rendition="#g"
+            >brūþfaþs</hi>.</p>
+        <p><hi rendition="#b">faúhō</hi> fuchs, an. <hi rendition="#i"
+            >fóa</hi>, ahd. <hi rendition="#i">foha</hi>, daneben mit <hi
+            rendition="#i">s</hi>-suffix ags. <hi rendition="#i">fox</hi>,
+          as. <hi rendition="#i">fohs</hi>, ahd. <hi rendition="#i"
+            >fuhs</hi> (an. <hi rendition="#i">fox</hi> im übertragenen
+          sinne für ‘betrug’). Wahrscheinlich ist <hi rendition="#i"
+            >faúhō</hi>, <hi rendition="#i">fuchs</hi> urspr. ‘das
+          geschweifte tier’: vgl. avest. <hi rendition="#i">pusā-</hi>
+          zopf, kopfputz, ai. <hi rendition="#i">púccha-</hi> schwanz,
+          schweif und die slavische wz. <hi rendition="#i">pŭch-</hi>, <hi
+            rendition="#i">pych-</hi>, <hi rendition="#i">puch-</hi>,
+          welche ‘blasen, aufblasen, aufgedunsen sein’ u. dgl. bedeutet und
+          deren <hi rendition="#i">ch</hi> auf idg. <cb n="2"/><hi
+            rendition="#i">ks</hi> (= ahd. <hi rendition="#i">hs</hi> in
+            <hi rendition="#i">fuhs</hi>) zurückgehen kann. Man beachte
+          insbesondere russ. <hi rendition="#i">puch</hi> flaumfedern,
+          daunen, milchhaar, feines wolliges haar an tieren, <hi
+            rendition="#i">pušístyj</hi> wollig, dicht, buschig (s. Beitr.
+          22, 538). Nach Jacob Grimm und Franck (Notgedrungene beitrage zur
+          etymologie 22 f. f.) wäre <hi rendition="#i">fuchs</hi> vielmehr
+          als ‘faucher, fauchtier’ aufzufassen: falls man diesen gedanken
+          bevorzugt, darf man zunächst an russ. <hi rendition="#i"
+            >pychátĭ</hi>, <hi rendition="#i">pyšátĭ</hi>, <hi
+            rendition="#i">pychnútĭ</hi> stark blasen, atmen anknüpfen.
+          Cosijn (Taal- en letterbode 5, 65) und Wood (Publications of the
+          Modern Language Association of America 14, 319) schlagen wider
+          einen andern weg ein und vergleichen gr. <hi rendition="#i"
+            >πυϰνός</hi> schlau (die grundbedeutung dieses wortes ist aber
+          ‘dicht’ und der fuchs wird wol eher nach einem äusserlichen
+          kennzeichen benannt sein). Mit der Hesychischen glosse <hi
+            rendition="#i">φοῦαι</hi> ⸱ <hi rendition="#i">ἀλώπεϰες</hi>,
+          welche Schrader (Bezz. Beitr. 15, 135 f.) heranzieht, ist nichts
+          anzufangen.</p>
+        <p><hi rendition="#b">faúr</hi> vor, für, <hi rendition="#i"
+            >faúra</hi> vor, vorn, vorher, an. <hi rendition="#i"
+            >fyrer</hi>, ags. <hi rendition="#i">for</hi>, as. <hi
+            rendition="#i">for</hi>, <hi rendition="#i">fora</hi>, <hi
+            rendition="#i">fur</hi>, <hi rendition="#i">furi</hi>, ahd. <hi
+            rendition="#i">fora</hi>, <hi rendition="#i">furi</hi>,
+          urverwant mit air. <hi rendition="#i">ar</hi> vor, gr. <hi
+            rendition="#i">παρά</hi> bei, neben, <hi rendition="#i"
+            >πάρος</hi> früher, vor, avest. <hi rendition="#i">parō</hi>
+          vor, von-her, ai. <hi rendition="#i">purás</hi> vor, vorn, <hi
+            rendition="#i">purā́</hi> vor, vormals. Zu derselben sippe
+          gehören <hi rendition="#g">faír</hi>, <hi rendition="#g"
+            >faírneis</hi>, <hi rendition="#g">faírra</hi>, <hi
+            rendition="#g">fra</hi> (wz. <hi rendition="#i">*per-</hi> in
+            <hi rendition="#g">faran</hi>?).</p>
+        <p><hi rendition="#b">faúra,</hi> s. <hi rendition="#g"
+          >faúr</hi>.</p>
+        <p><hi rendition="#b">faúradaúri</hi> n. raum vor der tür, gasse,
+          s. <hi rendition="#g">faúra</hi> und <hi rendition="#g"
+          >daúr</hi>.</p>
+        <p><hi rendition="#b">faúrafilli</hi> n. vorhaut, s. <hi
+            rendition="#g">faúra</hi> und <hi rendition="#g">fill</hi>.</p>
+        <p><hi rendition="#b">faúragagga</hi> m. vorsteher, verwalter, <hi
+            rendition="#i">faúragaggi</hi> n. vorsteheramt, verwaltung, <pb
+            facs="#f0049" n="43"/><cb n="1"/><hi rendition="#i"
+            >faúragaggja</hi> m. vorsteher, verwalter, vgl. an. <hi
+            rendition="#i">forenge</hi> führer, ags. <hi rendition="#i"
+            >foregenga</hi> vorläufer, vorgänger, s. <hi rendition="#g"
+            >faúra</hi> und <hi rendition="#g">gaggan</hi>.</p>
+      </div>
+    </body>
+    <back/>
+  </text>
+</TEI>

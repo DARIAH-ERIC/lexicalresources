@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Concordance lexical entry for lemma: skagi</title>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="is">Stofnun Árna Magnússonar í íslenskum fræðum</distributor>
+            <distributor xml:lang="en">The Arni Magnusson Institute for Icelandic Studies</distributor>
+            <address>
+               <addrLine xml:lang="is">Neshaga 16, 107 Reykjavík, Íslandi</addrLine>
+               <addrLine xml:lang="is">Sími: +354 525 4430</addrLine>
+               <addrLine xml:lang="en">Neshaga 16, 107 Reykjavik, Iceland</addrLine>
+               <addrLine xml:lang="en">Tel.: +354 525 4430</addrLine>
+            </address>
+            <availability>
+               <p>Þessi texti er til notkunar í málrannsóknum og máltækniverkefnum um allan heim með CC BY 3.0 leyfi</p>
+               <p>This text is available for use in language research and language technology projects world wide with the CC BY 3.0 license</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Grettis saga Ásmundarsonar</title>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma">
+               <orth>skagi</orth>
+            </form>
+            <cit>
+               <quote>
+                  <s>
+                     <w lemma="kennda" type="sfm3fþ">Kenndust</w>
+                     <w lemma="þá" type="aa">þá</w>
+                     <w lemma="við" type="ao">við</w>
+                     <w lemma="hann" type="fpkfn">þeir</w>
+                     <w lemma="er" type="ct">er</w>
+                     <w lemma="áður" type="aa">áður</w>
+                     <w lemma="hafa" type="sfg3fþ">höfðu</w>
+                     <w lemma="fara" type="ssg">farið</w>
+                     <w lemma="að" type="c">að</w>
+                     <w lemma="hann" type="fpkfn">þeir</w>
+                     <w lemma="vera" type="sfg3fþ">voru</w>
+                     <w lemma="koma" type="sþgkfn">komnir</w>
+                     <w lemma="vestur" type="aa">vestur</w>
+                     <w lemma="um" type="ao">um</w>
+                     <w lemma="skagi" type="nkeo-s">Skaga</w>
+                     <pc>.</pc>
+                  </s>
+               </quote>
+            </cit>
+         </entry>
+      </body>
+   </text>
+</TEI>
