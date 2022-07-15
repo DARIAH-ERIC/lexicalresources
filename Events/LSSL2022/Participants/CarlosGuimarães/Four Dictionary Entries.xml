@@ -5,50 +5,52 @@
         <date>05/07/2022</date>
         <dictionary>Cambridge Dictionary</dictionary>
      </MD>   
-  <entry n="1">
+  <entry xml:id="yuppie">
     <source>https://dictionary.cambridge.org/pt/dicionario/ingles/yuppie</source>  
-    <form>
-        <orth n="1">Yuppie</orth>
-        <orth n="2">Yuppy</orth>
+    <form type="lemma">
+        <orth>Yuppie</orth>
         <pro notation="ipa">/ˈjʌp.i/</pro>
-     </form>
+        <form type="variant">
+            <orth>Yuppy</orth>
+        </form>
+    </form>
     <grampGrp>
         <pos>noun</pos>
         <subc>countable</subc>
     </grampGrp>
     <sense>
         <usg type="reg">disapproving</usg>
-        <def>a young person who lives in a city, earns a lot of money, and spends it doing fashionable things and buying expensive possessions</def>
+        <def>A young person who lives in a city, earns a lot of money, and spends it doing fashionable things and buying expensive possessions</def>
         <cit type="example">
              <quote>They're just a couple of yuppies with more money than sense.</quote>
         </cit>
     </sense>
   </entry>
-  <entry n="2">
+  <entry xml:id="acquiesce">
       <source>https://dictionary.cambridge.org/pt/dicionario/ingles/acquiesce</source>
-    <form>
+    <form type="lemma">
         <orth>acquiesce</orth>
         <pro notation="ipa">/ˌæk.wiˈes/</pro>
-      </form>
+    </form>
     <grampGrp>
         <pos>verb</pos>
-        <subs>intransitive</subs>
+        <subc>intransitive</subc>
      </grampGrp>
     <sense>
-        <usg type="formal">formal</usg>
+        <usg type="reg">formal</usg>
         <def>to accept or agree to something, often unwillingly</def>
         <cit type="example">
               <quote>Reluctantly, he acquiesced to/in the plans.</quote>
-         </cit>
-      </sense>
+        </cit>
+     </sense>
   </entry>
-  <entry n="3">
+  <entry xml:id="surreptitious">
     <source>https://dictionary.cambridge.org/pt/dicionario/ingles/surreptitious</source>
-    <form n="1">
+    <form type="lemma">
         <orth>surreptitious</orth>
         <usg type="geo">UK</usg>
         <pro notation="ipa">/ˌsʌr.əpˈtɪʃ.əs/</pro>
-       <form n="2">
+        <form type="variant">
           <usg type="geo">US</usg>
           <pro notation="ipa">/ˌsɝː.əpˈtɪʃ.əs/</pro>
         </form>
@@ -63,23 +65,23 @@
         </cit>
     </sense>
   </entry>
-  <entry n="4">
+  <entry xml:id="underbelly">
     <source>https://dictionary.cambridge.org/pt/dicionario/ingles/underbelly</source>
-    <form n="1">
+    <form type="lemma">
         <orth>underbelly</orth>
         <usg type="geo">UK</usg>
         <pro notation="ipa">/ˈʌn.dəˌbel.i/</pro>
-      <form n="2">
-        <usg type="geo">US</usg>
-        <pro notation="ipa">/ˈʌn.dɚˌbel.i/</pro>
-      </form>
+        <form type="variant">
+          <usg type="geo">US</usg>
+          <pro notation="ipa">/ˈʌn.dɚˌbel.i/</pro>
+        </form>
      </form>
      <grampGrp>
          <pos>noun</pos>
          <number>singular</number>
       </grampGrp>
     <sense>
-        <usg type="literary">literary</usg>
+        <usg type="style">literary</usg>
         <def>the weakest or most unpleasant part of something</def>
         <cit type="example">
             <quote n="1">a film exposing the sordid underbelly of modern urban society</quote>
