@@ -7156,6 +7156,98 @@ ${caret}</String>
                                     <null/>
                                 </field>
                             </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/css</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteCustomizableTransformationScenarioOperation',
+          arg-scenarioName, '',
+          arg-scenarioParameters, '',
+          arg-markInProgressXPathLocation, '',
+          arg-markOthersInProgressXPathLocation, ''</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Run a named transformation scenario with specific parameters defined in the associated document type.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>scenarioName&lt;/b> = The name of the transformation scenario which will be executed.&lt;/li>&lt;li>&lt;b>scenarioParameters&lt;/b> = Provided parameters for the transformation scenario.
+Parameters are inserted as name=value pairs separated by line breaks.
+The set parameters are taken into account for XSLT, DITA, Chemistry and ANT Transformation scenario types.&lt;/li>&lt;li>&lt;b>markInProgressXPathLocation&lt;/b> = XPath expression that identifies the element(s) on which a specific  '-oxy-transformation-in-progress' pseudo class is set before transformation is started.The pseudo class is reset when the transformation ends.If this XPath expression is not defined, the current node is used.&lt;/li>&lt;li>&lt;b>markOthersInProgressXPathLocation&lt;/b> = XPath expression that indentifies other elements on which a specific '-oxy-transformation-in-progress-others' pseudo class is set before the transformation is started.The pseudo class is reset when the transformation ends.&lt;/li>&lt;/ul> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteCustomizableTransformationScenarioOperation',&lt;br/>          arg-scenarioName, '',&lt;br/>          arg-scenarioParameters, '',&lt;br/>          arg-markInProgressXPathLocation, '',&lt;br/>          arg-markOthersInProgressXPathLocation, ''&lt;/p>&lt;/body>&lt;/html></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>op_ExecuteCustomizableTransformationScenarioOperation</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/css</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.StopCurrentTransformationScenarioOperation'</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Stop the current running transformation scenario.&lt;/p>&lt;br/>Arguments: &lt;p style="margin-left:10px;">This operation has no arguments.&lt;/p> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.StopCurrentTransformationScenarioOperation'&lt;/p>&lt;/body>&lt;/html></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>op_StopCurrentTransformationScenarioOperation</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/less</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteCustomizableTransformationScenarioOperation',
+          arg-scenarioName, '',
+          arg-scenarioParameters, '',
+          arg-markInProgressXPathLocation, '',
+          arg-markOthersInProgressXPathLocation, ''</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Run a named transformation scenario with specific parameters defined in the associated document type.&lt;/p>&lt;br/>Arguments: &lt;ul>&lt;li>&lt;b>scenarioName&lt;/b> = The name of the transformation scenario which will be executed.&lt;/li>&lt;li>&lt;b>scenarioParameters&lt;/b> = Provided parameters for the transformation scenario.
+Parameters are inserted as name=value pairs separated by line breaks.
+The set parameters are taken into account for XSLT, DITA, Chemistry and ANT Transformation scenario types.&lt;/li>&lt;li>&lt;b>markInProgressXPathLocation&lt;/b> = XPath expression that identifies the element(s) on which a specific  '-oxy-transformation-in-progress' pseudo class is set before transformation is started.The pseudo class is reset when the transformation ends.If this XPath expression is not defined, the current node is used.&lt;/li>&lt;li>&lt;b>markOthersInProgressXPathLocation&lt;/b> = XPath expression that indentifies other elements on which a specific '-oxy-transformation-in-progress-others' pseudo class is set before the transformation is started.The pseudo class is reset when the transformation ends.&lt;/li>&lt;/ul> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.ExecuteCustomizableTransformationScenarioOperation',&lt;br/>          arg-scenarioName, '',&lt;br/>          arg-scenarioParameters, '',&lt;br/>          arg-markInProgressXPathLocation, '',&lt;br/>          arg-markOthersInProgressXPathLocation, ''&lt;/p>&lt;/body>&lt;/html></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>op_ExecuteCustomizableTransformationScenarioOperation</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
+                            <codeTemplateItem>
+                                <field name="contentType">
+                                    <String>text/less</String>
+                                </field>
+                                <field name="unparsedInsertString">
+                                    <String>operation, 'ro.sync.ecss.extensions.commons.operations.StopCurrentTransformationScenarioOperation'</String>
+                                </field>
+                                <field name="descriptionString">
+                                    <String>&lt;html>&lt;head>&lt;/head>&lt;body>Description:&lt;p style="margin-left:10px;">Stop the current running transformation scenario.&lt;/p>&lt;br/>Arguments: &lt;p style="margin-left:10px;">This operation has no arguments.&lt;/p> &lt;br/> Template: &lt;br/>&lt;p style="margin-left:10px;">operation, 'ro.sync.ecss.extensions.commons.operations.StopCurrentTransformationScenarioOperation'&lt;/p>&lt;/body>&lt;/html></String>
+                                </field>
+                                <field name="renderString">
+                                    <String>op_StopCurrentTransformationScenarioOperation</String>
+                                </field>
+                                <field name="enabled">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="accelerator">
+                                    <null/>
+                                </field>
+                            </codeTemplateItem>
                         </codeTemplateItem-array>
                     </entry>
                     <entry>
@@ -7241,6 +7333,29 @@ ${caret}</String>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>xproc/teilex0.xpl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -7367,41 +7482,18 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>xproc/teilex0.xpl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                        <String>ANT</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>TEILex0.parts/06__usage.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEILex0: Generate documentation</String>
                                         <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
+                                        <String>TEILex0: Generate documentation</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>XPROC</String>
                                         <String>ANT</String>
+                                        <String>XPROC</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -8517,19 +8609,7 @@ ${caret}</String>
                                                 <String>*</String>
                                             </field>
                                             <field name="parameters">
-                                                <xprocParameter-array>
-                                                    <xprocParameter>
-                                                        <field name="namespaceURI">
-                                                            <String></String>
-                                                        </field>
-                                                        <field name="localName">
-                                                            <String>paramName1</String>
-                                                        </field>
-                                                        <field name="value">
-                                                            <null/>
-                                                        </field>
-                                                    </xprocParameter>
-                                                </xprocParameter-array>
+                                                <xprocParameter-array/>
                                             </field>
                                         </xprocParameterPort>
                                         <xprocParameterPort>
@@ -8537,19 +8617,7 @@ ${caret}</String>
                                                 <String>parameters</String>
                                             </field>
                                             <field name="parameters">
-                                                <xprocParameter-array>
-                                                    <xprocParameter>
-                                                        <field name="namespaceURI">
-                                                            <String></String>
-                                                        </field>
-                                                        <field name="localName">
-                                                            <String>paramName1</String>
-                                                        </field>
-                                                        <field name="value">
-                                                            <null/>
-                                                        </field>
-                                                    </xprocParameter>
-                                                </xprocParameter-array>
+                                                <xprocParameter-array/>
                                             </field>
                                         </xprocParameterPort>
                                     </xprocParameterPort-array>

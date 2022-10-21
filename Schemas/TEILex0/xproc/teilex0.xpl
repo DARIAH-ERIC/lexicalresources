@@ -16,6 +16,8 @@
     <p:output port="exsout" primary="false"/>
     <!-- <p:output port="result" primary="true"/>
     <p:output port="secondary" primary="false"/>-->
+    <p:variable name="defaultSource" select="'https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml'"/>
+    
     <!-- ================================================================== -->
     <!-- BODY: -->
     <p:xslt name="stripper">
@@ -62,6 +64,7 @@
         <p:input port="parameters">
             <p:empty/>
         </p:input>
+        <p:with-param name="defaultSource" select="$defaultSource"></p:with-param>
     </p:xslt>
     <p:xslt name="odd2lite">
         <p:input port="source">
