@@ -133,7 +133,7 @@
     </p:store>
     <p:store href="../../../docs/pages/TEILex0/spec.html" method="xhtml">
         <p:input port="source">
-            <p:pipe port="result" step="post-process"/>
+            <p:pipe port="secondary" step="post-process"/>
         </p:input>
     </p:store>
 </p:declare-step>
