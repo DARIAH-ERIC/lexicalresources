@@ -1,6 +1,5 @@
 docsearch({
-    apiKey: '81fe7e18f931f5024ff56f875ed7e8fb',
-    appId: 'TFWYQALT5Y',
+    apiKey: '27fc9785932247d5056acddcede378cf',
     indexName: 'tei_lex',
     inputSelector: '.algo',
     debug: true, // Set debug to true if you want to inspect the dropdown
