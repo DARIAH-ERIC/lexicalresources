@@ -116,7 +116,8 @@
                </list>
             </p>
          <p>If a dictionary has more than one source, each source should be encoded in its own
-               <gi>biblStruct</gi> element. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               <gi>biblStruct</gi> element. <egXML xmlns="http://www.tei-c.org/ns/Examples"
+               source="#StčS">
                <xi:include href="../TEILex0.examples/headers/StčS.stripped.xml"
                   corresp="../TEILex0.examples/headers/StčS.xml" xpointer="element(/1/1/1/3)"/>
             </egXML>
