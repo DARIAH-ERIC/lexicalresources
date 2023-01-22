@@ -116,7 +116,7 @@
                 </author>
             </titleStmt>
             <editionStmt>
-                <edition n="0.9.1"/>
+                <edition n="0.9.2"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
@@ -133,7 +133,9 @@
             <listChange>
                 <listChange n="0.9.2">
                     <!--choose correct date pefore publishing-->
-                    <change when="2022-01-21" type="workflow">switch to using oXygen's TEI framework when generating schema and documentation</change>
+                    <change when="2022-01-22" type="xproc">switch to using oXygen's TEI framework when generating schema and documentation</change>
+                    <change type="spec">allow <gi>list</gi> and <gi>item</gi> because lists feature prominently in dictionary front matter</change>
+                    <change type="spec">disallow <gi>list</gi> in <gi>dictScrap</gi>, <gi>etym</gi>, <gi>form</gi>, <gi>gramGrp</gi> and <gi>xr</gi></change>
                 </listChange>
                 <listChange n="0.9.1">
                     <change when="2021-03-24" type="html">fix namespace issues in html output</change>

@@ -24,7 +24,7 @@
         <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
         <moduleRef key="core"
             include="author head title cit quote bibl biblStruct biblScope listBibl gloss
-                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email"/>
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item"/>
         <!--PB's simplified textstructure declaratiopn-->
         <moduleRef key="textstructure" include="TEI text body div front back"/>
         <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
@@ -126,7 +126,11 @@
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <classRef key="model.gLike"/>
                     <classRef key="model.phrase"/>
-                    <classRef key="model.inter"/>
+                    <!--<classRef key="model.inter"/>-->
+                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
+                    <classRef key="model.attributable"/>
+                    <classRef key="model.biblLike"/>
+                    <!--end of replace model.inter-->
                     <elementRef key="usg"/>
                     <elementRef key="lbl"/>
                     <classRef key="model.global"/>
@@ -368,12 +372,42 @@
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
             </classes>
+            <content>
+                <alternate minOccurs="0"
+                    maxOccurs="unbounded">
+                    <textNode/>
+                    <classRef key="model.gLike"/>
+                    <classRef key="model.phrase"/>
+                    <!--<classRef key="model.inter"/>-->
+                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
+                    <classRef key="model.attributable"/>
+                    <classRef key="model.biblLike"/>
+                    <!--end of replace model.inter-->
+                    <classRef key="model.formPart"/>
+                    <classRef key="model.global"/>
+                </alternate>
+            </content>
         </elementSpec>
         <!-- adding gramGrp to model.sensePart -->
         <elementSpec ident="gramGrp" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
             </classes>
+            <content>
+                <alternate minOccurs="0"
+                    maxOccurs="unbounded">
+                    <textNode/>
+                    <classRef key="model.gLike"/>
+                    <classRef key="model.phrase"/>
+                    <!--<classRef key="model.inter"/>-->
+                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
+                    <classRef key="model.attributable"/>
+                    <classRef key="model.biblLike"/>
+                    <!--end of replace model.inter-->
+                    <classRef key="model.gramPart"/>
+                    <classRef key="model.global"/>
+                </alternate>
+            </content>
         </elementSpec>
         <!-- adding etym to model.sensePart -->
         <elementSpec ident="etym" mode="change">
@@ -385,7 +419,11 @@
                     <textNode/>
                     <classRef key="model.gLike"/>
                     <classRef key="model.global"/>
-                    <classRef key="model.inter"/>
+                    <!--<classRef key="model.inter"/>-->
+                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
+                    <classRef key="model.attributable"/>
+                    <classRef key="model.biblLike"/>
+                    <!--end of replace model.inter-->
                     <classRef key="model.phrase"/>
                     <classRef key="model.descLike"/>
                     <elementRef key="def"/>
@@ -703,6 +741,24 @@
                     </valList>
                 </attDef>
             </attList>
+        </elementSpec>
+        <elementSpec ident="dictScrap" mode="change">
+            <content>
+                <alternate minOccurs="0"
+                    maxOccurs="unbounded">
+                    <textNode/>
+                    <classRef key="model.gLike"/>
+                    <classRef key="model.entryPart"/>
+                    <classRef key="model.morphLike"/>
+                    <classRef key="model.phrase"/>
+                    <!--<classRef key="model.inter"/>-->
+                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
+                    <classRef key="model.attributable"/>
+                    <classRef key="model.biblLike"/>
+                    <!--end of replace model.inter-->
+                    <classRef key="model.global"/>
+                </alternate>
+            </content>
         </elementSpec>
         <!-- Class related declaration here -->
         <!-- Introducing new class for the content model of <sense> -->
