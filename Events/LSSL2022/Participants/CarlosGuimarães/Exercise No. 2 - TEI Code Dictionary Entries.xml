@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="Four%20Dictionary%20Entries%20-%20XSL%20-%20Clean%20Version.xsl"?>
+<TEI xml:lang="eng" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>4 Dictionary Entries from Lexico.com</title>
+            <author>Carlos Guimarães</author>
+            <respStmt>
+               <resp>Compiled and encoded by</resp>
+               <name>Carlos Guimarães</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <distributor>Carlos Guimarães</distributor>
+            <address>
+               <addrLine>carlosfilipeguimaraes@ua.pt</addrLine>
+            </address>
+            <availability>
+               <p>Freely available on a non-commercial basis.</p>
+            </availability>
+            <date when="2022">2022</date>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>Oxford University Press (OUP). (n.d.). Lexico.com. https://www.lexico.com/</bibl>
+         </sourceDesc> 
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <entry xml:id="potergeist">
+            <form type="lemma">
+               <orth>poltergeist</orth>
+               <pron notation="ipa">/ˈpɒltəɡʌɪst/</pron>
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <def>A ghost or other supernatural being supposedly responsible for physical disturbances such as making loud noises and throwing objects about.</def>
+               <cit type="example">
+                  <quote>Psychic investigators supposed Gef was a poltergeist or perhaps a ghost.</quote>
+               </cit>
+            </sense>
+            <etym>Mid 19th century from German Poltergeist, from poltern ‘create a disturbance’ + Geist ‘ghost’.</etym>     
+         </entry>
+         <entry xml:id="lollygag">
+            <form type="lemma">
+               <orth>lollygag</orth>
+               <pron notation="ipa">/ˈlɒlɪɡaɡ/</pron>
+               <form type="inflected">
+                  <orth>lollygags</orth>
+               </form>
+               <form type="inflected">
+                  <orth>lollygagging</orth>
+               </form>
+               <form type="inflected">
+                  <orth>lollygagged</orth>
+               </form>
+               <form type="variant">
+                  <orth>lallygag</orth>
+               </form>
+            </form>
+            <gramGrp>
+               <pos>verb</pos>
+               <subc>[NO OBJECT]</subc>
+            </gramGrp>
+            <sense n="1">
+               <usg type="geo">North American</usg>
+               <usg type="reg">Informal</usg>
+               <def>Spend time aimlessly; idle.</def>
+               <cit type="example">
+                  <quote>She goes to Arizona every January to lollygag in the sun</quote>
+               </cit>
+                  <sense n="1.1">
+                     <lbl>with adverbial of direction</lbl>
+                     <gloss>Dawdle</gloss>
+                     <cit type="example">
+                        <quote>We're lollygagging along</quote>
+                     </cit>
+                  </sense>
+            </sense>
+            <etym>Mid 19th century of unknown origin.</etym>
+         </entry>
+         <entry xml:id="razer">
+            <form type="lemma">
+               <orth>razer</orth>
+               <pron notation="ipa">/ˈreɪzə/</pron>      
+            </form>
+            <gramGrp>
+               <pos>noun</pos>
+            </gramGrp>
+            <sense>
+               <def>A person who razes something; in later use especially a person who destroys or demolishes buildings.</def>
+            </sense>
+            <etym>Late 16th century; earliest use found in Alexander Nowell (d. 1602), dean of St Paul's. From raze + -er.</etym>
+         </entry>
+         <entry xml:id="meek">
+            <form type="lemma">
+               <orth>meek</orth>
+               <pron notation="ipa">/miːk/</pron>
+            </form>
+            <gramGrp>
+               <pos>Adjective</pos>
+            </gramGrp>
+            <sense>
+               <def>Quiet, gentle, and easily imposed on; submissive.</def>
+               <cit type="example">
+                  <quote>She brought her meek little husband along</quote>
+               </cit>
+            </sense>
+            <etym>Middle English me(o)c (also in the sense ‘courteous or indulgent’), from Old Norse mjúkr ‘soft, gentle’.</etym>
+         </entry>
+      </body>
+  </text>
+</TEI>

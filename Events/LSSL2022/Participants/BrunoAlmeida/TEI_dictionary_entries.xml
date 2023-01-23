@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="xslt_example.xsl"?>
+<TEI xml:lang="pt" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Priberam Dictionary Entries in TEI</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Priberam</publisher>
+            <ptr target="https://dicionario.priberam.org/"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Online dictionary</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry xml:id="entry.2" xml:lang="pt">
+            <form type="lemma">
+               <orth>surrar</orth>
+               <syll>sur·rar</syll>
+            </form>
+            <gramGrp>
+               <pos norm="verb">v.</pos>
+               <subc norm="transitive">tr.</subc>
+               <subc norm="pronominal">pron.</subc>
+            </gramGrp>
+            <sense>
+               <sense>
+                  <gramGrp>
+                     <pos norm="verb">verbo</pos>
+                     <subc norm="transitive">transitivo</subc>
+                  </gramGrp>
+                     <sense n="1." xml:id="surrar.1">
+                        <def>Tirar o pêlo às peles e limpar-lhes o carnaz.</def>
+                     </sense>
+                     <sense n="2." xml:id="surrar.2">
+                        <def>Dar surra ou sova em.</def>
+                        <xr type="syn">açoitar</xr>
+                        <xr type="syn">fustigar</xr>
+                        <xr type="syn">sovar</xr>
+                     </sense>
+                     <sense n="3." xml:id="surrar.3">
+                        <def>Gastar a superfície com o uso.</def>
+                     </sense>
+               </sense>
+               <sense>
+                  <gramGrp>
+                     <pos norm="verb">verbo</pos>
+                     <subc norm="pronominal">pronominal</subc>
+                  </gramGrp>
+                  <sense n="4." xml:id="surrar.4">
+                     <def>Gastar-se; coçar-se.</def>
+                  </sense>
+                  <sense n="5." xml:id="surrar.5">
+                     <usg type="socioCultural">Informal</usg>
+                     <def>Ir-se a furto, abalar.</def>
+                  </sense>
+               </sense>
+            </sense>
+            <xr type="cf">zurrar</xr><pc>.</pc>
+         </entry>
+         <entry xml:id="entry.1" xml:lang="pt">
+            <form type="lemma">
+               <orth>alegoria</orth>
+               <syll>a·le·go·ri·a</syll>
+            </form>
+            <gramGrp>
+               <pos norm="noun">n.</pos>
+               <gen norm="feminine">f.</gen>
+            </gramGrp>
+            <sense xml:id="alegoria.1">
+               <def>Modo indirecto de representar uma coisa ou uma ideia sob a aparência de
+                  outra.</def>
+            </sense>
+         </entry>
+         <entry xml:id="entry.3" xml:lang="pt">
+            <form type="lemma">
+               <orth>transgénero</orth>
+               <syll>trans·gé·ne·ro</syll>
+            </form>
+            <gramGrp>
+               <pos norm="adjective">adj.</pos>
+               <gen>2 g.</gen>
+               <number>2 núm.</number>
+            </gramGrp>
+            <sense n="1." xml:id="transgenero.1">
+               <def>Relativo a ou que tem uma identidade de género diferente do sexo que foi
+                  atribuído à nascença, por oposição a cisgénero (ex.: pessoas transgénero).</def>
+            </sense>
+            <sense n="2." xml:id="transgenero.2">
+               <def>Relativo a ou que tem uma identidade de género que não é claramente feminina ou
+                  masculina.</def>
+               <xr type="syn">intergénero</xr>
+            </sense>
+         </entry>
+      </body>
+   </text>
+</TEI>

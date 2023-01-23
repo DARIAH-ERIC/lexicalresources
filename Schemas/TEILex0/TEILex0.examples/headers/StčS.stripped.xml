@@ -14,22 +14,67 @@ then transform using tei-stripper.xsl-->
          <publicationStmt>
             <publisher>Ústav pro jazyk český AV ČR, v. v. i.</publisher>
             <pubPlace>Praha</pubPlace>
-            <date>1999-2011</date>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons
                   Attribution 4.0 International (CC BY 4.0)</licence>
             </availability>
          </publicationStmt>
-         <!--     im rushing now so i can't fix this completely
-            see email from Boris, there are two TEI dictioanries
-            here the fileDesc describes one and sourceDesc the sources
-            of a different one. In the guidelines they are used
-            separately, but eventually this should be split into
-            two files.-->
          <sourceDesc>
-           
             <biblStruct>
                <monogr>
+                  <title level="m" type="main">Staročeský slovník</title>
+                  <title level="m" type="sub">[Seš.] 1–26: na – při</title>
+                  <editor>
+                     <persName>
+                        <forename>Bohuslav</forename>
+                        <surname>Havránek</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Vladimír</forename>
+                        <surname>Šmilauer</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Václav</forename>
+                        <surname>Křístek</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Jan</forename>
+                        <surname>Petr</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Igor</forename>
+                        <surname>Němec</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Emanuel</forename>
+                        <surname>Michálek</surname>
+                     </persName>
+                  </editor>
+                  <editor>
+                     <persName>
+                        <forename>Jaroslava</forename>
+                        <surname>Pečírková</surname>
+                     </persName>
+                  </editor>
+                  <imprint>
+                     <date>1968–2008</date>
+                     <publisher>Academia</publisher>
+                     <pubPlace>Praha</pubPlace>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <biblStruct>
+                <monogr>
                   <title level="m" type="main">Slovník staročeský</title>
                   <title level="m" type="sub">A – J</title>
                   <author>
@@ -44,7 +89,7 @@ then transform using tei-stripper.xsl-->
                      <publisher>Academia</publisher>
                      <pubPlace>Praha</pubPlace>
                   </imprint>
-               </monogr>
+               </monogr> 
             </biblStruct>
             <biblStruct>
                <monogr>
@@ -66,6 +111,7 @@ then transform using tei-stripper.xsl-->
             </biblStruct>
          </sourceDesc>
       </fileDesc>
+      
       <encodingDesc>
          <classDecl>
             <taxonomy xml:id="taxonomy">
@@ -134,6 +180,7 @@ then transform using tei-stripper.xsl-->
       <revisionDesc>
          <change n="fc06a370-19b3-42b6-b054-597b679ab8c9" when="2016-02-06T23:25:39.4992891Z">Uploaded by BatchImport client</change>
       </revisionDesc>
+      
    </teiHeader>
    <text>
       <body>

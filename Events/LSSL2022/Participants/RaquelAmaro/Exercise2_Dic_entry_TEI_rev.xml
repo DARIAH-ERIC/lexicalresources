@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="pt">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Dicionário 1</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>LSSL2022 - Raquel Amaro</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Priberam online</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+        <entry>
+           <form>
+              <orth>andar</orth>
+              <hyph>an|dar</hyph>
+              <pron>ɐ̃ˈdar</pron>
+           </form>
+           <hom n="1">
+              <gramGrp>
+                 <pos>n</pos>
+              </gramGrp>
+              <sense n="1" xml:id="andarN1">
+                 <def>modo de deslocar-se dando passos</def>
+                 <cit type="example">
+                    <quote>Reconheci-o pelo andar apressado.</quote>
+                 </cit>
+              </sense>
+              <sense n="2" xml:id="andarN2">
+                 <def>cada uma das camadas ou fiadas sobrepostas que constituem algo</def>
+                 <cit type="example">
+                    <quote>Ela queria um bolo de 3 andares.</quote>
+                 </cit>
+              </sense>
+              <sense n="3" xml:id="andarN3">
+                 <def>piso de uma edificação acima do nível térreo</def>
+                 <cit type="example">
+                    <quote>Os meus pais moram no 4º andar.</quote>
+                 </cit>
+              </sense>
+           </hom>
+           <hom n="2">
+              <gramGrp n="1">
+                 <pos>verbo</pos>
+                     <iType>intransitivo</iType>
+              </gramGrp>
+              <sense n="1" xml:id="andarV1">
+                 <def>mover-se, mudando de local</def>
+                 <cit type="example">
+                    <quote>O ponteiro andou para a esquerda.</quote>
+                 </cit>
+              </sense>
+              <sense n="2" xml:id="andarV2">
+                 <def>deslocar-se dando passos</def>
+                 <cit type="example">
+                    <quote>Nunca mais andou depois do acidente.</quote>
+                 </cit>
+              </sense>
+              <sense n="3" xml:id="andarV3">
+                 <def>estar em atividade ou funcionamento</def>
+                 <cit type="example">
+                    <quote>O motor não está a andar.</quote>
+                 </cit>
+              </sense>
+              <gramGrp n="2">
+                 <pos>verbo</pos>
+                 <iType>transitivo direto</iType>
+              </gramGrp>
+              <sense n="1" xml:id="andarV4">
+                 <def>deslocar-se dando passos percorrendo uma dada extensão</def>
+                 <cit type="example">
+                    <quote>Os atletas andaram 4 quilómetros e correram os restantes 20.</quote>
+                 </cit>
+              </sense>
+              <gramGrp n="3">
+                 <pos>verbo</pos>
+                 <iType>transitivo indireto</iType>
+              </gramGrp>
+              <sense n="1" xml:id="andarV5">
+                 <def>deslocar-se usando um meio de transporte</def>
+                 <cit type="example">
+                    <quote>Os camponeses raramente andavam de carruagem.</quote>
+                 </cit>
+              </sense>
+              <sense n="2" xml:id="andarV6">
+                 <def>estar um dado tempo num local ou região</def>
+                 <cit type="example">
+                    <quote>Eles conheceram-se quando ela andava no Norte.</quote>
+                 </cit>
+              </sense>
+              <sense n="3" xml:id="andarV7">
+                 <def>desenvolver uma atividade ou hobby</def>
+                 <cit type="example">
+                    <quote>O rapaz anda no karaté.</quote>
+                 </cit>
+              </sense>
+           </hom>
+        </entry>
+      </body>
+  </text>
+</TEI>

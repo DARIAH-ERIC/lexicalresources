@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>https://www.infopedia.pt/dicionarios/lingua-portuguesa/anel</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry xml:lang="pt" xml:id="anel">
+            <form type="lemma">
+               <orth>anel</orth>
+            </form>
+            <gramGrp>
+               <pos>nome</pos>
+               <gen>masculino</gen>
+            </gramGrp>
+            <sense>
+               <def>pequena argola, de ouro, prata ou outro material, que se usa no dedo</def>
+               <pc>;</pc></sense>
+            <sense>
+               <def>cada uma das peças de uma corrente; elo</def>
+               <pc>;</pc>
+               <def>arco</def>
+               <pc>;</pc>
+               <def>espiral de cabelo frisado ou encaracolado; caracol</def>
+            </sense>
+            <etym>Do latim anellu-, "pequeno anel"</etym>
+         </entry>
+         <entry xml:lang="pt" xml:id="garagem">
+            <form type="lemma">
+               <orth>garagem</orth>
+            </form>
+            <gramGrp>
+               <pos>nome</pos>
+               <gen>feminino</gen>
+            </gramGrp>
+            <sense>
+               <def>casa, loja ou local coberto para recolha de veículos automóveis</def>
+               <pc>;</pc>
+               <def>oficina de reparação e manutenção de veículos</def>
+               <cit type="example">
+                  <quote>blabla</quote>
+                  <bibl>Hugo, V., ...</bibl>
+               </cit>
+            </sense>
+            <etym>Do francês garage, "idem"</etym>
+            <entry type="relatedEntry">
+               <form></form>
+            </entry>
+         </entry>
+         <entry xml:lang="pt" xml:id="telefonar">
+            <form type="lemma">
+               <orth>telefone</orth>
+            </form>
+            <gramGrp>
+               <pos>verbo</pos>
+            </gramGrp>
+            <sense>
+               <def>comunicar por telefone; fazer um telefonema</def>
+            </sense>
+         </entry>
+      </body>
+   </text>
+</TEI>

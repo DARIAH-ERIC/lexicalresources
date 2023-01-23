@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entries xml:lang="en">
+    <MD>
+        <author>Carlos Guimarães</author>
+        <date>05/07/2022</date>
+        <dictionary>Cambridge Dictionary</dictionary>
+     </MD>   
+  <entry xml:id="yuppie">
+    <source>https://dictionary.cambridge.org/pt/dicionario/ingles/yuppie</source>  
+    <form type="lemma">
+        <orth>Yuppie</orth>
+        <pro notation="ipa">/ˈjʌp.i/</pro>
+        <form type="variant">
+            <orth>Yuppy</orth>
+        </form>
+    </form>
+    <grampGrp>
+        <pos>noun</pos>
+        <subc>countable</subc>
+    </grampGrp>
+    <sense>
+        <usg type="reg">disapproving</usg>
+        <def>A young person who lives in a city, earns a lot of money, and spends it doing fashionable things and buying expensive possessions</def>
+        <cit type="example">
+             <quote>They're just a couple of yuppies with more money than sense.</quote>
+        </cit>
+    </sense>
+  </entry>
+  <entry xml:id="acquiesce">
+      <source>https://dictionary.cambridge.org/pt/dicionario/ingles/acquiesce</source>
+    <form type="lemma">
+        <orth>acquiesce</orth>
+        <pro notation="ipa">/ˌæk.wiˈes/</pro>
+    </form>
+    <grampGrp>
+        <pos>verb</pos>
+        <subc>intransitive</subc>
+     </grampGrp>
+    <sense>
+        <usg type="reg">formal</usg>
+        <def>to accept or agree to something, often unwillingly</def>
+        <cit type="example">
+              <quote>Reluctantly, he acquiesced to/in the plans.</quote>
+        </cit>
+     </sense>
+  </entry>
+  <entry xml:id="surreptitious">
+    <source>https://dictionary.cambridge.org/pt/dicionario/ingles/surreptitious</source>
+    <form type="lemma">
+        <orth>surreptitious</orth>
+        <usg type="geo">UK</usg>
+        <pro notation="ipa">/ˌsʌr.əpˈtɪʃ.əs/</pro>
+        <form type="variant">
+          <usg type="geo">US</usg>
+          <pro notation="ipa">/ˌsɝː.əpˈtɪʃ.əs/</pro>
+        </form>
+      </form>
+    <grampGrp>
+          <pos>adjective</pos>
+    </grampGrp>
+    <sense>
+        <def>done secretly, without anyone seeing or knowing</def>
+        <cit type="example">
+            <quote>She seemed to be listening to what I was saying, but I couldn't help noticing her surreptitious glances at the clock.</quote>
+        </cit>
+    </sense>
+  </entry>
+  <entry xml:id="underbelly">
+    <source>https://dictionary.cambridge.org/pt/dicionario/ingles/underbelly</source>
+    <form type="lemma">
+        <orth>underbelly</orth>
+        <usg type="geo">UK</usg>
+        <pro notation="ipa">/ˈʌn.dəˌbel.i/</pro>
+        <form type="variant">
+          <usg type="geo">US</usg>
+          <pro notation="ipa">/ˈʌn.dɚˌbel.i/</pro>
+        </form>
+     </form>
+     <grampGrp>
+         <pos>noun</pos>
+         <number>singular</number>
+      </grampGrp>
+    <sense>
+        <usg type="style">literary</usg>
+        <def>the weakest or most unpleasant part of something</def>
+        <cit type="example">
+            <quote n="1">a film exposing the sordid underbelly of modern urban society</quote>
+            <quote n="2">Small businesses are the soft underbelly (= weakest parts) of the economy, and they need as much government support as possible.</quote> 
+        </cit>
+     </sense>
+  </entry> 
+</entries>    

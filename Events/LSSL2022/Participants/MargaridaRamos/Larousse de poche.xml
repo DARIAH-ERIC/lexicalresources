@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="teste1_LSSL2022.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Larousse de poche - version électronique</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Larousse librairie</publisher>
+            <date>1954</date>
+            <idno>????</idno>
+            <availability>
+               <ab/>
+            </availability>
+         </publicationStmt>
+         <!-- your publication statement. Tell what people can do with it -->
+         <sourceDesc>
+            <bibl>
+               <title>Larousse de poche</title>
+               <author>AUGÉ, GILLON, HOLLER-LAROUSSE, MOREAU ET CIE</author>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry>
+            <form type="lemma" xml:lang="fr">
+               <orth>mouche</orth>
+            </form>
+            <gramGrp>
+               <pos>n<pc>.</pc></pos>
+               <gen>f<pc>.</pc></gen>
+            </gramGrp>
+            <sense n="1"><def>Nom de divers insects<pc>.</pc></def></sense>
+            <sense n="2"><usg style="Figurative"><label><hi style="italic">Fig</hi><pc>. </pc></label></usg><lb/>
+               <def>Agent secret de la police<pc>.</pc></def></sense>
+            <entry type="relatedEntry">
+               <form type="idiom"><orth><hi style="italic">Fine mouche</hi></orth></form>
+               <pc>, </pc>
+               <sense><gloss>per<lb/>sonne rusée</gloss></sense>
+               <pc>.</pc>
+            </entry>
+            <entry type="relatedEntry">
+               <form type="collocation"><orth><hi style="italic">Prendre la mouche</hi></orth></form>
+               <pc>, </pc>
+               <sense><gloss>se fâcher<pc>.</pc></gloss></sense>
+            </entry>
+            <lb/>
+            <sense n="3"><def>Petite rondelle de taffetas noir que l'on <lb/>colle sur le visage<pc>.</pc></def></sense>
+            <sense n="4"><def>Morceau de peau dont <lb/>on garnit le fleuret<pc>.</pc></def></sense>
+            <sense n="5"><def>Centre d'une cible<pc>.</pc></def></sense>
+            <lb/>
+            <sense n="6"><def>Petite barbiche</def></sense>
+         </entry>
+      </body>
+   </text>
+</TEI>
