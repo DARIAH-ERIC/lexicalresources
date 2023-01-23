@@ -7,10 +7,16 @@ docsearch({
     transformData: function (hits) {
         // Transform the list of hits
         hits.forEach(hit => {
-            //console.log(hit.url.replace('https://dariah-eric.github.io/', ''));
+            //console.log("hit.url: ", hit.url);
             hit.url = hit.url.replace('https://dariah-eric.github.io/lexicalresources/pages/TEILex0/TEILex0.html', '');
-            console.log(hit.url);
+            //console.log("replaced hit.url: ", hit.url);
+            //console.log("window.location: ", window.location);
+            var filename = hit.url.split('/').pop();
+            var everythingButFilename = hit.url.substring(0, hit.url.lastIndexOf("/"));
+            //console.log("filename: ", filename);
+            //console.log("everythingButFilename: ", everythingButFilename);
         });
+        console.log(hits);
         return hits;
     },
     handleSelected: function (input, event, suggestion, datasetNumber, context) {
@@ -18,6 +24,24 @@ docsearch({
         // in a new tab.
         if (context.selectionMethod === 'click') {
             input.setVal('');
+            
+         /*   switch (window.location.protocol) {
+                case 'http:':
+                    console.log("http");
+                case 'https:':
+                //remote file over http or https
+                    console.log("https");
+                break;
+                case 'file:':
+                    console.log("file");
+                    var localBase = window.location.href.substring(0, window.location.href.lastIndexOf("/"));
+                    var remoteBase = suggestion.url.substring(0, suggestion.url.lastIndexOf("/"));
+                    suggestion.url = suggestion.url.replace(remoteBase, localBase); 
+                //local file
+                break;
+                default:
+                //some other protocol
+            }*/
             
             window.open(suggestion.url, '_self');
         }
