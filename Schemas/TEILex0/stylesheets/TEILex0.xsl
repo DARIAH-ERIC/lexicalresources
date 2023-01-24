@@ -49,7 +49,7 @@
         <script type="text/javascript" src="js/prism-xpath.js" xmlns="http://www.w3.org/1999/xhtml">
             <xsl:comment>prism-xpath</xsl:comment>
         </script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js" xmlns="http://www.w3.org/1999/xhtml">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js/dist/umd/index.min.js" xmlns="http://www.w3.org/1999/xhtml">
             <xsl:comment>doc-search</xsl:comment>
         </script>
         <script type="text/javascript" src="js/algo.js" xmlns="http://www.w3.org/1999/xhtml"/>

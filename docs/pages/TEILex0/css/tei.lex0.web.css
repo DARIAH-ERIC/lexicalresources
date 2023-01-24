@@ -2,7 +2,7 @@
 @import url("https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css");
 @import "odd.css";
 @import "prism.css";
-@import url("https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@docsearch/css/dist/style.min.css");
 
 /*customizing pure*/
 

@@ -24,9 +24,10 @@
                     </div>
                     
                     <div class="tei_toc_search">
-                        <div class="input-group">
+                        <!--<div class="input-group">
                             <input type="search" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'" class="algo rounded"/>
-                        </div>
+                        </div>-->
+                        <div id="docsearch"></div>
                     </div>
                     <xsl:for-each select="descendant-or-self::tei:TEI/tei:text/tei:front">
                         <xsl:apply-templates/>

@@ -2,7 +2,8 @@ docsearch({
     apiKey: '81fe7e18f931f5024ff56f875ed7e8fb',
     appId: 'TFWYQALT5Y',
     indexName: 'tei_lex',
-    inputSelector: '.algo',
+    /*inputSelector: '.algo',*/
+    container: '#docsearch',
     debug: false, // Set debug to true if you want to inspect the dropdown
   /*  transformData: function (hits) {
         // Transform the list of hits
