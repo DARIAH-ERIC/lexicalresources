@@ -6,19 +6,19 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>Examples of TEI Lex-0</title>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <distributor>DARIAH WG Lexical Resources</distributor>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
          </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
-         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="mix">Mixtepec Mixtec</language>
-            <language ident="mix-x-YCNY">Yucanany Mixtec</language>
+            <language ident="mix" role="objectLanguage">Mixtepec Mixtec</language>
+            <language ident="mix-x-YCNY" role="objectLanguage">Yucanany Mixtec</language>
          </langUsage>
       </profileDesc>
    </teiHeader>
@@ -853,10 +853,9 @@
                </form>
                <sense xml:id="Häuschen.1"><!--etc.--></sense>
             </entry>
-            <!--TODO: what to do with morphems etc., I'd prefer seg type="m"-->
             <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
                <form type="lemma">
-                  <orth><m>haus</m><m>en</m></orth>
+                  <orth><seg type="m">haus</seg><seg type="m">en</seg></orth>
                </form>
                <sense xml:id="hausen.1"><!--...--></sense>
             </entry>

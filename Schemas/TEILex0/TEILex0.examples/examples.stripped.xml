@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--This file should not be edited manually. 
 To edit examples, please use TEILex0-examples.xml, 
@@ -8,19 +8,19 @@ then transform using tei-stripper.xsl-->
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>Examples of TEI Lex-0</title>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <distributor>DARIAH WG Lexical Resources</distributor>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
          </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
-         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="mix">Mixtepec Mixtec</language>
-            <language ident="mix-x-YCNY">Yucanany Mixtec</language>
+            <language ident="mix" role="objectLanguage">Mixtepec Mixtec</language>
+            <language ident="mix-x-YCNY" role="objectLanguage">Yucanany Mixtec</language>
          </langUsage>
       </profileDesc>
    </teiHeader>
@@ -242,15 +242,11 @@ then transform using tei-stripper.xsl-->
                <sense xml:id="in_aid_of.1">
                   <gloss>(of performances)</gloss>
                   <cit type="translationEquivalent" xml:lang="fr">
-                     <form>
-                        <orth>au profit de</orth>
-                     </form>
+                     <form><orth>au profit de</orth></form>
                   </cit>
                   <pc>,</pc>
                   <cit type="translationEquivalent">
-                     <form>
-                        <orth>au bénéfice de</orth>
-                     </form>
+                     <form><orth>au bénéfice de</orth></form>
                   </cit>
                </sense>
             </entry>
@@ -312,8 +308,7 @@ then transform using tei-stripper.xsl-->
                <lbl>:1</lbl>
             </form>
             <gramGrp>
-               <gram type="pos" norm="ADJ">adj.</gram>
-            </gramGrp>
+               <gram type="pos" norm="ADJ">adj.</gram></gramGrp>
             <etym type="grammaticalization">
                <seg type="desc">De</seg>
                <cit type="etymon">
@@ -380,10 +375,8 @@ then transform using tei-stripper.xsl-->
                   <quote>Certos povos crêem-se descendentes de um antepassado comum. o vaqueiro, pai
                      do vaqueiro, o avô e outros antepassados mais antigos haviam-se acostumado a
                      percorrer veredas, afastando o mato com as mãos. </quote>
-                  <bibl>
-                     <author>G. RAMOS</author>, <title>Vidas Secas</title>, <citedRange>p.
-                        96</citedRange>
-                  </bibl>
+                  <bibl><author>G. RAMOS</author>, <title>Vidas Secas</title>, <citedRange>p.
+                        96</citedRange></bibl>
                </cit>
             </sense>
             <sense xml:id="DLPC.antepassado_b_2" n="2">
@@ -512,10 +505,7 @@ then transform using tei-stripper.xsl-->
                <entry xml:id="DLPC.corpo_de_bombeiros" xml:lang="pt" type="relatedEntry">
                   <form type="lemma">
                      <orth>
-                        <ref type="entry" scope="currentEntry">
-                           <seg>corpo</seg>
-                           <lbl rend="sup">+</lbl>
-                        </ref>
+                        <ref type="entry" scope="currentEntry"><seg>corpo</seg><lbl rend="sup">+</lbl></ref>
                         <seg>de bombeiros</seg>
                      </orth>
                   </form>
@@ -582,21 +572,15 @@ then transform using tei-stripper.xsl-->
                <orth>house</orth>
             </form>
             <entry type="relatedEntry" xml:id="cobuild.house_1" xml:lang="en">
-               <form type="lemma">
-                  <orth>bring the house down</orth>
-               </form>
+               <form type="lemma"><orth>bring the house down</orth></form>
                <sense xml:id="cobuild.house_1.1" xml:lang="en"><!--...--></sense>
             </entry>
             <entry type="relatedEntry" xml:id="cobuild.house_2" xml:lang="en">
-               <form type="lemma">
-                  <orth>eat someone out of house and home</orth>
-               </form>
+               <form type="lemma"><orth>eat someone out of house and home</orth></form>
                <sense xml:id="cobuild.house_2.1" xml:lang="en"><!--...--></sense>
             </entry>
             <entry type="relatedEntry" xml:id="cobuild.house_3" xml:lang="en">
-               <form type="lemma">
-                  <orth>get on like a house on fire</orth>
-               </form>
+               <form type="lemma"><orth>get on like a house on fire</orth></form>
                <sense xml:id="cobuild.house_3.1" xml:lang="en"><!--...--></sense>
             </entry>
          </entry>
@@ -620,9 +604,7 @@ then transform using tei-stripper.xsl-->
                <form type="collocations">
                   <form type="collocation">
                      <orth>
-                        <ref type="form" scope="currentEntry" value="descalçar">
-                           <lbl>+</lbl>
-                        </ref>
+                        <ref type="form" scope="currentEntry" value="descalçar"><lbl>+</lbl></ref>
                         <seg>as botas</seg>
                      </orth>
                      <gramGrp>
@@ -654,9 +636,7 @@ then transform using tei-stripper.xsl-->
                <form type="collocations">
                   <form type="collocation">
                      <orth>
-                        <ref type="form" scope="currentEntry" value="descalçar">
-                           <lbl>+</lbl>
-                        </ref>
+                        <ref type="form" scope="currentEntry" value="descalçar"><lbl>+</lbl></ref>
                         <seg>os sapatos</seg>
                      </orth>
                      <gramGrp>
@@ -678,9 +658,7 @@ then transform using tei-stripper.xsl-->
                   <gram type="gen" value="m">Male or unknown gender</gram>
                </gramGrp>
                <cit type="translationEquivalent" xml:lang="fr">
-                  <form>
-                     <orth>chien</orth>
-                  </form>
+                  <form><orth>chien</orth></form>
                </cit>
                <cit type="example" xml:lang="fr">
                   <quote> Le matin j'ouvre au <ref type="oRef">chien</ref> et je lui fais manger sa
@@ -697,9 +675,7 @@ then transform using tei-stripper.xsl-->
                   <gram type="gen" value="f">Female</gram>
                </gramGrp>
                <cit type="translationEquivalent" xml:lang="fr">
-                  <form type="lemma">
-                     <orth>chienne</orth>
-                  </form>
+                  <form type="lemma"><orth>chienne</orth></form>
                </cit>
                <cit type="example" xml:lang="fr">
                   <quote>6. Les fleuristes, murmura Lorilleux, toutes des Marie-couche-toi-là. Eh
@@ -727,20 +703,16 @@ then transform using tei-stripper.xsl-->
          <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
             <form type="lemma">
                <orth type="segmeted">
-                  <seg>Fluss</seg>
-                  <seg>schifffahrt</seg>
+                  <seg>Fluss</seg><seg>schifffahrt</seg>
                </orth>
                <form type="variant">
                   <orth>
-                     <seg>Fluss</seg>
-                     <pc>-</pc>
-                     <seg>Schifffahrt</seg>
+                     <seg>Fluss</seg><pc>-</pc><seg>Schifffahrt</seg>
                   </orth>
                </form>
                <form type="variant">
                   <orth notAfter="1996">
-                     <seg>Fluß</seg>
-                     <seg>schiffahrt</seg>
+                     <seg>Fluß</seg><seg>schiffahrt</seg>
                   </orth>
                   <usg type="time">Vor 1996 Rechtschreibung Reform</usg>
                </form>
@@ -869,8 +841,7 @@ then transform using tei-stripper.xsl-->
          </entry>
          <entry type="wordFamily" xml:lang="de" xml:id="Haus">
             <entry type="mainEntry" xml:lang="de" xml:id="Haus_nn">
-               <form type="lemma">
-                  <orth>Haus</orth>
+               <form type="lemma"><orth>Haus</orth>
                   <gramGrp>
                      <gram type="pos">nn</gram>
                   </gramGrp>
@@ -879,20 +850,13 @@ then transform using tei-stripper.xsl-->
             </entry>
             <entry type="relatedEntry" xml:id="Häuschen" xml:lang="de">
                <form type="lemma">
-                  <orth>
-                     <seg type="m">Häus</seg>
-                     <seg type="m">chen</seg>
-                  </orth>
+                  <orth><seg type="m">Häus</seg><seg type="m">chen</seg></orth>
                </form>
                <sense xml:id="Häuschen.1"><!--etc.--></sense>
             </entry>
-            <!--TODO: what to do with morphems etc., I'd prefer seg type="m"-->
             <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
                <form type="lemma">
-                  <orth>
-                     <m>haus</m>
-                     <m>en</m>
-                  </orth>
+                  <orth><seg type="m">haus</seg><seg type="m">en</seg></orth>
                </form>
                <sense xml:id="hausen.1"><!--...--></sense>
             </entry>
@@ -965,12 +929,8 @@ then transform using tei-stripper.xsl-->
             <!--...-->
          </entry>
          <entry xml:id="LDOCE.living" xml:lang="en" type="mainEntry">
-            <form type="lemma">
-               <orth>living</orth>
-            </form>
-            <gramGrp>
-               <gram type="pos">adj</gram>
-            </gramGrp>
+            <form type="lemma"><orth>living</orth></form>
+            <gramGrp><gram type="pos">adj</gram></gramGrp>
             <sense n="1" xml:id="LDOCE.living.1">
                <num>1</num>
                <def>alive now <!--[...] --></def>
@@ -983,8 +943,7 @@ then transform using tei-stripper.xsl-->
                <cit type="example">
                   <quote>A <ref type="entry" scope="currentEntry">living</ref> language <gloss>(=one
                         that people still use)</gloss>
-                     <!--[….] -->
-                  </quote>
+                     <!--[….] --></quote>
                </cit>
             </sense>
          </entry>
@@ -1024,15 +983,13 @@ then transform using tei-stripper.xsl-->
                   <orth type="transliterated">
                      <seg xml:id="osma" corresp="#usma #ousma">Osama</seg>
                      <seg>Bin</seg>
-                     <seg>Laden</seg>
-                  </orth>
+                     <seg>Laden</seg></orth>
                </form>
                <form type="variant">
                   <orth type="transliterated">
                      <seg xml:id="usma" corresp="#osma #ousma">Usama</seg>
                      <seg>Bin</seg>
-                     <seg>Laden</seg>
-                  </orth>
+                     <seg>Laden</seg></orth>
                </form>
             </form>
             <!--...-->
@@ -1172,13 +1129,9 @@ then transform using tei-stripper.xsl-->
                      <gramGrp>
                         <gram type="number" value="plural">ج </gram>
                      </gramGrp>
-                     <form type="variant">
-                        <orth>أُرُك </orth>
-                     </form>
+                     <form type="variant"><orth>أُرُك </orth></form>
                      <lbl>و</lbl>
-                     <form type="variant">
-                        <orth>أَرَائِك</orth>
-                     </form>
+                     <form type="variant"><orth>أَرَائِك</orth></form>
                   </form>
                   <sense xml:id="ark1_3_sense1">
                      <def>شجر ذو شوك. طويل الساق، كثير الورق و الأغصان. خوَّار العود تتَّخذ منه
@@ -1251,13 +1204,9 @@ then transform using tei-stripper.xsl-->
                      <gramGrp>
                         <gram type="number" value="plural">ج </gram>
                      </gramGrp>
-                     <form type="variant">
-                        <orth>أَرِِيْك </orth>
-                     </form>
+                     <form type="variant"><orth>أَرِِيْك </orth></form>
                      <lbl>و</lbl>
-                     <form type="variant">
-                        <orth>أَرَائِك</orth>
-                     </form>
+                     <form type="variant"><orth>أَرَائِك</orth></form>
                   </form>
                   <sense xml:id="ark4_1_sense1">
                      <def>سرير مزيَّن فاخر</def>
@@ -1293,21 +1242,13 @@ then transform using tei-stripper.xsl-->
                   <gramGrp>
                      <gram type="number" value="plural">ج</gram>
                   </gramGrp>
-                  <form type="variant">
-                     <orth>سيَاجات</orth>
-                  </form>
+                  <form type="variant"><orth>سيَاجات</orth></form>
                   <lbl>و</lbl>
-                  <form type="variant">
-                     <orth>أسْوِجة</orth>
-                  </form>
+                  <form type="variant"><orth>أسْوِجة</orth></form>
                   <lbl>و</lbl>
-                  <form type="variant">
-                     <orth>أَسْوِجة</orth>
-                  </form>
+                  <form type="variant"><orth>أَسْوِجة</orth></form>
                   <lbl>و</lbl>
-                  <form type="variant">
-                     <orth>سُوج</orth>
-                  </form>
+                  <form type="variant"><orth>سُوج</orth></form>
                </form>
                <pc>:</pc>
                <sense xml:id="syj2_sense1">
@@ -1348,13 +1289,9 @@ then transform using tei-stripper.xsl-->
                      <orth>ـَ</orth>
                   </form>
                   <form type="inflected">
-                     <form type="variant">
-                        <orth>شَهْمًا</orth>
-                     </form>
+                     <form type="variant"><orth>شَهْمًا</orth></form>
                      <lbl>و</lbl>
-                     <form type="variant">
-                        <orth>شُهُمًا</orth>
-                     </form>
+                     <form type="variant"><orth>شُهُمًا</orth></form>
                   </form>
                   <sense xml:id="shahama1_1_sense1">
                      <cit type="example">
@@ -1394,13 +1331,9 @@ then transform using tei-stripper.xsl-->
                      <orth>ـُـ</orth>
                   </form>
                   <form type="inflected">
-                     <form type="variant">
-                        <orth>شَهَامةً</orth>
-                     </form>
+                     <form type="variant"><orth>شَهَامةً</orth></form>
                      <lbl>و</lbl>
-                     <form type="variant">
-                        <orth>شُهُومَةُُ</orth>
-                     </form>
+                     <form type="variant"><orth>شُهُومَةُُ</orth></form>
                   </form>
                   <lbl>:</lbl>
                   <sense xml:id="shahama2_1_sense1">
@@ -1509,8 +1442,7 @@ then transform using tei-stripper.xsl-->
                      <ref type="entry" target="#VSK.SR.мајка">мајка</ref>
                   </xr> била <xr type="related">
                      <ref type="entry" target="VSK.SR.грдан2">грдна</ref>
-                  </xr>
-               </def>
+                  </xr></def>
                <pc>,</pc>
                <cit type="translationEquivalent" xml:lang="de">
                   <form type="lemma">
@@ -1532,11 +1464,8 @@ then transform using tei-stripper.xsl-->
             </form>
             <etym>(<cit type="etymon" xml:lang="de">
                   <lang norm="de" xml:lang="sr">нем.</lang>
-                  <form>
-                     <orth>Krone</orth>
-                  </form>
-               </cit>
-               <pc>,</pc>
+                  <form><orth>Krone</orth></form>
+               </cit><pc>,</pc>
                <cit type="etymon" xml:lang="la">
                   <lbl xml:lang="sr">из</lbl>
                   <lang expand="латински" norm="la">лат.</lang>
