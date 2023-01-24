@@ -200,6 +200,7 @@
             </attList>
         </elementSpec>
         <!-- 2018-09-1 (LR): the <ref> element is adapted to have specific @type values (semi-closed) -->
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
         <elementSpec ident="ref" mode="change">
             <!--2020-05-14 (TT): to allow expand on ref-->
             <classes mode="change">
@@ -209,6 +210,9 @@
                 <!--2020-06-26 (TT): we need scope on ref to indicate current or external entry -->
                 <memberOf key="att.scoped"/>
             </classes>
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
                     <valList type="semi" mode="change">
@@ -226,6 +230,9 @@
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
             </classes>
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
                     <valList type="closed" mode="change">
@@ -286,10 +293,15 @@
         </elementSpec>
         <!-- adding lang to model.entryPart (to make it member of <cit>, if you ask) -->
         <!-- 2019-10-22 (LR) created ambiguous models... mended -->
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        
         <elementSpec ident="lang" mode="change">
             <!--<classes mode="change">
                             <memberOf key="model.entryPart" mode="add"/>
                         </classes>-->
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
             <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e5322">
                     <cit type="cognate">
@@ -322,12 +334,16 @@
         <!--2020-06-30 (TT): def is only allowed within a sense!-->
         <!--TODO: at the moment, it's still allowed in etym, but it shouldn't be
         because if there is no sense, we have to use gloss. fix later-->
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
         <elementSpec ident="def" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
                 <memberOf key="model.entryPart.top" mode="delete"/>
                 <memberOf key="model.entryPart" mode="delete"/>
             </classes>
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
         </elementSpec>
         <!-- adding cit to model.sensePart -->
         <elementSpec ident="cit" mode="change">
@@ -441,17 +457,46 @@
                 <memberOf key="model.entryPart.top" mode="add"/>
                 <memberOf key="model.emphLike" mode="add"/>
             </classes>
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
         </elementSpec>
         <!--2020-05-14 add orth and pron to att.datable.w3c to allow @notBefore etc.-->
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
         <elementSpec ident="orth" mode="change">
             <classes mode="change">
                 <memberOf key="att.datable.w3c" mode="add"/>
             </classes>
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
         </elementSpec>
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <elementSpec ident="hyph" mode="change">
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
+        </elementSpec>
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
         <elementSpec ident="pron" mode="change">
             <classes mode="change">
                 <memberOf key="att.datable.w3c" mode="add"/>
             </classes>
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
+        </elementSpec>
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <elementSpec ident="stress" mode="change">
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
+        </elementSpec>
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <elementSpec ident="syll" mode="change">
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
         </elementSpec>
         <!-- 2020-06-24 (TT): allowing langUsage and language to document language tags-->
         <elementRef key="langUsage"/>
@@ -604,7 +649,11 @@
                 <textNode/>
             </content>
         </elementSpec>
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
         <elementSpec ident="gram" mode="change">
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
                     <valList type="semi" mode="change">
@@ -654,6 +703,7 @@
                     </valList>
                 </attDef>
             </attList>
+            
         </elementSpec>
         <!--2021-09-20 (TT): make availability required in publicationStmt-->
         <!--2021-09-21 (TT): make publicationStmtPart.agency unbound so that one can
@@ -709,7 +759,17 @@
                 </egXML>
             </exemplum>
         </elementSpec>
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <elementSpec ident="seg" mode="change">
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
+        </elementSpec>
+        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
         <elementSpec ident="title" mode="change">
+            <content>
+                <macroRef key="macro.lexicalParaContent"/>
+            </content>
             <attList>
                 <attDef ident="type" mode="replace" usage="rec">
                     <valList>
@@ -725,6 +785,7 @@
                     </valList>
                 </attDef>
             </attList>
+            
         </elementSpec>
         <elementSpec ident="dictScrap" mode="change">
             <content>
@@ -771,6 +832,23 @@
                 <memberOf key="model.lexicalInter"></memberOf>
             </classes>
         </classSpec>
+        
+        <macroSpec ident="macro.paraLexcialContent">
+            <content rend="replace">
+                <alternate minOccurs="0"
+                    maxOccurs="unbounded">
+                    <textNode/>
+                    <classRef key="model.gLike"/>
+                    <classRef key="model.phrase"/>
+                    <!--<classRef key="model.inter"/>-->
+                    <classRef key="model.lexicalInter"/>
+                    <classRef key="model.global"/>
+                    <elementRef key="lg"/>
+                    <classRef key="model.lLike"/>
+                    <elementRef key="xr"/>
+                </alternate>
+            </content>
+        </macroSpec>
         
         <!--2018-09-02 (TT): Added PB's useful class modifications-->
         <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
@@ -845,13 +923,28 @@
             </attList>
         </classSpec>
         <!-- 2019-10-22 (LR) new hack to have <xr> in <def> and similar places -->
-        <macroSpec ident="macro.paraContent" mode="change">
+        <!-- 2023-01-24 (TT) retired this customization because now we have macro.lexicalParaContent -->
+        <!--<macroSpec ident="macro.paraContent" mode="change">
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
                     <classRef key="model.phrase"/>
                     <classRef key="model.inter"/>
+                    <classRef key="model.global"/>
+                    <elementRef key="lg"/>
+                    <classRef key="model.lLike"/>
+                    <elementRef key="xr"/>
+                </alternate>
+            </content>
+        </macroSpec>-->
+        <macroSpec ident="macro.lexicalParaContent" mode="add">
+            <content>
+                <alternate minOccurs="0" maxOccurs="unbounded">
+                    <textNode/>
+                    <classRef key="model.gLike"/>
+                    <classRef key="model.phrase"/>
+                    <classRef key="model.lexicalInter"/>
                     <classRef key="model.global"/>
                     <elementRef key="lg"/>
                     <classRef key="model.lLike"/>
