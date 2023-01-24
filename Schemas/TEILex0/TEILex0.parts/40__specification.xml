@@ -126,11 +126,7 @@
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <classRef key="model.gLike"/>
                     <classRef key="model.phrase"/>
-                    <!--<classRef key="model.inter"/>-->
-                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
-                    <classRef key="model.attributable"/>
-                    <classRef key="model.biblLike"/>
-                    <!--end of replace model.inter-->
+                    <classRef key="model.lexicalInter"/>
                     <elementRef key="usg"/>
                     <elementRef key="lbl"/>
                     <classRef key="model.global"/>
@@ -378,11 +374,7 @@
                     <textNode/>
                     <classRef key="model.gLike"/>
                     <classRef key="model.phrase"/>
-                    <!--<classRef key="model.inter"/>-->
-                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
-                    <classRef key="model.attributable"/>
-                    <classRef key="model.biblLike"/>
-                    <!--end of replace model.inter-->
+                    <classRef key="model.lexicalInter"/>
                     <classRef key="model.formPart"/>
                     <classRef key="model.global"/>
                 </alternate>
@@ -399,11 +391,7 @@
                     <textNode/>
                     <classRef key="model.gLike"/>
                     <classRef key="model.phrase"/>
-                    <!--<classRef key="model.inter"/>-->
-                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
-                    <classRef key="model.attributable"/>
-                    <classRef key="model.biblLike"/>
-                    <!--end of replace model.inter-->
+                    <classRef key="model.lexicalInter"/>
                     <classRef key="model.gramPart"/>
                     <classRef key="model.global"/>
                 </alternate>
@@ -419,11 +407,7 @@
                     <textNode/>
                     <classRef key="model.gLike"/>
                     <classRef key="model.global"/>
-                    <!--<classRef key="model.inter"/>-->
-                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
-                    <classRef key="model.attributable"/>
-                    <classRef key="model.biblLike"/>
-                    <!--end of replace model.inter-->
+                    <classRef key="model.lexicalInter"/>
                     <classRef key="model.phrase"/>
                     <classRef key="model.descLike"/>
                     <elementRef key="def"/>
@@ -751,11 +735,7 @@
                     <classRef key="model.entryPart"/>
                     <classRef key="model.morphLike"/>
                     <classRef key="model.phrase"/>
-                    <!--<classRef key="model.inter"/>-->
-                    <!-- replace model.inter with its componenets that could make sense in a dictionary element-->
-                    <classRef key="model.attributable"/>
-                    <classRef key="model.biblLike"/>
-                    <!--end of replace model.inter-->
+                    <classRef key="model.lexicalInter"/>
                     <classRef key="model.global"/>
                 </alternate>
             </content>
@@ -774,6 +754,24 @@
                 <memberOf key="model.entryPart.top" mode="add"/>
             </classes>
         </classSpec>
+        <!--2023-01-24 (TT): create model.lexicalInter to simplify content models of certain
+        dictionary elements -->
+        <classSpec type="model" ident="model.lexicalInter" mode="add">
+            <desc> pared-down version of model.inter for use in dictionary elements </desc>
+        </classSpec>
+        
+        <classSpec type="model" ident="model.attributable" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalInter"></memberOf>
+            </classes>
+        </classSpec>
+        
+        <classSpec type="model" ident="model.biblLike" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalInter"></memberOf>
+            </classes>
+        </classSpec>
+        
         <!--2018-09-02 (TT): Added PB's useful class modifications-->
         <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
                         rend, and xml:base are removed from the att.global class, so that this now makes available

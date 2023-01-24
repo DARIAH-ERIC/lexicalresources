@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2023-01-23T18:37:59Z. .
+Schema generated from ODD source 2023-01-24T05:35:41Z. .
 TEI Edition: Version 4.4.0. Last updated on
         19th April 2022, revision ff9cc28b0
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
@@ -4208,8 +4208,7 @@ Suggested values include: 1] mainEntry; 2] wordFamily; 3] homonymicEntry; 4] rel
                <ref name="model.entryPart"/>
                <ref name="model.morphLike"/>
                <ref name="model.phrase"/>
-               <ref name="model.attributable"/>
-               <ref name="model.biblLike"/>
+               <ref name="model.lexicalInter"/>
                <ref name="model.global"/>
             </choice>
          </zeroOrMore>
@@ -4225,8 +4224,7 @@ Suggested values include: 1] mainEntry; 2] wordFamily; 3] homonymicEntry; 4] rel
                <text/>
                <ref name="model.gLike"/>
                <ref name="model.phrase"/>
-               <ref name="model.attributable"/>
-               <ref name="model.biblLike"/>
+               <ref name="model.lexicalInter"/>
                <ref name="model.formPart"/>
                <ref name="model.global"/>
             </choice>
@@ -4372,8 +4370,7 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                <text/>
                <ref name="model.gLike"/>
                <ref name="model.phrase"/>
-               <ref name="model.attributable"/>
-               <ref name="model.biblLike"/>
+               <ref name="model.lexicalInter"/>
                <ref name="model.gramPart"/>
                <ref name="model.global"/>
             </choice>
@@ -4401,8 +4398,7 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                <text/>
                <ref name="model.gLike"/>
                <ref name="model.global"/>
-               <ref name="model.attributable"/>
-               <ref name="model.biblLike"/>
+               <ref name="model.lexicalInter"/>
                <ref name="model.phrase"/>
                <ref name="model.descLike"/>
                <ref name="def"/>
@@ -4509,8 +4505,7 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
             <choice>
                <ref name="model.gLike"/>
                <ref name="model.phrase"/>
-               <ref name="model.attributable"/>
-               <ref name="model.biblLike"/>
+               <ref name="model.lexicalInter"/>
                <ref name="usg"/>
                <ref name="lbl"/>
                <ref name="model.global"/>
@@ -6113,6 +6108,12 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          <ref name="usg"/>
          <ref name="lbl"/>
          <ref name="xr"/>
+      </choice>
+   </define>
+   <define name="model.lexicalInter">
+      <choice>
+         <ref name="model.biblLike"/>
+         <ref name="model.attributable"/>
       </choice>
    </define>
    <define name="att.scoped.attributes">
