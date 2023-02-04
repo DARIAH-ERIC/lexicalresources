@@ -7227,27 +7227,7 @@ ${caret}</String>
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>xproc/teilex0-examples.xpl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0 Examples XProc</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>xproc/teilex0.xpl</String>
+                                    <String>TEILex0.parts/40__specification.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7293,11 +7273,11 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/01__introduction.xml</String>
+                                    <String>xproc/teilex0-examples.xpl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEILex0: Generate documentation</String>
+                                        <String>TEILex0 Examples XProc</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -7313,7 +7293,7 @@ ${caret}</String>
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/40__specification.xml</String>
+                                    <String>xproc/teilex0.xpl</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7330,6 +7310,26 @@ ${caret}</String>
                                 <field name="scenarioStorageLocations">
                                     <list>
                                         <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/01__introduction.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
