@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (existing) {
         existing = existing.split(',');
         existing.forEach(item => {
-            console.log(document.getElementById(item));
+            //console.log(document.getElementById(item));
             document.getElementById(item).classList.add('clicked');
             document.getElementById(item).closest('div.toc-showhide').nextElementSibling.style.display = 'block';
         })

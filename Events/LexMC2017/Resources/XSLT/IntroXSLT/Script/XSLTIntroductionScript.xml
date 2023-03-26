@@ -106,30 +106,6 @@
                <p>We adopt the latter in the rest of the tutorial.</p>
                <p>Playing with further presentational aspects:</p>
                <list>
-                  <item>Headwords in bold: <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <xsl:template match="orth">
-                           <b>
-                              <xsl:apply-templates/>
-                           </b>
-                        </xsl:template>
-                     </egXML>
-                  </item>
-                  <item>Examples in italics (Note: use of constraints in XPath): <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <xsl:template match="cit[@type='example']/quote">
-                           <i>
-                              <xsl:apply-templates/>
-                           </i>
-                        </xsl:template>
-                     </egXML>
-                  </item>
-                  <item>Putting parentheses around pronunciations: <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                        <xsl:template match="pron">
-                           <xsl:text>[</xsl:text>
-                           <xsl:apply-templates/>
-                           <xsl:text>]</xsl:text>
-                        </xsl:template>
-                     </egXML>
-                  </item>
                   <item>Variant: dealing with cases where the pronunciation is already in square brackets: <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <xsl:template match="pron[not(starts-with(normalize-space(.), '[') and ends-with(normalize-space(.), ']'))]">
                            <xsl:text>[</xsl:text>
