@@ -20,19 +20,20 @@
          <entry xml:id="costruire-v">
             <form type="lemma">
                <orth>costruire</orth>
-               <gramGrp>
-                  <pos>V</pos>
-                  <syntacticBehaviour>
-                     <ref target="#SCFtxa"/>
-                  </syntacticBehaviour>
-               </gramGrp>
             </form>
+            <gramGrp>
+               <pos>V</pos>
+               <syntacticBehaviour>
+                  <ref target="#SCFtxa"/>
+               </syntacticBehaviour>
+            </gramGrp>
             <sense xml:id="UsemD585costruire">
                <cit type="example">
                   <quote>costruire un edificio</quote>
                </cit>
                <predicativeRepresentation>
-                  <ref type="semanticPredicate" target="#PREDcostruire-1"/>            
+                  <ref type="semanticPredicate" target="#PREDcostruire-1"/>
+                 
                   <ref type="synsemCorrespondences" target="#ISObivalent">
                      <fs>
                         <f name="typeoflink">
@@ -69,7 +70,7 @@
          </entry>
 
          <subcategorizationFrame xml:id="SCFtxa">
-            <desc>construction for ....</desc>
+            <desc>transitive construction</desc>
             <fs>
                <f name="construction">
                   <symbol value="transitive"/>
@@ -88,14 +89,14 @@
                      <symbol value="NP"/>
                   </f>
                   <f name="range">
-                     <string>arg0</string>
+                     <string>pos0</string>
                   </f>
                   <f name="optional">
                      <binary value="true"/>
                   </f>
                </fs>
+
             </SyntacticArgument>
-            
             <SyntacticArgument xml:id="txa-Poubj">
                <fs>
                   <f name="syntacticFunction">
@@ -105,7 +106,7 @@
                      <symbol value="NP"/>
                   </f>
                   <f name="range">
-                     <string>arg1</string>
+                     <string>pos1</string>
                   </f>
                   <f name="optional">
                      <binary value="false"/>
@@ -124,7 +125,7 @@
                      <string>HUMAN</string>
                   </f>
                   <f name="range">
-                     <string>pos0</string>
+                     <string>arg0</string>
                   </f>
                </fs>
 
@@ -138,7 +139,7 @@
                      <string>BuildingPROT</string>
                   </f>
                   <f name="range">
-                     <string>pos1</string>
+                     <string>arg1</string>
                   </f>
                </fs>
             </SemanticArgument>
