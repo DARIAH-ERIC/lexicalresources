@@ -693,13 +693,13 @@
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-tns.html"
                             />
                         </valItem>
-                        <valItem ident="transitivity"/>
+                        <valItem ident="valency"/>
                         <valItem ident="collocate">
                             <equiv name="colloc"
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-colloc.html"
                             />
                         </valItem>
-                        <valItem ident="rection"/>
+                        <valItem ident="government"/>
                     </valList>
                 </attDef>
             </attList>

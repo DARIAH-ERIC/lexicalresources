@@ -726,7 +726,7 @@ then transform using tei-stripper.xsl-->
          </entry>
          <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
             <form type="lemma">
-               <orth type="segmeted">
+               <orth type="segmented">
                   <seg>Fluss</seg>
                   <seg>schifffahrt</seg>
                </orth>

@@ -146,7 +146,7 @@
                >&lt;gram type="pos">prep&lt;/gram></code> for those who want to convert their
             dictionaries to TEI Lex-0 would be easily accomplished. </p>
          <p>The following table shows a mapping between the specific TEI elements and the typed
-               <gi>gram</gi> elements in TEI Lex-0:<table rows="7" cols="2"
+               <gi>gram</gi> elements in TEI Lex-0:<table rows="6" cols="2"
                rend="pure-table pure-table-bordered">
                <head>Mapping between specific elements in TEI and the generalized mechanism in TEI
                   Lex-0</head>
@@ -190,6 +190,10 @@
                      type="tense">aorist&lt;/gram></code></cell>
                </row>
                <row>
+                  <cell><code rend="language-xml">&lt;colloc>de&lt;/tns></code></cell>
+                  <cell><code rend="language-xml">&lt;gram type="colloc">de&lt;/gram></code></cell>
+               </row>
+               <row>
                   <cell>-</cell>
                   <cell><code rend="language-xml">&lt;gram
                      type="aspect">imperf.&lt;/gram></code></cell>
@@ -197,10 +201,23 @@
                <row>
                   <cell>-</cell>
                   <cell><code rend="language-xml">&lt;gram
-                        type="transitivity">intr.&lt;/gram></code></cell>
+                     type="valency">intr.&lt;/gram></code></cell>
+               </row>
+               <row>
+                  <cell>-</cell>
+                  <cell><code rend="language-xml">&lt;gram
+                        type="government">[+conj.]&lt;/gram></code></cell>
                </row>
             </table></p>
-         <p>Note: See also section on <ref target="#collocates">Collocates</ref>.</p>
+         <p>Note: See also next section on <ref target="#collocates">Collocates</ref>.</p>
+         <p>TEI5 is missing a specific element for encoding the grammatical aspect of verbs (for
+            values such as <code>perfective</code>, <code>imperfective</code>) and valency (for
+            values such as <code>transitive</code>, <code>intransitive</code>,
+               <code>reflexive</code>, and <code>impersonal</code>). TEI Lex-0 is therefore
+            introducing two suggested grammatical types: <code rend="language-xpath"
+               >gram[@type="aspect"]</code>and<code rend="language-xpath"
+               >gram[@type="valency"]</code>for encoding such values in dictionaries.</p>
+         
          <p>The attribute values for <code rend="language-xpath">gram/@type</code> are a semi-closed
             list: this means that we will discuss and adopt additional values as demonstrated by
             examples from dictionaries that are encoded by members of our community. </p>
@@ -226,8 +243,8 @@
             </egXML></p>
          <p>In line with the simplification of the elements used to describe grammatical properties
             in dictionaries, TEI Lex-0 recommends the use of <code rend="language-xml">&lt;gram
-               type="collocate">&lt;/gram></code> to encode these phenomena, i.e.:
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+               type="collocate">&lt;/gram></code> to encode these phenomena, i.e.: ><egXML
+               xmlns="http://www.tei-c.org/ns/Examples">
                <entry xml:lang="fr" xml:id="DDLF.médire">
                   <form type="lemma">
                      <orth>médire</orth>
@@ -235,18 +252,17 @@
                   <gramGrp>
                      <gram type="collocate">de</gram>
                   </gramGrp>
-                </entry>
+               </entry>
             </egXML>
          </p>
-         <p>In addition to marking up "sequences of words", <code rend="language-xpath"
-               >gram/@type="collocate"</code> is also used in TEI Lex-0 for encoding various types
-            of grammatical relations (differently referred to in the literature as valency, rection,
-            dependency etc.):
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <gramGrp>
-               <gram type="collocate">[+ conj.]</gram>
-            </gramGrp>
-         </egXML>
+         <p>In TEI Lex-0, we make a distinction between purely lexical collocates (as in médire <hi
+               rend="italic">de</hi>) and various types of grammatical co-occurrences, differently
+            referred to in the literature as rection, government, dependency etc. <egXML
+               xmlns="http://www.tei-c.org/ns/Examples">
+               <gramGrp>
+                  <gram type="government">[+ conj.]</gram>
+               </gramGrp>
+            </egXML>
          </p>
       </div>
    </div>
