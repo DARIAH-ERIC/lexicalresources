@@ -5,11 +5,17 @@
    <head>Header</head>
    <div>
       <head>General remarks</head>
-      <p>A lexical resource encoded in TEI Lex-0 must, like any TEI file, start with a
-            <gi>teiHeader</gi> element. A TEI header contains information about the lexical resource
-         itself, its source(s), its encoding, and its revisions. Proper, structured metadata of this
-         kind is equally important for scholars using the resource, for software processing them,
-         and for cataloguers in libraries and archives.</p>
+      <p>A lexical resource encoded in TEI Lex-0 must, like any TEI file, start with the root <gi>TEI</gi>
+         element, which, in turn, must contain a <gi>teiHeader</gi> element.</p>
+      <p>TEI Lex-0, unlike TEI P5, however, requires the <code>@type</code> attribute on the root <code>TEI</code> with the value "lex-0".
+         
+         
+      </p>
+      
+      <p>A TEI header contains information
+         about the lexical resource itself, its source(s), its encoding, and its revisions. Proper,
+         structured metadata of this kind is equally important for scholars using the resource, for
+         software processing them, and for cataloguers in libraries and archives.</p>
       <p>The TEI header of a lexical resource has five major parts:<list>
             <item>a <hi rend="italic">file description</hi>, tagged <gi>fileDesc</gi>, provides a
                full bibliographic description of the electronic lexical resource itself as well as
@@ -77,8 +83,7 @@
                information on the conditions under which the given resource can be used. <egXML
                   xmlns="http://www.tei-c.org/ns/Examples" source="#StčS"><xi:include
                      href="../TEILex0.examples/headers/StčS.stripped.xml"
-                     corresp="../TEILex0.examples/headers/StčS.xml"
-                     xpointer="element(/1/1/1/2)"/>
+                     corresp="../TEILex0.examples/headers/StčS.xml" xpointer="element(/1/1/1/2)"/>
                </egXML>
             </item>
             <item>In addition to <gi>publisher</gi> and <gi>distributor</gi>, the
@@ -92,29 +97,28 @@
       </p>
       <div>
          <head>Source description</head>
-         
-            <p>In TEI Lex-0, <gi>sourceDesc</gi> is an optional element. Born-digital resources
-               or those which cannot be properly sourced do not require a <gi>sourceDesc</gi>. </p>
-            <p>If a resource <hi rend="italic">is</hi> sourced, <gi>sourceDesc</gi> in TEI Lex-0
-               requires the use of <gi>biblStruct</gi> for structuring bibliographic information
-               about the source. This is a departure from vanilla TEI which is more permissive in
-               this respect. <list type="examples">
-                  <item>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#VOLP">
-                        <xi:include href="../TEILex0.examples/headers/VOLP.stripped.xml"
-                           corresp="../TEILex0.examples/headers/VOLP.xml"
-                           xpointer="element(/1/1/1/3)"/>
-                     </egXML>
-                  </item>
-                  <item>
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#EtymWB-XML">
-                        <xi:include href="../TEILex0.examples/headers/EtymWB-XML.stripped.xml"
-                           corresp="../TEILex0.examples/headers/EtymWB-XML.stripped.xml"
-                           xpointer="element(/1/1/1/4)"/>
-                     </egXML>
-                  </item>
-               </list>
-            </p>
+         <p>In TEI Lex-0, <gi>sourceDesc</gi> is an optional element. Born-digital resources or
+            those which cannot be properly sourced do not require a <gi>sourceDesc</gi>. </p>
+         <p>If a resource <hi rend="italic">is</hi> sourced, <gi>sourceDesc</gi> in TEI Lex-0
+            requires the use of <gi>biblStruct</gi> for structuring bibliographic information about
+            the source. This is a departure from vanilla TEI which is more permissive in this
+            respect. <list type="examples">
+               <item>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#VOLP">
+                     <xi:include href="../TEILex0.examples/headers/VOLP.stripped.xml"
+                        corresp="../TEILex0.examples/headers/VOLP.xml" xpointer="element(/1/1/1/3)"
+                     />
+                  </egXML>
+               </item>
+               <item>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#EtymWB-XML">
+                     <xi:include href="../TEILex0.examples/headers/EtymWB-XML.stripped.xml"
+                        corresp="../TEILex0.examples/headers/EtymWB-XML.stripped.xml"
+                        xpointer="element(/1/1/1/4)"/>
+                  </egXML>
+               </item>
+            </list>
+         </p>
          <p>If a dictionary has more than one source, each source should be encoded in its own
                <gi>biblStruct</gi> element. <egXML xmlns="http://www.tei-c.org/ns/Examples"
                source="#StčS">
@@ -122,7 +126,6 @@
                   corresp="../TEILex0.examples/headers/StčS.xml" xpointer="element(/1/1/1/3)"/>
             </egXML>
          </p>
-         
       </div>
    </div>
    <div xml:id="encodingDescription">

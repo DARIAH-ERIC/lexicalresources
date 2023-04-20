@@ -620,6 +620,17 @@
                 </sequence>
             </content>
         </elementSpec>
+        <!--2023-04-20 (TT) make type mandatory on TEI-->
+        <elementSpec ident="TEI" mode="change">
+            <attList>
+                <attDef ident="type" mode="change" usage="req">
+                    <valList mode="add" type="closed">
+                        <valItem ident="lex-0"></valItem>
+                    </valList>
+                </attDef>
+            </attList>
+        </elementSpec>
+        
         <!-- 2021-09-26 (TT): dont't require sourceDesc in fileDesc; we want it 
         only if we can provide a proper biblStruct for it; otherwise, it's useless
         (i.e. we don't want <sourceDesc><p>Born digital</p></sourceDesc> -->
