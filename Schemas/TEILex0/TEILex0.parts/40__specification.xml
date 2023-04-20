@@ -42,10 +42,10 @@
         <!--2022-03-24 (TT): add taxonomy-->
         <moduleRef key="header"
             include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc revisionDesc xenoData editorialDecl projectDesc seriesStmt
-                        notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition taxonomy category catDesc change"/>
+            notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition taxonomy category catDesc change principal"/>
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
         <!--        2021-09-19 (TT): added forename, surname; need for detailed biblStruct/author/persName-->
-        <moduleRef key="namesdates" include="placeName persName orgName forename surname"/>
+        <moduleRef key="namesdates" include="placeName persName orgName forename surname affiliation"/>
         <!-- for dialectal properties -->
         <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
         <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->

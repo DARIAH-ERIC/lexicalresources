@@ -8,13 +8,21 @@
          <titleStmt>
             <title>Examples of TEI Lex-0</title>
          </titleStmt>
+         <editionStmt>
+            <edition></edition>
+            <author></author>
+            <editor></editor>
+            <principal></principal>
+         </editionStmt>
          <publicationStmt>
             <distributor>DARIAH WG Lexical Resources</distributor>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
             </availability>
          </publicationStmt>
+         
       </fileDesc>
+     
       <profileDesc>
          <langUsage>
             <language ident="mix" role="objectLanguage">Mixtepec Mixtec</language>
