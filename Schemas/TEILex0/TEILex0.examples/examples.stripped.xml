@@ -560,7 +560,7 @@ then transform using tei-stripper.xsl-->
             <entry xml:id="bray_vt" xml:lang="en" type="homonymicEntry">
                <gramGrp>
                   <gram type="pos">vt</gram>
-                  <gram type="subc">VP2A</gram>
+                  <gram type="inflectionType">VP2A</gram>
                </gramGrp>
                <sense xml:id="bray_vt.1">
                   <def>make a cry or sound of this kind</def>

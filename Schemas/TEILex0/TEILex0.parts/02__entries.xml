@@ -215,10 +215,10 @@
             values such as <code>transitive</code>, <code>intransitive</code>,
                <code>reflexive</code>, and <code>impersonal</code>). TEI Lex-0 is therefore
             introducing two suggested grammatical types: <code rend="language-xpath"
-               >gram[@type="aspect"]</code>and<code rend="language-xpath"
+               >gram[@type="aspect"]</code> and <code rend="language-xpath"
                >gram[@type="valency"]</code>for encoding such values in dictionaries.</p>
          
-         <p>The attribute values for <code rend="language-xpath">gram/@type</code> are a semi-closed
+         <p>The attribute values for <code rend="language-xpath">gram[@type]</code> are a semi-closed
             list: this means that we will discuss and adopt additional values as demonstrated by
             examples from dictionaries that are encoded by members of our community. </p>
          <p>If your dictionary has grammatical labels that do not fit into the above categories, do
@@ -257,7 +257,9 @@
          </p>
          <p>In TEI Lex-0, we make a distinction between purely lexical collocates (as in médire <hi
                rend="italic">de</hi>) and various types of grammatical co-occurrences, differently
-            referred to in the literature as rection, government, dependency etc. <egXML
+            referred to in the literature as rection, government, dependency etc. The suggested value
+            for this type of grammatical co-occurrence in TEI Lex-0 is <code rend="language-xml">&lt;gram
+               type="governement">&lt;/gram></code><egXML
                xmlns="http://www.tei-c.org/ns/Examples">
                <gramGrp>
                   <gram type="government">[+ conj.]</gram>
