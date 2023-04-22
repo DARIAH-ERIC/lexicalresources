@@ -97,7 +97,7 @@
                     <!--<elementRef key="sense"/>
                                 -->
                     <classRef key="model.sensePart"/>
-                    <classRef key="model.phrase"/>
+                    <classRef key="model.lexicalPhrase"/>
                     <classRef key="model.global"/>
                 </alternate>
             </content>
@@ -125,7 +125,7 @@
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <classRef key="model.gLike"/>
-                    <classRef key="model.phrase"/>
+                    <classRef key="model.lexicalPhrase"/>
                     <classRef key="model.lexicalInter"/>
                     <elementRef key="usg"/>
                     <elementRef key="lbl"/>
@@ -299,6 +299,10 @@
             <!--<classes mode="change">
                             <memberOf key="model.entryPart" mode="add"/>
                         </classes>-->
+            <classes mode="change">
+                <!--because we don't use model.nameLike in model.lexicalPhrase-->
+                 <memberOf key="model.lexicalPhrase" mode="add"/>
+            </classes>
             <content>
                 <macroRef key="macro.lexicalParaContent"/>
             </content>
@@ -389,7 +393,7 @@
                     maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
-                    <classRef key="model.phrase"/>
+                    <classRef key="model.lexicalPhrase"/>
                     <classRef key="model.lexicalInter"/>
                     <classRef key="model.formPart"/>
                     <classRef key="model.global"/>
@@ -406,7 +410,7 @@
                     maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
-                    <classRef key="model.phrase"/>
+                    <classRef key="model.lexicalPhrase"/>
                     <classRef key="model.lexicalInter"/>
                     <classRef key="model.gramPart"/>
                     <classRef key="model.global"/>
@@ -424,7 +428,7 @@
                     <classRef key="model.gLike"/>
                     <classRef key="model.global"/>
                     <classRef key="model.lexicalInter"/>
-                    <classRef key="model.phrase"/>
+                    <classRef key="model.lexicalPhrase"/>
                     <classRef key="model.descLike"/>
                     <elementRef key="def"/>
                     <elementRef key="etym"/>
@@ -796,8 +800,8 @@
                     </valList>
                 </attDef>
             </attList>
-            
         </elementSpec>
+        
         <elementSpec ident="dictScrap" mode="change">
             <content>
                 <alternate minOccurs="0"
@@ -806,12 +810,13 @@
                     <classRef key="model.gLike"/>
                     <classRef key="model.entryPart"/>
                     <classRef key="model.morphLike"/>
-                    <classRef key="model.phrase"/>
+                    <classRef key="model.lexicalPhrase"/>
                     <classRef key="model.lexicalInter"/>
                     <classRef key="model.global"/>
                 </alternate>
             </content>
         </elementSpec>
+        
         <!-- Class related declaration here -->
         <!-- Introducing new class for the content model of <sense> -->
         <!-- Elements remaining to be put in: dictScrap     re -->
@@ -843,6 +848,59 @@
                 <memberOf key="model.lexicalInter"></memberOf>
             </classes>
         </classSpec>
+        
+       <!-- 2023-04-22 (TT) model.lexicalPhrase-->
+        
+        <classSpec type="model" ident="model.lexicalPhrase" mode="add">
+            <desc> pared-down version of model.phrase for use in dictionary elements </desc>
+        </classSpec>
+        
+        <classSpec type="model" ident="model.graphicLike" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalPhrase"></memberOf>
+            </classes>
+        </classSpec>
+        
+        <classSpec type="model" ident="model.highlighted" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalPhrase"></memberOf>
+            </classes>
+        </classSpec>
+        <classSpec type="model" ident="model.hiLike" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalPhrase"></memberOf>
+            </classes>
+        </classSpec>
+        
+      <!--  we're not linlcuding model.nameLike because then we get a bunch
+        of name,orgName,persName,placeName elements etc. inside form,
+        orth etc. We do need lang, which is also a member of model.nameLike. 
+        We're solving this by making lang a member of model.lexicalPhrase directly-->
+       
+        <!--<classSpec type="model" ident="model.nameLike" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalPhrase"></memberOf>
+            </classes>
+        </classSpec>-->
+        
+        <!--we are not including model.pPart.edit [model.pPart.editorial 
+        [abbr am choice ex expan subst] because we don't want to
+        introduce abbr, am etc. in a bunch of lexicographic elements, 
+        but when we decide to include choice, we'll have to add it 
+        on its own here -->
+        
+        <classSpec type="model" ident="model.ptrLike" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalPhrase"></memberOf>
+            </classes>
+        </classSpec>
+        <classSpec type="model" ident="model.segLike" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalPhrase"></memberOf>
+            </classes>
+        </classSpec> 
+        
+        <!-- 2023-04-22 (TT) end of model.lexicalPhrase-->
         
         <macroSpec ident="macro.paraLexcialContent">
             <content rend="replace">
@@ -954,7 +1012,7 @@
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
-                    <classRef key="model.phrase"/>
+                    <classRef key="model.lexicalPhrase"/>
                     <classRef key="model.lexicalInter"/>
                     <classRef key="model.global"/>
                     <elementRef key="lg"/>

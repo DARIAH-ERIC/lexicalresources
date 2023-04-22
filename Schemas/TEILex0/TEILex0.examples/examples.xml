@@ -228,7 +228,7 @@
             </sense>
             <entry type="relatedEntry" xml:lang="en" xml:id="by_the_aid_of">
                <form type="lemma">
-                  <orth>By the <oRef>_</oRef> of</orth>
+                  <orth>By the <ref type="oRef">_</ref> of</orth>
                </form>
                <pc>,</pc>
                <sense xml:id="by_the_aid_of.1">
@@ -242,7 +242,7 @@
             <pc>.</pc>
             <entry type="relatedEntry" xml:lang="en" xml:id="in_aid_of">
                <form>
-                  <orth>In <oRef>_</oRef> of</orth>
+                  <orth>In <ref type="oRef">_</ref> of</orth>
                </form>
                <pc>,</pc>
                <sense xml:id="in_aid_of.1">
@@ -968,7 +968,7 @@
                   <orth>Ntua</orth>
                   <pron notation="ipa">nd̪ùá</pron>
                   <usg type="geographic">
-                     <placeName>Yucanany</placeName>
+                     Yucanany
                   </usg>
                </form>
             </form>
