@@ -2,23 +2,31 @@
 <?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <?xml-model href="../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lex-0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>Examples of TEI Lex-0</title>
          </titleStmt>
+         <editionStmt>
+            <edition></edition>
+            <author></author>
+            <editor></editor>
+            <principal></principal>
+         </editionStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <distributor>DARIAH WG Lexical Resources</distributor>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
          </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
-         </sourceDesc>
+         
       </fileDesc>
+     
       <profileDesc>
          <langUsage>
-            <language ident="mix">Mixtepec Mixtec</language>
-            <language ident="mix-x-YCNY">Yucanany Mixtec</language>
+            <language ident="mix" role="objectLanguage">Mixtepec Mixtec</language>
+            <language ident="mix-x-YCNY" role="objectLanguage">Yucanany Mixtec</language>
          </langUsage>
       </profileDesc>
    </teiHeader>
@@ -220,7 +228,7 @@
             </sense>
             <entry type="relatedEntry" xml:lang="en" xml:id="by_the_aid_of">
                <form type="lemma">
-                  <orth>By the <oRef>_</oRef> of</orth>
+                  <orth>By the <ref type="oRef">_</ref> of</orth>
                </form>
                <pc>,</pc>
                <sense xml:id="by_the_aid_of.1">
@@ -234,7 +242,7 @@
             <pc>.</pc>
             <entry type="relatedEntry" xml:lang="en" xml:id="in_aid_of">
                <form>
-                  <orth>In <oRef>_</oRef> of</orth>
+                  <orth>In <ref type="oRef">_</ref> of</orth>
                </form>
                <pc>,</pc>
                <sense xml:id="in_aid_of.1">
@@ -543,7 +551,7 @@
             <entry xml:id="bray_vt" xml:lang="en" type="homonymicEntry">
                <gramGrp>
                   <gram type="pos">vt</gram>
-                  <gram type="subc">VP2A</gram>
+                  <gram type="inflectionType">VP2A</gram>
                </gramGrp>
                <sense xml:id="bray_vt.1">
                   <def>make a cry or sound of this kind</def>
@@ -701,7 +709,7 @@
          </entry>
          <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
             <form type="lemma">
-               <orth type="segmeted">
+               <orth type="segmented">
                   <seg>Fluss</seg><seg>schifffahrt</seg>
                </orth>
                <form type="variant">
@@ -853,10 +861,9 @@
                </form>
                <sense xml:id="Häuschen.1"><!--etc.--></sense>
             </entry>
-            <!--TODO: what to do with morphems etc., I'd prefer seg type="m"-->
             <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
                <form type="lemma">
-                  <orth><m>haus</m><m>en</m></orth>
+                  <orth><seg type="m">haus</seg><seg type="m">en</seg></orth>
                </form>
                <sense xml:id="hausen.1"><!--...--></sense>
             </entry>
@@ -961,7 +968,7 @@
                   <orth>Ntua</orth>
                   <pron notation="ipa">nd̪ùá</pron>
                   <usg type="geographic">
-                     <placeName>Yucanany</placeName>
+                     Yucanany
                   </usg>
                </form>
             </form>
