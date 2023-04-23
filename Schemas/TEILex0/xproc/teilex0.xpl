@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step"
-    version="1.0" name="generateDocumentation">
+    version="3.0" name="generateDocumentation">
     <!-- ================================================================== -->
     <!-- PROLOG: -->
-    <!-- <p:serialization port="result" method="html" indent="false" omit-xml-declaration="true" />
-    <p:serialization port="secondary" method="html" indent="false" omit-xml-declaration="true" />-->
-    <p:input port="exs" kind="document" primary="false" sequence="true"/>
-    <p:input port="source" sequence="true"/>
-    <p:input port="stylesheet-odd2odd">
-        <p:document href="../../../../TEI-C/Stylesheets/odds/odd2odd.xsl"/>
-    </p:input>
-    <p:input port="stylesheet-odd2lite">
-        <p:document href="../../../../TEI-C/Stylesheets/odds/odd2lite.xsl"/>
-    </p:input>
-    <p:output port="exsout" primary="false"/>
-    <!-- <p:output port="result" primary="true"/>
-    <p:output port="secondary" primary="false"/>-->
+    <p:input port="stylesheetParameters" kind="parameter"/>
+    <p:option name="odd2oddSource" required="true"/>
+    <p:option name="odd2liteSource" required="true"/>
+    <p:load name="stylesheet-odd2odd">
+        <p:with-option name="href" select="$odd2oddSource" /> 
+    </p:load>
+    <p:load name="stylesheet-odd2lite">
+        <p:with-option name="href" select="$odd2liteSource" />
+    </p:load>
     <!-- ================================================================== -->
     <!-- BODY: -->
     <p:xslt name="stripper">
@@ -52,15 +48,21 @@
                 select="concat('../TEILex0.examples/headers/', $filename, '.stripped.xml')"/>
         </p:store>
     </p:for-each>
-    <p:xslt name="odd2odd">
+    <p:xinclude fixup-xml-base="false" name="include">
         <p:input port="source">
             <p:document href="../TEILex0.odd"/>
         </p:input>
+    </p:xinclude>
+    
+    <p:xslt name="odd2odd">
+        <p:input port="source">
+            <p:pipe step="include" port="result"/>
+        </p:input>
         <p:input port="stylesheet">
-            <p:pipe port="stylesheet-odd2odd" step="generateDocumentation"/>
+            <p:pipe step="stylesheet-odd2odd" port="result"/>
         </p:input>
         <p:input port="parameters">
-            <p:empty/>
+            <p:pipe step='generateDocumentation' port='stylesheetParameters'/>
         </p:input>
     </p:xslt>
     <p:xslt name="odd2lite">
@@ -68,10 +70,7 @@
             <p:pipe step="odd2odd" port="result"/>
         </p:input>
         <p:input port="stylesheet">
-            <p:pipe port="stylesheet-odd2lite" step="generateDocumentation"/>
-        </p:input>
-        <p:input port="parameters">
-            <p:empty/>
+            <p:pipe step="stylesheet-odd2lite" port="result"/>
         </p:input>
     </p:xslt>
     <p:store href="results-new/odd2lit.xml" method="xml" indent="false"/>
@@ -82,33 +81,14 @@
         <p:input port="stylesheet">
             <p:document href="../stylesheets/contributors.xsl"/>
         </p:input>
-        <p:input port="parameters">
-            <p:empty/>
-        </p:input>
     </p:xslt>
-    <p:store href="results-new/contributored.xml" method="xml" indent="false"/>
-    <p:xslt name="xmlbase-fix">
+    <p:store href="results-new/contributored.xml" method="xml" indent="false"/> 
+    <p:xslt name="odd2html">
         <p:input port="source">
             <p:pipe step="contributors" port="result"/>
         </p:input>
         <p:input port="stylesheet">
-            <!--  includes an xml:base fix for ugly and unnecessary attributes in our examples-->
-            <p:document href="../stylesheets/xmlbase-fix.xsl"/>
-        </p:input>
-        <p:input port="parameters">
-            <p:empty/>
-        </p:input>
-    </p:xslt>
-    <p:store href="results-new/odd2xmlbase-fixed.xml" method="xml" indent="false"/>
-    <p:xslt name="odd2html">
-        <p:input port="source">
-            <p:pipe step="xmlbase-fix" port="result"/>
-        </p:input>
-        <p:input port="stylesheet">
             <p:document href="../stylesheets/TEILex0.xsl"/>
-        </p:input>
-        <p:input port="parameters">
-            <p:empty/>
         </p:input>
     </p:xslt>
     <p:store href="results-new/pre.html" method="xhtml"> </p:store>
@@ -119,11 +99,8 @@
         <p:input port="stylesheet">
             <p:document href="../stylesheets/html-post-process.xsl"/>
         </p:input>
-        <p:input port="parameters">
-            <p:empty/>
-        </p:input>
     </p:xslt>
-    <p:store href="../../../docs/pages/TEILex0/TEILex0.html" method="xhtml">
+   <p:store href="../../../docs/pages/TEILex0/TEILex0.html" method="xhtml">
         <p:input port="source">
             <p:pipe port="result" step="post-process"/>
         </p:input>

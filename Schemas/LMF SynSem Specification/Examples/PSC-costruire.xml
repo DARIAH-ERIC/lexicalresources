@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- example from document ExtendedExamplesOfLexiconsUsingLMF.pdf pp 7 and 8 -->
+<?xml-model href="../Schema/SynSemSpec.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI type="lexicon" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>PSC example</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <entry xml:id="costruire-v">
+            <form type="lemma">
+               <orth>costruire</orth>
+            </form>
+            <gramGrp>
+               <pos>V</pos>
+               <syntacticBehaviour>
+                  <ref target="#SCFtxa"/>
+               </syntacticBehaviour>
+            </gramGrp>
+            <sense xml:id="UsemD585costruire">
+               <cit type="example">
+                  <quote>costruire un edificio</quote>
+               </cit>
+               <predicativeRepresentation>
+                  <ref type="semanticPredicate" target="#PREDcostruire-1"/>
+                 
+                  <ref type="synsemCorrespondences" target="#ISObivalent">
+                     <fs>
+                        <f name="typeoflink">
+                           <symbol value="Master"/>
+                        </f>
+                     </fs>
+                  </ref>
+               </predicativeRepresentation>
+            </sense>
+         </entry>
+         <entry xml:id="costruzione-n">
+            <form type="lemma">
+               <orth>costruzione</orth>
+               <gramGrp>
+                  <pos>N</pos>
+               </gramGrp>
+            </form>
+            <sense xml:id="Usem1474costruzione">
+               <cit type="example">
+                  <quote>una orribile costruzione deturpa il paesaggio</quote>
+               </cit>
+               <predicativeRepresentation>
+                  <ref type="semanticPredicate" target="#PREDcostruire-1"/>
+                  
+                  <ref type="synsemCorrespondences" target="#CROSSEDbivalent">
+                     <fs>
+                        <f name="typeoflink">
+                           <symbol value="VerbNominalization"/>
+                        </f>
+                     </fs>
+                  </ref>                  
+               </predicativeRepresentation>
+            </sense>
+         </entry>
+
+         <subcategorizationFrame xml:id="SCFtxa">
+            <desc>transitive construction</desc>
+            <fs>
+               <f name="construction">
+                  <symbol value="transitive"/>
+               </f>
+               <f name="aux">
+                  <string>avere</string>
+               </f>
+            </fs>
+
+            <SyntacticArgument xml:id="txa-Psubj">
+               <fs>
+                  <f name="syntacticFunction">
+                     <symbol value="subject"/>
+                  </f>
+                  <f name="syntacticConstituent">
+                     <symbol value="NP"/>
+                  </f>
+                  <f name="range">
+                     <string>pos0</string>
+                  </f>
+                  <f name="optional">
+                     <binary value="true"/>
+                  </f>
+               </fs>
+
+            </SyntacticArgument>
+            <SyntacticArgument xml:id="txa-Poubj">
+               <fs>
+                  <f name="syntacticFunction">
+                     <symbol value="object"/>
+                  </f>
+                  <f name="syntacticConstituent">
+                     <symbol value="NP"/>
+                  </f>
+                  <f name="range">
+                     <string>pos1</string>
+                  </f>
+                  <f name="optional">
+                     <binary value="false"/>
+                  </f>
+               </fs>
+            </SyntacticArgument>
+         </subcategorizationFrame>
+
+         <SemanticPredicate xml:id="PREDcostruire-1">
+            <SemanticArgument xml:id="ARG0costruire-1">
+               <fs>
+                  <f name="role">
+                     <string>Role_ProtoAgent</string>
+                  </f>
+                  <f name="restriction">
+                     <string>HUMAN</string>
+                  </f>
+                  <f name="range">
+                     <string>arg0</string>
+                  </f>
+               </fs>
+
+            </SemanticArgument>
+            <SemanticArgument xml:id="ARG1costruire-1">
+               <fs>
+                  <f name="role">
+                     <string>Role_ProtoAgent</string>
+                  </f>
+                  <f name="restriction">
+                     <string>BuildingPROT</string>
+                  </f>
+                  <f name="range">
+                     <string>arg1</string>
+                  </f>
+               </fs>
+            </SemanticArgument>
+         </SemanticPredicate>
+
+         <SynSemCorrespondence xml:id="ISObivalent">
+            <SynSemArgMap synFeature="pos0" semFeature="arg0"/>
+            <SynSemArgMap synFeature="pos1" semFeature="arg1"/>
+         </SynSemCorrespondence>
+
+         <SynSemCorrespondence xml:id="CROSSEDbivalent">
+            <SynSemArgMap synFeature="pos1" semFeature="arg0"/>
+            <SynSemArgMap synFeature="pos0" semFeature="arg1"/>
+         </SynSemCorrespondence>
+      </body>
+   </text>
+</TEI>

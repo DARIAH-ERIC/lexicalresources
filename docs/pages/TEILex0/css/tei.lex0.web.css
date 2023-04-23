@@ -574,9 +574,14 @@ span.label {
 
 /* Main category (eg. Getting Started) */
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+   /* hack until i figure out lvls and categories acting weird*/
+    font-size: 0; 
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {  
     color: darkgray;
     border-bottom: 1px solid gainsboro;
-    /* text-decoration: none; */
+    /*text-decoration: none;*/
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--category-header:hover {

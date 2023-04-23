@@ -17,10 +17,11 @@
             </a>
             <div id="menu" class="custom-menu" xmlns="http://www.w3.org/1999/xhtml">
                 <div class="pure-menu">
-                    <a class="pure-menu-heading" href="#">
-                        <span style="line-height:30px; vertical-align:middle">TEI Lex-0</span>
-                        <span style="float:right; text-transform:capitalize; margin-right: 0.75em; line-height:30px; vertical-align:middle; font-size:85%">Version <xsl:value-of select="$version"/></span>
-                    </a>
+                    <div class="pure-menu-heading">
+                        <a style="float:right; text-transform:capitalize; margin-right: 0.75em; line-height:30px; vertical-align:middle; font-size:85%; padding: 0" href="#revisionHistory">Version <xsl:value-of select="$version"/></a>
+                        <a style="line-height:30px; vertical-align:middle" href="#">TEI Lex-0</a>
+                        
+                    </div>
                     
                     <div class="tei_toc_search">
                         <div class="input-group">

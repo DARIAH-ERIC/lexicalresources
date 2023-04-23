@@ -116,7 +116,7 @@
                 </author>
             </titleStmt>
             <editionStmt>
-                <edition n="0.9.1"/>
+                <edition n="0.9.2"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
@@ -131,8 +131,20 @@
         </fileDesc>
         <revisionDesc>
             <listChange>
-                <listChange n="0.9.1">
+                <listChange n="0.9.2">
                     <!--choose correct date pefore publishing-->
+                    <change when="2023-04-22" type="xproc">switch to using oXygen's TEI framework when generating schema and documentation</change>
+                    <change type="spec">allow <gi>list</gi> and <gi>item</gi> because lists feature prominently in dictionary front matter</change>
+                    <change type="spec">introduce <ref target="#TEI.model.lexicalInter">model.lexicalInter</ref> (based on <ref target="#TEI.model.inter">model.inter</ref>), <ref target="#TEI.model.lexicalPhrase">model.lexicalPhrase</ref> (based on <ref target="#TEI.model.phrase">model.phrase</ref>) and <ref target="#TEI.macro.lexicalParaContent">macro.lexicalParaContent</ref> (based on <ref target="#TEI.macro.paraContent">macro.paraContent</ref>) to make it easier to simplify the content model of various dictionary elements</change>
+                    <change type="spec">remove <ref target="#TEI.model.listLike">model.listLike</ref> from <ref target="#TEI.model.lexicalInter">model.lexicalInter</ref></change>
+                    <change type="html">link version number in the menu to revision history</change>
+                    <change type="spec">allow <gi>abbr</gi> and <gi>expan</gi> so that they can be used in lists of abbreviations in dictionary front matter</change>
+                    <change type="spec">introduced <code>valency</code> as a suggested value in <code>gram[@type="valency"]</code></change>
+                    <change type="spec">introduced <code>gram[@type="government"]</code> and clarified the difference from <code>gram[@type="colloc"]</code>. See sections on <ref target="#typology-of-gram">Typology of <code>gram</code></ref> and <ref target="#collocates">Collocates</ref></change>
+                    <change type="spec">made <code>@type</code> mandatory on <gi>TEI</gi></change>
+                    <change type="spec">add <gi>principal</gi> and <gi>affiliation</gi> for more robust metadata in the <gi>teiHeader</gi></change>
+                </listChange>
+                <listChange n="0.9.1">
                     <change when="2021-03-24" type="html">fix namespace issues in html output</change>
                     <change type="docs">add new examples to the <ref target="#header">Header</ref> section</change>
                     <change type="docs">add section on <ref target="#HierarchicalUsageLabels">hierarchichal usage labels</ref></change>
