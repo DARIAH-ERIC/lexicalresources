@@ -313,8 +313,9 @@
             lexicographically difficult. Still, the main danger in keeping both possibilities in the
             representation of a lexical entry in a digital lexicon is to introduce a systematic
             structural ambiguity as to where the appropriate information is to be found. We thus
-            deprecate <gi>hom</gi> altogether in the present recommendation and have this element be
-            replaced by the nested <gi>entry</gi> construct. For instance, the following example
+            deprecate <gi>hom</gi> altogether in the present recommendation and have this element
+            replaced by the nested <gi>entry</gi> construct.</p>
+         <p>For instance, the following example
             from the TEI <hi rend="italic">Guidelines</hi>:</p>
          <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="false">
             <entry>
@@ -345,6 +346,18 @@
          <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="bray"/>
         </egXML>
+         <p>In a similar fashion, consider this entry from the <hi rend="italic">Dictionary of the Portuguese Language</hi> by Morais:</p>
+         <list type="examples">
+            <item>
+               <figure>
+                  <graphic url="https://user-images.githubusercontent.com/45368069/196040540-8e0253c2-a4cc-4a55-8ad0-0dc461945978.png"/>
+               </figure>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Morais1789"> 
+                  <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="MORAIS.1.DLP.JANTAR"/>
+               </egXML>
+            </item>
+         </list>
+         
       </div>
       <div>
          <head><gi>superEntry</gi></head>
