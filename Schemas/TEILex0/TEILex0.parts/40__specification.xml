@@ -24,7 +24,7 @@
         <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
         <moduleRef key="core"
             include="author head title cit quote bibl biblStruct biblScope listBibl gloss
-                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan"/>
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan choice sic corr"/>
         <!--PB's simplified textstructure declaratiopn-->
         <moduleRef key="textstructure" include="TEI text body div front back"/>
         <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
@@ -841,6 +841,12 @@
                     <classRef key="model.global"/>
                 </alternate>
             </content>
+        </elementSpec>
+        
+        <elementSpec ident="choice" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalPhrase" mode="add"/>
+            </classes> 
         </elementSpec>
         
         <!-- Class related declaration here -->
