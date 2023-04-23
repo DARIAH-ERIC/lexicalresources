@@ -752,27 +752,42 @@
         <!--2021-09-21 (TT): allow only biblStruct in sourceDesc-->
         <elementSpec ident="sourceDesc" mode="change">
             <content>
-                <elementRef key="biblStruct" minOccurs="1" maxOccurs="unbounded"/>
-            </content>
+                <elementRef key="listBibl" minOccurs="1" maxOccurs="unbounded"/>
+            </content> 
             <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="sw34hfa">
                     <sourceDesc>
                         <biblStruct>
-                            <monogr>
-                                <author>
-                                    <surname>Miklosich</surname>
-                                    <forename>Franz</forename></author>
-                                <title>Lexicon Palaeoslovenico-Graeco-Latinum</title>
-                                <imprint>
-                                    <publisher>Guilelmus Braumueller</publisher>
-                                      <pubPlace>Vindobonae</pubPlace>
-                                    <date>1862</date>
-                                </imprint>
-                            </monogr>
+                            <listBibl type="dictionaries">
+                                <biblStruct>
+                                    <monogr>
+                                        <author>
+                                            <surname>Miklosich</surname>
+                                            <forename>Franz</forename></author>
+                                        <title>Lexicon Palaeoslovenico-Graeco-Latinum</title>
+                                        <imprint>
+                                            <publisher>Guilelmus Braumueller</publisher>
+                                            <pubPlace>Vindobonae</pubPlace>
+                                            <date>1862</date>
+                                        </imprint>
+                                    </monogr>
+                                </biblStruct>
+                            </listBibl>
                         </biblStruct>
                     </sourceDesc>
                 </egXML>
             </exemplum>
+        </elementSpec>
+        <elementSpec ident="listBibl" mode="change">
+            <attList>
+                <attDef ident="type" mode="change" usage="req">
+                    <valList type="semi" mode="change">
+                        <valItem ident="dictionaries"></valItem>
+                        <valItem ident="corpora"></valItem>
+                        <valItem ident="literature"></valItem>
+                    </valList>
+                </attDef>
+            </attList>
         </elementSpec>
         <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
         <elementSpec ident="seg" mode="change">
