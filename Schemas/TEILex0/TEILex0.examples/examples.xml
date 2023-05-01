@@ -721,7 +721,7 @@
                   <orth notAfter="1996">
                      <seg>Fluß</seg><seg>schiffahrt</seg>
                   </orth>
-                  <usg type="time">Vor 1996 Rechtschreibung Reform</usg>
+                  <usg type="temporal">Vor 1996 Rechtschreibung Reform</usg>
                </form>
                <gramGrp>
                   <gram type="pos">noun</gram>
@@ -804,7 +804,7 @@
                   <gram type="pos">n</gram>
                </gramGrp>
                <pc>(</pc>
-               <usg type="time" expand="originally">orig</usg>
+               <usg type="temporal" expand="originally">orig</usg>
                <lbl>and esp</lbl>
                <usg type="domain" expand="nautical">naut</usg>
                <pc>)</pc>
@@ -837,7 +837,7 @@
                </gramGrp>
                <sense xml:id="CH.gahs2.2.1">
                   <pc>(</pc>
-                  <usg type="time" expand="originally">orig</usg>
+                  <usg type="temporal" expand="originally">orig</usg>
                   <lbl>and esp</lbl>
                   <usg type="domain" expand="nautical">naut</usg>
                   <pc>)</pc>
