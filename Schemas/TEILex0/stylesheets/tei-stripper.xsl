@@ -4,6 +4,8 @@
     <!-- remember to deselect xml:base fixup in XML Parser Preferences in oXygen-->
     <!--    otherwise, included fragments will probably include xml:base, which we don't want-->
     
+    <xsl:output method="xml" encoding="UTF-8" indent="yes" /> 
+    
     <xsl:template match="/">
         <xsl:text>&#xa;</xsl:text><xsl:text>&#xa;</xsl:text>
         <xsl:comment>This file should not be edited manually. 
@@ -31,9 +33,12 @@ then transform using tei-stripper.xsl</xsl:comment>
         <xsl:copy></xsl:copy>
     </xsl:template>
     
+    
     <!-- template to copy the rest of the nodes -->
-    <xsl:template match="comment() | text() | processing-instruction()">
-        <xsl:copy/>
+    <xsl:template match="comment()  | processing-instruction() | text()">
+        <xsl:copy></xsl:copy>
     </xsl:template>
+    
+   
     
 </xsl:stylesheet>
