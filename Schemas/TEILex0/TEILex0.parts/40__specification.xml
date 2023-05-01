@@ -236,7 +236,7 @@
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
                     <valList type="closed" mode="change">
-                        <valItem ident="time">
+                        <valItem ident="temporal">
                             <desc>marker which identifies the use of a given lexical unit on a scale
                                 from old to new</desc>
                         </valItem>
