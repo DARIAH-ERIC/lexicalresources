@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2023-05-02T04:49:16Z. .
+Schema generated from ODD source 2023-05-02T05:05:31Z. .
 TEI Edition: Version 4.4.0. Last updated on
         19th April 2022, revision ff9cc28b0
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
@@ -4557,7 +4557,7 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
-               <value>time</value>
+               <value>temporal</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marker which identifies the use of a given lexical unit on a scale from old to new</a:documentation>
                <value>geographic</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marker which identifies the place or region where a lexical unit is mainly used</a:documentation>
