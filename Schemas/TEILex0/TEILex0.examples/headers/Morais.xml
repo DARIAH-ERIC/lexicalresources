@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lex-0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="full" xml:lang="en">Morais Dictionary (1st ed., 1789): digital
+               edition</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>XML edition using GroBID-dictionaries</edition>
+         </editionStmt>
+         <!-- [...] -->
+         <publicationStmt>
+            <publisher>NOVA CLUNL</publisher>
+            <authority role="sponsor">FCT – Fundação para a Ciência e Tecnologia</authority>
+            <pubPlace>Lisboa</pubPlace>
+            <date>2021-2024</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">
+                  <p>Creative Commons Attribution 4.0 International (CC BY 4.0)</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <listBibl type="dictionaries">
+               <biblStruct>
+                  <monogr>
+                     <title level="m" type="main">Diccionario da lingua portugueza composto pelo padre D. Rafael Bluteau, reformado, e accrescentado por Antonio de Moraes Silva, natural do Rio de Janeiro</title>
+                     <title level="m" type="sub">A – K</title>
+                     <author>
+                        <persName>
+                           <forename>António de</forename>
+                           <surname>Morais Silva</surname>
+                        </persName>
+                     </author>
+                     <imprint>
+                        <pubPlace>Lisboa</pubPlace>
+                        <publisher>Officina de Simão Thaddeo Ferreira</publisher>
+                        <pubPlace>Lisboa</pubPlace>
+                        <date when="1789">1789</date>
+                        <note>Com Licença da Real Meza da Comissão Geral, sobre o Exame, e Censura dos Livros.</note>
+                        <note>Vende-ſe na loja de Borel Borel, e Companhia, quaſi defronte da Igreja nova de Noſſa Senhora dos Martyres, na eſquina.</note>
+                     </imprint>
+                     <extent>Tomo primeiro</extent>
+                     <extent>752 pp.</extent>
+                  </monogr>
+               </biblStruct>
+               <biblStruct>
+                  <monogr>
+                     <title level="m" type="main">Diccionario da lingua portugueza composto pelo padre D. Rafael Bluteau, reformado, e accrescentado por Antonio de Moraes Silva, natural do Rio de Janeiro</title>
+                     <title level="m" type="sub">L – Z</title>
+                     <author corresp="https://isni.org/isni/0000000083438040">
+                        <persName>
+                           <forename>António de</forename>
+                           <surname>Morais Silva</surname>
+                        </persName>
+                     </author>
+                     <imprint>
+                        <publisher>Officina de Simão Thaddeo Ferreira</publisher>
+                        <pubPlace>Lisboa</pubPlace>
+                        <date>1789</date>
+                     </imprint>
+                     <extent>Tomo segundo</extent>
+                     <extent>541 pp.</extent>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+            <listBibl type="literature">
+               <biblStruct>
+                  <monogr corresp="https://purl.pt/29333">
+                     <title>Abecedario Real e Regia Instrucçam dos Principes Lusitanos, composto de 63. discursos Politicos, &amp; Moraes : offerecido ao Serenissimo Principe Dom Joam N.S. / pelo M.R.P. Fr. Joam dos Prazeres, Prègador Gèral, &amp; Chronista mòr da Religiaõ do Principe dos Patriarcas Sam Bento</title>
+                     <author>
+                        <persName>
+                           <surname>Prazeres</surname>
+                           <forename>João dos</forename>
+                        </persName>
+                     </author>
+                     <imprint>
+                        <date>1692</date>
+                        <pubPlace>Lisboa</pubPlace>
+                        <publisher>na Officina de Miguel Deslandes, Impressor de S. Magestade</publisher>
+                        <note>More information found in BND ; 191 p.</note>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <biblStruct xml:id="Academ.sing">
+                  <monogr corresp="https://purl.pt/21936">
+                     <title>Academia dos ſingulares de Lisboa dedicadas a Apollo</title>
+                     <author>
+                        <persName>
+                           <surname>Faria</surname>
+                           <forename>André Leitão de</forename>
+                        </persName>
+                     </author>
+                     <imprint>
+                        <date>1665</date>
+                        <pubPlace>Lisboa</pubPlace>
+                        <publisher>na Officina de Henrique Valente de Oliveira</publisher>
+                        <biblScope unit="volume">2 t. em 2 vol.</biblScope>
+                        <note>More information found in BND; 2 vol.</note>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <!-- [...] -->
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="pt"/>
+            <language role="workingLanguage" ident="pt"/>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>Some text here.</p>
+      </body>
+   </text>
+</TEI>

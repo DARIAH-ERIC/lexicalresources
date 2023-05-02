@@ -523,6 +523,10 @@ span.label img {
     background: #1a252f;
 }
 
+.tab.drop {
+    border-bottom: 1px solid white;
+}
+
 input:checked + .tab-label {
     background: #1f8dd6;
 }
