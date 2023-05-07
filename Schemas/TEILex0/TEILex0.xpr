@@ -7319,11 +7319,11 @@ The set parameters are taken into account for XSLT, DITA, Chemistry and ANT Tran
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.odd</String>
+                                    <String>TEILex0.examples/headers/DLP.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEILex0: Generate documentation</String>
+                                        <String>TEILex0 Examples XProc</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -7359,7 +7359,7 @@ The set parameters are taken into account for XSLT, DITA, Chemistry and ANT Tran
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/02__entries.xml</String>
+                                    <String>TEILex0.odd</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -7396,6 +7396,26 @@ The set parameters are taken into account for XSLT, DITA, Chemistry and ANT Tran
                                 <field name="scenarioStorageLocations">
                                     <list>
                                         <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/02__entries.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -7575,26 +7595,6 @@ The set parameters are taken into account for XSLT, DITA, Chemistry and ANT Tran
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XML</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.examples/headers/DLP.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0 Examples XProc</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
