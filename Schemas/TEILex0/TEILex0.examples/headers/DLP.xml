@@ -129,7 +129,7 @@
                <gram type="gen">f.</gram>
             </gramGrp>
             <sense xml:id="DLPC.cristalografia_1">
-               <usg type="domain" corresp="#domain.earth_sciences.geology.mineralogy"/>
+               <usg type="domain" valueDatcat="#domain.earth_sciences.geology.mineralogy">Mineralogia</usg>
                <def>ciência que estuda e descreve a forma e a estrutura dos cristais, bem como as leis que regem a sua formação</def>
             </sense>
             <!--etc.-->

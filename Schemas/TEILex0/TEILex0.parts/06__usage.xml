@@ -299,12 +299,16 @@
             (such as <hi rend="smallcaps">football</hi>, <hi rend="smallcaps">basketball</hi> or <hi
                 rend="smallcaps">volleyball</hi>). </p>
         <p>To overcome the deficiency of flat representation of labels in general-language
-            dictionaries, TEI-Lex0 recommends that canonical, possibly
-            multilingual, labels be defined, when needed, in the <gi>teiHeader</gi> and then pointed to from the
-            individual entries or senses in which these labels are used. For this purpose, TEI Lex-0
-            recommends the use the already available mechanism for defining a <gi>taxonomy</gi>.
-            This is possible in both TEI and TEI Lex-0 but has not been documented until now as a
-            solution for representing usage labels. </p>
+            dictionaries, TEI Lex-0 recommends that canonical, possibly multilingual, labels be
+            defined, when needed, in the <gi>encodingDesc</gi> section of the <gi>teiHeader</gi>,
+            and then pointed to from the individual entries or senses in which these labels are
+            used. This is possible in both TEI P5 and TEI Lex-0 but has not
+            been documented until now as a solution for representing usage labels.</p>
+        <p> A <gi>taxonomy</gi> is encoded within a <gi>classDecl</gi> using <gi>category</gi> and
+                <gi>catDesc</gi> elements. TEI Lex-0 is stricter than TEI P5 because it <hi
+                rend="italic">requires</hi> the use of <gi>term</gi> within <gi>catDesc</gi>. The
+            definition of a given <gi>term</gi> can be <hi rend="italic">optionally</hi> provided as
+            a <gi>gloss</gi>.</p>
         <p>The following example shows the recommended way of encoding two super domains <hi
                 rend="smallcaps">earth science</hi> and <hi rend="smallcaps">sport</hi>, together
             with some of their subdomains:</p>
@@ -312,10 +316,12 @@
             <xi:include href="../TEILex0.examples/headers/DLP.stripped.xml"
                 corresp="../TEILex0.examples/headers/DLP.xml" xpointer="element(/1/1/2)"/>
         </egXML>
-        <p>To apply a domain label inside a sense, use the <gi>usg</gi> element with a <att>corresp</att> attribute pointing to the <code>xml:id</code> of appropriate category in the taxonomy.</p>
+        <p>To apply a domain label in an entry, use the <gi>usg</gi> element with a
+                <att>valueDatcat</att> attribute pointing to the <code>xml:id</code> of the
+            appropriate category in the taxonomy.</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <xi:include href="../TEILex0.examples/headers/DLP.stripped.xml"
                 corresp="../TEILex0.examples/headers/DLP.xml" xpointer="element(/1/2/1/1)"/>
-        </egXML>     
+        </egXML>
     </div>
 </div>
