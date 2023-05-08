@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2023-05-08T09:34:37Z. .
+Schema generated from ODD source 2023-05-08T11:44:43Z. .
 TEI Edition: Version 4.4.0. Last updated on
         19th April 2022, revision ff9cc28b0
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
@@ -1481,21 +1481,27 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
    </define>
    <define name="model.pPart.editorial">
       <choice>
+         <ref name="choice"/>
          <ref name="abbr"/>
          <ref name="expan"/>
       </choice>
    </define>
    <define name="model.pPart.editorial_alternation">
       <choice>
+         <ref name="choice"/>
          <ref name="abbr"/>
          <ref name="expan"/>
       </choice>
    </define>
    <define name="model.pPart.editorial_sequence">
+      <ref name="choice"/>
       <ref name="abbr"/>
       <ref name="expan"/>
    </define>
    <define name="model.pPart.editorial_sequenceOptional">
+      <optional>
+         <ref name="choice"/>
+      </optional>
       <optional>
          <ref name="abbr"/>
       </optional>
@@ -1505,6 +1511,9 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
    </define>
    <define name="model.pPart.editorial_sequenceOptionalRepeatable">
       <zeroOrMore>
+         <ref name="choice"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="abbr"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -1513,6 +1522,9 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
    </define>
    <define name="model.pPart.editorial_sequenceRepeatable">
       <oneOrMore>
+         <ref name="choice"/>
+      </oneOrMore>
+      <oneOrMore>
          <ref name="abbr"/>
       </oneOrMore>
       <oneOrMore>
@@ -1520,22 +1532,44 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
       </oneOrMore>
    </define>
    <define name="model.pPart.transcriptional">
-      <notAllowed/>
+      <choice>
+         <ref name="sic"/>
+         <ref name="corr"/>
+      </choice>
    </define>
    <define name="model.pPart.transcriptional_alternation">
-      <notAllowed/>
+      <choice>
+         <ref name="sic"/>
+         <ref name="corr"/>
+      </choice>
    </define>
    <define name="model.pPart.transcriptional_sequence">
-      <empty/>
+      <ref name="sic"/>
+      <ref name="corr"/>
    </define>
    <define name="model.pPart.transcriptional_sequenceOptional">
-      <empty/>
+      <optional>
+         <ref name="sic"/>
+      </optional>
+      <optional>
+         <ref name="corr"/>
+      </optional>
    </define>
    <define name="model.pPart.transcriptional_sequenceOptionalRepeatable">
-      <empty/>
+      <zeroOrMore>
+         <ref name="sic"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="corr"/>
+      </zeroOrMore>
    </define>
    <define name="model.pPart.transcriptional_sequenceRepeatable">
-      <notAllowed/>
+      <oneOrMore>
+         <ref name="sic"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="corr"/>
+      </oneOrMore>
    </define>
    <define name="model.pPart.edit">
       <choice>
@@ -2019,6 +2053,15 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <ref name="model.divBottomPart"/>
       </choice>
    </define>
+   <define name="model.choicePart">
+      <choice>
+         <ref name="sic"/>
+         <ref name="corr"/>
+         <ref name="abbr"/>
+         <ref name="expan"/>
+         <ref name="seg"/>
+      </choice>
+   </define>
    <define name="model.imprintPart">
       <choice>
          <ref name="publisher"/>
@@ -2441,6 +2484,37 @@ Suggested values include: 1] full (full form); 2] pref (prefix); 3] suff (suffix
          <ref name="att.canonical.attributes"/>
          <ref name="att.sortable.attributes"/>
          <ref name="att.cReferencing.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="sic">
+      <element name="sic">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Latin for thus or so) contains text reproduced although apparently incorrect or inaccurate. [3.5.1. Apparent Errors]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="corr">
+      <element name="corr">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(correction) contains the correct form of a passage apparently erroneous in the copy text. [3.5.1. Apparent Errors]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="choice">
+      <element name="choice">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(choice) groups a number of alternative encodings for the same point in a text. [3.5. Simple Editorial Changes]</a:documentation>
+         <oneOrMore>
+            <choice>
+               <ref name="model.choicePart"/>
+               <ref name="choice"/>
+            </choice>
+         </oneOrMore>
+         <ref name="att.global.attributes"/>
          <empty/>
       </element>
    </define>
@@ -6259,6 +6333,7 @@ Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged</a:doc
          <ref name="model.highlighted"/>
          <ref name="model.graphicLike"/>
          <ref name="model.ptrLike"/>
+         <ref name="choice"/>
          <ref name="lang"/>
       </choice>
    </define>
