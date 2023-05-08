@@ -6,7 +6,7 @@
     exclude-result-prefixes="tei teix xhtml">
     <xsl:output method="html" doctype-system="about:legacy-compat"/>
 
-    <xsl:import href="../stylesheets/html/html.xsl"/>
+    <xsl:import href="https://www.tei-c.org/release/xml/tei/stylesheet/html/html.xsl"/>
 
     <xsl:variable name="version" select="//tei:fileDesc/tei:editionStmt/tei:edition/@n"/>
   
