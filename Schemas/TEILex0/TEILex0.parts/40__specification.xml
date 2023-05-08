@@ -50,6 +50,17 @@
         <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
         <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->
         <moduleRef key="transcr" include="metamark"/>
+        
+        <elementSpec ident="catDesc" mode="change">
+            <content>
+                <elementRef key="term"/>
+                <alternate minOccurs="0">
+                    <elementRef key="gloss"/>
+                </alternate>  
+            </content>
+        </elementSpec>
+        
+        
         <!-- Initial change to make entry recursive (LR) -->
         <!-- 2018-09-03 (LR): making @xml:id required -->
         <elementSpec ident="entry" mode="change">

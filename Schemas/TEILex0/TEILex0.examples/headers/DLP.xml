@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lex-0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -38,33 +38,74 @@
          <classDecl>
             <taxonomy xml:id="domain">
                <category xml:id="domain.earth_sciences">
-                  <catDesc xml:lang="en">Earth Sciences</catDesc>
-                  <catDesc xml:lang="pt">Ciências da Terra</catDesc>
-                  <catDesc xml:lang="es">Ciencias de la Tierra</catDesc>
-                  <catDesc xml:lang="fr">sciences de la Terre </catDesc>
+                  <catDesc xml:lang="en">
+                     <term>Earth Sciences</term>
+                     <gloss><!--Definition of the term would go here.--></gloss>
+                  </catDesc>
+                  <catDesc xml:lang="pt">
+                     <term>Ciências da Terra</term>
+                  </catDesc>
+                  <catDesc xml:lang="es">
+                     <term>Ciencias de la Tierra</term>
+                  </catDesc>
+                  <catDesc xml:lang="fr">
+                     <term>sciences de la Terre</term>
+                  </catDesc>
                   <category xml:id="domain.earth_sciences.geology">
-                     <catDesc xml:lang="en">Geology</catDesc>
-                     <catDesc xml:lang="pt">Geologia</catDesc>
-                     <catDesc xml:lang="es">Geología</catDesc>
-                     <catDesc xml:lang="fr">Geologie</catDesc>
+                     <catDesc xml:lang="en">
+                        <term>Geology</term>
+                     </catDesc>
+                     <catDesc xml:lang="pt">
+                        <term>Geologia</term>
+                     </catDesc>
+                     <catDesc xml:lang="es">
+                        <term>Geología</term>
+                     </catDesc>
+                     <catDesc xml:lang="fr">
+                        <term>Geologie</term>
+                     </catDesc>
                      <category xml:id="domain.earth_sciences.geology.mineralogy">
-                        <catDesc xml:lang="en">Mineralogy</catDesc>
-                        <catDesc xml:lang="pt">Mineralogia</catDesc>
-                        <catDesc xml:lang="es">Mineralogía</catDesc>
-                        <catDesc xml:lang="fr">Mineralogie</catDesc>
+                        <catDesc xml:lang="en">
+                           <term>Mineralogy</term>
+                        </catDesc>
+                        <catDesc xml:lang="pt">
+                           <term>Mineralogia</term>
+                        </catDesc>
+                        <catDesc xml:lang="es">
+                           <term>Mineralogía</term>
+                        </catDesc>
+                        <catDesc xml:lang="fr">
+                           <term>Mineralogie</term>
+                        </catDesc>
                      </category>
                   </category>
                </category>
                <category xml:id="domain.sports">
-                  <catDesc xml:lang="en">Sport</catDesc>
-                  <catDesc xml:lang="pt">Desporto</catDesc>
-                  <catDesc xml:lang="es">Deporte</catDesc>
-                  <catDesc xml:lang="fr">Sport</catDesc>
+                  <catDesc xml:lang="en">
+                     <term>Sport</term>
+                  </catDesc>
+                  <catDesc xml:lang="pt">
+                     <term>Desporto</term>
+                  </catDesc>
+                  <catDesc xml:lang="es">
+                     <term>Deporte</term>
+                  </catDesc>
+                  <catDesc xml:lang="fr">
+                     <term>Sport</term>
+                  </catDesc>
                   <category xml:id="domain.sports.football">
-                     <catDesc xml:lang="en">Football</catDesc>
-                     <catDesc xml:lang="pt">Futebol</catDesc>
-                     <catDesc xml:lang="es">Fútebol</catDesc>
-                     <catDesc xml:lang="fr">Football</catDesc>
+                     <catDesc xml:lang="en">
+                        <term>Football</term>
+                     </catDesc>
+                     <catDesc xml:lang="pt">
+                        <term>Futebol</term>
+                     </catDesc>
+                     <catDesc xml:lang="es">
+                        <term>Fútebol</term>
+                     </catDesc>
+                     <catDesc xml:lang="fr">
+                        <term>Football</term>
+                     </catDesc>
                   </category>
                </category>
             </taxonomy>
@@ -88,9 +129,8 @@
                <gram type="gen">f.</gram>
             </gramGrp>
             <sense xml:id="DLPC.cristalografia_1">
-               <usg type="domain" corresp="#domain.earth_sciences.geology.mineralogy"/>
-               <def>ciência que estuda e descreve a forma e a estrutura dos cristais, bem como as
-                  leis que regem a sua formação</def>
+               <usg type="domain" valueDatcat="#domain.earth_sciences.geology.mineralogy">Mineralogia</usg>
+               <def>ciência que estuda e descreve a forma e a estrutura dos cristais, bem como as leis que regem a sua formação</def>
             </sense>
             <!--etc.-->
          </entry>

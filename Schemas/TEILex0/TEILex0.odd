@@ -133,7 +133,8 @@
             <listChange>
                 <listChange n="0.9.3-dev">
                     <!--choose correct date pefore publishing-->
-                    <change></change>
+                    <change when="2023-05-08" type="spec"><gi>catDesc</gi> <hi rend="italic">must</hi> contain a <gi>term</gi></change>
+                    <change type="spec">switch to using the external TEI add-on in oXygen when generating schema and documentation</change>
                 </listChange>
                 <listChange n="0.9.2">
                     <change when="2023-04-22" type="xproc">switch to using oXygen's TEI framework when generating schema and documentation</change>
