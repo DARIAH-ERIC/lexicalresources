@@ -60,6 +60,12 @@
             </content>
         </elementSpec>
         
+        <elementSpec ident="category" mode="change">
+            <classes mode="change">
+                <memberOf key="att.datcat"></memberOf>
+            </classes>
+        </elementSpec>
+        
         
         <!-- Initial change to make entry recursive (LR) -->
         <!-- 2018-09-03 (LR): making @xml:id required -->
