@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lex-0">
    <teiHeader>
       <fileDesc n="{1ADA5193-4375-4269-8222-D8BE81D597DB}">
          <titleStmt>
@@ -114,54 +114,54 @@
          <classDecl>
             <taxonomy xml:id="taxonomy">
                <category xml:id="taxonomy-dictionary">
-                  <catDesc xml:lang="cs-cz">slovník</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>slovník</term></catDesc>
                   <category xml:id="taxonomy-dictionary-contemporary">
-                     <catDesc xml:lang="cs-cz">soudobý</catDesc>
+                     <catDesc xml:lang="cs-cz"><term>soudobý</term></catDesc>
                   </category>
                   <category xml:id="taxonomy-dictionary-historical">
-                     <catDesc xml:lang="cs-cz">dobový</catDesc>
+                     <catDesc xml:lang="cs-cz"><term>dobový</term></catDesc>
                   </category>
                </category>
                <category xml:id="taxonomy-historical_text">
-                  <catDesc xml:lang="cs-cz">historický text</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>historický text</term></catDesc>
                   <category xml:id="taxonomy-historical_text-old_czech">
-                     <catDesc xml:lang="cs-cz">staročeský</catDesc>
+                     <catDesc xml:lang="cs-cz"><term>staročeský</term></catDesc>
                   </category>
                   <category xml:id="taxonomy-historical_text-medieval_czech">
-                     <catDesc xml:lang="cs-cz">středněčeský</catDesc>
+                     <catDesc xml:lang="cs-cz"><term>středněčeský</term></catDesc>
                   </category>
                </category>
                <category xml:id="taxonomy-scholary_text">
-                  <catDesc xml:lang="cs-cz">odborný text</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>odborný text</term></catDesc>
                </category>
                <category xml:id="taxonomy-digitized-grammar">
-                  <catDesc xml:lang="cs-cz">digitalizovaná mluvnice</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>digitalizovaná mluvnice</term></catDesc>
                </category>
                <category xml:id="taxonomy-card-index">
-                  <catDesc xml:lang="cs-cz">lístková kartotéka</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>lístková kartotéka</term></catDesc>
                </category>
             </taxonomy>
             <taxonomy xml:id="output">
                <category xml:id="output-dictionary">
-                  <catDesc xml:lang="cs-cz">slovníky</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>slovníky</term></catDesc>
                </category>
                <category xml:id="output-editions">
-                  <catDesc xml:lang="cs-cz">edice</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>edice</term></catDesc>
                </category>
                <category xml:id="output-text_bank">
-                  <catDesc xml:lang="cs-cz">textová banka</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>textová banka</term></catDesc>
                   <category xml:id="output-text_bank-old_czech">
-                     <catDesc xml:lang="cs-cz">staročeská textová banka</catDesc>
+                     <catDesc xml:lang="cs-cz"><term>staročeská textová banka</term></catDesc>
                   </category>
                   <category xml:id="output-text_bank-middle_czech">
-                     <catDesc xml:lang="cs-cz">středněčeská textová banka</catDesc>
+                     <catDesc xml:lang="cs-cz"><term>středněčeská textová banka</term></catDesc>
                   </category>
                </category>
                <category xml:id="output-scholary_literature">
-                  <catDesc xml:lang="cs-cz">odborná literatura</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>odborná literatura</term></catDesc>
                </category>
                <category xml:id="output-digitized-grammar">
-                  <catDesc xml:lang="cs-cz">digitalizované mluvnice</catDesc>
+                  <catDesc xml:lang="cs-cz"><term>digitalizované mluvnice</term></catDesc>
                </category>
             </taxonomy>
          </classDecl>
@@ -171,9 +171,9 @@
             <language role="objectLanguage" ident="">Old Czech?</language>
             <language role="targetLanguage" ident="">?</language>
          </langUsage>
-         <textClass>
+         <!--<textClass>
             <catRef target="#taxonomy-dictionary-contemporary #output-dictionary"/>
-         </textClass>
+         </textClass>-->
       </profileDesc>
       <revisionDesc>
          <change n="fc06a370-19b3-42b6-b054-597b679ab8c9" when="2016-02-06T23:25:39.4992891Z"

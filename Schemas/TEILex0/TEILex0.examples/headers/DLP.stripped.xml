@@ -27,14 +27,16 @@ then transform using tei-stripper.xsl-->
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <imprint>
-                     <publisher>Imprensa Nacional de Lisboa</publisher>
-                     <date>1940</date>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            <listBibl type="dictionaries">
+               <biblStruct>
+                  <monogr>
+                     <imprint>
+                        <publisher>Imprensa Nacional de Lisboa</publisher>
+                        <date>1940</date>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -149,7 +151,7 @@ then transform using tei-stripper.xsl-->
                <gram type="gen">f.</gram>
             </gramGrp>
             <sense xml:id="DLPC.cristalografia_1-part">
-               <usg type="domain" corresp="#domain.earth_sciences.geology.mineralogy"/>
+               <usg type="domain" valueDatcat="#domain.earth_sciences.geology.mineralogy"/>
                <def>ciência que estuda e descreve a forma e a estrutura dos cristais, bem como as
                   leis que regem a sua formação</def>
             </sense>
