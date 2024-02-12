@@ -97,8 +97,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
      }
      };
      xhr.send();*/
+     
+    document.querySelectorAll('.tab').forEach(current => {
+        var next = current.nextElementSibling;
+        if (next && next.classList.contains('tab') ) {
+            current.classList.add('drop');
+        } 
+    });
+        
 });
 
 document.querySelectorAll('.tabs').forEach(set => {
-    set.querySelector('.tab').querySelector('input').checked = true;
+    set.querySelector('.tab').querySelector('input').checked = true;  
 });
+
+
+ 

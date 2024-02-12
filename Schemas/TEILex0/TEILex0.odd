@@ -116,7 +116,8 @@
                 </author>
             </titleStmt>
             <editionStmt>
-                <edition n="0.9.2"/>
+                <!--make sure to always update before publishing new version-->
+                <edition n="0.9.3"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
@@ -131,8 +132,13 @@
         </fileDesc>
         <revisionDesc>
             <listChange>
+                <listChange n="0.9.3">
+                    <change when="2024-02-12" type="spec"><gi>catDesc</gi> <hi rend="italic">must</hi> contain a <gi>term</gi></change>
+                    <change type="spec">switch to using the external TEI add-on in oXygen when generating schema and documentation</change>
+                    <change type="spec">fix the mismatch in <gi>usg</gi> types between the specification and documentation (use <code>temporal</code> instead of <code>time</code> </change>
+                    <change type="spec">require <gi>listBibl</gi> in <gi>sourceDesc</gi> with three suggested type values: <code>dictionaries</code>, <code>corpora</code> and <code>literature</code></change>
+                </listChange>
                 <listChange n="0.9.2">
-                    <!--choose correct date pefore publishing-->
                     <change when="2023-04-22" type="xproc">switch to using oXygen's TEI framework when generating schema and documentation</change>
                     <change type="spec">allow <gi>list</gi> and <gi>item</gi> because lists feature prominently in dictionary front matter</change>
                     <change type="spec">introduce <ref target="#TEI.model.lexicalInter">model.lexicalInter</ref> (based on <ref target="#TEI.model.inter">model.inter</ref>), <ref target="#TEI.model.lexicalPhrase">model.lexicalPhrase</ref> (based on <ref target="#TEI.model.phrase">model.phrase</ref>) and <ref target="#TEI.macro.lexicalParaContent">macro.lexicalParaContent</ref> (based on <ref target="#TEI.macro.paraContent">macro.paraContent</ref>) to make it easier to simplify the content model of various dictionary elements</change>

@@ -73,7 +73,7 @@
             <p:pipe step="stylesheet-odd2lite" port="result"/>
         </p:input>
     </p:xslt>
-    <p:store href="results-new/odd2lit.xml" method="xml" indent="false"/>
+   <p:store href="results-new/odd2lit.xml" method="xml" indent="false"/>
     <p:xslt name="contributors">
         <p:input port="source">
             <p:pipe step="odd2lite" port="result"/>
@@ -83,7 +83,7 @@
         </p:input>
     </p:xslt>
     <p:store href="results-new/contributored.xml" method="xml" indent="false"/> 
-    <p:xslt name="odd2html">
+     <p:xslt name="odd2html">
         <p:input port="source">
             <p:pipe step="contributors" port="result"/>
         </p:input>
@@ -100,14 +100,14 @@
             <p:document href="../stylesheets/html-post-process.xsl"/>
         </p:input>
     </p:xslt>
-   <p:store href="../../../docs/pages/TEILex0/TEILex0.html" method="xhtml">
+    <p:store href="../../../docs/pages/TEILex0/TEILex0.html" method="xhtml">
         <p:input port="source">
             <p:pipe port="result" step="post-process"/>
         </p:input>
     </p:store>
-    <p:store href="../../../docs/pages/TEILex0/spec.html" method="xhtml">
+   <p:store href="../../../docs/pages/TEILex0/spec.html" method="xhtml">
         <p:input port="source">
-            <p:pipe port="secondary" step="post-process"/>
+            <p:pipe port="result" step="post-process"/>
         </p:input>
     </p:store>
 </p:declare-step>

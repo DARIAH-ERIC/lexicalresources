@@ -506,6 +506,7 @@ span.label img {
 
 .tab-content .figure {
     margin-left: 0.9em;
+    margin-right: 0.9em;
 }
 
 .tab-close {
@@ -520,6 +521,10 @@ span.label img {
 }
 .tab-close:hover {
     background: #1a252f;
+}
+
+.tab.drop {
+    border-bottom: 1px solid white;
 }
 
 input:checked + .tab-label {

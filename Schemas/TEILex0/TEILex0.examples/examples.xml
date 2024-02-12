@@ -721,7 +721,7 @@
                   <orth notAfter="1996">
                      <seg>Fluß</seg><seg>schiffahrt</seg>
                   </orth>
-                  <usg type="time">Vor 1996 Rechtschreibung Reform</usg>
+                  <usg type="temporal">Vor 1996 Rechtschreibung Reform</usg>
                </form>
                <gramGrp>
                   <gram type="pos">noun</gram>
@@ -804,7 +804,7 @@
                   <gram type="pos">n</gram>
                </gramGrp>
                <pc>(</pc>
-               <usg type="time" expand="originally">orig</usg>
+               <usg type="temporal" expand="originally">orig</usg>
                <lbl>and esp</lbl>
                <usg type="domain" expand="nautical">naut</usg>
                <pc>)</pc>
@@ -837,7 +837,7 @@
                </gramGrp>
                <sense xml:id="CH.gahs2.2.1">
                   <pc>(</pc>
-                  <usg type="time" expand="originally">orig</usg>
+                  <usg type="temporal" expand="originally">orig</usg>
                   <lbl>and esp</lbl>
                   <usg type="domain" expand="nautical">naut</usg>
                   <pc>)</pc>
@@ -925,6 +925,46 @@
                   </cit>
                </cit>
             </sense>
+         </entry>
+         <entry xmlns="http://www.tei-c.org/ns/1.0" xml:id="MORAIS.1.DLP.JANTAR" type="mainEntry" xml:lang="pt">
+            <entry xml:id="MORAIS.1.DLP.JANTAR-vt" type="homonymicEntry" xml:lang="pt">
+               <form type="lemma">
+                  <orth>JANTAR</orth>
+               </form>
+               <metamark function="lemmaDelimiter">,</metamark>
+               <gramGrp>
+                  <gram type="pos" norm="VERB">v.</gram>
+                  <gram type="voice">at.</gram>
+               </gramGrp>
+               <sense xml:id="MORAIS.1.DLP.JANTAR.s.1">
+                  <def>comer ao meio dia , ou comer depois de almoçar.</def>
+               </sense>
+            </entry>
+            <entry xml:id="MORAIS.1.DLP.JANTAR-n" type="homonymicEntry" xml:lang="pt">
+               <form type="lemma">
+                  <orth>JANTAR</orth>
+               </form>
+               <metamark function="lemmaDelimiter">,</metamark>
+               <gramGrp>
+                  <gram type="pos" norm="NOUN">ſ.</gram>
+                  <gram type="gen">m.</gram>
+               </gramGrp>
+               <sense xml:id="MORAIS.1.DLP.JANTAR.s.2">
+                  <def>a ſegunda das tres comidas regulares do dia, entre o almoço , e aceia , ou antes da merenda.</def>
+               </sense>
+               <pc>.</pc>
+               <metamark function="senseDelimiter">§</metamark>
+               <sense xml:id="MORAIS.1.DLP.JANTAR.s.3">
+                  <def>Porção de dinheiro , que as Villas , e Cidades davão aos Reis , quando hião de correição para ſuſtento de ſua comitiva</def>
+               </sense>
+               <pc>.</pc>
+               <bibl type="attestation" source="#M._L._Monarchia_Luſitana">
+                  <title>M. Luſ.</title>
+                  <citedRange unit="volume">t. 5</citedRange>
+                  <citedRange unit="folium">f. 53</citedRange>
+                  <citedRange unit="chapter">cap. 27</citedRange>
+               </bibl>
+            </entry>
          </entry>
          <entry xml:id="katze" xml:lang="de" type="mainEntry">
             <form type="lemma">
