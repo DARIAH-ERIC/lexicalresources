@@ -133,7 +133,7 @@
         <revisionDesc>
             <listChange>
                 <listChange n="0.9.3">
-                    <change when="2023-02-12" type="spec"><gi>catDesc</gi> <hi rend="italic">must</hi> contain a <gi>term</gi></change>
+                    <change when="2024-02-12" type="spec"><gi>catDesc</gi> <hi rend="italic">must</hi> contain a <gi>term</gi></change>
                     <change type="spec">switch to using the external TEI add-on in oXygen when generating schema and documentation</change>
                     <change type="spec">fix the mismatch in <gi>usg</gi> types between the specification and documentation (use <code>temporal</code> instead of <code>time</code> </change>
                     <change type="spec">require <gi>listBibl</gi> in <gi>sourceDesc</gi> with three suggested type values: <code>dictionaries</code>, <code>corpora</code> and <code>literature</code></change>
