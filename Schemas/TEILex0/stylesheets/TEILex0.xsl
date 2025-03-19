@@ -6,10 +6,7 @@
     exclude-result-prefixes="tei teix xhtml">
     <xsl:output method="html" doctype-system="about:legacy-compat"/>
 
-    <!--this is hardcoded; https://github.com/TEIC/Stylesheets.git must be cloned in the same
-    directory as DARIAH-ERIC's lesicalresources; this is far from ideal, but i don't have the time
-    to deal with it at the moment. -->
-    <xsl:import href="../stylesheets/html/html.xsl"/>
+    <xsl:import href="https://www.tei-c.org/release/xml/tei/stylesheet/html/html.xsl"/>
 
     <xsl:variable name="version" select="//tei:fileDesc/tei:editionStmt/tei:edition/@n"/>
   

@@ -4,23 +4,29 @@
 To edit examples, please use TEILex0-examples.xml, 
 then transform using tei-stripper.xsl-->
 
-<?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/Examples">
+<?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/Examples" type="lex-0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>Examples of TEI Lex-0</title>
          </titleStmt>
+         <editionStmt>
+            <edition/>
+            <author/>
+            <editor/>
+            <principal/>
+         </editionStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <distributor>DARIAH WG Lexical Resources</distributor>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
          </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
-         </sourceDesc>
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language ident="mix">Mixtepec Mixtec</language>
-            <language ident="mix-x-YCNY">Yucanany Mixtec</language>
+            <language ident="mix" role="objectLanguage">Mixtepec Mixtec</language>
+            <language ident="mix-x-YCNY" role="objectLanguage">Yucanany Mixtec</language>
          </langUsage>
       </profileDesc>
    </teiHeader>
@@ -222,7 +228,7 @@ then transform using tei-stripper.xsl-->
             </sense>
             <entry type="relatedEntry" xml:lang="en" xml:id="by_the_aid_of">
                <form type="lemma">
-                  <orth>By the <oRef>_</oRef> of</orth>
+                  <orth>By the <ref type="oRef">_</ref> of</orth>
                </form>
                <pc>,</pc>
                <sense xml:id="by_the_aid_of.1">
@@ -236,7 +242,7 @@ then transform using tei-stripper.xsl-->
             <pc>.</pc>
             <entry type="relatedEntry" xml:lang="en" xml:id="in_aid_of">
                <form>
-                  <orth>In <oRef>_</oRef> of</orth>
+                  <orth>In <ref type="oRef">_</ref> of</orth>
                </form>
                <pc>,</pc>
                <sense xml:id="in_aid_of.1">
@@ -554,7 +560,7 @@ then transform using tei-stripper.xsl-->
             <entry xml:id="bray_vt" xml:lang="en" type="homonymicEntry">
                <gramGrp>
                   <gram type="pos">vt</gram>
-                  <gram type="subc">VP2A</gram>
+                  <gram type="inflectionType">VP2A</gram>
                </gramGrp>
                <sense xml:id="bray_vt.1">
                   <def>make a cry or sound of this kind</def>
@@ -726,7 +732,7 @@ then transform using tei-stripper.xsl-->
          </entry>
          <entry xml:id="Flussschifffahrt" xml:lang="de" type="compound">
             <form type="lemma">
-               <orth type="segmeted">
+               <orth type="segmented">
                   <seg>Fluss</seg>
                   <seg>schifffahrt</seg>
                </orth>
@@ -742,7 +748,7 @@ then transform using tei-stripper.xsl-->
                      <seg>Fluß</seg>
                      <seg>schiffahrt</seg>
                   </orth>
-                  <usg type="time">Vor 1996 Rechtschreibung Reform</usg>
+                  <usg type="temporal">Vor 1996 Rechtschreibung Reform</usg>
                </form>
                <gramGrp>
                   <gram type="pos">noun</gram>
@@ -825,7 +831,7 @@ then transform using tei-stripper.xsl-->
                   <gram type="pos">n</gram>
                </gramGrp>
                <pc>(</pc>
-               <usg type="time" expand="originally">orig</usg>
+               <usg type="temporal" expand="originally">orig</usg>
                <lbl>and esp</lbl>
                <usg type="domain" expand="nautical">naut</usg>
                <pc>)</pc>
@@ -858,7 +864,7 @@ then transform using tei-stripper.xsl-->
                </gramGrp>
                <sense xml:id="CH.gahs2.2.1">
                   <pc>(</pc>
-                  <usg type="time" expand="originally">orig</usg>
+                  <usg type="temporal" expand="originally">orig</usg>
                   <lbl>and esp</lbl>
                   <usg type="domain" expand="nautical">naut</usg>
                   <pc>)</pc>
@@ -886,12 +892,11 @@ then transform using tei-stripper.xsl-->
                </form>
                <sense xml:id="Häuschen.1"><!--etc.--></sense>
             </entry>
-            <!--TODO: what to do with morphems etc., I'd prefer seg type="m"-->
             <entry type="relatedEntry" xml:lang="de" xml:id="hausen">
                <form type="lemma">
                   <orth>
-                     <m>haus</m>
-                     <m>en</m>
+                     <seg type="m">haus</seg>
+                     <seg type="m">en</seg>
                   </orth>
                </form>
                <sense xml:id="hausen.1"><!--...--></sense>
@@ -955,6 +960,46 @@ then transform using tei-stripper.xsl-->
                </cit>
             </sense>
          </entry>
+         <entry xml:id="MORAIS.1.DLP.JANTAR" type="mainEntry" xml:lang="pt">
+            <entry xml:id="MORAIS.1.DLP.JANTAR-vt" type="homonymicEntry" xml:lang="pt">
+               <form type="lemma">
+                  <orth>JANTAR</orth>
+               </form>
+               <metamark function="lemmaDelimiter">,</metamark>
+               <gramGrp>
+                  <gram type="pos" norm="VERB">v.</gram>
+                  <gram type="voice">at.</gram>
+               </gramGrp>
+               <sense xml:id="MORAIS.1.DLP.JANTAR.s.1">
+                  <def>comer ao meio dia , ou comer depois de almoçar.</def>
+               </sense>
+            </entry>
+            <entry xml:id="MORAIS.1.DLP.JANTAR-n" type="homonymicEntry" xml:lang="pt">
+               <form type="lemma">
+                  <orth>JANTAR</orth>
+               </form>
+               <metamark function="lemmaDelimiter">,</metamark>
+               <gramGrp>
+                  <gram type="pos" norm="NOUN">ſ.</gram>
+                  <gram type="gen">m.</gram>
+               </gramGrp>
+               <sense xml:id="MORAIS.1.DLP.JANTAR.s.2">
+                  <def>a ſegunda das tres comidas regulares do dia, entre o almoço , e aceia , ou antes da merenda.</def>
+               </sense>
+               <pc>.</pc>
+               <metamark function="senseDelimiter">§</metamark>
+               <sense xml:id="MORAIS.1.DLP.JANTAR.s.3">
+                  <def>Porção de dinheiro , que as Villas , e Cidades davão aos Reis , quando hião de correição para ſuſtento de ſua comitiva</def>
+               </sense>
+               <pc>.</pc>
+               <bibl type="attestation" source="#M._L._Monarchia_Luſitana">
+                  <title>M. Luſ.</title>
+                  <citedRange unit="volume">t. 5</citedRange>
+                  <citedRange unit="folium">f. 53</citedRange>
+                  <citedRange unit="chapter">cap. 27</citedRange>
+               </bibl>
+            </entry>
+         </entry>
          <entry xml:id="katze" xml:lang="de" type="mainEntry">
             <form type="lemma">
                <gramGrp>
@@ -1002,7 +1047,7 @@ then transform using tei-stripper.xsl-->
                   <orth>Ntua</orth>
                   <pron notation="ipa">nd̪ùá</pron>
                   <usg type="geographic">
-                     <placeName>Yucanany</placeName>
+                     Yucanany
                   </usg>
                </form>
             </form>

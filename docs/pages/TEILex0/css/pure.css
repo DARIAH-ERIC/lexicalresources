@@ -145,10 +145,11 @@ appears on the left side of the page.
     /*
     This styles the menu heading.
     */
-    #menu .pure-menu-heading {
+    #menu .pure-menu-heading a {
         font-size: 110%;
         color: #fff;
         margin: 0;
+        text-decoration: none;
     }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/

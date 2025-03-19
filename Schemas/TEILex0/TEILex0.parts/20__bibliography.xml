@@ -242,6 +242,18 @@
                 </imprint>
             </monogr>
         </biblStruct>
+        <biblStruct xml:id="Morais1789" type="dictionary">
+            <monogr>
+                <author><persName><forename>Antônio de Morais</forename>
+                    <surname>Silva</surname></persName></author>
+                <title level="m">Diccionario da lingua portugueza </title>
+                <imprint>
+                    <date>1789</date>
+                    <pubPlace>Lisboa</pubPlace>
+                    <publisher>Na Officina de Simão Thaddeo Ferreira</publisher>
+                </imprint>
+            </monogr>
+        </biblStruct>
         <biblStruct xml:id="Московљевић1990" type="dictionary">
             <monogr>
                 <author><persName><forename>Милош С.</forename>
@@ -359,10 +371,11 @@
                 <author>
                     <orgName>StčS</orgName>
                 </author>
-                <title>Staročeský slovník</title>
+                <title level="m">Staročeský slovník</title>
                 <imprint>
                     <publisher>Ústav pro jazyk český AV ČR, v. v. i.</publisher>
                     <pubPlace>Praha</pubPlace>
+                    <date>1999-2011</date>
                 </imprint>
             </monogr>
         </biblStruct>
