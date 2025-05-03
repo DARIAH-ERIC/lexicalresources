@@ -13000,7 +13000,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                                 <String>TEI source file.</String>
                                             </field>
                                             <field name="value">
-                                                <String>${xpath_eval(if(starts-with('${frameworksDir}', "file:/")) then "" else "file:/" )}${frameworksDir}/tei/xml/tei/odd/p5subset.xml</String>
+                                                <String>${framework(TEI P5)}/xml/tei/odd/p5subset.xml</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
