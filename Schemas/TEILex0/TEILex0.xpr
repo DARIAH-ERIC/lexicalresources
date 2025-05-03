@@ -12119,7 +12119,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/40__specification.xml</String>
+                                    <String>TEILex0.odd</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -12140,6 +12140,26 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>out/TEILex0.rng</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: ODD to RELAX NG XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/40__specification.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -12980,7 +13000,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                                 <String>TEI source file.</String>
                                             </field>
                                             <field name="value">
-                                                <null/>
+                                                <String>${xpath_eval(if(starts-with('${frameworksDir}', "file:/")) then "" else "file:/" )}${frameworksDir}/tei/xml/tei/odd/p5subset.xml</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
