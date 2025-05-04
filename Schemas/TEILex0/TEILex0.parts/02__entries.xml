@@ -208,6 +208,11 @@
                   <cell><code rend="language-xml">&lt;gram
                         type="government">[+conj.]&lt;/gram></code></cell>
                </row>
+               <row>
+                  <cell>-</cell>
+                  <cell><code rend="language-xml">&lt;gram
+                        type="degree">comp.&lt;/gram></code></cell>
+               </row>
             </table></p>
          <p>Note: See also next section on <ref target="#collocates">Collocates</ref>.</p>
          <p>TEI5 is missing a specific element for encoding the grammatical aspect of verbs (for

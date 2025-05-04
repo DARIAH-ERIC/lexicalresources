@@ -700,11 +700,13 @@
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-case.html"
                             />
                         </valItem>
+                        <valItem ident="degree"/>
                         <valItem ident="gender">
                             <equiv name="gen"
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gen.html"
                             />
                         </valItem>
+                        <valItem ident="government"/>
                         <valItem ident="inflectionType">
                             <equiv name="iType"
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-iType.html"
@@ -731,7 +733,6 @@
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-colloc.html"
                             />
                         </valItem>
-                        <valItem ident="government"/>
                     </valList>
                 </attDef>
             </attList>
