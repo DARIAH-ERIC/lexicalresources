@@ -12123,19 +12123,176 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
-                                        <String>TEILex0: Generate documentation</String>
+                                        <String>TEILex0: ODD to RELAX NG XML</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>out/TEILex0.rng</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: ODD to RELAX NG XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/40__specification.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: ODD to RELAX NG XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>xproc/teilex0.xpl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
                                         <String>XPROC</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
                                         <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>stylesheets/TEILex0.xsl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>../../../../../../../Applications/Oxygen%20XML%20Editor/frameworks/tei/xml/tei/stylesheet/common/teianttasks.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: ODD to RELAX NG XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>xproc/teilex0-examples.xpl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0 Examples XProc</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/04__senses.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/01__introduction.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -12182,49 +12339,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>TEILex0.parts/40__specification.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEI ODD to RelaxNG XML - Copy test to delete</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>ANT</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>xproc/teilex0.xpl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                        <String>ANT</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>TEILex0.examples/headers/EtymWB-XML.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -12265,43 +12379,20 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>stylesheets/TEILex0.xsl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>TEILex0.parts/06__usage.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
                                         <String>TEILex0: Generate documentation</String>
-                                        <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XPROC</String>
-                                        <String>ANT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
-                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -12393,66 +12484,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                 <field name="scenarioIds">
                                     <list>
                                         <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.parts/01__introduction.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.parts/04__senses.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>xproc/teilex0-examples.xpl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0 Examples XProc</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -12842,547 +12873,10 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                     <String></String>
                                 </field>
                                 <field name="buildFilePath">
-                                    <String>/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v25.0/frameworks/tei/tei/xml/tei/stylesheet/relaxng/build-to.xml</String>
+                                    <String>${frameworksDir}/tei/xml/tei/stylesheet/rng/build-to.xml</String>
                                 </field>
                                 <field name="ditaParams">
                                     <list>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>defaultSource</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>TEI source file.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${frameworksDir}/tei/xml/tei/odd/p5subset.xml</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>inputFile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path to the TEI XML file.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${cf}</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>lang</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The language of the output strings like "Attributes", "Class", "Datatype", "Declaration", "Note", "Optional", "Required", "Recommended", etc.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>en</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>outputFile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path where the output schema file will be saved.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${cfd}/out/${cfn}.rng</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>oxygenlib</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path to the Oxygen library folder.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${oxygenInstallDir}/lib</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>profile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The profile of the output file, for example "tei", "oucs", "oucscourses", "enrich".</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>default</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                    </list>
-                                </field>
-                                <field name="jvmArgs">
-                                    <String>-Xmx256m</String>
-                                </field>
-                                <field name="useCustomJavaHome">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="customJavaHomeDir">
-                                    <String></String>
-                                </field>
-                                <field name="useCustomANTHome">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="customANTHomeDir">
-                                    <String></String>
-                                </field>
-                                <field name="workingDir">
-                                    <String>${cfd}</String>
-                                </field>
-                                <field name="showConsoleAlways">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="advancedOptionsMap">
-                                    <null/>
-                                </field>
-                                <field name="name">
-                                    <String>TEI ODD to RelaxNG XML - Copy test del</String>
-                                </field>
-                                <field name="baseURL">
-                                    <null/>
-                                </field>
-                                <field name="footerURL">
-                                    <null/>
-                                </field>
-                                <field name="fOPMethod">
-                                    <null/>
-                                </field>
-                                <field name="fOProcessorName">
-                                    <null/>
-                                </field>
-                                <field name="headerURL">
-                                    <null/>
-                                </field>
-                                <field name="inputXSLURL">
-                                    <null/>
-                                </field>
-                                <field name="inputXMLURL">
-                                    <null/>
-                                </field>
-                                <field name="defaultScenario">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="isFOPPerforming">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="type">
-                                    <String>ANT</String>
-                                </field>
-                                <field name="saveAs">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="openInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="outputResource">
-                                    <null/>
-                                </field>
-                                <field name="openOtherLocationInBrowser">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="locationToOpenInBrowserURL">
-                                    <String>${cfd}/out/${cfn}.rng</String>
-                                </field>
-                                <field name="openInEditor">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="showInHTMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInXMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInSVGPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInResultSetPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="useXSLTInput">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="xsltParams">
-                                    <list/>
-                                </field>
-                                <field name="cascadingStylesheets">
-                                    <String-array/>
-                                </field>
-                                <field name="xslTransformer">
-                                    <String>ANT</String>
-                                </field>
-                                <field name="extensionURLs">
-                                    <String-array>
-                                        <String>${oxygenHome}/lib/*.jar</String>
-                                    </String-array>
-                                </field>
-                            </antScenario>
-                            <antScenario>
-                                <field name="additionalAntArgs">
-                                    <String></String>
-                                </field>
-                                <field name="buildTarget">
-                                    <String></String>
-                                </field>
-                                <field name="buildFilePath">
-                                    <String>/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v25.0/frameworks/tei/tei/xml/tei/stylesheet/relaxng/build-to.xml</String>
-                                </field>
-                                <field name="ditaParams">
-                                    <list>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>defaultSource</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>TEI source file.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>file:/Users/ttasovac/Library/Preferences/com.oxygenxml/extensions/v25.0/frameworks/tei/tei/xml/tei/odd/p5subset.xml</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>inputFile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path to the TEI XML file.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${cf}</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>lang</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The language of the output strings like "Attributes", "Class", "Datatype", "Declaration", "Note", "Optional", "Required", "Recommended", etc.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>en</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>outputFile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path where the output schema file will be saved.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${cfd}/out/${cfn}.rng</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>oxygenlib</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path to the Oxygen library folder.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${oxygenInstallDir}/lib</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>profile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The profile of the output file, for example "tei", "oucs", "oucscourses", "enrich".</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>default</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                    </list>
-                                </field>
-                                <field name="jvmArgs">
-                                    <String>-Xmx256m</String>
-                                </field>
-                                <field name="useCustomJavaHome">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="customJavaHomeDir">
-                                    <String></String>
-                                </field>
-                                <field name="useCustomANTHome">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="customANTHomeDir">
-                                    <String></String>
-                                </field>
-                                <field name="workingDir">
-                                    <String>${cfd}</String>
-                                </field>
-                                <field name="showConsoleAlways">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="advancedOptionsMap">
-                                    <null/>
-                                </field>
-                                <field name="name">
-                                    <String>TEI ODD to RelaxNG XML - Copy test to delete</String>
-                                </field>
-                                <field name="baseURL">
-                                    <null/>
-                                </field>
-                                <field name="footerURL">
-                                    <null/>
-                                </field>
-                                <field name="fOPMethod">
-                                    <null/>
-                                </field>
-                                <field name="fOProcessorName">
-                                    <null/>
-                                </field>
-                                <field name="headerURL">
-                                    <null/>
-                                </field>
-                                <field name="inputXSLURL">
-                                    <null/>
-                                </field>
-                                <field name="inputXMLURL">
-                                    <null/>
-                                </field>
-                                <field name="defaultScenario">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="isFOPPerforming">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="type">
-                                    <String>ANT</String>
-                                </field>
-                                <field name="saveAs">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="openInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="outputResource">
-                                    <null/>
-                                </field>
-                                <field name="openOtherLocationInBrowser">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="locationToOpenInBrowserURL">
-                                    <String>${cfd}/out/${cfn}.rng</String>
-                                </field>
-                                <field name="openInEditor">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="showInHTMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInXMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInSVGPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInResultSetPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="useXSLTInput">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="xsltParams">
-                                    <list/>
-                                </field>
-                                <field name="cascadingStylesheets">
-                                    <String-array/>
-                                </field>
-                                <field name="xslTransformer">
-                                    <String>ANT</String>
-                                </field>
-                                <field name="extensionURLs">
-                                    <String-array>
-                                        <String>${oxygenHome}/lib/*.jar</String>
-                                    </String-array>
-                                </field>
-                            </antScenario>
-                            <antScenario>
-                                <field name="additionalAntArgs">
-                                    <String></String>
-                                </field>
-                                <field name="buildTarget">
-                                    <String></String>
-                                </field>
-                                <field name="buildFilePath">
-                                    <String>${frameworksDir}/tei/xml/tei/stylesheet/relaxng/build-to.xml</String>
-                                </field>
-                                <field name="ditaParams">
-                                    <list>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>defaultSource</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>TEI source file.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${frameworksDir}/tei/xml/tei/odd/p5subset.xml</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
                                         <antParameter>
                                             <field name="name">
                                                 <String>inputFile</String>
@@ -13498,6 +12992,29 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                                 <null/>
                                             </field>
                                         </antParameter>
+                                        <antParameter>
+                                            <field name="name">
+                                                <String>defaultSource</String>
+                                            </field>
+                                            <field name="description">
+                                                <String>TEI source file.</String>
+                                            </field>
+                                            <field name="value">
+                                                <String>${framework(TEI P5)}/xml/tei/odd/p5subset.xml</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <null/>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>5</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </antParameter>
                                     </list>
                                 </field>
                                 <field name="jvmArgs">
@@ -13519,13 +13036,13 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="showConsoleAlways">
-                                    <Boolean>false</Boolean>
+                                    <Boolean>true</Boolean>
                                 </field>
                                 <field name="advancedOptionsMap">
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>TEILex0: ODD to RELAX NG (XML syntax)</String>
+                                    <String>TEILex0: ODD to RELAX NG XML</String>
                                 </field>
                                 <field name="baseURL">
                                     <null/>
@@ -13570,10 +13087,10 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="locationToOpenInBrowserURL">
-                                    <String></String>
+                                    <String>${pd}/out/TEILex0.rng</String>
                                 </field>
                                 <field name="openInEditor">
-                                    <Boolean>false</Boolean>
+                                    <Boolean>true</Boolean>
                                 </field>
                                 <field name="showInHTMLPane">
                                     <Boolean>false</Boolean>
@@ -13602,285 +13119,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                 <field name="extensionURLs">
                                     <String-array>
                                         <String>${oxygenHome}/lib/*.jar</String>
-                                    </String-array>
-                                </field>
-                            </antScenario>
-                            <antScenario>
-                                <field name="additionalAntArgs">
-                                    <String></String>
-                                </field>
-                                <field name="buildTarget">
-                                    <String></String>
-                                </field>
-                                <field name="buildFilePath">
-                                    <String>${frameworksDir}/tei/xml/tei/stylesheet/relaxng/build-to.xml</String>
-                                </field>
-                                <field name="ditaParams">
-                                    <list>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>defaultSource</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>TEI source file.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${frameworksDir}/tei/xml/tei/odd/p5subset.xml</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>inputFile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path to the TEI XML file.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${pd}/TEILex0.odd</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>lang</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The language of the output strings like "Attributes", "Class", "Datatype", "Declaration", "Note", "Optional", "Required", "Recommended", etc.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>en</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>outputFile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path where the output schema file will be saved.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${pd}/out/TEILex0.rng</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>oxygenlib</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>Path to the Oxygen library folder.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${oxygenInstallDir}/lib</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>profile</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The profile of the output file, for example "tei", "oucs", "oucscourses", "enrich".</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>default</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                    </list>
-                                </field>
-                                <field name="jvmArgs">
-                                    <String>-Xmx256m</String>
-                                </field>
-                                <field name="useCustomJavaHome">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="customJavaHomeDir">
-                                    <String></String>
-                                </field>
-                                <field name="useCustomANTHome">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="customANTHomeDir">
-                                    <String></String>
-                                </field>
-                                <field name="workingDir">
-                                    <String>${cfd}</String>
-                                </field>
-                                <field name="showConsoleAlways">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="advancedOptionsMap">
-                                    <null/>
-                                </field>
-                                <field name="name">
-                                    <String>TEILex0: old ODD to RELAX NG (XML syntax)</String>
-                                </field>
-                                <field name="baseURL">
-                                    <null/>
-                                </field>
-                                <field name="footerURL">
-                                    <null/>
-                                </field>
-                                <field name="fOPMethod">
-                                    <null/>
-                                </field>
-                                <field name="fOProcessorName">
-                                    <null/>
-                                </field>
-                                <field name="headerURL">
-                                    <null/>
-                                </field>
-                                <field name="inputXSLURL">
-                                    <null/>
-                                </field>
-                                <field name="inputXMLURL">
-                                    <null/>
-                                </field>
-                                <field name="defaultScenario">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="isFOPPerforming">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="type">
-                                    <String>ANT</String>
-                                </field>
-                                <field name="saveAs">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="openInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="outputResource">
-                                    <null/>
-                                </field>
-                                <field name="openOtherLocationInBrowser">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="locationToOpenInBrowserURL">
-                                    <String></String>
-                                </field>
-                                <field name="openInEditor">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInHTMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInXMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInSVGPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInResultSetPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="useXSLTInput">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="xsltParams">
-                                    <list/>
-                                </field>
-                                <field name="cascadingStylesheets">
-                                    <String-array/>
-                                </field>
-                                <field name="xslTransformer">
-                                    <String>ANT</String>
-                                </field>
-                                <field name="extensionURLs">
-                                    <String-array>
-                                        <String>${oxygenHome}/classes/</String>
-                                        <String>${oxygenHome}/lib/oxygenCommons.jar</String>
-                                        <String>${oxygenHome}/lib/oxygen.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenAuthor.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenDeveloper.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenEclipse.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenAuthorEclipse.jar</String>
-                                        <String>${oxygenHome}/lib/oxygenDeveloperEclipse.jar</String>
-                                        <String>${oxygenHome}/lib/*resolver*.jar</String>
-                                        <String>${oxygenHome}/lib/*xerces*.jar</String>
-                                        <String>${oxygenHome}/lib/xmlresolver*.jar</String>
-                                        <String>${oxygenHome}/lib/*saxon*11*.jar</String>
-                                        <String>${oxygenHome}/lib/*saxon*10*.jar</String>
-                                        <String>${oxygenHome}/lib/*saxon*9*.jar</String>
-                                        <String>${oxygenHome}/lib/saxon.jar</String>
-                                        <String>${oxygenHome}/lib/xml-apis-ext.jar</String>
-                                        <String>${oxygenHome}/lib/oxygen-patched-slf4j.jar</String>
-                                        <String>${oxygenHome}/lib/logback-classic-*.jar</String>
-                                        <String>${oxygenHome}/lib/logback-core-*.jar</String>
-                                        <String>${oxygenHome}/lib/log4j-over-slf4j-*.jar</String>
-                                        <String>${oxygenHome}/lib/log4j-to-slf4j-*.jar</String>
-                                        <String>${oxygenHome}/lib/log4j-api-*.jar</String>
-                                        <String>${oxygenHome}/lib/oxygen-basic-utilities.jar</String>
                                     </String-array>
                                 </field>
                             </antScenario>
@@ -14125,16 +13363,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                         </xprocInputPort>
                                         <xprocInputPort>
                                             <field name="urls">
-                                                <String-array>
-                                                    <String>${pdu}/TEILex0.odd</String>
-                                                </String-array>
-                                            </field>
-                                            <field name="portName">
-                                                <String>source</String>
-                                            </field>
-                                        </xprocInputPort>
-                                        <xprocInputPort>
-                                            <field name="urls">
                                                 <String-array/>
                                             </field>
                                             <field name="portName">
@@ -14241,227 +13469,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                 </field>
                                 <field name="name">
                                     <String>TEILex0: Generate documentation</String>
-                                </field>
-                                <field name="baseURL">
-                                    <null/>
-                                </field>
-                                <field name="footerURL">
-                                    <null/>
-                                </field>
-                                <field name="fOPMethod">
-                                    <null/>
-                                </field>
-                                <field name="fOProcessorName">
-                                    <null/>
-                                </field>
-                                <field name="headerURL">
-                                    <null/>
-                                </field>
-                                <field name="inputXSLURL">
-                                    <String>${pdu}/xproc/teilex0.xpl</String>
-                                </field>
-                                <field name="inputXMLURL">
-                                    <String></String>
-                                </field>
-                                <field name="defaultScenario">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="isFOPPerforming">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="type">
-                                    <String>XPROC</String>
-                                </field>
-                                <field name="saveAs">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="openInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="outputResource">
-                                    <null/>
-                                </field>
-                                <field name="openOtherLocationInBrowser">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="locationToOpenInBrowserURL">
-                                    <String>${pdu}/../../docs/pages/TEILex0/TEILex0.html</String>
-                                </field>
-                                <field name="openInEditor">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInHTMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInXMLPane">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="showInSVGPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInResultSetPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="useXSLTInput">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="xsltParams">
-                                    <list/>
-                                </field>
-                                <field name="cascadingStylesheets">
-                                    <String-array/>
-                                </field>
-                                <field name="xslTransformer">
-                                    <String>Add-on for Calabash XProc Engine</String>
-                                </field>
-                                <field name="extensionURLs">
-                                    <String-array/>
-                                </field>
-                            </xprocScenario>
-                            <xprocScenario>
-                                <field name="inputPorts">
-                                    <xprocInputPort-array>
-                                        <xprocInputPort>
-                                            <field name="urls">
-                                                <String-array>
-                                                    <String>${pdu}/TEILex0.odd</String>
-                                                </String-array>
-                                            </field>
-                                            <field name="portName">
-                                                <String>source</String>
-                                            </field>
-                                        </xprocInputPort>
-                                        <xprocInputPort>
-                                            <field name="urls">
-                                                <String-array/>
-                                            </field>
-                                            <field name="portName">
-                                                <String>stylesheet-odd2odd</String>
-                                            </field>
-                                        </xprocInputPort>
-                                        <xprocInputPort>
-                                            <field name="urls">
-                                                <String-array/>
-                                            </field>
-                                            <field name="portName">
-                                                <String>stylesheet-odd2lite</String>
-                                            </field>
-                                        </xprocInputPort>
-                                        <xprocInputPort>
-                                            <field name="urls">
-                                                <String-array/>
-                                            </field>
-                                            <field name="portName">
-                                                <String>examples</String>
-                                            </field>
-                                        </xprocInputPort>
-                                        <xprocInputPort>
-                                            <field name="urls">
-                                                <String-array/>
-                                            </field>
-                                            <field name="portName">
-                                                <String>stylesheet-stripper</String>
-                                            </field>
-                                        </xprocInputPort>
-                                        <xprocInputPort>
-                                            <field name="urls">
-                                                <String-array/>
-                                            </field>
-                                            <field name="portName">
-                                                <String>exs</String>
-                                            </field>
-                                        </xprocInputPort>
-                                    </xprocInputPort-array>
-                                </field>
-                                <field name="outputPorts">
-                                    <xprocOutputPort-array>
-                                        <xprocOutputPort>
-                                            <field name="url">
-                                                <null/>
-                                            </field>
-                                            <field name="showInSequenceView">
-                                                <Boolean>true</Boolean>
-                                            </field>
-                                            <field name="portName">
-                                                <String>result</String>
-                                            </field>
-                                        </xprocOutputPort>
-                                        <xprocOutputPort>
-                                            <field name="url">
-                                                <null/>
-                                            </field>
-                                            <field name="showInSequenceView">
-                                                <Boolean>true</Boolean>
-                                            </field>
-                                            <field name="portName">
-                                                <String>secondary</String>
-                                            </field>
-                                        </xprocOutputPort>
-                                        <xprocOutputPort>
-                                            <field name="url">
-                                                <null/>
-                                            </field>
-                                            <field name="showInSequenceView">
-                                                <Boolean>true</Boolean>
-                                            </field>
-                                            <field name="portName">
-                                                <String>exsout</String>
-                                            </field>
-                                        </xprocOutputPort>
-                                    </xprocOutputPort-array>
-                                </field>
-                                <field name="xprocOptions">
-                                    <xprocOption-array/>
-                                </field>
-                                <field name="xprocParameters">
-                                    <xprocParameterPort-array>
-                                        <xprocParameterPort>
-                                            <field name="portName">
-                                                <String>*</String>
-                                            </field>
-                                            <field name="parameters">
-                                                <xprocParameter-array>
-                                                    <xprocParameter>
-                                                        <field name="namespaceURI">
-                                                            <String></String>
-                                                        </field>
-                                                        <field name="localName">
-                                                            <String>paramName1</String>
-                                                        </field>
-                                                        <field name="value">
-                                                            <null/>
-                                                        </field>
-                                                    </xprocParameter>
-                                                </xprocParameter-array>
-                                            </field>
-                                        </xprocParameterPort>
-                                        <xprocParameterPort>
-                                            <field name="portName">
-                                                <String>parameters</String>
-                                            </field>
-                                            <field name="parameters">
-                                                <xprocParameter-array>
-                                                    <xprocParameter>
-                                                        <field name="namespaceURI">
-                                                            <String></String>
-                                                        </field>
-                                                        <field name="localName">
-                                                            <String>paramName1</String>
-                                                        </field>
-                                                        <field name="value">
-                                                            <null/>
-                                                        </field>
-                                                    </xprocParameter>
-                                                </xprocParameter-array>
-                                            </field>
-                                        </xprocParameterPort>
-                                    </xprocParameterPort-array>
-                                </field>
-                                <field name="advancedOptionsMap">
-                                    <null/>
-                                </field>
-                                <field name="name">
-                                    <String>old TEILex0: Generate documentation</String>
                                 </field>
                                 <field name="baseURL">
                                     <null/>
