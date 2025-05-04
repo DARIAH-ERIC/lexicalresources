@@ -12119,6 +12119,46 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>xproc/teilex0.xpl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>TEILex0.parts/02__entries.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: Generate documentation</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XPROC</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>TEILex0.odd</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -12179,26 +12219,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>xproc/teilex0.xpl</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>stylesheets/TEILex0.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -12219,7 +12239,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>../../../../../../../Applications/Oxygen%20XML%20Editor/frameworks/tei/xml/tei/stylesheet/common/teianttasks.xml</String>
+                                    <String>file:/Applications/Oxygen%20XML%20Editor/frameworks/tei/xml/tei/stylesheet/common/teianttasks.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -12380,26 +12400,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>TEILex0.parts/06__usage.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: Generate documentation</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.parts/02__entries.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -13404,7 +13404,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                                 <String>odd2oddSource</String>
                                             </field>
                                             <field name="value">
-                                                <String>${frameworksDir}/tei/xml/tei/stylesheet/odds/odd2odd.xsl</String>
+                                                <String>${framework(TEI P5)}/xml/tei/stylesheet/odds/odd2odd.xsl</String>
                                             </field>
                                         </xprocOption>
                                         <xprocOption>
@@ -13415,7 +13415,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                                 <String>odd2liteSource</String>
                                             </field>
                                             <field name="value">
-                                                <String>${frameworksDir}/tei/xml/tei/stylesheet/odds/odd2lite.xsl</String>
+                                                <String>${framework(TEI P5)}/xml/tei/stylesheet/odds/odd2lite.xsl</String>
                                             </field>
                                         </xprocOption>
                                     </xprocOption-array>
@@ -13456,7 +13456,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                                             <String>defaultSource</String>
                                                         </field>
                                                         <field name="value">
-                                                            <String>${frameworks}/tei/xml/tei/odd/p5subset.xml</String>
+                                                            <String>${framework(TEI P5)}/xml/tei/odd/p5subset.xml</String>
                                                         </field>
                                                     </xprocParameter>
                                                 </xprocParameter-array>
