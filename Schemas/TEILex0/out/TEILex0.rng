@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-05-03T07:42:15Z. . 
+Schema generated from ODD source 2025-05-12T14:44:10Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -4971,7 +4971,7 @@ Suggested values include: 1] simple; 2] lemma; 3] variant; 4] compound; 5] deriv
          <ref name="att.typed.attribute.subtype"/>
          <attribute name="type">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionType; 6] mood; 7] number; 8] tense; 9] valency; 10] collocate; 11] government</a:documentation>
+Suggested values include: 1] pos; 2] aspect; 3] case; 4] degree; 5] gender; 6] government; 7] inflectionType; 8] mood; 9] number; 10] tense; 11] valency; 12] collocate</a:documentation>
             <choice>
                <value>pos</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -4979,7 +4979,11 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>case</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>degree</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>gender</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>government</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>inflectionType</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -4992,8 +4996,6 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                <value>valency</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>collocate</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>government</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <data type="Name"/>
             </choice>
@@ -5165,15 +5167,15 @@ Suggested values include: 1] pos; 2] aspect; 3] case; 4] gender; 5] inflectionTy
                <value>synonymy</value>
                <a:documentation>Relation between two lexical units X and Y which are syntactically identical and have the property that any declarative sentence S containing X has equivalent truth conditions to another sentence S’ which is identical to S, except that X is replaced by Y. (Adapted from Cruse (1986).)</a:documentation>
                <value>hyponymy</value>
-               <a:documentation>Relation between lexical units X and Y characterised by the property that the sentence This is a(n) X entails, but is not entailed by the sentence This is a(n) Y. (Adapted from Cruse (1986)) </a:documentation>
+               <a:documentation>Relation between lexical units X and Y characterised by the property that the sentence ‘This is a(n) X’ entails, but is not entailed by the sentence ‘This is a(n) Y’. (Adapted from Cruse (1986).) </a:documentation>
                <value>hypernymy</value>
-               <a:documentation>Relation between lexical heads X and Y characterised by the property that the sentence This is a(n) Y entails, but is not entailed by the sentence This is a(n) X. (Adapted from Cruse (1986)) </a:documentation>
+               <a:documentation>Relation between lexical heads X and Y characterised by the property that the sentence ‘This is a(n) Y’ entails, but is not entailed by the sentence ‘This is a(n) X’. (Adapted from Cruse (1986).) </a:documentation>
                <value>meronymy</value>
-               <a:documentation>An inclusion relation between lexical heads X and Y which reflect a potential part-whole relation between their referents in discourse. (Adapted from Cruse (2011, p. 140))</a:documentation>
+               <a:documentation>An inclusion relation between lexical heads X and Y which reflect a potential part-whole relation between their referents in discourse. (Adapted from Cruse (2011, p. 140).)</a:documentation>
                <value>antonymy</value>
                <a:documentation/>
                <value>related</value>
-               <a:documentation>The default reference to another lexical unit when no addtional information is available.</a:documentation>
+               <a:documentation>The default reference to another lexical unit when no additional information is available.</a:documentation>
             </choice>
          </attribute>
          <optional>

@@ -173,8 +173,8 @@
                         </valItem>
                         <valItem ident="hyponymy">
                             <desc> Relation between lexical units X and Y characterised by the
-                                property that the sentence This is a(n) X entails, but is not
-                                entailed by the sentence This is a(n) Y. (Adapted from Cruse (1986)) </desc>
+                                property that the sentence ‘This is a(n) X’ entails, but is not
+                                entailed by the sentence ‘This is a(n) Y’. (Adapted from Cruse (1986).) </desc>
                             <remarks>
                                 <p>Hyponymy and its converse hypernymy are the linguistic parallels
                                     of the relation of inclusion between two classes.</p>
@@ -185,8 +185,8 @@
                         </valItem>
                         <valItem ident="hypernymy">
                             <desc>Relation between lexical heads X and Y characterised by the
-                                property that the sentence This is a(n) Y entails, but is not
-                                entailed by the sentence This is a(n) X. (Adapted from Cruse (1986)) </desc>
+                                property that the sentence ‘This is a(n) Y’ entails, but is not
+                                entailed by the sentence ‘This is a(n) X’. (Adapted from Cruse (1986).) </desc>
                             <remarks>
                                 <p>Hyperonymy is the converse of hyponymy.</p>
                                 <p> Example: dog/animal (animal is a hypernym of dog)</p>
@@ -195,7 +195,7 @@
                         <valItem ident="meronymy">
                             <desc>An inclusion relation between lexical heads X and Y which reflect
                                 a potential part-whole relation between their referents in
-                                discourse. (Adapted from Cruse (2011, p. 140))</desc>
+                                discourse. (Adapted from Cruse (2011, p. 140).)</desc>
                             <remarks>
                                 <p>Example: finger:hand (finger is said to be a meronym of hand, and
                                     hand is said to be the holonym of finger).</p>
@@ -203,7 +203,7 @@
                         </valItem>
                         <valItem ident="antonymy"/>
                         <valItem ident="related">
-                            <desc>The default reference to another lexical unit when no addtional
+                            <desc>The default reference to another lexical unit when no additional
                                 information is available.</desc>
                         </valItem>
                         <!-- further values to be added there -->
@@ -700,11 +700,13 @@
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-case.html"
                             />
                         </valItem>
+                        <valItem ident="degree"/>
                         <valItem ident="gender">
                             <equiv name="gen"
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-gen.html"
                             />
                         </valItem>
+                        <valItem ident="government"/>
                         <valItem ident="inflectionType">
                             <equiv name="iType"
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-iType.html"
@@ -731,7 +733,6 @@
                                 uri="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-colloc.html"
                             />
                         </valItem>
-                        <valItem ident="government"/>
                     </valList>
                 </attDef>
             </attList>

@@ -117,7 +117,7 @@
             </titleStmt>
             <editionStmt>
                 <!--make sure to always update before publishing new version-->
-                <edition n="0.9.3"/>
+                <edition n="0.9.4"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
@@ -132,6 +132,11 @@
         </fileDesc>
         <revisionDesc>
             <listChange>
+                <listChange n="0.9.4">
+                    <change when="2024-05-12" type="xproc">fix documentation build on macOS and Windows in oXygen XML Editor</change>
+                    <change type="spec">added <code>degree</code> as <gi>gram</gi> <att>type</att> value</change>
+                    <change type="docs">fixed some typographical errors in the documentation</change>
+                </listChange>
                 <listChange n="0.9.3">
                     <change when="2024-02-12" type="spec"><gi>catDesc</gi> <hi rend="italic">must</hi> contain a <gi>term</gi></change>
                     <change type="spec">switch to using the external TEI add-on in oXygen when generating schema and documentation</change>
