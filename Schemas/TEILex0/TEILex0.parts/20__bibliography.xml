@@ -491,5 +491,21 @@
                 </imprint>
             </monogr>
         </biblStruct>
+        <biblStruct xml:id="MSS" type="dictionary" xml:lang="cs">
+            <monogr>
+                <author><persName><surname>Bělič</surname><forename>Jaromír</forename>
+                        </persName></author>
+                <author><persName><surname>Kamiš</surname><forename>Adolf</forename>
+                        </persName></author>
+                <author><persName><surname>Kučera</surname><forename>Karel</forename>
+                        </persName></author>
+                <title level="m" ref="https://vokabular.ujc.cas.cz/informace.aspx?t=MSS&amp;o=slovniky">Malý staročeský slovník</title>
+                <imprint>
+                    <date>1979</date>
+                    <pubPlace>Praha</pubPlace>
+                    <publisher>Státní pedagogické nakladatelství</publisher>
+                </imprint>
+            </monogr>
+        </biblStruct>
     </listBibl>
 </div>
