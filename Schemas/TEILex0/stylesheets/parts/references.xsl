@@ -120,7 +120,8 @@
         <xsl:if test="tei:author/tei:orgName">
             <xsl:value-of select="tei:author/tei:orgName"/>
         </xsl:if>
-        <xsl:if test="tei:author/tei:persName">
+        <xsl:apply-templates select="tei:author[tei:persName]" mode="#current" />
+        <xsl:if test="tei:author/tei:persName" use-when="false()">
             <!-- this needs to be extended to include multiple authors
             TODO create a separate template for puncutation and "ands" when listing authors-->
             <xsl:value-of select="tei:author/tei:persName/tei:surname"/>
@@ -129,7 +130,16 @@
                 <xsl:value-of select="tei:author/tei:persName/tei:forename"/>
             </xsl:if>
         </xsl:if>
-        <xsl:text>. </xsl:text>
+        <xsl:choose>
+            <!-- <forename>D. A.</forename> -->
+            <xsl:when test="count(tei:author) eq 1 and tei:author/tei:persName/tei:forename[ends-with(., '.')]">
+                <xsl:text> </xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>. </xsl:text>                
+            </xsl:otherwise>
+        </xsl:choose>
+        
         <xsl:value-of select="tei:imprint/tei:date"/>
         <xsl:text>. </xsl:text>
         <i xmlns="http://www.w3.org/1999/xhtml">
@@ -174,6 +184,41 @@
             <xsl:apply-templates select="tei:idno"/>
             <xsl:text>.</xsl:text>
         </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="tei:author[tei:persName]" mode="teilex0-monogr">
+        <xsl:choose>
+            <xsl:when test="position() eq last() and position() ne 1">
+                <xsl:text> and </xsl:text>
+            </xsl:when>
+            <xsl:when test="position() != last() and position() ne 1">
+                <xsl:text>, </xsl:text>
+            </xsl:when>
+        </xsl:choose>
+        <xsl:choose>
+            <xsl:when test="position() eq 1">
+                <xsl:apply-templates select="tei:persName" mode="first-name" />
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates select="tei:persName" mode="next-name" />
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template match="tei:author/tei:persName" mode="first-name">
+        <xsl:value-of select="tei:surname"/>
+        <xsl:if test="tei:forename">
+            <xsl:text>, </xsl:text>
+            <xsl:value-of select="tei:forename"/>
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="tei:author/tei:persName" mode="next-name">
+        <xsl:if test="tei:forename">
+            <xsl:value-of select="tei:forename"/>
+            <xsl:text> </xsl:text>
+        </xsl:if>
+        <xsl:value-of select="tei:surname"/>
     </xsl:template>
 
     <!--formatting ref-->
