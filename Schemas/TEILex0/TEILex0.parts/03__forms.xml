@@ -126,6 +126,16 @@
         </div>
     </div>
     <div>
+        <head>Condensed forms</head>
+        <p><!-- TODO: description --> </p>
+        <figure>
+            <graphic url="https://imgur.com/a/leleti-s-iRYgqoe" rend="padded"/>
+        </figure>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#MSS">
+            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="MSS.leleti" />
+        </egXML>
+    </div>
+    <div>
         <head>Multiword expressions</head>
         <p>The Dictionary Chapter of the TEI Guidelines is very sparse when it comes to
             recommendations for encoding polylexical units. The only mention of the adjective
@@ -169,15 +179,5 @@
                 <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.bombeiro"/>
             </egXML>
         </div>
-    </div>
-    <div>
-        <head>Condensed forms</head>
-        <p><!-- TODO: description --> </p>
-        <figure>
-            <graphic url="https://imgur.com/a/leleti-s-iRYgqoe" rend="padded"/>
-        </figure>
-        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#MSS">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="MSS.leleti" />
-        </egXML>
     </div>
 </div>
