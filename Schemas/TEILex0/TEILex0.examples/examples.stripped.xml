@@ -1690,6 +1690,7 @@ then transform using tei-stripper.xsl-->
                   <gram type="number" value="singular"/>
                   <gram type="tense" value="present"/>
                   <gram type="mood" value="indicative"/>
+                  <gram type="valency" value="reflexive"/>
                </gramGrp>
             </form>
             <form type="inflected">
@@ -1699,15 +1700,15 @@ then transform using tei-stripper.xsl-->
                   <gram type="number" value="singular"/>
                   <gram type="tense" value="present"/>
                   <gram type="mood" value="indicative"/>
+                  <gram type="valency" value="reflexive"/>
                </gramGrp>
             </form>
             <gramGrp>
                <gram type="aspect" expand="nedokonavé" value="imperfective">ned.</gram>
+               <gram type="pos" value="verb"/>
             </gramGrp>
             <sense xml:id="MSS.leleti.sense.1">
-               <lbl>vlnit (se), kolébat (se)</lbl>
-               <def resp="#boris" value="vlnit, kolébat"/>
-               <def resp="#boris" value="vlnit se, kolébat se"/>
+               <def>vlnit (se), kolébat (se)</def>
             </sense>
          </entry>
       </body>
