@@ -33,7 +33,7 @@
                             </xsl:if>
                         </xsl:when>
                         <xsl:when test="position() eq last()">
-                            <xsl:text> and </xsl:text>
+                            <xsl:text>, and </xsl:text>
                             <xsl:if test="tei:persName/tei:forename">
                                 <xsl:value-of select="tei:persName/tei:forename"/>
                                 <xsl:text> </xsl:text>
