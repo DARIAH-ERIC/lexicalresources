@@ -1656,7 +1656,7 @@ then transform using tei-stripper.xsl-->
             </sense>
          </entry>
          <entry xml:lang="cs-x-old" type="mainEntry" xml:id="MSS.leleti">
-            <lbl>leleti (sě)</lbl>
+            <lbl type="condensedLemmas">leleti (sě)</lbl>
             <form type="lemma" resp="#boris">
                <orth value="leleti"/>
             </form>
@@ -1664,7 +1664,7 @@ then transform using tei-stripper.xsl-->
                <orth value="leleti sě"/>
             </form>
             <metamark function="delimiter">, </metamark>
-            <lbl type="short">-eju, -éš (sě)</lbl>
+            <lbl type="condensedInflectedForms">-eju, -éš (sě)</lbl>
             <form type="inflected" resp="#boris">
                <orth value="leleju"/>
                <gramGrp>

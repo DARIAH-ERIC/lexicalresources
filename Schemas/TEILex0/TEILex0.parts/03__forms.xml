@@ -152,8 +152,8 @@
             combining <code>ask</code> (“to pose a question”) and <code>ask oneself</code> (“to
             wonder, to reflect”) in a single entry as one condensed lemma.</p>
         <p>Because bracketed constructions such as <code>leleti (sě)</code> do not represent
-            naturally occurring word forms, we recommend treating these condensed forms as labels
-            rather than lemmas. From an encoding perspective, this means using <gi>lbl</gi> to
+            naturally occurring word forms, we recommend treating these condensed forms as labels (<gi>lbl</gi>)
+            rather than lemmas. From an encoding perspective, this means using <code>lbl[@type="condensedLemma"]</code> to
             represent the compacted headword for display or identification purposes, while defining
             each of the component lemmas separately using individual <gi>form</gi> elements:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#MSS">
