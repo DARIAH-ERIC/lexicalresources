@@ -43,13 +43,15 @@
             <graphic url="https://i.imgur.com/JxXgsjl.jpg"/>
         </figure>
         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#Chambers2014">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="CH.go1"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="CH.go1"/>
         </egXML>
         <p>Or take this example: <hi rend="bold">abeceda, -y</hi>: in Czech, "-y" is a genitive
             singular suffix for feminine nouns. We can mark-up the grammatical properties of the
             suffix, while providing the full form of the noun as well:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="en000008"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="en000008"/>
         </egXML>
     </div>
     <div>
@@ -64,7 +66,8 @@
             machines, or one for each stem of a verb. Each paradigm type should be distinguished by
             the <att>subtype</att> attribute.</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="perder"/>
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="perder"/>
         </egXML>
     </div>
     <div>
@@ -80,13 +83,15 @@
                 of the options with the corresponding examples.</p>
             <p>Spelling variation due to change in language’s orthography convention:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="Flussschifffahrt"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="Flussschifffahrt"/>
             </egXML>
             <p>The following example is from American English in which due to the lack of official
                 conventions for transliteration of Arabic orthography to the English (Latin) script,
                 the initial vowel in the surname ‘Osama Bin Laden’ varies between ‘O’ and ‘U’:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="Osama"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="Osama"/>
             </egXML>
         </div>
         <div>
@@ -95,18 +100,20 @@
                 the lemma and phonetic transcriptions of the two roughly equally used variant
                 pronunciations of the word 'caramel' from American English.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="caramel-prons">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="caramel-en"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="caramel-en"/>
             </egXML>
             <floatingText type="inFocusPanel" xml:id="multiple-variants">
                 <body>
                     <head>multiple variants</head>
                     <p>In the example <ref target="#caramel-prons">above</ref>, one could have
-                        chosen to mark up two different pronunciations using two <gi>pron</gi> elements inside the <code
-                            rend="language-xpath">form[@type="lemma"]</code>. Considering, however,
-                        that each individual pronunciation could, in theory, be further qualified,
-                        for instance, by a <gi>usg</gi> note, indicating the geographic area in
-                        which the said pronunciation is used, TEI Lex-0 recommends that multiple variants,
-                        whether orthographic or orthoepic, be contained each in its own <gi>form</gi> element.</p>
+                        chosen to mark up two different pronunciations using two <gi>pron</gi>
+                        elements inside the <code rend="language-xpath">form[@type="lemma"]</code>.
+                        Considering, however, that each individual pronunciation could, in theory,
+                        be further qualified, for instance, by a <gi>usg</gi> note, indicating the
+                        geographic area in which the said pronunciation is used, TEI Lex-0
+                        recommends that multiple variants, whether orthographic or orthoepic, be
+                        contained each in its own <gi>form</gi> element.</p>
                 </body>
             </floatingText>
         </div>
@@ -116,24 +123,73 @@
                 word for the city of Oaxaca between speakers from the village of Yucanany and the
                 rest of the speakers. Since the Yucanany variety makes up only a small portion of
                 the speakers of the language, this case of variation is represented as an embedded
-                    <code rend="language-xpath">form[@type="variant"]</code> within the lemma. Note the use of
-                    <code rend="language-xpath">usg[@type="geographic"]/placeName</code> to explicitly specify this feature in
-                addition to the use of the private language subtag
-                    (<code rend="language-xpath">@xml:lang="mix-x-YCNY"</code>) as per <ref>BCP 47</ref>.</p>
+                    <code rend="language-xpath">form[@type="variant"]</code> within the lemma. Note
+                the use of <code rend="language-xpath">usg[@type="geographic"]/placeName</code> to
+                explicitly specify this feature in addition to the use of the private language
+                subtag (<code rend="language-xpath">@xml:lang="mix-x-YCNY"</code>) as per <ref>BCP
+                    47</ref>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="Oaxaca-MIX"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="Oaxaca-MIX"/>
             </egXML>
         </div>
     </div>
     <div>
         <head>Condensed forms</head>
-        <p><!-- TODO: description --> </p>
+        <p>In some lexicographic traditions, it is common to encounter dictionary entries that
+            conflate two or more distinct lemmas into a single entry headword. A frequent example of
+            this is the combination of a base verb and its reflexive variant in Savic languages.
+            While such pairings may suggest morphological or derivational relationships, they are
+            more than just inflectional variants: they can sometimes represent distinct lexical
+            items, each with its own semantics and usage. </p>
+        <p>To illustrate this phenomenon, consider the Old Czech verb <code>leleti</code> and its
+            reflexive counterpart <code>leleti sě</code>. These can be presented in a print
+            dictionary in a condensed, shorthand form such as <code>leleti (sě)</code>.</p>
         <figure>
-            <graphic url="https://imgur.com/a/leleti-s-iRYgqoe" rend="padded"/>
+            <graphic url="https://imgur.com/Dm57uLO.png" rend="padded"/>
         </figure>
+        <p>In English, this would be comparable to a hypothetical lemma <code>ask (oneself)</code>
+            combining <code>ask</code> (“to pose a question”) and <code>ask oneself</code> (“to
+            wonder, to reflect”) in a single entry as one condensed lemma.</p>
+        <p>Because bracketed constructions such as <code>leleti (sě)</code> do not represent
+            naturally occurring word forms, we recommend treating these condensed forms as labels
+            rather than lemmas. From an encoding perspective, this means using <gi>lbl</gi> to
+            represent the compacted headword for display or identification purposes, while defining
+            each of the component lemmas separately using individual <gi>form</gi> elements:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#MSS">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="MSS.leleti" />
+            <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                corresp="../TEILex0.examples/examples.xml" xpointer="MSS.leleti"/>
         </egXML>
+        <p>Above, the <att>value</att> attribute is used to supply reconstructed or editorially
+            inferred lemma forms that do <hi rend="italic">not</hi> appear explicitly in the print
+            source. This distinction is crucial for digital representations of legacy lexica, where
+            not all valid headwords are explicitly listed in the original. In TEI Lex-0, it is
+            common to encode lemmas that are not physically present in the printed source using the
+                <att>value</att> attribute on <gi>orth</gi>, rather than placing the text directly
+            as content within the element.</p>
+        <floatingText type="inFocusPanel" xml:id="indexing-condensed-lemmas">
+            <body>
+                <head>indexing condensed lemmas</head>
+                <p>If we encode regular lemmas (those present in the source) as
+                        <code>//form[@type='lemma']/orth</code> and reconstructed lemmas (those
+                    inferred or editorially supplied) as
+                        <code>//form[@type='lemma']/orth/@value</code>, we will no longer have a
+                    uniform path for indexing the dictionary. This is because two kinds of lemmas
+                    will reside on different XPaths. This, however, is a necessary and principled
+                    compromise.</p>
+                <p>The suggested encoding and expansion of condensed lemmas allow users
+                    and systems to reconstruct the full lemma inventory of a dictionary, including
+                    analytically significant forms absent from the source. At the same time, they
+                    make explicit which forms are present in the original and which have been
+                    editorially supplied, thus preserving presentational fidelity to the print source while enhancing
+                    searchability, machine processing, and downstream applications.</p>
+                <p>To support robust querying, it is, therefore, recommended that documentation or downstream
+                    systems account for this distinction, for instance by using the combined XPath
+                    expression such as <code>//form[@type='lemma']/orth/text() |
+                        //form[@type='lemma']/orth/@value</code> to get to the consolidated list of
+                    both explicit and implicit lemmas.</p>
+            </body>
+        </floatingText>
     </div>
     <div>
         <head>Multiword expressions</head>
@@ -166,8 +222,9 @@
                 <graphic url="https://imgur.com/gcsqdhb.jpg" rend="padded"/>
             </figure>
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DLPC2014">
-            <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.descalçar"/>
-        </egXML>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.descalçar"/>
+            </egXML>
         </div>
         <div>
             <head>Idiomatic expressions</head>
@@ -176,7 +233,8 @@
                 <graphic url="https://i.imgur.com/VXwxggA.jpg" rend="padded"/>
             </figure>
             <egXML xmlns="http://www.tei-c.org/ns/Examples" source="#DLPC2014">
-                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.bombeiro"/>
+                <xi:include href="../TEILex0.examples/examples.stripped.xml"
+                    corresp="../TEILex0.examples/examples.xml" xpointer="DLPC.bombeiro"/>
             </egXML>
         </div>
     </div>
