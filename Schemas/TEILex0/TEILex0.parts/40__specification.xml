@@ -22,9 +22,10 @@
         <!--2019-07-04 (TT): added graphic, we need it for images! -->
         <!--2021-09-19 (TT): added monogr for header expansion-->
         <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
+        <!--2025-11-27 (TT): added desc, needed for language profiles-->
         <moduleRef key="core"
             include="author head title cit quote bibl biblStruct biblScope listBibl gloss
-                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan"/>
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan desc"/>
         <!--PB's simplified textstructure declaratiopn-->
         <moduleRef key="textstructure" include="TEI text body div front back"/>
         <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
@@ -45,7 +46,12 @@
             notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition taxonomy category catDesc change principal"/>
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
         <!--        2021-09-19 (TT): added forename, surname; need for detailed biblStruct/author/persName-->
-        <moduleRef key="namesdates" include="placeName persName orgName forename surname affiliation"/>
+        <!--        2021-11-27 (TT): added place, person, personGrp needed for language profiles-->
+        <moduleRef key="namesdates" include="placeName persName orgName forename surname affiliation place person personGrp"/>
+        <!--2020-11-27 (TT): added ident, needed for language profiles -->
+        <moduleRef key="tagdocs" include="ident"/>
+        <!--2020-11-27 (TT): added channel, interaction needed for language profiles -->
+        <moduleRef key="corpus" include="channel interaction domain purpose"/>
         <!-- for dialectal properties -->
         <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
         <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->
@@ -570,8 +576,10 @@
             and the human-readable name of the language as a child text node 
             of <language>, not all that baggage -->
             <content>
-                <textNode/>
+                <!--<textNode/>-->
+                <macroRef key="model.languageProfile"/>
             </content>
+            
             <!--2021-09-21 (TT): add @role so that we can properly document language use in the header-->
             <attList>
                 <attDef ident="role" mode="add" usage="req">
@@ -627,6 +635,90 @@
                     object language as either a source language or a target language.</p>
             </remarks>
         </elementSpec>
+        <elementSpec ident="name" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="ident" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="place" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="date" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="person" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="personGrp" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="channel" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="interaction" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="domain" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="purpose" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="desc" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="note" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="place" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="listPlace" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
         <!--2021-09-24 (TT): make profileDesc required to document use of languages in langUsage-->
         <elementSpec ident="teiHeader" mode="change">
             <content>
@@ -796,7 +888,17 @@
                 </egXML>
             </exemplum>
         </elementSpec>
+        <elementSpec ident="bibl" mode="change">
+            <!--2025-11-27 (TT): added to to model.languageProfile-->
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
         <elementSpec ident="listBibl" mode="change">
+            <!--2025-11-27 (TT): added to to model.languageProfile-->
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
             <attList>
                 <attDef ident="type" mode="change" usage="req">
                     <valList type="semi" mode="change">
@@ -880,6 +982,16 @@
             <classes mode="change">
                 <memberOf key="model.lexicalInter"></memberOf>
             </classes>
+        </classSpec>
+        
+        <!-- 2023-11-27 (TT) model.languageProfile-->
+        <classSpec ident="model.languageProfile" type="model">
+            <desc>
+                Groups all elements used to describe a language or language variety:
+                identifiers, names, space/time metadata, social and personal
+                characteristics, medium, and communicative functioning, following
+                ISO 21636.
+            </desc>   
         </classSpec>
         
        <!-- 2023-04-22 (TT) model.lexicalPhrase-->
