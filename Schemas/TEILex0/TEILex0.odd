@@ -116,8 +116,8 @@
                 </author>
             </titleStmt>
             <editionStmt>
-                <!--make sure to always update before publishing new version-->
-                <edition n="0.9.4"/>
+                <!--make sure to remove the dev suffix before publishing a new release-->
+                <edition n="0.9.5-dev"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
