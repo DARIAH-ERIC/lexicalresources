@@ -30,7 +30,6 @@
             <monogr>
                 <title level="m">The Oxford Guide to Practical Lexicography</title>
                 <idno type="ISBN">9780199277711</idno>
-                <idno type="callNumber">P327 .A88 2008</idno>
                 <author>
                     <persName>
                         <forename>B. T. S.</forename>
@@ -488,6 +487,22 @@
                     <pubPlace>Београд</pubPlace>
                     <publisher>Институт за српски језик САНУ и Центар за дигиталне хуманистичке
                         науке</publisher>
+                </imprint>
+            </monogr>
+        </biblStruct>
+        <biblStruct xml:id="MSS" type="dictionary" xml:lang="cs">
+            <monogr>
+                <author><persName><surname>Bělič</surname><forename>Jaromír</forename>
+                        </persName></author>
+                <author><persName><surname>Kamiš</surname><forename>Adolf</forename>
+                        </persName></author>
+                <author><persName><surname>Kučera</surname><forename>Karel</forename>
+                        </persName></author>
+                <title level="m" ref="https://vokabular.ujc.cas.cz/informace.aspx?t=MSS&amp;o=slovniky">Malý staročeský slovník</title>
+                <imprint>
+                    <date>1979</date>
+                    <pubPlace>Praha</pubPlace>
+                    <publisher>Státní pedagogické nakladatelství</publisher>
                 </imprint>
             </monogr>
         </biblStruct>

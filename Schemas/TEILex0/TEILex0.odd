@@ -116,8 +116,8 @@
                 </author>
             </titleStmt>
             <editionStmt>
-                <!--make sure to always update before publishing new version-->
-                <edition n="0.9.4"/>
+                <!--make sure to remove the dev suffix before publishing a new release-->
+                <edition n="0.9.5-dev"/>
             </editionStmt>
             <publicationStmt>
                 <authority>DARIAH Working Group on Lexical Resources</authority>
@@ -132,6 +132,9 @@
         </fileDesc>
         <revisionDesc>
             <listChange>
+                <listChange n="0.9.5">
+                    <change when="2024-11-27" type="docs">Added documentation on encoding condensed forms a là "leleti (sě)"</change>
+                </listChange>
                 <listChange n="0.9.4">
                     <change when="2024-05-12" type="xproc">fix documentation build on macOS and Windows in oXygen XML Editor</change>
                     <change type="spec">added <code>degree</code> as <gi>gram</gi> <att>type</att> value</change>
