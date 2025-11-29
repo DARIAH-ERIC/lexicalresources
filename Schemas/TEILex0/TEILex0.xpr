@@ -12119,7 +12119,47 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>TEILex0.parts/40__specification.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: ODD to RELAX NG XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>TEILex0.odd</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>TEILex0: ODD to RELAX NG XML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>out/TEILex0.rng</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -12149,26 +12189,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>TEILex0.parts/40__specification.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: ODD to RELAX NG XML</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>ANT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -12249,26 +12269,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>XPROC</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>out/TEILex0.rng</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>TEILex0: ODD to RELAX NG XML</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>ANT</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -12879,6 +12879,29 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                     <list>
                                         <antParameter>
                                             <field name="name">
+                                                <String>defaultSource</String>
+                                            </field>
+                                            <field name="description">
+                                                <String>TEI source file.</String>
+                                            </field>
+                                            <field name="value">
+                                                <String>${framework(TEI P5)}/xml/tei/odd/p5subset.xml</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <null/>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>5</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </antParameter>
+                                        <antParameter>
+                                            <field name="name">
                                                 <String>inputFile</String>
                                             </field>
                                             <field name="description">
@@ -12992,29 +13015,6 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                                 <null/>
                                             </field>
                                         </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>defaultSource</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>TEI source file.</String>
-                                            </field>
-                                            <field name="value">
-                                                <String>${framework(TEI P5)}/xml/tei/odd/p5subset.xml</String>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <null/>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
                                     </list>
                                 </field>
                                 <field name="jvmArgs">
@@ -13036,7 +13036,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="showConsoleAlways">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="advancedOptionsMap">
                                     <null/>
@@ -13090,7 +13090,7 @@ oxy:current-selected-element()[ancestor-or-self::*:cell[namespace-uri()='http://
                                     <String>${pd}/out/TEILex0.rng</String>
                                 </field>
                                 <field name="openInEditor">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="showInHTMLPane">
                                     <Boolean>false</Boolean>
