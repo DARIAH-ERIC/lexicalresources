@@ -610,10 +610,10 @@
             <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <langUsage>
-                        <language ident="ru" role="objectLanguage" xml:lang="ru"><name>Русский литературный язык XIX века</name></language>
+                        <language ident="ru-x-lit19c" role="objectLanguage" xml:lang="ru"><name>Русский литературный язык XIX века</name></language>
                         <language ident="ru" role="workingLanguage" xml:lang="ru"><name>Современный русский язык</name></language>
                         <language ident="ru-x-lit19c" role="objectLanguage" xml:lang="en"><name>19th-century literary Russian</name></language>
-                        <language ident="ru-x-lit19c" role="workingLanguage" xml:lang="en"><name>Modern Russian</name></language>
+                        <language ident="ru" role="workingLanguage" xml:lang="en"><name>Modern Russian</name></language>
                 </langUsage>
                 </egXML>
             </exemplum>
