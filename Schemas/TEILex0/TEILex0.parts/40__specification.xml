@@ -23,9 +23,10 @@
         <!--2021-09-19 (TT): added monogr for header expansion-->
         <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
         <!--2025-11-29 (TT): added ruby-->
+        <!--2025-12-06 (TT): added measure as per https://github.com/DARIAH-ERIC/lexicalresources/issues/257 -->
         <moduleRef key="core"
             include="author head title cit quote bibl biblStruct biblScope listBibl gloss
-                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan ruby rb rt"/>
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan ruby rb rt measure"/>
         <!--PB's simplified textstructure declaratiopn-->
         <moduleRef key="textstructure" include="TEI text body div front back"/>
         <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
