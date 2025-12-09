@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file should not be edited manually. 
+To edit examples, please use TEILex0-examples.xml, 
+then transform using tei-stripper.xsl-->
+<stylesheet xmlns="http://www.tei-c.org/ns/Examples"
+            exclude-result-prefixes="xs"
+            version="2.0">
+    
+    <!-- remember to deselect xml:base fixup in XML Parser Preferences in oXygen-->
+    <!--    otherwise, included fragments will probably include xml:base, which we don't want-->
+   <output method="xml" encoding="UTF-8" indent="yes"/>
+   <template match="/">
+      <text>
+</text>
+      <text>
+</text>
+      <comment>This file should not be edited manually. 
+To edit examples, please use TEILex0-examples.xml, 
+then transform using tei-stripper.xsl</comment>
+      <text>
+</text>
+      <text>
+</text>
+      <apply-templates/>
+   </template>
+   <!-- template to copy elements -->
+   <template match="*">
+      <element name="{local-name()}" namespace="http://www.tei-c.org/ns/Examples">
+         <apply-templates select="@* | node()"/>
+      </element>
+   </template>
+   <!-- template to copy attributes -->
+   <template match="@* except @xml:*">
+      <attribute name="{local-name()}">
+         <value-of select="."/>
+      </attribute>
+   </template>
+   <template match="@xml:*">
+      <copy/>
+   </template>
+   <!-- template to copy the rest of the nodes -->
+   <template match="comment()  | processing-instruction() | text()">
+      <copy/>
+   </template>
+</stylesheet>

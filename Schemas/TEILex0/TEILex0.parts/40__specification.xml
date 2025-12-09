@@ -22,11 +22,12 @@
         <!--2019-07-04 (TT): added graphic, we need it for images! -->
         <!--2021-09-19 (TT): added monogr for header expansion-->
         <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
+        <!--2025-11-27 (TT): added desc, needed for language profiles-->
         <!--2025-11-29 (TT): added ruby-->
         <!--2025-12-06 (TT): added measure as per https://github.com/DARIAH-ERIC/lexicalresources/issues/257 -->
         <moduleRef key="core"
             include="author head title cit quote bibl biblStruct biblScope listBibl gloss
-                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan ruby rb rt measure"/>
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan desc ruby rb rt measure"/>
         <!--PB's simplified textstructure declaratiopn-->
         <moduleRef key="textstructure" include="TEI text body div front back"/>
         <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
@@ -44,10 +45,14 @@
         <!--2022-03-24 (TT): add taxonomy-->
         <moduleRef key="header"
             include="teiHeader fileDesc profileDesc titleStmt editionStmt extent publicationStmt sourceDesc encodingDesc revisionDesc xenoData editorialDecl projectDesc seriesStmt
-            notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition taxonomy category catDesc change principal"/>
+            notesStmt authority distributor idno edition availability licence appInfo classDecl namespace tagUsage tagsDecl rendition taxonomy category catDesc change principal language"/>
         <!--2020-05-24 (TT): added persName and orgName; need them for bibliographies-->
         <!--        2021-09-19 (TT): added forename, surname; need for detailed biblStruct/author/persName-->
-        <moduleRef key="namesdates" include="placeName persName orgName forename surname affiliation"/>
+        <!--        2021-11-27 (TT): added a bunch of elements from model.persStateLike for language profiles-->
+        <moduleRef key="namesdates" include="placeName persName orgName forename surname place person personGrp affiliation age education faith floruit gender langKnowledge langKnown nationality occupation persName persPronouns persona residence sex socecStatus state trait"/>
+        <!--2020-11-27 (TT): added ident, channel, interaction, domain, purpose, settingDesc needed for language profiles -->
+        <moduleRef key="tagdocs" include="ident"/>
+        <moduleRef key="corpus" include="channel interaction domain purpose settingDesc"/>
         <!-- for dialectal properties -->
         <moduleRef key="tei" except="correspAction correspContext correspDesc"/>
         <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->
@@ -55,10 +60,10 @@
         
         <elementSpec ident="catDesc" mode="change">
             <content>
-                <elementRef key="term"/>
-                <alternate minOccurs="0">
-                    <elementRef key="gloss"/>
-                </alternate>  
+                <sequence>
+                    <elementRef key="term"/>
+                    <elementRef key="gloss" minOccurs="0" maxOccurs="1"/>
+                </sequence>   
             </content>
         </elementSpec>
         
@@ -92,7 +97,7 @@
             <attList>
                 <attDef ident="xml:id" mode="change" usage="req"/>
                 <attDef ident="xml:lang" mode="change" usage="req"/>
-                <attDef ident="type" mode="replace" usage="rec">
+                <attDef ident="type" mode="replace" usage="req">
                     <defaultVal>mainEntry</defaultVal>
                     <valList mode="change" type="semi">
                         <valItem ident="mainEntry"/>
@@ -539,15 +544,17 @@
             </classes>
             <!-- 2021-09-23 (TT): make language required-->
             <content>
-                <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
-                <elementRef key="language" minOccurs="1" maxOccurs="unbounded"/>
+                <sequence>
+                    <classRef key="model.pLike" minOccurs="0" maxOccurs="unbounded"/>
+                    <elementRef key="language" minOccurs="1" maxOccurs="unbounded"/>
+                </sequence>
             </content>
             <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <langUsage>
-                        <language ident="chu" role="sourceLanguage">Old Church Slavic</language>
-                        <language ident="la" role="targetLanguage">Latin</language>
-                        <language ident="grc" role="targetLanguage">(Premodern) Greek</language>
+                        <language ident="chu" role="sourceLanguage"><name>Old Church Slavic</name></language>
+                        <language ident="la" role="targetLanguage"><name>Latin</name></language>
+                        <language ident="grc" role="targetLanguage"><name>(Premodern) Greek</name></language>
                 </langUsage>
                 </egXML>
             </exemplum>
@@ -558,27 +565,31 @@
                 <classRef key="model.profileDescPart" minOccurs="1" maxOccurs="unbounded"/>
             </content>
         </elementSpec>
-        <elementRef key="language"/>
         <elementSpec ident="language" mode="change">
-            <classes mode="change">
-                <memberOf key="att.global" mode="delete"/>
+            <classes mode="replace">
                 <memberOf key="att.global.rendition" mode="delete"/>
                 <memberOf key="att.global.linking" mode="delete"/>
                 <memberOf key="att.global.analytic" mode="delete"/>
                 <memberOf key="att.global.facs" mode="delete"/>
                 <memberOf key="att.global.responsibility" mode="delete"/>
                 <memberOf key="att.global.source" mode="delete"/>
+                <memberOf key="att.typed" mode="add"></memberOf>
             </classes>
             <!-- text node here is to remove the insane macro.phraseSeq.limited
             which we really don't need; we want language ident in an attribute
             and the human-readable name of the language as a child text node 
             of <language>, not all that baggage -->
             <content>
-                <textNode/>
+                <alternate minOccurs="0"
+                    maxOccurs="unbounded">
+                    <macroRef key="model.languageProfile"  />
+                </alternate>
             </content>
+            
             <!--2021-09-21 (TT): add @role so that we can properly document language use in the header-->
             <attList>
                 <attDef ident="role" mode="add" usage="req">
+                    
                     <valList mode="add" type="closed">
                         <valItem ident="objectLanguage">
                             <desc>Object language is the "language being described." (ISO
@@ -598,39 +609,126 @@
                         </valItem>
                     </valList>
                 </attDef>
+                <attDef ident="status"></attDef>
             </attList>
             <exemplum>
+                <p>When the human-readable name(s) of languages are provided in multiple languages, the
+                    attribute <att>xml:lang</att> should be used on <gi>language</gi></p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <langUsage>
-                        <language ident="ru" role="objectLanguage" xml:lang="ru">Русский литературный язык XIX века</language>
-                        <language ident="ru" role="workingLanguage" xml:lang="ru">Современный русский язык</language>
-                        <language ident="ru" role="objectLanguage" xml:lang="en">19th-century literary Russian</language>
-                        <language ident="ru" role="workingLanguage" xml:lang="en">Modern Russian</language>
-                </langUsage>
+                   <xi:include href="../TEILex0.examples/headers/LanguageProfileExamples.stripped.xml"
+                        corresp="../TEILex0.examples/headers/LanguageProfileExamples.xml"
+                        xpointer="element(/1/1/2/1)"/>
                 </egXML>
             </exemplum>
             <exemplum>
+                <p>Bilingual or multilingual dictionaries could be documented as having two or more object languages. In
+                    those cases, however, it is recommended -- and more precise -- to describe each
+                    object language as either a source language or a target language.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">  
                     <langUsage>
-                        <language ident="chu" role="sourceLanguage">Old Church Slavic</language>
-                        <language ident="la" role="targetLanguage">Latin</language>
-                        <language ident="grc" role="targetLanguage">(Premodern) Greek</language>
+                        <language ident="chu" role="sourceLanguage"><name>Old Church Slavic</name></language>
+                        <language ident="la" role="targetLanguage"><name>Latin</name></language>
+                        <language ident="grc" role="targetLanguage"><name>(Premodern) Greek</name></language>
                     </langUsage>   
                 </egXML>
             </exemplum>
+            <exemplum>
+                <p>The <att>ident</att> attribute is required and is used to indicate the language code used for the given lanuguage
+                variety in the rest of the dictionary. If multiple language identifiers exist for the given language variety, they should
+                be encoded using the <gi>ident</gi> element.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xi:include href="../TEILex0.examples/headers/LanguageProfileExamples.stripped.xml"
+                        corresp="../TEILex0.examples/headers/LanguageProfileExamples.xml"
+                        xpointer="element(/1/1/2/2)"/>
+                </egXML>
+            </exemplum>
             <remarks>
+                <!--Remarks appear as a note before examples.-->
                 <p>In a monolingual dictionary, where the object language and the working language
                     are the same, one should list each as a separate <gi>language</gi> element with
                     a specific <att>role</att> attribute. A human-readable, informal prose
-                    characterization should be supplied as content for the element. When the
-                    human-readable name(s) of languages are provided in multiple languages, the
-                    attribute <att>xml:lang</att> should be used to indicate what language is used
-                    to name the given object or working language. </p>
-                <p>A bilingual dictionary could be documented as having two object languages. In
-                    those cases, however, it is recommended -- and more precise -- to describe each
-                    object language as either a source language or a target language.</p>
+                    characterization should be supplied in the child <gi>name</gi> element. </p>
+                
             </remarks>
         </elementSpec>
+        <elementSpec ident="name" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="place" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="date" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="person" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="personGrp" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="channel" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="ident" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="interaction" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="domain" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="purpose" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="desc" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="note" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="settingDesc" mode="change">
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
+        
         <!--2021-09-24 (TT): make profileDesc required to document use of languages in langUsage-->
         <elementSpec ident="teiHeader" mode="change">
             <content>
@@ -800,7 +898,17 @@
                 </egXML>
             </exemplum>
         </elementSpec>
+        <elementSpec ident="bibl" mode="change">
+            <!--2025-11-27 (TT): added to to model.languageProfile-->
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
+        </elementSpec>
         <elementSpec ident="listBibl" mode="change">
+            <!--2025-11-27 (TT): added to to model.languageProfile-->
+            <classes mode="change">
+                <memberOf key="model.languageProfile" mode="add"/>
+            </classes>
             <attList>
                 <attDef ident="type" mode="change" usage="req">
                     <valList type="semi" mode="change">
@@ -951,6 +1059,16 @@
             <classes mode="change">
                 <memberOf key="model.lexicalInter"></memberOf>
             </classes>
+        </classSpec>
+        
+        <!-- 2023-11-27 (TT) model.languageProfile-->
+        <classSpec ident="model.languageProfile" type="model">
+            <desc>
+                Groups all elements used to describe a language or language variety:
+                identifiers, names, space/time metadata, social and personal
+                characteristics, medium, and communicative functioning, following
+                ISO 21636.
+            </desc>   
         </classSpec>
         
        <!-- 2023-04-22 (TT) model.lexicalPhrase-->

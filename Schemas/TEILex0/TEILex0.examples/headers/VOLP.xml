@@ -54,8 +54,12 @@
       </fileDesc>
       <profileDesc>
          <langUsage>
-            <language role="objectLanguage" ident="pt"/>
-            <language role="workingLanguage" ident="pt"/>
+            <language role="objectLanguage" ident="pt">
+               <name>Portuguese</name>
+            </language>
+            <language role="workingLanguage" ident="pt">
+               <name>Portuguese</name>
+            </language>
          </langUsage>
       </profileDesc>
    </teiHeader>

@@ -171,8 +171,8 @@ then transform using tei-stripper.xsl-->
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language role="objectLanguage" ident="">Old Czech?</language>
-            <language role="targetLanguage" ident="">?</language>
+            <language role="objectLanguage" ident="cs"><name>Old Czech</name></language>
+            <language role="targetLanguage" ident=""><name>?</name></language>
          </langUsage>
          <!--<textClass>
             <catRef target="#taxonomy-dictionary-contemporary #output-dictionary"/>

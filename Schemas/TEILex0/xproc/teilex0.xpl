@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step"
-    version="1.0" name="generateDocumentation">
+    version="3.0" name="generateDocumentation">
     <!-- ================================================================== -->
     <!-- PROLOG: -->
+    <p:option name="debug" select="'true'"/>
     <p:input port="stylesheetParameters" kind="parameter"/>
     <p:option name="odd2oddSource" required="true"/>
     <p:option name="odd2liteSource" required="true"/>
@@ -48,11 +49,19 @@
                 select="concat('../TEILex0.examples/headers/', $filename, '.stripped.xml')"/>
         </p:store>
     </p:for-each>
-    <p:xinclude fixup-xml-base="false" name="include">
+    <p:xinclude name="include" fixup-xml-base="false" fixup-xml-lang="false">
         <p:input port="source">
             <p:document href="../TEILex0.odd"/>
         </p:input>
     </p:xinclude>
+    <p:choose>
+        <p:when test="$debug = 'true'">
+            <p:store href="results-new/included.xml" method="xml" indent="false"/>
+        </p:when>
+        <p:otherwise>
+            <p:sink/>
+        </p:otherwise>
+    </p:choose>
     
     <p:xslt name="odd2odd">
         <p:input port="source">
@@ -65,6 +74,14 @@
             <p:pipe step='generateDocumentation' port='stylesheetParameters'/>
         </p:input>
     </p:xslt>
+    <p:choose>
+        <p:when test="$debug = 'true'">
+            <p:store href="results-new/odd2odded.xml" method="xml" indent="false"/>
+        </p:when>
+        <p:otherwise>
+            <p:sink/>
+        </p:otherwise>
+    </p:choose>
     <p:xslt name="odd2lite">
         <p:input port="source">
             <p:pipe step="odd2odd" port="result"/>
@@ -73,7 +90,14 @@
             <p:pipe step="stylesheet-odd2lite" port="result"/>
         </p:input>
     </p:xslt>
-   <p:store href="results-new/odd2lit.xml" method="xml" indent="false"/>
+    <p:choose>
+        <p:when test="$debug = 'true'">
+            <p:store href="results-new/odd2lit.xml" method="xml" indent="false"/>
+        </p:when>
+        <p:otherwise>
+            <p:sink/>
+        </p:otherwise>
+    </p:choose>
     <p:xslt name="contributors">
         <p:input port="source">
             <p:pipe step="odd2lite" port="result"/>
@@ -82,7 +106,14 @@
             <p:document href="../stylesheets/contributors.xsl"/>
         </p:input>
     </p:xslt>
-    <p:store href="results-new/contributored.xml" method="xml" indent="false"/> 
+    <p:choose>
+        <p:when test="$debug = 'true'">
+            <p:store href="results-new/contributored.xml" method="xml" indent="false"/>
+        </p:when>
+        <p:otherwise>
+            <p:sink/>
+        </p:otherwise>
+    </p:choose>
      <p:xslt name="odd2html">
         <p:input port="source">
             <p:pipe step="contributors" port="result"/>
@@ -91,7 +122,14 @@
             <p:document href="../stylesheets/TEILex0.xsl"/>
         </p:input>
     </p:xslt>
-    <p:store href="results-new/pre.html" method="xhtml"> </p:store>
+    <p:choose>
+        <p:when test="$debug = 'true'">
+            <p:store href="results-new/pre.html" method="xhtml" indent="false"/>
+        </p:when>
+        <p:otherwise>
+            <p:sink/>
+        </p:otherwise>
+    </p:choose>
     <p:xslt name="post-process" version="2.0">
         <p:input port="source">
             <p:pipe step="odd2html" port="result"/>

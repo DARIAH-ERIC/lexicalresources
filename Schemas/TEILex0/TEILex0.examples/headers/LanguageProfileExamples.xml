@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lex-0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt xml:id="LPE.titleStmt">
+                <title type="full">Language Profile Examples in TEI Lex-0</title>
+                <editor>
+                    <persName>
+                        <forename>Toma</forename>
+                        <surname>Tasovac</surname>
+                    </persName>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName>Belgrade Center for Digital Humanities</orgName>
+                </publisher>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                        Attribution 4.0 International (CC BY 4.0)</licence>
+                </availability>
+            </publicationStmt>
+        </fileDesc>
+        <profileDesc>
+            <!--I'm setting up all language profile examples in this header, so that I can reference them from
+            the specs and the documentation, validate them in one go etc. Because of the way we import those,
+            the order matters. To add a new example, add langUsage at the end of the current sequence.-->
+            <!-- xpointer="element(/1/1/2/1)-->
+            <langUsage>
+                <language ident="ru-x-lit19c" role="objectLanguage">
+                    <name xml:lang="ru">Русский литературный язык XIX века</name>
+                    <name xml:lang="en">19th-century literary Russian</name>
+                </language>
+                <language ident="ru" role="workingLanguage">
+                    <name xml:lang="ru">Современный русский язык</name>
+                    <name xml:lang="en">Modern Russian</name>
+                </language>
+            </langUsage>
+            <!-- xpointer="element(/1/1/2/2)-->
+            <langUsage>
+                <language status="active" role="sourceLanguage" ident="fr" type="individual"
+                    subtype="living">
+                    <ident type="languageIdentifier" subtype="ISO639-3B">fre</ident>
+                    <ident type="languageIdentifier" subtype="ISO639-3T">fra</ident>
+                    <ident type="languageIdentifier" subtype="ISO639-2">fr</ident>
+                    <name type="languageName" role="languageReferenceName" xml:lang="en"
+                        >French</name>
+                    <name type="languageName" xml:lang="fr">Français</name>
+                </language>
+            </langUsage>
+            <!-- xpointer="element(/1/1/2/3)-->
+            <langUsage>
+                <language status="retired" ident="auv" role="sourceLanguage">
+                    <name type="languageName" role="languageReferenceName" xml:lang="en"
+                        >Auvergnat</name> 
+                </language>
+            </langUsage>
+            <!-- xpointer="element(/1/1/2/4)-->
+            <langUsage>
+                <language role="" ident="">
+                    <settingDesc>
+                        <place type="">
+                            <placeName/>
+                            <idno/>
+                            <note/>
+                        </place>
+                    </settingDesc>
+                </language>
+            </langUsage>
+            <!-- xpointer="element(/1/1/2/5)-->
+            <langUsage>
+                <language ident="fr-FR" role="sourceLanguage">
+                    <name type="languageVariety">French as used in France in the early 20th
+                        century</name>
+                    <place type="country">
+                        <placeName xml:lang="fr">France</placeName>
+                        <idno type="UN-M49">250</idno>
+                        <idno type="ISO-alpha3">FRA</idno>
+                    </place>
+                    <date notBefore="1900" notAfter="1940"/>
+                </language>
+            </langUsage>
+            <!-- xpointer="element(/1/1/2/6)-->
+            <langUsage>
+                <language role="sourceLanguage" ident="ar-x-shawi">
+                    <personGrp>
+                        <age>Different ages</age>
+                        <gender>Male and female</gender>
+                        <faith>Muslim (Sunni)</faith>
+                        <education>No specific level of education. Any formal education received in
+                            Turkish, no formal education in Arabic</education>
+                        <nationality type="citizenship">Turkish</nationality>
+                        <nationality type="ethnicity">Arab</nationality>
+                        <residence>No specific residence</residence>
+                        <occupation>No specific occupation</occupation>
+                        <socecStatus>The speakers of this variety were formerly sheep and goat
+                            rearing nomads.</socecStatus>
+                        <note/>
+                        <langKnowledge>
+                            <langKnown tag="tr"/>
+                            <p>All of the informants speak Turkish and Shawi Arabic, although they
+                                received no formal education in Arabic and therefore have no
+                                knowledge of Modern Standard Arabic. Data of other language
+                                knowledge was not collected.</p>
+                        </langKnowledge>
+                    </personGrp>
+                </language>
+            </langUsage>
+            <langUsage>
+                <language role="objectLanguage" ident="de">
+                    <person>
+                        <name>
+                            <surname/>
+                            <forename/>
+                        </name>
+                        <age>Different ages</age>
+                        <gender>Male and female</gender>
+                        <faith>Muslim (Sunni)</faith>
+                        <education>No specific level of education. Any formal education received in
+                            Turkish, no formal education in Arabic</education>
+                        <nationality type="citizenship">Turkish</nationality>
+                        <nationality type="ethnicity">Arab</nationality>
+                        <residence>No specific residence</residence>
+                        <occupation>No specific occupation</occupation>
+                        <socecStatus>The speakers of this variety were formerly sheep and goat
+                            rearing nomads.</socecStatus>
+                        <note/>
+                        <langKnowledge>
+                            <langKnown tag="tr"/>
+                            <p>All of the informants speak Turkish and Shawi Arabic, although they
+                                received no formal education in Arabic and therefore have no
+                                knowledge of Modern Standard Arabic. Data of other language
+                                knowledge was not collected.</p>
+                        </langKnowledge>
+                    </person>
+                </language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>Some text here.</p>
+        </body>
+    </text>
+</TEI>
