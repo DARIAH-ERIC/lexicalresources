@@ -269,7 +269,7 @@
             </item>
             <item>Do not use <code>&lt;usg type=&quot;hyper&quot;&gt;&lt;/usg&gt;</code> or
                     <code>&lt;usg type=&quot;syn&quot;/&gt;</code> to mark lexical relations such as
-                hyperonymy or synonymy. The recommended way to encode lexical relations in TEI Lex-0
+                hypernymy or synonymy. The recommended way to encode lexical relations in TEI Lex-0
                 the reference mechanism provided by <gi>xr</gi>. See the secion on the <ref
                     target="#cross-references">typology of cross-references.</ref>.</item>
             <item>Do not use <code>&lt;usg type=&quot;colloc&quot;&gt;&lt;/usg&gt;</code> or for

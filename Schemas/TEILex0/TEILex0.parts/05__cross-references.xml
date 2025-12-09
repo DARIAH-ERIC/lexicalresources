@@ -134,14 +134,14 @@
                         </egXML>
         </div>
         <div>
-            <head>Hyperonymy</head>
+            <head>Hypernymy</head>
             <p>Relation between lexical heads X and Y characterised by the property that the
                 sentence This is a(n) Y entails, but is not entailed by the sentence This is a(n) X.
                 (Adapted from <ref target="#Cruse1986">Cruse 1986</ref>.) </p>
-            <p>Hyperonymy is the converse of hyponymy.</p>
+            <p>Hypernymy is the converse of hyponymy.</p>
             <p> Example: dog/animal (animal is a hypernym of dog)</p>
-            <p>In TEI Lex-0, hyperonyms are encoded inside <code>&lt;xr
-                    type=&quot;hyperonymy&quot;&gt;&lt;/xr&gt;</code>.</p>
+            <p>In TEI Lex-0, hypernyms are encoded inside <code>&lt;xr
+                    type=&quot;hypernymy&quot;&gt;&lt;/xr&gt;</code>.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
                <xi:include href="../TEILex0.examples/examples.stripped.xml" corresp="../TEILex0.examples/examples.xml" xpointer="XY.dog"/>
              </egXML>
