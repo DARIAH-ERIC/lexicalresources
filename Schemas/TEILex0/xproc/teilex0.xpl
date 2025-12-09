@@ -82,9 +82,28 @@
             <p:sink/>
         </p:otherwise>
     </p:choose>
-    <p:xslt name="odd2lite">
+    <p:xslt name="xmlbasefix">
         <p:input port="source">
             <p:pipe step="odd2odd" port="result"/>
+        </p:input>
+        <p:input port="stylesheet">
+            <p:document href="../stylesheets/xmlbase-fix.xsl"/>
+        </p:input>
+        <p:input port="parameters">
+            <p:pipe step='generateDocumentation' port='stylesheetParameters'/>
+        </p:input>
+    </p:xslt>
+    <p:choose>
+        <p:when test="$debug = 'true'">
+            <p:store href="results-new/xmlbase-fixed.xml" method="xml" indent="false"/>
+        </p:when>
+        <p:otherwise>
+            <p:sink/>
+        </p:otherwise>
+    </p:choose>
+    <p:xslt name="odd2lite">
+        <p:input port="source">
+            <p:pipe step="xmlbasefix" port="result"/>
         </p:input>
         <p:input port="stylesheet">
             <p:pipe step="stylesheet-odd2lite" port="result"/>
