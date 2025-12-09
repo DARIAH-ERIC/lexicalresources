@@ -43,8 +43,11 @@
                         <note>Com Licença da Real Meza da Comissão Geral, sobre o Exame, e Censura dos Livros.</note>
                         <note>Vende-ſe na loja de Borel Borel, e Companhia, quaſi defronte da Igreja nova de Noſſa Senhora dos Martyres, na eſquina.</note>
                      </imprint>
-                     <extent>Tomo primeiro</extent>
-                     <extent>752 pp.</extent>
+                     <biblScope unit="volume" n="1">Tomo primeiro</biblScope>
+                     <extent>
+                        <measure unit="pages" quantity="752">752 pp.</measure>
+                     </extent>
+                     
                   </monogr>
                </biblStruct>
                <biblStruct>
@@ -62,8 +65,10 @@
                         <pubPlace>Lisboa</pubPlace>
                         <date>1789</date>
                      </imprint>
-                     <extent>Tomo segundo</extent>
-                     <extent>541 pp.</extent>
+                     <biblScope unit="volume" n="2">Tomo segundo</biblScope>
+                     <extent>
+                        <measure unit="pages" quantity="541">541 pp.</measure>
+                     </extent>
                   </monogr>
                </biblStruct>
             </listBibl>
