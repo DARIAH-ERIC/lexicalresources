@@ -23,9 +23,11 @@
         <!--2021-09-19 (TT): added monogr for header expansion-->
         <!--2021-09-20 (TT): added email for LexSeal compatibility in teiHeader-->
         <!--2025-11-27 (TT): added desc, needed for language profiles-->
+        <!--2025-11-29 (TT): added ruby-->
+        <!--2025-12-06 (TT): added measure as per https://github.com/DARIAH-ERIC/lexicalresources/issues/257 -->
         <moduleRef key="core"
             include="author head title cit quote bibl biblStruct biblScope listBibl gloss
-                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan desc"/>
+                        citedRange imprint analytic monogr publisher pubPlace ref date hi editor respStmt name num resp term note graphic p email list item abbr expan desc ruby rb rt measure"/>
         <!--PB's simplified textstructure declaratiopn-->
         <moduleRef key="textstructure" include="TEI text body div front back"/>
         <!-- 2018-09-11 (TT): 2018-09-11 (TT): Some dictionaries use images, hence
@@ -958,6 +960,73 @@
                     <classRef key="model.global"/>
                 </alternate>
             </content>
+        </elementSpec>
+        <!--2025-11-29 (TT): model.lexicalPhrase is a paired-down model.phrase for dictionaries-->
+        <elementSpec ident="ruby" mode="change">
+            <classes mode="change">
+                <memberOf key="model.lexicalPhrase" mode="add"/>
+            </classes>
+        </elementSpec>
+        
+        <elementSpec ident="extent" mode="change">
+            <content>
+                <elementRef key="measure" minOccurs="1" maxOccurs="unbounded"/>
+            </content>
+            <exemplum versionDate="2016-11-04" xml:lang="en">
+                <p>The  <gi>extent</gi> element may be used to supply normalized
+                    or machine tractable versions of the size or sizes concerned.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="gi-extent-egXML-ig">
+                    <extent>
+                        <measure unit="MiB" quantity="4.2">About four megabytes</measure>
+                        <measure unit="pages" quantity="245">245 pages of source
+                            material</measure>
+                    </extent>
+                </egXML>
+            </exemplum>
+            <exemplum versionDate="2025-12-07" xml:lang="en">
+                <p>The  <gi>extent</gi> element may be used to supply statistical information
+                about a given dictionary.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="gi-extent-egXML-si">
+                    <fileDesc>
+                        <!-- ... -->
+                        <extent>
+                            <measure unit="entries" quantity="15,306"/>
+                            <measure unit="senses" quantity="46,558"/>
+                        </extent>
+                    </fileDesc>
+                </egXML>
+            </exemplum>
+        </elementSpec>
+        <elementSpec ident="measure" mode="change">
+            <classes mode="change">
+                <memberOf key="model.measureLike" mode="delete"></memberOf>
+            </classes>
+            <content>
+                <textNode/>
+            </content>
+            <exemplum>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <extent>
+                        <measure unit="pages" quantity="210">210 pp.</measure>
+                    </extent>
+                </egXML>
+            </exemplum>
+            <exemplum versionDate="2025-12-07" xml:lang="en">
+                <p>The  <gi>extent</gi> element may be used to supply statistical information
+                    about a given dictionary.</p>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="gi-extent-egXML-si2">
+                    <fileDesc>
+                        <!-- ... -->
+                        <extent>
+                            <measure unit="entries" quantity="15,306"/>
+                            <measure unit="senses" quantity="46,558"/>
+                        </extent>
+                    </fileDesc>  
+                </egXML>
+            </exemplum>
+            <remarks>
+                <p>In TEI Lex-0, <gi>measure</gi> is used exclusively within <gi>extent</gi> to express quantified information about a carrier, such as page counts, dimensions, file sizes, or measurable lexicographic properties such as the number of entries, senses, examples etc.</p>
+            </remarks>
         </elementSpec>
         
         <!-- Class related declaration here -->
