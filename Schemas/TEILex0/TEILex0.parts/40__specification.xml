@@ -657,12 +657,6 @@
             </classes>
         </elementSpec>
         
-        <elementSpec ident="place" mode="change">
-            <classes mode="change">
-                <memberOf key="model.languageProfile" mode="add"/>
-            </classes>
-        </elementSpec>
-        
         <elementSpec ident="date" mode="change">
             <classes mode="change">
                 <memberOf key="model.languageProfile" mode="add"/>

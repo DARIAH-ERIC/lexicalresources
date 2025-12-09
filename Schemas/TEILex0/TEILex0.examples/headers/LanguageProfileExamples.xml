@@ -59,14 +59,14 @@
             </langUsage>
             <!-- xpointer="element(/1/1/2/4)-->
             <langUsage>
-                <language role="" ident="">
+                <language ident="ar-x-syrkha" role="objectLanguage">
+                    <name type="languageVariety">the Arabic of the Khawetna (E Syria)</name>
                     <settingDesc>
-                        <place type="">
-                            <placeName/>
-                            <idno/>
-                            <note/>
-                        </place>
+                        <place sameAs="geo:khawetna" />
                     </settingDesc>
+                    <date type="languagePeriod">Contemporary</date>
+                    <personGrp role="tribe" corresp="pgr:khawetna_tribe" />
+                    <channel mode="s">spoken</channel>
                 </language>
             </langUsage>
             <!-- xpointer="element(/1/1/2/5)-->
@@ -74,11 +74,13 @@
                 <language ident="fr-FR" role="sourceLanguage">
                     <name type="languageVariety">French as used in France in the early 20th
                         century</name>
-                    <place type="country">
-                        <placeName xml:lang="fr">France</placeName>
-                        <idno type="UN-M49">250</idno>
-                        <idno type="ISO-alpha3">FRA</idno>
-                    </place>
+                    <settingDesc>
+                        <place type="country">
+                            <placeName xml:lang="fr">France</placeName>
+                            <idno type="UN-M49">250</idno>
+                            <idno type="ISO-alpha3">FRA</idno>
+                        </place>
+                    </settingDesc>   
                     <date notBefore="1900" notAfter="1940"/>
                 </language>
             </langUsage>
@@ -99,42 +101,10 @@
                             rearing nomads.</socecStatus>
                         <note/>
                         <langKnowledge>
+                            <langKnown tag="ar-x-shaw"/>
                             <langKnown tag="tr"/>
-                            <p>All of the informants speak Turkish and Shawi Arabic, although they
-                                received no formal education in Arabic and therefore have no
-                                knowledge of Modern Standard Arabic. Data of other language
-                                knowledge was not collected.</p>
                         </langKnowledge>
                     </personGrp>
-                </language>
-            </langUsage>
-            <langUsage>
-                <language role="objectLanguage" ident="de">
-                    <person>
-                        <name>
-                            <surname/>
-                            <forename/>
-                        </name>
-                        <age>Different ages</age>
-                        <gender>Male and female</gender>
-                        <faith>Muslim (Sunni)</faith>
-                        <education>No specific level of education. Any formal education received in
-                            Turkish, no formal education in Arabic</education>
-                        <nationality type="citizenship">Turkish</nationality>
-                        <nationality type="ethnicity">Arab</nationality>
-                        <residence>No specific residence</residence>
-                        <occupation>No specific occupation</occupation>
-                        <socecStatus>The speakers of this variety were formerly sheep and goat
-                            rearing nomads.</socecStatus>
-                        <note/>
-                        <langKnowledge>
-                            <langKnown tag="tr"/>
-                            <p>All of the informants speak Turkish and Shawi Arabic, although they
-                                received no formal education in Arabic and therefore have no
-                                knowledge of Modern Standard Arabic. Data of other language
-                                knowledge was not collected.</p>
-                        </langKnowledge>
-                    </person>
                 </language>
             </langUsage>
         </profileDesc>
