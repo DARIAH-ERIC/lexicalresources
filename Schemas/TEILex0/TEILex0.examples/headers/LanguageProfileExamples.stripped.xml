@@ -53,13 +53,8 @@ then transform using tei-stripper.xsl-->
             </langUsage>
             <!-- xpointer="element(/1/1/2/3)-->
             <langUsage>
-                <language status="retired" ident="auv">
-                    <name type="languageName" role="languageReferenceName" xml:lang="en">Auvergnat</name>
-                    <event type="merge" when="2007-03-14">
-                        <desc>
-                            <ref target="#oci">oci</ref>
-                        </desc>
-                    </event>
+                <language status="retired" ident="auv" role="sourceLanguage">
+                    <name type="languageName" role="languageReferenceName" xml:lang="en">Auvergnat</name> 
                 </language>
             </langUsage>
             <!-- xpointer="element(/1/1/2/4)-->
@@ -68,7 +63,6 @@ then transform using tei-stripper.xsl-->
                     <settingDesc>
                         <place type="">
                             <placeName/>
-                            <location type="address|geopolitical"/>
                             <idno/>
                             <note/>
                         </place>
@@ -90,7 +84,7 @@ then transform using tei-stripper.xsl-->
             </langUsage>
             <!-- xpointer="element(/1/1/2/6)-->
             <langUsage>
-                <language role="" ident="">
+                <language role="sourceLanguage" ident="ar-x-shawi">
                     <personGrp>
                         <age>Different ages</age>
                         <gender>Male and female</gender>
