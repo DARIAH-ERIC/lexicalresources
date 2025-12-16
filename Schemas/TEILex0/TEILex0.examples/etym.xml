@@ -4,22 +4,26 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>TEI Lex-0: Examples of Etymology</title>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <authority> DARIAH WG "Lexical Resources"</authority>
          </publicationStmt>
-         <sourceDesc>
-            <p>Information about the source</p>
-         </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="de"/>
+            <language role="objectLanguage" ident="en"/>
+         </langUsage></profileDesc>
    </teiHeader>
    <text>
       <body>
-         <!--organize entries alphabetically-->
+         <!-- This file still doesn't validate! It's here to help us
+         do the necessary customizations so that we can fully support
+         etymologies. Still TODO. -->
          <entry xml:id="Eingang" xml:lang="de">
             <form type="lemma"><orth>Eingang</orth></form>
-            <gramGrp><gen>m.</gen></gramGrp>
+            <gramGrp><gram type="pos">m.</gram></gramGrp>
             <etym>
                <cit type="etymon">
                   <lang expand="Mittel Hoch Deutsch">mhd.</lang>
@@ -44,8 +48,8 @@
                </cit>
                <seg type="desc">Aus dem ‘Hineingehen’ als Handlung ist die ‘Stelle, an der man ins
                   Haus, in den Saal geht’ geworden, neuerdings auch die ‘Gesamtheit der
-                  eingegangenen Geschäftssachen, Mannschaften’ usw. Vgl. <xr type="crossReference">
-                     <ref>Zugang</ref>
+                  eingegangenen Geschäftssachen, Mannschaften’ usw. Vgl. <xr type="related">
+                     <ref type="entry">Zugang</ref>
                   </xr>. <bibl>(Kluge, 1975) p. 159</bibl></seg>
             </etym>
             <entry xml:id="Eingang2" xml:lang="de">
@@ -64,8 +68,8 @@
                      <seg type="desc">Aus dem ‘Hineingehen’ als Handlung ist die ‘Stelle, an der man
                         ins Haus, in den Saal geht’ geworden, neuerdings auch die ‘Gesamtheit der
                         eingegangenen Geschäftssachen, Mannschaften’ usw. Vgl. <xr
-                           type="crossReference">
-                           <ref>Zugang</ref>
+                           type="related">
+                           <ref type="entry">Zugang</ref>
                         </xr>. <bibl>(Kluge, 1975) p. 159</bibl></seg>
                   </etym>
                </etym>
@@ -156,18 +160,18 @@
             </entry>
          </entry>
          <!--suffixal derivation-->
-         <entry xml:lang="pt">
+         <entry xml:lang="pt" xml:id="PD.humanal">
             <form type="lemma">
                <orth xml:lang="pt">húmanal</orth>
                <pron xml:lang="pt" notation="ipa">umɐnáł</pron>
             </form>
             <gramGrp>
-               <pos>adj.</pos>
-               <gen>m.</gen>
+               <gram type="pos">adj.</gram>
+               <gram type="gender">m.</gram>
                <lbl>e</lbl>
-               <gen>f.</gen>
+               <gram type="gender">f.</gram>
             </gramGrp>
-            <etym type="suffixalDerivation">
+            <etym type="derivation">
                <pc>(</pc>
                <seg type="desc">De</seg>
                <cit type="etymon">
@@ -178,7 +182,7 @@
                <pc>+</pc>
                <cit type="etymon">
                   <gramGrp>
-                     <gram>suf.</gram>
+                     <gram type="pos">suf.</gram>
                   </gramGrp>
                   <form>
                      <orth extent="suff" xml:lang="pt">-al</orth>
@@ -206,11 +210,11 @@
                   </cit>
                   <pc>;</pc>
                </etym>
-               <seg type="desc" part="F">the spelling <xr type="crossReference">
-                     <ref xml:lang="la">allers</ref>
-                  </xr> would then be <xr type="crossReference">
+               <seg type="desc" part="F">the spelling <xr type="related">
+                     <ref xml:lang="la" type="entry">allers</ref>
+                  </xr> would then be <xr type="related">
                      <lbl>analogical to</lbl>
-                     <ref xml:lang="la">sollers</ref>
+                     <ref xml:lang="la" type="entry">sollers</ref>
                   </xr><pc>.</pc></seg>
             </etym>
 
@@ -223,8 +227,8 @@
                      <!-- Lat. sollers < *soti-arti- to sollus 'entire'; al(l)ers < *all-arti- to O. alio- 'entire'. -->
                      <seg type="desc" part="I">According to</seg>
                      <bibl>Untermann 2000</bibl>, <lang>Latin</lang>
-                     <xr type="crossReference">
-                        <ref xml:lang="la">*all-</ref>
+                     <xr type="related">
+                        <ref xml:lang="la" type="entry">*all-</ref>
                      </xr>
                      <seg type="desc" part="M">was probably borrowed from</seg>
                      <cit type="etymon" xml:lang="und-x-sabe1249">
@@ -248,11 +252,11 @@
                         </cit>
                         <pc>;</pc>
                      </etym>
-                     <seg type="desc" part="F">the spelling <xr type="crossReference">
-                           <ref xml:lang="la">allers</ref>
-                        </xr> would then be <xr type="crossReference">
+                     <seg type="desc" part="F">the spelling <xr type="related">
+                           <ref xml:lang="la" type="entry">allers</ref>
+                        </xr> would then be <xr type="related">
                            <lbl>analogical to</lbl>
-                           <ref xml:lang="la">sollers</ref>
+                           <ref xml:lang="la" type="entry">sollers</ref>
                         </xr><pc>.</pc></seg></etym>
                </etym>
             </entry>

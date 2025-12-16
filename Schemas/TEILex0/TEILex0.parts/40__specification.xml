@@ -5,11 +5,9 @@
     xml:id="specification">
     <head>Specification</head>
     <schemaSpec ident="TEILex0" docLang="en" xml:lang="en">
-        
         <!-- ========================================================= -->
         <!-- SECTION: MODULES                                          -->
         <!-- ========================================================= -->
-        
         <!--2018-09-11 (TT): this is superflous because we're removing all
         elements from analysis -->
         <moduleRef key="analysis" except="cl interp interpGrp m phr s span spanGrp w"/>
@@ -29,7 +27,7 @@
         <moduleRef key="core"
             include="abbr analytic author bibl biblScope biblStruct cit citedRange date desc
             editor email expan gloss graphic head hi imprint item list listBibl measure
-            monogr name num p pubPlace publisher quote rb ref resp respStmt rt ruby term
+            monogr name note num p pubPlace publisher quote rb ref resp respStmt rt ruby term
             title"/>
         <!-- 2020-11-27 (TT): for language profiles -->
         <moduleRef key="corpus" include="channel domain interaction purpose settingDesc"/>
@@ -70,11 +68,9 @@
         <moduleRef key="textstructure" include="back body div front TEI text"/>
         <!-- LR (2019-11-14) Adding the transc module just to have metamark - as discussed with TT at the DH master class in FU Berlin-->
         <moduleRef key="transcr" include="metamark"/>
-        
         <!-- ========================================================= -->
         <!-- SECTION: ELEMENTS                                         -->
         <!-- ========================================================= -->
-        
         <!--2021-09-21 (TT): add @role to authority so that we can specify
         what kind of authority we're talking about; for instance 
         <authority role="rightsHolder"></authority>-->
@@ -121,7 +117,8 @@
             <content>
                 <alternate minOccurs="1" maxOccurs="unbounded">
                     <classRef key="model.quoteLike"/>
-                    <classRef key="model.egLike"/>
+                    <!--we don't need `eg` or `egXML` in cit-->
+                    <!--<classRef key="model.egLike"/>--> 	
                     <classRef key="model.biblLike"/>
                     <classRef key="model.ptrLike"/>
                     <classRef key="model.global"/>
@@ -156,7 +153,7 @@
         <!--2020-06-30 (TT): def is only allowed within a sense!-->
         <!--TODO: at the moment, it's still allowed in etym, but it shouldn't be
         because if there is no sense, we have to use gloss. fix later-->
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="def" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
@@ -164,7 +161,7 @@
                 <memberOf key="model.entryPart" mode="delete"/>
             </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexSpecialPara"/>
             </content>
         </elementSpec>
         <elementSpec ident="desc" mode="change">
@@ -173,14 +170,17 @@
             </classes>
         </elementSpec>
         <elementSpec ident="dictScrap" mode="change">
+            <classes>
+                <memberOf key="sensePart" mode="add"/>
+            </classes>
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
                     <classRef key="model.entryPart"/>
                     <classRef key="model.morphLike"/>
-                    <classRef key="model.lexicalPhrase"/>
-                    <classRef key="model.lexicalInter"/>
+                    <classRef key="model.lexPhrase"/>
+                    <classRef key="model.lexInter"/>
                     <classRef key="model.global"/>
                 </alternate>
             </content>
@@ -234,8 +234,8 @@
                     <textNode/>
                     <classRef key="model.gLike"/>
                     <classRef key="model.global"/>
-                    <classRef key="model.lexicalInter"/>
-                    <classRef key="model.lexicalPhrase"/>
+                    <classRef key="model.lexInter"/>
+                    <classRef key="model.lexPhrase"/>
                     <classRef key="model.descLike"/>
                     <elementRef key="def"/>
                     <elementRef key="etym"/>
@@ -305,26 +305,31 @@
                 </sequence>
             </content>
         </elementSpec>
-        <!-- adding form to model.sensePart -->
         <elementSpec ident="form" mode="change">
             <classes mode="change">
                 <memberOf key="model.sensePart" mode="add"/>
+                <memberOf key="model.lexFormPart" mode="add"/>
             </classes>
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
-                    <classRef key="model.lexicalPhrase"/>
-                    <classRef key="model.lexicalInter"/>
-                    <classRef key="model.formPart"/>
+                    <classRef key="model.lexPhrase"/>
+                    <classRef key="model.lexInter"/>
+                    <classRef key="model.lexFormPart"/>
                     <classRef key="model.global"/>
                 </alternate>
             </content>
         </elementSpec>
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <elementSpec ident="gloss" mode="change">
+            <classes>
+                <memberOf key="model.lexEmphLike" mode="add"/>
+            </classes>
+        </elementSpec>
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="gram" mode="change">
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
@@ -379,24 +384,28 @@
         </elementSpec>
         <!-- adding gramGrp to model.sensePart -->
         <elementSpec ident="gramGrp" mode="change">
-            <classes mode="change">
-                <memberOf key="model.sensePart" mode="add"/>
-            </classes>
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
-                    <classRef key="model.lexicalPhrase"/>
-                    <classRef key="model.lexicalInter"/>
-                    <classRef key="model.gramPart"/>
+                    <classRef key="model.lexPhrase"/>
+                    <classRef key="model.lexInter"/>
+                    <!--<classRef key="model.gramPart"/>-->
+                    <elementRef key="gramGrp"/>
+                    <elementRef key="usg"/>
+                    <classRef key="model.morphLike"/>
+                    <!--gram-->
                     <classRef key="model.global"/>
                 </alternate>
             </content>
         </elementSpec>
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="hyph" mode="change">
+            <classes>
+                <memberOf key="model.lexFormPart" mode="add"/>
+            </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
         </elementSpec>
         <elementSpec ident="ident" mode="change">
@@ -411,17 +420,17 @@
         </elementSpec>
         <!-- adding lang to model.entryPart (to make it member of <cit>, if you ask) -->
         <!-- 2019-10-22 (LR) created ambiguous models... mended -->
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="lang" mode="change">
             <!--<classes mode="change">
                             <memberOf key="model.entryPart" mode="add"/>
                         </classes>-->
             <classes mode="change">
-                <!--because we don't use model.nameLike in model.lexicalPhrase-->
-                <memberOf key="model.lexicalPhrase" mode="add"/>
+                <!--because we don't use model.nameLike in model.lexPhrase-->
+                <memberOf key="model.lexPhrase" mode="add"/>
             </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
             <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:id="d1e5322">
@@ -515,7 +524,8 @@
                     language.</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <langUsage>
-                        <language ident="chu" role="sourceLanguage"><name>Old Church Slavic</name></language>
+                        <language ident="chu" role="sourceLanguage"><name>Old Church
+                            Slavic</name></language>
                         <language ident="la" role="targetLanguage"><name>Latin</name></language>
                         <language ident="grc" role="targetLanguage"><name>(Premodern)
                             Greek</name></language>
@@ -565,7 +575,8 @@
             <exemplum>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <langUsage>
-                        <language ident="chu" role="sourceLanguage"><name>Old Church Slavic</name></language>
+                        <language ident="chu" role="sourceLanguage"><name>Old Church
+                            Slavic</name></language>
                         <language ident="la" role="targetLanguage"><name>Latin</name></language>
                         <language ident="grc" role="targetLanguage"><name>(Premodern)
                             Greek</name></language>
@@ -576,14 +587,32 @@
         <!-- adding lbl to model.sensePart -->
         <elementSpec ident="lbl" mode="change">
             <classes mode="change">
-                <memberOf key="model.sensePart" mode="add"/>
                 <!--2019-02-19 (TT): changed from 'delete' (which was in error) to 'add' in model.entryPart.top";
                                 this is temporary because of issue with oxygen and tei-c servers; is already part of TEI-->
                 <memberOf key="model.entryPart.top" mode="add"/>
-                <memberOf key="model.emphLike" mode="add"/>
             </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
+            </content>
+        </elementSpec>
+        <!--2025-12-16 (TT) Simplified to avoid errors in XSD -->
+        <elementSpec ident="list" mode="change">
+            <content>
+                <sequence>
+                    <alternate minOccurs="0" maxOccurs="unbounded">
+                        <classRef key="model.divTop"/>
+                        <classRef key="model.global"/>
+                        <elementRef key="desc" minOccurs="0" maxOccurs="unbounded"/>
+                    </alternate>
+                    <sequence minOccurs="1" maxOccurs="unbounded">
+                        <elementRef key="item"/>
+                        <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                    </sequence>
+                    <sequence minOccurs="0" maxOccurs="unbounded">
+                        <classRef key="model.divBottom"/>
+                        <classRef key="model.global" minOccurs="0" maxOccurs="unbounded"/>
+                    </sequence>
+                </sequence>
             </content>
         </elementSpec>
         <elementSpec ident="listBibl" mode="change">
@@ -635,6 +664,11 @@
                     entries, senses, examples etc.</p>
             </remarks>
         </elementSpec>
+        <elementSpec ident="metamark" mode="change">
+            <content>
+                <textNode/>
+            </content>
+        </elementSpec>
         <elementSpec ident="name" mode="change">
             <classes mode="change">
                 <memberOf key="model.languageProfile" mode="add"/>
@@ -644,6 +678,9 @@
             <classes mode="change">
                 <memberOf key="model.languageProfile" mode="add"/>
             </classes>
+            <content>
+                <macroRef key="macro.lexSpecialPara"/>
+            </content>
         </elementSpec>
         <!--2020-06-25 (TT): num, to be used strictly for numbering entries and senses -->
         <elementSpec ident="num" mode="change">
@@ -657,13 +694,14 @@
             </content>
         </elementSpec>
         <!--2020-05-14 add orth and pron to att.datable.w3c to allow @notBefore etc.-->
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="orth" mode="change">
             <classes mode="change">
                 <memberOf key="att.datable.w3c" mode="add"/>
+                <memberOf key="model.lexFormPart" mode="add"/>
             </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
         </elementSpec>
         <elementSpec ident="person" mode="change">
@@ -682,13 +720,14 @@
                 <classRef key="model.profileDescPart" minOccurs="1" maxOccurs="unbounded"/>
             </content>
         </elementSpec>
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="pron" mode="change">
             <classes mode="change">
                 <memberOf key="att.datable.w3c" mode="add"/>
+                <memberOf key="model.lexFormPart" mode="add"/>
             </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
         </elementSpec>
         <!--2021-09-20 (TT): make availability required in publicationStmt-->
@@ -697,13 +736,21 @@
             for encoding rights holders-->
         <elementSpec ident="publicationStmt" mode="change">
             <content>
-                <sequence>
+                <alternate minOccurs="1" maxOccurs="unbounded">
                     <classRef key="model.publicationStmtPart.agency" minOccurs="1"
                         maxOccurs="unbounded"/>
-                    <classRef key="model.publicationStmtPart.detail" minOccurs="0"
-                        maxOccurs="unbounded"/>
-                    <elementRef key="availability"/>
-                </sequence>
+                    <!--deconstruct model.publicationStmtPart.detail so that we can require availability
+                    this was causing errors as per Github Issue #233.-->
+                    <!--<classRef key="model.publicationStmtPart.detail" minOccurs="0"
+                        maxOccurs="unbounded"/>-->
+                    <!--TODO: delve deeper into publicationStmt, we could, potentially make some elements
+                    other than availability required here, but i don't want to rush-->
+                    <elementRef key="availability" minOccurs="1"/>
+                    <classRef key="model.ptrLike" minOccurs="0"/>
+                    <elementRef key="date" minOccurs="0"/>
+                    <elementRef key="idno" minOccurs="0"/>
+                    <elementRef key="pubPlace" minOccurs="0"/>
+                </alternate>
             </content>
         </elementSpec>
         <elementSpec ident="purpose" mode="change">
@@ -711,8 +758,13 @@
                 <memberOf key="model.languageProfile" mode="add"/>
             </classes>
         </elementSpec>
+        <elementSpec ident="quote" mode="change">
+            <content>
+                <macroRef key="macro.lexSpecialPara"/>
+            </content>
+        </elementSpec>
         <!-- 2018-09-1 (LR): the <ref> element is adapted to have specific @type values (semi-closed) -->
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="ref" mode="change">
             <!--2020-05-14 (TT): to allow expand on ref-->
             <classes mode="change">
@@ -723,7 +775,7 @@
                 <memberOf key="att.scoped"/>
             </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
@@ -739,16 +791,16 @@
                 </attDef>
             </attList>
         </elementSpec>
-        <!--2025-11-29 (TT): model.lexicalPhrase is a paired-down model.phrase for dictionaries-->
+        <!--2025-11-29 (TT): model.lexPhrase is a paired-down model.phrase for dictionaries-->
         <elementSpec ident="ruby" mode="change">
             <classes mode="change">
-                <memberOf key="model.lexicalPhrase" mode="add"/>
+                <memberOf key="model.lexPhrase" mode="add"/>
             </classes>
         </elementSpec>
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="seg" mode="change">
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
         </elementSpec>
         <!-- 2018-09-03 (LR): making @xml:id mandatory on sense -->
@@ -764,8 +816,8 @@
                     <!--<elementRef key="sense"/>
                                 -->
                     <classRef key="model.sensePart"/>
-                    <classRef key="model.lexicalPhrase"/>
-                    <classRef key="model.global"/>
+                    <!--<classRef key="model.lexPhrase"/>
+                    <classRef key="model.global"/>-->
                 </alternate>
             </content>
             <attList>
@@ -807,16 +859,22 @@
                 </egXML>
             </exemplum>
         </elementSpec>
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="stress" mode="change">
+            <classes>
+                <memberOf key="model.lexFormPart" mode="add"/>
+            </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
         </elementSpec>
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="syll" mode="change">
+            <classes>
+                <memberOf key="model.lexFormPart" mode="add"/>
+            </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
         </elementSpec>
         <!--2023-04-20 (TT) make type mandatory on TEI-->
@@ -843,18 +901,19 @@
                 </sequence>
             </content>
         </elementSpec>
-        <!--2023-01-23 (TT): change content model to macro.lexicalParaContent-->
+        <!--2023-01-23 (TT): change content model to macro.lexParaContent-->
         <elementSpec ident="title" mode="change">
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
             <attList>
                 <attDef ident="type" mode="replace" usage="rec">
                     <valList>
                         <valItem ident="full">
-                            <desc>The full title of a lexicographic resource, such as <egXML 
+                            <desc>The full title of a lexicographic resource, such as <egXML
                                     xmlns="http://www.tei-c.org/ns/Examples">
-                                    <title type="full">The Oxford English Dictionary</title></egXML>.</desc>
+                                    <title type="full">The Oxford English
+                                Dictionary</title></egXML>.</desc>
                         </valItem>
                         <valItem ident="abbr">
                             <desc>The preferred abbreviated title of a lexicographic resource, such
@@ -867,11 +926,8 @@
         </elementSpec>
         <!-- 2018-07-17 (TT): the <usg> element is adapted to have specific @type values -->
         <elementSpec ident="usg" mode="change">
-            <classes mode="change">
-                <memberOf key="model.sensePart" mode="add"/>
-            </classes>
             <content>
-                <macroRef key="macro.lexicalParaContent"/>
+                <macroRef key="macro.lexParaContent"/>
             </content>
             <attList>
                 <attDef ident="type" mode="replace" usage="req">
@@ -937,21 +993,17 @@
         <!-- made member of att.notated (for having @notation) ==> to be discussed -->
         <elementSpec ident="xr" mode="change">
             <classes mode="change">
+                <!--TODO: I'm moving xr to lexPhrase to see if that works better-->
+                <!--<memberOf key="model.quoteLike" mode="add"/>-->
+                <!--gives me problems in dictScrap b/c it's also a member for entryPart-->
+                <!--<memberOf key="model.lexPhrase" mode="add"></memberOf>-->
                 <memberOf key="model.sensePart" mode="add"/>
-                <!-- 2018-12-04 [LR] to have <xr> in <def> and few other cool places -->
-                <!-- 2019-10-22 [LR] deleted to prevent ambiguous content model -->
-                <!--<memberOf key="model.emphLike" mode="add"/>-->
-                <!--<classes mode="change">
-                            <memberOf key="att.notated" mode="add"/>
-                        </classes>-->
-                <!--2020-05-14 allow inside quote (for cross-references in examples)-->
-                <memberOf key="model.quoteLike" mode="add"/>
             </classes>
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <classRef key="model.gLike"/>
-                    <classRef key="model.lexicalPhrase"/>
-                    <classRef key="model.lexicalInter"/>
+                    <classRef key="model.lexPhrase"/>
+                    <classRef key="model.lexInter"/>
                     <elementRef key="usg"/>
                     <elementRef key="lbl"/>
                     <classRef key="model.global"/>
@@ -1026,102 +1078,114 @@
                 </attDef>
             </attList>
         </elementSpec>
-        
         <!-- ========================================================= -->
         <!-- SECTION: CLASSES                                          -->
         <!-- ========================================================= -->
-
+        <!-- Members: model.quoteLike[cit quote]-->
         <classSpec ident="model.attributable" type="model" mode="change">
             <classes mode="change">
-                <memberOf key="model.lexicalInter"/>
+                <memberOf key="model.lexInter"/>
             </classes>
         </classSpec>
-
-        <!-- Making model.biblLike member of model.entryPart.top so that <bibl> is available in <entry> -->
+        <!-- Members: `bibl` `biblStruct` `listBibl`-->
         <classSpec ident="model.biblLike" type="model" mode="change">
             <classes mode="change">
                 <memberOf key="model.entryPart.top" mode="add"/>
+                <memberOf key="model.lexInter" mode="add"/>
             </classes>
         </classSpec>
-
-        <classSpec ident="model.biblLike" type="model" mode="change">
-            <classes mode="change">
-                <memberOf key="model.lexicalInter"/>
+        <!-- Members: `model.noteLike[note]` `figure` `metamark` -->
+        <classSpec ident="model.global" type="model" mode="change">
+            <classes>
+                <memberOf key="model.sensePart" mode="add"/>
             </classes>
         </classSpec>
-
-        <classSpec ident="model.graphicLike" type="model" mode="change">
-            <classes mode="change">
-                <memberOf key="model.lexicalPhrase"/>
-            </classes>
-        </classSpec>
-
-        <classSpec ident="model.highlighted" type="model" mode="change">
-            <classes mode="change">
-                <memberOf key="model.lexicalPhrase"/>
-            </classes>
-        </classSpec>
-
+        <!-- Members: `hi` -->
         <classSpec ident="model.hiLike" type="model" mode="change">
-            <classes mode="change">
-                <memberOf key="model.lexicalPhrase"/>
+            <classes>
+                <memberOf key="model.lexPhrase"/>
             </classes>
         </classSpec>
-
         <!-- 2023-11-27 (TT) model.languageProfile-->
+        <!-- Members: `bibl` `channel` `date` `desc` `domain` `ident` `interaction` `listBibl` 
+             `name` `note` `person` `personGrp` `purpose` `settingDesc` -->
         <classSpec ident="model.languageProfile" type="model">
             <desc> Groups all elements used to describe a language or language variety: identifiers,
                 names, space/time metadata, social and personal characteristics, medium, and
                 communicative functioning, following ISO 21636. </desc>
         </classSpec>
-
-        <!--2023-01-24 (TT): create model.lexicalInter to simplify content models of certain
+        <!-- Members: [`gloss`] -->
+        <!-- Original: [`model.emphLike`[`gloss` `ident` `lbl` `term` `title`]-->
+        <classSpec ident="model.lexEmphLike" type="model" mode="add">
+            <classes>
+                <memberOf key="model.lexPhrase"/>
+            </classes>
+        </classSpec>
+        <!-- had to recreate because the original formPart inherited subclass morphLike[`gram`]-->
+        <!-- Members: `model.lexicalRefinement`[`gramGrp` `lbl` `usg`] `form` `hyph` `orth` `pron` 
+             `stress` `syll` -->
+        <classSpec ident="model.lexFormPart" type="model" mode="add">
+            <desc> groups elements allowed within a <gi>form</gi> element in a dictionary. </desc>
+        </classSpec>
+        <!--2023-01-24 (TT): create model.lexInter to simplify content models of certain
         dictionary elements -->
-        <classSpec ident="model.lexicalInter" type="model" mode="add">
+        <classSpec ident="model.lexInter" type="model" mode="add">
             <desc> pared-down version of model.inter for use in dictionary elements </desc>
         </classSpec>
-
-        <!-- 2023-04-22 (TT) -->
-        <classSpec ident="model.lexicalPhrase" type="model" mode="add">
-            <desc> pared-down version of model.phrase for use in dictionary elements </desc>
+        <!--Members: ´gramGrp´ ´lbl´ ´usg´-->
+        <classSpec ident="model.lexicalRefinement" type="model" mode="change">
+            <classes>
+                <memberOf key="model.lexFormPart" mode="add"/>
+                <memberOf key="model.formPart" mode="delete"/>
+                <memberOf key="model.sensePart"/>
+            </classes>
         </classSpec>
-
+        <!-- 2023-04-22 (TT) -->
+        <!-- Members: ´model.attributable´[´model.quoteLike´[´cit´ ´quote´]] 
+             ´model.biblLike´[´bibl´ ´biblStruct´ ´listBibl´] -->
+        <classSpec ident="model.lexPhrase" type="model" mode="add">
+            <desc> pared-down version of model.phrase for use in dictionary elements </desc>
+            <classes>
+                <memberOf key="model.sensePart"/>
+            </classes>
+        </classSpec>
         <!--  we're not linlcuding model.nameLike because then we get a bunch
         of name,orgName,persName,placeName elements etc. inside form,
         orth etc. We do need lang, which is also a member of model.nameLike. 
-        We're solving this by making lang a member of model.lexicalPhrase directly-->
+        We're solving this by making lang a member of model.lexPhrase directly-->
         <!--<classSpec type="model" ident="model.nameLike" mode="change">
             <classes mode="change">
-                <memberOf key="model.lexicalPhrase"></memberOf>
+                <memberOf key="model.lexPhrase"></memberOf>
             </classes>
         </classSpec>-->
-
         <!--we are not including model.pPart.edit [model.pPart.editorial 
         [abbr am choice ex expan subst] because we don't want to
         introduce abbr, am etc. in a bunch of lexicographic elements, 
         but when we decide to include choice, we'll have to add it 
         on its own here -->
+        <!-- Members: ´ref´-->
         <classSpec ident="model.ptrLike" type="model" mode="change">
             <classes mode="change">
-                <memberOf key="model.lexicalPhrase"/>
+                <memberOf key="model.lexPhrase"/>
             </classes>
         </classSpec>
-
+        <!-- Members: ´c´ ´pc´ ´seg´-->
         <classSpec ident="model.segLike" type="model" mode="change">
             <classes mode="change">
-                <memberOf key="model.lexicalPhrase"/>
+                <memberOf key="model.lexPhrase"/>
             </classes>
         </classSpec>
-
+        <!-- Members: model.global[model.global.edit model.global.meta model.milestoneLike 
+        model.noteLike[note] figure metamark] model.lexPhrase[model.hiLike[hi] model.lexEmphLike[gloss] 
+        model.ptrLike[ref] model.segLike[c pc seg] lang ruby] model.lexicalRefinement[gramGrp lbl usg] 
+        cit def entry etym form num sense xr -->
         <classSpec ident="model.sensePart" type="model">
             <desc>groups together all the elements from the dictionary modules that can appear as
                 child of <gi>sense</gi></desc>
         </classSpec>
-  
         <!-- ========================================================= -->
         <!-- SECTION: ATTRIBUTES                                       -->
         <!-- ========================================================= -->
-        
         <!--2018-09-02 (TT): Added PB's useful class modifications-->
         <!-- three of the TEI attribute classes are simplified. The attributes xml:space,
                         rend are removed from the att.global class, so that this now makes available
@@ -1194,37 +1258,42 @@
                 </attDef>
             </attList>
         </classSpec>
-        
         <!-- ========================================================= -->
         <!-- SECTION: MACROS                                           -->
         <!-- ========================================================= -->
-        
-        <!-- 2019-10-22 (LR) new hack to have <xr> in <def> and similar places -->
-        <!-- 2023-01-24 (TT) retired this customization because now we have macro.lexicalParaContent -->
-        <!--<macroSpec ident="macro.paraContent" mode="change">
+        <macroSpec ident="macro.lexParaContent" mode="add">
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
-                    <classRef key="model.phrase"/>
-                    <classRef key="model.inter"/>
+                    <classRef key="model.lexPhrase"/>
+                    <!--<classRef key="model.lexInter"/>-->
                     <classRef key="model.global"/>
-                    <elementRef key="lg"/>
-                    <classRef key="model.lLike"/>
-                    <elementRef key="xr"/>
+                    <!--<elementRef key="lg"/>-->
+                    <!--<classRef key="model.lLike"/>-->
+                    <!--<elementRef key="xr"/>-->
                 </alternate>
             </content>
-        </macroSpec>-->
-        <macroSpec ident="macro.lexicalParaContent" mode="add">
+        </macroSpec>
+        <!-- macro.specialPara: [`change` `item` `licence` `metamark` `occupation` `quote`] -->
+        <!-- macro.lexSpecialPara: [ `quote` `def`] -->
+        <macroSpec ident="macro.lexSpecialPara" mode="add">
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
                     <textNode/>
                     <classRef key="model.gLike"/>
-                    <classRef key="model.lexicalPhrase"/>
-                    <classRef key="model.lexicalInter"/>
-                    <classRef key="model.global"/>
-                    <elementRef key="lg"/>
-                    <classRef key="model.lLike"/>
+                    <!--<classRef key="model.phrase"/>-->
+                    <!--<classRef key="model.inter"/>-->
+                    <!--<classRef key="model.lexInter"/>-->
+                    <!--<classRef key="model.lexPhrase"/>-->
+                    <classRef key="model.hiLike"/>
+                    <!--<classRef key="model.global"/>-->
+                    <!--<elementRef key="lg"/>-->
+                    <!--<classRef key="model.lLike"/>-->
+                    <classRef key="model.ptrLike"/> <!--[`ref`]-->
+                    <classRef key="model.segLike"/> <!--[`c` `pc` `seg`]-->
+                    <elementRef key="gloss"/>
+                    <elementRef key="ruby"/>
                     <elementRef key="xr"/>
                 </alternate>
             </content>

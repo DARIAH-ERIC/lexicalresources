@@ -17,7 +17,7 @@ then transform using tei-stripper.xsl-->
             <principal/>
          </editionStmt>
          <publicationStmt>
-            <distributor>DARIAH WG Lexical Resources</distributor>
+            <publisher>DARIAH WG Lexical Resources</publisher>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
             </availability>
@@ -36,7 +36,7 @@ then transform using tei-stripper.xsl-->
    </teiHeader>
    <text>
       <body>
-         <!--organize entries alphabetically-->
+        <!--organize entries alphabetically-->
          <entry type="mainEntry" xml:lang="cz" xml:id="en000008">
             <form type="lemma" xml:id="en000008.hw1">
                <orth>abeceda</orth>
@@ -524,7 +524,7 @@ then transform using tei-stripper.xsl-->
                      <orth>
                         <ref type="entry" scope="currentEntry">
                            <seg>corpo</seg>
-                           <lbl rend="sup">+</lbl>
+                           <metamark rend="sup">+</metamark>
                         </ref>
                         <seg>de bombeiros</seg>
                      </orth>
@@ -631,7 +631,7 @@ then transform using tei-stripper.xsl-->
                   <form type="collocation">
                      <orth>
                         <ref type="form" scope="currentEntry" value="descalçar">
-                           <lbl>+</lbl>
+                           <metamark>+</metamark>
                         </ref>
                         <seg>as botas</seg>
                      </orth>
@@ -665,7 +665,7 @@ then transform using tei-stripper.xsl-->
                   <form type="collocation">
                      <orth>
                         <ref type="form" scope="currentEntry" value="descalçar">
-                           <lbl>+</lbl>
+                           <metamark>+</metamark>
                         </ref>
                         <seg>os sapatos</seg>
                      </orth>
