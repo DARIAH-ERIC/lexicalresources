@@ -474,12 +474,10 @@
                 <memberOf key="att.global.source" mode="delete"/>
                 <memberOf key="att.typed" mode="add"/>
             </classes>
-            <!-- text node here is to remove the insane macro.phraseSeq.limited
-            which we really don't need; we want language ident in an attribute
-            and the human-readable name of the language as a child text node 
-            of <language>, not all that baggage -->
             <content>
                 <alternate minOccurs="0" maxOccurs="unbounded">
+                    <!--alternate textNode makes us backwards compatible-->
+                    <textNode/>
                     <macroRef key="model.languageProfile"/>
                 </alternate>
             </content>
