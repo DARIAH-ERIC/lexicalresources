@@ -133,11 +133,11 @@
         <revisionDesc>
             <listChange>
                 <listChange n="0.9.5">
-                    <change when="2024-11-27" type="docs">Added documentation on encoding condensed forms a là "leleti (sě)"</change>
-                    <change type="spec">Added <ref target="#TEI.model.languageProfile">model.languageProfile</ref> to better structure <gi>language</gi>.</change>
-                    <change type="spec">Added <gi>ruby</gi> annotation support</change>
-                    <change type="spec">Added <gi>measure</gi> (to be used, for instance, within <gi>extent</gi> in <gi>fileDesc</gi></change>
-                    <change type="xproc">Added a temporary step to fix xml:base and xml:lang issues in xincluded examples as per <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/256">#256</ref></change>
+                    <change when="2024-11-27" type="docs">Added documentation on encoding condensed forms a là "leleti (sě)".</change>
+                    <change type="spec">Added <ref target="#TEI.model.languageProfile">model.languageProfile</ref> to better structure <gi>language</gi> as per <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/245">#245</ref>.</change>
+                    <change type="spec">Added <gi>ruby</gi> annotation support as per <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/225">#225</ref></change>
+                    <change type="spec">Added <gi>measure</gi> (to be used, for instance, within <gi>extent</gi> in <gi>fileDesc</gi> as per <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/257">#257</ref>.</change>
+                    <change type="xproc">Added a temporary step to fix <att>xml:base</att> and <att>xml:lang</att> issues in xincluded examples as per <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/256">#256</ref></change>
                     <change type="spec">Deprecated <code>gram[@type="government"]</code> in favor of <code>gram[@type="government"]</code> as per <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/254">#254</ref></change>
                     <change type="spec">Refactored model classes to fix XSD UPA violations as per <ref target="https://github.com/DARIAH-ERIC/lexicalresources/issues/223">#223</ref>.</change>
                     <change type="docs">Minor corrections in the documentation</change>
