@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-model href="../out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../TEILex0.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>-->
+<!--Check against P5-->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="lex-0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>ruby in TEI Lex-0: examples</title>
+         </titleStmt>
+         <editionStmt>
+            <edition/>
+            <author/>
+            <editor/>
+            <principal/>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>DARIAH WG Lexical Resources</publisher>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</licence>
+            </availability>
+         </publicationStmt>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="mix" role="objectLanguage">
+               <name>Mixtepec Mixtec</name>
+            </language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <!--<entry xml:id="">
+            <form type="lemma">
+               <ruby>
+                  <rb><orth>雫</orth></rb>
+                  <rt place="right"><pron type="lexical" xml:id="siduku">シヅク</pron></rt>
+                  <rt place="left"><pron type="character">タ</pron></rt>
+               </ruby>
+            </form>
+            <sense>
+               <cit><bibl>海篇</bibl><quote>音拏上聲</quote></cit>
+            </sense>
+         </entry>
+         <entry>
+            <form type="lemma">
+               <ruby>
+                  <rb><orth>霤</orth></rb>
+                  <rt place="right"><pron type="lexical"><ref type="pron" target="#siduku">同</ref></pron></rt>
+                  <rt place="farther right"><pron type="lexical">シタヾリ</pron></rt>
+                  <rt place="left"><pron type="character">リウ</pron></rt>
+               </ruby>
+            </form>
+            <sense>
+               <def>
+                  又
+                  <xr type="synonymy"><ref type="entry"><ruby><rb>溜</rb><rt place="right">リウ</rt></ruby></ref></xr>
+                  <xr type="synonymy"><ref type="entry"><ruby><rb>滴</rb><rt place="right">テキ</rt></ruby></ref></xr>
+                  並同
+               </def>
+            </sense>
+         </entry>-->
+         <entry xml:lang="cmn">
+            <form type="phrase">
+               <ruby>
+                  <rb>
+                     <orth>
+                        <c xml:id="c1">央</c><note>テ</note><metamark>㆓</metamark>
+                        <c xml:id="c2">摽</c><metamark place="right">㆐</metamark>
+                        <c xml:id="c3">客</c><note>ヲ</note><metamark>㆒</metamark>
+                        <c xml:id="c4"><g ref="#hu4_var">護</g></c><note>リ</note><metamark place="left">㆐</metamark>
+                        <c xml:id="c5">送</c><note>リ</note><metamark place="left">㆐</metamark>
+                        <c xml:id="c6"><g ref="#qu4_var">去</g></c><note>ラシム</note>
+                     </orth>
+                  </rb>
+                  <rt place="right" target="#c1"><pron extent="part" corresp="#c1">ヤン</pron></rt>
+                  <rt place="right" target="#c2"><pron extent="part" corresp="#c2">ピヤ<metamark>◦</metamark>ウ</pron></rt>
+                  <rt place="right" target="#c3"><pron extent="part" corresp="#c3">ケ</pron></rt>
+                  <rt place="right" target="#c4"><pron extent="part" corresp="#c4">ウヽ</pron></rt>
+                  <rt place="right" target="#c5"><pron extent="part" corresp="#c5">ソン</pron></rt>
+                  <rt place="right" target="#c6"><pron extent="part" corresp="#c6">キユイ</pron></rt>
+                  <rt place="left" from="#c2" to="#c3"><gloss xml:lang="ja">山ダチヲ<pc>。</pc>フセグ人ナリ</gloss></rt>
+               </ruby>
+            </form>
+            <sense>
+               <cit type="translation" xml:lang="ja">
+                  <quote>ヒヤウカクヲ<ruby><rb>央</rb><rt></rt>ヤトフ</ruby>テ<pc>。</pc>送リテ行カシメン</quote>
+               </cit>
+            </sense>
+         </entry>
+         <entry  type="main" xml:lang="cmn" xml:id="e8964">
+            <form type="phrase">
+               <orth>
+                  <ruby>
+                     <rb xml:id="r2354">
+                        <c xml:id="c1">央</c><note>テ</note><metamark>㆓</metamark>
+                        <c xml:id="c2">摽</c><metamark place="right">㆐</metamark>
+                        <c xml:id="c3">客</c><note>ヲ</note><metamark>㆒</metamark>
+                        <c xml:id="c4"><g ref="#hu4_var">護</g></c><note>リ</note><metamark
+                           place="left">㆐</metamark>
+                        <c xml:id="c5">送</c><note>リ</note><metamark place="left">㆐</metamark>
+                        <c xml:id="c6"><g ref="#qu4_var">去</g></c><note>ラシム</note>
+                     </rb>
+                     <rt place="right" target="#c1" type="pron">ヤン</rt>
+                     <rt place="right" target="#c2" type="pron">ピヤ<metamark>◦</metamark>ウ</rt>
+                     <rt place="right" target="#c3" type="pron">ケ</rt>
+                     <rt place="right" target="#c4" type="pron">ウヽ</rt>
+                     <rt place="right" target="#c5" type="pron">ソン</rt>
+                     <rt place="right" target="#c6" type="pron">キユイ</rt>
+                     <!--gloss is not allowed in lex-0 here but is allowed in p5. should check.-->
+                     <rt place="left" from="#c2" to="#c3" type="gloss" xml:lang="ja">山ダチヲ<pc>。</pc>フセグ人ナリ</rt>
+                  </ruby>
+               </orth>
+            </form>
+            <sense xml:id="e8964.s1">
+               <cit type="translation" xml:lang="ja">
+                  <quote>ヒヤウカクヲ<ruby><rb>央</rb><rt/>ヤトフ</ruby>テ<pc>。</pc>送リテ行カシメン</quote>
+               </cit>
+            </sense>
+         </entry>
+         issues:
+            - the suggested encoding wouldn't be valid in P5 either
+            - conceptually speaking, the core of the problem is that the ruby/rb+rt mechanism messes up the
+            hierarchical structure of <orth></orth> and <pron></pron> in TEI
+      </body>
+   </text>
+</TEI>
